@@ -3,37 +3,37 @@ var store = [{
         "excerpt":"   Game 1   Game 2   Game 3  ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/AI.png"
       },{
         "title": "Petrov Defence",
         "excerpt":"Famous Traps There are some interesting traps for the Petrov Defense: 1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Nd6 5. Nc6+ Where the discovery check wins the Queen and black is immediately lost (+8.0!) Also Please Check the Stafford Gambit Famous lines: Classical Attack, Marshall Variation...","categories": [],
         "tags": [],
         "url": "/Chess/2022-05-27-Petrov/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/Petrov.png"
       },{
         "title": "Alekhine Defense",
         "excerpt":"Four Pawns Attack 1.e4 Nf6 2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 A slight detour – Mokele-mbembe variation As explained in this post 3…f6 3…f6 is slightly inferior compared to 3…e6. After 3…f6 white is simply better because the knight on e4 is desparately alone, allowing developmental moves like 4.Bd3....","categories": [],
         "tags": [],
         "url": "/Chess/2022-05-31-Alekhine/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/Alekhine.png"
       },{
         "title": "How should I learn Chess?",
         "excerpt":"Chess consists of 3 parts: Opening, Middlegame and Endgame How to Improve Openings First, make sure to check my posts on [chess openings] Openings have set theories and you need to grind through it. If you don’t have much time, I recommend you to play openings like London, where your...","categories": [],
         "tags": [],
         "url": "/Chess/learning/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/How.png"
       },{
         "title": "How to learn Blind Chess?",
         "excerpt":"Motivation Mastering Blind Chess requires quite an intensitve training. It’s not only cool, but also improves your visualization skills and hence get better in middle games. Training Method Step 1: Master Chess Coordinates There are tons of platforms for this. Check THIS one for example. Generally aim 20-25 before proceeding...","categories": [],
         "tags": [],
         "url": "/Chess/BlindChess/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/Empty.png"
       },{
         "title": "Daily Chess Puzzles (Updated Automatically)",
         "excerpt":"   Your Daily Puzzle from Lichess!   It is updated daily and automatically!   Click in to solve it/check analysis!     ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessPuzzles/",
-        "teaser": "/assets/images/Chess.jpg"
+        "teaser": "/assets/images/Puzzles.png"
       },{
         "title": "Game 1 (Henry)",
         "excerpt":"I have installed two chess engines -Fairy Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (My next post will likely be on Chess960, a chess variation) I...","categories": [],
@@ -153,13 +153,13 @@ var store = [{
         "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. It is also available in my GitHub account. Prerequisites Proficiency in Calculus and Classical Physics, in...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Astrophysics/",
-        "teaser": null
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)",
         "excerpt":"This Page is created by Leo Chow Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Relativity/",
-        "teaser": null
+        "teaser": "/assets/Leo2.png"
       },{
         "title": "Astrophysics",
         "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. It is also available in my GitHub account. Prerequisites Proficiency in Calculus and Classical Physics, in...","categories": [],
