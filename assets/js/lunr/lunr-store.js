@@ -12,7 +12,7 @@ var store = [{
         "teaser": "/assets/images/Petrov.png"
       },{
         "title": "Alekhine Defense",
-        "excerpt":"Four Pawns Attack 1.e4 Nf6 2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 A slight detour – Mokele-mbembe variation As explained in this post 3…f6 3…f6 is slightly inferior compared to 3…e6. After 3…f6 white is simply better because the knight on e4 is desparately alone, allowing developmental moves like 4.Bd3....","categories": [],
+        "excerpt":"Four Pawns Attack 1.e4 Nf6 2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 A slight detour – Mokele-mbembe variation The content below is heavily based on this post 3…f6 3…f6 is slightly inferior compared to 3…e6. After 3…f6 white is simply better because the knight on e4 is desparately alone, allowing...","categories": [],
         "tags": [],
         "url": "/Chess/2022-05-31-Alekhine/",
         "teaser": "/assets/images/Alekhine.png"
