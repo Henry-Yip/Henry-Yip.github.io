@@ -36,7 +36,7 @@ var store = [{
         "teaser": "/assets/images/Puzzles.png"
       },{
         "title": "Game 1 (Henry)",
-        "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (My next post will likely be on Chess960, a chess variation) I have...","categories": [],
+        "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments)(I later expanded it to blitz and rapid). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (To be honest, I didn’t disable…...","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game1/",
         "teaser": null
