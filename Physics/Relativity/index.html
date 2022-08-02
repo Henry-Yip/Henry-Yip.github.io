@@ -286,7 +286,7 @@
 <p>On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight may seem quite unmotivated apart from students getting some Pythagorean feel from the squares and square root, and judging from the negativie sign that the denominator sould say something about shrinking.</p>
 
 <p>This blog is an attempt to add more intuition to the anatomy of \(\gamma\), and would suggest that an interpretation focusing on velocities instead of length allows for a more succinct and intuitive form for the Lorentz factor:</p>
-<iframe src="/assets/LeoFirst.png" width="713px" height="250px"></iframe>
+<iframe src="/assets/LeoFirst.png" width="400px" height="285px"></iframe>
 <p>\(\gamma_v=\sec\theta\)</p>
 
 <ul>
@@ -298,13 +298,14 @@
 
 <p>Consider a photon bouncing between two mirrors separated by \(l\), for an inertail frame moving at speed \(v\) perpendicular to \(l\), express the period of light clock \(t\) in terms of the period in the clock \(t\) in terms of the period in the clock’s rest frame \(t_o\).</p>
 
-<p>To keep things short, here’s a usual derivation of the time dilation factor:
-\(\begin{gather}
+<p>To keep things short, here’s a usual derivation of the time dilation factor:</p>
+
+\[\begin{gather}
 ct=\sqrt{(2l)^2+(vt)^2} \\
 (ct)^2-(vt)^2=(2l)^2 \\
 t^2=\frac{(2l)^2}{c^2-v^2}=\frac{(ct_o)^2}{c^2-v^2} \\
-t=\frac{ct_o}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-(\frac{v^2}{c^2})^2}} 
-\end{gather}\)</p>
+t=\frac{ct_o}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-(\frac{v^2}{c^2})^2}}
+\end{gather}\]
 
 <p>and we get our time dilation factor \(\gamma\). (In line one, the LHS follows from the speed of light being constant, the RHS follows from tranverse distance being constant)</p>
 
@@ -354,7 +355,7 @@ t=\frac{ct_o}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-(\frac{v^2}{c^2})^2}}
 
 <p>In fact, even when people refuse to use the forbidden move, they are still implicitly doing it when rearranging the expression in method one to group \(t\) together on one side. It is just a matter of whether you are willing to interpret the algebra beyond the numerical values into physical meanings. Compare the two methods, you can see that they are just playing with the same triangle:</p>
 
-<iframe src="/assets/Leo5.png"></iframe>
+<iframe src="/assets/Leo2.png" width="400px" height="181px"></iframe>
 
 <p>only that the triangle in method II is formed by thinking about how perspective shift subtract from velocities, instead of how it adds to displacement, the sides are scaled down by \(t\), \(t\) therefore only shows up in one of the side lengths, making the formula for Lorentz factor immediately obvious.</p>
 
@@ -370,16 +371,16 @@ t=\frac{ct_o}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-(\frac{v^2}{c^2})^2}}
 
 \[P=\frac{K}{(\frac{K-P_o}{P_o})e^{-rt}+1}\]
 
-<p>motivated by how similar the coefficient of the exponential looks compared to the larger structure outside, we flatten the expression to \(k(((k^{-1}P_o-1)e^{rt})^{-1}+1)^{-1}\) and see that if the \(s(x)=x-1\) shell could commute with the \(e^{rt}\) and the ^-1 shell, the whole structure would collapse onto itself back to the exponential growth. An extra factor of \((1-\frac{P}{K})\) in the DE somehow opens up the solution \(P_oe^{rt}\) at various layers - \(KK^{-1}\), ^(-1) ^(-1), -1+1  —  then swap the order of operations in such a way that cannot be undone. The result is a knot.
-\(\begin{gather}
-P_oe^{rt} \\
+<p>motivated by how similar the coefficient of the exponential looks compared to the larger structure outside, we flatten the expression to \(k(((k^{-1}P_o-1)e^{rt})^{-1}+1)^{-1}\) and see that if the \(s(x)=x-1\) shell could commute with the \(e^{rt}\) and the ^-1 shell, the whole structure would collapse onto itself back to the exponential growth. An extra factor of \((1-\frac{P}{K})\) in the DE somehow opens up the solution \(P_oe^{rt}\) at various layers - \(KK^{-1}\), ^(-1) ^(-1), -1+1  —  then swap the order of operations in such a way that cannot be undone. The result is a knot.</p>
+
+\[\begin{gather}
+ P_oe^{rt} \\
 KK^{-1}P_oe^{rt} \\
 K\left[(K^{-1}P_oe^{rt})^{-1}\right]^{-1} \\
 K\left[(K^{-1}P_oe^{rt})^{-1}-1+1\right]^{-1} \\
 K\left\{\left[(K^{-1}P_o-1)e^{rt}\right]^{-1}+1\right\}^{-1}\\
 P=\frac{K}{(KP_o^{-1}-1)e^{-rt}+1}
-\end{gather}\)</p>
-
+\end{gather}\]
 
         
       </section>
