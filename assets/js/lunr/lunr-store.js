@@ -114,7 +114,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Biological Weapons and Existential Risk",
-        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it here In the history of human civilization, biological weapons have always played a role in wars. One of its early records of...","categories": [],
+        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE In the history of human civilization, biological weapons have always played a role in wars. One of its early records of...","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BioWeapons/",
         "teaser": null
@@ -126,64 +126,58 @@ var store = [{
         "teaser": null
       },{
         "title": "Downloading and Using Jekyll (Window Users)",
-        "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll You should check everything from this tutorial Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make You can check if the version you have installed is correct using the commands below. As long as you know how to edit...","categories": [],
+        "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make You can check if the version you have installed is correct using the commands below. As long as you know how...","categories": [],
         "tags": [],
         "url": "/Jekyll/UsingJekyll/",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Useless1.png"
       },{
         "title": "Jekyll Tutorials",
         "excerpt":"Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting...","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/tutorials/",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Useless2.png"
       },{
         "title": "Jekyll and KaTeX",
         "excerpt":"How to include Math Symbols in Jekyll Note that in this website, we use \\(\\KaTeX\\) instead of \\(\\LaTeX\\). If you want to use \\(\\KaTeX\\) in Jekyll, you first need to copy the _layouts and _includes files in GitHub. Afterwards, you need to include the necessary gems. Please refer to my...","categories": [],
         "tags": [],
         "url": "/Jekyll/Katex",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Useless3.png"
       },{
         "title": "Changing Skins in Minima (Henry)",
         "excerpt":"Introduction Jekyll’s default theme, Minima, provides 4 possible skins. This page (as of 22/5/2022) is created using the solarized skin. (STARTING FROM 27/6/2022, WE SWITCH TO ANOTHER THEME) Installation Go to the GitHub Page for Minima, copy the codes in assets and _sass to your VSCode (Use VSCode Please!). Note...","categories": [],
         "tags": [],
         "url": "/Jekyll/skins/",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Useless4.png"
       },{
         "title": "Jekyll Problems Q&A",
         "excerpt":"#1 Insufficient resources online Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient resources online! My approach with learning computers, no matter programming or building a website, is to do...","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/Q&A/",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Useless5.png"
       },{
         "title": "Introduction to Algolia",
         "excerpt":"Algolia Search is one of the best ways to enable searching in your Jekyll Website. For Windows users, all you need to do is to have a usuable Algolia account, cd into your directory and type: set ALGOLIA_API_KEY=(Your ALGOLIA_API_KEY) &amp;&amp; bundle exec jekyll algolia and then edit your config_yaml, gemfile...","categories": [],
         "tags": [],
         "url": "/Jekyll/Algolia/",
-        "teaser": null
+        "teaser": "/assets/images/Useless6.png"
       },{
         "title": "How to study Physics?",
         "excerpt":"Introduction Physics is definitely one of the harder subjects to master (if you can master Physics after all!) Skipping lectures My friends recommended me to skip lectures, as it was more of a routine than actually learning stuff. After a year of doing that, my verdict is that it is...","categories": [],
         "tags": [],
         "url": "/Journal/HowtostudyPhysics/",
-        "teaser": null
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "My Progress in everything (With Comments on 31/7... See Bolded words)",
         "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours and...","categories": [],
         "tags": [],
         "url": "/Journal/Progress/",
-        "teaser": null
-      },{
-        "title": "Tropical Cyclones",
-        "excerpt":"Introduction I don’t really like to include personal stuff, but given that this video covers almost everything, it’s a good start For those interested in Hong Kong’s tropical cyclone history, you should take a look of this website Beaufort Wind Scale Before everything, try to understand the beautfort wind scale...","categories": [],
-        "tags": ["Typhoon"],
-        "url": "/Meteorology/TropicalCyclones/",
-        "teaser": null
+        "teaser": "/assets/images/Central.jpg"
       },{
         "title": "Classical Music Playlist (Henry)",
         "excerpt":"I am a classical music enthusiast. I planned to study a Master in Arts, and eventually gave up for physics. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of...","categories": [],
         "tags": ["Music"],
         "url": "/Music/2022-05-20-ClassicalMusic/",
-        "teaser": null
+        "teaser": "/assets/images/Music.png"
       },{
         "title": "Astrophysics",
         "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. It is also available in my GitHub account. Prerequisites Proficiency in Calculus and Classical Physics, in...","categories": [],
