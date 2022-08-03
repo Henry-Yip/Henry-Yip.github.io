@@ -78,9 +78,9 @@ var store = [{
         "teaser": null
       },{
         "title": "Current Chess Standings",
-        "excerpt":"Current Standings in Chess (Updated Automatically): Special thanks to 2700chess.com for providing this banner:      Highest ever chess ratings: (Well well well, this is live rating only)   ","categories": [],
+        "excerpt":"Current Standings in Chess (Updated Automatically): Special thanks to 2700chess.com for providing these banners:        ","categories": [],
         "tags": ["Chess"],
-        "url": "/Chess/ChessAI/",
+        "url": "/Chess/ChessRankings/",
         "teaser": "/assets/images/AI.png"
       },{
         "title": "Twin Primes",
@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Biological Weapons and Existential Risk",
-        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE In the history of human civilization, biological weapons have always played a role in wars. One of its early records of...","categories": [],
+        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE **In the history of human civilization, biological weapons have always played a role in wars. One of its early records of...","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BioWeapons/",
         "teaser": null
@@ -197,9 +197,9 @@ var store = [{
         "url": "/Physics/Relativity/",
         "teaser": "/assets/Leo2.png"
       },{
-        "title": "Astrophysics",
-        "excerpt":"HERE  ","categories": [],
+        "title": "Dark Energy and the Big RIP",
+        "excerpt":"I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data Source...","categories": [],
         "tags": ["Physics"],
-        "url": "/Physics/Astrophysics/",
+        "url": "/Physics/DarkEnergy/",
         "teaser": "/assets/images/Astro.png"
       },]
