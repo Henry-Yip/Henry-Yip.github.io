@@ -77,6 +77,12 @@ var store = [{
         "url": "/Chess/2022-07-31-Game6/",
         "teaser": null
       },{
+        "title": "Current Chess Standings",
+        "excerpt":"Current Standings in Chess (Updated Automatically): Special thanks to 2700chess.com for providing this banner:      Highest ever chess ratings: (Well well well, this is live rating only)   ","categories": [],
+        "tags": ["Chess"],
+        "url": "/Chess/ChessAI/",
+        "teaser": "/assets/images/AI.png"
+      },{
         "title": "Twin Primes",
         "excerpt":"#include &lt;iostream&gt; using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int main() { int range; int counter=0; cout&lt;&lt;\"What is the Maximum Number?\"&lt;&lt;\"\\n\"; cin&gt;&gt;range; for (int i=2;i&lt;range;i++) { if (isPrime(i) &amp;&amp; isPrime(i+2)) { cout&lt;&lt;i&lt;&lt;\" &amp; \"&lt;&lt;i+2&lt;&lt;\"\\n\";...","categories": [],
         "tags": [],
@@ -190,4 +196,10 @@ var store = [{
         "tags": ["Physics"],
         "url": "/Physics/Relativity/",
         "teaser": "/assets/Leo2.png"
+      },{
+        "title": "Astrophysics",
+        "excerpt":"HERE  ","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/Astrophysics/",
+        "teaser": "/assets/images/Astro.png"
       },]
