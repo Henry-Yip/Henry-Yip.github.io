@@ -120,7 +120,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Biological Weapons and Existential Risk",
-        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE **In the history of human civilization, biological weapons have always played a role in wars. One of its early records of...","categories": [],
+        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE       ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BioWeapons/",
         "teaser": null
