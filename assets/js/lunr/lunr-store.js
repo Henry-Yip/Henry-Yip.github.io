@@ -179,6 +179,24 @@ var store = [{
         "url": "/Journal/Progress/",
         "teaser": "/assets/images/Central.jpg"
       },{
+        "title": "LaTeX Tutorial (1)",
+        "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "LaTeX Tutorial (2)",
+        "excerpt":"Tex Source As promised, this is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usepackage{tikz} \\usetikzlibrary{calc} \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "LaTeX Tutorial (3)",
+        "excerpt":"A standardized \\(\\LaTeX\\) document    ","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial3/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
         "title": "Classical Music Playlist (Henry)",
         "excerpt":"I am a classical music enthusiast. I planned to study a Master in Arts, and eventually gave up for physics. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of...","categories": [],
         "tags": ["Music"],
