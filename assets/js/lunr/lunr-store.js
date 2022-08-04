@@ -197,6 +197,18 @@ var store = [{
         "url": "/LaTeX/LaTeXTutorial3/",
         "teaser": "/assets/images/LaTeX.png"
       },{
+        "title": "Sample Tex Files (1)",
+        "excerpt":"The Product: HERE \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free to send me any corrections. \\end{itemize} \\end{abstract} \\section{Aim} \\begin{itemize} \\item Provide a...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample Tex Files (2)",
+        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ Yip, Henry\\\\ s2231321@ed.ac.uk \\and Richmond, Lorian\\\\ s2188785@ed.ac.uk } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
         "title": "Classical Music Playlist (Henry)",
         "excerpt":"I am a classical music enthusiast. I planned to study a Master in Arts, and eventually gave up for physics. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of...","categories": [],
         "tags": ["Music"],
@@ -226,4 +238,10 @@ var store = [{
         "tags": ["Physics"],
         "url": "/Physics/DarkEnergy/",
         "teaser": "/assets/images/Astro.png"
-      },]
+      },{
+        "title": "What on Earth is ALL THESE?!?!",
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a platform to put all these documents so it was kinda pointless....","categories": [],
+        "tags": [],
+        "url": "/Welcome/",
+        "teaser": null
+      }]
