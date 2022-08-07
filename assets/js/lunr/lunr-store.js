@@ -240,7 +240,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a platform to put all these documents so it was kinda pointless....","categories": [],
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My Old Website: HERE (Note that some links are not fixed. I will look into that later) In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": null
