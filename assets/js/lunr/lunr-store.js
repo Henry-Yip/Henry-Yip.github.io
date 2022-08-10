@@ -240,7 +240,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! On 11/8/2022, I am using my new tablet, Lenovo X1 to work on this project! In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I...","categories": [],
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! On 11/8/2022, I am using my new tablet, Lenovo X1 to work on this project! I am so excited! :) In February, I began learning \\(\\LaTeX\\) and created tons of math documents....","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": null
