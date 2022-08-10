@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #6) Classical - Stockfish vs Fairy-Max  ","categories": [],
+        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max  ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -82,12 +82,6 @@ var store = [{
         "tags": ["Chess"],
         "url": "/Chess/ChessRankings/",
         "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Game 7 (Henry)",
-        "excerpt":"Classical-esque Game - 30 minutes      White: Stockfish   Black: Fairy-Max   ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-08-10-Game7/",
-        "teaser": null
       },{
         "title": "Twin Primes",
         "excerpt":"#include &lt;iostream&gt; using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int main() { int range; int counter=0; cout&lt;&lt;\"What is the Maximum Number?\"&lt;&lt;\"\\n\"; cin&gt;&gt;range; for (int i=2;i&lt;range;i++) { if (isPrime(i) &amp;&amp; isPrime(i+2)) { cout&lt;&lt;i&lt;&lt;\" &amp; \"&lt;&lt;i+2&lt;&lt;\"\\n\";...","categories": [],
@@ -246,7 +240,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My Old Website: HERE (Note that some links are not fixed. I will look into that later) In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was...","categories": [],
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! On 11/8/2022, I am using my new tablet, Lenovo X1 to work on this project! In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": null
