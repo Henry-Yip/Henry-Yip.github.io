@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max  ","categories": [],
+        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #6) Classical - Stockfish vs Fairy-Max  ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -39,43 +39,43 @@ var store = [{
         "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments)(I later expanded it to blitz and rapid). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (To be honest, I didn’t disable…...","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game1/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Game 2 (Henry)",
         "excerpt":"Rapid Game 10 minutes, no increments      White: Stockfish   Black: Fairy-Max    ","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game2/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Stafford Gambit",
         "excerpt":"People (at least me) always relate Stafford Gambit with IM Eric Rosen, a famous chess streamer. It is a variation of the Petrov Defense with 3…Nc6?, a theoreticaly lost position for black, assuming perfect play. Top chess engines, like Stockfish, don’t favour these types of gambits because black is lost...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/Stafford/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Game 3 (Henry)",
         "excerpt":"Bullet Game - 1 minute      White: Fairy-Max   Black: Fairy-Max    ","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-12-Game3/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Game 4 (Henry)",
         "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max   ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game4/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Game 5 (Henry)",
         "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max   ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game5/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Game 6 (Henry)",
         "excerpt":"Blitz Game - 5 minute      White: Stockfish   Black: Fairy-Max   ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game6/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Current Chess Standings",
         "excerpt":"Current Standings in Chess (Updated Automatically): Special thanks to 2700chess.com for providing these banners:        ","categories": [],
@@ -83,53 +83,71 @@ var store = [{
         "url": "/Chess/ChessRankings/",
         "teaser": "/assets/images/AI.png"
       },{
+        "title": "Game 7 (Henry)",
+        "excerpt":"Classical-esque Game - 30 minutes      White: Stockfish   Black: Fairy-Max   ","categories": [],
+        "tags": [],
+        "url": "/Chess/2022-08-10-Game7/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "Twin Primes",
         "excerpt":"#include &lt;iostream&gt; using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int main() { int range; int counter=0; cout&lt;&lt;\"What is the Maximum Number?\"&lt;&lt;\"\\n\"; cin&gt;&gt;range; for (int i=2;i&lt;range;i++) { if (isPrime(i) &amp;&amp; isPrime(i+2)) { cout&lt;&lt;i&lt;&lt;\" &amp; \"&lt;&lt;i+2&lt;&lt;\"\\n\";...","categories": [],
         "tags": [],
         "url": "/Coding/TwinPrimes/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Cutoff Game (C++)",
         "excerpt":"#include &lt;iostream&gt; #include &lt;ctime&gt; #include &lt;cstdlib&gt; using namespace std; int randRange(int low, int high) { return rand()%(high-low+1)+low; } int main() { int number_trials,cutoff; int fail=0; int success=0; srand(time(NULL)); cout&lt;&lt;\"Number of trials: \"&lt;&lt;\"\\n\"; cin&gt;&gt;number_trials; cout&lt;&lt;\"Cutoff Score: \"&lt;&lt;\"\\n\"; cin&gt;&gt;cutoff; for (int i=0; i&lt;number_trials; i++) { if (randRange(0,100)&gt;=cutoff) { success++; } else {...","categories": [],
         "tags": [],
         "url": "/Coding/Cutoff/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Prime Gap",
         "excerpt":"#include using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int NumberPrime(int order) { int counter=0; for (int i=2;i&lt;(100000-order);i++) { if (isPrime(i) &amp;&amp; isPrime(i+order)) { counter++; } } cout&lt;&lt;counter&lt;&lt;\"\\n\"; } int main() { for (int i=2;i&lt;500;i=i+2)//fill...","categories": [],
         "tags": [],
         "url": "/Coding/PrimeGap/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Henry Yip",
         "excerpt":"Education 2021-2025 BSc Mathematical Physics (Hons), University of Edinburgh I spent an enormous amount of time in these posts. Please read them [Astrophysics Notes] [Chess Series] I have a plethora of interests: Quantum Physics As a Mathematical Physics Major, I study physics with mathematical rigor. Currently, my favourite topic is...","categories": ["Henry"],
         "tags": [],
         "url": "/Contributors/HenryYip/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Leo Chow",
         "excerpt":"Leo participated in this website by writing a very insightful physics article, with some really artistic illustration. Thank you very much for his contribution!  ","categories": [],
         "tags": [],
         "url": "/Contributors/LeoChow/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Grace Yang",
         "excerpt":"Grace participated in my STEM project and agreed to feature her essay in my website. Below is her self introduction: Hi! I am Grace, doing medicine at the University of Edinburgh. Although my course mostly focuses on biology, I have always wanted to gain deeper insights into other STEM subjects...","categories": [],
         "tags": [],
         "url": "/Contributors/GraceYang/",
-        "teaser": null
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Alzheimer’s Disease- an Existential Threat?",
+        "excerpt":"Since the author didn’t put his/her name in the essay, I decided not to reveal it. If you are the author and you want me to show it, please just contact me through whatsapp.   You can download it here     ","categories": [],
+        "tags": [],
+        "url": "/Existential_Risks/Alzheimer/",
+        "teaser": "/assets/images/Brain.png"
+      },{
+        "title": "Dark Energy and the Big RIP",
+        "excerpt":"I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data Source...","categories": [],
+        "tags": [],
+        "url": "/Existential_Risks/BigRIP/",
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "Biological Weapons and Existential Risk",
         "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE       ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BioWeapons/",
-        "teaser": null
+        "teaser": "/assets/images/Beaker.png"
       },{
         "title": "The expansion of the sun into the orbit of Earth",
-        "excerpt":" ","categories": [],
+        "excerpt":"This essay is written by Terrance Corey. You can download it below:     PDF   Word     ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/Sun/",
-        "teaser": null
+        "teaser": "/assets/images/Sun.png"
       },{
         "title": "Downloading and Using Jekyll (Window Users)",
         "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make You can check if the version you have installed is correct using the commands below. As long as you know how...","categories": [],
@@ -177,7 +195,7 @@ var store = [{
         "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours and...","categories": [],
         "tags": [],
         "url": "/Journal/Progress/",
-        "teaser": "/assets/images/Central.jpg"
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
@@ -240,8 +258,8 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! On 11/8/2022, I am using my new tablet, Lenovo X1 to work on this project! I am so excited! :) In February, I began learning \\(\\LaTeX\\) and created tons of math documents....","categories": [],
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My Old Website: HERE (Note that some links are not fixed. I will look into that later) In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was...","categories": [],
         "tags": [],
         "url": "/Welcome/",
-        "teaser": null
+        "teaser": "/assets/images/Wolf.png"
       }]
