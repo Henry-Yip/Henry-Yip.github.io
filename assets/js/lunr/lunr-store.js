@@ -216,7 +216,7 @@ var store = [{
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "LaTeX Tutorial (2)",
-        "excerpt":"Tex Source As promised, this is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usepackage{tikz} \\usetikzlibrary{calc} \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to...","categories": [],
+        "excerpt":"Tex Source As promised, this is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to \\LaTeX] %optional...","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial2/",
         "teaser": "/assets/images/LaTeX.png"
