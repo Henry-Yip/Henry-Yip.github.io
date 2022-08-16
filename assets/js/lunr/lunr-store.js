@@ -246,7 +246,7 @@ var store = [{
         "teaser": "/assets/images/Music.png"
       },{
         "title": "Astrophysics (Part 1)",
-        "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. It is also available in my GitHub account. Prerequisites Proficiency in Calculus and Classical Physics, in...","categories": [],
+        "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Astrophysics1/",
         "teaser": "/assets/images/Astro.png"
