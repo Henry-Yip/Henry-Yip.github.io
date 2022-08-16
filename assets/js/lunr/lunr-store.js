@@ -143,6 +143,12 @@ var store = [{
         "url": "/Existential_Risks/BioWeapons/",
         "teaser": "/assets/images/Beaker.png"
       },{
+        "title": "Prions and Prion Diseases",
+        "excerpt":"This essay is written by Michael SO. You can download it below:     Word     ","categories": [],
+        "tags": [],
+        "url": "/Existential_Risks/Prions/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "The expansion of the sun into the orbit of Earth",
         "excerpt":"This essay is written by Terrance Corey. You can download it below:     PDF   Word     ","categories": [],
         "tags": [],
