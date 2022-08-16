@@ -125,7 +125,7 @@ var store = [{
         "url": "/Contributors/GraceYang/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Grace Yang",
+        "title": "Michael So",
         "excerpt":"Michael participated in my STEM project and agreed to feature his essay in my website. Below is his self introduction: A student who is continuously exploring the world, particularly the world within our cranium, while trying to blur the boundaries of arts and sciences. What I have to clarify in...","categories": [],
         "tags": [],
         "url": "/Contributors/MichaelSo/",
