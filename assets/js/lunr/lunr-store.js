@@ -125,6 +125,12 @@ var store = [{
         "url": "/Contributors/GraceYang/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Grace Yang",
+        "excerpt":"Michael participated in my STEM project and agreed to feature his essay in my website. Below is his self introduction: A student who is continuously exploring the world, particularly the world within our cranium, while trying to blur the boundaries of arts and sciences. What I have to clarify in...","categories": [],
+        "tags": [],
+        "url": "/Contributors/MichaelSo/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "Alzheimer’s Disease- an Existential Threat?",
         "excerpt":"Since the author didn’t put his/her name in the essay, I decided not to reveal it. If you are the author and you want me to show it, please just contact me through whatsapp.   You can download it here     ","categories": [],
         "tags": [],
@@ -144,7 +150,7 @@ var store = [{
         "teaser": "/assets/images/Beaker.png"
       },{
         "title": "Prions and Prion Diseases",
-        "excerpt":"This essay is written by Michael SO. You can download it below:     Word     ","categories": [],
+        "excerpt":"This essay is written by Michael So You can download it below:     Word     ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/Prions/",
         "teaser": "/assets/images/Teaser.png"
