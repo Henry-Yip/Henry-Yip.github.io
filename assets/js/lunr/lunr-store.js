@@ -234,7 +234,7 @@ var store = [{
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Sample Tex Files (2)",
-        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ Yip, Henry\\\\ s2231321@ed.ac.uk \\and Richmond, Lorian\\\\ s2188785@ed.ac.uk } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving...","categories": [],
+        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving ordinary diffential...","categories": [],
         "tags": [],
         "url": "/LaTeX/Tex2/",
         "teaser": "/assets/images/LaTeX.png"
