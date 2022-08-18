@@ -245,18 +245,6 @@ var store = [{
         "url": "/Music/2022-05-20-ClassicalMusic/",
         "teaser": "/assets/images/Music.png"
       },{
-        "title": "Astrophysics (Part 1)",
-        "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with...","categories": [],
-        "tags": ["Physics"],
-        "url": "/Physics/Astrophysics1/",
-        "teaser": "/assets/images/Astro.png"
-      },{
-        "title": "Astrophysics (Part 2)",
-        "excerpt":"2. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the offical website of Overleaf and register for a new account. Create a new project and copy all the lines in main.tex (the document above). Press compile and download the pdf document. 3. TexMaker Download TexMaker...","categories": [],
-        "tags": ["Physics"],
-        "url": "/Physics/Astrophysics2/",
-        "teaser": "/assets/images/Astro.png"
-      },{
         "title": "Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)",
         "excerpt":"This Page is created by Leo Chow Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight...","categories": [],
         "tags": ["Physics"],
