@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2022-08-21T22:07:01+08:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>A website including everything</subtitle><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><entry><title type="html">What on Earth is ALL THESE?!?!</title><link href="https://henry-yip.github.io/Welcome/" rel="alternate" type="text/html" title="What on Earth is ALL THESE?!?!" /><published>2022-08-04T00:00:00+08:00</published><updated>2022-08-04T00:00:00+08:00</updated><id>https://henry-yip.github.io/Welcome</id><content type="html" xml:base="https://henry-yip.github.io/Welcome/"><![CDATA[<p><em>So what is all these… Welcome to Henry’s Project!</em></p>
+
+<p>Time Spent in building this website: <strong>Around 200-300 hours!</strong>
+My Old Website: <a href="https://henry-yip.github.io/henryoldwebsite/">HERE</a></p>
+
+<p>(Note that some links are not fixed. I will look into that later)</p>
+
+<p>In February, I began learning \(\LaTeX\) and created tons of math documents. While it was fun, I didn’t really have a platform to put all these documents so it was kinda pointless. 
+(I created some documents on Quantum Mechanics and some basic math. <a href="https://henry-yip.github.io/assets/LambertW.pdf">Here</a> is an example (I know I know, it looks quite bad, but hey it was my 3rd day doing \(\LaTeX\), so I was quite glad it worked somehow)</p>
+
+<p>In March, I decided that creating a website is probably beneficial to me, and since my friend used Jekyll, I began looking into it. If you are asking what Jekyll is or how to download/use it, please check out <a href="/Jekyll/tutorials/">My Tutorials</a>. I spent a huge amount of time on these tutorials so I hope you can at least have a look…</p>
+
+<p>As I didn’t have previous experience, it was a complete disaster as I spent almost 2 days downloading all the necessary stuff (If you want to use Jekyll there are tons of stuff you should download. You should probably refer to <a href="/Jekyll/UsingJekyll/">My Tutorial on How to Download Jekyll</a></p>
+
+<p>After sucessfully creating a functional website, I started to think about how I can use this website to create something big. One day, upon the recommendation of <a href="/Contributors/LeoChow/">Leo Chow</a>, I decided to create a website to teach people physics, but we slowly figured out it is quite impractical unless we know <strong>Manim</strong> (but we both don’t). Instead, I thought it would just be great if my friends can write anything on my website without any restrictions (since not everyone know how to make a website) I started asking people around me , and surprisingly, almost all of them agreed. (Special thanks to all my contributors, especially <a href="/Contributors/LeoChow/">Leo Chow</a> for all their supportive work). And after a month or so, two of my classmates from spcc asked if I can create a <strong>STEM project</strong> with them, so now I’m sorta co-leading the website design of two projects.</p>
+
+<p>The process of building websites is <strong>JUST PAINFUL</strong>. I had to learn so many stuff. Like how to enable RSS FEED, <a href="/Jekyll/skins/">How to Change Skins</a> (in my old website), how to <a href="/Jekyll/Algolia/">Include Algolia Search</a>. Each of these tasks spent me <strong>at least 10 hours</strong>. The solution may seem easy and to be honest, some problems I can’t even solve (like resizing images using plugins).</p>
+
+<p><strong>However</strong></p>
+
+<p><strong>NOTHING is Impossible</strong></p>
+
+<p><strong>It’s cool to meet all these people</strong></p>
+
+<p><strong>Everything feels Great! I’m motivated now!</strong></p>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[So what is all these… Welcome to Henry’s Project!]]></summary></entry></feed>
