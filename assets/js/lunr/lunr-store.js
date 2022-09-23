@@ -209,6 +209,12 @@ var store = [{
         "url": "/Journal/Progress/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "I am DISGUSTED!",
+        "excerpt":"I am disgusted by myself… I do have the motivation to do well. I am involved in Research Groups, I applied for many interns (which, btw, is about to reject me). But I am still struggling in stress problems, I have inefficient revision methods, I tend not to do well....","categories": [],
+        "tags": [],
+        "url": "/Journal/Disgusted/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],
@@ -244,6 +250,18 @@ var store = [{
         "tags": ["Music"],
         "url": "/Music/2022-05-20-ClassicalMusic/",
         "teaser": "/assets/images/Music.png"
+      },{
+        "title": "Astrophysics (Part 1)",
+        "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/Astrophysics1/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Astrophysics (Part 2)",
+        "excerpt":"If you request me to send you the astrophysics pdf (I promise you I will if you ask !) I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/Astrophysics2/",
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)",
         "excerpt":"This Page is created by Leo Chow Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight...","categories": [],
