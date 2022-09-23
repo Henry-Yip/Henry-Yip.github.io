@@ -209,12 +209,6 @@ var store = [{
         "url": "/Journal/Progress/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "I am DISGUSTED!",
-        "excerpt":"I am disgusted by myself… I do have the motivation to do well. I am involved in Research Groups, I applied for many interns (which, btw, is about to reject me). But I am still struggling in stress problems, I have inefficient revision methods, I tend not to do well....","categories": [],
-        "tags": [],
-        "url": "/Journal/Disgusted/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],
