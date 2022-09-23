@@ -1,12 +1,12 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #6) Classical - Stockfish vs Fairy-Max  ","categories": [],
+        "excerpt":"(Game #1) Rapid - Stockfish vs Fairy-Max (Game #2) Rapid - Stockfish vs Fairy-Max (Game #3) Bullet - Fairy-Max vs Fairy-Max (Game #4) Bullet - Stockfish vs Fairy-Max (Game #5) Bullet - Stockfish vs Fairy-Max (Game #6) Bullet - Stockfish vs Fairy-Max (Game #6) Classical - Stockfish vs Fairy-Max Re1...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
       },{
         "title": "Petrov Defence",
-        "excerpt":"Famous Traps There are some interesting traps for the Petrov Defense: 1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Nd6 5. Nc6+ Where the discovery check wins the Queen and black is immediately lost (+8.0!) Also Please Check the Stafford Gambit Famous lines: Classical Attack, Marshall Variation...","categories": [],
+        "excerpt":"Famous Traps Trap #1 There are some interesting traps for the Petrov Defense: 1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Nd6 5. Nc6+ Where the discovery check wins the Queen and black is immediately lost (+8.0!) Also Please Check the Stafford Gambit Famous lines: My Favourite...","categories": [],
         "tags": [],
         "url": "/Chess/2022-05-27-Petrov/",
         "teaser": "/assets/images/Petrov.png"
@@ -273,6 +273,12 @@ var store = [{
         "excerpt":"I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data Source...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/DarkEnergy/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "First Physics Book",
+        "excerpt":"This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and explanation which...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/Book/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
