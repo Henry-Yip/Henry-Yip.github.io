@@ -197,7 +197,13 @@ var store = [{
         "url": "/Jekyll/Algolia/",
         "teaser": "/assets/images/Useless6.png"
       },{
-        "title": "How to study Physics?",
+        "title": "Youtube Video",
+        "excerpt":"I am terribly sorry for the potato quality! I will most definitely refilm this!    ","categories": [],
+        "tags": ["Jekyll"],
+        "url": "/Jekyll/Youtube/",
+        "teaser": "/assets/images/Useless2.png"
+      },{
+        "title": "How I Approach Physics",
         "excerpt":"Introduction Physics is definitely one of the harder subjects to master (if you can master Physics after all!) Skipping lectures My friends recommended me to skip lectures, as it was more of a routine than actually learning stuff. After a year of doing that, my verdict is that it is...","categories": [],
         "tags": [],
         "url": "/Journal/HowtostudyPhysics/",
