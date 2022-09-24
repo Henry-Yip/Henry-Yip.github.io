@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"(Game #1) Rapid - Stockfish vs Fairy-Max (Game #2) Rapid - Stockfish vs Fairy-Max (Game #3) Bullet - Fairy-Max vs Fairy-Max (Game #4) Bullet - Stockfish vs Fairy-Max (Game #5) Bullet - Stockfish vs Fairy-Max (Game #6) Bullet - Stockfish vs Fairy-Max (Game #6) Classical - Stockfish vs Fairy-Max Re1...","categories": [],
+        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #6) Classical - Stockfish vs Fairy-Max   ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -108,7 +108,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Henry Yip",
-        "excerpt":"Education 2021-2025 BSc Mathematical Physics (Hons), University of Edinburgh I spent an enormous amount of time in these posts. Please read them [Astrophysics Notes] [Chess Series] I have a plethora of interests: Quantum Physics As a Mathematical Physics Major, I study physics with mathematical rigor. Currently, my favourite topic is...","categories": ["Henry"],
+        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2009-2015 S.K.H St Peter’s Primary School, Hong Kong 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2021-2025 University of Edinburgh, Scotland Stuyding Mathematical Physics Interests:...","categories": ["Henry"],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
@@ -276,7 +276,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My Old Website: HERE (Note that some links are not fixed. I will look into that later) In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was...","categories": [],
+        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My New Welcome Page is still under construction! See if you like it! Press HERE (Note that some links are not fixed. I will look into that later) In February, I began...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
