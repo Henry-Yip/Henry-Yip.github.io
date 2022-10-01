@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Jekyll and KaTeX | Henry Yip</title>
-<meta name="description" content="How to include Math Symbols in Jekyll Note that in this website, we use \(\KaTeX\) instead of \(\LaTeX\).">
+<!-- begin _includes/seo.html --><title>An Elegant Way to include Math Symbols in your website | Henry Yip</title>
+<meta name="description" content="Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users!">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Jekyll and KaTeX">
+<meta property="og:title" content="An Elegant Way to include Math Symbols in your website">
 <meta property="og:url" content="https://henry-yip.github.io/Jekyll/Katex">
 
 
-  <meta property="og:description" content="How to include Math Symbols in Jekyll Note that in this website, we use \(\KaTeX\) instead of \(\LaTeX\).">
+  <meta property="og:description" content="Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users!">
 
 
 
@@ -110,6 +110,15 @@
 <!-- end custom head snippets -->
 
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
 
   <body class="layout--single">
     <nav class="skip-links">
@@ -206,7 +215,7 @@
     
       
       
-        <li class="current">Jekyll and KaTeX</li>
+        <li class="current">An Elegant Way to include Math Symbols in your website</li>
       
     
   </ol>
@@ -271,8 +280,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Jekyll and KaTeX">
-    <meta itemprop="description" content="How to include Math Symbols in JekyllNote that in this website, we use \(\KaTeX\) instead of \(\LaTeX\).">
+    <meta itemprop="headline" content="An Elegant Way to include Math Symbols in your website">
+    <meta itemprop="description" content="Important DisclaimerPlease note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users!">
     <meta itemprop="datePublished" content="2022-05-19T00:00:00+01:00">
     
 
@@ -280,7 +289,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Jekyll/Katex" class="u-url" itemprop="url">Jekyll and KaTeX
+            <a href="https://henry-yip.github.io/Jekyll/Katex" class="u-url" itemprop="url">An Elegant Way to include Math Symbols in your website
 </a>
           </h1>
           
@@ -291,8 +300,23 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <h2 id="how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</h2>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> LaTeX and KaTeX</h4></header>
+              <ul class="toc__menu"><li><a href="#important-disclaimer">Important Disclaimer</a><ul><li><a href="#how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</a></li><li><a href="#why-it-works">Why it works?</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="important-disclaimer">Important Disclaimer</h2>
+<p class="notice--danger">Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users!</p>
+
+<h3 id="how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</h3>
 <p>Note that in this website, we use \(\KaTeX\) instead of \(\LaTeX\).</p>
+
+<p class="notice--warning">For \(\LaTeX\) users you may ask: What is \(\KaTeX\)? Don’t expect me to put everything here, search online for more!</p>
+
+<p class="notice--warning">Like <a href="https://katex.org/">HERE</a></p>
 
 <p>If you want to use \(\KaTeX\) in Jekyll, you first need to copy the <strong>_layouts</strong> and <strong>_includes</strong> files in <a href="https://github.com/jekyll/minima">GitHub</a>. Afterwards, you need to include the necessary gems. Please refer to my Gemfile:</p>
 
@@ -336,7 +360,7 @@ gem <span class="s1">'jekyll-sitemap'</span>
   &lt;/head&gt;
 &lt;/html&gt;
 </code></pre></div></div>
-
+<h3 id="why-it-works">Why it works?</h3>
 <p>How it works is that <strong>head.html</strong> has a line:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>include custom-head.html
 </code></pre></div></div>
@@ -345,10 +369,10 @@ gem <span class="s1">'jekyll-sitemap'</span>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>include head.html 
 </code></pre></div></div>
-<p>Which is included in <strong>post-Henry.html</strong> as it contains <strong>default.html</strong>. We have stated in the front matter:</p>
+<p>Which is included in <strong>post.html</strong> as it contains <strong>default.html</strong>. We have stated in the front matter:</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span>
-layout: post-Henry
+layout: post
 title: Jekyll and KaTeX
 katex: True
 catergories: Henry Yip
@@ -380,7 +404,7 @@ catergories: Henry Yip
 ">Previous</a>
     
     
-      <a href="/Jekyll/skins/" class="pagination--pager" title="Changing Skins in Minima (Henry)
+      <a href="/Jekyll/skins/" class="pagination--pager" title="Changing Skins in Minima and Minimal Mistakes
 ">Next</a>
     
   </nav>

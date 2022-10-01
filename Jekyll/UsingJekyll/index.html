@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Downloading and Using Jekyll (Window Users) | Henry Yip</title>
-<meta name="description" content="(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website">
+<meta name="description" content="(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements Requirements:    Ruby Verison 2.5.0 or higher   RubyGems   GCC (GNU Compiler Collection)   Make">
 
 
   <meta name="author" content="Henry Yip ">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Jekyll/UsingJekyll/">
 
 
-  <meta property="og:description" content="(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website">
+  <meta property="og:description" content="(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements Requirements:    Ruby Verison 2.5.0 or higher   RubyGems   GCC (GNU Compiler Collection)   Make">
 
 
 
@@ -110,6 +110,15 @@
 <!-- end custom head snippets -->
 
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
 
   <body class="layout--single">
     <nav class="skip-links">
@@ -272,7 +281,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Downloading and Using Jekyll (Window Users)">
-    <meta itemprop="description" content="(Updated on 14/6/2022, by Henry Yip)Downloading JekyllThis tutorial is largely based on the official website">
+    <meta itemprop="description" content="(Updated on 14/6/2022, by Henry Yip)Downloading JekyllThis tutorial is largely based on the official websiteRequirementsRequirements:  Ruby Verison 2.5.0 or higher  RubyGems  GCC (GNU Compiler Collection)  Make">
     <meta itemprop="datePublished" content="2022-05-19T00:00:00+01:00">
     
 
@@ -291,18 +300,28 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>(Updated on <strong>14/6/2022</strong>, by Henry Yip)</p>
-<h3 id="downloading-jekyll">Downloading Jekyll</h3>
-<p>This tutorial is largely based on <a href="https://jekyllrb.com/docs/">the official website</a></p>
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Jekyll for Window Users</h4></header>
+              <ul class="toc__menu"><li><a href="#downloading-jekyll">Downloading Jekyll</a><ul><li><a href="#checking">Checking</a></li></ul></li><li><a href="#code-editor">Code Editor</a></li><li><a href="#building-the-files">Building the files</a></li><li><a href="#final-touch">Final Touch</a></li></ul>
 
+            </nav>
+          </aside>
+        
+        <p>(Updated on <strong>14/6/2022</strong>, by Henry Yip)</p>
+<h2 id="downloading-jekyll">Downloading Jekyll</h2>
+<p>This tutorial is largely based on <a href="https://jekyllrb.com/docs/">the official website</a></p>
+<h1 id="requirements">Requirements</h1>
 <p>Requirements:</p>
 <ul>
   <li><strong>Ruby</strong> Verison <strong>2.5.0</strong> or higher</li>
   <li><strong>RubyGems</strong></li>
   <li><strong>GCC</strong> (GNU Compiler Collection)</li>
-  <li>
-    <p><strong>Make</strong></p>
-  </li>
+  <li><strong>Make</strong></li>
+</ul>
+
+<h3 id="checking">Checking</h3>
+<ul>
   <li>You can check if the version you have installed is correct using the commands below. As long as you know how to edit <strong>path environment</strong> it should be quite trivial.
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
 </code></pre></div>    </div>
@@ -370,11 +389,11 @@ New jekyll site installed <span class="k">in </span>C:/Users/Betel/Documents/Sci
   </li>
 </ul>
 
-<h3 id="code-editor">Code Editor</h3>
+<h2 id="code-editor">Code Editor</h2>
 <p>I recommend using <a href="https://code.visualstudio.com/Download">VSCode</a>.
 Obviously Notepad works also but that’s my personal preference.</p>
 
-<h3 id="building-the-files">Building the files</h3>
+<h2 id="building-the-files">Building the files</h2>
 <p>The folders you have created lack details.
 It uses <strong>Minima</strong> as the Default theme, which is simplistic but quite plain.
 For example, you may want to have <strong>_includes</strong> and <strong>_layouts</strong> folders to enable <strong>google analytics</strong>, <strong>comments</strong>, <strong>search function</strong>, etc…</p>
@@ -384,7 +403,7 @@ If you want to include mathematical symbols in your website, make sure to check 
 
 <p><a href="/Jekyll/Katex">How to enable \(\LaTeX\) style mathematical symbols in Jekyll</a></p>
 
-<h3 id="final-touch">Final Touch</h3>
+<h2 id="final-touch">Final Touch</h2>
 <p>If you want an aesthetically beautiful website, you can include <strong>css</strong>. The basics should be trivial but it becomes increasingly complicated, and since Jekyll Themes are beautiful already (in my opinion), it may be unnecessary. 
 I do recommend you to check out <a href="/Jekyll/skins/">this post</a> if you want to know more about the possible colours in Minima theme.</p>
 

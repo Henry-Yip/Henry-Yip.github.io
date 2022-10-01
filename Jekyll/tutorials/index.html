@@ -110,6 +110,15 @@
 <!-- end custom head snippets -->
 
   </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
 
   <body class="layout--single">
     <nav class="skip-links">
@@ -291,12 +300,20 @@
 
       <section class="page__content e-content" itemprop="text">
         
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Jekyll Tutorials</h4></header>
+              <ul class="toc__menu"><li><a href="#why-jekyll">Why Jekyll</a><ul><li><a href="#introduction-to-this-series">Introduction to this series:</a></li><li><a href="#questions-and-contact">Questions and Contact</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
         <h2 id="why-jekyll">Why Jekyll</h2>
 <p>There are <strong>many ways</strong> to create a website. Most people stick with “Website Builder” tools like <a href="https://www.wix.com/">wix</a>, the major benefit being <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting in computing, since jekyll supports Github Pages, it is always almost recommended to use Jekyll.</p>
 
 <p>This comparision is similar to \(\LaTeX\) vs <strong>Word</strong>. It is easier to work with word, but mathematicians may pick on you if you use word for your thesis!</p>
 
-<h2 id="introduction-to-this-series">Introduction to this series:</h2>
+<h3 id="introduction-to-this-series">Introduction to this series:</h3>
 <p>I have made a number of Tutorials regarding the static site generator, Jekyll, which builds this website:</p>
 
 <p>#1 <a href="/Jekyll/UsingJekyll/">Downloading and Using Jekyll (Window Users)</a></p>
@@ -308,6 +325,9 @@
 <p>#4 <a href="/Jekyll/Algolia/">Introduction to Algolia</a></p>
 
 <p>#5 <a href="/Jekyll/Q&amp;A/">Jekyll Q&amp;A</a></p>
+
+<h3 id="questions-and-contact">Questions and Contact</h3>
+<p>Any questions please send an email to <strong>s2231321@ed.ac.uk</strong> or Direct Message me in <strong>Instagram</strong>. I may make a Youtube Series on this topic!</p>
 
 
         
@@ -348,7 +368,7 @@
 ">Previous</a>
     
     
-      <a href="/Jekyll/Katex" class="pagination--pager" title="Jekyll and KaTeX
+      <a href="/Jekyll/Katex" class="pagination--pager" title="An Elegant Way to include Math Symbols in your website
 ">Next</a>
     
   </nav>

@@ -108,19 +108,19 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Henry Yip",
-        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2009-2015 S.K.H St Peter’s Primary School, Hong Kong 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2021-2025 University of Edinburgh, Scotland Stuyding Mathematical Physics Interests:...","categories": ["Henry"],
+        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Stuyding Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong Interests:...","categories": [],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Leo Chow",
-        "excerpt":"Leo participated in this website by writing a very insightful physics article, with some really artistic illustration. Thank you very much for his contribution!  ","categories": [],
+        "excerpt":"Leo  Leo participated in this website by writing a very insightful physics article, with some really artistic illustration. Thank you very much for his contribution!  ","categories": [],
         "tags": [],
         "url": "/Contributors/LeoChow/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Grace Yang",
-        "excerpt":"Grace participated in my STEM project and agreed to feature her essay in my website. Below is her self introduction: Hi! I am Grace, doing medicine at the University of Edinburgh. Although my course mostly focuses on biology, I have always wanted to gain deeper insights into other STEM subjects...","categories": [],
+        "excerpt":"Introduction Grace participated in my STEM project and agreed to feature her essay in my website. Below is her self introduction: ## Hi! I am Grace, doing medicine at the University of Edinburgh. Although my course mostly focuses on biology, I have always wanted to gain deeper insights into other...","categories": [],
         "tags": [],
         "url": "/Contributors/GraceYang/",
         "teaser": "/assets/images/Teaser.png"
@@ -132,37 +132,37 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Alzheimer’s Disease- an Existential Threat?",
-        "excerpt":"Since the author didn’t put his/her name in the essay, I decided not to reveal it. If you are the author and you want me to show it, please just contact me through whatsapp.   You can download it here     ","categories": [],
+        "excerpt":"Disclaimer  Since the author didn’t put his/her name in the essay, I decided not to reveal it. If you are the author and you want me to show it, please just contact me through whatsapp.   You can download it here     ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/Alzheimer/",
         "teaser": "/assets/images/Brain.png"
       },{
         "title": "Dark Energy and the Big RIP",
-        "excerpt":"I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data Source...","categories": [],
+        "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BigRIP/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Biological Weapons and Existential Risk",
-        "excerpt":"This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE       ","categories": [],
+        "excerpt":"Introduction  This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE   Viewing      ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/BioWeapons/",
         "teaser": "/assets/images/Beaker.png"
       },{
         "title": "Prions and Prion Diseases",
-        "excerpt":"This essay is written by Michael So You can download it below:     Word     ","categories": [],
+        "excerpt":"Introduction  This essay is written by Michael So You can download it below:     Word   Download    ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/Prions/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "The expansion of the sun into the orbit of Earth",
-        "excerpt":"This essay is written by Terrance Corey. You can download it below:     PDF   Word     ","categories": [],
+        "excerpt":"Introduction  This essay is written by Terrance Corey. You can download it below:     PDF   Word   Download    ","categories": [],
         "tags": [],
         "url": "/Existential_Risks/Sun/",
         "teaser": "/assets/images/Sun.png"
       },{
         "title": "Downloading and Using Jekyll (Window Users)",
-        "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make You can check if the version you have installed is correct using the commands below. As long as you know how...","categories": [],
+        "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make Checking You can check if the version you have installed is correct using the commands below. As long as you...","categories": [],
         "tags": [],
         "url": "/Jekyll/UsingJekyll/",
         "teaser": "/assets/images/Useless1.png"
@@ -173,26 +173,26 @@ var store = [{
         "url": "/Jekyll/tutorials/",
         "teaser": "/assets/images/Useless2.png"
       },{
-        "title": "Jekyll and KaTeX",
-        "excerpt":"How to include Math Symbols in Jekyll Note that in this website, we use \\(\\KaTeX\\) instead of \\(\\LaTeX\\). If you want to use \\(\\KaTeX\\) in Jekyll, you first need to copy the _layouts and _includes files in GitHub. Afterwards, you need to include the necessary gems. Please refer to my...","categories": [],
+        "title": "An Elegant Way to include Math Symbols in your website",
+        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Note that in this website, we...","categories": [],
         "tags": [],
         "url": "/Jekyll/Katex",
         "teaser": "/assets/images/Useless3.png"
       },{
-        "title": "Changing Skins in Minima (Henry)",
-        "excerpt":"Introduction Jekyll’s default theme, Minima, provides 4 possible skins. This page (as of 22/5/2022) is created using the solarized skin. (STARTING FROM 27/6/2022, WE SWITCH TO ANOTHER THEME) Installation Go to the GitHub Page for Minima, copy the codes in assets and _sass to your VSCode (Use VSCode Please!). Note...","categories": [],
+        "title": "Changing Skins in Minima and Minimal Mistakes",
+        "excerpt":"Important Disclaimer Starting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is much easier to change skin colours there. The first part is no longer relevant — unless you are still using Minima! Minima Jekyll’s default theme, Minima, provides 4 possible skins. This page (as of 22/5/2022) is...","categories": [],
         "tags": [],
         "url": "/Jekyll/skins/",
         "teaser": "/assets/images/Useless4.png"
       },{
         "title": "Jekyll Problems Q&A",
-        "excerpt":"#1 Insufficient resources online Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient resources online! My approach with learning computers, no matter programming or building a website, is to do...","categories": [],
+        "excerpt":"Introduction to this section If you have any problems to ask feel free to email s2231321@ed.ac.uk #1 Insufficient resources online Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient resources...","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/Q&A/",
         "teaser": "/assets/images/Useless5.png"
       },{
         "title": "Introduction to Algolia",
-        "excerpt":"Algolia Search is one of the best ways to enable searching in your Jekyll Website. For Windows users, all you need to do is to have a usuable Algolia account, cd into your directory and type: set ALGOLIA_API_KEY=(Your ALGOLIA_API_KEY) &amp;&amp; bundle exec jekyll algolia and then edit your config_yaml, gemfile...","categories": [],
+        "excerpt":"Introduction Algolia Search is one of the best ways to enable searching in your Jekyll Website. For Windows users, all you need to do is to have a usuable Algolia account, cd into your directory and type: set ALGOLIA_API_KEY=(Your ALGOLIA_API_KEY) &amp;&amp; bundle exec jekyll algolia and then edit your config_yaml,...","categories": [],
         "tags": [],
         "url": "/Jekyll/Algolia/",
         "teaser": "/assets/images/Useless6.png"
@@ -210,9 +210,15 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "My Progress in everything (With Comments on 31/7... See Bolded words)",
-        "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours and...","categories": [],
+        "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… Introduction It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours...","categories": [],
         "tags": [],
         "url": "/Journal/Progress/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "I am DISGUSTED!",
+        "excerpt":"I spend way too much time studying. Time to do other stuff!  ","categories": [],
+        "tags": [],
+        "url": "/Journal/Disgusted/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (1)",
@@ -222,27 +228,21 @@ var store = [{
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "LaTeX Tutorial (2)",
-        "excerpt":"Tex Source As promised, this is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to \\LaTeX] %optional...","categories": [],
+        "excerpt":"Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to \\LaTeX] %optional {Introduction to...","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial2/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "LaTeX Tutorial (3)",
-        "excerpt":"A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
+        "excerpt":"Introuduction   A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial3/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Sample Tex Files (1)",
-        "excerpt":"The Product: HERE \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free to send me any corrections. \\end{itemize} \\end{abstract} \\section{Aim} \\begin{itemize} \\item Provide a...","categories": [],
+        "excerpt":"The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free to send me any corrections. \\end{itemize} \\end{abstract} \\section{Aim} \\begin{itemize}...","categories": [],
         "tags": [],
         "url": "/LaTeX/Tex1/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample Tex Files (2)",
-        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving ordinary diffential...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/Tex2/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Classical Music Playlist (Henry)",
@@ -270,13 +270,13 @@ var store = [{
         "teaser": "/assets/Leo2.png"
       },{
         "title": "Dark Energy and the Big RIP",
-        "excerpt":"I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data Source...","categories": [],
+        "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/DarkEnergy/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "First Physics Book",
-        "excerpt":"This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and explanation which...","categories": [],
+        "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Book/",
         "teaser": "/assets/images/Astro.png"
