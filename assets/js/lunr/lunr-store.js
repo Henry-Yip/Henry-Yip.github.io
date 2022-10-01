@@ -281,8 +281,8 @@ var store = [{
         "url": "/Physics/Book/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "What on Earth is ALL THESE?!?!",
-        "excerpt":"So what is all these… Welcome to Henry’s Project! Time Spent in building this website: Around 200-300 hours! My New Welcome Page is still under construction! See if you like it! Press HERE (Note that some links are not fixed. I will look into that later) In February, I began...","categories": [],
+        "title": "An Introduction to This Website",
+        "excerpt":"New Welcoming Page! (Beta) My New Welcome Page is still under construction! See if you like it! PLEASE PRESS HERE Introduction Before making a website LaTeX In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a platform to put...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
