@@ -108,7 +108,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Henry Yip",
-        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Stuyding Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong Interests:...","categories": [],
+        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong Interests:...","categories": [],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
@@ -215,10 +215,16 @@ var store = [{
         "url": "/Journal/Progress/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "I am DISGUSTED!",
-        "excerpt":"I spend way too much time studying. Time to do other stuff!  ","categories": [],
+        "title": "Quitting Social Media!",
+        "excerpt":"Abstract I am unofficially quitting Instagram on 28/10/2022 Motivation IG interactions are fake interactions. Posting stories just for people to “appreciate” your life is pure stupidity (becuase you have to live alone anyways, searching for approval and seeking for competition with others makes your life worse). IG reels are addictive...","categories": [],
         "tags": [],
         "url": "/Journal/Disgusted/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "I suck at math!",
+        "excerpt":"Primary My parents forced me to attend KUMON when I was 5 years old. Being extra prepared before I even enter primary school, I scored top in mathematics and was subsequently invited by my primary school to join the math olympiad team. As primary math olympiad papers were really focused...","categories": [],
+        "tags": [],
+        "url": "/Journal/Isuckatmath/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (1)",
@@ -243,6 +249,12 @@ var store = [{
         "excerpt":"The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free to send me any corrections. \\end{itemize} \\end{abstract} \\section{Aim} \\begin{itemize}...","categories": [],
         "tags": [],
         "url": "/LaTeX/Tex1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample Tex Files (2)",
+        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving ordinary diffential...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex2/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Classical Music Playlist (Henry)",
