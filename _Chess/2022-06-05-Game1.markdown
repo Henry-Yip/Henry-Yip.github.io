@@ -1,0 +1,33 @@
+---
+layout: single
+title: Game 1 (Henry)
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments)(**I later expanded it to blitz and rapid**). As a chess variation enthuasiast, **I also disabled castling to add more variety (yay!)** (To be honest, I didn't disable... just that somehow the engines choose not to castle xD)
+
+**I have no idea if they disabled en-passant though...**
+(Yeah it's confusing, I don't know how the computer works)
+Anyways!
+**Rapid Game 10 minutes, no increments**
+
+ - **White: Stockfish**
+ - **Black: Fairy-Max**
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/brown/neo/0/cc/0/0/bUMhVENLVENsdENJdEJJU0JKU0lic1pSZ3Y2THZCTFpkbTBTanpJT2FiWUlKUzFTeklSSUJINVFzQzdHa3M4MW1OMSFDVDJUS1RRN2ZtWjhOOEdpYmppSmpsSm9oZm9VVDEhMmw3NDc4NzIxbkQxIURMVTJjVjJWZmdWVUxVM1U3OD9WOFMhMm1BVnBnVTIzUyE,.gif)
+
+The PGN is here:
+You can analyse it for free in [lichess analysis](https://lichess.org/analysis). Just paste the PGN in the box.
+
+```bash
+1. e4 Nf6 2. e5 Ne4 3. d3 Nc5 4. d4 Ne6 5. d5 Nc5 6. Nc3 d6 7. Nf3 Bf5 8. Nd4 Bd7 9. Qe2 e6 10. b4 Nca6 11. Rb1 c5 12. dxe6 fxe6 13. bxc5 dxc5 14. Ndb5 Nc6 15. Ne4 Qa5+ 16. c3 Kf7 17. Qh5+ Kg8 18. Nf6+ gxf6 19. exf6 Nd8 20. Be2 Be8 21. Qxe8 Qxa2 22. Rb2 Qd5 23. Rd2 Qxg2 24. Rf1 Qg6 25. f7+ Kg7 26. Rxd8 Rxd8 27. Qxd8 Kxf7 28. f4 Kg8 29. f5 Qg7 30. Bh6 Qxh6 31. Rg1+ Qg6 32. fxg6 hxg6 33. Qe8 Rh6 34. Qxe6+ Kg7 35. Bc4 Rxh2 36. Rxg6+ Kh7 37. Qg8#
+```
+**[Please check my article on this type of openings (it's considered as an inaccuracy by black!)]({% link _Chess/2022-05-31-Alekhine.markdown %})**
+## The Blunder
+
+The Blunder occurs at 14...Nc6??. Black simply forgot that the queen is threatening mate with the knight and bishop and without moving 14...Be7. After several attacks by white, black has to kingwalk to g8 after some very desperate checks, but all was over at that point.
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/ExVsKSc6/85Jh9w7f#28" frameborder=0></iframe>
+ 

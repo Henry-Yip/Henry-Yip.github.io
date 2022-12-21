@@ -1,0 +1,21 @@
+---
+layout: single
+header:
+  teaser: /assets/images/AI.png
+title: Chess AI Analysis 
+katex: False
+tags: Chess
+permalink: /Chess/ChessAI/  
+sidebar:
+ nav: "Chess"
+---
+
+ - [(Game #1) **Rapid** - Stockfish vs Fairy-Max ]({% link _Chess/2022-06-05-Game1.markdown %})
+ - [(Game #2) Rapid - Stockfish vs Fairy-Max ]({% link _Chess/2022-06-05-Game2.markdown %})
+ - [(Game #3) **Bullet** - Fairy-Max vs Fairy-Max]({% link _Chess/2022-06-12-Game3.markdown %})
+ - [(Game #4) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game4.markdown %})
+ - [(Game #5) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game5.markdown %})
+ - [(Game #6) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game6.markdown %})
+ - [(Game #7) **Classical** - Stockfish vs Fairy-Max]({% link _Chess/2022-08-10-Game7.markdown %})
+
+

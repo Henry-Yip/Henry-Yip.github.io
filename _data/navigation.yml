@@ -1,0 +1,167 @@
+# main links
+main:
+  - title: "Splash Page (Beta)"
+    url: /Splash/
+  - title: "Contributors"  
+    url: /Contributors/  
+  - title: "Chess"
+    url: /Chess/    
+  - title: "Physics"
+    url: /Physics/
+  - title: "Existential Risks"  
+    url: /Existential_Risks/
+  - title: "Jekyll"
+    url: /Jekyll/    
+  - title: "Journal"
+    url: /Journal/ 
+  - title: Music
+    url: /Music/  
+  - title: "Coding"
+    url: /Coding/
+  - title: "LaTeX"
+    url: /LaTeX/ 
+
+       
+
+
+
+  # - title: "Sitemap"
+  #   url: /sitemap/
+Splash_Page:
+  - title: Splash Page
+    children:
+      - title: "Splash Page"
+        url: /layouts/SplashPage/
+
+Chess:
+  - title: Chess
+    children:
+      - title: "Stafford Gambit"
+        url: /Chess/Stafford/
+      - title: "Daily Chess Puzzles" 
+        url: /Chess/ChessPuzzles/
+      - title: "Learning Blind Chess" 
+        url: /Chess/BlindChess/
+      - title: Chess AI Analysis
+        url: /Chess/ChessAI/ 
+      - title: How Should I learn Chess
+        url: /Chess/learning/
+      - title: Important Chess Events
+        url: /Chess/ChessEvents/
+
+
+Existential_Risks:
+  - title: Existential_Risks
+    children:
+      - title: "Biological Weapons and Existential Risk "
+        url: /Existential_Risks/BioWeapons/
+      - title: "The expansion of the sun into the orbit of Earth "  
+        url: /Existential_Risks/Sun/
+      - title: "Dark Energy and the Big RIP "  
+        url: /Existential_Risks/BigRIP/
+      - title: "Alzheimer’s Disease- an Existential Threat?  "  
+        url: /Existential_Risks/Alzheimer/
+      - title: "Prions and Prion Diseases"  
+        url: /Existential_Risks/Prions/
+      
+      
+     
+           
+Jekyll:
+  - title: Jekyll Tutorials
+    children:
+      - title: "Downloading and Using Jekyll (Window Users)"
+        url: /Jekyll/UsingJekyll/
+      - title: " Jekyll Tutorials" 
+        url: /Jekyll/tutorials/ 
+      - title: "Jekyll Problems Q&A " 
+        url: /Jekyll/Q&A/ 
+      - title: "Jekyll Skins" 
+        url: /Jekyll/skins/ 
+      - title: "Jekyll and KaTeX"
+        url: /Jekyll/Katex/
+      - title: "Introduction to Algolia"  
+        url: /Jekyll/Algolia/
+      - title: "Youtube Video"  
+        url: /Jekyll/Youtube/  
+
+Physics:
+  - title: Physics
+    children:
+      - title: "Astrophysics (Part 1)"
+        url: /Physics/Astrophysics1/
+      - title: "Astrophysics (Part 2)"
+        url: /Physics/Astrophysics2/  
+      - title: "Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)" 
+        url: /Jekyll/Relativity/ 
+      - title: "First Physics Book" 
+        url: /Jekyll/Book/  
+  
+Journal:
+  - title: Journal
+    children:
+      - title: "How to study Physics? "
+        url: /Journal/HowtostudyPhysics/
+      - title: "My Progress in everything" 
+        url: /Journal/Progress/
+      - title: "Quitting Social Media!" 
+        url: /Journal/Disgusted 
+      - title: "I Suck at Math!" 
+        url: /Journal/Isuckatmath     
+ 
+
+Contributors:
+  - title: Contributors
+    children:
+      - title: "Henry Yip"
+        url: /Contributors/HenryYip/
+      - title: "Leo Chow" 
+        url: /Contributors/LeoChow/
+      - title: "Grace Yang"
+        url: /Contributors/GraceYang/ 
+      - title: "Michael So"
+        url: /Contributors/MichaelSo/   
+
+      
+
+Music:
+  - title: Music
+    children:
+      - title: "How to study Physics? "
+        url: /Music/classicalplaylist/ 
+
+Coding:
+  - title: Coding
+    children:
+      - title: "Random Number Generator - Cutoff Game"
+        url: /Coding/Cutoff/ 
+      - title: "Twin Primes"  
+        url: /Coding/TwinPrimes/
+      - title: "Prime Gap"  
+        url: /Coding/PrimeGap/
+
+LaTeX:
+  - title: LaTeX
+    children:
+      - title: "LaTeX Tutorial (1)"
+        url: /LaTeX/LaTeXTutorial1/   
+      - title: "LaTeX Tutorial (2)"
+        url: /LaTeX/LaTeXTutorial2/ 
+      - title: "LaTeX Tutorial (3)"
+        url: /LaTeX/LaTeXTutorial3/
+      - title: "Sample Tex files (1)"
+        url: /LaTeX/Tex1/ 
+      - title: "Sample Tex files (2)"
+        url: /LaTeX/Tex2/               
+
+
+
+
+  
+
+     
+
+
+
+
+     

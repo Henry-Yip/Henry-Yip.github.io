@@ -1,0 +1,16 @@
+---
+layout: single
+title: Game 6 (Henry)
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+**Blitz Game - 5 minute**
+
+ - **White: Stockfish**
+ - **Black: Fairy-Max**
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/sky/bases/0/cc/0/0/bUNaUmxCWUlCSTdHYnNSSWd2NVFmSDZaZWc4NmRtM05zSjc4SFFYUUp1MEt1QUdZY2wxVGxHWTV2Rj9WZmRaRW52RVNGTFNMQ0w1WGR0Mk1hZFgyQVI5UnRSSUFtQTIwQVE2NVJaMElRSVdPSVk1NFlY.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/VODYlYmq/EnVLy6qN#46" frameborder=0></iframe>

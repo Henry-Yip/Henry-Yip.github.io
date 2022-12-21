@@ -1,0 +1,18 @@
+---
+layout: posts
+title: Grace Yang
+katex: False
+comments: True
+toc: true
+toc_label: "Grace"
+toc_sticky: true
+sidebar:
+ nav: "Contributors"
+permalink: /Contributors/GraceYang/
+---
+## Introduction
+Grace participated in my STEM project and agreed to feature [her essay]({% link _Existential_Risks/Bioweapons.markdown %}) in my website. Below is her self introduction:
+{: .notice--primary}
+## 
+**Hi! I am Grace, doing medicine at the University of Edinburgh. Although my course mostly focuses on biology, I have always wanted to gain deeper insights into other STEM subjects like physics and computer sciences. I also have a huge passion in music, hoping to sharpen my instrument performing techniques as well as acquiring a better understanding in music theory during my free time.**
+{: .notice--danger}

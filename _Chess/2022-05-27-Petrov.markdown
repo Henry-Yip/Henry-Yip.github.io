@@ -1,0 +1,72 @@
+---
+layout: single
+title: Petrov Defence 
+katex: False
+header:
+  teaser: /assets/images/Petrov.png
+sidebar:
+ nav: "Chess"
+---
+
+
+## Famous Traps
+
+### Trap #1 
+
+There are some interesting traps for the Petrov Defense:
+```bash
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Nd6 5. Nc6+
+```
+Where the discovery check wins the Queen and black is immediately lost (+8.0!)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/0sUJ3ZJ6/45byvdS6" frameborder=0></iframe>
+
+Also Please Check the [Stafford Gambit]({% link _Chess/2022-06-10-Stafford.markdown %})
+# Famous lines:
+
+## My Favourite line
+Well no particular reason:
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/light/book/0/cc/0/0/bUMwS2d2IVR2S1pSS3ZUQ2xCUkpmdDlSZWc4IWtBWVFmZTZMZHI,.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/oSy2pn7P/gJdD2doY" frameborder=0></iframe>
+
+```bash
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 8. c4 c6 9. Re1 Bf5 10. Qb3
+```
+**Classical Attack, Marshall Variation**
+That was also the first main line I learnt back then:
+```bash
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. d4 d5 6. Bd3 Bd6 7. O-O O-O 
+```
+The next moves are usually **8.c4 c6  9.c6**...
+However, please also note the Marshall Trap:
+
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/oCtcQiZH/Y6Qf4cif#15" frameborder=0></iframe>
+```bash
+8.c4 Bg4 9.cxd5 f5 10.Re1? Bxh2+!
+```
+Note: With correct play this position can be drawn! The computer evaluates (-0.5) so the advantage is very minimal!
+
+Obviously **11.Nxh2??** loses the Queen and we don't do this.
+<iframe width=600 height=371 src="https://lichess.org/study/embed/9JrtwDZp/K9AxfQQh#21" frameborder=0></iframe>
+If you are greedy and play **11.Kxh2**, black can strike back with **11...Nxf2!** , forking the Queen and the Bishop at the same time.
+<iframe width=600 height=371 src="https://lichess.org/study/embed/suYLzJg6/ra2zo5an#22" frameborder=0></iframe>
+
+After a number of exchanges, e.g.**12. Qe2 Nxd3 13. Qxd3 Bxf3**, you **cannot** take back the bishop or else you will be met by **14.Qh4!!** and your rook is lost!
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/brown/alpha/0/cc/0/0/bUMwS2d2IVR2S1pSS3ZUQ2xCUkpmdDlSZWc4IWtBNkVBSjFMZmVScGdwQ25kbW50bXRFdnR2N0ZwZ0Zl.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/wbeNpSJz/OPRAnxuQ#28" frameborder=0></iframe>
+
+For illustration you can check [this website](https://www.chess.com/forum/view/general/marshall-trapin-the-petroffs-defense)
+
+
+### Trap #2
+All credits due to [this amazing author](https://chess-teacher.com/5-best-chess-opening-traps-in-the-petrov-defense/)
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/neo/0/cc/0/0/bUMwS2d2IVR2S1pSS3ZUQ2RtNzBsdENUY3U1UWJzNkVweEVOb0VOVUVNVFpzSjA3Slk3WXVQ.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/FLSOKDRC/Il6mp3UY#27" frameborder=0></iframe>
+

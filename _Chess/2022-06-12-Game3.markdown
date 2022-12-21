@@ -1,0 +1,17 @@
+---
+layout: single
+title: Game 3 (Henry)
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+**Bullet Game - 1 minute**
+
+ - **White: Fairy-Max**
+ - **Black: Fairy-Max**
+
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/neo/0/cc/0/0/a3NZSW93WlJwRjVRZ3Y2TGZvN1BlZzg2bHQxVG1DTFNibFBPc0EzVmxyUXpjdVRMQ0tYSGlxelFLUjBSdmxRS2RtSEF0QVNBbEFPQW9YNlltZCFUWG9BSHF5SDV1RDc4YWNUQ2ZlNXpudkNUcklZUGdmUklES1RDdkNMRHdEODZkWjZRSzV6eTVZUEhDS3lPb0pIekpBT0FjQXpBWlFBcmV1cmlqemliUW9JenVl.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/5IvhNCsR/QSyRpQbM#16" frameborder=0></iframe>

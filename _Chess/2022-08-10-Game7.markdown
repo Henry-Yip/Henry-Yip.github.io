@@ -1,0 +1,16 @@
+---
+layout: single
+title: Game 7 (Henry)
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+**Classical-esque Game - 30 minutes**
+
+ - **White: Stockfish**
+ - **Black: Fairy-Max**
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/light/alpha/0/cc/0/0/bUMzTmxCIVRDS1RKa0FKUEJKWlJLUzFTZnQ3Wmd2WnlqcnlHY2xHT2RtWUlKUVhRdk1RSXRVOFpNU1BBckE1UVVMT1Bic1o4TFU4WnN5UDVtdDZPdExPNkxKNVB5SVBJU0laWVVDUXpsejQ1ekc1UEdQV1BKUVk3UVA3OENV.gif)
+
+<iframe width=600 height=371 src="https://lichess.org/study/embed/TkigxEAt/LqkHCbW9#23" frameborder=0></iframe>
