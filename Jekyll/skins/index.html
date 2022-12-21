@@ -1,0 +1,535 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="81758c7d-216b-410a-b68d-a3fdc18dce6a" data-blockingmode="auto" type="text/javascript"></script> 
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Changing Skins in Minima and Minimal Mistakes | Henry Yip</title>
+<meta name="description" content="Important Disclaimer Starting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is much easier to change skin colours there. The first part is no longer relevant — unless you are still using Minima!">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Changing Skins in Minima and Minimal Mistakes">
+<meta property="og:url" content="https://henry-yip.github.io/Jekyll/skins/">
+
+
+  <meta property="og:description" content="Important Disclaimer Starting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is much easier to change skin colours there. The first part is no longer relevant — unless you are still using Minima!">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Useless4.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-05-22T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/Jekyll/skins/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/Splash/">Splash Page (Beta)</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Contributors/">Contributors</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Chess/">Chess</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Physics/">Physics</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Existential_Risks/">Existential Risks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Jekyll/">Jekyll</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Journal/">Journal</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Music/">Music</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Coding/">Coding</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/jekyll" itemprop="item"><span itemprop="name">Jekyll</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Changing Skins in Minima and Minimal Mistakes</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Jekyll Tutorials</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/Jekyll/UsingJekyll/">Downloading and Using Jekyll (Window Users)</a></li>
+          
+            <li><a href="/Jekyll/tutorials/"> Jekyll Tutorials</a></li>
+          
+            <li><a href="/Jekyll/Q&A/">Jekyll Problems Q&A </a></li>
+          
+            <li><a href="/Jekyll/skins/" class="active">Jekyll Skins</a></li>
+          
+            <li><a href="/Jekyll/Katex/">Jekyll and KaTeX</a></li>
+          
+            <li><a href="/Jekyll/Algolia/">Introduction to Algolia</a></li>
+          
+            <li><a href="/Jekyll/Youtube/">Youtube Video</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Changing Skins in Minima and Minimal Mistakes">
+    <meta itemprop="description" content="Important DisclaimerStarting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is much easier to change skin colours there. The first part is no longer relevant — unless you are still using Minima!">
+    <meta itemprop="datePublished" content="2022-05-22T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/Jekyll/skins/" class="u-url" itemprop="url">Changing Skins in Minima and Minimal Mistakes
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Changing Skins</h4></header>
+              <ul class="toc__menu"><li><a href="#important-disclaimer">Important Disclaimer</a></li><li><a href="#minima">Minima</a><ul><li><a href="#installation">Installation</a></li><li><a href="#before-changing-the-theme">Before changing the theme:</a></li><li><a href="#conclusion">Conclusion</a></li></ul></li><li><a href="#minimal-mistakes">Minimal Mistakes?</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="important-disclaimer">Important Disclaimer</h2>
+<p class="notice--danger">Starting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is <em>much</em> easier to change skin colours there. The first part is no longer relevant — unless you are still using <strong>Minima</strong>!</p>
+
+<h2 id="minima">Minima</h2>
+<p>Jekyll’s default theme, <strong>Minima</strong>, provides 4 possible skins. This page (as of 22/5/2022) is created using the solarized skin.</p>
+
+<h3 id="installation">Installation</h3>
+<p>Go to the <a href="https://github.com/jekyll/minima">GitHub Page for Minima</a>, copy the codes in <strong>assets</strong> and <strong>_sass</strong> to your VSCode (Use VSCode Please!).</p>
+
+<p>Note that for this Tutorial <strong>_sass</strong>, you only need to download <strong>_base.scss</strong>, <strong>_layout.scss</strong> and <strong>initialize.scss</strong></p>
+
+<p>Of course it is always best to download <a href="https://github.com/jekyll/minima">all the files</a> in Github whenever you use a new theme!</p>
+
+<p>Change the code in <strong>initialize.scss</strong> from:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import
+  <span class="s2">"minima/custom-variables"</span>, // Hook to override predefined variables.
+  <span class="s2">"minima/base"</span>,             // Defines element resets.
+  <span class="s2">"minima/layout"</span>,           // Defines structure and style based on CSS selectors.
+  <span class="s2">"minima/custom-styles"</span>     // Hook to override existing styles.
+<span class="p">;</span>
+</code></pre></div></div>
+<p>to</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import
+  <span class="s2">"minima/custom-variables"</span>, // Hook to override predefined variables.
+  <span class="s2">"minima/_base"</span>,             // Defines element resets.
+  <span class="s2">"minima/_layout"</span>,           // Defines structure and style based on CSS selectors.
+  <span class="s2">"minima/custom-styles"</span>     // Hook to override existing styles.
+<span class="p">;</span>
+</code></pre></div></div>
+<p>Then download <strong>classic.scss</strong>, <strong>dark.scss</strong> and <strong>solarized.scss</strong> under _sass/minima/skins.</p>
+
+<p>There is <strong>NO NEED</strong> to download <strong>solarized-dark.scss</strong>. Whenever you want solarized-dark mode, just do the following:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$sol</span><span class="nt">-is-dark</span>: <span class="nb">true</span><span class="p">;</span>
+</code></pre></div></div>
+<h3 id="before-changing-the-theme">Before changing the theme:</h3>
+<p>Assuming you are chaning to solarized theme.
+ Change the settings in <strong>style.scss</strong> to</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import
+<span class="s2">"minima/skins/solarized"</span>,
+<span class="s2">"minima/initialize"</span><span class="p">;</span>
+
+</code></pre></div></div>
+<p>Then change the settings in <strong>_config.yaml</strong> to</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minima:
+  skin: solarized
+</code></pre></div></div>
+<h3 id="conclusion">Conclusion</h3>
+
+<p>I personally think all these themes look terrible, but that’s how you do it. You can change some settings by adding <strong>custom-styles.scss</strong> and <strong>custom-variables.scss</strong>, it’s a more <em>elegant</em> way of changing things, but you can just change the codes in <strong>_base.scss</strong> and <strong>_layout.scss</strong>.</p>
+
+<h2 id="minimal-mistakes">Minimal Mistakes?</h2>
+
+<p>Download <a href="https://github.com/mmistakes/minimal-mistakes">all the necessary files</a> from Github. Whenever you want to change your theme go to <strong>_config.yaml</strong> and find this line</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>minimal_mistakes_skin    : <span class="s2">"dark"</span> <span class="c"># "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"</span>
+</code></pre></div></div>
+<p>I am using <strong>Dark theme</strong> as of 1/10/2022.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-05-22T00:00:00+01:00">May 22, 2022</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Jekyll/Katex" class="pagination--pager" title="An Elegant Way to include Math Symbols in your website
+">Previous</a>
+    
+    
+      <a href="/Jekyll/Q&A/" class="pagination--pager" title="Jekyll Problems Q&amp;A
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '5CK3MN2B7K',
+  apiKey: '414aa238391f62d601f1f91dbed9649b',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
