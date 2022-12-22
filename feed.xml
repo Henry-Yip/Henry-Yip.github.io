@@ -1,9 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2022-12-21T20:43:14+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>A website including everything</subtitle><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><entry><title type="html">An Introduction to This Website</title><link href="https://henry-yip.github.io/Welcome/" rel="alternate" type="text/html" title="An Introduction to This Website" /><published>2022-08-04T00:00:00+01:00</published><updated>2022-08-04T00:00:00+01:00</updated><id>https://henry-yip.github.io/Welcome</id><content type="html" xml:base="https://henry-yip.github.io/Welcome/"><![CDATA[<h1 id="new-welcoming-page-beta">New Welcoming Page! (Beta)</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2022-12-22T03:04:26+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>A website including everything</subtitle><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><entry><title type="html">Chess AI</title><link href="https://henry-yip.github.io/ChessAI/" rel="alternate" type="text/html" title="Chess AI" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://henry-yip.github.io/ChessAI</id><content type="html" xml:base="https://henry-yip.github.io/ChessAI/"><![CDATA[<p>I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play some chess…</p>
+
+<ul>
+  <li><a href="/Chess/2022-06-05-Game1/">(Game #1) <strong>Rapid</strong> - Stockfish vs Fairy-Max </a></li>
+  <li><a href="/Chess/2022-06-05-Game2/">(Game #2) Rapid - Stockfish vs Fairy-Max </a></li>
+  <li><a href="/Chess/2022-06-12-Game3/">(Game #3) <strong>Bullet</strong> - Fairy-Max vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game4/">(Game #4) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game5/">(Game #5) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game6/">(Game #6) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-08-10-Game7/">(Game #7) <strong>Classical</strong> - Stockfish vs Fairy-Max</a></li>
+</ul>
+
+<p><img src="https://images.chesscomfiles.com/uploads/game-gifs/90px/tan/modern2/0/cc/0/0/bUNZUWd2MVRsQjJVYnNYSGZtSHpzeVpKQ0pRSmVnNVFtSDZYeUk3UGRtWDZpcXpxSXlQWWNEWVhhcVdPeUlYUGtBSkFIeTZFbUFFdm92MEtBUyEwcXJQWXJYWTZ5UTZRWDA5MFNRODFRSjEySVMyMURWVU1TOTE4SjQ4MTRKMThmYz8hYzYwN0pT.gif" alt="Alt Text" /></p>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play some chess…]]></summary></entry><entry><title type="html">The Big RIP</title><link href="https://henry-yip.github.io/BigRIP/" rel="alternate" type="text/html" title="The Big RIP" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://henry-yip.github.io/BigRIP</id><content type="html" xml:base="https://henry-yip.github.io/BigRIP/"><![CDATA[<div class="tenor-gif-embed" data-postid="15138520" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/galaxy-spiral-spinning-gif-15138520">Galaxy Spiral GIF</a>from <a href="https://tenor.com/search/galaxy-gifs">Galaxy GIFs</a></div>
+<script type="text/javascript" async="" src="https://tenor.com/embed.js"></script>
+
+<h2 id="introduction">Introduction</h2>
+<p>I spent around 3-4 days writing this short essay, featuring:</p>
+<ul>
+  <li>Introduction to the Cosmic Distance Scale</li>
+  <li>How Supernova Ia lead to the discovery of Dark Energy</li>
+  <li>Properties of Dark Energy</li>
+  <li>A detour to Einstein’s Field Equation (EFE)</li>
+  <li>Consequences of the Dark Energy</li>
+  <li>Timescale of its occurance using precise data</li>
+</ul>
+
+<h2 id="source-code-viewing">Source Code Viewing</h2>
+<p><a href="https://www.overleaf.com/read/dzzcybcggpnn">https://www.overleaf.com/read/dzzcybcggpnn </a></p>
+
+<h2 id="pdf-download">PDF download</h2>
+<p>Please Press <a href="https://henry-yip.github.io/assets/Dark_Energy_and_the_Big_RIP.pdf">HERE</a></p>
+
+<iframe src="https://henry-yip.github.io/assets/Dark_Energy_and_the_Big_RIP.pdf" width="100%" height="500px">
+
+</iframe>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[Galaxy Spiral GIFfrom Galaxy GIFs Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data]]></summary></entry><entry><title type="html">An Introduction to This Website</title><link href="https://henry-yip.github.io/Welcome/" rel="alternate" type="text/html" title="An Introduction to This Website" /><published>2022-08-04T00:00:00+01:00</published><updated>2022-08-04T00:00:00+01:00</updated><id>https://henry-yip.github.io/Welcome</id><content type="html" xml:base="https://henry-yip.github.io/Welcome/"><![CDATA[<h1 id="new-welcoming-page-beta">New Welcoming Page! (Beta)</h1>
 
 <p class="text-center notice--danger">My New Welcome Page is still under construction! See if you like it!</p>
 
 <p class="text-center notice--warning"><a href="https://henry-yip.github.io/Splash/">PLEASE PRESS HERE</a></p>
 <h1 id="introduction">Introduction</h1>
+<h2 id="myself">Myself</h2>
+<p><a href="/Contributors/HenryYip/">Henry YIP</a></p>
+<iframe src="/assets/images/Henry.png" width="410px" height="285px"></iframe>
+
 <h2 id="before-making-a-website">Before making a website</h2>
 <h3 id="latex">LaTeX</h3>
 <p>In February, I began learning \(\LaTeX\) and created tons of math documents. While it was fun, I didn’t really have a platform to put all these documents so it was kinda pointless. 

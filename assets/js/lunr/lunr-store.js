@@ -89,6 +89,12 @@ var store = [{
         "url": "/Chess/2022-08-10-Game7/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Chess with Toby Lam",
+        "excerpt":"Game 1  Toby Lam resigned after Qxg7??. Guess what he missed? You can try below and see if you can solve this simple puzzle!     ","categories": [],
+        "tags": ["Physics"],
+        "url": "/Chess/TobyLam/",
+        "teaser": "/assets/images/AI.png"
+      },{
         "title": "Twin Primes",
         "excerpt":"#include &lt;iostream&gt; using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int main() { int range; int counter=0; cout&lt;&lt;\"What is the Maximum Number?\"&lt;&lt;\"\\n\"; cin&gt;&gt;range; for (int i=2;i&lt;range;i++) { if (isPrime(i) &amp;&amp; isPrime(i+2)) { cout&lt;&lt;i&lt;&lt;\" &amp; \"&lt;&lt;i+2&lt;&lt;\"\\n\";...","categories": [],
         "tags": [],
@@ -108,7 +114,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Henry Yip",
-        "excerpt":"Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong Interests:...","categories": [],
+        "excerpt":"Photo Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong...","categories": [],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
@@ -294,8 +300,20 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "An Introduction to This Website",
-        "excerpt":"New Welcoming Page! (Beta) My New Welcome Page is still under construction! See if you like it! PLEASE PRESS HERE Introduction Before making a website LaTeX In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a platform to put...","categories": [],
+        "excerpt":"New Welcoming Page! (Beta) My New Welcome Page is still under construction! See if you like it! PLEASE PRESS HERE Introduction Myself Henry YIP Before making a website LaTeX In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a...","categories": [],
         "tags": [],
         "url": "/Welcome/",
+        "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "The Big RIP",
+        "excerpt":"Galaxy Spiral GIFfrom Galaxy GIFs Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of...","categories": [],
+        "tags": [],
+        "url": "/BigRIP/",
+        "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "Chess AI",
+        "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play some chess… (Game #1) Rapid - Stockfish vs Fairy-Max (Game #2) Rapid - Stockfish vs Fairy-Max (Game #3) Bullet - Fairy-Max vs Fairy-Max (Game #4) Bullet - Stockfish vs Fairy-Max (Game #5) Bullet -...","categories": [],
+        "tags": [],
+        "url": "/ChessAI/",
         "teaser": "/assets/images/Wolf.png"
       }]
