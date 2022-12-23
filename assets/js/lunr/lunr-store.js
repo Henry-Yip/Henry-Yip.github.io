@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"   (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #7) Classical - Stockfish vs Fairy-Max   ","categories": [],
+        "excerpt":"     (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #7) Classical - Stockfish vs Fairy-Max   ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -29,20 +29,20 @@ var store = [{
         "url": "/Chess/BlindChess/",
         "teaser": "/assets/images/Empty.png"
       },{
-        "title": "Play A Chess Puzzle Here!",
-        "excerpt":"From Chess.com     ","categories": [],
+        "title": "Play Infinitely Many Chess Puzzles Here!",
+        "excerpt":"  ","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessPuzzles/",
         "teaser": "/assets/images/Puzzles.png"
       },{
-        "title": "Game 1 (Henry)",
+        "title": "Game 1",
         "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments)(I later expanded it to blitz and rapid). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (To be honest, I didn’t disable…...","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game1/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Game 2 (Henry)",
-        "excerpt":"Rapid Game 10 minutes, no increments      White: Stockfish   Black: Fairy-Max       ","categories": [],
+        "title": "Game 2",
+        "excerpt":"Rapid Game 10 minutes, no increments      White: Stockfish   Black: Fairy-Max      You can click here for Analysis!   The Blunder   I admit this is a hard puzzle…      ","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game2/",
         "teaser": "/assets/images/Teaser.png"
@@ -53,25 +53,25 @@ var store = [{
         "url": "/Chess/Stafford/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Game 3 (Henry)",
-        "excerpt":"Bullet Game - 1 minute      White: Fairy-Max   Black: Fairy-Max       ","categories": [],
+        "title": "Game 3",
+        "excerpt":"Bullet Game - 1 minute      White: Fairy-Max   Black: Fairy-Max        Blunders  Too many blunders… I can’t make a fun puzzle   ","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-12-Game3/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Game 4 (Henry)",
-        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max       ","categories": [],
+        "title": "Game 4",
+        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max      Click Here for Analysis   The Blunder     ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game4/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Game 5 (Henry)",
-        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max       ","categories": [],
+        "title": "Game 5",
+        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max        The Blunder  There aren’t many blunders in this game… Both played really well, but I guess Stockfish is just too good…  ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game5/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Game 6 (Henry)",
+        "title": "Game 6",
         "excerpt":"Blitz Game - 5 minute      White: Stockfish   Black: Fairy-Max       ","categories": [],
         "tags": [],
         "url": "/Chess/2022-07-31-Game6/",
@@ -83,14 +83,14 @@ var store = [{
         "url": "/Chess/ChessEvents/",
         "teaser": "/assets/images/AI.png"
       },{
-        "title": "Game 7 (Henry)",
+        "title": "Game 7",
         "excerpt":"Classical-esque Game - 30 minutes      White: Stockfish   Black: Fairy-Max       ","categories": [],
         "tags": [],
         "url": "/Chess/2022-08-10-Game7/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Chess with Toby Lam",
-        "excerpt":"Game 1  Toby Lam resigned after Qxg7??. Guess what he missed? You can try below and see if you can solve this simple puzzle!     ","categories": [],
+        "excerpt":"The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Toby Lam is a Math Major studying in Oxford. I played these games with him in starbucks, 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn’t...","categories": [],
         "tags": ["Physics"],
         "url": "/Chess/TobyLam/",
         "teaser": "/assets/images/AI.png"
@@ -180,7 +180,7 @@ var store = [{
         "teaser": "/assets/images/Useless2.png"
       },{
         "title": "An Elegant Way to include Math Symbols in your website",
-        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Note that in this website, we...","categories": [],
+        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Sometimes, you just want to have...","categories": [],
         "tags": [],
         "url": "/Jekyll/Katex",
         "teaser": "/assets/images/Useless3.png"
@@ -315,5 +315,11 @@ var store = [{
         "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play some chess… (Game #1) Rapid - Stockfish vs Fairy-Max (Game #2) Rapid - Stockfish vs Fairy-Max (Game #3) Bullet - Fairy-Max vs Fairy-Max (Game #4) Bullet - Stockfish vs Fairy-Max (Game #5) Bullet -...","categories": [],
         "tags": [],
         "url": "/ChessAI/",
+        "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "Infinitely Chess Puzzles",
+        "excerpt":"  ","categories": [],
+        "tags": [],
+        "url": "/Puzzles/",
         "teaser": "/assets/images/Wolf.png"
       }]

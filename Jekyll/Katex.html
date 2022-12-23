@@ -304,7 +304,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> LaTeX and KaTeX</h4></header>
-              <ul class="toc__menu"><li><a href="#important-disclaimer">Important Disclaimer</a><ul><li><a href="#how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</a></li><li><a href="#why-it-works">Why it works?</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#important-disclaimer">Important Disclaimer</a><ul><li><a href="#how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</a></li><li><a href="#why-it-works">Why it works?</a></li><li><a href="#checking">Checking</a></li><li><a href="#customization">Customization</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -313,6 +313,9 @@
 <p class="notice--danger">Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users!</p>
 
 <h3 id="how-to-include-math-symbols-in-jekyll">How to include Math Symbols in Jekyll</h3>
+<p>Sometimes, you just want to have cool symbols in your website…
+\(\sum_{\mathclap{1\le i\le j\le n}} x_{ij}\)</p>
+
 <p>Note that in this website, we use \(\KaTeX\) instead of \(\LaTeX\).</p>
 
 <p class="notice--warning">For \(\LaTeX\) users you may ask: What is \(\KaTeX\)? Don’t expect me to put everything here, search online for more!</p>
@@ -381,6 +384,40 @@ catergories: Henry Yip
 </code></pre></div></div>
 <p>And therefore \(\KaTeX\) is included in this page!</p>
 
+<h3 id="checking">Checking</h3>
+<p>According to <a href="https://katex.org/docs/issues.html">The Official Website</a>, for checking, simply type:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;style&gt;
+  .katex-version <span class="o">{</span>display: none<span class="p">;</span><span class="o">}</span>
+  .katex-version::after <span class="o">{</span>content:<span class="s2">"0.10.2 or earlier"</span><span class="p">;</span><span class="o">}</span>
+&lt;/style&gt;
+&lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"katex"</span><span class="o">&gt;</span>
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"katex-mathml"</span><span class="o">&gt;</span>The KaTeX stylesheet is not loaded!&lt;/span&gt;
+  &lt;span <span class="nv">class</span><span class="o">=</span><span class="s2">"katex-version rule"</span><span class="o">&gt;</span>KaTeX stylesheet version: &lt;/span&gt;
+&lt;/span&gt;
+</code></pre></div></div>
+<p>Example:</p>
+<style>
+  .katex-version {display: none;}
+  .katex-version::after {content:"0.10.2 or earlier";}
+</style>
+
+<p><span class="katex">
+  <span class="katex-mathml">The KaTeX stylesheet is not loaded!</span>
+  <span class="katex-version rule">KaTeX stylesheet version: </span>
+</span></p>
+
+<p>If it is loaded properly, it’ll show its version. Make sure its version matches the version of the JavaScript file (katex.js), which is defined in katex.version. If it is not loaded properly, it’ll show:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The KaTeX stylesheet is not loaded!
+</code></pre></div></div>
+<h3 id="customization">Customization</h3>
+<p>According to <a href="https://katex.org/docs/issues.html">the website</a>, you can customize it by a bit. An example would be to allow line breaks in display equations.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.katex-display <span class="o">&gt;</span> .katex <span class="o">{</span> white-space: normal <span class="o">}</span>
+/<span class="k">*</span> Add space between broken lines: <span class="k">*</span>/
+.katex-display <span class="o">&gt;</span> .base <span class="o">{</span> margin: 0.25em 0 <span class="o">}</span>
+/<span class="k">*</span> Compensate by reducing space around display math <span class="k">*</span>/
+.katex-display <span class="o">{</span> margin: 0.5em 0<span class="p">;</span> <span class="o">}</span>
+</code></pre></div></div>
 
         
       </section>
