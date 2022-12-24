@@ -323,20 +323,13 @@
 
 <p>For example, \(ax^2+bx+c\) implies stationary Point at \(x=\frac{-b}{2a}\) by simple differentiation… (2nd derivative test shows Max/Min)</p>
 
-<p>[
-\mathbf{u}_{i,j} =
-\begin{bmatrix}
-  \frac{\partial u_1}{\partial x_1} &amp; 
-    \frac{\partial u_1}{\partial x_2} &amp; 
-    \frac{\partial u_1}{\partial x_3} \[1ex] % &lt;– 1ex more space between rows of matrix
-  \frac{\partial u_2}{\partial x_1} &amp; 
-    \frac{\partial u_2}{\partial x_2} &amp; 
-    \frac{\partial u_2}{\partial x_3} \[1ex]
-  \frac{\partial u_3}{\partial x_1} &amp; 
-    \frac{\partial u_3}{\partial x_2} &amp; 
-    \frac{\partial u_3}{\partial x_3}
-\end{bmatrix}
-]</p>
+<p>This is similar to the \(Hessian Matrix\)
+\(\mathbf{H}=\left[\begin{array}{cccc}
+\frac{\partial^2 f}{\partial x_1^2} &amp; \frac{\partial^2 f}{\partial x_1 \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_2^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} &amp; \frac{\partial^2 f}{\partial x_n \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_n^2}
+\end{array}\right]\)</p>
 
 <p>I clearly remember myself struggling in <a href="https://mathseasy.hk/articles/hkdse-2021-p2-ans/">Q38</a> during public examination… Finished the paper with tons of time remaining, but had 9 careless mistakes… 9!</p>
 
