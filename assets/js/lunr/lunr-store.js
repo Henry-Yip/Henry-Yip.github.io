@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"     (Game #1) Rapid - Stockfish vs Fairy-Max    (Game #2) Rapid - Stockfish vs Fairy-Max    (Game #3) Bullet - Fairy-Max vs Fairy-Max   (Game #4) Bullet - Stockfish vs Fairy-Max   (Game #5) Bullet - Stockfish vs Fairy-Max   (Game #6) Bullet - Stockfish vs Fairy-Max   (Game #7) Classical - Stockfish vs Fairy-Max   ","categories": [],
+        "excerpt":"Chess AI After Deep Blue defeated GM Garry Kasparov, it seems that AI are unbeatable… Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best Chess Player ever. Stockfish has an elo of around 3500. Just to let you see the...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -18,7 +18,7 @@ var store = [{
         "teaser": "/assets/images/Alekhine.png"
       },{
         "title": "How should I learn Chess?",
-        "excerpt":"Chess consists of 3 parts: Opening, Middlegame and Endgame How to Improve Openings First, make sure to check my posts on [chess openings] Openings have set theories and you need to grind through it. If you don’t have much time, I recommend you to play openings like London, where your...","categories": [],
+        "excerpt":"Chess consists of 3 parts: Opening, Middlegame and Endgame How to Improve Openings First, make sure to check my posts on chess openings Openings have set theories and you need to grind through it. If you don’t have much time, I recommend you to play openings like London, where your...","categories": [],
         "tags": [],
         "url": "/Chess/learning/",
         "teaser": "/assets/images/How.png"
@@ -36,7 +36,7 @@ var store = [{
         "teaser": "/assets/images/Puzzles.png"
       },{
         "title": "Game 1",
-        "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play bullet (i.e. 1 min each, no increments)(I later expanded it to blitz and rapid). As a chess variation enthuasiast, I also disabled castling to add more variety (yay!) (To be honest, I didn’t disable…...","categories": [],
+        "excerpt":"Rapid Game 10 minutes, no increments White: Stockfish Black: Fairy-Max The PGN is here: You can analyse it for free in lichess analysis. Just paste the PGN in the box. 1. e4 Nf6 2. e5 Ne4 3. d3 Nc5 4. d4 Ne6 5. d5 Nc5 6. Nc3 d6 7. Nf3...","categories": [],
         "tags": [],
         "url": "/Chess/2022-06-05-Game1/",
         "teaser": "/assets/images/Teaser.png"
@@ -90,9 +90,15 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Chess with Toby Lam",
-        "excerpt":"The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Toby Lam is a Math Major studying in Oxford. I played these games with him in starbucks, 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn’t...","categories": [],
+        "excerpt":"The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form...","categories": [],
         "tags": ["Physics"],
         "url": "/Chess/TobyLam/",
+        "teaser": "/assets/images/AI.png"
+      },{
+        "title": "Play an engine!",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/Chess/Events/",
         "teaser": "/assets/images/AI.png"
       },{
         "title": "Twin Primes",
@@ -204,34 +210,40 @@ var store = [{
         "teaser": "/assets/images/Useless6.png"
       },{
         "title": "Youtube Video",
-        "excerpt":"I am terribly sorry for the potato quality! I will most definitely refilm this!    ","categories": [],
+        "excerpt":"I am terribly sorry for the potato quality! I will most definitely refilm this! LINK    ","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/Youtube/",
         "teaser": "/assets/images/Useless2.png"
       },{
+        "title": "Interactiveness of Jekyll",
+        "excerpt":"Static Websites Jekyll generated websites are static… Yes, I know this sucks a lot… However, you can always make it interactive by introducing Iframes Iframes? According to This Website, An iFrame, also knowns as Inline Frame, is an element that loads another HTML element inside of a web page. They...","categories": [],
+        "tags": [],
+        "url": "/Jekyll/Interactive/",
+        "teaser": "/assets/images/Useless4.png"
+      },{
         "title": "How I Approach Physics",
-        "excerpt":"Introduction Physics is definitely one of the harder subjects to master (if you can master Physics after all!) Skipping lectures My friends recommended me to skip lectures, as it was more of a routine than actually learning stuff. After a year of doing that, my verdict is that it is...","categories": [],
+        "excerpt":"Introduction Physics is definitely one of the harder subjects to master (if you can master Physics after all!) Skipping lectures My friend recommended me to skip lectures, as it was more of a routine than actually learning stuff. After a year of doing that, my verdict is that it is...","categories": [],
         "tags": [],
         "url": "/Journal/HowtostudyPhysics/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "My Progress in everything (With Comments on 31/7... See Bolded words)",
+        "title": "My Progress in everything (Updated)",
         "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… Introduction It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours...","categories": [],
         "tags": [],
         "url": "/Journal/Progress/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Quitting Social Media!",
-        "excerpt":"Abstract I am unofficially quitting Instagram on 28/10/2022 Motivation IG interactions are fake interactions. Posting stories just for people to “appreciate” your life is pure stupidity (becuase you have to live alone anyways, searching for approval and seeking for competition with others makes your life worse). IG reels are addictive...","categories": [],
+        "excerpt":"Abstract I am unofficially quitting Instagram on 28/11/2022 and I will only share update here (therefore check if you want to know more about me!) Motivation I’ll quote this from Toby Lam: “I’m aware that the viewership of this website may be very low, yet that doesn’t particularly concern me....","categories": [],
         "tags": [],
         "url": "/Journal/Disgusted/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Isuckatmath",
-        "excerpt":"Primary My parents forced me to attend KUMON when I was 5 years old. Being extra prepared before I even enter primary school, I scored top in mathematics and was subsequently invited by my primary school to join the math olympiad team. As primary math olympiad papers were really focused...","categories": [],
+        "excerpt":"Sanity Check to Make Sure \\(KaTeX\\) is working: The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Primary I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, scoring some medals in several important competitions. I was more interested in...","categories": [],
         "tags": [],
         "url": "/Journal/Isuckatmath/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
