@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Jekyll Tutorials | Henry Yip</title>
-<meta name="description" content="Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting in computing, since jekyll supports Github Pages, it is always almost recommended to use Jekyll.">
+<meta name="description" content="Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and get things like: Liquid Exception: Could not find document &#39;_Physics/2022-08-02-DarkEnergy&#39; in tag &#39;link&#39;. Make sure the document exists and the path is correct. in C:/Users/henry/OneDrive/Documents/Newwebsite/_Journal/2022-10-29-Isuckatmath.markdown                     ------------------------------------------------       Jekyll 4.2.2   Please append `--trace` to the `serve` command                      for any additional information or backtrace.                     ------------------------------------------------">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Jekyll/tutorials/">
 
 
-  <meta property="og:description" content="Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting in computing, since jekyll supports Github Pages, it is always almost recommended to use Jekyll.">
+  <meta property="og:description" content="Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and get things like: Liquid Exception: Could not find document &#39;_Physics/2022-08-02-DarkEnergy&#39; in tag &#39;link&#39;. Make sure the document exists and the path is correct. in C:/Users/henry/OneDrive/Documents/Newwebsite/_Journal/2022-10-29-Isuckatmath.markdown                     ------------------------------------------------       Jekyll 4.2.2   Please append `--trace` to the `serve` command                      for any additional information or backtrace.                     ------------------------------------------------">
 
 
 
@@ -284,7 +284,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Jekyll Tutorials">
-    <meta itemprop="description" content="Why JekyllThere are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting in computing, since jekyll supports Github Pages, it is always almost recommended to use Jekyll.">
+    <meta itemprop="description" content="Why JekyllThere are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and get things like:Liquid Exception: Could not find document &#39;_Physics/2022-08-02-DarkEnergy&#39; in tag &#39;link&#39;. Make sure the document exists and the path is correct. in C:/Users/henry/OneDrive/Documents/Newwebsite/_Journal/2022-10-29-Isuckatmath.markdown                    ------------------------------------------------      Jekyll 4.2.2   Please append `--trace` to the `serve` command                     for any additional information or backtrace.                    ------------------------------------------------">
     <meta itemprop="datePublished" content="2022-05-19T00:00:00+01:00">
     
 
@@ -312,9 +312,37 @@
           </aside>
         
         <h2 id="why-jekyll">Why Jekyll</h2>
-<p>There are <strong>many ways</strong> to create a website. Most people stick with “Website Builder” tools like <a href="https://www.wix.com/">wix</a>, the major benefit being <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting in computing, since jekyll supports Github Pages, it is always almost recommended to use Jekyll.</p>
+<p>There are <strong>many ways</strong> to create a website. Most people stick with “Website Builder” tools like <a href="https://www.wix.com/">wix</a>, the major benefit being <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a>. It is also relatively easier to build as you don’t need to work with command prompt and get things like:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Liquid Exception: Could not find document <span class="s1">'_Physics/2022-08-02-DarkEnergy'</span> <span class="k">in </span>tag <span class="s1">'link'</span><span class="nb">.</span> Make sure the document exists and the path is correct. <span class="k">in </span>C:/Users/henry/OneDrive/Documents/Newwebsite/_Journal/2022-10-29-Isuckatmath.markdown
+                    <span class="nt">------------------------------------------------</span>
+      Jekyll 4.2.2   Please append <span class="sb">`</span><span class="nt">--trace</span><span class="sb">`</span> to the <span class="sb">`</span>serve<span class="sb">`</span> <span class="nb">command
+                     </span><span class="k">for </span>any additional information or backtrace.
+                    <span class="nt">------------------------------------------------</span>
+</code></pre></div></div>
 
-<p>This comparision is similar to \(\LaTeX\) vs <strong>Word</strong>. It is easier to work with word, but mathematicians may pick on you if you use word for your thesis!</p>
+<p>However, for people using <a href="https://github.com/">GitHub</a> and are interesting in computing (not saying Jekyll requires computing, but at least you can put stuff in your Github Account. Like <a href="https://github.com/Henry-Yip/Henry-Yip.github.io">THIS</a>), since jekyll supports Github Pages, it is always almost recommended to use Jekyll.</p>
+
+<p>This comparision is similar to \(\LaTeX\) vs <strong>Word</strong>. It is easier to work with word, but mathematicians may pick on you if you use <strong>Word</strong> for your thesis!</p>
+
+<p>The other thing is that Jekyll supports much more functions than Wix (from my understanding). In particular, Math Equations, like:</p>
+
+\[\mathbf{H}=\left[\begin{array}{cccc}
+\frac{\partial^2 f}{\partial x_1^2} &amp; \frac{\partial^2 f}{\partial x_1 \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_2^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} &amp; \frac{\partial^2 f}{\partial x_n \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_n^2}
+\end{array}\right]\]
+
+<p>By <em>Simply</em>] typing</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$$</span>
+<span class="se">\m</span>athbf<span class="o">{</span>H<span class="o">}=</span><span class="se">\l</span>eft[<span class="se">\b</span>egin<span class="o">{</span>array<span class="o">}{</span>cccc<span class="o">}</span>
+<span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_1^2<span class="o">}</span> &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_1 <span class="se">\p</span>artial x_2<span class="o">}</span> &amp; <span class="se">\c</span>dots &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_1 <span class="se">\p</span>artial x_n<span class="o">}</span> <span class="se">\\</span>
+<span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_2 <span class="se">\p</span>artial x_1<span class="o">}</span> &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_2^2<span class="o">}</span> &amp; <span class="se">\c</span>dots &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_2 <span class="se">\p</span>artial x_n<span class="o">}</span> <span class="se">\\</span>
+<span class="se">\v</span>dots &amp; <span class="se">\v</span>dots &amp; <span class="se">\d</span>dots &amp; <span class="se">\v</span>dots <span class="se">\\</span>
+<span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_n <span class="se">\p</span>artial x_1<span class="o">}</span> &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_n <span class="se">\p</span>artial x_2<span class="o">}</span> &amp; <span class="se">\c</span>dots &amp; <span class="se">\f</span>rac<span class="o">{</span><span class="se">\p</span>artial^2 f<span class="o">}{</span><span class="se">\p</span>artial x_n^2<span class="o">}</span>
+<span class="se">\e</span>nd<span class="o">{</span>array<span class="o">}</span><span class="se">\r</span>ight]
+<span class="nv">$$</span>
+</code></pre></div></div>
 
 <h3 id="introduction-to-this-series">Introduction to this series:</h3>
 <p>I have made a number of Tutorials regarding the static site generator, Jekyll, which builds this website:</p>

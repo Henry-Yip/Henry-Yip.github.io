@@ -180,13 +180,13 @@ var store = [{
         "teaser": "/assets/images/Useless1.png"
       },{
         "title": "Jekyll Tutorials",
-        "excerpt":"Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and debug. However, for people using GitHub and are interesting...","categories": [],
+        "excerpt":"Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and get things like: Liquid Exception: Could not find document...","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/tutorials/",
         "teaser": "/assets/images/Useless2.png"
       },{
         "title": "An Elegant Way to include Math Symbols in your website",
-        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Sometimes, you just want to have...","categories": [],
+        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Sometimes, you just want to include...","categories": [],
         "tags": [],
         "url": "/Jekyll/Katex",
         "teaser": "/assets/images/Useless3.png"
@@ -198,7 +198,7 @@ var store = [{
         "teaser": "/assets/images/Useless4.png"
       },{
         "title": "Jekyll Problems Q&A",
-        "excerpt":"Introduction to this section If you have any problems to ask feel free to email s2231321@ed.ac.uk #1 Insufficient resources online Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient resources...","categories": [],
+        "excerpt":"Introduction to this section If you have any problems to ask feel free to email s2231321@ed.ac.uk ** #1 Insufficient resources online** Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient...","categories": [],
         "tags": ["Jekyll"],
         "url": "/Jekyll/Q&A/",
         "teaser": "/assets/images/Useless5.png"
@@ -275,10 +275,16 @@ var store = [{
         "url": "/LaTeX/Tex2/",
         "teaser": "/assets/images/LaTeX.png"
       },{
-        "title": "Classical Music Playlist (Henry)",
+        "title": "Classical Music Playlist",
         "excerpt":"I am a classical music enthusiast. I planned to study a Master in Arts, and eventually gave up for physics. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of...","categories": [],
         "tags": ["Music"],
         "url": "/Music/2022-05-20-ClassicalMusic/",
+        "teaser": "/assets/images/Music.png"
+      },{
+        "title": "Resources",
+        "excerpt":"Motivation Being a classical music fan, sometimes you want to learn more music theory… And you want to learn it for fun so it won’t stress you out. Don’t worry, there are tons of Youtube Videos online! Youtube Channels English Videos English-Speaking Audiences: Richard Atkinson (Not Rowan, aka Mr Bean)...","categories": [],
+        "tags": ["Music"],
+        "url": "/Music/2022-12-24-Resources/",
         "teaser": "/assets/images/Music.png"
       },{
         "title": "Astrophysics (Part 1)",
@@ -324,13 +330,13 @@ var store = [{
         "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Chess AI",
-        "excerpt":"I have installed two chess engines -Fairy-Max and Stockfish in my computer so they can play some chess… (Game #1) Rapid - Stockfish vs Fairy-Max (Game #2) Rapid - Stockfish vs Fairy-Max (Game #3) Bullet - Fairy-Max vs Fairy-Max (Game #4) Bullet - Stockfish vs Fairy-Max (Game #5) Bullet -...","categories": [],
+        "excerpt":"Chess AI After Deep Blue defeated GM Garry Kasparov, it seems that AI are unbeatable… Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best Chess Player ever. Stockfish has an elo of around 3500. Just to let you see the...","categories": [],
         "tags": [],
         "url": "/ChessAI/",
         "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "Infinitely Chess Puzzles",
-        "excerpt":"  ","categories": [],
+        "title": "Infinitely Many Chess Puzzles",
+        "excerpt":"Let it load for a while:    ","categories": [],
         "tags": [],
         "url": "/Puzzles/",
         "teaser": "/assets/images/Wolf.png"
