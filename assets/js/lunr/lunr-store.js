@@ -245,6 +245,12 @@ var store = [{
         "url": "/Journal/Isuckatmath/",
         "teaser": "/assets/images/Pgfplots.png"
       },{
+        "title": "Tropical Cyclones",
+        "excerpt":"Filmed in 2015. Enjoy!   ","categories": [],
+        "tags": [],
+        "url": "/Journal/TropicalClyclones/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],
@@ -276,7 +282,7 @@ var store = [{
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Classical Music Playlist",
-        "excerpt":"I am a classical music enthusiast. I planned to study a Master in Arts, and eventually gave up for physics. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of...","categories": [],
+        "excerpt":"I am a classical music enthusiast. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of Fugue 1.5 hrs of fugue - full of variations. Note the definition of Fugue...","categories": [],
         "tags": ["Music"],
         "url": "/Music/2022-05-20-ClassicalMusic/",
         "teaser": "/assets/images/Music.png"
@@ -315,6 +321,12 @@ var store = [{
         "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Book/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "HKDSE Physics",
+        "excerpt":"Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b has area $$\\pi ab** Proof: Consider **Green’s Theorem (Stoke’s Theorem on xy plane) \\(\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) d x d y\\) We aim to find polynomials such that \\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "An Introduction to This Website",
