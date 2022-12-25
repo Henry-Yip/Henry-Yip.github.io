@@ -308,29 +308,27 @@
         <h3 id="appendix-a">Appendix A</h3>
 <p><strong>Proposition</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
 
-<p><strong>Proof:
-Consider **Green’s Theorem</strong> (Stoke’s Theorem on xy plane):</p>
+<p><strong>Proof</strong>:
+Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
 
 \[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
 
-<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\)</p>
+<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1\)</p>
 
 <p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
 
-<p>So we can estimate the area as:</p>
+<p>So we can estimate the area (denote by \(D\)) as:</p>
 
-\[\frac{1}{2} \oint_C(x dy-ydx)\]
+\[D=\frac{1}{2} \oint_C(x dy-ydx)\]
 
 <p>Standard parameterization of an ellipse:</p>
 
 \[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi .}\]
 
-<p>So it’s Area (Denote by D):</p>
+<p>\(D=\frac{1}{2} \oint_C(x dy-ydx)\) <br />
+\(= \int_0^{2\pi} (acost)(bcost) dt - (bsint)(-asint)dt\)</p>
 
-<p>\(\frac{1}{2} \oint_C(x dy-ydx)\) <br />
-\(= \int_0^2\pi (acost)(bcost) dt - (bsint)(-asint)dt\)</p>
-
-<p>Using <strong>sin^2t+cos^2t=1</strong>, we can quickly see D= <strong>\pi a b</strong>. Q.E.D.</p>
+<p>Using \(sin^2t+cos^2t=1\), we can quickly see D= \(\pi a b\). Q.E.D.</p>
 
 
         

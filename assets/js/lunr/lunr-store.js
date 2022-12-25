@@ -324,7 +324,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider **Green’s Theorem (Stoke’s Theorem on xy plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) d x d y\\] We aim to find polynomials such that \\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial...","categories": [],
+        "excerpt":"Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s Theorem on \\(xy\\) plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) d x d y\\] We aim to find polynomials such that \\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
