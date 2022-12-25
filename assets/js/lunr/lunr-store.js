@@ -323,8 +323,14 @@ var store = [{
         "url": "/Physics/Book/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "HKDSE Physics",
+        "title": "Appendix",
         "excerpt":"Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s Theorem on \\(xy\\) plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) d x d y\\] We aim to find polynomials such that \\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/Appendix/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "HKDSE Physics",
+        "excerpt":"First Note Kepler’s Second Law, the rate at which the area is swept by the Radius Vector (surprising a constant!) \\[\\dot{A}=\\frac{d A}{d t}=\\frac{r(r d \\theta) / 2}{d t}=\\frac{1}{2} r^2 \\dot{\\theta}=\\frac{h}{2}\\] Next, by substitution and using the results from Appendix A) \\[\\Delta t=\\frac{A}{\\dot{A}}=\\frac{\\pi a b}{h / 2}=\\frac{2 \\pi a b}{h}\\] Next,...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
