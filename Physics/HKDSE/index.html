@@ -326,7 +326,7 @@ Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):
 \[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
 
 \[\begin{aligned}
-A &amp; =[\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
+A &amp; =\frac{1}{2} \int_C x d y-y d x=[\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
 &amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
 \end{aligned}\]
 
@@ -391,6 +391,22 @@ A &amp; =[\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b 
 \[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
 
 <p>The rest follows.</p>
+
+<p>First Note <strong>Kepler’s Second Law</strong>, the rate at which the area is swept by the <strong>Radius Vector</strong> (surprising a constant!)</p>
+
+\[\dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}\]
+
+<p>Next, by substitution and using the results from Appendix A
+\(\Delta t=\frac{A}{\dot{A}}=\frac{\pi a b}{h / 2}=\frac{2 \pi a b}{h}\)</p>
+
+<p>Next, I’ll state the formulae below without proof. Remember that \(\epsilon\) is defined by us so the below are <em>almost</em> definitions</p>
+
+\[a=\frac{l}{1-\epsilon^2}, \quad b=a \sqrt{1-\epsilon^2}=\frac{l}{\sqrt{1-\epsilon^2}}\]
+
+<p>Using \(l=\frac{mh^2}{k}\), we have:
+\(\Delta t=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-\epsilon^2} \quad \Longrightarrow \quad(\Delta t)^2=\frac{(2 \pi)^2 a^3}{h^2} l=(2 \pi)^2 a^3 \frac{m}{k}\)</p>
+
+<p>We deduce \((\Delta t)^2 / a^2=(2 \pi)^2 / G M\), which is consistent with the analysis from <strong>HKDSE</strong></p>
 
 
         
