@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>HKDSE Physics | Henry Yip</title>
-<meta name="description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
+<meta name="description" content="Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Physics/HKDSE/">
 
 
-  <meta property="og:description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
+  <meta property="og:description" content="Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
 
 
 
@@ -278,7 +278,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="HKDSE Physics">
-    <meta itemprop="description" content="Appendix AProposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
+    <meta itemprop="description" content="Appendix AProposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
     
 
@@ -306,7 +306,7 @@
           </aside>
         
         <h3 id="appendix-a">Appendix A</h3>
-<p><strong>Proposition</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
+<p><strong>Proposition 1.1</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
 
 <p><strong>Proof</strong>:
 Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
@@ -326,7 +326,7 @@ Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):
 \[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
 
 \[\begin{aligned}
-A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t \\
+A &amp; =[\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
 &amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
 \end{aligned}\]
 
@@ -335,27 +335,31 @@ A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}(a \cos t)(b \
 <p><strong>Collorary</strong>: A Circle with radius \(r\) has area \(\pi r^2\). The proof is trivial and is left as an exercise for the reader</p>
 
 <h3 id="appendix-b">Appendix B</h3>
-<p>We note that:
-\(\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\)</p>
+<p><strong>Proposition 1.2</strong>: \(r^2 \dot{\theta} \equiv h \in \mathbb{R}
+**Proof**
+We note that:\)
+\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .
+$$
+By <strong>Chain Rule</strong>,</p>
 
-\[\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\]
-
-\[\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\]
-
-\[\begin{aligned}
-\underline{\ddot{x}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
+<p>\(\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\)
+And 
+\(\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\)
+Further Differentiation yields:
+\(\begin{aligned}
+\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
 &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
 &amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
-\end{aligned}\]
-
-\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\]
-
-\[\begin{aligned}
+\end{aligned}\)
+Since the force is a central force, we have:
+\(m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\)
+We can quickly identify two equations
+\(\begin{aligned}
 \ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m \\
 2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
-\end{aligned}\]
-
-\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
+\end{aligned}\)
+From the second equaiton,
+\(\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\)</p>
 
 \[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
 
