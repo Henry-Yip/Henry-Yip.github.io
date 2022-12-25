@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>HKDSE Physics | Henry Yip</title>
-<meta name="description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area $$\pi ab**">
+<meta name="description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Physics/HKDSE/">
 
 
-  <meta property="og:description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area $$\pi ab**">
+  <meta property="og:description" content="Appendix A Proposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
 
 
 
@@ -278,7 +278,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="HKDSE Physics">
-    <meta itemprop="description" content="Appendix AProposition: An Ellipse with semi-major axis a and semi-minor axis b  has area $$\pi ab**">
+    <meta itemprop="description" content="Appendix AProposition: An Ellipse with semi-major axis a and semi-minor axis b  has area \(\pi ab\)">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
     
 
@@ -306,14 +306,20 @@
           </aside>
         
         <h3 id="appendix-a">Appendix A</h3>
-<p><strong>Proposition</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area $$\pi ab**</p>
+<p><strong>Proposition</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
 
 <p><strong>Proof:
-Consider **Green’s Theorem</strong> (Stoke’s Theorem on xy plane)
-\(\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\)
-We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\), say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\). So we can estimate the area as:</p>
+Consider **Green’s Theorem</strong> (Stoke’s Theorem on xy plane):</p>
 
-\[\frac{1}{2}oint_C(x dy-ydx)\]
+\[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
+
+<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\)</p>
+
+<p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
+
+<p>So we can estimate the area as:</p>
+
+\[\frac{1}{2} \oint_C(x dy-ydx)\]
 
 <p>Standard parameterization of an ellipse:</p>
 
@@ -321,8 +327,8 @@ We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\part
 
 <p>So it’s Area (Denote by D):</p>
 
-<p>\(\frac{1}{2}oint_C(x dy-ydx)\) <br />
-\(\int_0^2\pi (acost)(bcost) dt - (bsint)(-asint)dt\)</p>
+<p>\(\frac{1}{2} \oint_C(x dy-ydx)\) <br />
+\(= \int_0^2\pi (acost)(bcost) dt - (bsint)(-asint)dt\)</p>
 
 <p>Using <strong>sin^2t+cos^2t=1</strong>, we can quickly see D= <strong>\pi a b</strong>. Q.E.D.</p>
 
