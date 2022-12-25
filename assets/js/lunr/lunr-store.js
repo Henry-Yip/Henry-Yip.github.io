@@ -78,7 +78,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Important Chess Events",
-        "excerpt":"GM MAGNUS CARLSEN vs GM HIKARU NAKAMURA   ","categories": [],
+        "excerpt":"What a thriller! Hikaru Nakamura just defeated Magnus Carlsen! According to this website “Hikaru Nakamura has now won five Speed Chess titles in a row, but more than that, he’s finally defeated the one player to have beaten him in the format — Magnus Carlsen. Hikaru got off to a...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessEvents/",
         "teaser": "/assets/images/AI.png"
@@ -239,8 +239,8 @@ var store = [{
         "url": "/Journal/Disgusted/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Isuckatmath",
-        "excerpt":"Sanity Check to Make Sure \\(KaTeX\\) is working: The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Primary I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, scoring some medals in several important competitions. I was more interested in...","categories": [],
+        "title": "I suck at Math!",
+        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, scoring some medals in several important competitions. I was more interested in becoming an eco-consultant/chemcial engineer or something like that, but I enjoyed the extra time training for...","categories": [],
         "tags": [],
         "url": "/Journal/Isuckatmath/",
         "teaser": "/assets/images/Pgfplots.png"
