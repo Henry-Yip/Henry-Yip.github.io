@@ -330,7 +330,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"First Note Kepler’s Second Law, the rate at which the area is swept by the Radius Vector (surprising a constant!) \\[\\dot{A}=\\frac{d A}{d t}=\\frac{r(r d \\theta) / 2}{d t}=\\frac{1}{2} r^2 \\dot{\\theta}=\\frac{h}{2}\\] Next, by substitution and using the results from Appendix A) \\[\\Delta t=\\frac{A}{\\dot{A}}=\\frac{\\pi a b}{h / 2}=\\frac{2 \\pi a b}{h}\\] Next,...","categories": [],
+        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] See Appendix A) for the full derivation. By equating...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
