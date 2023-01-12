@@ -4,7 +4,7 @@ layout: splash
 header:
   overlay_color: "#111"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/Pigeon.jpg
+  overlay_image: /assets/images/HongKong.jpg
   actions:
     - label: "History of Pigeons"
       url: "https://en.wikipedia.org/wiki/Domestic_pigeon"
