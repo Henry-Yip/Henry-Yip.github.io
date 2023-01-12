@@ -14,7 +14,7 @@ intro:
 permalink: /Journal/Pigeons/
 feature_row:
 
-  - image_path: /assets/images/London.jpg
+  - image_path: /assets/images/Duck.jpg
     title: "Candidate 1: London"
     excerpt: "Considerably fat, not scared of people"
   - image_path: /assets/images/Dubrovnuk.jpg
