@@ -1,6 +1,6 @@
 var store = [{
         "title": "Chess AI Analysis",
-        "excerpt":"Chess AI After Deep Blue defeated GM Garry Kasparov, it seems that AI are unbeatable… Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best Chess Player ever. Stockfish has an elo of around 3500. Just to let you see the...","categories": [],
+        "excerpt":"Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessAI/",
         "teaser": "/assets/images/AI.png"
@@ -24,7 +24,7 @@ var store = [{
         "teaser": "/assets/images/How.png"
       },{
         "title": "How to learn Blind Chess?",
-        "excerpt":"Motivation Mastering Blind Chess requires quite an intensitve training. It’s not only cool, but also improves your visualization skills and hence get better in middle games. Training Method Step 1: Master Chess Coordinates There are tons of platforms for this. Check THIS one for example. Generally aim 20-25 before proceeding...","categories": [],
+        "excerpt":"Below is a summarization of how I think blind chess should be learnt. I have seen content about these in Youtube and Quora in general. Motivation Mastering Blind Chess requires quite an intensitve training. It’s not only cool, but also improves your visualization skills and hence get better in middle...","categories": [],
         "tags": [],
         "url": "/Chess/BlindChess/",
         "teaser": "/assets/images/Empty.png"
@@ -78,7 +78,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Important Chess Events",
-        "excerpt":"What a thriller! Hikaru Nakamura just defeated Magnus Carlsen! According to this website “Hikaru Nakamura has now won five Speed Chess titles in a row, but more than that, he’s finally defeated the one player to have beaten him in the format — Magnus Carlsen. Hikaru got off to a...","categories": [],
+        "excerpt":"What a thriller! Hikaru Nakamura just defeated Magnus Carlsen! According to chess24 “Hikaru Nakamura has now won five Speed Chess titles in a row, but more than that, he’s finally defeated the one player to have beaten him in the format — Magnus Carlsen. Hikaru got off to a stunning...","categories": [],
         "tags": ["Chess"],
         "url": "/Chess/ChessEvents/",
         "teaser": "/assets/images/AI.png"
@@ -216,7 +216,7 @@ var store = [{
         "teaser": "/assets/images/Useless2.png"
       },{
         "title": "Interactiveness of Jekyll",
-        "excerpt":"Static Websites Jekyll generated websites are static… Yes, I know this sucks a lot… However, you can always make it interactive by introducing Iframes Iframes? According to This Website, An iFrame, also knowns as Inline Frame, is an element that loads another HTML element inside of a web page. They...","categories": [],
+        "excerpt":"Static Websites Jekyll generated websites are static… Yes, I know this sucks a lot… However, you can always make it interactive by introducing Iframes Iframes? According to hostinger.com, An iFrame, also knowns as Inline Frame, is an element that loads another HTML element inside of a web page. They are...","categories": [],
         "tags": [],
         "url": "/Jekyll/Interactive/",
         "teaser": "/assets/images/Useless4.png"
@@ -240,19 +240,25 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "I suck at Math!",
-        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, scoring some medals in several important competitions. I was more interested in becoming an eco-consultant/chemcial engineer or something like that, but I enjoyed the extra time training for...","categories": [],
+        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years...","categories": [],
         "tags": [],
         "url": "/Journal/Isuckatmath/",
         "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "Tropical Cyclones",
-        "excerpt":"Filmed in 2015. Enjoy!   ","categories": [],
+        "excerpt":"Filmed in 2015. Credits shown in Video. Enjoy!   ","categories": [],
         "tags": [],
         "url": "/Journal/TropicalClyclones/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Pigeons",
+        "excerpt":"Loading... Candidate 1: London Considerably fat, not scared of people Candidate 2: Dubrovnik Pretty well fed, quite stupid Candidate 3: Hong Kong Very slim, extremely sensitive Candidate 4: Zagreb This particular one is pink which is funny; in general they are quite abundant Candidate 5: Ljubljana Quite stupid/calm as they...","categories": [],
+        "tags": [],
+        "url": "/Journal/Pigeons/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "LaTeX Tutorial (1)",
-        "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
+        "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial1/",
         "teaser": "/assets/images/LaTeX.png"
@@ -336,7 +342,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "An Introduction to This Website",
-        "excerpt":"New Welcoming Page! (Beta) My New Welcome Page is still under construction! See if you like it! PLEASE PRESS HERE Introduction Myself Henry YIP Before making a website LaTeX In February, I began learning \\(\\LaTeX\\) and created tons of math documents. While it was fun, I didn’t really have a...","categories": [],
+        "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
@@ -347,11 +353,11 @@ var store = [{
         "url": "/BigRIP/",
         "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "Chess AI",
-        "excerpt":"Chess AI After Deep Blue defeated GM Garry Kasparov, it seems that AI are unbeatable… Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best Chess Player ever. Stockfish has an elo of around 3500. Just to let you see the...","categories": [],
-        "tags": [],
-        "url": "/ChessAI/",
-        "teaser": "/assets/images/Wolf.png"
+        "title": "Chess AI Analysis",
+        "excerpt":"Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best...","categories": [],
+        "tags": ["Chess"],
+        "url": "/Chess/ChessAI/",
+        "teaser": "/assets/images/AI.png"
       },{
         "title": "Infinitely Many Chess Puzzles",
         "excerpt":"Let it load for a while:    ","categories": [],
