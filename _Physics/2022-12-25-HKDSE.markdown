@@ -17,11 +17,11 @@ From HKDSE Physics, we have Centripetal force as $$mr\omega^2$$, or equivalently
 
 $$
 \begin{aligned}
-\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+F=\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
 \end{aligned}
 $$
 
-See [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %})) for the full derivation.
+See [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %}) for the full derivation.
 By equating $$mr\omega^2$$ and $$\frac{GMm}{r^2}$$, we can deduce:
 
 $$
