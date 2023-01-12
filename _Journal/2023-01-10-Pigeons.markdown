@@ -14,22 +14,22 @@ intro:
 permalink: /Journal/Pigeons/
 feature_row:
 
-  - image_path: /assets/images/Duck.jpg
+  - image_path: /assets/images/London.JPG
     title: "Candidate 1: London"
     excerpt: "Considerably fat, not scared of people"
-  - image_path: /assets/images/Dubrovnuk.jpg
+  - image_path: /assets/images/Dubrovnuk.JPG
     title: "Candidate 2: Dubrovnik"
     excerpt: "Pretty well fed, quite stupid"
-  - image_path: /assets/images/HongKong.jpg
+  - image_path: /assets/images/HongKong.JPG
     title: "Candidate 3: Hong Kong"
     excerpt: "Very slim, extremely sensitive"
-  - image_path: /assets/images/Zagreb.jpg
+  - image_path: /assets/images/Zagreb.JPG
     title: "Candidate 4: Zagreb"
     excerpt: "This particular one is pink which is funny; in general they are quite abundant"
-  - image_path: /assets/images/Ljubljana.jpg
+  - image_path: /assets/images/Ljubljana.JPG
     title: "Candidate 5: Ljubljana"
     excerpt: "Quite stupid/calm as they don't even notice my presence even though I was 5cm away; Quite fat"
-  - image_path: /assets/images/Split.jpg
+  - image_path: /assets/images/Split.JPG
     title: "Candidate 6: Split"
     excerpt: "Captivated by the seagulls so didn't take pics of pigeons... But watched youtube with 8 hrs of pigeons" 
 ---
