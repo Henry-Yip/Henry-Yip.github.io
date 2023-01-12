@@ -14,7 +14,7 @@ sidebar:
  nav: "Physics"
 ---
 ## Introduction
-This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. 
+Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. 
 
 ### Prerequisites
 Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics.
