@@ -35,7 +35,7 @@ Which is Kepler's third law (in circular motion).
 
 Estimate Peter Griffin's weight:
 
-With $$T=2.75$$ and $$r=1$$, we have $$M=7.82 \times 10^10$$. Hmmmm
+With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^10 kg $$. Hmmmm
 
 **Proposition**: $$T^2 \propto a^3$$ \forall$$ ellipses, where a is the semi-major axis
 
