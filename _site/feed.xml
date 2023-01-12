@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-01-12T18:33:07+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Henry Yip</title><subtitle>A website including everything</subtitle><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><entry><title type="html">Infinitely Many Chess Puzzles</title><link href="http://localhost:4000/Puzzles/" rel="alternate" type="text/html" title="Infinitely Many Chess Puzzles" /><published>2022-12-23T00:00:00+00:00</published><updated>2022-12-23T00:00:00+00:00</updated><id>http://localhost:4000/Puzzles</id><content type="html" xml:base="http://localhost:4000/Puzzles/">&lt;p&gt;Let it load for a while:&lt;/p&gt;
+&lt;iframe src=&quot;https://livetactics.chessbase.com&quot; width=&quot;400&quot; height=&quot;440&quot;&gt;&lt;/iframe&gt;</content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html">Let it load for a while:</summary></entry><entry><title type="html">Chess AI Analysis</title><link href="http://localhost:4000/Chess/ChessAI/" rel="alternate" type="text/html" title="Chess AI Analysis" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>http://localhost:4000/Chess/ChessAI</id><content type="html" xml:base="http://localhost:4000/Chess/ChessAI/">&lt;h2 id=&quot;chess-ai&quot;&gt;Chess AI&lt;/h2&gt;
+&lt;p&gt;In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: &lt;a href=&quot;https://www.nytimes.com/2011/02/17/us/17deepblue.html&quot;&gt;First Came the Machine That Defeated a Chess Champion&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Most engines, with &lt;a href=&quot;https://en.wikipedia.org/wiki/Stockfish_(chess)&quot;&gt;Stockfish&lt;/a&gt; topping the list, have a significantly higher &lt;a href=&quot;https://www.chessjournal.com/chess-elo/#:~:text=Elo%20is%20a%20primary%20factor%20used%20in%20Chess,Elo%20system%20is%20Australian%20Chess%20master%2C%20Roger%20Cook.&quot;&gt;elo&lt;/a&gt; than &lt;a href=&quot;https://en.wikipedia.org/wiki/Magnus_Carlsen&quot;&gt;GM Magnus Carlsen&lt;/a&gt;, arguably the best Chess Player ever.&lt;/p&gt;
+
+&lt;p&gt;Stockfish has an absurdly high elo. You can see this from different websites, like &lt;a href=&quot;https://ccrl.chessdom.com&quot;&gt;http://ccrl.chessdom.com&lt;/a&gt; . There, &lt;a href=&quot;https://ccrl.chessdom.com/ccrl/4040/&quot;&gt;Stockfish, Dragon and Fat Fritz 2 have an elo of over 3500&lt;/a&gt;. Just to let you see the difference, I have included a banner of Live Chess Ratings, provided by &lt;a href=&quot;https://2700chess.com/&quot;&gt;2700chess.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://2700chess.com&quot; target=&quot;_blank&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://2700chess.com/files/topten.png&quot; alt=&quot;2700chess.com for more details and full list&quot; title=&quot;2700chess.com for more details and full list&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To check the power of chess engines, you can play one &lt;a href=&quot;/Chess/Events/&quot;&gt;HERE&lt;/a&gt;. You can adjust the difficulty but to be honest, I can’t beat the club level difficulty…&lt;/p&gt;
+
+&lt;p&gt;Just to be cool, I have installed two chess engines - Fairy-Max and Stockfish in my computer, so they can play around…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-06-05-Game1/&quot;&gt;(Game #1) &lt;strong&gt;Rapid&lt;/strong&gt; - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-06-05-Game2/&quot;&gt;(Game #2) Rapid - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-06-12-Game3/&quot;&gt;(Game #3) &lt;strong&gt;Bullet&lt;/strong&gt; - Fairy-Max vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-07-31-Game4/&quot;&gt;(Game #4) Bullet - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-07-31-Game5/&quot;&gt;(Game #5) Bullet - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-07-31-Game6/&quot;&gt;(Game #6) Bullet - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/Chess/2022-08-10-Game7/&quot;&gt;(Game #7) &lt;strong&gt;Classical&lt;/strong&gt; - Stockfish vs Fairy-Max&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><category term="Chess" /><summary type="html">Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion</summary></entry><entry><title type="html">The Big RIP</title><link href="http://localhost:4000/BigRIP/" rel="alternate" type="text/html" title="The Big RIP" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>http://localhost:4000/BigRIP</id><content type="html" xml:base="http://localhost:4000/BigRIP/">&lt;div class=&quot;tenor-gif-embed&quot; data-postid=&quot;15138520&quot; data-share-method=&quot;host&quot; data-aspect-ratio=&quot;1&quot; data-width=&quot;100%&quot;&gt;&lt;a href=&quot;https://tenor.com/view/galaxy-spiral-spinning-gif-15138520&quot;&gt;Galaxy Spiral GIF&lt;/a&gt;from &lt;a href=&quot;https://tenor.com/search/galaxy-gifs&quot;&gt;Galaxy GIFs&lt;/a&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;https://tenor.com/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I spent around 3-4 days writing this short essay, featuring:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction to the Cosmic Distance Scale&lt;/li&gt;
+  &lt;li&gt;How Supernova Ia lead to the discovery of Dark Energy&lt;/li&gt;
+  &lt;li&gt;Properties of Dark Energy&lt;/li&gt;
+  &lt;li&gt;A detour to Einstein’s Field Equation (EFE)&lt;/li&gt;
+  &lt;li&gt;Consequences of the Dark Energy&lt;/li&gt;
+  &lt;li&gt;Timescale of its occurance using precise data&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;source-code-viewing&quot;&gt;Source Code Viewing&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.overleaf.com/read/dzzcybcggpnn&quot;&gt;https://www.overleaf.com/read/dzzcybcggpnn &lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;pdf-download&quot;&gt;PDF download&lt;/h2&gt;
+&lt;p&gt;Please Press &lt;a href=&quot;http://localhost:4000/assets/Dark_Energy_and_the_Big_RIP.pdf&quot;&gt;HERE&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe src=&quot;http://localhost:4000/assets/Dark_Energy_and_the_Big_RIP.pdf&quot; width=&quot;100%&quot; height=&quot;500px&quot;&gt;
+
+&lt;/iframe&gt;</content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html">Galaxy Spiral GIFfrom Galaxy GIFs Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data</summary></entry><entry><title type="html">An Introduction to This Website</title><link href="http://localhost:4000/Welcome/" rel="alternate" type="text/html" title="An Introduction to This Website" /><published>2022-08-04T00:00:00+01:00</published><updated>2022-08-04T00:00:00+01:00</updated><id>http://localhost:4000/Welcome</id><content type="html" xml:base="http://localhost:4000/Welcome/">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+&lt;h2 id=&quot;myself&quot;&gt;Myself&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/Contributors/HenryYip/&quot;&gt;Henry YIP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mathematical Physics Student from the University of Edinburgh&lt;/p&gt;
+&lt;h2 id=&quot;before-making-a-website&quot;&gt;Before making a website&lt;/h2&gt;
+
+&lt;h3 id=&quot;latex&quot;&gt;LaTeX&lt;/h3&gt;
+&lt;p&gt;Feburary 2022 was when I started to create \(LaTeX\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability).&lt;/p&gt;
+
+&lt;p&gt;Inspired by &lt;a href=&quot;https://tobylam.xyz/&quot;&gt;Toby Lam&lt;/a&gt;, I was convinced that websites are more sustainable than Social Medias (like Instagram). According to him in &lt;a href=&quot;https://tobylam.xyz/2020/08/11/why-start-a-website.html&quot;&gt;his post about “Why start a website”&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;With social media sites, attempts to archive content are probably nightmarish. 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;which is exactly my experience with Instagram. It is also nightmarish to write serious academic content due to the inability to include \(KaTeX\). More is explained in my post about &lt;a href=&quot;/Chess/TobyLam/&quot;&gt;KaTeX&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It is also cool to have a personal space where you can customize things, and meanwhile picking up basic html/css skills&lt;/p&gt;
+
+&lt;h2 id=&quot;how-i-learnt-to-build-a-website&quot;&gt;How I learnt to build a website&lt;/h2&gt;
+
+&lt;p&gt;I am using Jekyll all the way.&lt;/p&gt;
+
+&lt;p&gt;If you are asking what Jekyll is or how to download/use it, please check out &lt;a href=&quot;/Jekyll/tutorials/&quot;&gt;My Tutorials&lt;/a&gt;. I spent a huge amount of time on these tutorials so I hope you can at least have a look…&lt;/p&gt;
+
+&lt;p&gt;You should probably refer to &lt;a href=&quot;/Jekyll/UsingJekyll/&quot;&gt;My Tutorial on How to Download Jekyll&lt;/a&gt; since there aren’t many tutorials online regarding this.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-this-particular-website&quot;&gt;Why THIS particular website&lt;/h2&gt;
+&lt;p&gt;After sucessfully creating a functional website, I started to think about how I can use this website to create something big. One day, upon the recommendation of &lt;a href=&quot;/Contributors/LeoChow/&quot;&gt;Leo Chow&lt;/a&gt;, I decided to create a website to teach people physics, but we slowly figured out it is quite impractical unless we know &lt;strong&gt;Manim&lt;/strong&gt; (but we both don’t). Instead, I thought it would just be great if my friends can write anything on my website without any restrictions (since not everyone know how to make a website).&lt;/p&gt;
+
+&lt;p&gt;Therefore, in April 2022, I started asking people around me if they want to write stuff, and surprisingly, almost all of them agreed.&lt;/p&gt;
+
+&lt;p&gt;I would like to thank everyone who is a part of this website. Your presence is definitely noted!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-i-feel-about-building-a-website&quot;&gt;How I feel about building a website&lt;/h2&gt;
+&lt;p&gt;The process of building websites is painful but enjoyable. I had to learn so many stuff, like how to enable RSS FEED, &lt;a href=&quot;/Jekyll/skins/&quot;&gt;How to Change Skins&lt;/a&gt; (in my old website), how to &lt;a href=&quot;/Jekyll/Algolia/&quot;&gt;Include Algolia Search&lt;/a&gt;. Each of these tasks spent me &lt;strong&gt;at least 10 hours&lt;/strong&gt;. The solution may seem easy and to be honest, some problems I can’t even solve (like resizing images using plugins).&lt;/p&gt;
+
+&lt;h1 id=&quot;final-touch&quot;&gt;Final Touch&lt;/h1&gt;
+&lt;p&gt;As &lt;a href=&quot;/Contributors/HenryYip/&quot;&gt;I’m currently a Year 2 Student&lt;/a&gt;, I don’t have much time to maintain this website. If you want to collaborate with me/have further enquiries please contact me:&lt;/p&gt;
+
+&lt;p class=&quot;notice--success text-center&quot;&gt;&lt;strong&gt;&lt;a href=&quot;mailto:s2231321@ed.ac.uk&quot;&gt;s2231321@ed.ac.uk&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html">Introduction Myself Henry YIP</summary></entry></feed>
