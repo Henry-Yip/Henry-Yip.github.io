@@ -1,0 +1,16 @@
+---
+layout: single
+katex: False
+title: Infinitely Many Chess Puzzles
+toc: true
+toc_label: "Chess Puzzles"
+toc_sticky: true
+header:
+  teaser: /assets/images/Wolf.png
+---
+Let it load for a while:
+<iframe src="https://livetactics.chessbase.com" width="400" height="440"></iframe>
+
+
+
+

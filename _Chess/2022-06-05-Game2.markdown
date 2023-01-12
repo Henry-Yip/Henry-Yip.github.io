@@ -1,0 +1,24 @@
+---
+layout: single
+title: Game 2 
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+**Rapid Game 10 minutes, no increments**
+
+ - **White: Stockfish**
+ - **Black: Fairy-Max**
+
+
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/green/neo/0/cc/0/0/bUNZUWd2M05ic1pKbEIhVENLVENzQ0pDdk02TEtTMVNmQTdSa3NYSEFyNVpudlpUZWdDdmZ2TEVkdD9WcHhFdnR2VEpNQ1JZY1Y4NlZNSHpDSVlSYWV6c2pzU0tlS1JVSVNVYmdwMlVTNzkyS0pRSnZKYnJpcjJUN1NUS0JLTkZKUTY1UVk1NFk2.gif)
+
+[You can click here for Analysis!](https://lichess.org/study/NZrn1Y3s/vBRl3zog)
+
+## The Blunder
+
+I admit this is a hard puzzle...
+
+<iframe id="9781885" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="//www.chess.com/emboard?id=9781885"></iframe><script>window.addEventListener("message",e=>{e['data']&&"9781885"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+30}px`)});</script>

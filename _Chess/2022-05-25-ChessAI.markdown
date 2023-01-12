@@ -1,0 +1,37 @@
+---
+layout: single
+header:
+  teaser: /assets/images/AI.png
+title: Chess AI Analysis 
+toc: true
+toc_label: "Chess AI Analyis"
+toc_sticky: true
+katex: False
+tags: Chess
+permalink: /Chess/ChessAI/  
+sidebar:
+ nav: "Chess"
+---
+## Chess AI
+In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: [First Came the Machine That Defeated a Chess Champion](https://www.nytimes.com/2011/02/17/us/17deepblue.html)
+
+Most engines, with [Stockfish](https://en.wikipedia.org/wiki/Stockfish_(chess)) topping the list, have a significantly higher [elo](https://www.chessjournal.com/chess-elo/#:~:text=Elo%20is%20a%20primary%20factor%20used%20in%20Chess,Elo%20system%20is%20Australian%20Chess%20master%2C%20Roger%20Cook.) than [GM Magnus Carlsen](https://en.wikipedia.org/wiki/Magnus_Carlsen), arguably the best Chess Player ever.
+
+Stockfish has an absurdly high elo. You can see this from different websites, like [http://ccrl.chessdom.com](https://ccrl.chessdom.com) .There, [Stockfish, Dragon and Fat Fritz 2 have an elo of over 3500](https://ccrl.chessdom.com/ccrl/4040/). Just to let you see the difference...
+
+To check the power of chess engines, you can play one [HERE]({% link _Chess/2022-12-24-ChessEngine.markdown %}). You can adjust the difficulty but to be honest, I can't beat the club level difficulty...
+
+<a href="https://2700chess.com" target="_blank"><img border="0" src="https://2700chess.com/files/topten.png" alt= "2700chess.com for more details and full list" title="2700chess.com for more details and full list"/></a>
+
+Just to be cool, I have installed two chess engines - Fairy-Max and Stockfish in my computer, so they can play around...
+
+
+ - [(Game #1) **Rapid** - Stockfish vs Fairy-Max]({% link _Chess/2022-06-05-Game1.markdown %})
+ - [(Game #2) Rapid - Stockfish vs Fairy-Max]({% link _Chess/2022-06-05-Game2.markdown %})
+ - [(Game #3) **Bullet** - Fairy-Max vs Fairy-Max]({% link _Chess/2022-06-12-Game3.markdown %})
+ - [(Game #4) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game4.markdown %})
+ - [(Game #5) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game5.markdown %})
+ - [(Game #6) Bullet - Stockfish vs Fairy-Max]({% link _Chess/2022-07-31-Game6.markdown %})
+ - [(Game #7) **Classical** - Stockfish vs Fairy-Max]({% link _Chess/2022-08-10-Game7.markdown %})
+
+

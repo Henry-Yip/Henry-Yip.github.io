@@ -1,0 +1,282 @@
+---
+layout: single
+title: LaTeX Tutorial (2)
+katex: False
+permalink: /LaTeX/LaTeXTutorial2/
+toc: true
+toc_label: "LaTeX"
+toc_sticky: true
+header:
+  teaser: /assets/images/LaTeX.png
+sidebar:
+ nav: "LaTeX"
+---
+### Tex Source
+This is the Tex Source for my beamer presentation
+{% highlight ruby %}
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{parskip}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{float}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\usetheme{Madrid}
+\usecolortheme{default}
+\usepackage{xspace}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Introduction to \LaTeX] %optional
+{Introduction to \LaTeX}
+
+\subtitle{A very short briefing}
+
+\author[Henry, Yip] % (optional, for multiple authors)
+{Henry~Yip}
+
+\institute[Int. STEM Collab] % (optional)
+{ Co-Founder\\
+  Physical Sciences Coordinator \\
+  Regional Organizer: Asia and Oceania \\
+  Head of Website Maintenance \\
+  University of Edinburgh \textbf{Mathematical Physics} Y1
+}
+
+\date[August 2021]
+
+
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+%---------------------------------------------------------
+
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Sample frame title}
+\LaTeX \xspace is a very popular and useful Language. Indeed, this very slide itself is created using \LaTeX \xspace beamer.
+\pause 
+If you are learning Physical Sciences, it is absolutely necessary to gain basic fluency. 
+\pause
+If you are learning Life Sciences, you are still somehow recommended to learn this.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Features}
+\begin{itemize}
+    \item <1->Introduction
+    \item <2->Preample
+    \item <3->Math Symbols
+    \item <4-> Inserting Images
+    \item <5->Hyperlinks
+    \item <6->Footnote
+    \item <7->Bonus Session for Texmaker Users
+\end{itemize}
+    
+\end{frame}
+\begin{frame}{Preample}
+\begin{itemize}
+\item <1-> Below is an example of a \textbf{Preample}\\
+\includegraphics[scale=0.4]{Preample.png}
+\end{itemize}
+\begin{alertblock}{Components}
+\begin{itemize}
+\item <1-> \textbackslash documentclass\{\}
+\item <2->\textbackslash usepackage\{\}
+\item <3->Title, Author, Date...
+\item <4->\textbackslash begin\{document\}
+\end{itemize}
+\end{alertblock}
+\end{frame}
+    
+\begin{frame}{Documentclass?}
+\begin{itemize}
+\item <1-> On the first line you can see \textbf{\textbackslash documentclass\{\}}. As we are writing articles, we always put \textbf{\textbackslash documentclass\{articles\}} in the brackets 
+\item <2-> If you want to include a report later on, you should put \textbf{\textbackslash documentclass\{report\}}
+\item <3-> Go for books if you are writing a book
+\end{itemize}
+\pause
+\begin{alertblock}{More Features}
+\begin{itemize}
+\item <4->You can include some global changes, including double columns, font sizes, etc. by inserting a square bracket in the middle.
+\item <5-> Example: \textbackslash documentclass{[}\textbf{Option 1, Option 2}{]}\{article\}
+\end{itemize}
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Packages}
+\begin{itemize}
+\item <1-> Packages are extensions of \LaTeX \xspace that allows you to to include all sorts of things, like graphs, hyperlinks, math symbols and so on
+\item <2-> \textbf{\textbackslash usepackage\{amsmath\}} and \textbf{\textbackslash usepackage\{amssymb\}} are almost always required.
+\item <3->\textbf{Tikz} is preferred if you want to draw graphs 
+\item <3->Below is a beautiful example!
+\end{itemize}
+\end{frame}
+\begin{frame}{More on Packages}
+\begin{itemize}
+\item <1-> You can include hyperlinks through  \textbf{\textbackslash usepackage\{href\}}
+\item <2->There are pretty much all sorts of packages anywhere. For example, the \href{https://ctan.math.illinois.edu/macros/latex/contrib/parskip/parskip.pdf}\textbf{\textbackslash usepackage\{parskip\}}
+\item <3-> You can \textbf{always} find your answer in \href{https://stackexchange.com/}{Stackexchange}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{block}{Preample}
+\frametitle{Sidenote: Wait what is a beamer?!}
+\begin{itemize}
+\item <1->\textbackslash documentclass\{beamer\}
+\item <2->\textbackslash usetheme\{Madrid\}
+\item <3->\textbackslash usecolortheme\{default\}
+\end{itemize}
+\end{block}
+\pause
+\begin{alertblock}{Important Notice}
+ Try not to use powerpoint slides for your Math-related presentations
+\end{alertblock}
+\end{frame}
+\begin{frame}{Title, Date, Author, Etc.}
+   \begin{itemize} 
+\item <1-> The Sample document has \textbf{Sample} as the default title, feel free to change to anything you want
+\item <2-> You can include several authors if you use the and function. 
+\item <3->\textbackslash\textbackslash \xspace allows you to skip lines
+\item <4->For the date, set as today
+  \begin{itemize}
+      \item <4-> \textbackslash date\{today\}
+  \end{itemize}
+\item <5->After all these, start the document by \textbf{\textbackslash begin\{document\}}. Remember to \textbf{\textbackslash end\{document\}} when you finish 
+\item <6->Always include \textbf{\textbackslash maketitle} after \textbf{\textbackslash begin\{document\}}
+\end{itemize} 
+\end{frame}
+\begin{frame}{Abstract?}
+\begin{itemize}
+\item <1->You can include an Abstract by \textbf{\textbackslash begin\{abstract\}}
+\item <2->This can only be added after \textbf{\textbackslash begin\{document\}}
+\item <3->Always remember to \textbf{\textbackslash end\{abstract\}}
+\end{itemize}   
+\end{frame}
+\begin{frame}{Math Symbols}
+\begin{itemize}
+\item<1-> One should search online for the math symbols supported by \LaTeX. \href{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}{Here} is a good guide
+\item <2->More symbols can be downloaded through extra packages. For example, $\hbar$, $\measuredangle$
+\item <3-> a \$ sign is \textbf{required} to show that you are entering math mode. For example:
+\$\textbackslash measuredangle\$ will show as $\measuredangle$
+\item <4-> You can make your equations aligned also:
+\begin{align}
+p&=mv\\
+E&=\frac{1}{2}mv^2
+E&=\frac{p^2}{2m}
+\end{align}
+\end{itemize}
+\end{frame}
+\begin{frame}{More on Math Symbols}
+\begin{itemize}
+  \item <1-> You can use the \textbackslash begin\{align\} and \textbackslash end\{align\} to achieve this. Remember to include a \& before every = sign so equations can be actually aligned
+\item <2-> Below is an example:\\
+\includegraphics[scale=0.5]{LATEX.png}
+\item <3-> You can find more in Overleaf's website
+\end{itemize}  
+\end{frame}
+\begin{frame}{Inserting pics}
+\begin{itemize}
+\item <1-> First, upload your images to \textbf{Overleaf}
+\item <2-> Second, include this line:
+  \begin{itemize}
+      \item \textbackslash includegraphics{[}scale$=1${]}\{Preample.png\}
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{Hyperlink}
+\begin{itemize}
+\item <1-> First include the following packages in the \textbf{Preamble}
+\includegraphics[scale=0.5]{Href.png}
+ \begin{itemize}
+     \item <1-> There are many ways to change all sorts of settings. You should refer to the Overleaf page for reference
+ \end{itemize}
+\item <2->Obviously, change the colours as you like
+\item <3-> Whenever you use hyperlink, type:
+\textbackslash href\{Your URL\}\{\textbf{the text}\}
+\item <4-> Below is an example: \\
+\includegraphics[width=11cm]{HrefExample.png}
+\end{itemize}
+\end{frame}
+\begin{frame}{Footnotes}
+\begin{itemize}
+\item <1-> Just type down \textbackslash footnote \{\}
+\item <2-> The formatting is automatic
+\end{itemize}
+\pause
+\includegraphics[scale=0.5]{HrefExample.png}
+\end{frame}
+\begin{frame}{Table}
+\begin{itemize}
+\item You can make very nice tables with \LaTeX
+\begin{table}[H]
+  \begin{center}
+    \begin{tabular}{c|c|c}
+      \textbf{Time} & \textbf{Activity}&\textbf{Remarks}\\
+      \hline\hline
+      7:00 & Train in \textbf{Glascow}/Paris& \\
+      \hline
+      12:00 & Arriving in \textbf{King's Cross Station}&\\
+      \hline
+      12:30 & Check in & \\
+      \hline
+      13:00-14:00 & Lunch \\
+      \hline
+      15:00-18:45 & Hong Kong Disneyland & Walk Around\\
+      \hline
+      19:15-20:45 & Dinner &\\
+      \hline
+      
+    \end{tabular}
+  \end{center}
+\end{table}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{More on Tables}
+\includegraphics[scale=0.4]{Table.png} 
+\begin{itemize}
+\item <1-> Above is how you should type \\
+\item <2->To adjust position please download \textbackslash usepackage\{float\}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bonus Session}
+\begin{itemize}
+\item <1->I understand that most of you are Overleaf users, but this section is for TexMaker users
+\item <2-> Save your document as nameofyourdocument.tex. Download MikTeX (The Source Code is available in GitHub), go to comamnd prompt and cd to the place you stored your tex file
+\item <3->Then type \textbf{pdflatex nameofyourdocument.tex}
+\item <4-> You can also click "View" in TexMaker, then "print" and then "Microsoft Print to Pdf". However, at least for me, the hyperlinks may be lost.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Approaching The End!}
+\begin{alertblock}{Questions}
+If you have any Questions feel free to ask me now!
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{}
+  \centering \Large
+  {Thank You!}
+\end{frame}
+\end{document}
+{% endhighlight %}

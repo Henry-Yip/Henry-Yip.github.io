@@ -1,0 +1,28 @@
+---
+layout: single
+katex: True
+title: The Big RIP
+toc: true
+toc_label: "The Big RIP"
+toc_sticky: true
+header:
+  teaser: /assets/images/Wolf.png
+---
+<div class="tenor-gif-embed" data-postid="15138520" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/galaxy-spiral-spinning-gif-15138520">Galaxy Spiral GIF</a>from <a href="https://tenor.com/search/galaxy-gifs">Galaxy GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+## Introduction
+I spent around 3-4 days writing this short essay, featuring:
+ * Introduction to the Cosmic Distance Scale 
+ * How Supernova Ia lead to the discovery of Dark Energy
+ * Properties of Dark Energy
+ * A detour to Einstein's Field Equation (EFE)
+ * Consequences of the Dark Energy
+ * Timescale of its occurance using precise data
+
+## Source Code Viewing
+[https://www.overleaf.com/read/dzzcybcggpnn ](https://www.overleaf.com/read/dzzcybcggpnn) 
+
+## PDF download
+Please Press [HERE]({{site.url}}/assets/Dark_Energy_and_the_Big_RIP.pdf)
+
+<iframe src="{{site.url}}/assets/Dark_Energy_and_the_Big_RIP.pdf" width="100%" height="500px">
+

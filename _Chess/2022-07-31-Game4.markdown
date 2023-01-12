@@ -1,0 +1,20 @@
+---
+layout: single
+title: Game 4 
+katex: False
+hidden: true
+sidebar:
+ nav: "Chess"
+---
+**Bullet Game - 1 minute**
+
+ - **White: Stockfish**
+ - **Black: Fairy-Max**
+
+![Alt Text](https://images.chesscomfiles.com/uploads/game-gifs/90px/tan/modern2/0/cc/0/0/bUNZUWd2MVRsQjJVYnNYSGZtSHpzeVpKQ0pRSmVnNVFtSDZYeUk3UGRtWDZpcXpxSXlQWWNEWVhhcVdPeUlYUGtBSkFIeTZFbUFFdm92MEtBUyEwcXJQWXJYWTZ5UTZRWDA5MFNRODFRSjEySVMyMURWVU1TOTE4SjQ4MTRKMThmYz8hYzYwN0pT.gif)
+
+[Click Here for Analysis](https://lichess.org/study/VgysSHFA/EkivsnTV#25)
+
+
+## The Blunder
+<iframe id="9781917" allowtransparency="true" frameborder="0" style="width:100%;border:none;" src="//www.chess.com/emboard?id=9781917"></iframe><script>window.addEventListener("message",e=>{e['data']&&"9781917"===e['data']['id']&&document.getElementById(`${e['data']['id']}`)&&(document.getElementById(`${e['data']['id']}`).style.height=`${e['data']['frameHeight']+30}px`)});</script>

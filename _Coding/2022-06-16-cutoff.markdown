@@ -1,0 +1,44 @@
+---
+layout: single
+title: Cutoff Game (C++)
+katex: False
+permalink: /Coding/Cutoff/
+sidebar:
+ nav: "Coding"
+---
+```bash
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+int randRange(int low, int high)
+{
+    return rand()%(high-low+1)+low;
+}
+
+int main()
+{   int number_trials,cutoff;
+    int fail=0;
+    int success=0;
+    srand(time(NULL));
+    cout<<"Number of trials: "<<"\n";
+    cin>>number_trials;
+    cout<<"Cutoff Score: "<<"\n";
+    cin>>cutoff;
+    for (int i=0; i<number_trials; i++)
+    {
+       if (randRange(0,100)>=cutoff)
+       {
+        success++;
+       }
+       else
+       {
+        fail++;
+       }
+    }
+    cout<<"Success: "<<success<<"\n";
+    cout<<"Fail: "<<fail<<"\n";
+}
+```
