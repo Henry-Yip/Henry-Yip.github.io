@@ -21,6 +21,8 @@ $$
 \end{aligned}
 $$
 
+## Kepler's Third Law
+
 See [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %}) for the full derivation.
 By equating $$mr\omega^2$$ and $$\frac{GMm}{r^2}$$, we can deduce:
 
@@ -47,7 +49,7 @@ $$
 \dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}
 $$
 
-Next, by substitution and using the results from [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %}))
+Next, by substitution and using the results from [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %})
 
 
 $$
@@ -67,3 +69,8 @@ $$
 $$
 
 We deduce $$(\Delta t)^2 / a^2=(2 \pi)^2 / G M$$, which is consistent with the analysis from **HKDSE**
+
+## Momentum Conservation
+
+From [Appendix A]({% link _Physics/2022-12-25-Appendix.markdown %}), we deduced that
+$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$, or equivalently $$|\underline{L}|=mr^2 \dot{\theta}$$. Combining the fact that $$r\dot{\theta}=v$$ we have $$|\underline{L}|=mrv$$

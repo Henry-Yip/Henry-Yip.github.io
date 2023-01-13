@@ -336,7 +336,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\hat{F}=\\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] See Appendix A for the full derivation. By equating...","categories": [],
+        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\hat{F}=\\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] Kepler’s Third Law See Appendix A for the full...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
