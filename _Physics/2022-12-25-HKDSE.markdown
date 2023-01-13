@@ -37,7 +37,7 @@ Estimate Peter Griffin's weight:
 
 With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^{10} \text{kg} $$. Hmmmm
 
-**Proposition**: $$T^2 \propto a^3$$ \forall $$ ellipses, where a is the semi-major axis
+**Proposition**: $$T^2 \propto a^3 \forall $$ ellipses, where a is the semi-major axis
 
 **Proof**:
 
