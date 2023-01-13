@@ -17,7 +17,7 @@ From HKDSE Physics, we have Centripetal force as $$mr\omega^2$$, or equivalently
 
 $$
 \begin{aligned}
-F=\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\hat{F}=\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
 \end{aligned}
 $$
 
@@ -35,9 +35,9 @@ Which is Kepler's third law (in circular motion).
 
 Estimate Peter Griffin's weight:
 
-With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^10 kg $$. Hmmmm
+With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^{10} \text{kg} $$. Hmmmm
 
-**Proposition**: $$T^2 \propto a^3$$ \forall$$ ellipses, where a is the semi-major axis
+**Proposition**: $$T^2 \propto a^3$$ \forall $$ ellipses, where a is the semi-major axis
 
 **Proof**:
 

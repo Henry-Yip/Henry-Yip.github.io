@@ -300,7 +300,7 @@ var store = [{
         "teaser": "/assets/images/Music.png"
       },{
         "title": "Astrophysics (Part 1)",
-        "excerpt":"Introduction This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with...","categories": [],
+        "excerpt":"Introduction Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Astrophysics1/",
         "teaser": "/assets/images/Astro.png"
@@ -336,7 +336,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] See Appendix A) for the full derivation. By equating...","categories": [],
+        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\hat{F}=\\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] See Appendix A for the full derivation. By equating...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"
