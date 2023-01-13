@@ -73,6 +73,6 @@ This describes a simple harmonic motion with $$\rho(t)=A \cos (\omega t+\phi)$$.
 
 It will look like this:
 
-<iframe src="/assets/Orbit.png"></iframe>
+<iframe src="/assets/Orbit.png" width="865px" height="715px"></iframe>
 
 We have used simple math to analyse the orbit equation! How cool is that!
