@@ -1,11 +1,11 @@
 ---
 layout: single
-title: HKDSE Physics
+title: Small Perbuations
 katex: True
 tags: Physics
 authors: Henry
 toc: true
-toc_label: "HKDSE Physics"
+toc_label: "Small Perbuations"
 toc_sticky: true
 permalink: /Physics/HKDSE/
 header:
@@ -13,6 +13,23 @@ header:
 sidebar:
  nav: "Physics"
 ---
+
+## Orbit Equation:
+Using the knowledge from Appendix B, we can quite easily deduce the orbit equation:
+
+$$
+\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} .
+$$
+
+I'll leave this as an exercise for the reader. 
+
+```bash
+Hint 1: We're dealing with Central Force, only radial force matters
+```
+```bash
+Hint 2: Use Newton's Second Law
+```
+
 I enjoy the physics of small perbuations, especially in classical mechanics. 
 First, assume a small perbuation around a circle with radius $$a$$ *i.e.* $$r(t)=a+\rho(t)$$ with $$\rho(0) \ll a$$. substitute into our orbit equation we have:
 
@@ -53,5 +70,9 @@ $$
 $$
 
 This describes a simple harmonic motion with $$\rho(t)=A \cos (\omega t+\phi)$$.
+
+It will look like this:
+
+<iframe src="/assets/Orbit.png" width="713px" height="250px"></iframe>
 
 We have used simple math to analyse the orbit equation! How cool is that!
