@@ -330,13 +330,13 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Appendix",
-        "excerpt":"Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s Theorem on \\(xy\\) plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial P}{\\partial y}\\right) d x d y\\] We aim to find polynomials such that \\(\\frac{\\partial Q}{\\partial x}-\\frac{\\partial...","categories": [],
+        "excerpt":"(In case you are confused about how I manage to write Math Equations in a website… Press Here) Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s Theorem on \\(xy\\) plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Appendix/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General, \\[\\begin{aligned} \\hat{F}=\\left(\\ddot{r}-r \\dot{\\theta}^2\\right) \\hat{r}+(2 \\dot{r} \\dot{\\theta}+r \\ddot{\\theta}) \\hat{\\theta} \\end{aligned}\\] Kepler’s Third Law See Appendix A for the full...","categories": [],
+        "excerpt":"(In case you are confused about how I manage to write Math Equations in a website… Press Here) From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General,...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
         "teaser": "/assets/images/Astro.png"

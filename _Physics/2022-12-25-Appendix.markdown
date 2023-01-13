@@ -14,6 +14,9 @@ sidebar:
  nav: "Physics"
 ---
 
+(In case you are confused about how I manage to write Math Equations in a website...
+[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %}))
+
 ### Appendix A
 **Proposition 1.1**: An Ellipse with semi-major axis **a** and semi-minor axis **b**  has area $$\pi ab $$
 
@@ -111,6 +114,21 @@ Hence:
 $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
 
 [Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
+
+### Appendix C
+
+Dimensional Analysis is one of the most *helpful* knowledge in Physics. You can immediately tell if an answer is correct or not using it. 
+
+Note that you cannot add two objects with different units.
+
+Proposition: $$sinx$$ doesn't have any units
+Proof: Consider the series expansion of $$sinx$$, *i.e.*
+
+$$sinx=x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots=\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}$$
+
+First note that $$x$$ cannot have any units, otherwise $$x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots$$ won't have any physical sense, as discussed above. 
+
+Therefore $$\frac{x^3}{3 !}$$ and $$\frac{x^5}{5 !}$$ will have the same units as $$x$$, *i.e.* no units, so as the preceding terms. Hence $$\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}$$ have no units, and hence $$sinx$$ has no units. [Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
 
 
 
