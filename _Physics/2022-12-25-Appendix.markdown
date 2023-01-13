@@ -136,10 +136,8 @@ Therefore $$\frac{x^3}{3 !}$$ and $$\frac{x^5}{5 !}$$ will have the same units a
 #### Detour:
 According to [The Wikipedia page On Series Expansion](https://en.wikipedia.org/wiki/Series_expansion),
 
-A Taylor series is a power series based on a function's derivatives at a single point. ${ }^{[4]}$ More specifically, if a function
-$f: U \rightarrow \mathbb{R}$ is infinitely differentiable around a point $x_0$, then the Taylor series of $f$ around this point is given by $\sum_{n=0}^{\infty} \frac{f^{(n)}\left(x_0\right)}{n !}\left(x-x_0\right)^n$ under the convention $0^0:=1$
-$[4][5]$ The Maclaurin series of a $f$ is its Taylor series about $x_0=0 .^{[6][5]}$ A Laurent series is a generalization of the Taylor series, allowing negative exponent values; it takes the form $\sum_{k=-\infty}^{\infty} c_k(z-a)^k$ and converges in an annulus. ${ }^{[7]}$
-
+"A Taylor series is a power series based on a function's derivatives at a single point.More specifically, if a function $f: U \rightarrow \mathbb{R}$ is infinitely differentiable around a point $x_0$, then the Taylor series of $f$ around this point is given by $\sum_{n=0}^{\infty} \frac{f^{(n)}\left(x_0\right)}{n !}\left(x-x_0\right)^n$ under the convention $0^0:=1$
+$[4][5]$ The Maclaurin series of a $f$ is its Taylor series about $x_0=0 . A Laurent series is a generalization of the Taylor series, allowing negative exponent values; it takes the form $\sum_{k=-\infty}^{\infty} c_k(z-a)^k$ and converges in an annulus."
 
 
 
