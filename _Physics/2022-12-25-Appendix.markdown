@@ -117,10 +117,11 @@ $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
 
 ### Appendix C
 
-Dimensional Analysis is one of the most *helpful* knowledge in Physics. You can immediately tell if an answer is correct or not using it. 
+Dimensional Analysis is one of the most *helpful* knowledge in Physics. You can immediately tell if an answer is correct or not using it. For example if we accidentally squared a term that contains dimensions, we can almost immediately identify the mistake. 
 
-**N.B.**
-Note that you cannot add two objects with different units.
+```bash
+N.B.: Two objects with different units cannot be added
+```
 
 Proposition: $$\sin x$$ doesn't have any units
 
@@ -132,13 +133,16 @@ First note that $$x$$ cannot have any units, otherwise $$x-\frac{x^3}{3 !}+\frac
 
 Therefore $$\frac{x^3}{3 !}$$ and $$\frac{x^5}{5 !}$$ will have the same units as $$x$$, *i.e.* no units, so as the preceding terms. Hence $$\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}$$ have no units, and hence $$\sin x$$ has no units. [Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
 
+Note that dimensional analysis cannot ensure that your answer is correct; rather, it occasionally picks up errors, but this is already *extremely* useful.
+
+
+
 
 #### Detour:
 According to [The Wikipedia page On Series Expansion](https://en.wikipedia.org/wiki/Series_expansion),
 
 "A Taylor series is a power series based on a function's derivatives at a single point.More specifically, if a function $f: U \rightarrow \mathbb{R}$ is infinitely differentiable around a point $x_0$, then the Taylor series of $f$ around this point is given by $\sum_{n=0}^{\infty} \frac{f^{(n)}\left(x_0\right)}{n !}\left(x-x_0\right)^n$ under the convention $0^0:=1$
 $[4][5]$ The Maclaurin series of a $f$ is its Taylor series about $x_0=0 . A Laurent series is a generalization of the Taylor series, allowing negative exponent values; it takes the form $\sum_{k=-\infty}^{\infty} c_k(z-a)^k$ and converges in an annulus."
-
 
 
 
