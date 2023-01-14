@@ -51,7 +51,7 @@ My $$\LaTeX$$ files are a bit outdated and I should include interesting content 
 
 
 ## Reach
-As said in various posts, like [my post on partially quitting Instagram]({% link _Physics/2022-09-23-Disgusted.markdown %}), I am very aware that less than 5 people will be viewing this very word. However, this website is **only** for people who want to know deeply about me, and I can see **very few people** falling into this category. So thank you if you are the very few people seeing this very word; or if you are stalking me, thank you for stalking me? 
+As said in various posts, like [my post on partially quitting Instagram]({% link _Journal/2022-09-23-Disgusted.markdown %}), I am very aware that less than 5 people will be viewing this very word. However, this website is **only** for people who want to know deeply about me, and I can see **very few people** falling into this category. So thank you if you are the very few people seeing this very word; or if you are stalking me, thank you for stalking me? 
 
 ## Tone and Language
 ### Tone
