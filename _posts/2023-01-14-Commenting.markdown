@@ -3,7 +3,7 @@ layout: single
 katex: True
 title: Writing me constructive comments
 toc: true
-Katex: true
+katex: true
 toc_label: "Comments"
 toc_sticky: true
 header:
