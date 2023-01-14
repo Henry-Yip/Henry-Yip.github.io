@@ -22,6 +22,10 @@ It's nice introduction to Quantum Physics, even though some math are definitely 
 
 Well I doubt I know how to do the exercises (I believe some of the stuff like [Hermite polynomials](https://en.wikipedia.org/wiki/Hermite_polynomials) are not covered yet in my course. (I think covered in Year 3? Not sure)
 
+```bash
+Turns out they briefly touched upon Hermite Polynomials in Modern Physics course
+```
+
 It's a good introduction to Physics degree and it intensified my passion towards Physics (funny thing is I almost went to study Earth System Science... I might like typhoons, but oceans and stuff aren't built for me... and I also hate labs so welp)
 ### Slow Fast Large Small Physics
 A short briefing:

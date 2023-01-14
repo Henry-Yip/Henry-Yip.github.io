@@ -20,7 +20,7 @@ feature_row:
   - image_path: /assets/images/Dubrovnik.jpg
     title: "Candidate 2: Dubrovnik"
     excerpt: "Pretty well fed, quite stupid"
-  - image_path: /assets/images/HongKong.jpg
+  - image_path: /assets/images/Astro.png
     title: "Candidate 3: Hong Kong"
     excerpt: "Very slim, extremely sensitive"
   - image_path: /assets/images/Zagreb.jpg

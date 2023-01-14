@@ -141,18 +141,6 @@ Music:
       - title: "Online Music Resources"
         url: /Music/Resources/
 
-
-
-Coding:
-  - title: Coding
-    children:
-      - title: "Random Number Generator - Cutoff Game"
-        url: /Coding/Cutoff/ 
-      - title: "Twin Primes"  
-        url: /Coding/TwinPrimes/
-      - title: "Prime Gap"  
-        url: /Coding/PrimeGap/
-
 LaTeX:
   - title: LaTeX
     children:

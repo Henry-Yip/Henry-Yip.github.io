@@ -14,6 +14,12 @@ sidebar:
  nav: "Physics"
 ---
 
+## KaTeX Promotion
+
+In case you are confused about how I manage to write Math Equations in a website...
+[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %}))
+
+
 ## Orbit Equation:
 Using the knowledge from Appendix B, we can quite easily deduce the orbit equation:
 
@@ -39,10 +45,7 @@ $$
 
 Here we'll use binomial expansion for negative coefficients. For more details view the wikipedia page for [Negative Binomial Distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution)
 
-However there's a nice trick using taylor series, which I'll explain in [Appendix D]({% link _Physics/2022-12-25-Appendix.markdown %})
-
-With the trick explained above we'll get the below:
-
+However there's a nice trick by differentiating the taylor series.
 $$
 \ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m} .
 $$
