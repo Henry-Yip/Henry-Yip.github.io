@@ -6,7 +6,7 @@ sidebar:
  nav: "Journal"
 permalink: /Journal/SelfIdentity/ 
 header:
-  teaser: /assets/images/astro.png
+  teaser: /assets/images/Astro.png
 toc: true
 toc_label: "Self Identity"
 toc_sticky: true

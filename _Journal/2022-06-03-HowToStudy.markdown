@@ -56,7 +56,7 @@ Usually lecturers will tell you which book to read.
 
 #### Example:
 
-For [one of the courses](http://www.drps.ed.ac.uk/22-23/dpt/cxphys10094.htm) I will take, the list is:
+For [One of the Courses](http://www.drps.ed.ac.uk/22-23/dpt/cxphys10094.htm) I will take, the list is:
 ```bash
 PAM Dirac "Principles of Quantum Mechanics"
 J Sakurai "Modern Quantum Mechanics"
