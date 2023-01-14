@@ -13,7 +13,7 @@ header:
 I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know **YOUR** opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so what they like won't be what you like).
 
 ### Posts People Liked Most:
- - $$LaTeX$$ Tutorials
+ - $$\LaTeX$$ Tutorials
  - My random rant on how to study Physics
  - Classical Music playlist
  
