@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "Small Perbuations"
 toc_sticky: true
-permalink: /Physics/HKDSE/
+permalink: /Physics/SmallPerbuations/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

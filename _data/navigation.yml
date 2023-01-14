@@ -100,7 +100,11 @@ Physics:
       - title: "Appendix" 
         url: /Physics/Appendix/    
       - title: "HKDSE Physics" 
-        url: /Physics/HKDSE/    
+        url: /Physics/HKDSE/ 
+      - title: "Small Perbuations"
+        url: /Physics/SmallPerbuations/
+        
+
   
 Journal:
   - title: Journal
