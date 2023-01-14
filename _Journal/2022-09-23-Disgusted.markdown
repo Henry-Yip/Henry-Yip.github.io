@@ -10,7 +10,7 @@ toc_label: "Quitting"
 toc_sticky: true
 ---
 ## Abstract
-I am unofficially quitting Instagram on 28/11/2022 and I will only share update here (therefore check if you want to know more about me!)
+I am unofficially quitting Instagram on 28/11/2022 and I will most likely only share my updates here 
 
 ## Motivation
 I'll quote this from [Toby Lam](https://tobylam.xyz/2022/08/20/audience-tone-of-tobylam.xyz.html):
