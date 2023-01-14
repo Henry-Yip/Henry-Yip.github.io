@@ -2,7 +2,7 @@
 layout: single
 title: Game 1 
 katex: False
-hidden: true
+hidden: True
 sidebar:
  nav: "Chess"
 ---

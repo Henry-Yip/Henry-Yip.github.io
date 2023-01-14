@@ -101,6 +101,9 @@ Physics:
         url: /Physics/HKDSE/ 
       - title: "Small Perbuations"
         url: /Physics/SmallPerbuations/
+      - title: "Stun Locks"
+        url: /Physics/StunLocks/  
+
 
 
   

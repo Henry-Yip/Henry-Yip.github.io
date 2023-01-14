@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "Random Rant on 13/1/2022"
 toc_sticky: true
-permalink: /Physics/HKDSE/
+permalink: /Physics/StunLocks/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

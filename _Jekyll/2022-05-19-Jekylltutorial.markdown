@@ -41,7 +41,7 @@ $$
 \end{array}\right]
 $$
 
-By *Simply*] typing
+By *Simply* typing
 ```bash
 $$
 \mathbf{H}=\left[\begin{array}{cccc}
