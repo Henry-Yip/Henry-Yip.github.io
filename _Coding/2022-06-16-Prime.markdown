@@ -1,0 +1,41 @@
+---
+layout: single
+title: Twin Primes
+katex: False
+permalink: /Coding/TwinPrimes/
+sidebar:
+ nav: "Coding"
+---
+
+```bash
+#include <iostream>
+using namespace std;
+
+bool isPrime(int number)
+{
+    for (int i=2; i<number; i++)
+    {
+        if (number%i==0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main()
+{
+    int range;
+    int counter=0;
+    cout<<"What is the Maximum Number?"<<"\n";
+    cin>>range;
+    for (int i=2;i<range;i++)
+    {
+        if (isPrime(i) && isPrime(i+2))
+        {
+            cout<<i<<" & "<<i+2<<"\n";
+            counter++;
+        }
+    }
+    cout<<"The Number of Twin Primes Found is: " << counter<<"\n";
+}
+```

@@ -1,0 +1,45 @@
+---
+layout: single
+title: Prime Gap
+katex: False
+permalink: /Coding/PrimeGap/
+sidebar:
+ nav: "Coding"
+---
+#include <iostream>
+using namespace std;
+
+bool isPrime(int number)
+{
+    for (int i=2; i<number; i++)
+    {
+        if (number%i==0)
+        {
+            return false;
+        }
+    }
+    return true;    
+}
+
+int NumberPrime(int order)
+{
+
+    int counter=0;
+    
+    for (int i=2;i<(100000-order);i++)
+    {
+        if (isPrime(i) && isPrime(i+order))
+        {
+            counter++;
+        }
+    }
+    cout<<counter<<"\n";
+}
+
+int main()
+{   
+    for (int i=2;i<500;i=i+2)//fill in the range by yourself
+    {
+      NumberPrime(i);
+    }
+}

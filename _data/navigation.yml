@@ -1,6 +1,6 @@
 # main links
 main:
-  - title: "Splash Page (Beta)"
+  - title: "Splash Page"
     url: /Splash/
   - title: "Contributors"  
     url: /Contributors/  
@@ -16,8 +16,6 @@ main:
     url: /Journal/ 
   - title: Music
     url: /Music/  
-  - title: "Coding"
-    url: /Coding/
   - title: "LaTeX"
     url: /LaTeX/
        
@@ -103,7 +101,7 @@ Physics:
         url: /Physics/HKDSE/ 
       - title: "Small Perbuations"
         url: /Physics/SmallPerbuations/
-        
+
 
   
 Journal:
@@ -121,6 +119,11 @@ Journal:
         url: /Journal/TropicalCyclones/ 
       - title: "Pigeons" 
         url: /Journal/Pigeons/    
+      - title: "Self Identity" 
+        url: /Journal/SelfIdentity/ 
+      - title: "Henry-yip.github.io; Future and Thoughts" 
+        url: /Journal/Future/    
+
  
 
 Contributors:
