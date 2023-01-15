@@ -24,7 +24,7 @@ In case you are confused about how I manage to write Math Equations in a website
 Using the knowledge from Appendix B, we can quite easily deduce the orbit equation:
 
 $$
-\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} .
+\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} 
 $$
 
 I'll leave this as an exercise for the reader. 
@@ -40,20 +40,21 @@ I enjoy the physics of small perbuations, especially in classical mechanics.
 First, assume a small perbuation around a circle with radius $$a$$ *i.e.* $$r(t)=a+\rho(t)$$ with $$\rho(0) \ll a$$. substitute into our orbit equation we have:
 
 $$
-\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m} .
+\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m} 
 $$
 
 Here we'll use binomial expansion for negative coefficients. For more details view the wikipedia page for [Negative Binomial Distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution)
 
 However there's a nice trick by differentiating the taylor series.
+
 $$
-\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m} .
+\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m} 
 $$
 
 Further rearranging will get you: 
 
 $$
-\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0 .
+\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0 
 $$
 
 ```bash
