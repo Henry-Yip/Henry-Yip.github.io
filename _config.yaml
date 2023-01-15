@@ -21,9 +21,6 @@ collections:
   Physics:
     output: true
     permalink: /:collection/:path/ 
-  Coding:
-    output: true
-    permalink: /:collection/:path/  
   Music:
     output: true
     permalink: /:collection/:path/

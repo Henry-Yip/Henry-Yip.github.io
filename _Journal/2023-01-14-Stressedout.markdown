@@ -2,15 +2,16 @@
 layout: single
 title: Christmas Holiday 2022/2023
 katex: True
-sidebar:
- nav: "Journal"
-permalink: /Journal/ChristmasHoliday/ 
+permalink: /Journal/ChristmasHoliday/
+toc: true
+toc_label: "How to study"
+toc_sticky: true
 header:
   teaser: /assets/images/Astro.png
-toc: true
-toc_label: "Christmas"
-toc_sticky: true
+sidebar:
+ nav: "Journal"
 ---
+
 ## First Week
 Those who know me know I struggled during the semester due to insane workload (Mon to Sun Morning to Night without 1 min of break). I spent the first week just absolutely being lost (waking up at 1pm, going out to eat a meal then sleeping at 4am, eating two cup noodles because I'm hungry at 3am)
 
