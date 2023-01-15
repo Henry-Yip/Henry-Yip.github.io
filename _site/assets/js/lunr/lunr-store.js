@@ -348,7 +348,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Small Perbuations",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/SmallPerbuations/",
         "teaser": "/assets/images/Astro.png"
