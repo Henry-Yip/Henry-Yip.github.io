@@ -17,7 +17,7 @@ sidebar:
 ### KaTeX Promotion
 
 In case you are confused about how I manage to write Math Equations in a website...
-[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %}))
+[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %})
 
 ### Appendix A
 

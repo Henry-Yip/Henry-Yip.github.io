@@ -17,10 +17,10 @@ Please note that this method is targeted for Minima users. Minima is the best Je
 {: .notice--danger}
 
 ### How to include Math Symbols in Jekyll
-Sometimes, you just want to include $$LaTeX$$ in your website
+Sometimes, you just want to include $$\LaTeX$$ in your website
 $$ax^2+bx+c=0$$
 
-If you want to know what $$LaTeX$$ is check out [My Series]({% link _LaTeX/2022-08-03-LaTeX1.markdown %})
+If you want to know what $$\LaTeX$$ is check out [My Series]({% link _LaTeX/2022-08-03-LaTeX1.markdown %})
 
 Note that in this website, we use $$\KaTeX$$ instead of $$\LaTeX$$. 
 

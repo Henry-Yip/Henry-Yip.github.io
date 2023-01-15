@@ -348,7 +348,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Appendix",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Appendix/",
         "teaser": "/assets/images/Astro.png"
