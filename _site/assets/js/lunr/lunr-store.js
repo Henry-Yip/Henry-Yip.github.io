@@ -251,6 +251,12 @@ var store = [{
         "url": "/Journal/TropicalClyclones/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "I suck at Math!",
+        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years...","categories": [],
+        "tags": [],
+        "url": "/Journal/Isuckatmath/",
+        "teaser": "/assets/images/Pgfplots.png"
+      },{
         "title": "Columba livia forma domestica",
         "excerpt":"Loading... Candidate 1: London Considerably fat, not scared of people Candidate 2: Dubrovnik Pretty well fed, quite stupid Candidate 3: Hong Kong Very slim, extremely sensitive Candidate 4: Zagreb This particular one is pink which is funny; in general they are quite abundant Candidate 5: Ljubljana Quite stupid/calm as they...","categories": [],
         "tags": [],
