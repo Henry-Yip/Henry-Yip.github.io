@@ -101,24 +101,6 @@ var store = [{
         "url": "/Chess/Events/",
         "teaser": "/assets/images/AI.png"
       },{
-        "title": "Twin Primes",
-        "excerpt":"#include &lt;iostream&gt; using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int main() { int range; int counter=0; cout&lt;&lt;\"What is the Maximum Number?\"&lt;&lt;\"\\n\"; cin&gt;&gt;range; for (int i=2;i&lt;range;i++) { if (isPrime(i) &amp;&amp; isPrime(i+2)) { cout&lt;&lt;i&lt;&lt;\" &amp; \"&lt;&lt;i+2&lt;&lt;\"\\n\";...","categories": [],
-        "tags": [],
-        "url": "/Coding/TwinPrimes/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Cutoff Game (C++)",
-        "excerpt":"#include &lt;iostream&gt; #include &lt;ctime&gt; #include &lt;cstdlib&gt; using namespace std; int randRange(int low, int high) { return rand()%(high-low+1)+low; } int main() { int number_trials,cutoff; int fail=0; int success=0; srand(time(NULL)); cout&lt;&lt;\"Number of trials: \"&lt;&lt;\"\\n\"; cin&gt;&gt;number_trials; cout&lt;&lt;\"Cutoff Score: \"&lt;&lt;\"\\n\"; cin&gt;&gt;cutoff; for (int i=0; i&lt;number_trials; i++) { if (randRange(0,100)&gt;=cutoff) { success++; } else {...","categories": [],
-        "tags": [],
-        "url": "/Coding/Cutoff/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Prime Gap",
-        "excerpt":"#include using namespace std; bool isPrime(int number) { for (int i=2; i&lt;number; i++) { if (number%i==0) { return false; } } return true; } int NumberPrime(int order) { int counter=0; for (int i=2;i&lt;(100000-order);i++) { if (isPrime(i) &amp;&amp; isPrime(i+order)) { counter++; } } cout&lt;&lt;counter&lt;&lt;\"\\n\"; } int main() { for (int i=2;i&lt;500;i=i+2)//fill...","categories": [],
-        "tags": [],
-        "url": "/Coding/PrimeGap/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Henry Yip",
         "excerpt":"Photo Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong...","categories": [],
         "tags": [],

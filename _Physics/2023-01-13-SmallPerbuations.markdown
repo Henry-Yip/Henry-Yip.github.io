@@ -17,11 +17,11 @@ sidebar:
 ## KaTeX Promotion
 
 In case you are confused about how I manage to write Math Equations in a website...
-[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %}))
+[Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %})
 
 
 ## Orbit Equation:
-Using the knowledge from Appendix B, we can quite easily deduce the orbit equation:
+Using the knowledge from [Appendix B]({% link _Physics/2022-12-25-Appendix.markdown %}), we can quite easily deduce the orbit equation:
 
 $$
 \ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} 
