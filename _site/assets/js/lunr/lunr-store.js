@@ -261,19 +261,19 @@ var store = [{
         "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
         "tags": [],
         "url": "/Journal/Future/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Self Identity",
         "excerpt":"I am always convinced by myself that I am a stupid person. I can never follow what the smarter people are discussing in class (so I just nod my head). People oftern regard me higher than they should (by saying I’m as smart as them) and somehow my academic profile...","categories": [],
         "tags": [],
         "url": "/Journal/SelfIdentity/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Christmas Holiday 2022/2023",
         "excerpt":"First Week Those who know me know I struggled during the semester due to insane workload (Mon to Sun Morning to Night without 1 min of break). I spent the first week just absolutely being lost (waking up at 1pm, going out to eat a meal then sleeping at 4am,...","categories": [],
         "tags": [],
         "url": "/Journal/ChristmasHoliday/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],

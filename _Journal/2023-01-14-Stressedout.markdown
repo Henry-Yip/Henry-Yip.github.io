@@ -6,8 +6,6 @@ permalink: /Journal/ChristmasHoliday/
 toc: true
 toc_label: "How to study"
 toc_sticky: true
-header:
-  teaser: /assets/images/Astro.png
 sidebar:
  nav: "Journal"
 ---

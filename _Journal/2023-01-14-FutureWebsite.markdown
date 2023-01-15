@@ -5,8 +5,6 @@ katex: True
 sidebar:
  nav: "Journal"
 permalink: /Journal/Future/ 
-header:
-  teaser: /assets/images/Astro.png
 toc: true
 toc_label: "Future and Thoughts"
 toc_sticky: true
