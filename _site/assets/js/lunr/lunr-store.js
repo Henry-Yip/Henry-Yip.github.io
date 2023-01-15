@@ -90,7 +90,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Chess with Toby Lam",
-        "excerpt":"The KaTeX stylesheet is not loaded! KaTeX stylesheet version: Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form...","categories": [],
+        "excerpt":"Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn’t really introduce… (In case you are confused...","categories": [],
         "tags": ["Physics"],
         "url": "/Chess/TobyLam/",
         "teaser": "/assets/images/AI.png"
@@ -234,7 +234,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Quitting Social Media!",
-        "excerpt":"Abstract I am unofficially quitting Instagram on 28/11/2022 and I will only share update here (therefore check if you want to know more about me!) Motivation I’ll quote this from Toby Lam: “I’m aware that the viewership of this website may be very low, yet that doesn’t particularly concern me....","categories": [],
+        "excerpt":"Abstract I am unofficially quitting Instagram on 28/11/2022 and I will most likely only share my updates here Motivation I’ll quote this from Toby Lam: “I’m aware that the viewership of this website may be very low, yet that doesn’t particularly concern me. I’ve always intended it to be a...","categories": [],
         "tags": [],
         "url": "/Journal/Disgusted/",
         "teaser": "/assets/images/Teaser.png"
@@ -251,11 +251,29 @@ var store = [{
         "url": "/Journal/TropicalClyclones/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Pigeons",
+        "title": "Columba livia forma domestica",
         "excerpt":"Loading... Candidate 1: London Considerably fat, not scared of people Candidate 2: Dubrovnik Pretty well fed, quite stupid Candidate 3: Hong Kong Very slim, extremely sensitive Candidate 4: Zagreb This particular one is pink which is funny; in general they are quite abundant Candidate 5: Ljubljana Quite stupid/calm as they...","categories": [],
         "tags": [],
         "url": "/Journal/Pigeons/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Henry-yip.github.io; Future and thoughts",
+        "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
+        "tags": [],
+        "url": "/Journal/Future/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Self Identity",
+        "excerpt":"I am always convinced by myself that I am a stupid person. I can never follow what the smarter people are discussing in class (so I just nod my head). People oftern regard me higher than they should (by saying I’m as smart as them) and somehow my academic profile...","categories": [],
+        "tags": [],
+        "url": "/Journal/SelfIdentity/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Christmas Holiday 2022/2023",
+        "excerpt":"First Week Those who know me know I struggled during the semester due to insane workload (Mon to Sun Morning to Night without 1 min of break). I spent the first week just absolutely being lost (waking up at 1pm, going out to eat a meal then sleeping at 4am,...","categories": [],
+        "tags": [],
+        "url": "/Journal/ChristmasHoliday/",
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
@@ -330,15 +348,27 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Appendix",
-        "excerpt":"(In case you are confused about how I manage to write Math Equations in a website… Press Here) Appendix A Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s Theorem on \\(xy\\) plane): \\[\\oint_C(P d x+Q d y)=\\iint_D\\left(\\frac{\\partial...","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/Appendix/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"(In case you are confused about how I manage to write Math Equations in a website… Press Here) From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a constant. In General,...","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Introduction From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/HKDSE/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Small Perbuations",
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m} .\\] I’ll leave this as an exercise for the reader. Hint 1: We're...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/SmallPerbuations/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Stun Locks",
+        "excerpt":"Stun Locks I just read Toby Lam’s post on Stun-Locks Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I...","categories": [],
+        "tags": ["Physics"],
+        "url": "/Physics/StunLocks/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "An Introduction to This Website",
@@ -364,4 +394,16 @@ var store = [{
         "tags": [],
         "url": "/Puzzles/",
         "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "Writing me constructive comments",
+        "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
+        "tags": [],
+        "url": "/Commenting/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "henry-yip.github.io; Future and Thoughts",
+        "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
+        "tags": [],
+        "url": "/FutureofWebsite/",
+        "teaser": "/assets/images/Astro.png"
       }]

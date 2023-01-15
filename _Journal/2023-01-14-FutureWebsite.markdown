@@ -26,7 +26,7 @@ As a Mathematical Physics Student, I enjoy having math rigor, that's why I enjoy
 
 $$\sim[\forall x, S(x)] \equiv \exists x:[\sim S(x)]$$
 
-Below I'll provide the $$LaTeX$$ source code:
+Below I'll provide the $$\LaTeX$$ source code:
 
 ```bash
 $$\sim[\forall x, S(x)] \equiv \exists x:[\sim S(x)]$$

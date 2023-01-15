@@ -1,14 +1,14 @@
 ---
-title: "Pigeons"
+title: "Columba livia forma domestica"
 layout: splash
 header:
   overlay_color: "#111"
   overlay_filter: "0.5"
   overlay_image: /assets/images/Astro.png
   actions:
-    - label: "History of Pigeons"
+    - label: "History of Columba Livia Forma Domestica"
       url: "https://en.wikipedia.org/wiki/Domestic_pigeon"
-excerpt: "Who doesn't like Pigeons" 
+excerpt: "Who doesn't like Columba Livia Forma Domestica" 
 intro: 
   - excerpt: 'Credits: The picture from Dubrovnik is taken by Allison Lau, while other pictures are taken by me in 2022/2023. I would like to thank everyone for their inspirations, especially those in the slovenia/croatia trip. If you want me to feature your pigeon pictures please send me a message. '
 permalink: /Journal/Pigeons/
