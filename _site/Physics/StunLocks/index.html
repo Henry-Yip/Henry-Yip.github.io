@@ -1,0 +1,522 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="81758c7d-216b-410a-b68d-a3fdc18dce6a" data-blockingmode="auto" type="text/javascript"></script> 
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Stun Locks | Henry Yip</title>
+<meta name="description" content="Stun Locks">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Stun Locks">
+<meta property="og:url" content="https://henry-yip.github.io/Physics/StunLocks/">
+
+
+  <meta property="og:description" content="Stun Locks">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Astro.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-01-14T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/Physics/StunLocks/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/Splash/">Splash Page</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Contributors/">Contributors</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Chess/">Chess</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Physics/">Physics</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Existential_Risks/">Existential Risks</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Jekyll/">Jekyll</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Journal/">Journal</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Music/">Music</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/physics" itemprop="item"><span itemprop="name">Physics</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Stun Locks</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Physics</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/Physics/Astrophysics1/">Astrophysics (Part 1)</a></li>
+          
+            <li><a href="/Physics/Astrophysics2/">Astrophysics (Part 2)</a></li>
+          
+            <li><a href="/Physics/Relativity/">Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)</a></li>
+          
+            <li><a href="/Physics/Book/">First Physics Book</a></li>
+          
+            <li><a href="/Physics/Appendix/">Appendix</a></li>
+          
+            <li><a href="/Physics/HKDSE/">HKDSE Physics</a></li>
+          
+            <li><a href="/Physics/SmallPerbuations/">Small Perbuations</a></li>
+          
+            <li><a href="/Physics/StunLocks/" class="active">Stun Locks</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Stun Locks">
+    <meta itemprop="description" content="Stun Locks">
+    <meta itemprop="datePublished" content="2023-01-14T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/Physics/StunLocks/" class="u-url" itemprop="url">Stun Locks
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Random Rant on 13/1/2022</h4></header>
+              <ul class="toc__menu"><li><a href="#stun-locks">Stun Locks</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="stun-locks">Stun Locks</h2>
+
+<p>I just read <a href="https://tobylam.xyz/2023/01/11/stunlock.html">Toby Lam’s post on Stun-Locks</a></p>
+
+<p>Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I will struggle for a while and get stun locks. Therefore, I usually get full marks in easy parts while messing up hard parts.</p>
+
+<p>I have personally met imaginative problem solvers who can solve difficult problems with relative ease, but struggle to complete easy questions due to carelessness. I usually end up more or less the same marks with those people, albeit knowing they are better physicists than I am: Usually if the exam is hard, they will have much higher marks than me; if the exam difficulty is moderate, it depends on whether I can solve the hard part or not, but usually I can’t. If they exam is easy, we’ll all get high marks</p>
+
+<p>Sometimes while doing hand-ins I keep on forgetting that the difficulty should be rather quantised, or I should say, limited, <em>i.e.</em> there shouldn’t be really complicated and difficult calculations. However, because I like to solve complex systems, I usually end up having \(\cot x\) and \(\arctan x\) everywhere in my equations, which is just ridiculous!</p>
+
+<p>Therefore, I have adapted my mindset such that, whenever I encounter problems I can’t solve, I will first look at the initial conditions, or check if something is negligible but I have forgotten - Maybe I will take the taylor series and check if the kinetic energy in a particular direction can be ignored, or just see if something is 0 under really special conditions, hence quadratic term can be ignored and the equation is linearized. Think from the markers’ persepective… Usually problems aren’t that hard and extremely heavy algebra isn’t what they usually want.</p>
+
+<p>Something that is also really important (and most people forget) is to check the mark allocation. For example, questions that allocate 2 marks will most definitely not ask you to solve non-linearesed second order ODE, while those that allocate 10 marks <em>may</em>.</p>
+
+<p>Despite saying these, there are exceptions and I have seen really difficult algebra/integrals in 20 marks handins, and everyone basically spend 8 hours doing it p/w, but we’ve all learnt a lot, that’s most important.</p>
+
+<p>However, for me, I rarely encounter Toby’s problem of:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lack of some <span class="nb">sort </span>of pre-requisite knowledge / experience
+</code></pre></div></div>
+<p>simply because the handins are due way after the materials are covered (maybe 2 weeks/3 weeks), so while desparately trying to catch up with the class I automatically equip myself with the necessary skills. So it all becomes a matter of angle of attack.</p>
+
+<p>He also mentioned that:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Completing easy parts also assures my ability is of a certain standard at least.
+</code></pre></div></div>
+
+<p>While this is secretly true, I just don’t think it’s that good to brush our ego. Reminding ourselves that we are good physicists/mathematicians doesn’t really solve the problem. Even though most people, including me, have a bit of imposter syndrome and forget how good there are already. I am <strong>always</strong> afraid that my friends will leave me because of my stupidity, but it turns out I’m always imagining it and I am held in higher regard than I believe (<em>i.e.</em> People don’t find me inferior to them). Despite this, I feel like we shouldn’t brush our ego intentionally. Admitting we are worse does help us, to some extent, as long as we don’t overdo it.</p>
+
+<p>However, people still think I am good at computers because of this stupid website, this is still wrong. There is nothing, absolutely nothing in this website that requires computer knowledge, the most complicated part is downloading Jekyll.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I don<span class="s1">'t know CS
+</span></code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#physics" class="page__taxonomy-item p-category" rel="tag">Physics</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-14T00:00:00+00:00">January 14, 2023</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Physics/SmallPerbuations/" class="pagination--pager" title="Small Perbuations
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '5CK3MN2B7K',
+  apiKey: '414aa238391f62d601f1f91dbed9649b',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
