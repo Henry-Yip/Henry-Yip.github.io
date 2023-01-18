@@ -365,11 +365,35 @@ var store = [{
         "url": "/Physics/SmallPerbuations/",
         "teaser": "/assets/images/Astro.png"
       },{
+        "title": "Astrophysics",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/Astrophysics/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Darkenergy",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/DarkEnergy/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "An Introduction to This Website",
         "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "Appendix",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/Appendix/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Hkdse",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/HKDSE/",
+        "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Writing me constructive comments",
         "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
@@ -383,9 +407,9 @@ var store = [{
         "url": "/FutureofWebsite/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Smallperbuations",
-        "excerpt":" ","categories": [],
+        "title": "Small Perbuations",
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": [],
         "url": "/SmallPerbuations/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Wolf.png"
       }]

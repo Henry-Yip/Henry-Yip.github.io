@@ -10,8 +10,8 @@
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="81758c7d-216b-410a-b68d-a3fdc18dce6a" data-blockingmode="auto" type="text/javascript"></script> 
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Smallperbuations | Henry Yip</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>Small Perbuations | Henry Yip</title>
+<meta name="description" content="KaTeX Promotion">
 
 
   <meta name="author" content="Henry Yip ">
@@ -23,13 +23,15 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Smallperbuations">
+<meta property="og:title" content="Small Perbuations">
 <meta property="og:url" content="http://localhost:4000/SmallPerbuations/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="KaTeX Promotion">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Wolf.png">
 
 
 
@@ -202,7 +204,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Smallperbuations</li>
+        <li class="current">Small Perbuations</li>
       
     
   </ol>
@@ -322,8 +324,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Smallperbuations">
-    <meta itemprop="description" content="">
+    <meta itemprop="headline" content="Small Perbuations">
+    <meta itemprop="description" content="KaTeX Promotion">
     <meta itemprop="datePublished" content="2023-01-18T00:00:00+00:00">
     
 
@@ -331,7 +333,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/SmallPerbuations/" class="u-url" itemprop="url">Smallperbuations
+            <a href="http://localhost:4000/SmallPerbuations/" class="u-url" itemprop="url">Small Perbuations
 </a>
           </h1>
           
@@ -348,7 +350,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -360,7 +362,64 @@
 
       <section class="page__content e-content" itemprop="text">
         
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perbuations</h4></header>
+              <ul class="toc__menu"><li><a href="#katex-promotion">KaTeX Promotion</a></li><li><a href="#orbit-equation">Orbit Equation:</a></li></ul>
+
+            </nav>
+          </aside>
         
+        <h2 id="katex-promotion">KaTeX Promotion</h2>
+
+<p>In case you are confused about how I manage to write Math Equations in a website…
+<a href="/Jekyll/Katex">Press Here</a></p>
+
+<h2 id="orbit-equation">Orbit Equation:</h2>
+<p>Using the knowledge from <a href="/Physics/Appendix/">Appendix B</a>, we can quite easily deduce the orbit equation:</p>
+
+\[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
+
+<p>I’ll leave this as an exercise for the reader.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 1: We<span class="s1">'re dealing with Central Force, only radial force matters
+</span></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 2: Use Newton<span class="s1">'s Second Law
+</span></code></pre></div></div>
+
+<p>I enjoy the physics of small perbuations, especially in classical mechanics. 
+First, assume a small perbuation around a circle with radius \(a\) <em>i.e.</em> \(r(t)=a+\rho(t)\) with \(\rho(0) \ll a\). substitute into our orbit equation we have:</p>
+
+\[\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m}\]
+
+<p>Here we’ll use binomial expansion for negative coefficients. For more details view the wikipedia page for <a href="https://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative Binomial Distribution</a></p>
+
+<p>However there’s a nice trick by differentiating the taylor series.</p>
+
+\[\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m}\]
+
+<p>Further rearranging will get you:</p>
+
+\[\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0\]
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
+</code></pre></div></div>
+
+<p>I don’t know if you have done <strong>Differential Equations</strong> before. Above describes a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
+
+\[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
+
+<p>Hence if the above stands we have:</p>
+
+\[\omega^2 \equiv \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\]
+
+<p>This describes a simple harmonic motion with \(\rho(t)=A \cos (\omega t+\phi)\).</p>
+
+<p>It will look like this:</p>
+
+<iframe src="/assets/Orbit.png" width="865px" height="715px"></iframe>
+
+<p>We have used simple math to analyse the orbit equation! How cool is that!</p>
 
         
       </section>
@@ -381,7 +440,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Smallperbuations%20http%3A%2F%2Flocalhost%3A4000%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Small+Perbuations%20http%3A%2F%2Flocalhost%3A4000%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2FSmallPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -507,12 +566,12 @@ I really enjoy two-sided communication. While I have asked my best friends regar
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="/assets/images/Wolf.png" alt="">
+        <img src="/assets/images/Teaser.png" alt="">
       </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Welcome/" rel="permalink">An Introduction to This Website
+        <a href="/HKDSE/" rel="permalink">Hkdse
 </a>
       
     </h2>
@@ -530,17 +589,58 @@ I really enjoy two-sided communication. While I have asked my best friends regar
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          less than 1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Introduction
-Myself
-Henry YIP
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
 
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Appendix/" rel="permalink">Appendix
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
