@@ -1,18 +1,17 @@
 ---
 layout: single
 title: Stun Locks
-katex: True
-tags: Physics
-authors: Henry
+header:
+  teaser: /assets/images/Astro.png
+katex: False
+permalink: /Physics/StunLocks/
 toc: true
 toc_label: "Random Rant on 13/1/2022"
 toc_sticky: true
-permalink: /Physics/StunLocks/
-header:
-  teaser: /assets/images/Astro.png
 sidebar:
  nav: "Physics"
 ---
+
 ## Stun Locks
 
 I just read [Toby Lam's post on Stun-Locks](https://tobylam.xyz/2023/01/11/stunlock.html)

@@ -91,7 +91,7 @@ var store = [{
       },{
         "title": "Chess with Toby Lam",
         "excerpt":"Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn’t really introduce… (In case you are confused...","categories": [],
-        "tags": ["Physics"],
+        "tags": [],
         "url": "/Chess/TobyLam/",
         "teaser": "/assets/images/AI.png"
       },{
@@ -99,6 +99,12 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/Chess/Events/",
+        "teaser": "/assets/images/AI.png"
+      },{
+        "title": "Anish Giri Wins Magnus Carlsen!",
+        "excerpt":"Anish Giri beats Magnus Carlsen in Round 4 of the Tata Steel Masters   Here, Giri found the correct counter to Magnus’ blunder. Can you find it?      ","categories": [],
+        "tags": [],
+        "url": "/Chess/AnishGiri/",
         "teaser": "/assets/images/AI.png"
       },{
         "title": "Henry Yip",
@@ -349,38 +355,20 @@ var store = [{
       },{
         "title": "Small Perbuations",
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
-        "tags": ["Physics"],
+        "tags": [],
         "url": "/Physics/SmallPerbuations/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Stun Locks",
         "excerpt":"Stun Locks I just read Toby Lam’s post on Stun-Locks Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I...","categories": [],
-        "tags": ["Physics"],
+        "tags": [],
         "url": "/Physics/StunLocks/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "An Introduction to This Website",
-        "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
+        "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
-        "teaser": "/assets/images/Wolf.png"
-      },{
-        "title": "The Big RIP",
-        "excerpt":"Galaxy Spiral GIFfrom Galaxy GIFs Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of...","categories": [],
-        "tags": [],
-        "url": "/BigRIP/",
-        "teaser": "/assets/images/Wolf.png"
-      },{
-        "title": "Chess AI Analysis",
-        "excerpt":"Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best...","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/ChessAI/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Infinitely Many Chess Puzzles",
-        "excerpt":"Let it load for a while:    ","categories": [],
-        "tags": [],
-        "url": "/Puzzles/",
         "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Writing me constructive comments",

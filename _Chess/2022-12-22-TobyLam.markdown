@@ -2,7 +2,6 @@
 layout: single
 title: Chess with Toby Lam
 katex: True
-tags: Physics
 header:
   teaser: /assets/images/AI.png
 toc: true

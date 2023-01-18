@@ -12,7 +12,9 @@ sidebar:
  nav: "LaTeX"
 ---
 ### Tex Source
+
 This is the Tex Source for my beamer presentation
+
 {% highlight ruby %}
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}

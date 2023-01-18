@@ -1,15 +1,13 @@
 ---
 layout: single
 title: Small Perbuations
-katex: True
-tags: Physics
-authors: Henry
-toc: true
-toc_label: "Small Perbuations"
-toc_sticky: true
-permalink: /Physics/SmallPerbuations/
 header:
   teaser: /assets/images/Astro.png
+katex: False
+permalink: /Physics/SmallPerbuations/
+toc: true
+toc_label: "Random Rant on 13/1/2022"
+toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
