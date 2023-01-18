@@ -1,16 +1,12 @@
 ---
 layout: single
+katex: True
 title: Small Perbuations
-header:
-  teaser: /assets/images/Astro.png
-katex: False
-permalink: /Physics/SmallPerbuations/
-tag: Physics
 toc: true
 toc_label: "Small Perbuations"
 toc_sticky: true
-sidebar:
- nav: "Physics"
+header:
+  teaser: /assets/images/Wolf.png
 ---
 
 ## KaTeX Promotion
