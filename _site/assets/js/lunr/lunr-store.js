@@ -359,12 +359,6 @@ var store = [{
         "url": "/Physics/SmallPerbuations/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Stun Locks",
-        "excerpt":"Stun Locks I just read Toby Lam’s post on Stun-Locks Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I...","categories": [],
-        "tags": ["Physics"],
-        "url": "/Physics/StunLocks/",
-        "teaser": "/assets/images/Astro.png"
-      },{
         "title": "An Introduction to This Website",
         "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
