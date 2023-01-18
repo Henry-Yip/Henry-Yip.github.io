@@ -5,6 +5,7 @@ header:
   teaser: /assets/images/Astro.png
 katex: False
 permalink: /Physics/SmallPerbuations/
+tag: Physics
 toc: true
 toc_label: "Random Rant on 13/1/2022"
 toc_sticky: true

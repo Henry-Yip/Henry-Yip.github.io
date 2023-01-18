@@ -4,6 +4,7 @@ title: Stun Locks
 header:
   teaser: /assets/images/Astro.png
 katex: False
+tags: Physics
 permalink: /Physics/StunLocks/
 toc: true
 toc_label: "Random Rant on 13/1/2022"
