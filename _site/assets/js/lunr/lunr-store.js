@@ -269,6 +269,12 @@ var store = [{
         "url": "/Journal/ChristmasHoliday/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Stun Locks",
+        "excerpt":"Stun Locks I just read Toby Lam’s post on Stun-Locks Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I...","categories": [],
+        "tags": ["Journal"],
+        "url": "/Journal/StunLocks/",
+        "teaser": "/assets/images/Astro.png"
+      },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],

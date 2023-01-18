@@ -1,6 +1,8 @@
 ---
 title: "Columba livia forma domestica"
 layout: splash
+sidebar:
+ nav: "Journal"
 header:
   overlay_color: "#111"
   overlay_filter: "0.5"
