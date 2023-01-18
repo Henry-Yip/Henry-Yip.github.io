@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: Astrophsyics
+title: #1 Astrophysics
 toc: true
 toc_label: "Astrophysics"
 toc_sticky: true

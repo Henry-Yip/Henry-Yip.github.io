@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Appendix | Henry Yip</title>
-<meta name="description" content="">
+<meta name="description" content="KaTeX Promotion">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,9 +27,11 @@
 <meta property="og:url" content="http://localhost:4000/Appendix/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="KaTeX Promotion">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Astro.png">
 
 
 
@@ -323,7 +325,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Appendix">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="KaTeX Promotion">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
     
 
@@ -348,7 +350,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          3 minute read
         
       </span>
     
@@ -360,7 +362,136 @@
 
       <section class="page__content e-content" itemprop="text">
         
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
+              <ul class="toc__menu"><li><a href="#katex-promotion">KaTeX Promotion</a></li><li><a href="#appendix-a">Appendix A</a></li><li><a href="#appendix-b">Appendix B</a></li><li><a href="#appendix-c">Appendix C</a><ul><li><a href="#detour">Detour:</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
         
+        <h3 id="katex-promotion">KaTeX Promotion</h3>
+
+<p>In case you are confused about how I manage to write Math Equations in a website…
+<a href="/Jekyll/Katex">Press Here</a></p>
+
+<h3 id="appendix-a">Appendix A</h3>
+
+<ul>
+  <li>Used in my post about <a href="/Physics/HKDSE/">HKDSE Physics</a></li>
+</ul>
+
+<p><strong>Proposition 1.1</strong>: An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
+
+<p><strong>Proof</strong>:
+Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
+
+\[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
+
+<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1\)</p>
+
+<p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
+
+<p>So we can estimate the area (denote by \(A\)) as:</p>
+
+\[A=\frac{1}{2} \oint_C(x dy-ydx)\]
+
+<p>Using the standard parameterization of an ellipse (see below), we can quickly calculate \(A\)</p>
+
+\[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
+
+\[\begin{aligned}
+A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
+&amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
+\end{aligned}\]
+
+<p><a href="https://en.wikipedia.org/wiki/Q.E.D.">Q.E.D.</a></p>
+
+<p><strong>Collorary</strong>: A Circle with radius \(r\) has area \(\pi r^2\). The proof is trivial and is left as an exercise for the reader</p>
+
+<h3 id="appendix-b">Appendix B</h3>
+
+<ul>
+  <li>Used in my post about <a href="/Physics/HKDSE/">HKDSE Physics</a></li>
+  <li>Also in my post about <a href="/Physics/SmallPerbuations/">Small Perbuations</a>
+<strong>Proposition 1.2.1</strong>: \(r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\)</li>
+</ul>
+
+<p><strong>Proof</strong></p>
+
+<p>Going back to Planar Polar Coordinates:</p>
+
+\[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
+
+<p>By <strong>Chain Rule</strong>,</p>
+
+\[\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\]
+
+<p>And</p>
+
+\[\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\]
+
+<p>Further Differentiation yields:</p>
+
+\[\begin{aligned}
+\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
+&amp; =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
+&amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\end{aligned}\]
+
+<p>Since the force is a central force, we have:</p>
+
+\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\]
+
+<p>We can quickly identify two equations:</p>
+
+\[\begin{aligned}
+\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m \\
+2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
+\end{aligned}\]
+
+<p>From the second equation</p>
+
+\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
+
+\[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
+
+<p>Hence:</p>
+
+\[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
+
+<p><a href="https://en.wikipedia.org/wiki/Q.E.D.">Q.E.D.</a></p>
+
+<h3 id="appendix-c">Appendix C</h3>
+
+<ul>
+  <li>Used in my post about <a href="/Physics/HKDSE/">HKDSE Physics</a></li>
+</ul>
+
+<p>Dimensional Analysis is one of the most <em>helpful</em> knowledge in Physics. You can immediately tell if an answer is correct or not using it. For example if we accidentally squared a term that contains dimensions, we can almost immediately identify the mistake.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>N.B.: Two objects with different units cannot be added
+</code></pre></div></div>
+
+<p><strong>Proposition 1.3</strong>: \(\sin x\) doesn’t have any units</p>
+
+<p>Proof: Consider the series expansion of \(\sin x\), <em>i.e.</em></p>
+
+\[\sin x=x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots=\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}\]
+
+<p>First note that \(x\) cannot have any units, otherwise \(x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots\) won’t have any physical sense, as discussed above.</p>
+
+<p>Therefore \(\frac{x^3}{3 !}\) and \(\frac{x^5}{5 !}\) will have the same units as \(x\), <em>i.e.</em> no units, so as the preceding terms. Hence \(\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}\) have no units, and hence \(\sin x\) has no units. <a href="https://en.wikipedia.org/wiki/Q.E.D.">Q.E.D.</a></p>
+
+<p>Note that dimensional analysis cannot ensure that your answer is correct; rather, it occasionally picks up errors, but this is already <em>extremely</em> useful.</p>
+
+<h4 id="detour">Detour:</h4>
+<p>According to <a href="https://en.wikipedia.org/wiki/Series_expansion">The Wikipedia page On Series Expansion</a>,</p>
+
+<p>“A Taylor series is a power series based on a function’s derivatives at a single point.More specifically, if a function \(f: U \rightarrow \mathbb{R}\) is infinitely differentiable around a point \(x_0\), then the Taylor series of \(f\) around this point is given by \(\sum_{n=0}^{\infty} \frac{f^{(n)}\left(x_0\right)}{n !}\left(x-x_0\right)^n\) under the convention \(0^0:=1\)</p>
+
+<p>The Maclaurin series of a \(f\) is its Taylor series about \(x_0=0\) . A Laurent series is a generalization of the Taylor series, allowing negative exponent values; it takes the form \(\sum_{k=-\infty}^{\infty} c_k(z-a)^k\) and converges in an annulus.”</p>
+
 
         
       </section>
@@ -392,7 +523,7 @@
       
   <nav class="pagination">
     
-      <a href="/Welcome/" class="pagination--pager" title="An Introduction to This Website
+      <a href="/Welcome/" class="pagination--pager" title="Welcome
 ">Previous</a>
     
     
@@ -425,7 +556,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/SmallPerbuations/" rel="permalink">Small Perbuations
+        <a href="/SmallPerbuations/" rel="permalink">Smallperbuations
 </a>
       
     </h2>
@@ -470,7 +601,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/FutureofWebsite/" rel="permalink">henry-yip.github.io; Future and Thoughts
+        <a href="/FutureofWebsite/" rel="permalink">Futureofwebsite
 </a>
       
     </h2>
@@ -514,7 +645,7 @@ Several People, like Toby Lam have asked me to buy a domain. However, I think ht
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Commenting/" rel="permalink">Writing me constructive comments
+        <a href="/Commenting/" rel="permalink">Commenting
 </a>
       
     </h2>
@@ -553,7 +684,7 @@ I really enjoy two-sided communication. While I have asked my best friends regar
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
+        <img src="/assets/images/Astro.png" alt="">
       </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -576,14 +707,15 @@ I really enjoy two-sided communication. While I have asked my best friends regar
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">KaTeX Promotion
+
 </p>
   </article>
 </div>

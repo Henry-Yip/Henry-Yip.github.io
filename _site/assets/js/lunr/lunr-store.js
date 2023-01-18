@@ -366,48 +366,48 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Astrophysics",
-        "excerpt":" ","categories": [],
+        "excerpt":"Introduction Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and...","categories": [],
         "tags": [],
         "url": "/Astrophysics/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Darkenergy",
-        "excerpt":" ","categories": [],
+        "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
         "tags": [],
         "url": "/DarkEnergy/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "An Introduction to This Website",
+        "title": "Welcome",
         "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Appendix",
-        "excerpt":" ","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
         "tags": [],
         "url": "/Appendix/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Astro.png"
       },{
         "title": "Hkdse",
-        "excerpt":" ","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Introduction From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a...","categories": [],
         "tags": [],
         "url": "/HKDSE/",
-        "teaser": "/assets/images/Teaser.png"
+        "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Writing me constructive comments",
+        "title": "Commenting",
         "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
         "tags": [],
         "url": "/Commenting/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "henry-yip.github.io; Future and Thoughts",
+        "title": "Futureofwebsite",
         "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
         "tags": [],
         "url": "/FutureofWebsite/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Small Perbuations",
+        "title": "Smallperbuations",
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": [],
         "url": "/SmallPerbuations/",

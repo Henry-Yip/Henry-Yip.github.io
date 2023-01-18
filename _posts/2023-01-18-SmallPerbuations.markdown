@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: Small Perbuations
+title: #8 Small Perbuations
 toc: true
 toc_label: "Small Perbuations"
 toc_sticky: true

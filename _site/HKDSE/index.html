@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Hkdse | Henry Yip</title>
-<meta name="description" content="">
+<meta name="description" content="KaTeX Promotion">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,9 +27,11 @@
 <meta property="og:url" content="http://localhost:4000/HKDSE/">
 
 
-  <meta property="og:description" content="">
+  <meta property="og:description" content="KaTeX Promotion">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/Astro.png">
 
 
 
@@ -323,7 +325,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Hkdse">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="KaTeX Promotion">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
     
 
@@ -348,7 +350,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -360,7 +362,72 @@
 
       <section class="page__content e-content" itemprop="text">
         
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> HKDSE Physics</h4></header>
+              <ul class="toc__menu"><li><a href="#katex-promotion">KaTeX Promotion</a></li><li><a href="#introduction">Introduction</a></li><li><a href="#keplers-third-law">Kepler’s Third Law</a></li><li><a href="#angularmomentum-conservation">(Angular)Momentum Conservation</a></li></ul>
+
+            </nav>
+          </aside>
         
+        <h2 id="katex-promotion">KaTeX Promotion</h2>
+
+<p>In case you are confused about how I manage to write Math Equations in a website…
+<a href="/Jekyll/Katex">Press Here</a>)</p>
+
+<h2 id="introduction">Introduction</h2>
+<p>From HKDSE Physics, we have Centripetal force as \(mr\omega^2\), or equivalently \(mr \dot{\theta}^2\) (This is a very special form and only works for circular orbit, as radius is a constant. In General,</p>
+
+\[\begin{aligned}
+\hat{F}=\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\end{aligned}\]
+
+<h2 id="keplers-third-law">Kepler’s Third Law</h2>
+
+<p>See <a href="/Physics/Appendix/">Appendix A</a> for the full derivation.
+By equating \(mr\omega^2\) and \(\frac{GMm}{r^2}\), we can deduce:</p>
+
+\[T^2=\frac{4\pi^2}{GM}r^3\]
+
+<p>Which is Kepler’s third law (in circular motion).</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MFcT4Hsx7VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Estimate Peter Griffin’s weight:</p>
+
+<p>With \(T=2.75s\) and \(r=1m\), we have \(M=7.82 \times 10^{10} \text{kg}\). Hmmmm</p>
+
+<p><strong>Proposition</strong>: \(T^2 \propto a^3 \forall\) ellipses, where a is the semi-major axis</p>
+
+<p><strong>Proof</strong>:</p>
+
+<p>First Note <strong>Kepler’s Second Law</strong>, the rate at which the area is swept by the <strong>Radius Vector</strong> (surprising a constant!)</p>
+
+\[\dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}\]
+
+<p>Next, by substitution and using the results from <a href="/Physics/Appendix/">Appendix A</a></p>
+
+\[\Delta t=\frac{A}{\dot{A}}=\frac{\pi a b}{h / 2}=\frac{2 \pi a b}{h}\]
+
+<p>Next, I’ll state the formulae below without proof. Remember that \(\epsilon\) is defined by us so the below are <em>almost</em> definitions</p>
+
+\[a=\frac{l}{1-\epsilon^2}, \quad b=a \sqrt{1-\epsilon^2}=\frac{l}{\sqrt{1-\epsilon^2}}\]
+
+<p>Using \(l=\frac{mh^2}{k}\), we have:</p>
+
+\[\Delta t=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-\epsilon^2} \quad \Longrightarrow \quad(\Delta t)^2=\frac{(2 \pi)^2 a^3}{h^2} l=(2 \pi)^2 a^3 \frac{m}{k}\]
+
+<p>We deduce \((\Delta t)^2 / a^2=(2 \pi)^2 / G M\), which is consistent with the analysis from <strong>HKDSE</strong></p>
+
+<h2 id="angularmomentum-conservation">(Angular)Momentum Conservation</h2>
+
+<p>From <a href="/Physics/Appendix/">Appendix B</a> , we deduced that
+\(r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\), or equivalently \(|\underline{L}|=mr^2 \dot{\theta}\) Combining the fact that \(v=r\dot{\theta}\) we have \(|\underline{L}|=mrv\)</p>
+
+<p>Angular Momentum is something you will encounter while skating (or spinning your chair). If you spread your arms and contract your arms, you will realize that you will spin in a different speed, because angular momentum has to be conserved (assumed no friction)</p>
+
+<p>Compared to \(p=mv\) in HKDSE this rings a bell. However, it is always incorrect to say “angular momentum is converted to linear momentum” because this violates dimensional analysis. More about Dimensional Analysis in <a href="/Physics/Appendix/">Appendix C</a></p>
+
 
         
       </section>
@@ -396,7 +463,7 @@
 ">Previous</a>
     
     
-      <a href="/Commenting/" class="pagination--pager" title="Writing me constructive comments
+      <a href="/Commenting/" class="pagination--pager" title="Commenting
 ">Next</a>
     
   </nav>
@@ -425,7 +492,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/SmallPerbuations/" rel="permalink">Small Perbuations
+        <a href="/SmallPerbuations/" rel="permalink">Smallperbuations
 </a>
       
     </h2>
@@ -470,7 +537,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/FutureofWebsite/" rel="permalink">henry-yip.github.io; Future and Thoughts
+        <a href="/FutureofWebsite/" rel="permalink">Futureofwebsite
 </a>
       
     </h2>
@@ -514,7 +581,7 @@ Several People, like Toby Lam have asked me to buy a domain. However, I think ht
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Commenting/" rel="permalink">Writing me constructive comments
+        <a href="/Commenting/" rel="permalink">Commenting
 </a>
       
     </h2>
@@ -553,7 +620,7 @@ I really enjoy two-sided communication. While I have asked my best friends regar
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
       <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
+        <img src="/assets/images/Astro.png" alt="">
       </div>
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
@@ -576,14 +643,15 @@ I really enjoy two-sided communication. While I have asked my best friends regar
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          3 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">KaTeX Promotion
+
 </p>
   </article>
 </div>
