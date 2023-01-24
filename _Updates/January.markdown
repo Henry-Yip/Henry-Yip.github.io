@@ -48,6 +48,9 @@ Unsolved!!!
  - Problem: As above. Sometimes I have to close VSCode/restart the device/abort changes
  - Thoughts: Maybe learning git commands can solve the problem? Or I can upload _sites files (*i.e.* rendered **HTML** files)to Github. In a sense this adds security but considering the time and inconvenience implied, I think not!
 
+```bash
+Unsolved!
+```
  
  
 
