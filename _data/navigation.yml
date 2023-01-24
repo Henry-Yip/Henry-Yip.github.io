@@ -150,7 +150,12 @@ LaTeX:
       - title: "Sample Tex files (1)"
         url: /LaTeX/Tex1/ 
       - title: "Sample Tex files (2)"
-        url: /LaTeX/Tex2/      
+        url: /LaTeX/Tex2/  
+
+Website_Updates:
+- title: Website Updates
+    children:
+      - title: "Commit Updates"
 
 
 
