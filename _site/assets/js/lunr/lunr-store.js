@@ -113,54 +113,6 @@ var store = [{
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Leo Chow",
-        "excerpt":"Leo  Leo participated in this website by writing a very insightful physics article, with some really artistic illustration. Thank you very much for his contribution!  ","categories": [],
-        "tags": [],
-        "url": "/Contributors/LeoChow/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Grace Yang",
-        "excerpt":"Introduction Grace participated in my STEM project and agreed to feature her essay in my website. Below is her self introduction: ## Hi! I am Grace, doing medicine at the University of Edinburgh. Although my course mostly focuses on biology, I have always wanted to gain deeper insights into other...","categories": [],
-        "tags": [],
-        "url": "/Contributors/GraceYang/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Michael So",
-        "excerpt":"Michael participated in my STEM project and agreed to feature his essay in my website. Below is his self introduction: A student who is continuously exploring the world, particularly the world within our cranium, while trying to blur the boundaries of arts and sciences. What I have to clarify in...","categories": [],
-        "tags": [],
-        "url": "/Contributors/MichaelSo/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Alzheimer’s Disease- an Existential Threat?",
-        "excerpt":"Disclaimer  Since the author didn’t put his/her name in the essay, I decided not to reveal it. If you are the author and you want me to show it, please just contact me through whatsapp.   You can download it here     ","categories": [],
-        "tags": [],
-        "url": "/Existential_Risks/Alzheimer/",
-        "teaser": "/assets/images/Brain.png"
-      },{
-        "title": "Dark Energy and the Big RIP",
-        "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
-        "tags": [],
-        "url": "/Existential_Risks/BigRIP/",
-        "teaser": "/assets/images/Astro.png"
-      },{
-        "title": "Biological Weapons and Existential Risk",
-        "excerpt":"Introduction  This Essay is written by Grace Yang, a very enthusiastic medic student studying in the University of Edinburgh. You can either read the essay below, or download it HERE   Viewing      ","categories": [],
-        "tags": [],
-        "url": "/Existential_Risks/BioWeapons/",
-        "teaser": "/assets/images/Beaker.png"
-      },{
-        "title": "Prions and Prion Diseases",
-        "excerpt":"Introduction  This essay is written by Michael So You can download it below:     Word   Download    ","categories": [],
-        "tags": [],
-        "url": "/Existential_Risks/Prions/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "The expansion of the sun into the orbit of Earth",
-        "excerpt":"Introduction  This essay is written by Terrance Corey. You can download it below:     PDF   Word   Download    ","categories": [],
-        "tags": [],
-        "url": "/Existential_Risks/Sun/",
-        "teaser": "/assets/images/Sun.png"
-      },{
         "title": "Downloading and Using Jekyll (Window Users)",
         "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make Checking You can check if the version you have installed is correct using the commands below. As long as you...","categories": [],
         "tags": [],
@@ -411,5 +363,11 @@ var store = [{
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": [],
         "url": "/SmallPerbuations/",
+        "teaser": "/assets/images/Wolf.png"
+      },{
+        "title": "Playlist",
+        "excerpt":"I am a classical music enthusiast. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of Fugue 1.5 hrs of fugue - full of variations. Note the definition of Fugue...","categories": [],
+        "tags": [],
+        "url": "/Playlist/",
         "teaser": "/assets/images/Wolf.png"
       }]

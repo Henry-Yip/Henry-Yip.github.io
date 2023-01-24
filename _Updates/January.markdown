@@ -2,7 +2,7 @@
 layout: single
 title: Website Update Log - January 
 katex: True
-permalink: /LaTeX/LaTeXTutorial1/
+permalink: /Updates/January/
 toc: true
 toc_label: "LaTeX"
 toc_sticky: true

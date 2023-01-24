@@ -153,9 +153,10 @@ LaTeX:
         url: /LaTeX/Tex2/  
 
 Website_Updates:
-- title: Website Updates
+  - title: Updates
     children:
       - title: "Commit Updates"
+        url: /Updates/January/
 
 
 
