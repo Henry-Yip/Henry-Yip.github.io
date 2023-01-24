@@ -10,18 +10,28 @@ toc_label: "Self Identity"
 toc_sticky: true
 ---
 
-I am always convinced by myself that I am a stupid person. I can never follow what the smarter people are discussing in class (so I just nod my head). People oftern regard me higher than they should (by saying I'm as smart as them) and somehow my academic profile (such as coming from SPCC/ grades in year 1 due to dilligence) fake them into thinking I am quick. 
+## Problem
 
-A chinese quote I really like: 
+In the world of **STEM**, self-acceptance is *really* important. **Imposter syndrome** is *really* prevalent and students get **suffocated** seeing the top scorer in the class absolutely crushing everyone and no matter how they study, they can't understand the materials. I have been there, and I believe everyone has been there, except if you are [Terrence Tao](https://en.wikipedia.org/wiki/Terence_Tao) (or you think you are the next prodigy). 
+
+While everyone has moments of sudden **Eureka**, everyone feels stupid sometimes for missing out the obvious, or just overlooking some really simple facts. 
+
+## Solution
+
+I believe the purpose of studying **STEM** is pure enjoyment. At least, I chose Physics (specifically, **Mathematical Physics**) simply because I want to understand the universe. As long as you like what you are doing, there is no point comparing yourself to others? 
+
+While I *still* emphasize the importance of interacting with smart classmates (simply to learn from their thinking process), never compete with them (after all learning is not about competition) . I've heard my friend saying:
 
 ```bash
-｢武功之中,十成中九成是騙人玩意兒,只要能把高手騙倒,那就勝了。｣
+人比人比死人
 ```
+Comparision with others can cause death!
 
-Maybe the smart people aren't that smart after all and all are just trying to intimitate each other.Maybe they **also** think they are inferior to me. 
+### Further Thoughts
 
-I used to be good at running but now I can't even move. I used to be good at tropical cyclones but now I don't even have time to do that. People think I have a complete understand of tropical cyclones (maybe I do) but anyone from Earth System Science will know I'm a fluke. I used to be half decent at piano but I have given up. I used to play violin then I can't even enter symphony orchestra in university.
+A chinese quote from <<[神雕俠侶](https://en.wikipedia.org/wiki/The_Return_of_the_Condor_Heroes)>>: 
 
-Is there something I've improved on in the past few years? While I agree that I'm a more cautious people (by not losing passports and anything during trips) compared to myself in p6 singapore trip, and I have spent a tremenous amount of time (around 350-400 hours) on this website, nothing much honestly. My understanding of physics is basically laughable and my math can never be as good as math majors.
-
-Or is it just good to uphold my "good" image? So people will feel that I am a smart atheletic person? I have cared too much, maybe I shouldn't!
+```bash
+｢你說我這是個騙人的玩意，那不錯，武功之中，十成中九成是騙人的玩意兒，只要能把高手騙到，那就是勝了。｣
+```
+We tend to overrate others and underrate yourself. Ask you friend how they think of you and you may realize you are better than who you think you are!

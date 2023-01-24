@@ -210,7 +210,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Self Identity",
-        "excerpt":"I am always convinced by myself that I am a stupid person. I can never follow what the smarter people are discussing in class (so I just nod my head). People oftern regard me higher than they should (by saying I’m as smart as them) and somehow my academic profile...","categories": [],
+        "excerpt":"Problem In the world of STEM, self-acceptance is really important. Imposter syndrome is really prevalent and students get suffocated seeing the top scorer in the class absolutely crushing everyone and no matter how they study, they can’t understand the materials. I have been there, and I believe everyone has been...","categories": [],
         "tags": [],
         "url": "/Journal/SelfIdentity/",
         "teaser": "/assets/images/Teaser.png"

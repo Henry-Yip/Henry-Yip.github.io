@@ -11,5 +11,5 @@ classes: wide
 - I will mainly update on error fixing, as well as problems I can't solve currently. If you think you can help me, please message me:
 
 ```bash
-s2231321@ed.ac.uk
+My Email Address: s2231321@ed.ac.uk
 ```
