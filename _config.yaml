@@ -39,7 +39,7 @@ collections:
   Splash_Page:
     output: true
     permalink: /:collection/:path/
-  Website_Updates:   
+  Updates:   
     output: true
     permalink: /:collection/:path/    
   

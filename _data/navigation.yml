@@ -152,7 +152,7 @@ LaTeX:
       - title: "Sample Tex files (2)"
         url: /LaTeX/Tex2/  
 
-Website_Updates:
+Updates:
   - title: Updates
     children:
       - title: "Commit Updates"
