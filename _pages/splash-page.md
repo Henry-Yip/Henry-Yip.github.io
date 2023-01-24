@@ -56,12 +56,6 @@ feature_row:
     url: "https://henry-yip.github.io/Music/"
     btn_label: "Read More"
     btn_class: "btn--warning"  
-  - image_path: /assets/images/Pigeon.jpg
-    title: "Pigeons"
-    excerpt: "Who doesn't like pigeons"
-    url: "https://henry-yip.github.io/Music/"
-    btn_label: "Read More"
-    btn_class: "btn--warning"    
 ---
 
 {: .notice}
