@@ -38,7 +38,7 @@ You should probably refer to [My Tutorial on How to Download Jekyll]({% link _Je
 
 
 ## Why THIS particular website
-After sucessfully creating a functional website, I started to think about how I can use this website to create something big. One day, upon the recommendation of [Leo Chow]({% link _Contributors/2022-07-31-Leo.markdown %}), I decided to create a website to teach people physics, but we slowly figured out it is quite impractical unless we know **Manim** (but we both don't). Instead, I thought it would just be great if my friends can write anything on my website without any restrictions (since not everyone know how to make a website).
+After sucessfully creating a functional website, I started to think about how I can use this website to create something big. One day, upon the recommendation of Leo Chow, I decided to create a website to teach people physics, but we slowly figured out it is quite impractical unless we know **Manim** (but we both don't). Instead, I thought it would just be great if my friends can write anything on my website without any restrictions (since not everyone know how to make a website).
 
 Therefore, in April 2022, I started asking people around me if they want to write stuff, and surprisingly, almost all of them agreed. 
 

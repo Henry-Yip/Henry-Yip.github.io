@@ -8,8 +8,6 @@ main:
     url: /Chess/    
   - title: "Physics"
     url: /Physics/
-  - title: "Existential Risks"  
-    url: /Existential_Risks/
   - title: "Jekyll"
     url: /Jekyll/    
   - title: "Journal"
@@ -48,23 +46,6 @@ Chess:
       - title: Anish Giri
         url: /Chess/AnishGiri/  
 
-
-Existential_Risks:
-  - title: Existential_Risks
-    children:
-      - title: "Biological Weapons and Existential Risk "
-        url: /Existential_Risks/BioWeapons/
-      - title: "The expansion of the sun into the orbit of Earth "  
-        url: /Existential_Risks/Sun/
-      - title: "Dark Energy and the Big RIP "  
-        url: /Existential_Risks/BigRIP/
-      - title: "Alzheimer’s Disease- an Existential Threat?  "  
-        url: /Existential_Risks/Alzheimer/
-      - title: "Prions and Prion Diseases"  
-        url: /Existential_Risks/Prions/
-      
-      
-     
            
 Jekyll:
   - title: Jekyll Tutorials
