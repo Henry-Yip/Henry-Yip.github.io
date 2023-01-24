@@ -38,12 +38,6 @@ feature_row:
     url: "https://henry-yip.github.io/Physics/"
     btn_label: "Read More"
     btn_class: "btn--success"
-  - image_path: /assets/images/Beaker.png
-    title: "Existential Risks"
-    excerpt: "Read essays written by different STEM students from leading universities"
-    url: "https://henry-yip.github.io/Existential_Risks/"
-    btn_label: "Read More"
-    btn_class: "btn--danger"
   - image_path: /assets/images/Useless2.png
     title: "Jekyll"
     excerpt: "Learn how I built this website from scratch - with some troubleshooting"
