@@ -38,7 +38,10 @@ collections:
     permalink: /:collection/:path/   
   Splash_Page:
     output: true
-    permalink: /:collection/:path/     
+    permalink: /:collection/:path/
+  Website_Updates:   
+    output: true
+    permalink: /:collection/:path/    
   
 
 cd dtheme                  : "minimal-mistakes-jekyll"
