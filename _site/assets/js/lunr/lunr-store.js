@@ -321,7 +321,7 @@ var store = [{
         "excerpt":"A Natural Introduction Dirichlet’s Kernel is intimately related to Fourier Series, by design: \\[\\begin{aligned} f_N(x) &amp; =\\frac{a_0}{2}+\\sum_{n=1}^N\\left(a_n \\cos n x+b_n \\sin n x\\right) \\\\ &amp; =\\int_{-\\pi}^\\pi[1+2 \\sum_{n=1}^N (\\cos n y \\cos n x+\\sin n y \\sin n x)] \\frac{f(y)}{2 \\pi} d y \\\\ &amp;=\\int_{-\\pi}^\\pi[1+2 \\sum_{n=1}^N (\\cos n(x-y))] \\frac{f(y)}{2 \\pi} d...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/FourierSeries/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Website Update Log - January",
         "excerpt":"Date: 24/1/2023 #1: Major Error Fix Problem: Some posts in “Journal” don’t show up. Thoughts and Solution: I’ve found out some unnecessary HTML files that may have “masked” my Markdown files. These files seem to come from _sites, and it may be a result of moving files around carelessly. Therefore...","categories": [],

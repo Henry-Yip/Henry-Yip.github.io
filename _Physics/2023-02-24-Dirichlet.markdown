@@ -2,7 +2,7 @@
 layout: single
 title: Dirichlet's Kernel and Convergence 
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Dirichlet.png
 katex: False
 permalink: /Physics/FourierSeries/
 tag: Physics
@@ -83,7 +83,7 @@ Now considering the error term:
 
 $$
 \begin{align}
-f_N(x)-f(x) \\
+f_N(x)-f(x) 
 &=f_N(x)-f(x) \int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi} \\
 &=\int_{-\pi}^\pi K_N(\theta)[f(x+\theta)-f(x)] \frac{d \theta}{2 \pi} \\
 &=\int_{-\pi}^\pi g(\theta) \sin \left[\left(N+\frac{1}{2}\right) \theta\right] \frac{d \theta}{2 \pi}
