@@ -12,6 +12,28 @@ toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
+
+## Start Here if you don't know Fourier Series
+
+According to [Wikipedia](https://en.wikipedia.org/wiki/Fourier_series),
+
+A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. The Fourier series is an example of a trigonometric series, but not all trigonometric series are Fourier series. By expressing a function as a sum of sines and cosines, many problems involving the function become easier to analyze because trigonometric functions are well understood.     
+
+By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?
+
+<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+The equation above is
+$$1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}$$
+
+for $$m=1000$$, we can get below:
+
+<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+
+To understand how and why fourier series work, we can study its convergence (pointwise convergence, $$L^2$$ convergence, *etc*). However, this is slightly too difficult without knowing [Bessel's inequality](https://en.wikipedia.org/wiki/Bessel%27s_inequality)/[Parseval's Theorem](https://en.wikipedia.org/wiki/Parseval%27s_theorem   )
+
+## Start Here if you know Fourier Series
 ### A Natural Introduction
 
 **Dirichlet's Kernel** is intimately related to **Fourier Series**, by design.
@@ -33,9 +55,18 @@ Where we have:
 
 $$
 \begin{aligned}
+a_m & =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
+\text { Similarly, } \quad b_m & =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
+\end{aligned}
+$$
+
+However, considering our limit: $$-\pi \leq L \leq \pi$$, we can deduce the below:
+
+$$
+\begin{aligned}
 \frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
+a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
+b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
 \end{aligned}
 $$
 
@@ -91,7 +122,7 @@ $$
 $$
 
 
-For illustration, consider $$f(x)=\frac{1+ \sin x}{2}$$
+For illustration, consider $$f(x)=\frac{1+ \sin x}{2}$$. Notice the area between the vertical moving line never changes. 
 
 ```bash
 It is called Hacovercosine. Such a cool name!
@@ -99,27 +130,8 @@ It is called Hacovercosine. Such a cool name!
 
 <iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
+I hope the above shows you some intuition regarding Dirichlet's Kernel.
 
-Now considering the error term: 
+For more details please view this video: 
 
-$$
-\begin{align}
-f_N(x)-f(x) 
-&=f_N(x)-f(x) \int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi} \\
-&=\int_{-\pi}^\pi K_N(\theta)[f(x+\theta)-f(x)] \frac{d \theta}{2 \pi} \\
-&=\int_{-\pi}^\pi g(\theta) \sin \left[\left(N+\frac{1}{2}\right) \theta\right] \frac{d \theta}{2 \pi}
-\end{align}
-$$
-
-where
-
-$$
-g(\theta)=\frac{f(x+\theta)-f(x)}{\sin \frac{1}{2} \theta}
-$$
-
-We have used the property:
-
-$$\int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi}$$
-
-
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
