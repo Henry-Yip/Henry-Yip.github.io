@@ -33,13 +33,13 @@ Where we have:
 
 $$
 \begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ny\right) d y \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ny\right) d y
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
+a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
+b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
 \end{aligned}
 $$
 
-Using the information above, we can deduce:
+Using the information above, we can deduce (with a bit of algebraic manipulation): 
 
 $$
 \begin{aligned}
@@ -59,14 +59,17 @@ $$
 
 
 ### A Better Form
+Using Euler's Formula $$ e^{i \theta}=\cos \theta+i \sin \theta $$, we can deduce:
 
 $$
 K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}
 $$  
 
+ - Hint: $$e^{-i \theta}=\cos \theta-i \sin \theta$$, then cancel out terms
+
 We can use Desmos to see how it looks like:
 
-<iframe src="https://www.desmos.com/calculator/xf38gucws5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>  
+<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 ### Error Terms
 Going back to $$f_N(x)$$, which is our fourier approximate for our (specifically defined) function, we can shift the variables around:

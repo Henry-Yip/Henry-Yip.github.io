@@ -319,11 +319,22 @@
 
 <p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
 
+<p>Within the interval \(−L \leq x \leq L\), we can approximate the function \(f(x)\) as:</p>
+
 \[\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
+f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
+&amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
 \end{aligned}\]
+
+<p>Where we have:</p>
+
+\[\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
+a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
+b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
+\end{aligned}\]
+
+<p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
 
 \[\begin{aligned}
 f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
@@ -332,17 +343,22 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 &amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
 \end{aligned}\]
 
-<p>Hence (after switching variables) we can <em>naturally</em> define Dirihlet’s Kernel as below:</p>
+<p>Hence (after switching variables) we can <em>naturally</em> define Dirichlet’s Kernel as below:</p>
 
 \[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
 
 <h3 id="a-better-form">A Better Form</h3>
+<p>Using Euler’s Formula \(e^{i \theta}=\cos \theta+i \sin \theta\), we can deduce:</p>
 
 \[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
 
+<ul>
+  <li>Hint: \(e^{-i \theta}=\cos \theta-i \sin \theta\), then cancel out terms</li>
+</ul>
+
 <p>We can use Desmos to see how it looks like:</p>
 
-<iframe src="https://www.desmos.com/calculator/xf38gucws5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
 
 <h3 id="error-terms">Error Terms</h3>
 <p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
