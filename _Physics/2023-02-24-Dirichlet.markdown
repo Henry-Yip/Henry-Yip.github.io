@@ -23,13 +23,19 @@ By adding more and more trigonometric functions together, the summation itself l
 
 <iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-The equation above is
+The equation above is:
+
 $$1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}$$
 
-for $$m=1000$$, we can get below:
+Where we increased $$m$$ over time. For $$m=1000$$, we can get the below:
 
 <iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
+Fourier Series doesn't work for all functions, there are certain restrictions.
+
+Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like [Basel Problem](https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series):
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 To understand how and why fourier series work, we can study its convergence (pointwise convergence, $$L^2$$ convergence, *etc*). However, this is slightly too difficult without knowing [Bessel's inequality](https://en.wikipedia.org/wiki/Bessel%27s_inequality)/[Parseval's Theorem](https://en.wikipedia.org/wiki/Parseval%27s_theorem   )
 
@@ -106,7 +112,7 @@ We can use Desmos to see how it looks like:
 
 <iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-### Error Terms
+### Fourier Series Estimation
 Going back to $$f_N(x)$$, which is our fourier approximate for our (specifically defined) function, we can shift the variables around:
 
 $$
