@@ -267,6 +267,8 @@
           
             <li><a href="/Physics/StunLocks/">Stun Locks</a></li>
           
+            <li><a href="/Physics/FourierSeries/" class="active">Dirichlet's Kernel and Convergence</a></li>
+          
         </ul>
         
       </li>
@@ -311,7 +313,17 @@
         
         <h3 id="a-natural-introduction">A Natural Introduction</h3>
 
-<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design:</p>
+<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
+
+<p>Below we take \(f(x)\) to be periodic with period \(2π\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \(N\)th term:</p>
+
+<p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
+
+\[\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
+a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
+b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
+\end{aligned}\]
 
 \[\begin{aligned}
 f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
@@ -320,22 +332,9 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 &amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
 \end{aligned}\]
 
-<p>Lost? Here are some hints:</p>
-
-\[\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
-\end{aligned}\]
-
-<p>Hence we can naturally define Dirihlet’s Kernel as below:</p>
+<p>Hence (after switching variables) we can <em>naturally</em> define Dirihlet’s Kernel as below:</p>
 
 \[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
-
-<ul>
-  <li>Side Note: Above is an example of <strong>Convolution</strong>. See my Appendix for more details!</li>
-  <li>We take f(x) to be periodic with period \(2π\),  continuous, finite, and have continuous and finite first derivative</li>
-</ul>
 
 <h3 id="a-better-form">A Better Form</h3>
 
@@ -376,6 +375,10 @@ f_N(x)-f(x)
 <p>where</p>
 
 \[g(\theta)=\frac{f(x+\theta)-f(x)}{\sin \frac{1}{2} \theta}\]
+
+<p>We have used the property:</p>
+
+\[\int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi}\]
 
 
         

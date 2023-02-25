@@ -318,7 +318,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Dirichlet's Kernel and Convergence",
-        "excerpt":"A Natural Introduction Dirichlet’s Kernel is intimately related to Fourier Series, by design: \\[\\begin{aligned} f_N(x) &amp; =\\frac{a_0}{2}+\\sum_{n=1}^N\\left(a_n \\cos n x+b_n \\sin n x\\right) \\\\ &amp; =\\int_{-\\pi}^\\pi[1+2 \\sum_{n=1}^N (\\cos n y \\cos n x+\\sin n y \\sin n x)] \\frac{f(y)}{2 \\pi} d y \\\\ &amp;=\\int_{-\\pi}^\\pi[1+2 \\sum_{n=1}^N (\\cos n(x-y))] \\frac{f(y)}{2 \\pi} d...","categories": [],
+        "excerpt":"A Natural Introduction Dirichlet’s Kernel is intimately related to Fourier Series, by design. Below we take \\(f(x)\\) to be periodic with period \\(2π\\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \\(N\\)th term: In case you aren’t familiar with Fourier Series,...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/FourierSeries/",
         "teaser": "/assets/images/Dirichlet.png"

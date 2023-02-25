@@ -20,14 +20,26 @@ Below we take $$f(x)$$ to be periodic with period $$2π$$, continuous, finite, a
 
 In case you aren't familiar with *Fourier Series*, here is a brief reminder:
 
+Within the interval $$−L \leq x \leq L$$, we can approximate the function $$f(x)$$ as:
+
 $$
 \begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
+f(x) & =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
+& =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
 \end{aligned}
 $$
 
+Where we have:
+
+$$
+\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
+a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ny\right) d y \\
+b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ny\right) d y
+\end{aligned}
+$$
+
+Using the information above, we can deduce:
 
 $$
 \begin{aligned}
@@ -39,7 +51,7 @@ f_N(x) & =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
 $$
 
 
-Hence (after switching variables) we can *naturally* define Dirihlet's Kernel as below:
+Hence (after switching variables) we can *naturally* define Dirichlet's Kernel as below:
 
 $$
 K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,
