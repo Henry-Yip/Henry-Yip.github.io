@@ -34,6 +34,10 @@ for $$m=1000$$, we can get below:
 To understand how and why fourier series work, we can study its convergence (pointwise convergence, $$L^2$$ convergence, *etc*). However, this is slightly too difficult without knowing [Bessel's inequality](https://en.wikipedia.org/wiki/Bessel%27s_inequality)/[Parseval's Theorem](https://en.wikipedia.org/wiki/Parseval%27s_theorem   )
 
 ## Start Here if you know Fourier Series
+The section below is partly inspired by this amazing video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### A Natural Introduction
 
 **Dirichlet's Kernel** is intimately related to **Fourier Series**, by design.
@@ -132,6 +136,3 @@ It is called Hacovercosine. Such a cool name!
 
 I hope the above shows you some intuition regarding Dirichlet's Kernel.
 
-For more details please view this video: 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
