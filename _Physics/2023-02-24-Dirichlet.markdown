@@ -61,7 +61,8 @@ Going back to $$f_N(x)$$, which is our fourier approximate for our (specifically
 
 $$
 \begin{align}
-f_N(x)=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi} \\
+f_N(x)
+&=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi}\\
 &=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} 
 \end{align}
 $$
