@@ -68,16 +68,16 @@ $$
 
 Note that our function has period $$2\pi$$, hence we can imagine shifting the function and getting the same result:
 
-For illustration:
-
-<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
 $$
 \begin{align}
 \int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
+\end{align}
 $$
 
 
+For illustration:
+
+<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 Now considering the error term: 
 
