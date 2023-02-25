@@ -10,28 +10,34 @@
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="81758c7d-216b-410a-b68d-a3fdc18dce6a" data-blockingmode="auto" type="text/javascript"></script> 
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Physics | Henry Yip</title>
-<meta name="description" content="A website including everything">
+<!-- begin _includes/seo.html --><title>Dirichlet’s Kernel and Convergence | Henry Yip</title>
+<meta name="description" content="A Natural Introduction">
 
 
   <meta name="author" content="Henry Yip ">
   
+  <meta property="article:author" content="Henry Yip ">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Physics">
-<meta property="og:url" content="http://localhost:4000/Physics/">
+<meta property="og:title" content="Dirichlet’s Kernel and Convergence">
+<meta property="og:url" content="http://localhost:4000/Physics/FourierSeries/">
 
 
-  <meta property="og:description" content="A website including everything">
-
-
-
+  <meta property="og:description" content="A Natural Introduction">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/assets/images/Astro.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-02-24T00:00:00+00:00">
 
 
 
@@ -42,7 +48,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/Physics/">
+<link rel="canonical" href="http://localhost:4000/Physics/FourierSeries/">
 
 
 
@@ -115,7 +121,7 @@
   gtag('config', 'G-LRB2GYEFGK');
 </script>
 
-  <body class="layout--collection wide">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -177,6 +183,8 @@
       
 
 
+
+
   
     
 
@@ -196,7 +204,17 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Physics</li>
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/physics" itemprop="item"><span itemprop="name">Physics</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Dirichlet's Kernel and Convergence</li>
       
     
   </ol>
@@ -207,254 +225,201 @@
 
 <div id="main" role="main">
   
-
-
-  <div class="archive">
+  <div class="sidebar sticky">
+  
+  
     
-      <h1 id="page-title" class="page__title">Physics</h1>
+      
+      
+      
+      
     
-    <p>Please note that some of the posts are not written by me (i.e. Henry Yip) If you have any enquiries (e.g. plagiarism claims/anything) please send me a message and I’ll help you contact them.</p>
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Physics</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/Physics/Astrophysics1/">Astrophysics (Part 1)</a></li>
+          
+            <li><a href="/Physics/Astrophysics2/">Astrophysics (Part 2)</a></li>
+          
+            <li><a href="/Physics/Relativity/">Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)</a></li>
+          
+            <li><a href="/Physics/Book/">First Physics Book</a></li>
+          
+            <li><a href="/Physics/Appendix/">Appendix</a></li>
+          
+            <li><a href="/Physics/HKDSE/">HKDSE Physics</a></li>
+          
+            <li><a href="/Physics/SmallPerbuations/">Small Perbuations</a></li>
+          
+            <li><a href="/Physics/StunLocks/">Stun Locks</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
 
 
 
-<div class="entries-grid">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Dirichlet’s Kernel and Convergence">
+    <meta itemprop="description" content="A Natural Introduction">
+    <meta itemprop="datePublished" content="2023-02-24T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/Physics/FourierSeries/" class="u-url" itemprop="url">Dirichlet’s Kernel and Convergence
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Fourier Series</h4></header>
+              <ul class="toc__menu"><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#error-terms">Error Terms</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h3 id="a-natural-introduction">A Natural Introduction</h3>
+
+<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design:</p>
+
+\[\begin{aligned}
+f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
+&amp; =\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n y \cos n x+\sin n y \sin n x)] \frac{f(y)}{2 \pi} d y \\
+&amp;=\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n(x-y))] \frac{f(y)}{2 \pi} d y \\
+&amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
+\end{aligned}\]
+
+<p>Lost? Here are some hints:</p>
+
+\[\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
+a_k=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
+b_k=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
+\end{aligned}\]
+
+<p>Hence we can naturally define Dirihlet’s Kernel as below:
+\(K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\)</p>
+
+<ul>
+  <li>Side Note: Above is an example of <strong>Convolution</strong>. See my Appendix for more details!</li>
+  <li>We take f(x) to be periodic with period \(2π\),  continuous, finite, and have continuous and finite first derivative</li>
+</ul>
+
+<h3 id="a-better-form">A Better Form</h3>
+
+\[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
+
+<p>We can use Desmos to see how it looks like:</p>
+
+<iframe src="https://www.desmos.com/calculator/xf38gucws5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<h3 id="error-terms">Error Terms</h3>
+<p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
+
+\[\begin{align}
+f_N(x)=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi} \\
+&amp;=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} \\
+\end{align}\]
+
+<p>Note that our function has period \(2\pi\), hence we can imagine shifting the function and getting the same result:</p>
+
+<p>For illustration:</p>
+
+<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>$$
+\begin{align}
+\int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}</p>
+
+<p>Now considering the error term: 
+\(f_N(x)-f(x)=f_N(x)-f(x) \int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi}=\int_{-\pi}^\pi K_N(\theta)[f(x+\theta)-f(x)] \frac{d \theta}{2 \pi}=\int_{-\pi}^\pi g(\theta) \sin \left[\left(N+\frac{1}{2}\right) \theta\right] \frac{d \theta}{2 \pi}\)</p>
+
+<p>where
+\(g(\theta)=\frac{f(x+\theta)-f(x)}{\sin \frac{1}{2} \theta}\)</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
   
 
 
+  
 
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
+      <a href="/tags/#physics" class="page__taxonomy-item p-category" rel="tag">Physics</a>
     
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-24T00:00:00+00:00">February 24, 2023</time></p>
+
+      </footer>
+
       
-        <a href="/Physics/Astrophysics1/" rel="permalink">Astrophysics (Part 1)
-</a>
+
       
-    </h2>
+  <nav class="pagination">
     
+      <a href="/Physics/SmallPerbuations/" class="pagination--pager" title="Small Perbuations
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
 
+    </div>
 
-    <p class="archive__item-excerpt" itemprop="description">Introduction
-Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission fr...</p>
+    
   </article>
+
+  
+  
 </div>
 
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/Astrophysics2/" rel="permalink">Astrophysics (Part 2)
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">If you request me to send you the astrophysics pdf (I promise you I will if you ask !) I will also send you the tex code. Below I will show you how to use!
-1...</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/Leo2.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/Relativity/" rel="permalink">Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  This Page is created by Leo Chow
-
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/DarkEnergy/" rel="permalink">Dark Energy and the Big RIP
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">Introduction
-I spent around 3-4 days writing this short essay, featuring:
-
-  Introduction to the Cosmic Distance Scale
-  How Supernova Ia lead to the discove...</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/Book/" rel="permalink">First Physics Book
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">The Book
-This is the link to the first physics book I ever received: HERE!
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/Appendix/" rel="permalink">Appendix
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">KaTeX Promotion
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/HKDSE/" rel="permalink">HKDSE Physics
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">KaTeX Promotion
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/SmallPerbuations/" rel="permalink">Small Perbuations
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">KaTeX Promotion
-
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Astro.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Physics/FourierSeries/" rel="permalink">Dirichlet’s Kernel and Convergence
-</a>
-      
-    </h2>
-    
-
-
-    <p class="archive__item-excerpt" itemprop="description">A Natural Introduction
-
-</p>
-  </article>
-</div>
-
-</div>
-
-  </div>
-</div>
     </div>
 
     
