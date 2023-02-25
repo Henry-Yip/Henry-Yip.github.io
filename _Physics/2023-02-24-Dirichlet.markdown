@@ -3,7 +3,7 @@ layout: single
 title: Dirichlet's Kernel and Convergence 
 header:
   teaser: /assets/images/Dirichlet.png
-katex: False
+katex: True
 permalink: /Physics/FourierSeries/
 tag: Physics
 toc: true
@@ -14,7 +14,20 @@ sidebar:
 ---
 ### A Natural Introduction
 
-**Dirichlet's Kernel** is intimately related to **Fourier Series**, by design:
+**Dirichlet's Kernel** is intimately related to **Fourier Series**, by design.
+
+Below we take $$f(x)$$ to be periodic with period $$2π$$, continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the $$N$$th term:
+
+In case you aren't familiar with *Fourier Series*, here is a brief reminder:
+
+$$
+\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
+a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
+b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
+\end{aligned}
+$$
+
 
 $$
 \begin{aligned}
@@ -25,25 +38,12 @@ f_N(x) & =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
 \end{aligned}
 $$
 
-Lost? Here are some hints:
 
-$$
-\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(y\right) dy \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{cos}\left(ky\right) d y \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(y\right) \operatorname{sin}\left(ky\right) d y
-\end{aligned}
-$$
-
-Hence we can naturally define Dirihlet's Kernel as below:
+Hence (after switching variables) we can *naturally* define Dirihlet's Kernel as below:
 
 $$
 K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,
 $$
-
-
- - Side Note: Above is an example of **Convolution**. See my Appendix for more details!
- - We take f(x) to be periodic with period $$2π$$,  continuous, finite, and have continuous and finite first derivative
 
 
 ### A Better Form
@@ -80,6 +80,7 @@ For illustration:
 
 <iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
+
 Now considering the error term: 
 
 $$
@@ -97,6 +98,9 @@ $$
 g(\theta)=\frac{f(x+\theta)-f(x)}{\sin \frac{1}{2} \theta}
 $$
 
+We have used the property:
+
+$$\int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi}$$
 
 
 
