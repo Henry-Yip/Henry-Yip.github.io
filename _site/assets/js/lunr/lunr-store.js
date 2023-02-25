@@ -324,6 +324,12 @@ var store = [{
         "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Website Update Log - January",
+        "excerpt":"Date: 25/2/2023  #1: New Post on Dirichlet’s Kernel   ","categories": [],
+        "tags": [],
+        "url": "/Updates/January/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Website Update Log - January",
         "excerpt":"Date: 24/1/2023 #1: Major Error Fix Problem: Some posts in “Journal” don’t show up. Thoughts and Solution: I’ve found out some unnecessary HTML files that may have “masked” my Markdown files. These files seem to come from _sites, and it may be a result of moving files around carelessly. Therefore...","categories": [],
         "tags": [],
         "url": "/Updates/January/",
