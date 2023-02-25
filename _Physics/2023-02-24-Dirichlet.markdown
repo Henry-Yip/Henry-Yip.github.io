@@ -91,7 +91,11 @@ $$
 $$
 
 
-For illustration:
+For illustration, consider $$f(x)=\frac{1+ \sin x}{2}$$
+
+```bash
+It is called Hacovercosine. Such a cool name!
+```
 
 <iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
