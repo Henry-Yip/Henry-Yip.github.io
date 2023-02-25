@@ -88,6 +88,8 @@ Physics:
         url: /Physics/SmallPerbuations/
       - title: "Stun Locks"
         url: /Physics/StunLocks/  
+      - title: "Dirichlet's Kernel and Convergence"  
+        url: /Physics/FourierSeries/
 
 
 
