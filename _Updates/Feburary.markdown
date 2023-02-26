@@ -17,6 +17,8 @@ Date: 25/2/2023
 ```
 #1: New Post on [Dirichlet's Kernel]({% link _Physics/2023-02-24-Dirichlet.markdown %})
 
+Spent 1 day. It's a nice introduction to Fourier Series and Dirichlet's Kernel. 
+
 Date: 26/2/2023
 
 #2: Dealing with [Cookiebots](https://www.cookiebot.com/en/?utm_source=bing&utm_medium=cpc&utm_campaign=high-priority-bundle-brand&utm_device=c&utm_term=cookiebot&utm_content=high-prio-brand&matchtype=e&msclkid=fd2ab707084e15f871fdd4fdae5db49a)
@@ -42,6 +44,7 @@ The EDPB guidelines make it clear that scrolling or continued browsing on a webs
 So basically my website is not good enough in "protecting visitors' safety". I have realized a lot of Jekyll Generated websites don't really have these, but I believe my website is unique as it as so many "third-party cookies" like embedded puzzles from chess.com, $$\KaTeX$$, Polls etc, and I think it's better to follow the law, anyways.
 
 #3 $$\KaTeX$$ being recognised as cookie
+
 So basically if the visitors say "no" to my cookies (which is very reasonable), they cannot view my math equations. This is very annoying. I don't believe $$\KaTeX$$ is really a cookie, but it's third-party so maybe I'm wrong
 
 ```bash
