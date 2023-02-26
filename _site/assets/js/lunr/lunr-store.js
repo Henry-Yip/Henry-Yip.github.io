@@ -323,10 +323,10 @@ var store = [{
         "url": "/Physics/FourierSeries/",
         "teaser": "/assets/images/Dirichlet.png"
       },{
-        "title": "Website Update Log - January",
+        "title": "Website Update Log - February",
         "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is insufficient (i.e. still not complying with law) All content below is from this...","categories": [],
         "tags": [],
-        "url": "/Updates/January/",
+        "url": "/Updates/February/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Website Update Log - January",

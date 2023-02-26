@@ -1,8 +1,8 @@
 ---
 layout: single
-title: Website Update Log - January 
+title: Website Update Log - February 
 katex: True
-permalink: /Updates/January/
+permalink: /Updates/February/
 toc: true
 toc_label: "Updates"
 toc_sticky: true
