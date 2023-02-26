@@ -318,13 +318,13 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Dirichlet's Kernel and Convergence",
-        "excerpt":"A Natural Introduction Dirichlet’s Kernel is intimately related to Fourier Series, by design. Below we take \\(f(x)\\) to be periodic with period \\(2π\\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \\(N\\)th term: In case you aren’t familiar with Fourier Series,...","categories": [],
+        "excerpt":"Start Here if you don’t know Fourier Series According to Wikipedia, A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. The Fourier series is an example of a trigonometric series, but not all trigonometric series are Fourier series. By expressing a function as...","categories": [],
         "tags": ["Physics"],
         "url": "/Physics/FourierSeries/",
         "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Website Update Log - January",
-        "excerpt":"Date: 25/2/2023  #1: New Post on Dirichlet’s Kernel   ","categories": [],
+        "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is insufficient (i.e. still not complying with law) All content below is from this...","categories": [],
         "tags": [],
         "url": "/Updates/January/",
         "teaser": "/assets/images/LaTeX.png"

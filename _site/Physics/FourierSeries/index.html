@@ -11,7 +11,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Dirichlet’s Kernel and Convergence | Henry Yip</title>
-<meta name="description" content="A Natural Introduction">
+<meta name="description" content="Start Here if you don’t know Fourier Series">
 
 
   <meta name="author" content="Henry Yip ">
@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://localhost:4000/Physics/FourierSeries/">
 
 
-  <meta property="og:description" content="A Natural Introduction">
+  <meta property="og:description" content="Start Here if you don’t know Fourier Series">
 
 
 
@@ -284,7 +284,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Dirichlet’s Kernel and Convergence">
-    <meta itemprop="description" content="A Natural Introduction">
+    <meta itemprop="description" content="Start Here if you don’t know Fourier Series">
     <meta itemprop="datePublished" content="2023-02-24T00:00:00+00:00">
     
 
@@ -306,12 +306,43 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#error-terms">Error Terms</a></li></ul>
+              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h3 id="a-natural-introduction">A Natural Introduction</h3>
+        <h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
+
+<p>According to <a href="https://en.wikipedia.org/wiki/Fourier_series">Wikipedia</a>,</p>
+
+<p>A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. The Fourier series is an example of a trigonometric series, but not all trigonometric series are Fourier series. By expressing a function as a sum of sines and cosines, many problems involving the function become easier to analyze because trigonometric functions are well understood.</p>
+
+<p>By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?</p>
+
+<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>The equation above is:</p>
+
+\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}\]
+
+<p>Where we increased \(m\) over time. For \(m=1000\), we can get the below:</p>
+
+<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>Fourier Series doesn’t work for all functions, there are certain restrictions.</p>
+
+<p>Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel Problem</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>To understand how and why fourier series work, we can study its convergence (pointwise convergence, \(L^2\) convergence, <em>etc</em>). However, this is slightly too difficult without knowing <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a>/<a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a></p>
+
+<h2 id="start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</h2>
+<p>The section below is partly inspired by this amazing video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h3 id="a-natural-introduction">A Natural Introduction</h3>
 
 <p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
 
@@ -329,9 +360,16 @@ f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}
 <p>Where we have:</p>
 
 \[\begin{aligned}
+a_m &amp; =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
+\text { Similarly, } \quad b_m &amp; =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
+\end{aligned}\]
+
+<p>However, considering our limit: \(-\pi \leq L \leq \pi\), we can deduce the below:</p>
+
+\[\begin{aligned}
 \frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
-a_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
-b_n=\frac{1}{2 \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
+a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
+b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
 \end{aligned}\]
 
 <p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
@@ -360,7 +398,7 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 
 <iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
 
-<h3 id="error-terms">Error Terms</h3>
+<h3 id="fourier-series-estimation">Fourier Series Estimation</h3>
 <p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
 
 \[\begin{align}
@@ -375,29 +413,14 @@ f_N(x)
 \int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
 \end{align}\]
 
-<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\)</p>
+<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It is called Hacovercosine. Such a cool name!
 </code></pre></div></div>
 
 <iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
 
-<p>Now considering the error term:</p>
-
-\[\begin{align}
-f_N(x)-f(x) 
-&amp;=f_N(x)-f(x) \int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi} \\
-&amp;=\int_{-\pi}^\pi K_N(\theta)[f(x+\theta)-f(x)] \frac{d \theta}{2 \pi} \\
-&amp;=\int_{-\pi}^\pi g(\theta) \sin \left[\left(N+\frac{1}{2}\right) \theta\right] \frac{d \theta}{2 \pi}
-\end{align}\]
-
-<p>where</p>
-
-\[g(\theta)=\frac{f(x+\theta)-f(x)}{\sin \frac{1}{2} \theta}\]
-
-<p>We have used the property:</p>
-
-\[\int_{-\pi}^\pi K_N(\theta) \frac{d \theta}{2 \pi}\]
+<p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
 
 
         
