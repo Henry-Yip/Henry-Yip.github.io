@@ -16,22 +16,8 @@ Toby Lam is reading Mathematics in The University of Oxford. I played these game
 
 [His Personal Website](https://tobylam.xyz/2022/12/17/dse-physics-and-m2-part-2.html)
 
-Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn't really introduce...
-
 (In case you are confused about how I manage to write Math Equations in a website...
 [Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %}))
-
-**Sometimes the questions don't show, I don't know why. Maybe because cookiebot blocks something if you don't choose some cookies? I don't know! If you encounter any errors please tell me!** 
-{: .notice--danger}
-
-$$y=x\tan(\theta)-\frac{gx^2}{2v_0^2 \cos^2 \theta}$$.
-
-Or in the words of Toby Lam,
-$$r(t)=(C_2*,C_2) +(C_1*,C_1)t+(0, -\frac{1}{2}g)t^2$$
-
-"Gradually the quadratic term dominates and we get the parabolic shape. This idea is similar to taylor expansions."
-
-**Indeed!**
 
 Anyways...
 
