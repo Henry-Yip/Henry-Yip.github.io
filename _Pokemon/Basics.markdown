@@ -18,7 +18,7 @@ sidebar:
 
 A battle between **Mewtwo**, **Zacian**, **Giratina** and **Dragonite** 
 
-<iframe src="/assets/images/Master.png"></iframe>
+<iframe src="/assets/images/Master.png" width="995px" height="446px></iframe>
 
 
 
