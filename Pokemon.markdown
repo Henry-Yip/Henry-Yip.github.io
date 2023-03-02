@@ -1,9 +1,8 @@
 ---
 title: Pokemon
 layout: collection
-permalink: /Pokemon/
+permalink: /PokemonGo/
 collection: Pokemon
 entries_layout: grid
 classes: wide
 ---
-Pleas
