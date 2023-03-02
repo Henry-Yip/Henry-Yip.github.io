@@ -32,4 +32,5 @@ I use [This Website](https://gamepress.gg/pokemongo/comprehensive-dps-spreadshee
 
 <iframe src="/assets/images/Ice.png" width="874px" height="503px"></iframe>
 
+Slacking is **ONE OF THE** best ice type with this ridiculously good move, having a good bulk while only trailing behind **shadow** mamoswine in damage output
 
