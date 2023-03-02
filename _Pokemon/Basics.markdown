@@ -16,9 +16,36 @@ sidebar:
 
 ### Master League
 
-A battle between **Mewtwo**, **Zacian**, **Giratina** and **Dragonite** 
+A battle between **Mewtwo**, **Zacian**, **Dialga**, **Giratina** and **Dragonite** 
 
 <iframe src="/assets/images/Master.png" width="995px" height="446px"></iframe>
+
+I use [PvPoke](https://pvpoke.com/battle/) for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is:
+
+$$ \frac{\text{HP Remaining}}{\text{ HP Total}}$$
+
+For example, **Dialga** is expected to win **Mewtwo**, both without shields, with a $$60$$ HP remaining out of $$184$$. Therefore Dialga gains a point of $$0.326087$$ while dialga loses the same amount of points. 
+
+This process is repeated for a total of 3 times between any two pokemons ($$0$$ shields, $$1$$ shields and $$2$$ shields) and each pokemon is paired to every other 4 pokemons listed above.
+
+Results:
+ - Dialga: $$2.05481905$$
+ - Giratina (Origin): $$0.319185792$$
+ - Zacian: $$-0.134682927$$
+ - Dragonite: $$-0.90879408$$
+ - Mewtwo: $$-1.330527835$$
+
+Surprisingly Mewtwo loses hard while **Dialga** is the clear winner, as **Dialga** very strictly wins against Mewtwo, strictly wins against Giratina O and wins against Dragonite. 
+
+
+This format is unsurprisingly unfair because steel type do get their advantage in this field, but this analysis is only done for fun and should not be taken seriously. 
+
+
+
+
+
+
+
 
 
 
