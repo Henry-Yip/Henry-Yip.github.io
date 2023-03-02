@@ -40,6 +40,8 @@ Surprisingly Mewtwo loses hard while **Dialga** is the clear winner, as **Dialga
 
 This format is unsurprisingly unfair because steel type do get their advantage in this field, but this analysis is only done for fun and should not be taken seriously. 
 
+- Edit: This may not be the case. Aggron gets a pitful score of $$-2.722025122$$, as it strictly loses to Mewtwo and Dragonite (Despite having Dragon Tail as fast move!), and very strictly loses to GiratinaO and Zacian
+
 
 
 

@@ -8,7 +8,7 @@ classes: wide
 ---
 
 ### Favourite Openings
- - [Petrov]({% link _Chess/2022-05-27-Petrov.markdown %}))
+ - [Petrov]({% link _Chess/2022-05-27-Petrov.markdown %})
  - London
  - Sicilian
 
