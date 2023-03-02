@@ -41,7 +41,10 @@ collections:
     permalink: /:collection/:path/
   Updates:   
     output: true
-    permalink: /:collection/:path/    
+    permalink: /:collection/:path/ 
+  PokemonGo:     
+    output: true
+    permalink: /:collection/:path/   
   
 
 cd dtheme                  : "minimal-mistakes-jekyll"
