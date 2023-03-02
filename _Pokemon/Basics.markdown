@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Pokemon Go PvP
+title: Pokemon Go PvP Analysis
 katex: True
 tags: Pokemon Go
 toc: true
@@ -19,5 +19,7 @@ sidebar:
 A battle between **Mewtwo**, **Zacian**, **Giratina** and **Dragonite** 
 
 <iframe src="/assets/images/Master.png"></iframe>
+
+
 
 
