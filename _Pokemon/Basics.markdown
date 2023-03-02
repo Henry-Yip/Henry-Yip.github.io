@@ -7,7 +7,7 @@ toc: true
 toc_label: "Pokemon Go"
 toc_sticky: true
 authors: Henry
-permalink: /PokemonGo/1v1/
+permalink: /Pokemon/PvP/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

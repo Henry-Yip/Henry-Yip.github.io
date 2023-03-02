@@ -42,7 +42,7 @@ collections:
   Updates:   
     output: true
     permalink: /:collection/:path/ 
-  PokemonGo:     
+  Pokemon:     
     output: true
     permalink: /:collection/:path/   
   
