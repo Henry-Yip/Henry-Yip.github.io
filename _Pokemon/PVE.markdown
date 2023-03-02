@@ -87,9 +87,7 @@ Slaking immediately becomes stronger than Mega Gardevoir, with a slightly lower 
 
 Note: **Lock-On** with the existing move, **Play Rough** is also quite potent.
 
-
 <iframe src="/assets/images/Ghost3.png" width="877px" height="496px"></iframe>
-
 
 ## Conclusion
 Slaking is a pokemon with real potential. Despite without STAB, if it has good charged moves, it can potentially become one of the best pokemons in the whole game. However, I don't see this happening because Slaking is essentially the lazy pokemon, well known for being bulky and powerful but extremely lazy. I hope this analysis does provide you with some entertainment, however. See you next time around!
