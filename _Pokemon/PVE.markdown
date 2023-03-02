@@ -17,20 +17,56 @@ sidebar:
 
 Slaking is a Pokemon with **Great** Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega evolutions. Unfortunately, it has Yawn as fast move, the worst possible move, as it does 1 damage per time and has pitful energy gain. Also, as it is Normal Typed, which is a huge disadvantage as normal moves are not effective against anything. Even if it has charged moves of other types, the moves aren't boosted by STAB, reducing its viability. I am investigating on how slaking's viability can increase by changing its movepool.
 
-### New Fast Move
+## New Fast Move
 We introduce Lock-On as the fast move, a move that doesn't do much damage itself but has a ridiculously high energy gain. 
 
-### New Charged Move
-We introduce an Ice Type move called Ice Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
 
-### Why Ice type?
+### Ice Type
+Why?
  - Ice type is one of the weaker types in pokemon go
  - Ice type is quite useful in raids, as many strong pokemons are doubly weak to it, such as rayquaza, dragonite, etc
+
+### Ice Type Charged Move
+We introduce an Ice Type move called Ice Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
+
 
 ### Simulation Time
 I use [This Website](https://gamepress.gg/pokemongo/comprehensive-dps-spreadsheet) for simulation
 
+Note that I included Pound, "Ice Counter", A **Normal** type move with same parameters as the fighting move Counter
+
 <iframe src="/assets/images/Ice.png" width="874px" height="503px"></iframe>
 
-Slacking is **ONE OF THE** best ice type with this ridiculously good move, having a good bulk while only trailing behind **shadow** mamoswine in damage output
+Slacking is **ONE OF THE** best ice type with this ridiculously good move, having roughly 20-30% better bulk while only trailing behind slightly in damage
 
+### Other Ice Moves?
+With Lock On + Avalanche, it is a decently good ice attacker, around the same as glaceon, which isn't that good to start with. It is bulky, however. Pound + Avalanche is even weaker, but not by too much, surprisingly
+
+
+## Ghost Type
+Why? 
+ - Slaking is doubly resisting ghost type moves
+
+### Ghost Type Charged Move
+We introduce an Ghost Type move called Ghost Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
+
+### Simulation
+
+Its Damage is strictly inferior:
+
+<iframe src="/assets/images/Ghost1.png" width="885px" height="474px"></iframe>
+
+However it has a good $$\text{TDO}$$
+
+
+<iframe src="/assets/images/Ghost2.png" width="882px" height="539px"></iframe>
+
+```bash
+TDO stands for Total Damage Output
+```
+
+However It as a high ER $$(\text{DPS}^3 \times \text{TDO})^\frac{1}{4}$$, which makes it viable (or even optimal) in many-person raids, if you don't want to use/ don't have energy for your primal groudon.
+
+<iframe src="/assets/images/Ghost3.png" width="878px" height="536px"></iframe>
+
+[Reasons for using ER](https://www.reddit.com/r/TheSilphRoad/comments/z3xuzc/analysis_legendarymythical_signature_moves/)
