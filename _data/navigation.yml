@@ -32,7 +32,7 @@ Splash_Page:
       - title: "Splash Page"
         url: /layouts/SplashPage/
 
-Pokemon:
+PokemonGo:
   - title: Pokémon GO
     children:
       - title: "1v1 Pokémons"
