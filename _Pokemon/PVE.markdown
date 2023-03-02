@@ -13,7 +13,11 @@ header:
 sidebar:
  nav: "Pokemon Go"
 ---
-### Slaking Viability
+
+# Introduction
+Many Pokemons have great stats, great potential, but a suboptimal movepool, resulting in suboptimal performance. Now, we'll analyse some of these pokemons, and see how far they can actually get
+
+## Slaking 
 
 Slaking is a Pokemon with **Great** Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega evolutions. Unfortunately, it has Yawn as fast move, the worst possible move, as it does 1 damage per time and has pitful energy gain. Also, as it is Normal Typed, which is a huge disadvantage as normal moves are not effective against anything. Even if it has charged moves of other types, the moves aren't boosted by STAB, reducing its viability. I am investigating on how slaking's viability can increase by changing its movepool.
 
@@ -21,7 +25,7 @@ Slaking is a Pokemon with **Great** Potential, having a 290 Attack stat, one of 
 We introduce Lock-On as the fast move, a move that doesn't do much damage itself but has a ridiculously high energy gain. 
 
 
-### Ice Type
+### Potential Ice Type Attacker?
 Why?
  - Ice type is one of the weaker types in pokemon go
  - Ice type is quite useful in raids, as many strong pokemons are doubly weak to it, such as rayquaza, dragonite, etc
@@ -30,7 +34,7 @@ Why?
 We introduce an Ice Type move called Ice Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
 
 
-### Simulation Time
+### Simulation
 I use [This Website](https://gamepress.gg/pokemongo/comprehensive-dps-spreadsheet) for simulation
 
 Note that I included Pound, "Ice Counter", A **Normal** type move with same parameters as the fighting move Counter
@@ -43,9 +47,10 @@ Slacking is **ONE OF THE** best ice type with this ridiculously good move, havin
 With Lock On + Avalanche, it is a decently good ice attacker, around the same as glaceon, which isn't that good to start with. It is bulky, however. Pound + Avalanche is even weaker, but not by too much, surprisingly
 
 
-## Ghost Type
+## Potential Ghost Type Anchor
 Why? 
  - Slaking is doubly resisting ghost type moves
+ - It can become an anchor, like Lugia
 
 ### Ghost Type Charged Move
 We introduce an Ghost Type move called Ghost Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
@@ -69,4 +74,8 @@ However It as a high ER $$(\text{DPS}^3 \times \text{TDO})^\frac{1}{4}$$, which 
 
 <iframe src="/assets/images/Ghost3.png" width="878px" height="536px"></iframe>
 
+Below provides an insight on why using ER as a metric, and its importance:
 [Reasons for using ER](https://www.reddit.com/r/TheSilphRoad/comments/z3xuzc/analysis_legendarymythical_signature_moves/)
+
+## Conclusion
+Slaking is a pokemon with real potential. Despite without STAB, if it has good charged moves, it can potentially become one of the best pokemons in the whole game. However, I don't see this happening because Slaking is essentially the lazy pokemon, well known for being bulky and powerful but extremely lazy. I hope this analysis does provide you with some entertainment, however. See you next time around!
