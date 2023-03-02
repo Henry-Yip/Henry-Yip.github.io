@@ -77,5 +77,19 @@ However It as a high ER $$(\text{DPS}^3 \times \text{TDO})^\frac{1}{4}$$, which 
 Below provides an insight on why using ER as a metric, and its importance:
 [Reasons for using ER](https://www.reddit.com/r/TheSilphRoad/comments/z3xuzc/analysis_legendarymythical_signature_moves/)
 
+
+### Fairy Type
+ - Reason: Fairy type is extremely weak
+ - Relevant Raids: Hydreigon
+
+### Simulation
+Slaking immediately becomes stronger than Mega Gardevoir, with a slightly lower $$\text{DPS}$$ but a higher bulk, resulting in a higher ER. It is $$31.6%$$ stronger than the next non-mega and non-shadow pokemon, Gardevoir.
+
+Note: **Lock-On** with the existing move, **Play Rough** is also quite potent.
+
+
+<iframe src="/assets/images/Ghost3.png" width="877px" height="496px"></iframe>
+
+
 ## Conclusion
 Slaking is a pokemon with real potential. Despite without STAB, if it has good charged moves, it can potentially become one of the best pokemons in the whole game. However, I don't see this happening because Slaking is essentially the lazy pokemon, well known for being bulky and powerful but extremely lazy. I hope this analysis does provide you with some entertainment, however. See you next time around!
