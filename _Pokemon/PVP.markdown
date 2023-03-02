@@ -22,7 +22,7 @@ A battle between **Mewtwo**, **Zacian**, **Dialga**, **Giratina** and **Dragonit
 
 I use [PvPoke](https://pvpoke.com/battle/) for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is:
 
-$$ \frac{\text{HP Remaining}}{\text{ HP Total}}$$
+$$ \text{Points}=\frac{\text{HP Remaining}}{\text{ HP Total}}$$
 
 For example, **Dialga** is expected to win **Mewtwo**, both without shields, with a $$60$$ HP remaining out of $$184$$. Therefore Dialga gains a point of $$0.326087$$ while dialga loses the same amount of points. 
 
@@ -35,6 +35,15 @@ Results:
  - Dragonite: $$-0.90879408$$
  - Mewtwo: $$-1.330527835$$
 
+ ```bash
+ Dialga is the clear Winner. Surpringly Mewtwo loses
+ ```
+
+### Ice-Beam Mewtwo?
+
+Ice-Beam Mewtwo has a score of $$-2.632781889$$. It is significantly worse. Surprisingly it performs worse than psystrike while dealing with dragonite while both pokemons have 2 shields, as dragonite is doubly weak to ice type move. 
+
+### Psytrike Mewtwo Weaknesses:
 Surprisingly Mewtwo loses hard while **Dialga** is the clear winner, as **Dialga** very strictly wins against Mewtwo, strictly wins against Giratina O and wins against Dragonite. 
 
 
