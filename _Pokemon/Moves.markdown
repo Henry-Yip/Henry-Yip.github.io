@@ -7,9 +7,9 @@ toc: true
 toc_label: "Pokemon Go"
 toc_sticky: true
 authors: Henry
-permalink: /Pokemon/PvE/
+permalink: /Pokemon/Moves/
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Dubrovnik.jpg
 sidebar:
  nav: "Pokemon Go"
 ---

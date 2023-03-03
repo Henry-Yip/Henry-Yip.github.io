@@ -9,7 +9,7 @@ toc_sticky: true
 authors: Henry
 permalink: /Pokemon/PvE/
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Dubrovnik.jpg
 sidebar:
  nav: "Pokemon Go"
 ---
