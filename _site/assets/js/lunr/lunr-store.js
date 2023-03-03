@@ -203,7 +203,7 @@ var store = [{
         "url": "/Journal/Isuckatmath/",
         "teaser": "/assets/images/Pgfplots.png"
       },{
-        "title": "Columba livia forma domestica",
+        "title": "Pigeons!!!",
         "excerpt":"Loading... Candidate 1: London Considerably fat, not scared of people Candidate 2: Dubrovnik Pretty well fed, quite stupid Candidate 3: Hong Kong Very slim, extremely sensitive Candidate 4: Zagreb This particular one is pink which is funny; in general they are quite abundant Candidate 5: Ljubljana Quite stupid/calm as they...","categories": [],
         "tags": [],
         "url": "/Journal/Pigeons/",
