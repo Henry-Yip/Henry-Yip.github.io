@@ -1,0 +1,41 @@
+---
+layout: single
+title: Pokemon Go PvE Analysis
+katex: True
+tags: Pokemon Go
+toc: true
+toc_label: "Pokemon Go"
+toc_sticky: true
+authors: Henry
+permalink: /Pokemon/Moves/
+header:
+  teaser: /assets/images/Dubrovnik.jpg
+sidebar:
+ nav: "Pokemon Go"
+---
+
+## Ranking Charged Moves in Pokemon Go by DPS
+
+### Methodology
+I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and compare their DPS
+
+## Results
+<iframe src="/assets/images/Moves1.png" width="868px" height="496px"></iframe>
+
+### Commentary
+ - Aeroblast++ is Clearly the **BEST** move
+ - Origin Pulse is surprisingly weak, despite having one of the highest $$\text{DPS} \times \text{\DPE}$$ scores
+ - Sacred fire++ is surprisingly weak
+ - Aura Sphere and Doom Desire are ridiculously strong
+
+## Future
+I will gradually include all moves for fairness. Meanwhile check out my other two pages:
+
+ - [PVP]({% link _Pokemon/2023-03-02-PVP.markdown %})
+ - [PVP]({% link _Pokemon/2023-03-03-PVE.markdown %})
+
+```bash
+Have Fun~
+```
+
+
