@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "First Physics Book"
 toc_sticky: true
-permalink: /Physics/Book/
+permalink: /physics/Book/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

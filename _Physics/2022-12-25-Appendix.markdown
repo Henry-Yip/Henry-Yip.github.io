@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "Appendix"
 toc_sticky: true
-permalink: /Physics/Appendix/
+permalink: /physics/Appendix/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

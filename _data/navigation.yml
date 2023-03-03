@@ -82,23 +82,23 @@ Physics:
   - title: Physics
     children:
       - title: "Astrophysics (Part 1)"
-        url: /Physics/Astrophysics1/
+        url: /physics/Astrophysics1/
       - title: "Astrophysics (Part 2)"
-        url: /Physics/Astrophysics2/  
+        url: /physics/Astrophysics2/  
       - title: "Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)" 
-        url: /Physics/Relativity/ 
+        url: /physics/Relativity/ 
       - title: "First Physics Book" 
-        url: /Physics/Book/  
+        url: /physics/Book/  
       - title: "Appendix" 
-        url: /Physics/Appendix/    
+        url: /physics/Appendix/    
       - title: "HKDSE Physics" 
-        url: /Physics/HKDSE/ 
+        url: /physics/HKDSE/ 
       - title: "Small Perbuations"
-        url: /Physics/SmallPerbuations/
+        url: /physics/SmallPerbuations/
       - title: "Stun Locks"
-        url: /Physics/StunLocks/  
+        url: /physics/StunLocks/  
       - title: "Dirichlet's Kernel and Convergence"  
-        url: /Physics/FourierSeries/
+        url: /physics/FourierSeries/
 
 
 

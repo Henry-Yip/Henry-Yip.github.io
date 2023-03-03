@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "Astrophysics (Part 2)"
 toc_sticky: true
-permalink: /Physics/Astrophysics2/
+permalink: /physics/Astrophysics2/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

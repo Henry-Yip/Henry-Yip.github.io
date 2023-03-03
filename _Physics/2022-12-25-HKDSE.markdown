@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "HKDSE Physics"
 toc_sticky: true
-permalink: /Physics/HKDSE/
+permalink: /physics/HKDSE/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

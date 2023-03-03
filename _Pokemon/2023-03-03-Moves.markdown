@@ -24,7 +24,7 @@ I considered some of the strongest known charged moves in Pokemon Go, such as Fr
 
 ### Commentary
  - Aeroblast++ is Clearly the **BEST** move
- - Origin Pulse is surprisingly weak, despite having one of the highest $$\text{DPS} \times \text{\DPE}$$ scores
+ - Origin Pulse is surprisingly weak, despite having one of the highest $$\text{DPS} \times \text{DPE}$$ scores
  - Sacred fire++ is surprisingly weak
  - Aura Sphere and Doom Desire are ridiculously strong
 

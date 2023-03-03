@@ -4,7 +4,7 @@ title: Dirichlet's Kernel and Convergence
 header:
   teaser: /assets/images/Dirichlet.png
 katex: True
-permalink: /Physics/FourierSeries/
+permalink: /physics/FourierSeries/
 tag: Physics
 toc: true
 toc_label: "Fourier Series"

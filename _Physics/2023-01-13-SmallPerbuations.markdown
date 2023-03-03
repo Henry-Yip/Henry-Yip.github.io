@@ -4,7 +4,7 @@ title: Small Perbuations
 header:
   teaser: /assets/images/Astro.png
 katex: False
-permalink: /Physics/SmallPerbuations/
+permalink: /physics/SmallPerbuations/
 tag: Physics
 toc: true
 toc_label: "Small Perbuations"

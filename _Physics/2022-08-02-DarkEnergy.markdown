@@ -7,7 +7,7 @@ authors: Henry
 toc: true
 toc_label: "Dark Energy and the Big RIP"
 toc_sticky: true
-permalink: /Physics/DarkEnergy/
+permalink: /physics/DarkEnergy/
 header:
   teaser: /assets/images/Astro.png
 sidebar:

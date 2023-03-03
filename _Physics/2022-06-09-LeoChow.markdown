@@ -5,7 +5,7 @@ katex: True
 header:
   teaser: /assets/Leo2.png
 tags: Physics
-permalink: /Physics/Relativity/
+permalink: /physics/Relativity/
 sidebar:
  nav: "Physics"
 ---
