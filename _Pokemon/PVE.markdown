@@ -82,8 +82,13 @@ Below provides an insight on why using ER as a metric, and its importance:
  - Reason: Fairy type is extremely weak
  - Relevant Raids: Hydreigon
 
+### Fairy Type Charged Move
+We introduce an Fairy Type move called Ghost Blast. It has the same parameters as Aeroblast++, one of the strongest charged moves in the game. 
+
 ### Simulation
-Slaking immediately becomes stronger than Mega Gardevoir, with a slightly lower $$\text{DPS}$$ but a higher bulk, resulting in a higher ER. It is $$31.6%$$ stronger than the next non-mega and non-shadow pokemon, Gardevoir.
+Slaking immediately becomes stronger than Mega Gardevoir, with a slightly lower $$\text{DPS}$$ but a higher bulk, resulting in a higher ER. It has a $$31.6%$$ higher DPS than the next non-mega and non-shadow pokemon, Gardevoir.
+
+<iframe src="/assets/images/Fairy1.png" width="868px" height="486px"></iframe>
 
 Note: **Lock-On** with the existing move, **Play Rough** is also quite potent.
 
