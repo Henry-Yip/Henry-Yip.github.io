@@ -330,7 +330,7 @@ var store = [{
         "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Pokemon Go PvE Analysis",
-        "excerpt":"Ranking Charged Moves in Pokemon Go by DPS   As Seen in the table below:    ","categories": [],
+        "excerpt":"Ranking Charged Moves in Pokemon Go by DPS   As Seen in the table below:    Aeroblast++ is Clearly the BEST move   ","categories": [],
         "tags": ["Pokemon","Go"],
         "url": "/Pokemon/Moves/",
         "teaser": "/assets/images/Dubrovnik.jpg"
