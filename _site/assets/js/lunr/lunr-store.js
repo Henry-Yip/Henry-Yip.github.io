@@ -90,7 +90,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Chess with Toby Lam",
-        "excerpt":"Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website Note: I really liked his part on projectile motion. Moreover, I would like to point out the form HKDSE didn’t really introduce… (In case you are confused...","categories": [],
+        "excerpt":"Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website (In case you are confused about how I manage to write Math Equations in a website… Press Here) Anyways… Game 1 Toby Lam resigned after Qxg7??. Guess...","categories": [],
         "tags": [],
         "url": "/Chess/TobyLam/",
         "teaser": "/assets/images/AI.png"
@@ -103,6 +103,12 @@ var store = [{
       },{
         "title": "Anish Giri Wins Magnus Carlsen!",
         "excerpt":"Anish Giri beats Magnus Carlsen in Round 4 of the Tata Steel Masters   Here, Giri found the correct counter to Magnus’ blunder. Can you find it?      ","categories": [],
+        "tags": [],
+        "url": "/Chess/AnishGiri/",
+        "teaser": "/assets/images/AI.png"
+      },{
+        "title": "My Chess Career",
+        "excerpt":"Favourite Openings     Petrov)   London   Sicilian   Favourite (underrated) Chess Players      Nepomniachtchi, Ian   Howell, David W L   Lichess     I only play Puzzles   Puzzle Peak Rating: 2153   Achieved on 25/10/2022   Strength     Middlegame   Tactics   Bullet   Weakness     Pawn endgame   Calculations   ","categories": [],
         "tags": [],
         "url": "/Chess/AnishGiri/",
         "teaser": "/assets/images/AI.png"
@@ -323,8 +329,26 @@ var store = [{
         "url": "/Physics/FourierSeries/",
         "teaser": "/assets/images/Dirichlet.png"
       },{
+        "title": "Pokemon Go PvE Analysis",
+        "excerpt":"Ranking Charged Moves in Pokemon Go by DPS   As Seen in the table below:    ","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/Moves/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
+        "title": "Pokemon Go PvE Analysis",
+        "excerpt":"Introduction Many Pokemons have great stats, great potential, but a suboptimal movepool, resulting in suboptimal performance. Now, we’ll analyse some of these pokemons, and see how far they can actually get Slaking Slaking is a Pokemon with Great Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega...","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/PvE/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
+        "title": "Pokemon Go PvP Analysis",
+        "excerpt":"Master League A battle between Mewtwo, Zacian, Dialga, Giratina and Dragonite I use PvPoke for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is: \\[\\text{Points}=\\frac{\\text{HP Remaining}}{\\text{ HP Total}}\\] For example, Dialga is expected to win Mewtwo, both without shields, with a...","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/PvP/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
         "title": "Website Update Log - February",
-        "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is insufficient (i.e. still not complying with law) All content below is from this...","categories": [],
+        "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Spent 1 day. It’s a nice introduction to Fourier Series and Dirichlet’s Kernel. Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is...","categories": [],
         "tags": [],
         "url": "/Updates/February/",
         "teaser": "/assets/images/LaTeX.png"
@@ -333,6 +357,12 @@ var store = [{
         "excerpt":"Date: 24/1/2023 #1: Major Error Fix Problem: Some posts in “Journal” don’t show up. Thoughts and Solution: I’ve found out some unnecessary HTML files that may have “masked” my Markdown files. These files seem to come from _sites, and it may be a result of moving files around carelessly. Therefore...","categories": [],
         "tags": [],
         "url": "/Updates/January/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Website Update Log - March",
+        "excerpt":"Date: 24/1/2023  #1: New section - Pokemon Go  ","categories": [],
+        "tags": [],
+        "url": "/Updates/March/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Astrophysics",
