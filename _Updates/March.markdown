@@ -13,6 +13,13 @@ sidebar:
 ---
 
 ```bash
-Date: 24/1/2023
+Date: 1/3/2023
 ```
 #1: New section - Pokemon Go
+
+Date: 2/3/2023
+
+Three different pages:
+ -  PVP Meta
+ -  Underated Pokemons - Slacking
+ -  Strongest Charged Moves in PVE
