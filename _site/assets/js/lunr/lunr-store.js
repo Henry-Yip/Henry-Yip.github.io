@@ -347,6 +347,12 @@ var store = [{
         "url": "/Pokemon/PvE/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
+        "title": "Pokemon Go PVE Abilities",
+        "excerpt":"Mega Medicham  In the main series, both Medicham and mega medicham can double its attack stats. Medicham is still weak with the bonus but mega medicham is an absolute beast!    ","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/Abilities/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
         "title": "Website Update Log - February",
         "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Spent 1 day. It’s a nice introduction to Fourier Series and Dirichlet’s Kernel. Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is...","categories": [],
         "tags": [],
