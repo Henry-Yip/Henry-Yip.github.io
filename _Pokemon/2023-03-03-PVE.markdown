@@ -113,7 +113,7 @@ I'll introduce Sheer Cold as its charged move:
 
 ## Simulation
 
-<iframe src="/assets/images/Articuno1.png" width="881px" height="534px"></iframe>
+<iframe src="/assets/images/Articuno1.png" width="787px" height="530px"></iframe>
 
 With Sheer Cold (Indicated as Glaciate), Shadow Articuno becomes the 7th strongest Ice typed Pokemon, with a DPS between Mega Glalie and Mega Abomasnow. However, what's impressive is that it has the 2nd highest TDO, just behind Mega Gardevoir, which has a low DPS! This makes shadow Articuno an amazing anchor.
 
@@ -137,6 +137,9 @@ However, its bulk is *really low*, so consider it as a glass cannon
 Suggested PVE Attacker Tier List Ranking: B+
 
 # Medicham
+Not here!
+<iframe src="/assets/images/Hitmonlee1.png" width="869px" height="491px"></iframe>
+
 
 
 
