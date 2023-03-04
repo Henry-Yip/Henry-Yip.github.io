@@ -353,6 +353,12 @@ var store = [{
         "url": "/Pokemon/Abilities/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
+        "title": "My Pokemon Go Journey",
+        "excerpt":"Starter Pokemon Squirtle Starting Date 25/7/2016, the day Pokemon Go was released in Hong Kong Playing History: Played a lot in 2016, a bit in 2017, a lot in 2018, a bit in 2021, and a lot in 2023 after my friend asked me to play (otherwise no motivation) Highest...","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/Journey/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
         "title": "Website Update Log - February",
         "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Spent 1 day. It’s a nice introduction to Fourier Series and Dirichlet’s Kernel. Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is...","categories": [],
         "tags": [],

@@ -31,13 +31,13 @@ Aside from Slaking, Dragonite (3831 CP) with IV (15/14/15). Obtained through a t
 Moves: Dragon Tail + Outrage/Hurricane
 ```
 
-<iframe src="/assets/images/Dragonite.png"></iframe>
+<iframe src="/assets/images/Dragonite.jpg"></iframe>
 
 
 ### Proudest Pokemon:
 My first DITTO ever! (Caught on the day of Ditto release) is a hundo! (15/15/15)
 
-<iframe src="/assets/images/Ditto.png"></iframe>
+<iframe src="/assets/images/Ditto.jpg"></iframe>
 
 
 
@@ -47,7 +47,7 @@ Shadow Mewtwo with Confusion+Psystrike
 ### My Best Shiny:
 Shiny Magikarp (HAHAHAHAHAHA) 
 
-<iframe src="/assets/images/Magikarp.png"></iframe>
+<iframe src="/assets/images/Magikarp.jpg"></iframe>
 
 ### Favourite Pokemon:
 Articuno
