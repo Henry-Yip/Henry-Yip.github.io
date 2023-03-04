@@ -25,8 +25,6 @@ I considered some of the strongest known charged moves in Pokemon Go, such as Fr
 
 <iframe src="/assets/images/Moves2.png" width="874px" height="309px"></iframe>
 
-
-
 ### Commentary
  - $$\text{Aeroblast++}$$ is Clearly the **BEST** move
  - Origin Pulse is surprisingly weak, despite having one of the highest $$\text{DPS} \times \text{DPE}$$ scores
@@ -43,7 +41,6 @@ I considered some of the strongest known charged moves in Pokemon Go, such as Fr
  - $$\text{Snarl (Psychic)}$$ paired with $$\text{Aeroblast++ (Psychic)}$$ deals 23.5% more damage than $$\text{Confusion}$$+$$\text{Psystrike}$$, which is ridiculous
 
   
-
 ## Future
 I will gradually include all moves for fairness. Meanwhile check out my other two pages:
 

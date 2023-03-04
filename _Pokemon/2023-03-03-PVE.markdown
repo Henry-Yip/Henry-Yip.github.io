@@ -17,7 +17,7 @@ sidebar:
 # Introduction
 Many Pokemons have great stats, great potential, but a suboptimal movepool, resulting in suboptimal performance. Now, we'll analyse some of these pokemons, and see how far they can actually get
 
-## Slaking 
+# Slaking 
 
 Slaking is a Pokemon with **Great** Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega evolutions. Unfortunately, it has Yawn as fast move, the worst possible move, as it does 1 damage per time and has pitful energy gain. Also, as it is Normal Typed, which is a huge disadvantage as normal moves are not effective against anything. Even if it has charged moves of other types, the moves aren't boosted by STAB, reducing its viability. I am investigating on how slaking's viability can increase by changing its movepool.
 
@@ -96,3 +96,48 @@ Note: **Lock-On** with the existing move, **Play Rough** is also quite potent.
 
 ## Conclusion
 Slaking is a pokemon with real potential. Despite without STAB, if it has good charged moves, it can potentially become one of the best pokemons in the whole game. However, I don't see this happening because Slaking is essentially the lazy pokemon, well known for being bulky and powerful but extremely lazy. I hope this analysis does provide you with some entertainment, however. See you next time around!
+
+# Shadow Articuno
+
+Articuno is my favouite pokemon
+
+It's shadow form is a huge improvement over its base form, however, its DPS is still lacklustre. 
+
+## New Charged Move
+
+I'll introduce Sheer Cold as its charged move:
+ - Sheer Cold is a move learnable by Articuno
+ - I will assume it has the same parameters as Glaciate
+ - Unlike Ice Blast, Sheer Cold isn't very broken
+ - Kyurem has this move also
+
+## Simulation
+
+<iframe src="/assets/images/Articuno1.png" width="881px" height="534px"></iframe>
+
+With Sheer Cold (Indicated as Glaciate), Shadow Articuno becomes the 7th strongest Ice typed Pokemon, with a DPS between Mega Glalie and Mega Abomasnow. However, what's impressive is that it has the 2nd highest TDO, just behind Mega Gardevoir, which has a low DPS! This makes shadow Articuno an amazing anchor.
+
+Suggested PVE Attacker Tier list Ranking: B+/A
+
+# Shadow Hitmonlee
+
+Hitmonlee has stats, and fighting type pokemons don't need a high attack stat to stand out (from my experience, 240 in fighting is top tier, while 270/280 is stil outclassed as a psychic type attacker)
+
+## Moveset 
+Consider shadow hitmonlee. I'll give hitmonlee counter+ dynamic punch, the standard strong fighting moveset (Sacred Sword is MUCH stronger, but unfortunately is too OP)
+
+## Simulation
+
+<iframe src="/assets/images/Hitmonlee1.png" width="890px" height="490px"></iframe>
+
+Shadow Hitmonlee has now the 7th higher DPS, close to keldeo, which is impressive. 
+
+However, its bulk is *really low*, so consider it as a glass cannon 
+
+Suggested PVE Attacker Tier List Ranking: B+
+
+# Medicham
+
+
+
+
