@@ -335,8 +335,8 @@ var store = [{
         "url": "/Pokemon/PvP/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
-        "title": "Pokemon Go PvE Analysis",
-        "excerpt":"Ranking Charged Moves in Pokemon Go by DPS Methodology I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and compare their...","categories": [],
+        "title": "Best Charged and Fast Moves",
+        "excerpt":"Ranking The STRONGEST Charged Moves in Pokemon Go by DPS Methodology I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and...","categories": [],
         "tags": ["Pokemon","Go"],
         "url": "/Pokemon/Moves/",
         "teaser": "/assets/images/Dubrovnik.jpg"

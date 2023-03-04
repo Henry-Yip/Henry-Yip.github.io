@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Pokemon Go PvE Analysis
+title: Best Charged and Fast Moves
 katex: True
 tags: Pokemon Go
 toc: true
@@ -14,7 +14,7 @@ sidebar:
  nav: "Pokemon Go"
 ---
 
-## Ranking Charged Moves in Pokemon Go by DPS
+## Ranking The STRONGEST Charged Moves in Pokemon Go by DPS
 
 ### Methodology
 I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and compare their DPS
@@ -28,10 +28,21 @@ I considered some of the strongest known charged moves in Pokemon Go, such as Fr
 
 
 ### Commentary
- - $$\text{Aeroblast++} is Clearly the **BEST** move
+ - $$\text{Aeroblast++}$$ is Clearly the **BEST** move
  - Origin Pulse is surprisingly weak, despite having one of the highest $$\text{DPS} \times \text{DPE}$$ scores
- - $$\text{Sacred fire++} is surprisingly weak
- - Aura Sphere and Doom Desire are ridiculously strong
+ - $$\text{Sacred fire++}$$ is surprisingly weak
+ - $$\text{Aura Sphere}$$ and $$\text{Doom Desire}$$ are ridiculously strong
+
+## Ranking The STRONGEST Charged Moves in Pokemon Go by DPS
+
+<iframe src="/assets/images/Moves2.png" width="878px" height="485px"></iframe>
+
+### Commentary
+ - $$\text{Snarl}$$ is surprisingly the best by a *huge* margin
+ - $$\text{Lock-On}$$ is only OP in **PvP**... At least it's still fairly strong in **PvE**, dealing more damage than **Confusion**
+ - $$\text{Snarl (Psychic)}$$ paired with $$\text{Aeroblast++ (Psychic)}$$ deals 23.5% more damage than $$\text{Confusion}$$+$$\text{Psystrike}$$, which is ridiculous
+
+  
 
 ## Future
 I will gradually include all moves for fairness. Meanwhile check out my other two pages:
