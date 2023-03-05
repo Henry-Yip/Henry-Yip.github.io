@@ -47,10 +47,10 @@ $$
 **Hint**:
 What is the physical meaning of $$g^{n-1} h$$
 
-The set $S_n$ of all symmetries of $\{1, \ldots, n\}$ is called the symmetric group, where $\left|S_n\right|=n !$.
-Consider a graph with $n$ vertices and no edges connecting them. This is $S_n$
+The set $$S_n$$ of all symmetries of $$\{1, \ldots, n\}$$ is called the symmetric group, where $$\left|S_n\right|=n !$$.
+Consider a graph with $$n$$ vertices and no edges connecting them. This is $$S_n$$
 
-Showing $S_n$ is a group is left as an exercise for the reader $\blacksquare$
+Showing $$S_n$$ is a group is left as an exercise for the reader $$\blacksquare$$
 
 ## Matrices
 
