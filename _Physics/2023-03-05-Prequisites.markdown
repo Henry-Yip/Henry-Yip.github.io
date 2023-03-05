@@ -1,10 +1,10 @@
 ---
 layout: single
-title: Group Theory Proof 
+title: Pre-requisites for "Simple Group Theory"
 header:
   teaser: /assets/images/Dirichlet.png
 katex: True
-permalink: /physics/groups/
+permalink: /physics/prerequisites/
 tag: Physics
 toc: true
 toc_label: "Group Theory"
@@ -71,9 +71,9 @@ $$v_1$$ and $$v_2$$ are joined by an edge if and only if $$g\left(v_1\right)$$ a
 
  - (**G2**)
 The composition of maps is associative
-$$$$
+$$
 (f * g) * h:=(f \circ g) \circ h=f \circ(g \circ h):=f *(g * h)
-$$$$
+$$
 for all symmetries $$f, g, h$$ 
 
 This is left as an exercise for the readers $$\blacksquare$$
