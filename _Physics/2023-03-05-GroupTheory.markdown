@@ -71,6 +71,56 @@ For every invertible matrix $$\exists$$ a inverse matrix. Let  $$A$$ be any inve
 
 From $$G1-G4$$, $$\mathrm{GL}(n, \mathbb{R})$$ is a group under matrix multiplication $$\blacksquare$$
 
+## Subgroups
+
+S1. $$H$$ is not empty.
+S2. If $$h, k \in H$$ then $$h * k \in H$$
+S3. If $$h \in H$$ then $$h^{-1} \in H$$.
+
+### A detour on SO(3)
+**SO(3)** is very important in physics.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dSZNFP60Tc0?start=297" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Heard the word **SO(3)**?
+
+$$\operatorname{SO}(n, \mathbb{R}):=\left\{A \in G L(n, \mathbb{R}) \mid \operatorname{det} A=1\right.$$ and $$\left.A^T=A^{-1}\right\}$$. It is related to **Linear Algebra**,  in particular, **Isometry**. 
+
+Sidenote: $$\operatorname{SO}(n, \mathbb{R})$$ is the "combination" of $$\mathrm{SL}(n, \mathbb{R})$$ and $$\mathrm{O}(n, \mathbb{R})$$
+
+### Exercise
+$$\operatorname{SO}(n, \mathbb{R})$$ is a subgroup of $$\mathrm{GL}(n, \mathbb{R})$$
+
+## Abelian Groups
+
+Suppose that $$G$$ is a group. If $$g * h=h * g$$ for all $$g, h \in G$$, then $$G$$ is an abelian group.
+
+### Exercise:
+**Claim:** $D_3$ is not abelian:
+
+**Proof:** 
+
+$$
+\sigma=\left(\begin{array}{lll}
+1 & 2 & 3 \\
+3 & 2 & 1
+\end{array}\right), \quad \tau=\left(\begin{array}{lll}
+1 & 2 & 3 \\
+2 & 3 & 1
+\end{array}\right), \quad \sigma \tau=\left(\begin{array}{lll}
+1 & 2 & 3 \\
+2 & 1 & 3
+\end{array}\right), \quad \tau \sigma=\left(\begin{array}{lll}
+1 & 2 & 3 \\
+1 & 3 & 2
+\end{array}\right) .
+$$
+
+Since $\sigma \tau \neq \tau \sigma$, $D_3$ is not abelian $\blacksquare$
+
+
+
+
 
 
 
