@@ -62,14 +62,14 @@ The set of symmetries of a graph forms a group (under composition)
 
 **Proof:**
 
-(**G1**) 
+ - (**G1**) 
 Claim: The composition of two symmetries $$f$$ and $$g$$ is a symmetry.
 
 Proof: Since $$f, g$$ are bijections implies that $$f \circ g$$ is a bijection. (**Lemma 1.1**)
 
 $$v_1$$ and $$v_2$$ are joined by an edge if and only if $$g\left(v_1\right)$$ and $$g\left(v_2\right)$$ are joined by an edge if and only if $$f \circ g\left(v_1\right)$$ and $$f \circ g\left(v_2\right)$$ are joined by an edge. Hence  $$f * g$$ is a symmetry  $$\blacksquare$$
 
-(**G2**)
+ - (**G2**)
 The composition of maps is associative
 $$$$
 (f * g) * h:=(f \circ g) \circ h=f \circ(g \circ h):=f *(g * h)
@@ -78,11 +78,11 @@ for all symmetries $$f, g, h$$
 
 This is left as an exercise for the readers $$\blacksquare$$
 
-(**G3**)
+ - (**G3**)
 The identity map $$e$$ itself satisfies $$e \circ f = f \circ e =f$$  $$\blacksquare$$
 
-(**G4**)
- G4. If $$f: V \rightarrow V$$ is a symmetry then we can easily show the existence of the symmetry $$f^{-1}$$ s.t.  $$f^{-1}: V \rightarrow V$$ (Try Contradiction) 
+ - (**G4**)
+If $$f: V \rightarrow V$$ is a symmetry then we can easily show the existence of the symmetry $$f^{-1}$$ s.t.  $$f^{-1}: V \rightarrow V$$ (Try Contradiction) 
  
 Since $$f \circ f^{-1}=f^{-1} \circ f=e$$, we prove **G4** $$\blacksquare$$
 
@@ -92,12 +92,3 @@ for all symmetries $$f, g, h$$
 
 This is left as an exercise for the readers $$\blacksquare$$
 
-(**G3**)
-The identity map $$e$$ itself satisfies $$e \circ f = f \circ e =f$$  $$\blacksquare$$
-
-(**G4**)
- G4. If $$f: V \rightarrow V$$ is a symmetry then we can easily show the existence of the symmetry $$f^{-1}$$ s.t.  $$f^{-1}: V \rightarrow V$$ (Try Contradiction) 
- 
-Since $$f \circ f^{-1}=f^{-1} \circ f=e$$, we prove **G4** $$\blacksquare$$
-
-Since **G1-G4** are all satisfied, the set of symmetries of a graph forms a group (under composition).  $$\blacksquare$$
