@@ -49,27 +49,27 @@ What is the physical meaning of $$g^{n-1} h$$
 ## Matrices
 
 ### **Theorem 1.3**
-$\mathrm{GL}(n, \mathbb{R})$ is a group under matrix multiplication.:
+$$\mathrm{GL}(n, \mathbb{R})$$ is a group under matrix multiplication.:
 
 ### **Proof**
 
 **G1 (Closure):**
-Claim: Consider two Matrices $A$ and $B$. If $A$ and $B$ are invertible then $AB$ is invertible. 
+Claim: Consider two Matrices $$A$$ and $$B$$. If $$A$$ and $$B$$ are invertible then $$AB$$ is invertible. 
 
-Proof: $A$ and $B$ invertible $\Rightarrow$  ${\displaystyle \det(A) \neq 0}$ and ${\displaystyle \det(B) \neq 0}$. From ${\displaystyle \det(AB)=\det(A)\det(B)}$ we can see the above implies ${\displaystyle \det(AB) \neq 0}$. Hence $AB$ is invertible $\blacksquare$
+Proof: $$A$$ and $$B$$ invertible $$\Rightarrow$$  $${\displaystyle \det(A) \neq 0}$$ and $${\displaystyle \det(B) \neq 0}$$. From $${\displaystyle \det(AB)=\det(A)\det(B)}$$ we can see the above implies $${\displaystyle \det(AB) \neq 0}$$. Hence $$AB$$ is invertible $$\blacksquare$$
 
 **G2 (Associative):**
-$A(BC)=(AB)(C)$
-This is left as an exercise for the reader $\blacksquare$
+$$A(BC)=(AB)(C)$$
+This is left as an exercise for the reader $$\blacksquare$$
 
 **G3(Identity):**
-The Matrix **I** is the Identity element  $\blacksquare$
+The Matrix **I** is the Identity element  $$\blacksquare$$
 
 **G4(Inverse):**
-For every invertible matrix $\exists$ a inverse matrix. Let  $A$ be any invertible matrix. Then $A^{-1}$ is the invertible matrix s.t. $AA^{-1}=A^{-1}A=I$ 
- $\blacksquare$
+For every invertible matrix $$\exists$$ a inverse matrix. Let  $$A$$ be any invertible matrix. Then $$A^{-1}$$ is the invertible matrix s.t. $$AA^{-1}=A^{-1}A=I$$ 
+ $$\blacksquare$$
 
-From $G1-G4$, $\mathrm{GL}(n, \mathbb{R})$ is a group under matrix multiplication $\blacksquare$
+From $$G1-G4$$, $$\mathrm{GL}(n, \mathbb{R})$$ is a group under matrix multiplication $$\blacksquare$$
 
 
 
