@@ -45,12 +45,12 @@ My first DITTO ever! (Caught on the day of Ditto release) is a hundo! (15/15/15)
 Shadow Mewtwo with Confusion+Psystrike
 
 ### My Best Shiny:
-Shiny Magikarp (HAHAHAHAHAHA) 
+Shiny Magikarp (Let's GOOOOOOO!)
 
 <iframe src="/assets/images/Magikarp.JPG" width="351px" height="760px"></iframe>
 
 ### Favourite Pokemon:
-Articuno
+[Articuno](https://gamepress.gg/pokemongo/pokemon/144)
 
 ### My Favourite Shiny:
 Shiny Rayquaza (Sigh)

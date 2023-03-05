@@ -17,7 +17,9 @@ sidebar:
 ## Ranking The STRONGEST Charged Moves in Pokemon Go by DPS
 
 ### Methodology
-I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and compare their DPS
+I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and compare their DPS.
+
+I am using [THIS WEBSITE](https://gamepress.gg/pokemongo/comprehensive-dps-spreadsheet) for analysis.
 
 ## Results
 
