@@ -56,6 +56,12 @@ feature_row:
     url: "https://henry-yip.github.io/Music/"
     btn_label: "Read More"
     btn_class: "btn--warning"  
+  - image_path: /assets/images/Dubrovnik.png
+    title: "Pokemon Go"
+    excerpt: "Using Mathematics to crack games"
+    url: "https://henry-yip.github.io/Pokemon/"
+    btn_label: "Read More"
+    btn_class: "btn--warning"    
 ---
 
 {: .notice}
