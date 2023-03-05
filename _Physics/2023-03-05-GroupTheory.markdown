@@ -17,7 +17,8 @@ sidebar:
 I assume basic familarity with functions and isomorphisms/symmetries.
 
 For those who aren't, please check out this post:
- - [Pre-requisites for "Simple Group Theory"]({% link _Jekyll/2022-05-19-Katex.markdown %})
+ - [Pre-requisites for "Simple Group Theory"]({% link _Physics/2022-03-05-Prerequisites.markdown %})
+
 
 ## Dihedral Groups
 
@@ -45,6 +46,11 @@ $$
 
 **Hint**:
 What is the physical meaning of $$g^{n-1} h$$
+
+The set $S_n$ of all symmetries of $\{1, \ldots, n\}$ is called the symmetric group, where $\left|S_n\right|=n !$.
+Consider a graph with $n$ vertices and no edges connecting them. This is $S_n$
+
+Showing $S_n$ is a group is left as an exercise for the reader $\blacksquare$
 
 ## Matrices
 
@@ -91,12 +97,14 @@ Sidenote: $$\operatorname{SO}(n, \mathbb{R})$$ is the "combination" of $$\mathrm
 ### Exercise
 $$\operatorname{SO}(n, \mathbb{R})$$ is a subgroup of $$\mathrm{GL}(n, \mathbb{R})$$
 
+
+
 ## Abelian Groups
 
 Suppose that $$G$$ is a group. If $$g * h=h * g$$ for all $$g, h \in G$$, then $$G$$ is an abelian group.
 
 ### Exercise:
-**Claim:** $D_3$ is not abelian:
+**Claim:** $$D_3$$ is not abelian:
 
 **Proof:** 
 
@@ -109,14 +117,16 @@ $$
 2 & 3 & 1
 \end{array}\right), \quad \sigma \tau=\left(\begin{array}{lll}
 1 & 2 & 3 \\
-2 & 1 & 3
+1 & 3 & 2
 \end{array}\right), \quad \tau \sigma=\left(\begin{array}{lll}
 1 & 2 & 3 \\
-1 & 3 & 2
+2 & 1 & 3
 \end{array}\right) .
 $$
 
-Since $\sigma \tau \neq \tau \sigma$, $D_3$ is not abelian $\blacksquare$
+Since $$\sigma \tau \neq \tau \sigma$$, $$D_3$$ is not abelian $$\blacksquare$$
+
+
 
 
 
