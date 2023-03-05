@@ -47,11 +47,12 @@ A symmetry is a bijection $$f: V \rightarrow V$$ such that $$f(v_1)$$ and $$f(v_
 **Definitions**
 We say that a nonempty set $$G$$ is group under $$*$$ if
 
-G1. (Closure) $$*$$ is an operation, so $$g * h \in G$$ $$\forall g, h \in G$$.
-G2. (Associativity) $$g *(h * k)=(g * h) * k$$  $$\forall g, h, k \in G$$.
-G3. (Identity) $$\exists$$ $$e \in G$$ s.t. $$e * g=g * e=g$$, $$\forall g \in G$$
+ - G1. (Closure) $$*$$ is an operation, so $$g * h \in G$$ $$\forall g, h \in G$$.
 
-G4. (Inverses) $$\forall$$ $$g \in G$$, $$\exists$$ $$g^{-1}$$ s.t.$$g * g^{-1}=$$ $$g^{-1} * g=e$$
+ - G2. (Associativity) $$g *(h * k)=(g * h) * k$$  $$\forall g, h, k \in G$$.
+ - G3. (Identity) $$\exists$$ $$e \in G$$ s.t. $$e * g=g * e=g$$, $$\forall g \in G$$
+
+ - G4. (Inverses) $$\forall$$ $$g \in G$$, $$\exists$$ $$g^{-1}$$ s.t.$$g * g^{-1}=$$ $$g^{-1} * g=e$$
 
 
 
