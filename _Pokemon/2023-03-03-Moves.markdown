@@ -21,7 +21,7 @@ I considered some of the strongest known charged moves in Pokemon Go, such as Fr
 
 ## Results
 
-<iframe src="/assets/images/Moves1.png" width="874px" height="490px"></iframe>
+<iframe src="/assets/images/Moves1.png" width="882px" height="479px"></iframe>
 
 <iframe src="/assets/images/Moves2.png" width="874px" height="309px"></iframe>
 
