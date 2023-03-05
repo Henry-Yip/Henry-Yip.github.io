@@ -17,7 +17,7 @@ sidebar:
 I assume basic familarity with functions and isomorphisms/symmetries.
 
 For those who aren't, please check out this post:
- - [Pre-requisites for "Simple Group Theory"]({% link _Physics/2022-03-05-Prerequisites.markdown %})
+ - [Pre-requisites for "Simple Group Theory"]({% link _Physics/2023-03-05-Prerequisites.markdown %})
 
 
 ## Dihedral Groups
