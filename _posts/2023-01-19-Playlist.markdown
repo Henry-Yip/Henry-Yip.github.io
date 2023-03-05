@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: #9 Classical Music Playlist
+title:  Classical Music Playlist
 toc: true
 toc_label: "Small Perbuations"
 toc_sticky: true

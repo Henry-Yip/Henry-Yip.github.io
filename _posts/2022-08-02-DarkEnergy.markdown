@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: #2 Dark Energy 
+title:  Dark Energy 
 toc: true
 toc_label: "Dark Energy"
 toc_sticky: true

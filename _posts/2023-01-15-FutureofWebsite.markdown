@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: #7 henry-yip.github.io; Future and Thoughts
+title:  henry-yip.github.io; Future and Thoughts
 toc: true
 toc_label: "Future of This Website"
 toc_sticky: true

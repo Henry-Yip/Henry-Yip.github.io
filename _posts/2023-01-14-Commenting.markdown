@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: #6 Writing me constructive comments
+title:  Writing me constructive comments
 toc: true
 katex: true
 toc_label: "Comments"

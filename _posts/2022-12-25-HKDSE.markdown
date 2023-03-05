@@ -1,7 +1,7 @@
 ---
 layout: single
 katex: True
-title: #5 HKDSE Physics
+title:  HKDSE Physics
 toc: true
 katex: true
 toc_label: "HKDSE Physics"
