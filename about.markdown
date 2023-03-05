@@ -4,11 +4,7 @@ permalink: \about\
 katex: false
 author_profile: true
 ---
----
-layout: page
-title: This Website
-comments: true
----
+
 
 ### This Website
 

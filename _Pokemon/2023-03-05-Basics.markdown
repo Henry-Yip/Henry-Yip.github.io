@@ -7,7 +7,7 @@ toc: true
 toc_label: "Pokemon Go"
 toc_sticky: true
 authors: Henry
-permalink: /Pokemon/Journey/
+permalink: /Pokemon/Basics/
 header:
   teaser: /assets/images/Dubrovnik.jpg
 sidebar:
