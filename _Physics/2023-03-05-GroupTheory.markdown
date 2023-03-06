@@ -47,7 +47,7 @@ $$
 **Hint**:
 What is the physical meaning of $$g^{n-1} h$$
 
-## Symmetric Group
+## Symmetric Groups
 The set $$S_n$$ of all symmetries of $$\{1, \ldots, n\}$$ is called the symmetric group, where $$\left|S_n\right|=n !$$.
 Consider a graph with $$n$$ vertices and no edges connecting them. This is $$S_n$$
 
@@ -56,7 +56,7 @@ Showing $$S_n$$ is a group is left as an exercise for the reader $$\blacksquare$
 ## Matrices
 
 ### **Theorem 1.3**
-$$\mathrm{GL}(n, \mathbb{R})$$ is a group under matrix multiplication.:
+$$\mathrm{GL}(n, \mathbb{R})$$ is a group under matrix multiplication.
 
 ### **Proof**
 
@@ -84,8 +84,8 @@ S1. $$H$$ is not empty.
 S2. If $$h, k \in H$$ then $$h * k \in H$$
 S3. If $$h \in H$$ then $$h^{-1} \in H$$.
 
-### A detour on SO(3)
-**SO(3)** is very important in physics.
+### A detour on $$\operatorname{SO}(3)$$
+**$$\operatorname{SO}(3)$$** is very important in physics.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dSZNFP60Tc0?start=297" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -127,7 +127,7 @@ $$
 
 Since $$\sigma \tau \neq \tau \sigma$$, $$D_3$$ is not abelian $$\blacksquare$$
 
-### Normal Subgroups
+## Normal Subgroups
 
 $$N$$ is a normal subgroup and only if $$g n g^{-1} \in N$$ for all $$g \in G$$ and $$n \in N$$. We denote: $$N \triangleleft G$$.
 
@@ -139,7 +139,10 @@ Claim: Every Subgroup of an Abelian Group is Normal
 
 Suppose $$G$$ is abelian and let $$H \leq G$$. 
 Then $$\forall g$$ $$\in$$ $$G$$, $$\forall h$$ $$\in$$ $$H$$,  
- $$g h g^{-1}=g g^{-1} h=e h=h \in H \quad \blacksquare$$ 
+ $$g h g^{-1}=g g^{-1} h=e h=h \in H$$
+
+Hence $$H \triangleleft G \quad \blacksquare$$
+
 
 
 
