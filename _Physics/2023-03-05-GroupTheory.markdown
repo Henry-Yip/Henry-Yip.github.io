@@ -148,6 +148,21 @@ Hence $$H \triangleleft G \quad \blacksquare$$
 
 
 
+### **Theorem 1.5** 
+Converse of Lagrange's Theorem is not true
+
+###  **Proof**
+I'll show that $$A_4$$, despite having order of 12, does not have subgroups of order 6.
+
+Assume $$H \subset A_4$$ is a subgroup of $$A_4$$ of order 6 . Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$. (See Appendix C) Again,  since all cosets have name number of elements (See Appendix D) , $$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
+$$$$
+A_4=H \cup a H
+$$$$
+Now suppose that $$a$$ is a 3 -cycle in $$A_4$$ (Appendix E), then either $$a^2 \in H$$ or $$a^2 \in a H$$. If $$a^2 \in H$$, then this implies that $$a^4=a^2 \cdot a^2 \in H$$ but, since the order of $$a$$ is 3 (it is a $$3^{-}$$ cycle), then $$a^4=a$$ and since $$a \notin H$$ this is a contradiction. Similarly, if $$a^2 \in a H$$then $$a \in H$$ (Appendix F) and again this is a contradiction.
+As such, H cannot be a subgroup of $$A_4$$ of order 6 
+
+
+
 
 
 
