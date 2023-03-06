@@ -173,7 +173,6 @@ Explain why the converse statement is **not** true? *i.e.*, $$G$$ is abelian $$\
 
 **Hint:** Consider $$\mathbb{R}$$ under addition 
 
-
 ### **Theorem 1.4** 
 Converse of Lagrange's Theorem is not true
 
