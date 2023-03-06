@@ -148,7 +148,7 @@ Note that dimensional analysis cannot ensure that your answer is correct; rather
 ## Appendix D
 
 
-   - Used in my post about [HKDSE Physics]({% link _Physics/2023-03-05-GroupTheory.markdown %})
+   - Used in my post about [Group Theory]({% link _Physics/2023-03-05-GroupTheory.markdown %})
 
 
 ### Lemma
@@ -177,7 +177,6 @@ hence $$k$$ is unique $$\blacksquare$$
 
 Therefore there exists a unique element $$k \in G$$ such that $$k * g=h$$ $$\blacksquare$$
 
-## Appendix D
 **Claim:**
 
 Suppose that $$H \leq G$$ and $$H$$ is finite.

@@ -182,7 +182,7 @@ I'll show that $$A_4$$, despite having order of 12, does not have subgroups of o
 
 This is no way original and is inspired from [this post](https://math.stackexchange.com/questions/582658/a-4-has-no-subgroup-of-order-6). 
 
-Assume $$H \subset A_4$$ is a subgroup of $$A_4$$ of order 6 . Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$. (See Appendix C) Again,  since all cosets have name number of elements (See Appendix D) , $$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
+Assume $$H \subset A_4$$ is a subgroup of $$A_4$$ of order 6 . Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$. (See Appendix C) Again,  since all cosets have name number of elements (See [Appendix D]({% link _Physics/2022-12-25-Appendix.markdown %})) , $$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
 
 $$
 A_4=H \cup a H
