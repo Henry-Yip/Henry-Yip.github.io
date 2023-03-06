@@ -47,6 +47,7 @@ $$
 **Hint**:
 What is the physical meaning of $$g^{n-1} h$$
 
+## Symmetric Group
 The set $$S_n$$ of all symmetries of $$\{1, \ldots, n\}$$ is called the symmetric group, where $$\left|S_n\right|=n !$$.
 Consider a graph with $$n$$ vertices and no edges connecting them. This is $$S_n$$
 
@@ -125,6 +126,21 @@ $$
 $$
 
 Since $$\sigma \tau \neq \tau \sigma$$, $$D_3$$ is not abelian $$\blacksquare$$
+
+### Normal Subgroups
+
+$$N$$ is a normal subgroup and only if $$g n g^{-1} \in N$$ for all $$g \in G$$ and $$n \in N$$. We denote: $$N \triangleleft G$$.
+
+
+### **Theorem 1.2**
+Claim: Every Subgroup of an Abelian Group is Normal
+
+### **Proof**
+
+Suppose $$G$$ is abelian and let $$H \leq G$$. 
+Then $$\forall g$$ $$\in$$ $$G$$, $$\forall h$$ $$\in$$ $$H$$,  
+ $$g h g^{-1}=g g^{-1} h=e h=h \in H \quad \blacksquare$$ 
+
 
 
 
