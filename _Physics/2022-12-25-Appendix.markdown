@@ -14,12 +14,12 @@ sidebar:
  nav: "Physics"
 ---
 
-### KaTeX Promotion
+## KaTeX Promotion
 
 In case you are confused about how I manage to write Math Equations in a website...
 [Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %})
 
-### Appendix A
+## Appendix A
 
  - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
 
@@ -52,11 +52,11 @@ A & =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos
 \end{aligned}
 $$
 
- [Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
+$$\blacksquare$$
 
 **Collorary**: A Circle with radius $$r$$ has area $$ \pi r^2$$. The proof is trivial and is left as an exercise for the reader
 
-### Appendix B
+## Appendix B
 
  - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
  - Also in my post about [Small Perbuations]({% link _Physics/2023-01-13-SmallPerbuations.markdown %})
@@ -121,11 +121,11 @@ Hence:
 
 $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
 
-[Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
+$$\blacksquare$$
 
-### Appendix C
+## Appendix C
 
- - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
+ 
 
 Dimensional Analysis is one of the most *helpful* knowledge in Physics. You can immediately tell if an answer is correct or not using it. For example if we accidentally squared a term that contains dimensions, we can almost immediately identify the mistake. 
 
@@ -141,27 +141,58 @@ $$ \sin x=x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots=\sum_{k=0}^n \frac{(-1)^k x^{
 
 First note that $$x$$ cannot have any units, otherwise $$x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots$$ won't have any physical sense, as discussed above. 
 
-Therefore $$\frac{x^3}{3 !}$$ and $$\frac{x^5}{5 !}$$ will have the same units as $$x$$, *i.e.* no units, so as the preceding terms. Hence $$\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}$$ have no units, and hence $$\sin x$$ has no units. [Q.E.D.](https://en.wikipedia.org/wiki/Q.E.D.)
+Therefore $$\frac{x^3}{3 !}$$ and $$\frac{x^5}{5 !}$$ will have the same units as $$x$$, *i.e.* no units, so as the preceding terms. Hence $$\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}$$ have no units, and hence $$\sin x$$ has no units $$\blacksquare$$
 
 Note that dimensional analysis cannot ensure that your answer is correct; rather, it occasionally picks up errors, but this is already *extremely* useful.
 
+## Appendix D
 
 
-
-#### Detour:
-According to [The Wikipedia page On Series Expansion](https://en.wikipedia.org/wiki/Series_expansion),
-
-"A Taylor series is a power series based on a function's derivatives at a single point.More specifically, if a function $$f: U \rightarrow \mathbb{R}$$ is infinitely differentiable around a point $$x_0$$, then the Taylor series of $$f$$ around this point is given by $$\sum_{n=0}^{\infty} \frac{f^{(n)}\left(x_0\right)}{n !}\left(x-x_0\right)^n$$ under the convention $$0^0:=1$$
+   - Used in my post about [HKDSE Physics]({% link _Physics/2023-03-05-GroupTheory.markdown %})
 
 
-The Maclaurin series of a $$f$$ is its Taylor series about $$x_0=0$$ . A Laurent series is a generalization of the Taylor series, allowing negative exponent values; it takes the form $$\sum_{k=-\infty}^{\infty} c_k(z-a)^k$$ and converges in an annulus."
+### Lemma
+ 
+**Claim:**
+Let $$G$$ be a group. If $$g, h \in G$$, then
+
+There exists (Existence) a unique element (Uniqueness) $$k \in G$$ such that $$k * g=h$$
+
+**Proof:**
+(Existence) Let $$k:=h * g^{-1}$$. Then
+$$$$
+k * g=\left(h * g^{-1}\right) * g=h *\left(g^{-1} * g\right)=h * e=h,
+$$$$
+Where we have used **associativity** of group axioms. Hence $$k$$ exists $$\blacksquare$$
 
 
+(Uniqueness)
+ Now suppose that $$k^{\prime} * g=h$$. Then
+$$$$
+k=h * g^{-1}=\left(k^{\prime} * g\right) * g^{-1}=k^{\prime} *\left(g * g^{-1}\right)=k^{\prime} * e=k^{\prime}
+$$$$
+
+hence $$k$$ is unique $$\blacksquare$$
 
 
+Therefore there exists a unique element $$k \in G$$ such that $$k * g=h$$ $$\blacksquare$$
 
+## Appendix D
+**Claim:**
 
+Suppose that $$H \leq G$$ and $$H$$ is finite.
+Then $$|g H|=|H|$$ for all $$g \in G$$.
 
+**Proof:**
+
+Consider the map $$H \rightarrow g H$$ given by $$h \mapsto g h$$. We would like to prove it is a bijection. To prove that it is a bijection, we need to prove it is both injective and surjective.
+
+It is injective since $$g h_1=g h_2$$ implies that $$h_1=h_2$$ (From **Lemma** above)
+
+Surjection is obvious from definition (I'll leave it as an exercise for the readers)
+
+$$\Rightarrow$$  $$H \rightarrow g H$$ is a bijection $$\Rightarrow$$ $$|g H|=|H| \quad \forall g \in G$$
+ $$\blacksquare$$
 
 
 

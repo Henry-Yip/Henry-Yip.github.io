@@ -22,9 +22,9 @@ For those who aren't, please check out this post:
 
 ## Dihedral Groups
 
-Following from Theorem 1.1, the symmetries of an **n-gon** form a group. We call it **Dihedral Group** 
+The symmetries of an **n-gon** form a group (Proved in **Prerequisites**) We call it **Dihedral Group** 
 
-### **Theorem 1.2**
+### **Theorem 1.1**
 The dihedral group $$D_n$$, has precisely $$\left|D_n\right|=2 n$$ elements
 
 ### **Proof**
@@ -132,7 +132,7 @@ Since $$\sigma \tau \neq \tau \sigma$$, $$D_3$$ is not abelian $$\blacksquare$$
 $$N$$ is a normal subgroup and only if $$g n g^{-1} \in N$$ for all $$g \in G$$ and $$n \in N$$. We denote: $$N \triangleleft G$$.
 
 
-### **Theorem 1.2**
+### **Theorem 1.3**
 Claim: Every Subgroup of an Abelian Group is Normal
 
 ### **Proof**
@@ -142,6 +142,10 @@ Then $$\forall g$$ $$\in$$ $$G$$, $$\forall h$$ $$\in$$ $$H$$,
  $$g h g^{-1}=g g^{-1} h=e h=h \in H$$
 
 Hence $$H \triangleleft G \quad \blacksquare$$
+
+
+## Lagrange's Theorem
+
 
 
 
