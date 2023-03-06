@@ -133,7 +133,7 @@ Since $$\sigma \tau \neq \tau \sigma$$, $$D_3$$ is not abelian $$\blacksquare$$
 $$N$$ is a normal subgroup and only if $$g n g^{-1} \in N$$ for all $$g \in G$$ and $$n \in N$$. We denote: $$N \triangleleft G$$.
 
 
-### **Theorem 1.3**
+### **Theorem 1.2**
 Claim: Every Subgroup of an Abelian Group is Normal
 
 ### **Proof**
@@ -167,22 +167,28 @@ You should verify that $$H$$ is abelian, this is left as an exercise for the rea
 
 If you have done the exercise above, it should be clear that $$G$$ is cyclic $$\Rightarrow$$ $$G$$ is abelian $$\blacksquare$$
 
-**Exercise:** Explain why the converse statement is **not** true? *i.e.*, $$G$$ is abelian $$\nRightarrow$$ $$G$$ is cyclic 
+### **Exercise:** 
+
+Explain why the converse statement is **not** true? *i.e.*, $$G$$ is abelian $$\nRightarrow$$ $$G$$ is cyclic 
 
 **Hint:** Consider $$\mathbb{R}$$ under addition 
 
 
-### **Theorem 1.5** 
+### **Theorem 1.4** 
 Converse of Lagrange's Theorem is not true
 
 ###  **Proof**
 I'll show that $$A_4$$, despite having order of 12, does not have subgroups of order 6.
 
+This is no way original and is inspired from [this post](https://math.stackexchange.com/questions/582658/a-4-has-no-subgroup-of-order-6). 
+
 Assume $$H \subset A_4$$ is a subgroup of $$A_4$$ of order 6 . Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$. (See Appendix C) Again,  since all cosets have name number of elements (See Appendix D) , $$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
+
 $$
 A_4=H \cup a H
 $$
-Now suppose that $$a$$ is a 3 -cycle in $$A_4$$ (Appendix E), then either $$a^2 \in H$$ or $$a^2 \in a H$$. If $$a^2 \in H$$, then this implies that $$a^4=a^2 \cdot a^2 \in H$$ but, since the order of $$a$$ is 3 (it is a $$3^{-}$$ cycle), then $$a^4=a$$ and since $$a \notin H$$ this is a contradiction. Similarly, if $$a^2 \in a H$$then $$a \in H$$ (Appendix F) and again this is a contradiction.
+
+Now suppose that $$a$$ is a 3 -cycle in $$A_4$$ (Appendix E), then either $$a^2 \in H$$ or $$a^2 \in a H$$. If $$a^2 \in H$$, then this implies that $$a^4=a^2 \cdot a^2 \in H$$ but, since the order of $$a$$ is 3 (it is a $$3$$ cycle), then $$a^4=a$$ and since $$a \notin H$$ this is a contradiction. Similarly, if $$a^2 \in a H$$then $$a \in H$$ (Appendix F) and again this is a contradiction.
 As such, H cannot be a subgroup of $$A_4$$ of order 6 
 
 
