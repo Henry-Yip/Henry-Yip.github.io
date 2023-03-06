@@ -12,6 +12,7 @@ toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
+
 ## Pre-requisites
 
 I assume basic familarity with functions and isomorphisms/symmetries.
