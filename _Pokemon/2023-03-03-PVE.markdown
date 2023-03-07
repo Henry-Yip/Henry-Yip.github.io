@@ -137,5 +137,18 @@ However, its bulk is *really low*, so consider it as a glass cannon
 Suggested PVE Attacker Tier List Ranking: B+
 
 
+# Shadow Salamence
+
+Shadow Salamence is one of *the* strongest dragonite type Pokemons, having the the second highest dragon-typed DPS *of all time*, just lagging behind Mega Rayquaza by a bit. It is a bit squishy but nevertheless it serves well. 
+
+What if it has flying type moves? Will it make it a viable flying type attacker?
+
+From the main series, it can learn Air Slash and Aerial Ace. Against Machamp, this will give it a 33.519 DPS, behind shadow moltres (37.481) and Mega Rayquaza (35.282). However, if it is blessed with a move with the same power as sky attack (note that it cannot learn sky attack), it will have a DPS of 40.068, which is pretty good. However, since it is directly competing against psychic type pokemons, it is still strictly worse than shadow mewtwo and mega alakazam. 
+
+
+
+
+
+
 
 
