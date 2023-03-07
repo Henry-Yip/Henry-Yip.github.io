@@ -54,7 +54,9 @@ Chess:
       - title: Important Chess Events
         url: /Chess/ChessEvents/
       - title: Anish Giri
-        url: /Chess/AnishGiri/  
+        url: /Chess/AnishGiri/
+      - title: Solved Chess Puzzles (Daily)
+        url: /Chess/Daily/    
 
            
 Jekyll:

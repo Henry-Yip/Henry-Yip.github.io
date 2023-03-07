@@ -1,36 +1,22 @@
 ---
 layout: single
-title: My Chess Career
+title: Solved Chess Puzzles (Daily!)
 header:
   teaser: /assets/images/AI.png
 katex: False
-permalink: /Chess/AnishGiri/
+permalink: /Chess/Daily/
 sidebar:
  nav: "Chess"
 ---
-### Favourite Openings
- - [Petrov]({% link _Chess/2022-05-27-Petrov.markdown %}))
- - London
- - Sicilian
 
-### Favourite (underrated) Chess Players
+### 7/3/2023
 
- - [Nepomniachtchi, Ian](https://2700chess.com/players/nepomniachtchi_ian)
- - [Howell, David W L](https://2700chess.com/players/howell_david_w_l)
+<iframe width=600 height=371 src="https://lichess.org/study/embed/JQCFZGLJ/pn5iClc8#50" frameborder=0></iframe>
 
-### Lichess 
- - I only play Puzzles
- - Puzzle Peak Rating: 2153
-  * Achieved on 25/10/2022
+White to Play:
 
-### Strength
- - Middlegame
- - Tactics
- - Bullet
+26.Qe7 kh6 27.Qxf8 kh5 (otherwise kg5 -> Nf3). Which are correct but I played 28.g7?? which loses to Qe2! which causes perpetual checking
 
-### Weakness
- - Pawn endgame
- - Calculations
 
 
 
