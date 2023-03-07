@@ -139,13 +139,15 @@ Suggested PVE Attacker Tier List Ranking: B+
 
 # Shadow Salamence
 
-Shadow Salamence is one of *the* strongest dragonite type Pokemons, having the the second highest dragon-typed DPS *of all time*, just lagging behind Mega Rayquaza by a bit. It is a bit squishy but nevertheless it serves well. 
+[Shadow Salamence](https://gamepress.gg/pokemongo/pokemon/373-shadow) is one of *the* strongest dragonite type Pokemons, having the the second highest dragon-typed DPS *of all time*, just lagging behind Mega Rayquaza by a bit. It is a bit squishy but nevertheless it serves well. 
 
 What if it has flying type moves? Will it make it a viable flying type attacker?
 
-From the main series, it can learn Air Slash and Aerial Ace. Against Machamp, this will give it a 33.519 DPS, behind shadow moltres (37.481) and Mega Rayquaza (35.282). However, if it is blessed with a move with the same power as sky attack (note that it cannot learn sky attack), it will have a DPS of 40.068, which is pretty good. However, since it is directly competing against psychic type pokemons, it is still strictly worse than shadow mewtwo and mega alakazam. 
+From the main series, it can learn Air Slash and Aerial Ace. Against Machamp, this will give it a 33.519 DPS, behind [Shadow Moltres](https://gamepress.gg/pokemongo/pokemon/146-shadow) (37.481) and [Mega Rayquaza](https://gamepress.gg/pokemongo/pokemon/384-mega) (35.282). However, if it is blessed with a move with the same power as sky attack (note that it cannot learn sky attack), it will have a DPS of 40.068, which is pretty good. However, since it is directly competing against psychic type pokemons, it is still strictly worse than [Shadow Mewtwo](https://gamepress.gg/pokemongo/pokemon/150-shadow) and [Mega Alakazam](https://gamepress.gg/pokemongo/pokemon/65-mega). 
 
+Against Sceptile,  Air Slash with "Sky Attack" is the 4th higher DPS option against Sceptile, while Fire Fang with "Sky Attack" is the 3rd highest. It's surprising that even without STAB, Fire Fang is better than Sky Attack!
 
+Salamence, despite its high attack stat and Fire Fang + Fire blast moveset, suffers from the lack of STAB and the poorness of Fire Blast. It is ranked 41th in terms of ER value, while countering pure ice typed pokemon. With Flamethrower it can rank 23rd, which it's still nothing great. If salamence is a dragon/fire typed pokemon however, it ranks 4th, just a bit worse than shadow metagross
 
 
 
