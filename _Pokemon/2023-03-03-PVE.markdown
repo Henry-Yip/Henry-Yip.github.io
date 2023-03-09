@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Pokemon Go PvE Analysis
+title: Pokémons with Potential 
 katex: True
 tags: Pokemon Go
 toc: true
@@ -147,7 +147,9 @@ From the main series, it can learn Air Slash and Aerial Ace. Against Machamp, th
 
 Against Sceptile,  Air Slash with "Sky Attack" is the 4th higher DPS option against Sceptile, while Fire Fang with "Sky Attack" is the 3rd highest. It's surprising that even without STAB, Fire Fang is better than Sky Attack!
 
-Salamence, despite its high attack stat and Fire Fang + Fire blast moveset, suffers from the lack of STAB and the poorness of Fire Blast. It is ranked 41th in terms of ER value, while countering pure ice typed pokemon. With Flamethrower it can rank 23rd, which it's still nothing great. If salamence is a dragon/fire typed pokemon however, it ranks 4th, just a bit worse than shadow metagross
+Salamence, despite its high attack stat and Fire Fang + Fire blast moveset, suffers from the lack of STAB and the poorness of Fire Blast. It is ranked 41th in terms of ER value, while countering pure ice typed pokemon. With Flamethrower it can rank 23rd, which it's still nothing great. If salamence is a dragon/fire typed pokemon however, it ranks 4th, just a bit worse than shadow metagross.
+
+
 
 
 
