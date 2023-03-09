@@ -92,3 +92,11 @@ for all symmetries $$f, g, h$$
 
 This is left as an exercise for the readers $$\blacksquare$$
 
+## Extra Definitions
+
+This is for extra information only (*i.e.*) won't be used now/yet.
+A map $\phi$ : $G \rightarrow H$ is  a group homomorphism if
+$\phi(xy) = \phi(x) \phi(y) \quad \forall x, y \in G$
+
+A Group Homomorphism $\phi : G → H$ that is also a bijection is called an isomorphism of groups. We write $G \cong H$
+

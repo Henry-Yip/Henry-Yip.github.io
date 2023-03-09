@@ -216,7 +216,9 @@ Finally for $$b$$, again, first consider $$(ac)$$. However, $$b$$ is not in $$(a
 
 Therefore,  $$a \rightarrow c \rightarrow b \rightarrow a$$,  *i.e.*  $$(ab)(ac)=(acb)$$ $$\blacksquare$$
 
-I will state without proof that the product of a even number of transpositions is also a 3-cycle
+I will state without proof that the product of a even number of transpositions is also a 3-cycle.
+
+
 
 
 
