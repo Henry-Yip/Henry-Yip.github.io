@@ -23,3 +23,14 @@ Three different pages:
  -  PVP Meta
  -  Underated Pokemons - Slacking
  -  Strongest Charged Moves in PVE
+
+Date: 5/3/2023
+
+Two different pages:
+ -  Group Theory
+ -  Prerequisites of Group Theory
+
+Date: 9/3/2023
+
+Continuing on the two Group Theory pages
+
