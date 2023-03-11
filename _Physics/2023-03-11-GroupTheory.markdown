@@ -17,11 +17,11 @@ A gentle introduction to Group Theory, with a heavy emphasis on intuitions.
 
 
 Pre-requisites: Introduction to graphs, group axioms, equivalence class, etc
- - [Pre-requisites-]({% link _Physics/2023-03-05-Prerequisites.markdown %})
+ - [Pre-requisites]({% link _Physics/2023-03-05-Prerequisites.markdown %})
 
 Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, Normal Subgroups
  - [Types of Groups]({% link _Physics/2023-03-05-DiffTypesofGroups.markdown %})
 
 Cosets; Lagrange's Theorem and its properties; Intuitions behind
- - [Cosets; Lagrange's Theorem]({% link _Physics/2023-03-05-CosetsandLagrange.markdown %})
+ - [Cosets; Lagrange's Theorem]({% link _Physics/2023-03-05-CosetsandLagrange %})
 
