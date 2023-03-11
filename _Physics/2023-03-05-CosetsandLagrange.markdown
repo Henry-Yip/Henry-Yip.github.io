@@ -70,7 +70,21 @@ $$
 From above, the rotation group is re-obtained. 
 
 
+**Claim:**
 
+Suppose that $$H \leq G$$ and $$H$$ is finite.
+Then $$|g H|=|H|$$ for all $$g \in G$$.
+
+**Proof:**
+
+Consider the map $$H \rightarrow g H$$ given by $$h \mapsto g h$$. We would like to prove it is a bijection. To prove that it is a bijection, we need to prove it is both injective and surjective.
+
+It is injective since $$g h_1=g h_2$$ implies that $$h_1=h_2$$ (From **Lemma** above)
+
+Surjection is obvious from definition (I'll leave it as an exercise for the readers)
+
+$$\Rightarrow$$  $$H \rightarrow g H$$ is a bijection $$\Rightarrow$$ $$|g H|=|H| \quad \forall g \in G$$
+ $$\blacksquare$$
 
 
 
