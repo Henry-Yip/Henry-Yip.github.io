@@ -1,10 +1,11 @@
 ---
 layout: single
-title: Pre-requisites for "Simple Group Theory"
+title: Pre-requisites for Understanding Group Theory
+hidden: True
 header:
   teaser: /assets/images/Dirichlet.png
 katex: True
-permalink: /physics/prerequisites/
+permalink: /physics/groups2/
 tag: Physics
 toc: true
 toc_label: "Group Theory"
@@ -95,71 +96,13 @@ This is left as an exercise for the readers $$\blacksquare$$\
 ## Equivalent Classes
 
 
+
 ## Extra Definitions
 
 A map $$\phi$$ : $$G \rightarrow H$$ is  a group homomorphism if
 $$\phi(xy) = \phi(x) \phi(y) \quad \forall x, y \in G$$
 
 A Group Homomorphism $$\phi : G → H$$ that is also a bijection is called an isomorphism of groups. We write $$G \cong H$$
-
-
-Theorem:
-Consider a subgroup of $$S_3$$ that only contains the rotations. From above, for $$S_n$$ there are $$n$$ rotations (after including the identity $$e$$) , so the subgroup, denoted by $$H$$, has $$3$$ elements, *i.e.*   $$e, (123),(132)$$. Now consider $$(12) \in S_3$$:
-
-\begin{align}
-(12)(H)&=(12),(12)(123),(12)(132) \\
-&=(12),(23),(13)
-\end{align}
-
-Now consider $$(23) \in S_3$$:
-
-\begin{align}
-(23)(H)&=(23),(23)(123),(23)(132) \\
-&=(23),(13),(12) \\
-&=(12),(23),(13) \\
-&=(12)(H)
-\end{align}
-
-Physical interpretation: It works for the rotation group of $$S_3$$ because of symmetry, *i.e.* $$1,2,3$$ can be relabelled between themselves freely as long as the relabelling itself is bijective
-
-This shows that $$g_1H=g_2H$$ is *possible* even when $$g_1 \neq g_2$$ . The function $$f: G \rightarrow G$$ s.t. $$g_n \rightarrow hg_n$$ for any $$n \in \mathbb{N}$$ is not *injective* as 
-$$(f(g_1)=f(g_2)) \nrightarrow (g_1=g_2)$$ 
-$$\blacksquare$$
-
-Surprising Theorem:
-$$\forall h \in H, hH=H$$
-
-Example: As above, the rotation group of $$S_3$$ is a subgroup of $$S_3$$ (Left as an exercise for the readers). Pick $$h=(123)$$:
-
-\begin{align}
-(123)(H)&=(123),(123)(123),(123)(132) \\
-&=(123),(132),e \\
-\end{align}
-
-From above, the rotation group is re-obtained. 
-
-Idea of proof: From set theory if $$hH \subseteq H$$ and $$H \subseteq hH$$ then $$hH=H$$
-$$hH\subseteq H$$ is obvious from group axioms (closure). I'll prove $$H \subseteq hH$$. To prove that I'll need to show $$y \in H \rightarrow y \in hH$$.
-
-Working backwards, we want $$h^{-1}y \in H$$,  This can easily be proven true: If $$h \in H$$ then $$h^{-1} \in H$$ by group axioms (inverse). Then if $$y \in H$$ and $$h^{-1} \in H$$, $$h^{-1}y \in H$$ by group axioms (closure).
-
-More formal approach:
-Pick $$y \in H$$. Since $$h \in H$$, $$h^{-1} \in H$$ by inverse axiom of groups, hence $$h^{-1}y \in H$$ by closure property of groups. Denote $$m=h^{-1}y$$. As $$m \in H$$, $$hm \in hH$$, hence $$hh^{-1}y \in hH$$, *i.e.* $$y \in hH$$. Hence $$H \subseteq hH$$. 
-
-As $$hH \subseteq H$$ and $$H \subseteq hH$$ then $$hH=H$$ $$\blacksquare$$
-
-
-For  $$g1, g2 \in G$$, define $$g1 \approx g2$$ if and only if g1H = g2H. Then ∼ defines an
-equivalence relation on G.
-
-
-
-Suppose that $$H$$ is a subgroup of $$G$$. Then $$|gH|=|H|$$ (i.e. All cosets have the same number of elements)
-
-If $$g \in H$$ then the above is obvious since $$hH=H$$ $$\rightarrow$$ $$|hH|=|H|$$
-
-The proof itself is left as an exercise for the readers. 
-
 
 
 
