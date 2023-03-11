@@ -177,20 +177,28 @@ First, define $$A_n$$, the Alternating Group, as the even permutations of $$S_n$
 
 ### **Theorem 1.4**
 
- Converse of Lagrange's Theorem is not generally true , i.e. For some groups $$G$$, $$\exists$$ $$d \in \mathbb{Z}$$ s.t.  $$d$$ $$|o(G)$$ but  $$\nexists$$ $$H \leq G$$ s.t. $$o(H)=d$$
-
+ Converse of Lagrange's Theorem is not generally true , i.e. if $$d$$ is a divisor of the order of a group $$G$$, then there may not exist a subgroup $$H$$ where $$|H| = d$$
+ 
 ### Proof
 An example: $$A_4$$ has order $$12$$ but doesn't have subgroups of order $$6$$.
 
 The proof below is not original and comes from 
 [here](https://math.stackexchange.com/questions/582658/a-4-has-no-subgroup-of-order-6)
 
-Assume $$H < A_4$$ is a subgroup of $$A_4$$ of order 6 . Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$. Again,  since all cosets have name number of elements,$$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
-$$$$
+Assume $$H < A_4$$ is a subgroup of $$A_4$$ of order 6 
+
+Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$
+Again,since all cosets have name number of elements,$$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. 
+
+Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
+$$
 A_4=H \cup a H
-$$$$
-Now suppose that $$a$$ is a 3-cycle in $$A_4$$, then either $$a^2 \in H$$ or $$a^2 \in a H$$ (by **closure** if $$a \in A_4$$ then $$a^2 \in A_4$$) If $$a^2 \in H$$, then this implies that $$a^4=a^2 \cdot a^2 \in H$$ (again, **closure**) However, since the order of $$a$$ is 3 (it is a 3-cycle), then $$a^4=a$$ and hence $$a 
-\in H$$. However, from assumption $$a \notin H$$. Cotradiction.
+$$
+
+Now suppose that $$a$$ is a 3-cycle in $$A_4$$, then either $$a^2 \in H$$ or $$a^2 \in a H$$ (by **closure** if $$a \in A_4$$ then $$a^2 \in A_4$$)
+
+If $$a^2 \in H$$, then this implies that $$a^4=a^2 \cdot a^2 \in H$$ (again, **closure**) However, since the order of $$a$$ is 3 (it is a 3-cycle), then $$a^4=a$$ and hence $$a 
+\in H$$. However, from assumption $$a \notin H$$. Contradiction
 
 Similarly, if $$a^2 \in a H$$ then $$a \in H$$ and again this is a contradiction.
 Hence, $$H$$ cannot be a subgroup of $$A_4$$ of order 6 $$\blacksquare$$
@@ -217,6 +225,8 @@ Finally for $$b$$, again, first consider $$(ac)$$. However, $$b$$ is not in $$(a
 Therefore,  $$a \rightarrow c \rightarrow b \rightarrow a$$,  *i.e.*  $$(ab)(ac)=(acb)$$ $$\blacksquare$$
 
 I will state without proof that the product of a even number of transpositions is also a 3-cycle.
+
+
 
 
 
