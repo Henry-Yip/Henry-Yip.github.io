@@ -55,7 +55,7 @@ $$
 ## Functions
 I assume knowledge of functions. *i.e.* [Injection](https://en.wikipedia.org/wiki/Injective_function), [Surjection](https://en.wikipedia.org/wiki/Surjective_function), [Bijection](https://en.wikipedia.org/wiki/Bijection).
 
-## Exercise 1
+### Exercise 1
  Is $$f: \mathbb{R} \rightarrow \mathbb{R}$$ s.t. $$f(x)=x^2$$ Injective? Surjective? Bijective?
 
 Solution: 
@@ -67,7 +67,7 @@ Surjective: No (Do it yourself)
 Bijective: No (Not Injective Not Surjective so not bijective)
 
 
-### Bijections
+## Bijections
 **Claim:**
  Let $$f: V \rightarrow V$$ and $$g: V \rightarrow V$$. $$f, g$$ are bijections implies that $$f \circ g$$ is a bijection
 
@@ -92,11 +92,10 @@ Hence Injection and Surjection proves Bijection
 $$\blacksquare$$
 
 
-**Reminder** 
-
+## Symmetries
 A symmetry is a bijection $$f: V \rightarrow V$$ such that $$f(v_1)$$ and $$f(v_2)$$ are joined by an edge if and only if $$v_1$$ and $$v_2$$ are joined by an edge.
 
-**Definitions**
+## Definition of Groups
 A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the following axioms:
 
 (1) $$a * b \in G$$ $$\quad$$ $$\forall$$ $$a, b, \in G$$ (Closure)
@@ -108,7 +107,7 @@ A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the f
 (4) For any $$a \in G$$  $$\quad$$ $$\exists$$ $$a^{-1} \in G$$ *s.t.* $$a * a^{-1}=$$ $$a^{-1} * a=e$$ (Inverse)
 
 
-## Theorem 1.1
+## Symmetries and Groups Relationships
 **Claim**
 The set of symmetries of a graph forms a group (under composition)
 
@@ -142,10 +141,7 @@ Since **G1-G4** are all satisfied, the set of symmetries of a graph forms a grou
 
 for all symmetries $$f, g, h$$ 
 
-This is left as an exercise for the readers $$\blacksquare$$\
-
-## Equivalent Classes
-
+This is left as an exercise for the readers $$\blacksquare$$
 
 
 ## Extra Definitions
