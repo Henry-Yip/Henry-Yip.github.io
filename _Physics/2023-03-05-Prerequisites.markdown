@@ -59,8 +59,11 @@ I assume knowledge of functions. *i.e.* [Injection](https://en.wikipedia.org/wik
  Is $$f: \mathbb{R} \rightarrow \mathbb{R}$$ s.t. $$f(x)=x^2$$ Injective? Surjective? Bijective?
 
 Solution: 
+
 Injective: Pick $$y=1$$. Then $$x=1$$ or $$x=-1$$. Hence not injective
+
 Surjective: No (Do it yourself)
+
 Bijective: No (Not Injective Not Surjective so not bijective)
 
 
