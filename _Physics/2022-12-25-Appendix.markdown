@@ -148,7 +148,7 @@ Note that dimensional analysis cannot ensure that your answer is correct; rather
 ## Appendix D
 
 
-   - Used in my post about [Group Theory]({% link _Physics/2023-03-05-GroupTheory.markdown %})
+   - Used in my post about [Cosets and Lagrange's Theoremc]({% link _Physics/2023-03-05-GroupTheory.markdown %})
 
 
 ### Lemma
