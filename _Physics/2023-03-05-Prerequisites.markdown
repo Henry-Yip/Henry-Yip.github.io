@@ -13,6 +13,7 @@ toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
+
 ## Equivalence Class
 The content below is not original and comes from [HERE](https://math24.net/equivalence-classes-partitions.html)
 
@@ -36,7 +37,7 @@ $$
 
 We can see that **every element is in one of the equivalence classes** (Every and **no element is in more than one equivalence classes**
 
-## Partitions
+### Partitions
 Let $$A$$ be a set and $$A_1, A_2, \ldots, A_n$$ be its non-empty subsets. The subsets form a partition $$P$$ of $$A$$ if
 - The union of the subsets in $$P$$ is equal to $$A$$.
 $$
@@ -50,6 +51,18 @@ $$
 $$
 A_i \cap A_j=\emptyset \quad \forall i \neq j
 $$
+
+## Functions
+I assume knowledge of functions. *i.e.* [Injection](https://en.wikipedia.org/wiki/Injective_function), [Surjection](https://en.wikipedia.org/wiki/Surjective_function), [Bijection](https://en.wikipedia.org/wiki/Bijection).
+
+## Exercise 1
+ Is $$f: \mathbb{R} \rightarrow \mathbb{R}$$ s.t. $$f(x)=x^2$$ Injective? Surjective? Bijective?
+
+Solution: 
+Injective: Pick $$y=1$$. Then $$x=1$$ or $$x=-1$$. Hence not injective
+Surjective: No (Do it yourself)
+Bijective: No (Not Injective Not Surjective so not bijective)
+
 
 ### Bijections
 **Claim:**
@@ -82,9 +95,13 @@ A symmetry is a bijection $$f: V \rightarrow V$$ such that $$f(v_1)$$ and $$f(v_
 
 **Definitions**
 A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the following axioms:
+
 (1) $$a * b \in G$$ $$\quad$$ $$\forall$$ $$a, b, \in G$$ (Closure)
+
 (2) $$(a * b) * c=a *(b * c)$$ $$\quad$$ $$\forall$$ $$a, b, c \in G$$ (Associativity)
-(3) $$\exists$$ $$e \in G$$ *s.t.* $$a * e=e * a=a$$ $$\quad$$ $$\forall$$ $$a \in G$$ (Identity);
+
+(3) $$\exists$$ $$e \in G$$ *s.t.* $$a * e=e * a=a$$ $$\quad$$ $$\forall$$ $$a \in G$$ (Identity)
+
 (4) For any $$a \in G$$  $$\quad$$ $$\exists$$ $$a^{-1} \in G$$ *s.t.* $$a * a^{-1}=$$ $$a^{-1} * a=e$$ (Inverse)
 
 
