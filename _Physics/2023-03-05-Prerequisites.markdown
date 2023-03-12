@@ -13,8 +13,45 @@ toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
-### Lemma 1.1 
+## Equivalence Class
+The content below is not original and comes from [HERE](https://math24.net/equivalence-classes-partitions.html)
 
+A well-known sample equivalence relation is Congruence Modulo $$n$$. Two integers $$a$$ and $$b$$ are equivalent if they have the same remainder after dividing by $$n$$.
+Consider, for example, the relation of congruence modulo 3 on the set of integers $$\mathbb{Z}$$ :
+$$
+R=\{(a, b) \mid a \equiv b(\bmod 3)\}
+$$
+The possible remainders for $$n=3$$ are 0,1 and 2 . **An equivalence class consists of those integers that have the same remainder** . Hence, there are 3 equivalence classes in this example:
+$$
+\begin{aligned}
+& {[0]=\{\ldots,-9,-6,-3,0,3,6,9, \ldots\}} \\
+& {[1]=\{\ldots,-8,-5,-2,1,4,7,10, \ldots\}} \\
+& {[2]=\{\ldots,-7,-4,-1,2,5,8,11, \ldots\}}
+\end{aligned}
+$$
+Similarly, one can show that the relation of congruence modulo $$n$$ has $$n$$ equivalence classes
+$$
+[0],[1],[2], \ldots,[n-1]
+$$
+
+We can see that **every element is in one of the equivalence classes** (Every and **no element is in more than one equivalence classes**
+
+## Partitions
+Let $$A$$ be a set and $$A_1, A_2, \ldots, A_n$$ be its non-empty subsets. The subsets form a partition $$P$$ of $$A$$ if
+- The union of the subsets in $$P$$ is equal to $$A$$.
+$$
+\bigcup_{i=1}^n A_i=A_1 \cup A_2 \cup \ldots \cup A_n=A
+$$
+- The partition $$P$$ does not contain the empty set $$\varnothing$$.
+$$
+A_i \neq \emptyset \quad \forall i
+$$
+- The intersection of any distinct subsets in $$P$$ is empty.
+$$
+A_i \cap A_j=\emptyset \quad \forall i \neq j
+$$
+
+### Bijections
 **Claim:**
  Let $$f: V \rightarrow V$$ and $$g: V \rightarrow V$$. $$f, g$$ are bijections implies that $$f \circ g$$ is a bijection
 
@@ -39,22 +76,16 @@ Hence Injection and Surjection proves Bijection
 $$\blacksquare$$
 
 
-
-
 **Reminder** 
 
 A symmetry is a bijection $$f: V \rightarrow V$$ such that $$f(v_1)$$ and $$f(v_2)$$ are joined by an edge if and only if $$v_1$$ and $$v_2$$ are joined by an edge.
 
 **Definitions**
-We say that a nonempty set $$G$$ is group under $$*$$ if
-
- - G1. (Closure) $$*$$ is an operation, so $$g * h \in G$$ $$\forall g, h \in G$$.
-
- - G2. (Associativity) $$g *(h * k)=(g * h) * k$$  $$\forall g, h, k \in G$$.
- - G3. (Identity) $$\exists$$ $$e \in G$$ s.t. $$e * g=g * e=g$$, $$\forall g \in G$$
-
- - G4. (Inverses) $$\forall$$ $$g \in G$$, $$\exists$$ $$g^{-1}$$ s.t.$$g * g^{-1}=$$ $$g^{-1} * g=e$$
-
+A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the following axioms:
+(1) $$a * b \in G$$ $$\quad$$ $$\forall$$ $$a, b, \in G$$ (Closure)
+(2) $$(a * b) * c=a *(b * c)$$ $$\quad$$ $$\forall$$ $$a, b, c \in G$$ (Associativity)
+(3) $$\exists$$ $$e \in G$$ *s.t.* $$a * e=e * a=a$$ $$\quad$$ $$\forall$$ $$a \in G$$ (Identity);
+(4) For any $$a \in G$$  $$\quad$$ $$\exists$$ $$a^{-1} \in G$$ *s.t.* $$a * a^{-1}=$$ $$a^{-1} * a=e$$ (Inverse)
 
 
 ## Theorem 1.1
