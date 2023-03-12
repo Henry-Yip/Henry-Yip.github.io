@@ -23,5 +23,5 @@ Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, No
  - [Types of Groups]({% link _Physics/2023-03-05-DiffTypesofGroups.markdown %})
 
 Cosets; Lagrange's Theorem and its properties; Intuitions behind
- - [Cosets; Lagrange's Theorem]({% link _Physics/2023-03-05-CosetsandLagrange %})
+ - [Cosets; Lagrange's Theorem]({% link _Physics/2023-03-05-CosetsandLagrange.markdown %})
 
