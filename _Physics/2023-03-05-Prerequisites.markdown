@@ -15,6 +15,10 @@ sidebar:
 ---
 
 ## Equivalence Class
+
+ - Why Equivalence Classes?
+ - To understand Cosets, hence understand very important theorems like Lagrange's Theorem
+
 The content below is not original and comes from [HERE](https://math24.net/equivalence-classes-partitions.html)
 
 A well-known sample equivalence relation is Congruence Modulo $$n$$. Two integers $$a$$ and $$b$$ are equivalent if they have the same remainder after dividing by $$n$$.
@@ -53,6 +57,8 @@ A_i \cap A_j=\emptyset \quad \forall i \neq j
 $$
 
 ## Functions
+ - Why Functions
+ - Bijection is the key of group theory. As an elementary example, Symmetric Groups themselves are bijections. 
 I assume knowledge of functions. *i.e.* [Injection](https://en.wikipedia.org/wiki/Injective_function), [Surjection](https://en.wikipedia.org/wiki/Surjective_function), [Bijection](https://en.wikipedia.org/wiki/Bijection).
 
 ### Exercise 1
@@ -68,8 +74,11 @@ Bijective: No (Not Injective Not Surjective so not bijective)
 
 
 ## Bijections
+
 **Claim:**
  Let $$f: V \rightarrow V$$ and $$g: V \rightarrow V$$. $$f, g$$ are bijections implies that $$f \circ g$$ is a bijection
+
+Significance: This is important in symmetric groups as it justifies operations like $$(123)(12)=(13)$$
 
 **Proof:**
 Suppose $$v \in V$$.  
@@ -86,14 +95,16 @@ This proves Injection
 
 $$\forall v \in V$$ $$\exists$$ $$v^{\prime}$$ s.t.  $$f\left(g\left(v^{\prime}\right)\right)=v$$
 
-This proves Surjection
+This proves Surjection.
 
-Hence Injection and Surjection proves Bijection
+Hence Injection and Surjection proves Bijection.
 $$\blacksquare$$
 
+## Isomorphism
+An isomorphism between two graphs is a bijection between them
+that preserves all edges. *i.e.* the vertices are still connected by the same edges. If two graphs $$G$$ and $$H$$ are isomorphic we denote by $$G \cong H$$ 
+If the two graphs is the same then this is called a symmetry.
 
-## Symmetries
-A symmetry is a bijection $$f: V \rightarrow V$$ such that $$f(v_1)$$ and $$f(v_2)$$ are joined by an edge if and only if $$v_1$$ and $$v_2$$ are joined by an edge.
 
 ## Definition of Groups
 A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the following axioms:
@@ -109,7 +120,10 @@ A group $$(G, *)$$ is a set $$G$$ with a binary operation $$*$$ satisfying the f
 
 ## Symmetries and Groups Relationships
 **Claim**
-The set of symmetries of a graph forms a group (under composition)
+The set of symmetries of a graph forms a group (under composition). 
+
+Significance:
+Dihedral group itself is the set of symmetries of a n-gon
 
 **Proof:**
 
