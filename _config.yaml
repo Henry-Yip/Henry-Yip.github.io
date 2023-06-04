@@ -138,14 +138,6 @@ defaults:
       show_date: true 
       comments: true
 
-
-# Analytics
-analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
 # Site Author
 author:
   name             : "Henry Yip "
