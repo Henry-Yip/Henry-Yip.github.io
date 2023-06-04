@@ -32,5 +32,5 @@ Two different pages:
 
 Date: 9/3/2023
 
-Continuing on the two Group Theory pages
+Continuing on the two Group Theory pages!
 
