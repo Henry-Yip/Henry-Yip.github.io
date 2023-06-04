@@ -1,0 +1,25 @@
+---
+layout: single
+title: Stun Locks
+header:
+  teaser: /assets/images/Astro.png
+katex: False
+tags: Journal
+permalink: /Journal/NoCV/
+toc: true
+toc_label: "Why NO CV"
+toc_sticky: true
+sidebar:
+ nav: "Physics"
+---
+
+I've realized that most people (all) put their CVs in their personal website. 
+
+Realistically I don't see how potential future employers will stumple upon my website and even if they do, I doubt if this will affect my application procesess. Just like no one ever puts their CVs in their instagram/facebook accounts, right?
+
+The main reason I don't put any personal pictures, however, is because I am terrible at taking pictures. I don't even bother with that. 
+
+
+
+
+
