@@ -107,10 +107,10 @@ var store = [{
         "url": "/Chess/AnishGiri/",
         "teaser": "/assets/images/AI.png"
       },{
-        "title": "My Chess Career",
-        "excerpt":"Favourite Openings     Petrov)   London   Sicilian   Favourite (underrated) Chess Players      Nepomniachtchi, Ian   Howell, David W L   Lichess     I only play Puzzles   Puzzle Peak Rating: 2153   Achieved on 25/10/2022   Strength     Middlegame   Tactics   Bullet   Weakness     Pawn endgame   Calculations   ","categories": [],
+        "title": "Solved Chess Puzzles (Daily!)",
+        "excerpt":"7/3/2023     White to Play:   26.Qe7 kh6 27.Qxf8 kh5 (otherwise kg5 -&gt; Nf3). Which are correct but I played 28.g7?? which loses to Qe2! which causes perpetual checking   ","categories": [],
         "tags": [],
-        "url": "/Chess/AnishGiri/",
+        "url": "/Chess/Daily/",
         "teaser": "/assets/images/AI.png"
       },{
         "title": "Henry Yip",
@@ -329,6 +329,36 @@ var store = [{
         "url": "/physics/FourierSeries/",
         "teaser": "/assets/images/Dirichlet.png"
       },{
+        "title": "Cosets and Lagrange's Theorem",
+        "excerpt":"Cosets Theorem Claim: \\(g_1H=g_2H\\) is possible even when \\(g_1 \\neq g_2\\) Proof: Consider a subgroup of \\(S_3\\) that only contains the rotations and the identity element \\(e\\). From above, this subgroup contains \\((n-1)+1=n\\) elements , so the subgroup, denoted by \\(H\\), has \\(3\\) elements, i.e. \\(e, (123),(132)\\). Now consider \\((12)...","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/groups4/",
+        "teaser": "/assets/images/Dirichlet.png"
+      },{
+        "title": "Different Types of Groups",
+        "excerpt":"Dihedral Groups The symmetries of an n-gon form a group (Proved in Prerequisites) We call it Dihedral Group Theorem 1.1 The dihedral group \\(D_n\\), has precisely \\(\\left|D_n\\right|=2 n\\) elements Proof \\(D_n\\) consists of: The identity \\(e \\in D_n\\) (Trivial) The \\(n-1\\) rotations (any direction) through angles \\(k \\cdot \\frac{2 \\pi}{n}\\),...","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/groups3/",
+        "teaser": "/assets/images/Dirichlet.png"
+      },{
+        "title": "Pre-requisites for Understanding Group Theory",
+        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem The content below is not original and comes from HERE A well-known sample equivalence relation is Congruence Modulo \\(n\\). Two integers \\(a\\) and \\(b\\) are equivalent if they have the same remainder after dividing...","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/groups2/",
+        "teaser": "/assets/images/Dirichlet.png"
+      },{
+        "title": "Vector Calculus in Physics",
+        "excerpt":"Einstein Summation Convention Einstein Summation Convention can be intimidating/annoying to work with at start, but it saves you a lot of time (and makes you look pro). From Wolfram Mathworld and based on what I know, there are a few rules: All summation signs are omitted! (Hence simplicity!) Repeated indices...","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/Vector%20Calculus/",
+        "teaser": "/assets/images/Dirichlet.png"
+      },{
+        "title": "Facets of Group Theory",
+        "excerpt":"A gentle introduction to Group Theory, with a heavy emphasis on intuitions.   Pre-requisites: Introduction to graphs, group axioms, equivalence class, etc     Pre-requisites   Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, Normal Subgroups     Types of Groups   Cosets; Lagrange’s Theorem and its properties; Intuitions behind     Cosets; Lagrange’s Theorem   ","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/groups1/",
+        "teaser": "/assets/images/Dirichlet.png"
+      },{
         "title": "Pokemon Go PvP Analysis",
         "excerpt":"Master League A battle between Mewtwo, Zacian, Dialga, Giratina and Dragonite I use PvPoke for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is: \\[\\text{Points}=\\frac{\\text{HP Remaining}}{\\text{ HP Total}}\\] For example, Dialga is expected to win Mewtwo, both without shields, with a...","categories": [],
         "tags": ["Pokemon","Go"],
@@ -341,7 +371,7 @@ var store = [{
         "url": "/Pokemon/Moves/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
-        "title": "Pokemon Go PvE Analysis",
+        "title": "Pokémons with Potential",
         "excerpt":"Introduction Many Pokemons have great stats, great potential, but a suboptimal movepool, resulting in suboptimal performance. Now, we’ll analyse some of these pokemons, and see how far they can actually get Slaking Slaking is a Pokemon with Great Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega...","categories": [],
         "tags": ["Pokemon","Go"],
         "url": "/Pokemon/PvE/",
@@ -359,6 +389,12 @@ var store = [{
         "url": "/Pokemon/Journey/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
+        "title": "Basics of Pokemon Go",
+        "excerpt":"Typing All Pokemons are categorized into types and a pokemon can have 2 types at the same time (So they don’t form an Equivalence Class) Effectiveness All typings take reduced damage from moves of some particular types, and are exceptionally vulnerable to moves of some other types. For example, Fairy...","categories": [],
+        "tags": ["Pokemon","Go"],
+        "url": "/Pokemon/Basics/",
+        "teaser": "/assets/images/Dubrovnik.jpg"
+      },{
         "title": "Website Update Log - February",
         "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Spent 1 day. It’s a nice introduction to Fourier Series and Dirichlet’s Kernel. Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is...","categories": [],
         "tags": [],
@@ -372,7 +408,7 @@ var store = [{
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "Website Update Log - March",
-        "excerpt":"Date: 1/3/2023  #1: New section - Pokemon Go   Date: 2/3/2023   Three different pages:     PVP Meta   Underated Pokemons - Slacking   Strongest Charged Moves in PVE  ","categories": [],
+        "excerpt":"Date: 1/3/2023  #1: New section - Pokemon Go   Date: 2/3/2023   Three different pages:     PVP Meta   Underated Pokemons - Slacking   Strongest Charged Moves in PVE   Date: 5/3/2023   Two different pages:     Group Theory   Prerequisites of Group Theory   Date: 9/3/2023   Continuing on the two Group Theory pages!   ","categories": [],
         "tags": [],
         "url": "/Updates/March/",
         "teaser": "/assets/images/LaTeX.png"
@@ -383,13 +419,13 @@ var store = [{
         "url": "/Astrophysics/",
         "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "Darkenergy",
+        "title": "Dark Energy",
         "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
         "tags": [],
         "url": "/DarkEnergy/",
         "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "Welcome",
+        "title": "An Introduction to This Website",
         "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
@@ -401,31 +437,31 @@ var store = [{
         "url": "/Appendix/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Hkdse",
+        "title": "HKDSE Physics",
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Introduction From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a...","categories": [],
         "tags": [],
         "url": "/HKDSE/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Commenting",
+        "title": "Writing me constructive comments",
         "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
         "tags": [],
         "url": "/Commenting/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Futureofwebsite",
+        "title": "henry-yip.github.io; Future and Thoughts",
         "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
         "tags": [],
         "url": "/FutureofWebsite/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Smallperbuations",
+        "title": "Small Perbuations",
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": [],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Wolf.png"
       },{
-        "title": "Playlist",
+        "title": "Classical Music Playlist",
         "excerpt":"I am a classical music enthusiast. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of Fugue 1.5 hrs of fugue - full of variations. Note the definition of Fugue...","categories": [],
         "tags": [],
         "url": "/Playlist/",
