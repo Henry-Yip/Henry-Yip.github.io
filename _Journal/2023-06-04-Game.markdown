@@ -1,0 +1,16 @@
+---
+layout: single
+title: Stun Locks
+header:
+  teaser: /assets/images/Astro.png
+katex: False
+tags: Journal
+permalink: /Journal/Game/
+toc: true
+toc_label: "Random Rant on 13/1/2022"
+toc_sticky: true
+sidebar:
+ nav: "Physics"
+---
+
+<iframe src="https://trinket.io/embed/python/76e5d36dc6?outputOnly=true&runOption=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
