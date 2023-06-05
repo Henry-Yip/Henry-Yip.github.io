@@ -45,6 +45,9 @@ collections:
   Pokemon:     
     output: true
     permalink: /:collection/:path/   
+  Private:     
+    output: true
+    permalink: /:collection/:path/     
   
 
 cd dtheme                  : "minimal-mistakes-jekyll"

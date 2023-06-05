@@ -2,9 +2,9 @@
 layout: single
 title: Christmas Holiday 2022/2023
 katex: True
-permalink: /Journal/ChristmasHoliday/
+permalink: /Private/ChristmasHoliday/
 toc: true
-toc_label: "How to study"
+toc_label: "Christmas"
 toc_sticky: true
 sidebar:
  nav: "Journal"

@@ -127,8 +127,11 @@ Journal:
       - title: "Christmas Holiday 2022/2023"
         url: /Journal/ChristmasHoliday/
 
-
-
+Private:
+  - title: Private
+    children:
+      - title: "Christmas 2022/2023"
+        url: /Private/ChristmasHoliday/
  
 
 Contributors:
