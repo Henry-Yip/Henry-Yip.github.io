@@ -121,6 +121,21 @@ C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/bundler-2.3.20/lib/bundler/runtime.rb:308
 
 Howevever considering it won't really take that long, it's probably just fine to let it run for a while!
 
+**#6 No Repo Name Found **
+
+ Liquid Exception: No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository. in /_layouts/default.html
+             ERROR: YOUR SITE COULD NOT BE BUILT:
+                    ------------------------------------
+                    No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.
+
+
+Solution: Add repo name in config.yml        
+
+```bash
+repository               : Henry-Yip/Random_Project
+```
+
+
 
 
 

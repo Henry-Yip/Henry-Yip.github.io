@@ -221,16 +221,16 @@ var store = [{
         "url": "/Journal/SelfIdentity/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Christmas Holiday 2022/2023",
-        "excerpt":"First Week Those who know me know I struggled during the semester due to insane workload (Mon to Sun Morning to Night without 1 min of break). I spent the first week just absolutely being lost (waking up at 1pm, going out to eat a meal then sleeping at 4am,...","categories": [],
-        "tags": [],
-        "url": "/Journal/ChristmasHoliday/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Stun Locks",
         "excerpt":"Stun Locks I just read Toby Lam’s post on Stun-Locks Those who know me personally in Edinburgh know I’m not a very imaginative problem solver, and my strength mainly lies in solving very arduous algebra/ differential equations with very high accuracy. So if the questions are moderately-difficult, chances are I...","categories": [],
         "tags": ["Journal"],
         "url": "/Journal/StunLocks/",
+        "teaser": "/assets/images/Astro.png"
+      },{
+        "title": "Stun Locks",
+        "excerpt":"I’ve realized that most people (all) put their CVs in their personal website. Realistically I don’t see how potential future employers will stumple upon my website and even if they do, I doubt if this will affect my application procesess. Just like no one ever puts their CVs in their...","categories": [],
+        "tags": ["Journal"],
+        "url": "/Journal/NoCV/",
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "LaTeX Tutorial (1)",
@@ -413,35 +413,11 @@ var store = [{
         "url": "/Updates/March/",
         "teaser": "/assets/images/LaTeX.png"
       },{
-        "title": "Astrophysics",
-        "excerpt":"Introduction Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and...","categories": [],
-        "tags": [],
-        "url": "/Astrophysics/",
-        "teaser": "/assets/images/Wolf.png"
-      },{
-        "title": "Dark Energy",
-        "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
-        "tags": [],
-        "url": "/DarkEnergy/",
-        "teaser": "/assets/images/Wolf.png"
-      },{
         "title": "An Introduction to This Website",
         "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
-      },{
-        "title": "Appendix",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
-        "tags": [],
-        "url": "/Appendix/",
-        "teaser": "/assets/images/Astro.png"
-      },{
-        "title": "HKDSE Physics",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Introduction From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a...","categories": [],
-        "tags": [],
-        "url": "/HKDSE/",
-        "teaser": "/assets/images/Astro.png"
       },{
         "title": "Writing me constructive comments",
         "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
@@ -455,15 +431,9 @@ var store = [{
         "url": "/FutureofWebsite/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "Small Perbuations",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
+        "title": "Private Section",
+        "excerpt":"New Private Section!  Starting from 6/6/2023, you can view the private section of my website if you have the password. I built it with the help of this guide   The Website  The Website  ","categories": [],
         "tags": [],
-        "url": "/SmallPerbuations/",
-        "teaser": "/assets/images/Wolf.png"
-      },{
-        "title": "Classical Music Playlist",
-        "excerpt":"I am a classical music enthusiast. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of Fugue 1.5 hrs of fugue - full of variations. Note the definition of Fugue...","categories": [],
-        "tags": [],
-        "url": "/Playlist/",
-        "teaser": "/assets/images/Wolf.png"
+        "url": "/PrivateSection/",
+        "teaser": "/assets/images/Astro.png"
       }]
