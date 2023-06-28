@@ -50,7 +50,7 @@ My tone here is quite informal? But in Academic Posts I have a much more serious
 Two years without typing english means my english proficiency has deteriotated significantly (less than IELTs 8.0), so I'm genuinely sorry if I have made any Grammatical Mistakes here
 
 ## Friends
-Some of my friends have their own websites, but not many. Maybe that's because I know too any medicine people and they are too busy/don't really care about this, or are somehow intimitated by my nerdiness/by the complexity of Jekyll. Anyhow, anyway, I just think it's easier to maintain a website than social media page (after you have set up everything of course)
+Some of my friends have their own websites, but not many. Maybe that's because I know too any medicine people and they are too busy/don't really care about this, or are somehow intimitated by my nerdiness/by the complexity of Html/Javascript/Jekyll/... Anyhow, anyway, I just think it's easier to maintain a website than social media page (after you have set up everything of course)
 
 
 
