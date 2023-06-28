@@ -17,25 +17,14 @@ I must say I really enjoyed writing my blog post on [HKDSE Physics]({% link _Phy
 
 I will focus more on Physics Content from now on, having attended course related to [Fields, Waves](http://www.drps.ed.ac.uk/22-23/dpt/cxphys08053.htm) and [Matter](http://www.drps.ed.ac.uk/20-21/dpt/cxphys08054.htm), which is heavily related to [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
 
-I plan to write more about Astrophysics. I have made a $$\LaTeX$$ [post]({% link _Physics/2022-05-21-Astrophysics.markdown %}) about it and I have included my $$\LaTeX$$ Source Code in [Another Post]({% link _Physics/2022-05-22-Astrocont.markdown %}). I have also written a semi-formal article on [Dark Energy]({% link _Physics/2022-08-02-DarkEnergy.markdown %}). However, I still plan to write about the Stefan-Boltzmann law, which, I think, is covered in E1 in HKDSE Physics, maybe a talk on Wien's Displacement Law is also appreciatable, but that requires knowledge in Lambert W Function, and I will have to start talking about Branch Cuts and stuff like that, which is slightly more complicated than I want. However, I think I'll try to write a mild introduction to that topic. 
-
-As a Mathematical Physics Student, I enjoy having math rigor, that's why I enjoy the use of Quantifiers, *i.e.* sentences like:
-
-$$\sim[\forall x, S(x)] \equiv \exists x:[\sim S(x)]$$
-
-Below I'll provide the $$\LaTeX$$ source code:
-
-```bash
-$$\sim[\forall x, S(x)] \equiv \exists x:[\sim S(x)]$$
-```
+Despite having written a semi-formal article on [Dark Energy]({% link _Physics/2022-08-02-DarkEnergy.markdown %}), I am not inclining to write any more astrophysics related content, instead focusing on Mathematical Physics, or simply, physics with rigorous math.
 
 Maybe I'll write a bit on Music Also. I am interested in analysing Beethoven Sonatas, and comparing between different interpreters, like the less "conventional" ones, say Glenn Gould 
 
-```bash
-Glenn Gould's Beethoven has a Strong Baroque Influence
-```
-
 ## Polishing Old Content
+
+### Polishing Grammatical Mistakes
+I am re-checking my grammatical accuracy as I am often in a rush writing these essays.
 
 ### Jekyll
 This is also something I will do. I feel like my Jekyll documents are generally outdated and some are for Minima Users, which is different from Minimal Mistakes. I have adopted new skills in general and I'm not even using the **_sites** method suggested by [Toby Lam](https://tobylam.xyz/), *i.e.* I am actually putting all my original markdown files in GitHub and allow GitHub pages to render it to my website, instead of using:
