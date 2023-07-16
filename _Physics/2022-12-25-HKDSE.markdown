@@ -58,8 +58,10 @@ Estimate Peter Griffin's weight:
 With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^{10} \text{kg} $$. Hmmmm
 
 
+### Generalized Case
+Unfortunately the case above only works for circles. Below I will show it works for all ellispes. For what ellispes are, please check [Appendix E]({% link _Physics/2022-12-25-Appendix.markdown})
 
-**Proposition**: $$T^2 \propto a^3 \forall $$ ellipses, where a is the semi-major axis
+**Proposition**: $$T^2 \propto a^3 \space \forall $$ ellipses, where a is the semi-major axis
 
 **Proof**:
 
@@ -88,7 +90,7 @@ $$
 \Delta t=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-\epsilon^2} \quad \Longrightarrow \quad(\Delta t)^2=\frac{(2 \pi)^2 a^3}{h^2} l=(2 \pi)^2 a^3 \frac{m}{k}
 $$
 
-We deduce $$(\Delta t)^2 / a^2=(2 \pi)^2 / G M$$, which is consistent with the analysis from **HKDSE**
+We deduce $$(\Delta t)^2 / a^3=(2 \pi)^2 / G M$$, which is consistent with the analysis from **HKDSE**
 
 ## (Angular)Momentum Conservation
 
