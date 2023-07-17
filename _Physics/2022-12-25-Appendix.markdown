@@ -181,8 +181,7 @@ Therefore there exists a unique element $$k \in G$$ such that $$k * g=h$$ $$\bla
 
 Ellispes are a form of conic sections. 
 
-var element = new Array();
-element[1]='<table width="98%" align="center"><tr><td><span class="small"><b>16/07/2023 16:50 氣壓（百帕）</b></span></td></tr><tr><td class="wxbody"><table width="100%"><tr><td width="50%" valign="top"><table width="100%"><tr><td width="80%" class="stn">橫瀾島</td><td width="20%" class="data">995.3</td></tr><tr><td width="80%" class="stn">京士柏</td><td width="20%" class="data">995.7</td></tr><tr><td width="80%" class="stn">香港天文台</td><td width="20%" class="data">995.8</td></tr><tr><td width="80%" class="stn">流浮山</td><td width="20%" class="data">995.8</td></tr><tr><td width="80%" class="stn">坪洲</td><td width="20%" class="data">995.8</td></tr><tr><td width="80%" class="stn">打鼓嶺</td><td width="20%" class="data">995.8</td></tr></table></td><td width="50%" valign="top"><table width="100%"><tr><td width="80%" class="stn">赤&#40050;角</td><td width="20%" class="data">996.0</td></tr><tr><td width="80%" class="stn">上水</td><td width="20%" class="data">996.0</td></tr><tr><td width="80%" class="stn">濕地公園</td><td width="20%" class="data">996.1</td></tr><tr><td width="80%" class="stn">長洲</td><td width="20%" class="data">996.2</td></tr><tr><td width="80%" class="stn">沙田</td><td width="20%" class="data">996.4</td></tr><tr><td width="80%" class="stn">大埔</td><td width="20%" class="data">996.5</td></tr></table></td></tr></table></td></tr></table>';
+Incomplete!
 
 
 
