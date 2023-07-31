@@ -103,7 +103,7 @@ Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect
 
 ## Air Resistance
 
-My friend asked me whether a plane falls through the sky and a person falls through the sky has a higher terminal velocity (considering air resistance). As I was quite tired at the time, I answered "yes" but the answer is clearly "No!". Here I will explain why:
+Inspired by a conversation in Shenzhen, I am trying to compare the terminal velocity of a human and a plane under turbulent flow:
 
 Consider $$a=\dot{v(t)}$$, we have $$F=m\dot{v}$$. Now consider downwards as positive. Assume air resistance is $$kv^2$$, where $$k \in \mathbb{R}$$. Then we have:
 
