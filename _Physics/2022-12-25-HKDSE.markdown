@@ -15,6 +15,11 @@ sidebar:
 ---
 
 ## Introduction
+HKDSE is a public exam taken by Hong Kong high school students. It covers a wide range of physics (basic dynamics, gas, electromagnetism, etc.)
+
+I am here using knowledge I gained in university to explain some advanced topics strongly related to the HKDSE Physics syllabus. 
+
+## Centripetal Force
 From HKDSE Physics, we have Centripetal force as $$mr\omega^2$$, or equivalently $$mr \dot{\theta}^2$$ This is a very special form and only works for circular orbit, as radius is a constant. In General,
 
 $$
@@ -95,6 +100,63 @@ $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$, or equivalently $$|\und
 Angular Momentum is something you will encounter while skating (or spinning your chair). If you spread your arms and contract your arms, you will realize that you will spin in a different speed, because angular momentum has to be conserved (assumed no friction)
 
 Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect to say "angular momentum is converted to linear momentum" because this violates dimensional analysis. More about Dimensional Analysis in [Appendix C]({% link _Physics/2022-12-25-Appendix.markdown %})
+
+## Air Resistance
+
+My friend asked me whether a plane falls through the sky and a person falls through the sky has a higher terminal velocity (considering air resistance). As I was quite tired at the time, I answered "yes" but the answer is clearly "No!". Here I will explain why:
+
+Consider $$a=\dot{v(t)}$$, we have $$F=m\dot{v}$$. Now consider downwards as positive. Assume air resistance is $$kv^2$$, where $$k \in \mathbb{R}$$. Then we have:
+\begin{aligned}
+ m\dot{v}&=mg-kv^2 \\
+ m \frac{dv}{dt}&=mg-kv^2 \\
+ mdv&=(mg-kv^2)dt \\
+ \frac{mdv}{mg-kv^2}&=dt \\
+\int_{0}^{v}  \frac{mdv}{mg-kv^2} &= \int_{0}^{t}dt \\
+t&=\int_{0}^{v}  \frac{mdv}{mg-kv^2} 
+ \end{aligned}
+
+ Where we assumed $$v(0)=0$$
+
+ 
+\begin{equation}
+\int \frac{d v}{m g-k v^2}  =\frac{1}{m g} \int\frac{d v}{1-\frac{k}{m g} v^2} \\
+\end{equation}
+
+Evaluate the indefinite integral first, If we assume $$u=\sqrt\frac{k}{mg} v$$, hence $$\sqrt\frac{mg}{k} du=dv$$, we have:
+
+$$
+\begin{aligned}
+&\frac{1}{\sqrt{m g k}} \int \frac{d u}{1-u^2} \\
+& =\frac{1}{\sqrt{m g k}} 
+\tanh ^{-1}(u) \\
+&=\frac{1}{\sqrt{m g k}} \tanh ^{-1}\left(v \sqrt{\frac{k}{m g}}\right)
+\end{aligned}
+$$
+
+The reader can easily check that the definite integral is the same, i.e.
+
+$$t=\frac{1}{\sqrt{m g k}} \tanh ^{-1}\left(v \sqrt{\frac{k}{m g}}\right)$$
+
+After this we can do some algebraic manipulations to get :
+\begin{equation}
+v=\sqrt {\frac{mg}{k}}\tanh[(\sqrt{mgk})(t)] 
+\end{equation}
+
+As $$\tanh(x)$$ approaches $$1$$, $$v_\text{Terminal}=\sqrt{\frac{mg}{k}}$$
+
+Next, we have to find the value of $$k$$:
+Using [drag equation ](https://en.wikipedia.org/wiki/Drag_equation), assuming turbulent flow:
+
+$$
+ F_{\mathrm{d}}=\frac{1}{2} \rho  c_{\mathrm{d}} A v^2
+$$
+Hence:
+\begin{align}
+v_\text{Terminal}&=\sqrt{\frac{mg}{k}} \\
+&=\sqrt{\frac{2mg}{\rho c_d A}}
+\end{align}
+
+As $$m_\text{human}$$<<<$$m_\text{plane}$$, the difference in $$c_d$$ and $$A$$ can't compensate, and hence terminal velocity of planes are much higher during free fall.
 
 
 
