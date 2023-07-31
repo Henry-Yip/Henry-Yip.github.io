@@ -13,6 +13,7 @@ header:
 sidebar:
  nav: "Physics"
 ---
+Note: Some of the content are similar to lecture notes from my Dynamics course, Introductory Dynamics (PHYS08052). I tried my best to avoid copying, but some of the flow may be similar. 
 
 ## Introduction
 HKDSE is a public exam taken by Hong Kong high school students. It covers a wide range of physics (basic dynamics, gas, electromagnetism, etc.)
