@@ -155,11 +155,13 @@ $$
  F_{\mathrm{d}}=\frac{1}{2} \rho  c_{\mathrm{d}} A v^2
 $$
 Hence:
+
 $$
-\begin{align}
+\begin{aligned}
 v_\text{Terminal}&=\sqrt{\frac{mg}{k}} \\
 &=\sqrt{\frac{2mg}{\rho c_d A}}
-\end{align}$$
+\end{aligned}
+$$
 
 As $$m_\text{human}$$<<<$$m_\text{plane}$$, the difference in $$c_d$$ and $$A$$ can't compensate, and hence terminal velocity of planes are much higher during free fall.
 
