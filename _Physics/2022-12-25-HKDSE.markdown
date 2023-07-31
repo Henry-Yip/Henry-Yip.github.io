@@ -106,6 +106,8 @@ Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect
 My friend asked me whether a plane falls through the sky and a person falls through the sky has a higher terminal velocity (considering air resistance). As I was quite tired at the time, I answered "yes" but the answer is clearly "No!". Here I will explain why:
 
 Consider $$a=\dot{v(t)}$$, we have $$F=m\dot{v}$$. Now consider downwards as positive. Assume air resistance is $$kv^2$$, where $$k \in \mathbb{R}$$. Then we have:
+
+$$
 \begin{aligned}
  m\dot{v}&=mg-kv^2 \\
  m \frac{dv}{dt}&=mg-kv^2 \\
@@ -114,13 +116,15 @@ Consider $$a=\dot{v(t)}$$, we have $$F=m\dot{v}$$. Now consider downwards as pos
 \int_{0}^{v}  \frac{mdv}{mg-kv^2} &= \int_{0}^{t}dt \\
 t&=\int_{0}^{v}  \frac{mdv}{mg-kv^2} 
  \end{aligned}
+ $$
 
  Where we assumed $$v(0)=0$$
 
- 
+$$
 \begin{equation}
 \int \frac{d v}{m g-k v^2}  =\frac{1}{m g} \int\frac{d v}{1-\frac{k}{m g} v^2} \\
 \end{equation}
+$$
 
 Evaluate the indefinite integral first, If we assume $$u=\sqrt\frac{k}{mg} v$$, hence $$\sqrt\frac{mg}{k} du=dv$$, we have:
 
@@ -151,10 +155,11 @@ $$
  F_{\mathrm{d}}=\frac{1}{2} \rho  c_{\mathrm{d}} A v^2
 $$
 Hence:
+$$
 \begin{align}
 v_\text{Terminal}&=\sqrt{\frac{mg}{k}} \\
 &=\sqrt{\frac{2mg}{\rho c_d A}}
-\end{align}
+\end{align}$$
 
 As $$m_\text{human}$$<<<$$m_\text{plane}$$, the difference in $$c_d$$ and $$A$$ can't compensate, and hence terminal velocity of planes are much higher during free fall.
 
