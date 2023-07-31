@@ -163,7 +163,7 @@ We have used simple math to analyse the orbit equation! How cool is that!
 
 ## Eccentricity and Energy
 
-From Wikipedia, we can obtain:
+From [Wikipedia](https://en.wikipedia.org/wiki/Orbit_equation), we can obtain:
 $$r(\theta)=\frac{L^2}{m^2 \mu} \frac{1}{1+e \cos \theta}$$
 
 The symbols are different from what we have defined. So we will fix this. $$L$$ in wikipedia is defined as $$mr^2\dot{\theta}$$, which is equal to $$mh$$ (see appendix). Hence $$L^2=m^2h^2$$. Then we have:
@@ -180,7 +180,7 @@ $$
 E=\frac{mh^2}{2l^2}\left[\epsilon^2-1\right]
 $$
 
-From this website, we can see:
+From [this website](https://www.macmillanlearning.com/studentresources/college/physics/tiplermodernphysics6e/classial_concept_review/chapter_4_ccr_13_energy_of_a_particle_in_an_elliptical_orbit.pdf), we can see:
 
 $$
 \begin{equation}
