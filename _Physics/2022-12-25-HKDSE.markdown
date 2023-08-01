@@ -226,17 +226,14 @@ Two point masses $$m_1$$ and $$m_2$$ are spaced apart in a vacuum in space, with
 ### Solution
 I am heavily inspired by [1](https://www.physicsforums.com/threads/remarkably-difficult-newtonian-problem.360987/#post-2497098) and [2](https://physics.stackexchange.com/questions/34366/time-taken-for-object-in-space-to-fall-to-earth):
 
-With **object 1** on the left and **object 2** on the right, we can define these below:    ($F_{21}$ means object 2 acts on object 1)
+With **object 1** on the left and **object 2** on the right, we can define these below:    
 
 $$
-F_{21}=G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_1 \ddot{x}_1
+\begin{aligned}
+F_{21}&=G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_1 \ddot{x}_1
+F_{12}&=-F_{21}=-G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_2 \ddot{x}_2
+\end{aligned}
 $$
-
-$$
-F_{12}=-F_{21}=-G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_2 \ddot{x}_2
-$$
-
-
 
 Therefore the accelerations are given by:
 
@@ -269,7 +266,9 @@ $$
 \int_{0}^{T}\frac{d}{dt}\left(\frac{1}{2}\dot{r}^2\right) dt&= \int_{0}^{T}-G \frac{m_1+m_2}{r^2} \left(\frac{dr}{dt}\right) dt
 \end{aligned}
 $$
+
 This is not a calculus article so I won't discuss the rigor behind next time. However, if you want to be rigorous you can do it yourself!
+
 $$
 \begin{aligned}
 \frac{1}{2}\dot{r}^2&= \int_{R}^{r}-G \frac{m_1+m_2}{r^2}  dr \\
@@ -277,6 +276,7 @@ $$
 \frac{dr}{dt}&=-\sqrt{ 2G(m_1+m_2)\left[\frac{1}{r}-\frac{1}{R}\right]}
 \end{aligned}
 $$
+
 Where we take the negative square root as $v$ is positive
 
 $$
@@ -287,7 +287,9 @@ $$
 \int_{R}^{0}\sqrt{\frac{r}{R-r}} dr  &= -\sqrt\frac{{2G(m_1+m_2)}}{R} T
 \end{aligned}
 $$
-From Wolframalpha the left integral is equal to $\frac{-R\pi}{2}$. Hence :
+
+From Wolframalpha the left integral is equal to $\frac{-R\pi}{2}$. Hence:
+
 $$
 \begin{aligned}
 \frac{-R\pi}{2}&= -\sqrt\frac{{2G(m_1+m_2)}}{R} T \\
@@ -369,4 +371,87 @@ v_\text{Terminal}&=\sqrt{\frac{mg}{k}} \\
 $$
 
 As $$m_\text{human}$$<<<$$m_\text{plane}$$, the difference in $$c_d$$ and $$A$$ can't compensate, and hence terminal velocity of planes are much higher during free fall.
+
+## Dropping to center of earth
+How long does it take to drop to the center of earth and what will happen after that?
+To do this we need to know simple harmonic motion and Gauss's law for gravitation!
+
+The content for Gauss's law for gravitation (as below) is heavily inspired (and some parts copied) from [here](https://en.wikipedia.org/wiki/Gauss%27s_law_for_gravity) 
+
+But first, we need to revise some vector calculus:
+### Theorem 
+$$
+\nabla \cdot\left(\frac{\mathbf{r}}{|\mathbf{r}|^3}\right)=4 \pi \delta(\mathbf{r})
+$$
+
+### Proof
+As we are dealing with gravitational fields, we shall use cylindrical coordinate system. 
+
+Now, let $$\mathbf{A}=\frac{\mathbf{r}}{|\mathbf{r}|^3}:$$
+
+$$\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(A_\theta \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial A_{\varphi}}{\partial \varphi}$$
+
+As the field is $$\theta$$ and $$\phi$$ independent, we have:
+$$\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}$$
+
+Where $$A_r=\frac{1}{r^2}$$. Hence $$\nabla \cdot \frac{\mathbf{r}}{|\mathbf{r}|^3}=\left(\frac{1}{r^2}\right)(0)=0$$
+
+Note that this is only valid for $$\mathbf{r} \neq \mathbf{0}$$ as we are dividing by 0.
+
+On the other hand, we have:
+
+$$
+\begin{gathered}
+\iiint_{\text {volume } \tau} \nabla \cdot\left(\frac{\mathbf{e}_r}{r^2}\right) \mathrm{d} \tau=\iint_{\text {surface enclosing } \tau} \frac{\mathbf{e}_r}{r^2} \cdot \mathbf{e}_r \mathrm{~d} \sigma \\
+=\int_{\phi=0}^{2 \pi} \int_{\theta=0}^\pi \frac{1}{r^2} r^2 \sin \theta \mathrm{d} \theta \mathrm{d} \phi=4 \pi
+\end{gathered}
+$$
+The equation above is copied [here](https://math.stackexchange.com/questions/1687332/show-that-nabla-cdot-left-dfrac-mathbfe-rr2-right-4-pi-delta-mathbf)
+
+This means at $$\mathbf{r}=\mathbf{0}$$, the divergence is equal to $$4 \pi$$. Alternatively, we can write:
+
+$$
+\nabla \cdot\left(\frac{\mathbf{r}}{|\mathbf{r}|^3}\right)=4 \pi \delta(\mathbf{r})
+$$
+
+
+Now,
+
+$$
+\begin{aligned}
+\nabla \cdot\mathbf{g}(\mathbf{r})&=-G \int  \rho(\mathbf{s}) \left [\nabla \cdot\frac{(\mathbf{r}-\mathbf{s})}{|\mathbf{r}-\mathbf{s}|^3} \right] d^3 \mathbf{s} \\
+&=-4 \pi G \int \rho(\mathbf{s}) \delta(\mathbf{r}-\mathbf{s}) d^3 \mathbf{s} 
+\end{aligned}
+$$
+
+
+Using the "sifting property" of the Dirac delta function, we arrive at
+$$
+\nabla \cdot \mathbf{g}(\mathbf{r})=-4 \pi G \rho(\mathbf{r})
+$$
+
+Using divergence theorem, we can easily prove that:
+
+$$
+\oiint_{\partial V} \mathbf{g} \cdot d \mathbf{A}=-4 \pi G M
+$$
+The proof is left as an exercise for the reader (One line argument).
+
+Force acting on the ball:
+$$F=G\frac{M'm}{r^2}$$
+where $$M'=M\frac{r^3}{R^3}$$
+
+$$
+\begin{aligned}
+m\ddot{r}&=G\frac{Mm}{R^3}r \\
+\ddot{r}&=G\frac{M}{R^3}r
+\end{aligned}
+$$
+
+Any physics student should recognise this as a simple harmonic motion with frequency :
+$$\omega=\sqrt{\frac{GM}{R^3}}$$
+
+This corresponds to a period of:
+$$T=2 \pi \sqrt{\frac{R^3}{GM}}$$
+
 
