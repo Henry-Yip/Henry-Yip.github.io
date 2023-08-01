@@ -208,11 +208,94 @@ E&=\frac{m^3h^2 G^2M^2m^2}{2L^4}\left[\epsilon^2-1\right] \\
 \end{aligned}
 $$
 
-It is important to note that the eccentricity of a circle is $$0$$ and that of a parabola is $$1$$. When $$E=0$$, it simply means the magnitude of kinetic energy and magnitude of potential energy are the same
+It is important to note that the eccentricity of a circle is $$0$$ and that of a parabola is $$1$$. When $$E=0$$, it simply means the magnitude of kinetic energy and magnitude of potential energy are the same.
+
+## Free Fall to the surface of planets
+
+[](https://physics.stackexchange.com/questions/34366/time-taken-for-object-in-space-to-fall-to-earth)
 
 
 # Part II
 Part II deals with Statics and Dynamics, i.e. objects that moves
+
+## Gravitational Force
+
+### Difficult Question
+Two point masses $$m_1$$ and $$m_2$$ are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center?
+
+### Solution
+I am heavily inspired by [1](https://www.physicsforums.com/threads/remarkably-difficult-newtonian-problem.360987/#post-2497098) and [2](https://physics.stackexchange.com/questions/34366/time-taken-for-object-in-space-to-fall-to-earth):
+
+With **object 1** on the left and **object 2** on the right, we can define these below:    ($F_{21}$ means object 2 acts on object 1)
+
+$$
+F_{21}=G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_1 \ddot{x}_1
+$$
+
+$$
+F_{12}=-F_{21}=-G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_2 \ddot{x}_2
+$$
+
+
+
+Therefore the accelerations are given by:
+
+$$
+G \frac{m_2}{\left(x_2-x_1\right)^2}=\ddot{x}_1
+$$
+
+$$
+-G \frac{m_1}{\left(x_2-x_1\right)^2}=\ddot{x}_2
+$$
+Subtract these two equations will get:
+
+$$
+\ddot{x}_2-\ddot{x}_1=\frac{d^2}{d t^2}\left(x_2-x_1\right)=-G \frac{m_1+m_2}{\left(x_2-x_1\right)^2}
+$$
+Define $r=x_2-x_1$:
+$$
+\ddot{r}=-G \frac{m_1+m_2}{r^2}
+$$
+Multiply both sides by $\dot{r}$:
+
+$$
+\dot{r}\ddot{r}=-G \frac{m_1+m_2}{r^2} \dot{r}
+$$
+
+
+$$
+\begin{aligned}
+\frac{d}{dt}\left(\frac{1}{2}\dot{r}^2\right)&=-G \frac{m_1+m_2}{r^2} \left(\frac{dr}{dt}\right) \\
+\int_{0}^{T}\frac{d}{dt}\left(\frac{1}{2}\dot{r}^2\right) dt&= \int_{0}^{T}-G \frac{m_1+m_2}{r^2} \left(\frac{dr}{dt}\right) dt
+\end{aligned}
+$$
+This is not a calculus article so I won't discuss the rigor behind next time. However, if you want to be rigorous you can do it yourself!
+$$
+\begin{aligned}
+\frac{1}{2}\dot{r}^2&= \int_{R}^{r}-G \frac{m_1+m_2}{r^2}  dr \\
+\left(\frac{dr}{dt}\right)^2&= 2G(m_1+m_2)\left[\frac{1}{r}-\frac{1}{R}\right] \\
+\frac{dr}{dt}&=-\sqrt{ 2G(m_1+m_2)\left[\frac{1}{r}-\frac{1}{R}\right]}
+\end{aligned}
+$$
+Where we take the negative square root as $v$ is positive
+
+$$
+\begin{aligned}
+\frac{dr}{-\sqrt{ 2G(m_1+m_2)\left[\frac{1}{r}-\frac{1}{R}\right]}} &=dt \\
+\sqrt{\frac{Rr}{R-r}} dr  &=-\sqrt{2G(m_1+m_2)}  dt \\
+\sqrt{\frac{r}{R-r}} dr &= -\sqrt\frac{{2G(m_1+m_2)}}{R} dt \\
+\int_{R}^{0}\sqrt{\frac{r}{R-r}} dr  &= -\sqrt\frac{{2G(m_1+m_2)}}{R} T
+\end{aligned}
+$$
+From Wolframalpha the left integral is equal to $\frac{-R\pi}{2}$. Hence :
+$$
+\begin{aligned}
+\frac{-R\pi}{2}&= -\sqrt\frac{{2G(m_1+m_2)}}{R} T \\
+T&=\frac{R\pi}{2}  \sqrt\frac{{R}}{2G(m_1+m_2)} \\
+&= \frac{\pi}{2} \sqrt{\frac{R^3}{2G(m_1+m_2)}}
+\end{aligned}
+$$
+
 
 ## (Angular)Momentum Conservation
 
@@ -223,7 +306,7 @@ Angular Momentum is something you will encounter while skating (or spinning your
 
 Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect to say "angular momentum is converted to linear momentum" because this violates dimensional analysis. More about Dimensional Analysis in [Appendix C]({% link _Physics/2022-12-25-Appendix.markdown %})
 
-## Air Resistance (Turbulent flow)
+## Free Fall of objects
 
 Inspired by a conversation in Shenzhen, I am trying to compare the terminal velocity of a human and a plane under turbulent flow:
 
