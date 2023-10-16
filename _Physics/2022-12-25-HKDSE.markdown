@@ -487,6 +487,7 @@ T_{\text {block }} & =\frac{1}{2} M \dot{x}^2 \\
 T_{\text {particle }} & =\frac{1}{2} m\left(v_1^2+v_2^2\right)=\frac{1}{2} m\left[(\dot{x}+\dot{y} \cos \phi)^2+(\dot{y} \sin \phi)^2\right] .
 \end{aligned}
 $$
+
 For $$T_\text{particle}$$, we have transformed our basis vectors. 
 
 
@@ -500,12 +501,15 @@ Where $$c \in \mathbb{R}$$. By convention we choose $$c=0$$, hence
 $$
 V=-mgy \sin \phi
 $$
+
 Since $$\mathcal{L}=T-V$$
 
 $$
 \mathcal{L}=\frac{1}{2} M \dot{x}^2+\frac{1}{2} m\left[\dot{x}^2+\dot{y}^2+2 \dot{x} \dot{y} \cos \phi\right]+m g y \sin \phi
 $$
+
 Using the Lagrangian equation for $$x$$:
+
 $$
 \begin{aligned}
 \frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}}\right) & =\frac{\partial \mathcal{L}}{\partial x} \\
@@ -513,25 +517,31 @@ $$
 \Rightarrow \ddot{y} &=\frac{-(m+M) \ddot{x}}{m (\cos \phi )}=0 
 \end{aligned}
 $$
+
 Since $$\mathcal{L}$$ has no $$x$$ dependence. 
 
 
 On the other hand, we have:
+
 $$
 \frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{y}}\right)=m(\ddot{x} \cos \phi+\ddot{y}) 
 $$
 
     
 From above, we can substitute $$\ddot{y}$$:
+
 $$
 m\left[\cos \phi-\frac{m+M}{m \cos \phi}\right] \ddot{x}=\frac{\partial \mathcal{L}}{\partial y}=m g \sin \phi .
 $$
+
 We have therefore found that the acceleration of the block is
+
 $$
 \ddot{x}=\frac{g \sin \phi}{\cos \phi-\frac{(m+M)}{(m \cos \phi)}} 
 $$
 
 Hence:
+
 $$
 \ddot{y}=-\left[\frac{(m+M)}{m (\cos \phi )}\right] \left[\frac{g \sin \phi}{\cos \phi-\frac{(m+M)}{(m \cos \phi)}}  \right]
 $$
