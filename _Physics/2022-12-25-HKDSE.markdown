@@ -497,7 +497,7 @@ $$
 V=-m g y \sin \phi+ c
 $$
 
-Where $$c \in \mathbb{R}$$. By convention we choose $$c=0$$, hence
+Where $$c \in \mathbb{R}$$. $$c$$ comes from the GPE of the wedge, which has no time dependence. By convention we choose $$c=0$$, hence
 $$
 V=-mgy \sin \phi
 $$
@@ -514,11 +514,10 @@ $$
 \begin{aligned}
 \frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}}\right) & =\frac{\partial \mathcal{L}}{\partial x} \\
 \Rightarrow \quad \frac{d}{d t}(M \dot{x}+m(\dot{x}+\dot{y} \cos \phi)) & =(M+m) \ddot{x}+m (\cos \phi )\ddot{y}=0 \\
-\Rightarrow \ddot{y} &=\frac{-(m+M) \ddot{x}}{m (\cos \phi )}=0 
+\Rightarrow \ddot{y} &=\frac{-(m+M) \ddot{x}}{m (\cos \phi )} 
 \end{aligned}
 $$
 
-Since $$\mathcal{L}$$ has no $$x$$ dependence. 
 
 
 On the other hand, we have:
