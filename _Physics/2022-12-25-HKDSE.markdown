@@ -471,3 +471,78 @@ This corresponds to a period of:
 $$T=2 \pi \sqrt{\frac{R^3}{GM}}$$
 
 
+## Lagrangian For Wedges
+
+I clearly remember doing this 5 years ago and getting quite stuck.
+
+Imagine a wedge of Mass $$M$$ and a small particle of Mass $$m$$. There is an angle of $$\phi$$ between the mass and the wedge. The surface between the block and the surface between the wedge is smooth.  Now we put the small particle on the wedge. 
+
+Intuitively thinking, the small particle moves down the wedge and the center of mass of the system doesn't change, so the wedge slides backwards. 
+
+Define x along the axis at which the wedge moves and y along the axis at which the particle moves. 
+
+$$
+\begin{aligned}
+T_{\text {block }} & =\frac{1}{2} M \dot{x}^2 \\
+T_{\text {particle }} & =\frac{1}{2} m\left(v_1^2+v_2^2\right)=\frac{1}{2} m\left[(\dot{x}+\dot{y} \cos \phi)^2+(\dot{y} \sin \phi)^2\right] .
+\end{aligned}
+$$
+For $$T_\text{particle}$$, we have transformed our basis vectors. 
+
+
+The potential is:
+
+$$
+V=-m g y \sin \phi+ c
+$$
+
+Where $$c \in \mathbb{R}$$. By convention we choose $$c=0$$, hence
+$$
+V=-mgy \sin \phi
+$$
+Since $$\mathcal{L}=T-V$$
+
+$$
+\mathcal{L}=\frac{1}{2} M \dot{x}^2+\frac{1}{2} m\left[\dot{x}^2+\dot{y}^2+2 \dot{x} \dot{y} \cos \phi\right]+m g y \sin \phi
+$$
+Using the Lagrangian equation for $$x$$:
+$$
+\begin{aligned}
+\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}}\right) & =\frac{\partial \mathcal{L}}{\partial x} \\
+\Rightarrow \quad \frac{d}{d t}(M \dot{x}+m(\dot{x}+\dot{y} \cos \phi)) & =(M+m) \ddot{x}+m (\cos \phi )\ddot{y}=0 \\
+\Rightarrow \ddot{y} &=\frac{-(m+M) \ddot{x}}{m (\cos \phi )}=0 
+\end{aligned}
+$$
+Since $$\mathcal{L}$$ has no $$x$$ dependence. 
+
+
+On the other hand, we have:
+$$
+\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{y}}\right)=m(\ddot{x} \cos \phi+\ddot{y}) 
+$$
+
+    
+From above, we can substitute $$\ddot{y}$$:
+$$
+m\left[\cos \phi-\frac{m+M}{m \cos \phi}\right] \ddot{x}=\frac{\partial \mathcal{L}}{\partial y}=m g \sin \phi .
+$$
+We have therefore found that the acceleration of the block is
+$$
+\ddot{x}=\frac{g \sin \phi}{\cos \phi-\frac{(m+M)}{(m \cos \phi)}} 
+$$
+
+Hence:
+$$
+\ddot{y}=-\left[\frac{(m+M)}{m (\cos \phi )}\right] \left[\frac{g \sin \phi}{\cos \phi-\frac{(m+M)}{(m \cos \phi)}}  \right]
+$$
+
+This is easier than Newtonian methods because it's harder to make mistakes. Plus, if we consider friction terms then Newtonian methods can be quite complicated. 
+
+
+
+
+
+
+
+
+
