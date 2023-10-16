@@ -32,8 +32,7 @@ Please Press [HERE]({{site.url}}/assets/Dark_Energy_and_the_Big_RIP.pdf)
 
 
 ### Side Notes
-1. I included these in the "front matter" (forgot what it's called)
-```bash
+1. I included these in the "front matter" 
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{amssymb}

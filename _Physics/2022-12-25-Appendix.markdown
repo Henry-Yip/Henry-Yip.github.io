@@ -12,6 +12,7 @@ header:
   teaser: /assets/images/Astro.png
 sidebar:
  nav: "Physics"
+Hidden: True
 ---
 
 ## KaTeX Promotion

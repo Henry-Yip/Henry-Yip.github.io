@@ -1,6 +1,6 @@
 ---
 layout: single
-title: First Physics Book
+title: Miscellaneous
 katex: True
 tags: Physics
 authors: Henry
@@ -13,7 +13,9 @@ header:
 sidebar:
  nav: "Physics"
 ---
+
 ### The Book
+
 This is the link to the first physics book I ever received: [HERE!](https://www.amazon.com/Modern-Physics-2nd-Randy-Harris/dp/0805303081)
 
 (Obviously I'm not sending the book to you I'm just recommending it to you)
@@ -27,6 +29,7 @@ Turns out they briefly touched upon Hermite Polynomials in Modern Physics course
 ```
 
 It's a good introduction to Physics degree and it intensified my passion towards Physics (funny thing is I almost went to study Earth System Science... I might like typhoons, but oceans and stuff aren't built for me... and I also hate labs so welp)
+
 ### Slow Fast Large Small Physics
 A short briefing:
  * Slow and "Large Scale" Physics -> Classical Mechanics  

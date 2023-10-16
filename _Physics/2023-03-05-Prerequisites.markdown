@@ -19,27 +19,12 @@ sidebar:
  - Why Equivalence Classes?
  - To understand Cosets, hence understand very important theorems like Lagrange's Theorem
 
-The content below is not original and comes from [HERE](https://math24.net/equivalence-classes-partitions.html)
+Consider the natural numbers $$\mathbb{N}$$. Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2.
 
-A well-known sample equivalence relation is Congruence Modulo $$n$$. Two integers $$a$$ and $$b$$ are equivalent if they have the same remainder after dividing by $$n$$.
-Consider, for example, the relation of congruence modulo 3 on the set of integers $$\mathbb{Z}$$ :
-$$
-R=\{(a, b) \mid a \equiv b(\bmod 3)\}
-$$
-The possible remainders for $$n=3$$ are 0,1 and 2 . **An equivalence class consists of those integers that have the same remainder** . Hence, there are 3 equivalence classes in this example:
-$$
-\begin{aligned}
-& {[0]=\{\ldots,-9,-6,-3,0,3,6,9, \ldots\}} \\
-& {[1]=\{\ldots,-8,-5,-2,1,4,7,10, \ldots\}} \\
-& {[2]=\{\ldots,-7,-4,-1,2,5,8,11, \ldots\}}
-\end{aligned}
-$$
-Similarly, one can show that the relation of congruence modulo $$n$$ has $$n$$ equivalence classes
-$$
-[0],[1],[2], \ldots,[n-1]
-$$
+We can group all the numbers with remainder 0 into a "class", numbers with reaminer 1 into another class, and the remaning numbers into another class.
 
-We can see that **every element is in one of the equivalence classes** (Every and **no element is in more than one equivalence classes**
+So we have 3 classes that contains the same number of elements. We can also
+observe that **every element is in one of the equivalence classes**  and **no element is in more than one equivalence classes**
 
 ### Partitions
 Let $$A$$ be a set and $$A_1, A_2, \ldots, A_n$$ be its non-empty subsets. The subsets form a partition $$P$$ of $$A$$ if

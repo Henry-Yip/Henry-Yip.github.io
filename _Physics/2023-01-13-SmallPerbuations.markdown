@@ -11,6 +11,7 @@ toc_label: "Small Perbuations"
 toc_sticky: true
 sidebar:
  nav: "Physics"
+hidden: true
 ---
 
 ## KaTeX Promotion
