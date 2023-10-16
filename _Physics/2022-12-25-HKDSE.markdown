@@ -154,7 +154,7 @@ We deduce $$(\Delta t)^2 / a^3=(2 \pi)^2 / G M$$, which is consistent with the a
 
 ## Orbit Equation:
 
- - This section requires further knowledge of **SHM** and **Taylor exapansion**. If you are a uni student, try to understand it. If you are not, just skip it. 
+ - More Vector Calculus
 
 We are trying to find what happens if we disturb a orbiting physical system:
 
@@ -179,24 +179,23 @@ $$
 
 Hence:
 
-$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
+$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m} \blacksquare$$
 
-$$\blacksquare$$
+The smart reader (see if it's you!) will realize that this means $$|\underline{L}|=m r^2 \dot{\theta}$$. This is just angular momentum!
 
-We also have:
+## Exercise 1
+
+From the First Equation also have:
 
 $$
 \ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} 
 $$
 
-I'll leave this as an exercise for the reader. 
+Using substitution, with the fact that $$\ddot{r}-r \dot{\theta}^2 & =F_r(r) / m $$, prove that the above holds. 
 
-```bash
-Hint 1: We're dealing with Central Force, only radial force matters
-```
-```bash
-Hint 2: Use Newton's Second Law
-```
+### Small Perbuations
+
+ -  This section requires further knowledge of **SHM** and **Taylor exapansion**. If you are a uni student, try to understand it. If you are not, just skip it. 
 
 I enjoy the physics of small perbuations, especially in classical mechanics. 
 First, assume a small perbuation around a circle with radius $$a$$ *i.e.* $$r(t)=a+\rho(t)$$ with $$\rho(0) \ll a$$. substitute into our orbit equation we have:
@@ -223,7 +222,7 @@ $$
 Right-Hand-Side surprisingly reduces to 0, can you spot why?
 ```
 
-I don't know if you have done **Differential Equations** before. Above describes a simple harmonic oscillator with period $$\omega$$, in the form of $$\ddot{\rho}+{\omega}^2 \rho=0$$. Now we'll ensure $$\omega^2>0$$, *s.t.* $$\omega$$ is real, *i.e.*
+Above describes a simple harmonic oscillator with period $$\omega$$, in the form of $$\ddot{\rho}+{\omega}^2 \rho=0$$. Now we'll ensure $$\omega^2>0$$, *s.t.* $$\omega$$ is real, *i.e.*
 
 $$
 \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}>0
@@ -249,16 +248,28 @@ We have used simple math to analyse the orbit equation! How cool is that!
 From [Wikipedia](https://en.wikipedia.org/wiki/Orbit_equation), we can obtain:
 $$r(\theta)=\frac{L^2}{m^2 \mu} \frac{1}{1+e \cos \theta}$$
 
-The symbols are different from what we have defined. So we will fix this. $$L$$ in wikipedia is defined as $$mr^2\dot{\theta}$$, which is equal to $$mh$$ (see appendix). Hence $$L^2=m^2h^2$$. Then we have:
+The symbols are different from what we have defined. So we will fix this. $$L$$ in wikipedia is defined as $$mr^2\dot{\theta}$$, which is equal to $$mh$$. Hence $$L^2=m^2h^2$$. Then we have:
 
 $$r(\theta)=\frac{h^2}{\mu} \frac{1}{1+e \cos \theta}$$
 
 As $$\mu$$ is the constant for which $$\frac{\mu}{r^2}$$ equals the acceleration of the smaller body, $$\mu=\frac{k}{m}$$. Hence:
 
-$$r(\theta)=\frac{mh^2}{k} \frac{1}{1+e \cos \theta}$$
-knowing $$E=T+V$$, where $$T$$ is kinetic energy and $$V$$ is potential energy, we can deduce:
-$$E=\frac{m}{2}\left(\dot{r}^2+\frac{h^2}{r^2}\right)-\frac{k}{r}$$
+$$
+\begin{equation}
+r(\theta)=\frac{mh^2}{k} \frac{1}{1+e \cos \theta}
+\end{equation}
+$$
+
+Knowing $$E=T+V$$, where $$T$$ is kinetic energy and $$V$$ is potential energy, we can deduce:
+
+$$
+\begin{equation}
+E=\frac{m}{2}\left(\dot{r}^2+\frac{h^2}{r^2}\right)-\frac{k}{r}
+\end{equation}
+$$
+
 After that it's just some annoying algebraic manipulations. We will get:
+
 $$
 E=\frac{mh^2}{2l^2}\left[\epsilon^2-1\right]
 $$
@@ -457,29 +468,51 @@ $$
 As $$m_\text{human}$$<<<$$m_\text{plane}$$, the difference in $$c_d$$ and $$A$$ can't compensate, and hence terminal velocity of planes are much higher during free fall.
 
 ## Dropping to center of earth
+ - This section requires the knowledge of advanced vector operations. High school students can skip!
 How long does it take to drop to the center of earth and what will happen after that?
 To do this we need to know simple harmonic motion and Gauss's law for gravitation!
 
 The content for Gauss's law for gravitation (as below) is heavily inspired (and some parts copied) from [here](https://en.wikipedia.org/wiki/Gauss%27s_law_for_gravity) 
 
-But first, we need to revise some vector calculus:
+But first, we need to revise some vector calculus. If you are a mathematician, I highly recommend you to check out this [this page](https://tobylam.xyz/2023/01/31/levi-civita-part-1) written by Toby Lam, on Levi Civita. This is the notation physicists use often.
+
 ### Theorem 
 $$
 \nabla \cdot\left(\frac{\mathbf{r}}{|\mathbf{r}|^3}\right)=4 \pi \delta(\mathbf{r})
 $$
 
 ### Proof
+
 As we are dealing with gravitational fields, we shall use cylindrical coordinate system. 
 
 Now, let $$\mathbf{A}=\frac{\mathbf{r}}{|\mathbf{r}|^3}$$
 
 
-$$\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(A_\theta \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial A_{\varphi}}{\partial \varphi}$$
+$$
+\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(A_\theta \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial A_{\varphi}}{\partial \varphi}
+$$
+
+Above is a standard result. 
 
 As the field is $$\theta$$ and $$\phi$$ independent, we have:
+
 $$\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}$$
 
-Where $$A_r=\frac{1}{r^2}$$.
+Where $$A_r=\frac{1}{r^2}$$
+
+
+Now, we will develop some theory in vector calculus:
+
+$$
+\begin{aligned}
+& \nabla \cdot(\phi \mathbf{u}) \\
+& =\partial_i\left([\phi \mathbf{u}]_i\right) \\
+& = \partial_i\left(\phi \mathbf{u}_i\right) \\
+& =\left(\partial_i \phi\right) \mathbf{u}_i+\phi\left(\partial_i \mathbf{u}_i\right) \\
+& =[(\nabla \phi) \cdot \mathbf{u}]_i+[\phi(\nabla \cdot \mathbf{u})]_i \\
+& =(\nabla \phi) \cdot \mathbf{u}+\phi(\nabla \cdot \mathbf{u})
+\end{aligned}
+$$
 
 Hence:
 
@@ -514,14 +547,27 @@ $$
 \end{aligned}
 $$
 
+Dirac Delta Function: $$\delta(x)$$ is defined to be infinitity at $$x=0$$, and 0 elsewhere.
 
-Using the "sifting property" of the Dirac delta function, we arrive at
+Sifting Property:
+
+$$
+\int_{-\infty}^{\infty} f(t) \delta(t-T) d t=f(T)
+$$
+
+Using the "sifting property" of the Dirac delta function , we arrive at
 
 $$
 \nabla \cdot \mathbf{g}(\mathbf{r})=-4 \pi G \rho(\mathbf{r})
 $$
 
-Using divergence theorem, we can easily prove that:
+Divergence Theorem:
+
+$$
+\iiint_V(\nabla \cdot \mathbf{F}) d V= \oiint_S (\mathbf{F} \cdot \hat{\mathbf{n}}) dS
+$$
+
+Using Divergence Theorem, we can easily prove that:
 
 $$
 \oiint_{\partial V} \mathbf{g} \cdot d \mathbf{A}=-4 \pi G M
@@ -612,7 +658,7 @@ $$
 From above, we can substitute $$\ddot{y}$$:
 
 $$
-m\left[\cos \phi-\frac{m+M}{m \cos \phi}\right] \ddot{x}=\frac{\partial \mathcal{L}}{\partial y}=m g \sin \phi .
+m\left[\cos \phi-\frac{m+M}{m \cos \phi}\right] \ddot{x}=\frac{\partial \mathcal{L}}{\partial y}=m g \sin \phi 
 $$
 
 We have therefore found that the acceleration of the block is
@@ -628,6 +674,11 @@ $$
 $$
 
 This is easier than Newtonian methods because it's harder to make mistakes. Plus, if we consider friction terms then Newtonian methods can be quite complicated. 
+
+
+### The End
+
+This is the end of Article 1! $$\blacksquare$$
 
 
 
