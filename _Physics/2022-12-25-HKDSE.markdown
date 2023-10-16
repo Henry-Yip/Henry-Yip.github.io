@@ -179,9 +179,9 @@ $$
 
 Hence:
 
-$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m} \blacksquare$$
+$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m} $$
 
-The smart reader (see if it's you!) will realize that this means $$|\underline{L}|=m r^2 \dot{\theta}$$. This is just angular momentum!
+The smart reader (see if it's you!) will realize that this means $$L=m r^2 \dot{\theta}$$. This is just angular momentum!
 
 ## Exercise 1
 
@@ -293,10 +293,15 @@ As $$k=GMm$$, $$k^2=G^2M^2m^2$$. Hence
 
 $$
 \begin{aligned}
+
 E&=\frac{m^3h^2 G^2M^2m^2}{2L^4}\left[\epsilon^2-1\right] \\
+
 &= \frac{m^3h^2 G^2M^2m^2}{2(L^2)(m^2h^2)}\left[\epsilon^2-1\right] \\
+
 &= \frac{m^3 G^2M^2}{2L^2}\left[\epsilon^2-1\right] \\
+
 &= \frac{G^2m^3M^2}{2L^2}\left[\epsilon^2-1\right] 
+
 &\blacksquare
 \end{aligned}
 $$
@@ -485,7 +490,7 @@ $$
 
 As we are dealing with gravitational fields, we shall use cylindrical coordinate system. 
 
-Now, let $$\mathbf{A}=\frac{\mathbf{r}}{|\mathbf{r}|^3}$$
+Now, let $$\mathbf{A}=\frac{\mathbf{r}}{\mathbf{r}^3}$$
 
 
 $$
