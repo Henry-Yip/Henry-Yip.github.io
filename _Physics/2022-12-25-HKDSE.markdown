@@ -15,16 +15,60 @@ sidebar:
 ---
 Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may be similar. 
 
-## Introduction
-HKDSE is a public exam taken by Hong Kong high school students. It covers a wide range of physics (basic dynamics, gas, electromagnetism, etc.)
+**Intended Audience: Year 1 Math/Physics major.**
+
+
+# Motivation
+HKDSE is a public exam taken by Hong Kong high school students. It covers a wide range of physics (Dynamics, Thermal Physics, Electromagnetism, etc.)
 
 I am here using knowledge I gained in university to explain some advanced topics strongly related to the HKDSE Physics syllabus. 
 
+Calculus skills are expected.
+
 # Part I:
-The part covers orbits and gravitational forces
+The first part covers orbits and gravitational forces.
+
+## Terminologies
+
+$$ \omega$$ refers to angular velocity. We have $$ v= r \omega$$. $$\dot{r}$$ is the derivative of $$r$$ (with respect to time). We have $$F=m \ddot{r}$$ (Make sure you can do this!)
+
+Here we have $$\omega= \dot{theta}$$
+
+$$\hat{r}$$ is a unit-normal vector pointing at the direction of $$r$$.
 
 ## Centripetal Force
-From HKDSE Physics, we have Centripetal force as $$mr\omega^2$$, or equivalently $$mr \dot{\theta}^2$$ This is a very special form and only works for circular orbit, as radius is a constant. In General,
+
+ - The section below is **quite hard**. You need to know vector calculus operations. 
+
+From HKDSE Physics, we have Centripetal force as $$mr\omega^2$$, or equivalently $$mr \dot{\theta}^2$$. This is a very special form and only works for circular orbit, as radius is a constant. 
+
+Going back to Planar Polar Coordinates. $$r$$ and $$\theta$$ are the two degrees of freedom. 
+
+$$
+\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} 
+$$
+
+By **Chain Rule**,
+
+$$
+\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .
+$$
+
+And 
+
+$$
+\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}
+$$
+
+Further Differentiation yields:
+
+$$
+\begin{aligned}
+\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) & =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
+& =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
+& =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\end{aligned}
+$$
 
 $$
 \begin{aligned}
@@ -32,7 +76,15 @@ $$
 \end{aligned}
 $$
 
+Notice that $$\dot{r}=0$$ for a circle (What can we deduce for $$\ddot{r}$$?)
+
+
+
+
 ## Kepler's Third Law
+
+ - This section is the easiest and all HKDSE students should know by heart. 
+
 We can easily deduce Kepler's Third Law below:
 
 $$
@@ -47,6 +99,8 @@ $$
 
 
 Which is Kepler's third law (in circular motion).
+
+
 
 ### Example 1
 
@@ -64,7 +118,9 @@ With $$T=2.75s$$ and $$r=1m$$, we have $$M=7.82 \times 10^{10} \text{kg} $$. Hmm
 
 
 ### Generalized Case
-Unfortunately the case above only works for circles. Below I will show it works for all ellispes. For what ellispes are, please check [Appendix E]
+ - This section requires knowledge of ellipses. Standard integration skills (Up to M2) is expected.
+
+Unfortunately the case above only works for circles. Below I will show it works for all ellispes. 
 
 **Proposition**: $$T^2 \propto a^3 \space \forall $$ ellipses, where a is the semi-major axis
 
@@ -76,8 +132,7 @@ $$
 \dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}
 $$
 
-Next, by substitution and using the results from [Appendix A]
-
+Next, by substitution and using the results from [Area of Ellipse]({% link _Physics/2023-10-16-EllipseArea.markdown %}):
 
 $$
 \Delta t=\frac{A}{\dot{A}}=\frac{\pi a b}{h / 2}=\frac{2 \pi a b}{h}
@@ -98,6 +153,8 @@ $$
 We deduce $$(\Delta t)^2 / a^3=(2 \pi)^2 / G M$$, which is consistent with the analysis from **HKDSE**
 
 ## Orbit Equation:
+
+ - This section requires further knowledge of **SHM** and **Taylor exapansion**. If you are a uni student, try to understand it. If you are not, just skip it. 
 
 We are trying to find what happens if we disturb a orbiting physical system:
 

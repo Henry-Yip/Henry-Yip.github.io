@@ -19,42 +19,6 @@ sidebar:
 In case you are confused about how I manage to write Math Equations in a website...
 [Press Here]({% link _Jekyll/2022-05-19-Katex.markdown %})
 
-## Appendix A
-
- - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
-
-**Proposition 1.1**: An Ellipse with semi-major axis **a** and semi-minor axis **b**  has area $$\pi ab $$
-
-**Proof**:
-Consider **Green's Theorem** (Stoke's Theorem on $$xy$$ plane):
-
-$$
-\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y
-$$
-
-We aim to find polynomials such that $$\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1$$
-
-Say $$P(x,y)=-\frac{1}{2}y$$ and $$Q(x,y)=\frac{1}{2}x$$
-
-So we can estimate the area (denote by $$A$$) as:
-
-$$A=\frac{1}{2} \oint_C(x dy-ydx)$$
-
-Using the standard parameterization of an ellipse (see below), we can quickly calculate $$A$$
-
-$${\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }$$
-
-
-$$
-\begin{aligned}
-A & =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
-& =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
-\end{aligned}
-$$
-
-$$\blacksquare$$
-
-**Collorary**: A Circle with radius $$r$$ has area $$ \pi r^2$$. The proof is trivial and is left as an exercise for the reader
 
 ## Appendix B
 
