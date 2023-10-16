@@ -9,7 +9,7 @@ toc_label: "Area of Ellipse"
 toc_sticky: true
 permalink: /physics/Ellipse/
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Pgfplot.png
 sidebar:
  nav: "Physics"
 ---

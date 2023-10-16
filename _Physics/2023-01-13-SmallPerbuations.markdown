@@ -2,7 +2,7 @@
 layout: single
 title: Small Perbuations
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Pgfplots.png
 katex: False
 permalink: /physics/SmallPerbuations/
 tag: Physics

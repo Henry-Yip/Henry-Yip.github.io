@@ -3,7 +3,7 @@ layout: single
 title: Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)
 katex: True
 header:
-  teaser: /assets/Leo2.png
+  teaser:  /assets/images/Wolf.png
 tags: Physics
 permalink: /physics/Relativity/
 sidebar:

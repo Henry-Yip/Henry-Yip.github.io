@@ -9,7 +9,7 @@ toc_label: "Appendix"
 toc_sticky: true
 permalink: /physics/Appendix/
 header:
-  teaser: /assets/images/Astro.png
+  teaser: /assets/images/Pgfplots.png
 sidebar:
  nav: "Physics"
 Hidden: True
