@@ -13,6 +13,7 @@ header:
 sidebar:
  nav: "Physics"
 ---
+
 ## Introduction
 Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. 
 
@@ -22,10 +23,7 @@ Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanic
 ### Scope
 Galaxies and Cosmology, with some coverage on stars. 
 
-**If you want a copy of it please consult me directly. I am very willing to show you!**
 
-
-Here is a preview (extremely shortened version):
 
 [HERE]({{site.url}}/assets/Sneak.pdf)
 
