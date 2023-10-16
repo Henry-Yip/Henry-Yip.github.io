@@ -29,6 +29,7 @@ $$
 $$
 
 Now consider $$(23) \in S_3$$:
+
 $$
 \begin{align}
 (23)(H)&=(23),(23)(123),(23)(132) \\
@@ -93,7 +94,8 @@ $$\Rightarrow$$  $$H \rightarrow g H$$ is a bijection $$\Rightarrow$$ $$|g H|=|H
 
 ### Converse of Lagrange's Theorem??
 
- Converse of Lagrange's Theorem is not generally true , i.e. if $$d$$ is a divisor of the order of a group $$G$$, then there may not exist a subgroup $$H$$ where $$|H| = d$$
+
+Converse of Lagrange's Theorem is not generally true , i.e. if $$d$$ is a divisor of the order of a group $$G$$, then there may not exist a subgroup $$H$$ where $$|H| = d$$
  
 ### Proof
 An example: $$A_4$$ has order $$12$$ but doesn't have subgroups of order $$6$$.
@@ -104,7 +106,8 @@ The proof below is not original and comes from
 Assume $$H < A_4$$ is a subgroup of $$A_4$$ of order 6 
 
 Then, for any $$a \notin H$$, $$a H \cap H=\emptyset$$
-Again,since all cosets have name number of elements,$$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. 
+
+Again, since all cosets have name number of elements,$$|a H|=|e H|=|H|$$ (all cosets have the same number of elements), this implies that $$|a H|=6$$. 
 
 Then, as cosets form a partition of the group $$A_4$$, and $$\left|A_4\right|=12$$, then
 $$
