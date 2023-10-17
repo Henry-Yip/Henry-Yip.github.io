@@ -42,9 +42,12 @@ A_i \cap A_j=\emptyset \quad \forall i \neq j
 $$
 
 ## Functions
+
  - Why Functions
  - Bijection is the key of group theory. As an elementary example, Symmetric Groups themselves are bijections. 
+
 I assume knowledge of functions. *i.e.* [Injection](https://en.wikipedia.org/wiki/Injective_function), [Surjection](https://en.wikipedia.org/wiki/Surjective_function), [Bijection](https://en.wikipedia.org/wiki/Bijection).
+
 
 ### Exercise 1
  Is $$f: \mathbb{R} \rightarrow \mathbb{R}$$ s.t. $$f(x)=x^2$$ Injective? Surjective? Bijective?
@@ -56,6 +59,10 @@ Injective: Pick $$y=1$$. Then $$x=1$$ or $$x=-1$$. Hence not injective
 Surjective: No (Do it yourself)
 
 Bijective: No (Not Injective Not Surjective so not bijective)
+
+
+### Exercise 2
+ Is $$x=y^2$$ a function? 
 
 
 ## Bijections
@@ -146,7 +153,21 @@ This is left as an exercise for the readers $$\blacksquare$$
 ## Extra Definitions
 
 A map $$\phi$$ : $$G \rightarrow H$$ is  a group homomorphism if
-$$\phi(xy) = \phi(x) \phi(y) \quad \forall x, y \in G$$
+
+$$\phi(x \circ y) = \phi(x) * \phi(y) \quad \forall x, y \in G$$
+
+where $$\circ$$ is the operation of G and $$*$$ is the operation of H. 
+
+Intuitively, the LHS means you can do operations (of $$G$$) on $$x$$ and $$y$$ first, and then apply $$\phi$$ to $$x \circ y$$. The RHS means you do $$\phi(x)$$ and $$\phi(y)$$ first, then do operation of $$H$$ on $$\phi(x)$$ and $$\phi(y)$$ later. 
+
+Below I will give an example:
+
+Consider $$\mathbb{R}$$ under addition and $$\mathbb{R}^*_+$$ under multiplication. The map Exp: $$\mathbb{R} \rightarrow \mathbb{R}^*_+$$ is a homomorphism. 
+
+Don't get lost! $$\phi(x \circ y)$$ is the LHS, where $$\circ$$ is $$+$$!. $$\phi$$ is the operation as the map is Exp: $$\mathbb{R} \rightarrow \mathbb{R}^*_+$$
+
+So , as $$e^{x+y}=e^{x}*e^{y}$$ is true, we can prove $$\phi(x \circ y) = \phi(x) * \phi(y) \quad \forall x, y \in G$$. Therefore it's an homomorphism!
+
 
 A Group Homomorphism $$\phi : G → H$$ that is also a bijection is called an isomorphism of groups. We write $$G \cong H$$
 

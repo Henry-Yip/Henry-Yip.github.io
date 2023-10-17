@@ -19,11 +19,14 @@ sidebar:
 Multivariable Calculus is a prerequisite.
 
 # Statement
-Green's Theorem are closely related to Areas. This is rarely explained in lectures and is worth a discussion:
 
 An Ellipse with semi-major axis **a** and semi-minor axis **b**  has area $$\pi ab $$
 
 # Proof
+There are many ways to approach this problem. Proofwiki provides [2 methods](https://proofwiki.org/wiki/Area_of_Ellipse) to do it, but they are considerably tedious and non-elegant. 
+
+Here we will use the powerful Green's Theorem, which is closely related to Areas (Since it is the 2D version of Stoke's theorem). This is rarely explained in lectures and is worth a discussion:
+
 Consider **Green's Theorem** (Stoke's Theorem on $$xy$$ plane):
 
 $$
@@ -52,4 +55,4 @@ $$
 
 $$\blacksquare$$
 
-**Collorary**: A Circle with radius $$r$$ has area $$ \pi r^2$$. The proof is trivial and is left as an exercise for the reader
+**Collorary**: A Circle with radius $$r$$ has area $$ \pi r^2$$. The proof is trivial and is left as an exercise for the reader.

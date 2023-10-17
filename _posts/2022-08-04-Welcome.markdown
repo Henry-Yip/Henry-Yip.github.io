@@ -23,7 +23,7 @@ Inspired by [Toby Lam](https://tobylam.xyz/), I was convinced that websites are 
 ```bash
 With social media sites, attempts to archive content are probably nightmarish. 
 ```
-which is exactly my experience with Instagram. It is also nightmarish to write serious content due to the inability to include $$KaTeX$$.
+which is exactly my experience with Instagram. It is also nightmarish to write serious content due to the inability to include $$\KaTeX$$.
 
 It is also cool to have a personal space where you can customize things, and meanwhile picking up basic html/css skills.
 
