@@ -13,7 +13,7 @@ header:
 sidebar:
  nav: "Physics"
 ---
-Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may be similar. 
+Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may + similar. 
 
 **Intended Audience: Year 1 Math/Physics major.**
 

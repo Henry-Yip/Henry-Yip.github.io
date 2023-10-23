@@ -276,7 +276,7 @@ var store = [{
         "teaser": "/assets/images/Astro.png"
       },{
         "title": "Astrophysics (Part 2)",
-        "excerpt":"If you request me to send you the astrophysics pdf (I promise you I will if you ask !) I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the...","categories": [],
+        "excerpt":"I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the offical website of Overleaf and register for a new account. Create a new project and copy all the lines...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/Astrophysics2/",
         "teaser": "/assets/images/Astro.png"
@@ -285,7 +285,7 @@ var store = [{
         "excerpt":"This Page is created by Leo Chow Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/Relativity/",
-        "teaser": "/assets/Leo2.png"
+        "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Dark Energy and the Big RIP",
         "excerpt":"Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data...","categories": [],
@@ -293,29 +293,29 @@ var store = [{
         "url": "/physics/DarkEnergy/",
         "teaser": "/assets/images/Astro.png"
       },{
-        "title": "First Physics Book",
+        "title": "Miscellaneous",
         "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/Book/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Zagreb.jpg"
       },{
         "title": "Appendix",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix A Used in my post about HKDSE Physics Proposition 1.1: An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof: Consider Green’s Theorem (Stoke’s...","categories": [],
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix B Used in my post about HKDSE Physics Also in my post about Small Perbuations Proposition 1.2.1: \\(r^2 \\dot{\\theta} \\equiv h=\\frac{|\\underline{L}|}{m}\\) Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/Appendix/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "HKDSE Physics",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here) Introduction From HKDSE Physics, we have Centripetal force as \\(mr\\omega^2\\), or equivalently \\(mr \\dot{\\theta}^2\\) (This is a very special form and only works for circular orbit, as radius is a...","categories": [],
+        "excerpt":"Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may + similar. Intended Audience: Year 1 Math/Physics major. Motivation HKDSE is a public exam taken by...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/HKDSE/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "Small Perbuations",
         "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/SmallPerbuations/",
-        "teaser": "/assets/images/Astro.png"
+        "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "Dirichlet's Kernel and Convergence",
         "excerpt":"Start Here if you don’t know Fourier Series According to Wikipedia, A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. The Fourier series is an example of a trigonometric series, but not all trigonometric series are Fourier series. By expressing a function as...","categories": [],
@@ -336,15 +336,9 @@ var store = [{
         "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Pre-requisites for Understanding Group Theory",
-        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem The content below is not original and comes from HERE A well-known sample equivalence relation is Congruence Modulo \\(n\\). Two integers \\(a\\) and \\(b\\) are equivalent if they have the same remainder after dividing...","categories": [],
+        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem Consider the natural numbers \\(\\mathbb{N}\\). Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2. We can group...","categories": [],
         "tags": ["Physics"],
         "url": "/physics/groups2/",
-        "teaser": "/assets/images/Dirichlet.png"
-      },{
-        "title": "Vector Calculus in Physics",
-        "excerpt":"Einstein Summation Convention Einstein Summation Convention can be intimidating/annoying to work with at start, but it saves you a lot of time (and makes you look pro). From Wolfram Mathworld and based on what I know, there are a few rules: All summation signs are omitted! (Hence simplicity!) Repeated indices...","categories": [],
-        "tags": ["Physics"],
-        "url": "/physics/Vector%20Calculus/",
         "teaser": "/assets/images/Dirichlet.png"
       },{
         "title": "Facets of Group Theory",
@@ -352,6 +346,12 @@ var store = [{
         "tags": ["Physics"],
         "url": "/physics/groups1/",
         "teaser": "/assets/images/Dirichlet.png"
+      },{
+        "title": "Area of Ellipse",
+        "excerpt":"Targeted Audience: Year 1/2 Math/Physics majors Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides 2 methods to do it, but they are considerably tedious and non-elegant. Here...","categories": [],
+        "tags": ["Physics"],
+        "url": "/physics/Ellipse/",
+        "teaser": "/assets/images/Pgfplots.png"
       },{
         "title": "Pokemon Go PvP Analysis",
         "excerpt":"Master League A battle between Mewtwo, Zacian, Dialga, Giratina and Dragonite I use PvPoke for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is: \\[\\text{Points}=\\frac{\\text{HP Remaining}}{\\text{ HP Total}}\\] For example, Dialga is expected to win Mewtwo, both without shields, with a...","categories": [],
@@ -407,14 +407,20 @@ var store = [{
         "url": "/Updates/March/",
         "teaser": "/assets/images/LaTeX.png"
       },{
+        "title": "Year 2 Summer",
+        "excerpt":"Goals Goal 1 I have identified a large number of loopholes in my mathematical understanding. I will try to fill these up by watching Youtube Videos. Goal 2 I am trying to become a proficient programmer in Python. The first step is to learn object-oriented programming. Goal 3 I am...","categories": [],
+        "tags": [],
+        "url": "/Year_2_Summer/",
+        "teaser": "/assets/images/Wolf.png"
+      },{
         "title": "An Introduction to This Website",
-        "excerpt":"Introduction Myself Henry YIP Mathematical Physics Student from the University of Edinburgh Before making a website LaTeX Feburary 2022 was when I started to create \\(\\LaTeX\\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability). Inspired...","categories": [],
+        "excerpt":"Introduction Myself My name is Henry Yip. I am a Mathematical Physics Student from the University of Edinburgh. I study the intersection of Mathematics and Physics, focusing on Quantum Physics, General Relativity, and Geometry. Reasons to create a website Hosting LaTeX documents online February 2022 was when I started to...","categories": [],
         "tags": [],
         "url": "/Welcome/",
         "teaser": "/assets/images/Wolf.png"
       },{
         "title": "Writing me constructive comments",
-        "excerpt":"Motivation I really enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas (because my friends are quite math-heavy and nerdy so...","categories": [],
+        "excerpt":"Motivation I enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas because my friends are math-heavy and nerdy, therefore what they...","categories": [],
         "tags": [],
         "url": "/Commenting/",
         "teaser": "/assets/images/Astro.png"
@@ -423,11 +429,5 @@ var store = [{
         "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
         "tags": [],
         "url": "/FutureofWebsite/",
-        "teaser": "/assets/images/Astro.png"
-      },{
-        "title": "Private Section",
-        "excerpt":"New Private Section!  Starting from 6/6/2023, you can view the private section of my website if you have the password. I built it with the help of this guide   The Website  The Website  ","categories": [],
-        "tags": [],
-        "url": "/PrivateSection/",
         "teaser": "/assets/images/Astro.png"
       }]
