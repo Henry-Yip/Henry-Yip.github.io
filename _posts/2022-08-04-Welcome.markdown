@@ -2,7 +2,6 @@
 layout: single
 katex: True
 title:  An Introduction to This Website
-redirect_from: https://henry-yip.github.io/Jekyll/
 toc: true
 toc_label: "An Introduction to This Website"
 toc_sticky: true
@@ -13,6 +12,7 @@ header:
 ## Myself
 
 My name is Henry Yip. I am a Mathematical Physics Student from the University of Edinburgh. I study the intersection of Mathematics and Physics, focusing on Quantum Physics, General Relativity, and Geometry. 
+
 
 ## Reasons to create a website
 
