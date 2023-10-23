@@ -2,6 +2,7 @@
 layout: single
 katex: True
 title:  An Introduction to This Website
+redirect_from: https://henry-yip.github.io/Jekyll/
 toc: true
 toc_label: "An Introduction to This Website"
 toc_sticky: true

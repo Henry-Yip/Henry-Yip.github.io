@@ -207,7 +207,10 @@ defaults:
       sidebar:
         nav: "docs"
 # Reading Files
-include: ["_pages"]
+# Reading Files
+include:
+  - .htaccess
+  - _pages
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
