@@ -44,26 +44,32 @@ The equivalence relation above is called "congruence modulo 3".
 
 Other equivalence relations include:
 
-  - "is equal to" on the set of real numbers. 
+  - "Is equal to" on the set of real numbers. 
 
   - "Has the same real part" on the set of complex numbers. 
 
-  -  "Is similar to" on the set of triangles.
+  - "Is similar to" on the set of triangles.
 
 
 
 
 ### Partitions
 Let $$A$$ be a set and $$A_1, A_2, \ldots, A_n$$ be its non-empty subsets. The subsets form a partition $$P$$ of $$A$$ if
-- The union of the subsets in $$P$$ is equal to $$A$$.
+
+- The union of the subsets in $$P$$ is equal to $$A$$
+
 $$
 \bigcup_{i=1}^n A_i=A_1 \cup A_2 \cup \ldots \cup A_n=A
 $$
-- The partition $$P$$ does not contain the empty set $$\varnothing$$.
+
+- The partition $$P$$ does not contain the empty set $$\varnothing$$
+
 $$
 A_i \neq \emptyset \quad \forall i
 $$
-- The intersection of any distinct subsets in $$P$$ is empty.
+
+- The intersection of any distinct subsets in $$P$$ is empty
+
 $$
 A_i \cap A_j=\emptyset \quad \forall i \neq j
 $$
