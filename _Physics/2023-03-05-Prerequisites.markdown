@@ -2,8 +2,6 @@
 layout: single
 title: Pre-requisites for Understanding Group Theory
 hidden: True
-header:
-  teaser: /assets/images/Dirichlet.png
 katex: True
 permalink: /physics/groups2/
 tag: Physics

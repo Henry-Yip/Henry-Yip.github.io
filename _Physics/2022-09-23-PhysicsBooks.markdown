@@ -8,8 +8,6 @@ toc: true
 toc_label: "First Physics Book"
 toc_sticky: true
 permalink: /physics/Book/
-header:
-  teaser: /assets/images/Zagreb.jpg
 sidebar:
  nav: "Physics"
 ---

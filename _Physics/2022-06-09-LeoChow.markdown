@@ -2,8 +2,6 @@
 layout: single
 title: Essays written by collaborators
 katex: True
-header:
-  teaser:  /assets/images/Wolf.png
 tags: Physics
 permalink: /physics/Relativity/
 sidebar:

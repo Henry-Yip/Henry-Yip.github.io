@@ -8,8 +8,6 @@ toc: true
 toc_label: "Area of Ellipse"
 toc_sticky: true
 permalink: /physics/Ellipse/
-header:
-  teaser: /assets/images/Pgfplots.png
 sidebar:
  nav: "Physics"
 ---

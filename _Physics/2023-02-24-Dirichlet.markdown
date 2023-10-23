@@ -1,8 +1,6 @@
 ---
 layout: single
 title: Analysis/Fourier Series
-header:
-  teaser: /assets/images/Dirichlet.png
 katex: True
 permalink: /physics/FourierSeries/
 tag: Physics

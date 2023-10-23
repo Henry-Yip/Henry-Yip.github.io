@@ -1,8 +1,6 @@
 ---
 layout: single
 title: Group Theory 
-header:
-  teaser: /assets/images/Dirichlet.png
 katex: True
 permalink: /physics/groups1/
 tag: Physics

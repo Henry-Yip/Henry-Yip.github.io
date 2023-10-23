@@ -8,8 +8,6 @@ toc: true
 toc_label: "HKDSE Physics"
 toc_sticky: true
 permalink: /physics/HKDSE/
-header:
-  teaser: /assets/images/Pgfplots.png
 sidebar:
  nav: "Physics"
 ---
