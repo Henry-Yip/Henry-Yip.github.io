@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Dirichlet's Kernel and Convergence 
+title: Analysis/Fourier Series
 header:
   teaser: /assets/images/Dirichlet.png
 katex: True
@@ -15,10 +15,7 @@ sidebar:
 
 ## Start Here if you don't know Fourier Series
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Fourier_series),
-
-A Fourier series is an expansion of a periodic function into a sum of trigonometric functions. The Fourier series is an example of a trigonometric series, but not all trigonometric series are Fourier series. By expressing a function as a sum of sines and cosines, many problems involving the function become easier to analyze because trigonometric functions are well understood.     
-
+A fourier series decomposes a function into trigonometric 
 By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?
 
 <iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

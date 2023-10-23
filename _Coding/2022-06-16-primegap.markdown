@@ -2,6 +2,7 @@
 layout: single
 title: Prime Gap
 katex: False
+Hidden: True
 permalink: /Coding/PrimeGap/
 sidebar:
  nav: "Coding"

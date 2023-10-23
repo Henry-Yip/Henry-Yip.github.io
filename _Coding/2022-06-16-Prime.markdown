@@ -2,6 +2,7 @@
 layout: single
 title: Twin Primes
 katex: False
+Hidden: True
 permalink: /Coding/TwinPrimes/
 sidebar:
  nav: "Coding"

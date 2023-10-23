@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Beyond a cursory look at the structure of the Lorentz factor (Leo Chow)
+title: Essays written by collaborators
 katex: True
 header:
   teaser:  /assets/images/Wolf.png

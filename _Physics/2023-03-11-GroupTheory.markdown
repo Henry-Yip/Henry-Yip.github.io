@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Facets of Group Theory 
+title: Group Theory 
 header:
   teaser: /assets/images/Dirichlet.png
 katex: True

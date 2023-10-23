@@ -2,6 +2,7 @@
 layout: single
 title: Cutoff Game (C++)
 katex: False
+Hidden: True
 permalink: /Coding/Cutoff/
 sidebar:
  nav: "Coding"

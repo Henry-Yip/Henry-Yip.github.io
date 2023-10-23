@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Area of Ellipse
+title: Multivariable Calculus
 katex: True
 tags: Physics
 authors: Henry

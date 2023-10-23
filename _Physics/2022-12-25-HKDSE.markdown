@@ -1,6 +1,6 @@
 ---
 layout: single
-title: HKDSE Physics
+title: Classical Mechanics in HKDSE Context
 katex: True
 tags: Physics
 authors: Henry

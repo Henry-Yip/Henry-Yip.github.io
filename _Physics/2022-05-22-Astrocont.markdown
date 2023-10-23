@@ -4,6 +4,7 @@ title: Astrophysics (Part 2)
 katex: True
 tags: Physics
 authors: Henry
+hidden: true
 toc: true
 toc_label: "Astrophysics (Part 2)"
 toc_sticky: true
@@ -14,7 +15,10 @@ sidebar:
  nav: "Physics"
 ---
 
+[This is the PDF]({{site.url}}/assets/Sneak.pdf)
+
 I will also send you the tex code. Below I will show you how to use!
+
 ## 1. Overleaf
 
 Overleaf is an online, collaborative [LaTeX](https://en.wikipedia.org/wiki/LaTeX) Editor. 
