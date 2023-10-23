@@ -401,12 +401,11 @@ $$
 
 ## (Angular)Momentum Conservation
 
-From [Appendix B]({% link _Physics/2022-12-25-Appendix.markdown %}) , we deduced that
-$$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$, or equivalently $$|\underline{L}|=mr^2 \dot{\theta}$$ Combining the fact that $$v=r\dot{\theta}$$ we have $$|\underline{L}|=mrv$$
+We deduced that $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$, or equivalently $$|\underline{L}|=mr^2 \dot{\theta}$$ Combining the fact that $$v=r\dot{\theta}$$ we have $$|\underline{L}|=mrv$$
 
 Angular Momentum is something you will encounter while skating (or spinning your chair). If you spread your arms and contract your arms, you will realize that you will spin in a different speed, because angular momentum has to be conserved (assumed no friction)
 
-Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect to say "angular momentum is converted to linear momentum" because this violates dimensional analysis. More about Dimensional Analysis in [Appendix C]({% link _Physics/2022-12-25-Appendix.markdown %})
+Compared to $$p=mv$$ in HKDSE this rings a bell. However, it is always incorrect to say "angular momentum is converted to linear momentum" because this violates dimensional analysis. 
 
 ## Free Fall of objects
 

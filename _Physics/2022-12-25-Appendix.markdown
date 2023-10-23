@@ -24,7 +24,7 @@ In case you are confused about how I manage to write Math Equations in a website
 ## Appendix B
 
  - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
- - Also in my post about [Small Perbuations]({% link _Physics/2023-01-13-SmallPerbuations.markdown %})
+
 **Proposition 1.2.1**: $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
 
 **Proof**
