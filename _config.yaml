@@ -174,6 +174,7 @@ footer:
       icon: "fab fa-fw fa-instagram"
       # url:
 
+# Defaults
 defaults:
   # _posts
   - scope:
@@ -186,7 +187,25 @@ defaults:
       comments: true
       share: true
       related: true
-
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
 # Reading Files
 include:
   - .htaccess
