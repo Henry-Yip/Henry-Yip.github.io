@@ -36,8 +36,7 @@ $$
 
 (Side Note: If you want to type Math Equations in your website [PLEASE PRESS HERE]({% link _Jekyll/2022-05-19-Katex.markdown %}))
 
-I also use Mathpix to convert pictures to equations. More in [HERE](({% link _Physics/2022-08-02-DarkEnergy.markdown %})))
-
+I also use Mathpix to convert pictures to equations.
 ## Continuing 
 
 I clearly remember myself making tons of careless mistakes and finished the paper with tons of time remaining, but had 9 careless mistakes... 9! (out of 45)
