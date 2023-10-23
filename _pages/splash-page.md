@@ -20,58 +20,49 @@ feature_row:
     url: "https://henry-yip.github.io/Contributors/HenryYip/"
     btn_label: "Read More"
     btn_class: "btn--success"
-
   - image_path: /assets/images/Chess.jpg
     title: "Chess"
     excerpt: "Chess Openings, Chess AI and Current Rankings!"
     url: "https://henry-yip.github.io/Chess/"
     btn_label: "Read More"
     btn_class: "btn--danger"
-
   - image_path: /assets/images/LaTeX2.png
     title: "LaTeX Tutorials"
     excerpt: "LaTeX Tutorials, including tex files and beamer!"
     url: "https://henry-yip.github.io/LaTeX/"
     btn_label: "Read More"
     btn_class: "btn--warning"
-
   - image_path: /assets/images/Sun.png
     title: "Physics"
     excerpt: "Astrophysics, Relativity, Thermal Physics and more"
     url: "https://henry-yip.github.io/Physics/"
     btn_label: "Read More"
     btn_class: "btn--success"
-
   - image_path: /assets/images/Useless2.png
     title: "Jekyll"
     excerpt: "Learn how I built this website from scratch - with some troubleshooting"
     url: "https://henry-yip.github.io/Physics/"
     btn_label: "Read More"
     btn_class: "btn--warning"
-
   - image_path: /assets/images/Useless5.png
     title: "Journal"
     excerpt: "See what Henry is thinking nowadays"
     url: "https://henry-yip.github.io/Journal/"
     btn_label: "Read More"
     btn_class: "btn--success"
-
   - image_path: /assets/images/Music.png
     title: "Classial Music"
     excerpt: "A platform to share my favourite music"
     url: "https://henry-yip.github.io/Music/"
     btn_label: "Read More"
     btn_class: "btn--warning"  
-
   - image_path: /assets/images/Dubrovnik.png
     title: "Pokemon Go"
     excerpt: "Using Mathematics to crack games"
     url: "https://henry-yip.github.io/Pokemon/"
     btn_label: "Read More"
-    btn_class: "btn--warning"   
-
- 
-    
+    btn_class: "btn--warning"    
+---
 
 {: .notice}
 {: .text-center}
