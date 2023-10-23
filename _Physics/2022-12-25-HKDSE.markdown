@@ -347,13 +347,13 @@ $$
 \ddot{x}_2-\ddot{x}_1=\frac{d^2}{d t^2}\left(x_2-x_1\right)=-G \frac{m_1+m_2}{\left(x_2-x_1\right)^2}
 $$
 
-Define $r=x_2-x_1$:
+Define $$r=x_2-x_1$$:
 
 $$
 \ddot{r}=-G \frac{m_1+m_2}{r^2}
 $$
 
-Multiply both sides by $\dot{r}$:
+Multiply both sides by $$\dot{r}$$:
 
 $$
 \dot{r}\ddot{r}=-G \frac{m_1+m_2}{r^2} \dot{r}
