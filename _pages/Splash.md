@@ -1,12 +1,12 @@
 ---
 title: "Henry's Personal Website"
 layout: splash
-  overlay_color: "#111"
-  overlay_filter: "0.5"
-  overlay_image: /assets/images/Central.jpg
-  actions:
-    - label: "Home Page"
-      url: "https://henry-yip.github.io/"
+overlay_color: "#111"
+overlay_filter: "0.5"
+overlay_image: /assets/images/Central.jpg
+actions:
+  - label: "Home Page"
+    url: "https://henry-yip.github.io/"
 excerpt: "A Splash-Page should improve the whole user interaction experience" 
 intro: 
   - excerpt: 'This Website is created by Henry Yip, a Mathematical Physics Student from the University of Edinburgh. It is powered by Jekyll, a Ruby Gem. Other contributors as listed in the "Contributors" section. Starting from March 2022, I have spent around 350 hours working on this side project, so I hope you enjoy it. Feel Free to find the HTML source code in my Github account!'
