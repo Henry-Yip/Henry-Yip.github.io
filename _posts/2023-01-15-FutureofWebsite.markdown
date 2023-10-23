@@ -17,7 +17,7 @@ I must say I really enjoyed writing my blog post on [HKDSE Physics]({% link _Phy
 
 I will focus more on Physics Content from now on, having attended course related to [Fields, Waves](http://www.drps.ed.ac.uk/22-23/dpt/cxphys08053.htm) and [Matter](http://www.drps.ed.ac.uk/20-21/dpt/cxphys08054.htm), which is heavily related to [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
 
-Despite having written a semi-formal article on [Dark Energy]({% link _Physics/2022-08-02-DarkEnergy.markdown %}), I am not inclining to write any more astrophysics related content, instead focusing on Mathematical Physics, or simply, physics with rigorous math.
+Despite having written a semi-formal article on [Dark Energy]({% link _Physics/2022-05-21-Astrophysics.markdown %}), I am not inclining to write any more astrophysics related content, instead focusing on Mathematical Physics, or simply, physics with rigorous math.
 
 Maybe I'll write a bit on Music Also. I am interested in analysing Beethoven Sonatas, and comparing between different interpreters, like the less "conventional" ones, say Glenn Gould 
 
@@ -40,7 +40,7 @@ My $$\LaTeX$$ files are a bit outdated and I should include interesting content 
 
 
 ## Reach
-As said in various posts, like [my post on partially quitting Instagram]({% link _Journal/2022-09-23-Disgusted.markdown %}), I am very aware that less than 5 people will be viewing this very word. However, this website is **only** for people who want to know deeply about me, and I can see **very few people** falling into this category. So thank you if you are the very few people seeing this very word; or if you are stalking me, thank you for stalking me? 
+I am very aware that less than 5 people will be viewing this very word. However, this website is **only** for people who want to know deeply about me, and I can see **very few people** falling into this category. So thank you if you are the very few people seeing this very word; or if you are stalking me, thank you for stalking me? 
 
 ## Tone and Language
 ### Tone
