@@ -12,7 +12,20 @@ toc_sticky: true
 sidebar:
  nav: "Physics"
 ---
+  - image_path: /assets/images/Music.png
+    title: "Future of Website"
+    excerpt: "Henry is talking about the future of this website"
+    url: "https://henry-yip.github.io/FutureofWebsite/"
+    btn_label: "Read More"
+    btn_class: "btn--success"  
 
+   - image_path: /assets/images/Zagreb.jpg
+    title: "Myself"
+    excerpt: "Self-Introduction"
+    url: "https://henry-yip.github.io/Welcome/"
+    btn_label: "Read More"
+    btn_class: "btn--success"   
+    
 I've realized that most people (all) put their CVs in their personal website. 
 
 Realistically I don't see how potential future employers will stumple upon my website and even if they do, I doubt if this will affect my application procesess. Just like no one ever puts their CVs in their instagram/facebook accounts, right?

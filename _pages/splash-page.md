@@ -21,13 +21,6 @@ feature_row:
     btn_label: "Read More"
     btn_class: "btn--success"
 
-  - image_path: /assets/images/Zagreb.jpg
-    title: "Myself"
-    excerpt: "Self-Introduction"
-    url: "https://henry-yip.github.io/Welcome/"
-    btn_label: "Read More"
-    btn_class: "btn--success"
-  
   - image_path: /assets/images/Chess.jpg
     title: "Chess"
     excerpt: "Chess Openings, Chess AI and Current Rankings!"
@@ -76,14 +69,8 @@ feature_row:
     url: "https://henry-yip.github.io/Pokemon/"
     btn_label: "Read More"
     btn_class: "btn--warning"   
-    
-  - image_path: /assets/images/Music.png
-    title: "Future of Website"
-    excerpt: "Henry is talking about the future of this website"
-    url: "https://henry-yip.github.io/FutureofWebsite/"
-    btn_label: "Read More"
-    btn_class: "btn--success"     
-    
+
+ 
     
 
 {: .notice}
