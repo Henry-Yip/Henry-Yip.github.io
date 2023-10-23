@@ -208,9 +208,6 @@ defaults:
         nav: "docs"
 # Reading Files
 include: ["_pages"]
-include:
-  - _pages
-  - .htaccess
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
