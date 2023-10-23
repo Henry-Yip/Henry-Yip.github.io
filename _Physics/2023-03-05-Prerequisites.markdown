@@ -24,7 +24,34 @@ Consider the natural numbers $$\mathbb{N}$$. Consider the remainder when divided
 We can group all the numbers with remainder 0 into a "class", numbers with reaminer 1 into another class, and the remaning numbers into another class.
 
 So we have 3 classes that contains the same number of elements. We can also
-observe that **every element is in one of the equivalence classes**  and **no element is in more than one equivalence classes**
+observe that **every element is in one of the equivalence classes**  and **no element is in more than one equivalence classes**. 
+
+Rigorously, the elements of the set S have to have a notion of equivalence relation. That means that it has to satisfy:
+
+ - Reflexivity
+
+   - e.g. "is smaller than" is **NOT** an equivalence relation because $$a<a$$ is incorrect.
+
+ - Symmetry
+
+   - e.g. " is equal or smaller than" is **NOT** an equivalence relation because $$5 \le 7$$ does not imply $$7 \le 5$$
+
+ - Transitivity
+
+   - e.g.  In rock-paper-scissors, rock beats scissors and scissors beat paper, but rock doesn't beat paper. 
+
+The equivalence relation above is called "congruence modulo 3". 
+
+Other equivalence relations include:
+
+  - "is equal to" on the set of real numbers. 
+
+  - "Has the same real part" on the set of complex numbers. 
+
+  -  "Is similar to" on the set of triangles.
+
+
+
 
 ### Partitions
 Let $$A$$ be a set and $$A_1, A_2, \ldots, A_n$$ be its non-empty subsets. The subsets form a partition $$P$$ of $$A$$ if

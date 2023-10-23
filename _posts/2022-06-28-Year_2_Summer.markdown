@@ -5,6 +5,7 @@ title:  Year 2 Summer
 toc: true
 toc_label: "Year_2_Summer"
 toc_sticky: true
+Hidden: True
 header:
   teaser: /assets/images/Wolf.png
 ---
