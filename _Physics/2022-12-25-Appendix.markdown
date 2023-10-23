@@ -4,6 +4,7 @@ title: Appendix
 katex: True
 tags: Physics
 authors: Henry
+Hidden: true
 toc: true
 toc_label: "Appendix"
 toc_sticky: true
@@ -12,7 +13,6 @@ header:
   teaser: /assets/images/Pgfplots.png
 sidebar:
  nav: "Physics"
-Hidden: True
 ---
 
 ## KaTeX Promotion
