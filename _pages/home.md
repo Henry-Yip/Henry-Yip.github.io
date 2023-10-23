@@ -1,6 +1,8 @@
 ---
 title: "Henry's Personal Website"
 layout: splash
+- scope:
+      type: pages
 header:
   overlay_color: "#111"
   overlay_filter: "0.5"
