@@ -1,8 +1,8 @@
 ---
 title: "Henry's Personal Website"
 layout: splash
-
-header:
+redirect_from:
+    - https://henry-yip.github.io/
   overlay_color: "#111"
   overlay_filter: "0.5"
   overlay_image: /assets/images/Central.jpg
