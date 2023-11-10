@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Allison Lau - Numerical methods
+title: Allison Lau - Numerical Methods
 katex: True
 tags: Physics
 permalink: /physics/numerical_methods/

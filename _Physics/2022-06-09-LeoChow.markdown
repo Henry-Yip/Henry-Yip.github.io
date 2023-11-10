@@ -1,9 +1,9 @@
 ---
 layout: single
-title: Essays written by collaborators
+title: Leo Chow - Relativity
 katex: True
 tags: Physics
-permalink: /physics/relativity/
+permalink: /physics/Relativity/
 sidebar:
  nav: "Physics"
 ---
