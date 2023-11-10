@@ -16,7 +16,7 @@ These are written by Allison Lau, a student from University of Toronto, and Leo 
 
 Numerical Methods
 
- - [Allison Lau]({% link _Physics/2023-11-20-AllisonLau.markdown %})
+ - [Allison Lau]({% link  _Physics/2023-11-20-AllisonLau.markdown %})
 
 Relativity
 
