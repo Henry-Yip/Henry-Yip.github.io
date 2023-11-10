@@ -1,18 +1,31 @@
 ---
 layout: single
-title: Leo Chow - Relativity
+title: Leo Chow - Relativity and Allison Lau - Numerical Methods
 katex: True
 tags: Physics
 permalink: /physics/Relativity/
 sidebar:
  nav: "Physics"
 ---
- - This Page is created by **Leo Chow**
+
+
+
+# This Page is created by **Leo Chow** and **Allison Lau**
+
+## Allison Lau
+
+Please Press [HERE]({{site.url}}/assets/csc336.pdf)
+
+<iframe src="{{site.url}}/assets/csc336.pdf" width="100%" height="500px">
 
   
-  Let's take a look at the Lorentz factor:
 
-  $$\gamma_v=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
+
+## Leo Chow
+
+Let's take a look at the Lorentz factor:
+
+$$\gamma_v=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
 
 
 
