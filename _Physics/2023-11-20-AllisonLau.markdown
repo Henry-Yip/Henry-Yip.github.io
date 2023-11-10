@@ -3,7 +3,7 @@ layout: single
 title: Allison Lau - Numerical Methods
 katex: True
 tags: Physics
-permalink: /physics/Numerical-Methods
+permalink: /physics/Numerical-Methods/
 sidebar:
  nav: "Physics"
 ---
