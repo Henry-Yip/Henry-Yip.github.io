@@ -4,7 +4,6 @@ title: Essays written by collaborators
 katex: True
 tags: Physics
 permalink: /physics/relativity/
-Hidden: True
 sidebar:
  nav: "Physics"
 ---
