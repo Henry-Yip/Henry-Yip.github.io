@@ -9,12 +9,11 @@ sidebar:
 ---
 
 
-
-# This Page is created by **Leo Chow** and **Allison Lau**
-
 ## Allison Lau
 
-Please Press [HERE]({{site.url}}/assets/csc336.pdf)
+Allison Lau is a student from the University of Toronto. These are the notes she wrote for her Computer Science course. If you have any suggestions/amendments, please send her!
+
+Please Press [HERE]({{site.url}}/assets/csc336.pdf) to download!
 
 ## Leo Chow
 
