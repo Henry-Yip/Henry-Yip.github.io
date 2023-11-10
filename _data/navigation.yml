@@ -101,6 +101,8 @@ Physics:
         url: /physics/StunLocks/  
       - title: "Dirichlet's Kernel and Convergence"  
         url: /physics/FourierSeries/
+      - title: "Allison Lau - Numerical Methods"
+        url: /physics/Numerical-Methods
 
 
 
