@@ -16,11 +16,6 @@ sidebar:
 
 Please Press [HERE]({{site.url}}/assets/csc336.pdf)
 
-<iframe src="{{site.url}}/assets/csc336.pdf" width="100%" height="500px">
-
-  
-
-
 ## Leo Chow
 
 Let's take a look at the Lorentz factor:
