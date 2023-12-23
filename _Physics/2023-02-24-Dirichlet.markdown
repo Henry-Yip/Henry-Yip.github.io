@@ -13,7 +13,8 @@ sidebar:
 
 ## Start Here if you don't know Fourier Series
 
-A fourier series decomposes a function into trigonometric 
+A fourier series decomposes a function into trigonometric functions. 
+
 By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?
 
 <iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
@@ -126,7 +127,6 @@ $$
 \end{align}
 $$
 
-
 For illustration, consider $$f(x)=\frac{1+ \sin x}{2}$$. Notice the area between the vertical moving line never changes. 
 
 ```bash
@@ -137,3 +137,6 @@ It is called Hacovercosine. Such a cool name!
 
 I hope the above shows you some intuition regarding Dirichlet's Kernel.
 
+### Using it to approximate Fourier Series 
+
+$$

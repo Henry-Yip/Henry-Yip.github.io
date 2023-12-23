@@ -54,3 +54,47 @@ $$
 $$\blacksquare$$
 
 **Collorary**: A Circle with radius $$r$$ has area $$ \pi r^2$$. The proof is trivial and is left as an exercise for the reader.
+
+# Generalized Stokes' Theorem
+
+For a sphere, consider:
+$$
+\alpha=x^1 d x^2 \wedge d x^3 .
+$$
+
+Consider:
+
+$$x^1=\sin\alpha\cos\phi$$
+$$x^2=\sin\alpha\sin\phi$$
+$$x^3=\cos\alpha$$
+
+Thus:
+$$\alpha=\sin ^3 \alpha \cos ^2 \phi d \alpha \wedge d \phi $$
+
+This is clearly a surface integral. Hence, we have: 
+
+$$
+\int_{\partial\Sigma} \alpha=\int_{\alpha=0}^\pi \int_{\phi=0}^{2 \pi} \sin ^3 \alpha \cos ^2 \phi d \alpha d \phi=\frac{4 \pi}{3} .
+$$
+
+On the other hand, we have:
+$$
+d \alpha=d x^1 \wedge d x^2 \wedge d x^3
+$$
+and so
+
+$$
+\int_{\Sigma} d \alpha=\int_{\Sigma} d  x^1 \wedge d x^2 \wedge d x^3=  \int_{0}^{2\pi} \int_{0}^{ \pi} 
+\int_{0}^{1} (r^2 \sin \phi) dr  d\alpha d\phi = \frac{4}{3} \pi 
+$$
+
+Hence we have showed that Generalized Stokes' Theorem: 
+$$\int_{\Sigma} d \alpha=\int_{\partial \Sigma} \alpha$$
+
+works on a unit sphere. 
+
+
+
+
+
+
