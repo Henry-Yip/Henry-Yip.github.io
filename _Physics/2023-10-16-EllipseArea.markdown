@@ -12,7 +12,7 @@ sidebar:
  nav: "Physics"
 ---
 
-**Targeted Audience: Year 1/2 Math/Physics majors**
+**Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products**
 
 Multivariable Calculus is a prerequisite.
 
@@ -65,7 +65,9 @@ $$
 Consider:
 
 $$x^1=\sin\alpha\cos\phi$$
+
 $$x^2=\sin\alpha\sin\phi$$
+
 $$x^3=\cos\alpha$$
 
 Thus:
@@ -92,6 +94,37 @@ Hence we have showed that Generalized Stokes' Theorem:
 $$\int_{\Sigma} d \alpha=\int_{\partial \Sigma} \alpha$$
 
 works on a unit sphere. 
+
+# Green's Theorem (Special Case)
+
+Considering [Toby Lam's Post](https://tobylam.xyz/2023/12/15/understanding-greens-theorem), I can prove it easily using wedge products:
+
+$$
+\text { Area of } D=\iint_D d x d y=-\int_C y d x
+$$
+
+First, consider: $$d\alpha=dy \wedge dx$$. We can easily see that $$\alpha=ydx$$
+
+
+$$
+\text { Area of } D=\iint_\Sigma d x \wedge d y=-\iint_\Sigma d y \wedge d x=-\iint_\Sigma d\alpha=-\int_{\partial \Sigma} \alpha=-\int_{\partial \Sigma} ydx
+$$
+
+In general, we can consider:
+
+$$
+\int_{\partial D} P d x+Q d y=\iint_{D}dP \wedge dx+dQ \wedge dy
+$$
+
+As:
+
+$$d P=\sum_{i=1}^n \frac{\partial P}{\partial x^i} d x^i$$
+
+We have:
+$$\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partial x} dx \wedge dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy $$
+
+
+
 
 
 
