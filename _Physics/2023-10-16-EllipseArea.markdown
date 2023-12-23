@@ -126,7 +126,7 @@ $$\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partia
 
 So:
 
-$$int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy$$
+$$\int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy$$
 
 The astute reader can realized that this is Green's Theorem - Stokes' Theorem in 2D!
 
