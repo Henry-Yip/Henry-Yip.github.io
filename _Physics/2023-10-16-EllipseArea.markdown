@@ -12,7 +12,7 @@ sidebar:
  nav: "Physics"
 ---
 
-**Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products**
+**Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives**
 
 Multivariable Calculus is a prerequisite.
 
@@ -97,7 +97,7 @@ works on a unit sphere.
 
 # Green's Theorem (Special Case)
 
-Considering [Toby Lam's Post](https://tobylam.xyz/2023/12/15/understanding-greens-theorem), I can prove it easily using wedge products:
+Considering [Toby Lam's Post](https://tobylam.xyz/2023/12/15/understanding-greens-theorem). We can approach the same problem using wedge products. If you haven't read his post, the problem we are considering is:
 
 $$
 \text { Area of } D=\iint_D d x d y=-\int_C y d x
@@ -110,7 +110,7 @@ $$
 \text { Area of } D=\iint_\Sigma d x \wedge d y=-\iint_\Sigma d y \wedge d x=-\iint_\Sigma d\alpha=-\int_{\partial \Sigma} \alpha=-\int_{\partial \Sigma} ydx
 $$
 
-In general, we can consider:
+For the general case, using Generalized Stokes' Theorem , we can consider: 
 
 $$
 \int_{\partial D} P d x+Q d y=\iint_{D}dP \wedge dx+dQ \wedge dy
@@ -121,7 +121,16 @@ As:
 $$d P=\sum_{i=1}^n \frac{\partial P}{\partial x^i} d x^i$$
 
 We have:
+
 $$\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partial x} dx \wedge dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy $$
+
+So:
+
+$$int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy$$
+
+The astute reader can realized that this is Green's Theorem - Stokes' Theorem in 2D!
+
+
 
 
 
