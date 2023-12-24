@@ -20,11 +20,38 @@ This is the link to the first physics book I ever received: [HERE!](https://www.
 
 It's nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and explanation which is decent.
 
-Well I doubt I know how to do the exercises (I believe some of the stuff like [Hermite polynomials](https://en.wikipedia.org/wiki/Hermite_polynomials) are not covered yet in my course. (I think covered in Year 3? Not sure)
+Well I doubt I know how to do the exercises (I believe some of the stuff like [Hermite polynomials](https://en.wikipedia.org/wiki/Hermite_polynomials) are not covered yet in my course. (I think covered in Year 3? Not sure!)
 
 ```bash
 Turns out they briefly touched upon Hermite Polynomials in Modern Physics course
 ```
+
+After Year 3 I finally understand it...
+
+From Luigi Del Debbio and Arjun Berera's Quantum Mechanics books, they say: 
+
+Eigenfunctions of a quantum harmonic oscillator can be written as:
+
+$$
+u_n(x)=C_n \exp \left\{-\alpha^2 x^2 / 2\right\} H_n(\alpha x)
+$$
+
+$$\alpha^2 \equiv m \omega / \hbar$$ and $$H_n(\alpha x)$$ are polynomials of degree $$n$$, known as Hermite polynomials. Once again using dimensional analysis, you can show that $$\alpha$$ has got dimensions of inverse length, so that the product $$\alpha x$$ is dimensionless. The Hermite polynomials satisfy the orthogonality relation
+
+$$
+\int_{-\infty}^{\infty} \exp \left\{-s^2\right\} H_m(s) H_n(s) \mathrm{d} s=2^n \sqrt{\pi} n ! \delta_{m n},
+$$
+
+The first few Hermite polynomials are
+
+$$
+\begin{aligned}
+& H_0(s)=1 \\
+& H_1(s)=2 s \\
+& H_2(s)=4 s^2-2 \\
+& H_3(s)=8 s^3-12 s
+\end{aligned}
+$$
 
 It's a good introduction to Physics degree and it intensified my passion towards Physics (funny thing is I almost went to study Earth System Science... I might like typhoons, but oceans and stuff aren't built for me... and I also hate labs so welp)
 
