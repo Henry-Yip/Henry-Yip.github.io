@@ -1,2 +1,6 @@
 cd /d %~dp0
-cmd.exe /k "bundle exec jekyll build & git add -A & git commit -m asdf & git push "
+start bundle exec jekyll build
+start git add -A 
+start git commit -m "Automated"
+start git push
+pause
