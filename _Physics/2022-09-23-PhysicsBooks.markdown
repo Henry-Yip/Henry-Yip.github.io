@@ -42,7 +42,7 @@ $$
 \int_{-\infty}^{\infty} \exp \left\{-s^2\right\} H_m(s) H_n(s) \mathrm{d} s=2^n \sqrt{\pi} n ! \delta_{m n},
 $$
 
-The first few Hermite polynomials are
+The first few Hermite polynomials are:
 
 $$
 \begin{aligned}

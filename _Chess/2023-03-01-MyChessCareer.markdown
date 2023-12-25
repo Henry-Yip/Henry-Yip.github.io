@@ -15,7 +15,7 @@ sidebar:
 
 White to Play:
 
-26.Qe7 kh6 27.Qxf8 kh5 (otherwise kg5 -> Nf3). Which are correct but I played 28.g7?? which loses to Qe2! which causes perpetual checking
+26.Qe7 kh6 27.Qxf8 kh5 (otherwise kg5 -> Nf3). Which are correct but I played 28.g7?? which loses to Qe2! which causes perpetual checking.
 
 
 

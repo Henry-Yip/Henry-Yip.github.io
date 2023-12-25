@@ -1,0 +1,22 @@
+---
+layout: single
+header:
+  teaser: /assets/images/AI.png
+title: Chess AI Analysis 
+toc: true
+toc_label: "XiangQi"
+toc_sticky: true
+katex: False
+tags: Chess
+permalink: /Chess/XiangQi/  
+sidebar:
+ nav: "Chess"
+---
+
+# Xiangqi
+
+I also Play Xiangqi, or so called "chinese" chess. This is the position I reached after  5+3 Blitz with my friend.
+
+<iframe src="/assets/Xiangqi.png"></iframe>
+
+Guess who is better (Red turn!)
