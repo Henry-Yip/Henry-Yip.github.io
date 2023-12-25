@@ -5,7 +5,7 @@ katex: false
 author_profile: true
 ---
 
-{% responsive_image path: assets/XiangQi.png alt: "A description of the image" %}
+
 
 ### This Website
 
