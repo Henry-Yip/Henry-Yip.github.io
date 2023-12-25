@@ -18,7 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from'
   
   
-
+gem 'jekyll-responsive-image'
 gem 'duktape'
 gem 'katex'
 gem 'execjs'

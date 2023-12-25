@@ -8,6 +8,7 @@ sidebar:
  nav: "Physics"
 ---
 
+{% responsive_image path:"assets/images/Leo1.png" %}
 
 ## Allison Lau
 
@@ -21,12 +22,10 @@ Let's take a look at the Lorentz factor:
 
 $$\gamma_v=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}$$
 
-
-
 On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight may seem quite unmotivated apart from students getting some Pythagorean feel from the squares and square root, and judging from the negativie sign that the denominator sould say something about shrinking.
 
 This blog is an attempt to add more intuition to the anatomy of $$\gamma$$, and would suggest that an interpretation focusing on velocities instead of length allows for a more succinct and intuitive form for the Lorentz factor:
-<iframe src="/assets/image/LeoFirst.png" width="410px" height="285px"></iframe>
+<iframe src="{{site.url}}/assets//image/LeoFirst.png" width="410px" height="285px"></iframe>
 $$\gamma_v=\sec\theta$$
 
  - **Precursors: Speed of light and transverse distances are constant between inertial frames.**
@@ -55,7 +54,7 @@ Noticing the similar triangle constructed with velocities instead, you probably 
 $$(\text{length, reverse projection)} \rightarrow \text{(velocity, projection)}$$
 
 Let’s look at the following incorrect way of deriving the same thing:
-<iframe src="/assets/images/Leo1.png" width="400px" height="361px"></iframe>
+<iframe src="assets/images/Leo1.png" width="400px" height="361px"></iframe>
 
 To the observer, the clock is moving with speed $$v$$, a component of $$c$$ is used to provide the horizontal velocity to keep up with the clock, thus only the vertical component of $$c$$ is used to transverse the distance $$2l$$. (The vertical component is just $$c$$ reduced by $$v$$, i.e. $$\sqrt{c^2-v^2}$$, or for a more speakable and conceptual formula, just read it as “the projection of $$c$$ onto $$l$$" i.e. $$c\cos{\theta}$$. We therefore obtain $$t$$ much more elegantly,
 
@@ -74,7 +73,7 @@ But why did we get the correct result?
 When we do things this way, we are actually doing a Galilean transformation implicitly, to say we resolved the velocity vertically and claim that the time of journey remain unchanged is actually to shift into the light clock’s rest frame in a Galilean way. It still gives the correct Lorentz factor because Galilean transformation is an incorrect way to shift reference frames. So in some sense we are still in the observer’s frame, giving us the correct dilated time.
 
 Alternatively, you can say that the result is correct because we did a forbidden move twice, first is to reduce $$c$$ (spatial part of Galilean transform), second is to say that the durations are equal (temporal part of Galilean transform).
-<iframe src="/assets/images/Leo2.png" width="713px" height="250px"></iframe>
+<iframe src="assets/images/Leo2.png" width="713px" height="250px"></iframe>
 
 **The problem is not with resolving components, the problem is with jumping to the conclusion that the time quantity obtained as the ratio of resolved quantities equals the time for the unresolved motion. To conclude that they are equal, we need to do a Galilean transformation, which is forbidden. Note the characteristic $$t'=t$$ here**
 
@@ -94,12 +93,12 @@ See , now that we detached our "vertical time" $$t_y$$ from the imaginary motion
 $$t_y=t=\frac{\sqrt{{L_y}^2+{L_x}^2}}{\sqrt{{v_y}^2+{v_x}^2}}=\frac{\sqrt{{L_y}^2+{L_x}^2-(v_xt)^2}}{\sqrt{{v_y}^2+{v_x}^2-{v_x}^2}}=\frac{L_y}{v_y}$$
 {% endraw %}
 The first step follows from the temporal part of the transformation  $$(t'=t)$$,the third step follows from the spatial part $$(x'=x-{v_x}t)$$
-<iframe src="/assets/images/Leo3.png" width="808px" height="250px"></iframe>
+<iframe src="assets//images/Leo3.png" width="808px" height="250px"></iframe>
 We took a forbidden move to step into an imaginary realm, calculate $$t$$ there, then bring it back to the real world by doing another forbidden move. This is reminiscent of a recurring theme in math, consider well known examples like differentiation under the integral sign, Laplace transform or even matrix diagonalization (transform to eigen basis, do the transformation easily, return to original basis). They all have the look $$Q \bigwedge Q^{-1}$$
 
 In fact, even when people refuse to use the forbidden move, they are still implicitly doing it when rearranging the expression in method one to group $$t$$ together on one side. It is just a matter of whether you are willing to interpret the algebra beyond the numerical values into physical meanings. Compare the two methods, you can see that they are just playing with the same triangle:
 
-<iframe src="/assets/images/Leo5.png" width="400px" height="181px"></iframe>
+<iframe src="assets//images/Leo5.png" width="400px" height="181px"></iframe>
 
 only that the triangle in method II is formed by thinking about how perspective shift subtract from velocities, instead of how it adds to displacement, the sides are scaled down by $$t$$, $$t$$ therefore only shows up in one of the side lengths, making the formula for Lorentz factor immediately obvious.
 

@@ -17,6 +17,6 @@ sidebar:
 
 I also Play Xiangqi, or so called "chinese" chess. This is the position I reached after  5+3 Blitz with my friend.
 
-<iframe src="/assets/XiangQi.png"></iframe>
+{% responsive_image path:"assets/images/XiangQi.png" %}
 
 Guess who is better (Red turn!)

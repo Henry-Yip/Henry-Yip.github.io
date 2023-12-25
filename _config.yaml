@@ -332,4 +332,9 @@ compress_html:
   ignore:
     envs: development
 
-
+# responsive images
+responsive_image:   
+  template: _includes/responsive-image.html
+  sizes:
+    - width: 600
+    - width: 1440

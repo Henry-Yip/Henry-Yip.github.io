@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "Splash Page"
-    url: /Splash/
   - title: "Contributors"  
     url: /Contributors/  
   - title: "Chess"
