@@ -22,7 +22,7 @@ Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanic
 Galaxies and Cosmology, with some coverage on stars. 
 
 
-[PDF and Source Code]({% link _Physics/2022-05-22-Astrocont.markdown %})
+[PDF and Source Code]({% link _posts/2022-05-22-Astrocont.markdown %})
 
 (There are some minor mistakes in the calculation part...)
 

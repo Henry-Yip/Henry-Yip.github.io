@@ -130,7 +130,7 @@ $$
 \dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}
 $$
 
-Next, by substitution and using the results from [Area of Ellipse]({% link _Physics/2023-10-16-EllipseArea.markdown %}):
+Next, by substitution and using the results from [Area of Ellipse]({% link _posts/2023-10-16-EllipseArea.markdown %}):
 
 $$
 \Delta t=\frac{A}{\dot{A}}=\frac{\pi a b}{h / 2}=\frac{2 \pi a b}{h}

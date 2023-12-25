@@ -21,7 +21,7 @@ In case you are confused about how I manage to write Math Equations in a website
 
 ## Appendix B
 
- - Used in my post about [HKDSE Physics]({% link _Physics/2022-12-25-HKDSE.markdown %})
+ - Used in my post about [HKDSE Physics]({% link _posts/2022-12-25-HKDSE.markdown %})
 
 **Proposition 1.2.1**: $$r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}$$
 
@@ -111,7 +111,7 @@ Note that dimensional analysis cannot ensure that your answer is correct; rather
 ## Appendix D
 
 
-   - Used in my post about [Cosets and Lagrange's Theoremc]({% link _Physics/2023-03-05-CosetsandLagrange.markdown %})
+   - Used in my post about [Cosets and Lagrange's Theoremc]({% link _posts/2023-03-05-CosetsandLagrange.markdown %})
 
 
 ### Lemma

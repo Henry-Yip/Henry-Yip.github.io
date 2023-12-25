@@ -21,7 +21,7 @@ In case you are confused about how I manage to write Math Equations in a website
 
 
 ## Orbit Equation:
-Using the knowledge from [Appendix B]({% link _Physics/2022-12-25-Appendix.markdown %}), we can quite easily deduce the orbit equation:
+Using the knowledge from [Appendix B]({% link _posts/2022-12-25-Appendix.markdown %}), we can quite easily deduce the orbit equation:
 
 $$
 \ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m} 
