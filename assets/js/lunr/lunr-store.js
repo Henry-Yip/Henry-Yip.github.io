@@ -1,343 +1,97 @@
 var store = [{
-        "title": "Chess AI Analysis",
-        "excerpt":"Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion Most engines, with Stockfish topping the list, have a significantly higher elo than GM Magnus Carlsen, arguably the best...","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/ChessAI/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Petrov Defence",
-        "excerpt":"Famous Traps Trap #1 There are some interesting traps for the Petrov Defense: 1. e4 e5 2. Nf3 Nf6 3. Nxe5 Nxe4 4. Qe2 Nd6 5. Nc6+ Where the discovery check wins the Queen and black is immediately lost (+8.0!) Also Please Check the Stafford Gambit Famous lines: My Favourite...","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-05-27-Petrov/",
-        "teaser": "/assets/images/Petrov.png"
-      },{
-        "title": "Alekhine Defense",
-        "excerpt":"Four Pawns Attack 1.e4 Nf6 2.e5 Nd5 3.d4 d6 4.c4 Nb6 5.f4 A slight detour – Mokele-mbembe variation The content below is heavily based on this post 3…f6 3…f6 is slightly inferior compared to 3…e6. After 3…f6 white is simply better because the knight on e4 is desparately alone, allowing...","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-05-31-Alekhine/",
-        "teaser": "/assets/images/Alekhine.png"
-      },{
-        "title": "How should I learn Chess?",
-        "excerpt":"Chess consists of 3 parts: Opening, Middlegame and Endgame How to Improve Openings First, make sure to check my posts on chess openings Openings have set theories and you need to grind through it. If you don’t have much time, I recommend you to play openings like London, where your...","categories": [],
-        "tags": [],
-        "url": "/Chess/learning/",
-        "teaser": "/assets/images/How.png"
-      },{
-        "title": "How to learn Blind Chess?",
-        "excerpt":"Below is a summarization of how I think blind chess should be learnt. I have seen content about these in Youtube and Quora in general. Motivation Mastering Blind Chess requires quite an intensitve training. It’s not only cool, but also improves your visualization skills and hence get better in middle...","categories": [],
-        "tags": [],
-        "url": "/Chess/BlindChess/",
-        "teaser": "/assets/images/Empty.png"
-      },{
-        "title": "Play Infinitely Many Chess Puzzles Here!",
-        "excerpt":"  ","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/ChessPuzzles/",
-        "teaser": "/assets/images/Puzzles.png"
-      },{
-        "title": "Game 1",
-        "excerpt":"Rapid Game 10 minutes, no increments White: Stockfish Black: Fairy-Max The PGN is here: You can analyse it for free in lichess analysis. Just paste the PGN in the box. 1. e4 Nf6 2. e5 Ne4 3. d3 Nc5 4. d4 Ne6 5. d5 Nc5 6. Nc3 d6 7. Nf3...","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-06-05-Game1/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Game 2",
-        "excerpt":"Rapid Game 10 minutes, no increments      White: Stockfish   Black: Fairy-Max      You can click here for Analysis!   The Blunder   I admit this is a hard puzzle…      ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-06-05-Game2/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Stafford Gambit",
-        "excerpt":"People (at least me) always relate Stafford Gambit with IM Eric Rosen, a famous chess streamer. It is a variation of the Petrov Defense with 3…Nc6?, a theoreticaly lost position for black, assuming perfect play. Top chess engines, like Stockfish, don’t favour these types of gambits because black is lost...","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/Stafford/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Game 3",
-        "excerpt":"Bullet Game - 1 minute      White: Fairy-Max   Black: Fairy-Max        Blunders  Too many blunders… I can’t make a fun puzzle   ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-06-12-Game3/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Game 4",
-        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max      Click Here for Analysis   The Blunder     ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-07-31-Game4/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Game 5",
-        "excerpt":"Bullet Game - 1 minute      White: Stockfish   Black: Fairy-Max        The Blunder  There aren’t many blunders in this game… Both played really well, but I guess Stockfish is just too good…  ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-07-31-Game5/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Game 6",
-        "excerpt":"Blitz Game - 5 minute      White: Stockfish   Black: Fairy-Max       ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-07-31-Game6/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Important Chess Events",
-        "excerpt":"What a thriller! Hikaru Nakamura just defeated Magnus Carlsen! According to chess24 “Hikaru Nakamura has now won five Speed Chess titles in a row, but more than that, he’s finally defeated the one player to have beaten him in the format — Magnus Carlsen. Hikaru got off to a stunning...","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/ChessEvents/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Game 7",
-        "excerpt":"Classical-esque Game - 30 minutes      White: Stockfish   Black: Fairy-Max       ","categories": [],
-        "tags": [],
-        "url": "/Chess/2022-08-10-Game7/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Chess with Toby Lam",
-        "excerpt":"Toby Lam is reading Mathematics in The University of Oxford. I played these games with him in starbucks, on 19.7.2021. His Personal Website (In case you are confused about how I manage to write Math Equations in a website… Press Here) Anyways… Game 1 Toby Lam resigned after Qxg7??. Guess...","categories": [],
-        "tags": [],
-        "url": "/Chess/TobyLam/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Play an engine!",
-        "excerpt":" ","categories": [],
-        "tags": [],
-        "url": "/Chess/Events/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Anish Giri Wins Magnus Carlsen!",
-        "excerpt":"Anish Giri beats Magnus Carlsen in Round 4 of the Tata Steel Masters   Here, Giri found the correct counter to Magnus’ blunder. Can you find it?      ","categories": [],
-        "tags": [],
-        "url": "/Chess/AnishGiri/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Solved Chess Puzzles (Daily!)",
-        "excerpt":"7/3/2023     White to Play:   26.Qe7 kh6 27.Qxf8 kh5 (otherwise kg5 -&gt; Nf3). Which are correct but I played 28.g7?? which loses to Qe2! which causes perpetual checking.   ","categories": [],
-        "tags": [],
-        "url": "/Chess/Daily/",
-        "teaser": "/assets/images/AI.png"
-      },{
-        "title": "Chess AI Analysis",
-        "excerpt":"Xiangqi   I also Play Xiangqi, or so called “chinese” chess. This is the position I reached after  5+3 Blitz with my friend.      Guess who is better (Red turn!)  ","categories": [],
-        "tags": ["Chess"],
-        "url": "/Chess/XiangQi/",
-        "teaser": "/assets/images/AI.png"
-      },{
         "title": "Henry Yip",
         "excerpt":"Photo Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong...","categories": [],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Downloading and Using Jekyll (Window Users)",
-        "excerpt":"(Updated on 14/6/2022, by Henry Yip) Downloading Jekyll This tutorial is largely based on the official website Requirements Requirements: Ruby Verison 2.5.0 or higher RubyGems GCC (GNU Compiler Collection) Make Checking You can check if the version you have installed is correct using the commands below. As long as you...","categories": [],
-        "tags": [],
-        "url": "/Jekyll/UsingJekyll/",
-        "teaser": "/assets/images/Useless1.png"
-      },{
-        "title": "Jekyll Tutorials",
-        "excerpt":"Why Jekyll There are many ways to create a website. Most people stick with “Website Builder” tools like wix, the major benefit being WYSIWYG. It is also relatively easier to build as you don’t need to work with command prompt and get things like: Liquid Exception: Could not find document...","categories": [],
-        "tags": ["Jekyll"],
-        "url": "/Jekyll/tutorials/",
-        "teaser": "/assets/images/Useless2.png"
-      },{
-        "title": "An Elegant Way to include Math Symbols in your website",
-        "excerpt":"Important Disclaimer Please note that this method is targeted for Minima users. Minima is the best Jekyll Theme for beginners as it is the easiest to navigate. I will make a separate tutorial for Minimal Mistakes users! How to include Math Symbols in Jekyll Sometimes, you just want to include...","categories": [],
-        "tags": [],
-        "url": "/Jekyll/Katex",
-        "teaser": "/assets/images/Useless3.png"
-      },{
-        "title": "Changing Skins in Minima and Minimal Mistakes",
-        "excerpt":"Important Disclaimer Starting from 27/6/2022, we switch to another Theme, Minimal Mistakes. It is much easier to change skin colours there. The first part is no longer relevant — unless you are still using Minima! Minima Jekyll’s default theme, Minima, provides 4 possible skins. This page (as of 22/5/2022) is...","categories": [],
-        "tags": [],
-        "url": "/Jekyll/skins/",
-        "teaser": "/assets/images/Useless4.png"
-      },{
-        "title": "Jekyll Problems Q&A",
-        "excerpt":"Introduction to this section If you have any problems to ask feel free to email s2231321@ed.ac.uk ** #1 Insufficient resources online** Solution: Welp, there isn’t much I can do with this one! This is the exact problem I face with Manim (Note: Use the community version). There simply isn’t sufficient...","categories": [],
-        "tags": ["Jekyll"],
-        "url": "/Jekyll/Q&A/",
-        "teaser": "/assets/images/Useless5.png"
-      },{
-        "title": "Introduction to Algolia",
-        "excerpt":"Introduction Algolia Search is one of the best ways to enable searching in your Jekyll Website. For Windows users, all you need to do is to have a usuable Algolia account, cd into your directory and type: set ALGOLIA_API_KEY=(Your ALGOLIA_API_KEY) &amp;&amp; bundle exec jekyll algolia and then edit your config_yaml,...","categories": [],
-        "tags": [],
-        "url": "/Jekyll/Algolia/",
-        "teaser": "/assets/images/Useless6.png"
-      },{
-        "title": "Youtube Video",
-        "excerpt":"I am terribly sorry for the potato quality! I will most definitely refilm this! LINK    ","categories": [],
-        "tags": ["Jekyll"],
-        "url": "/Jekyll/Youtube/",
-        "teaser": "/assets/images/Useless2.png"
-      },{
-        "title": "Interactiveness of Jekyll",
-        "excerpt":"Static Websites Jekyll generated websites are static… Yes, I know this sucks a lot… However, you can always make it interactive by introducing Iframes Iframes? According to hostinger.com, An iFrame, also knowns as Inline Frame, is an element that loads another HTML element inside of a web page. They are...","categories": [],
-        "tags": [],
-        "url": "/Jekyll/Interactive/",
-        "teaser": "/assets/images/Useless4.png"
-      },{
-        "title": "LaTeX Tutorial (1)",
-        "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial1/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "LaTeX Tutorial (2)",
-        "excerpt":"Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in the %Title page \\title[Introduction to \\LaTeX] %optional {Introduction to...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial2/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "LaTeX Tutorial (3)",
-        "excerpt":"Introuduction   A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial3/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample Tex Files (1)",
-        "excerpt":"The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free to send me any corrections. \\end{itemize} \\end{abstract} \\section{Aim} \\begin{itemize}...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/Tex1/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample Tex Files (2)",
-        "excerpt":"The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract} This appendix is related to solving ordinary diffential...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/Tex2/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Classical Music Playlist",
-        "excerpt":"Hello from Stockholm. I am a classical music enthusiast. Over the past 4 years, I have compiled a list of my favourite recordings. I like way too many pieces, however, I have only listed some here: Bach Art of Fugue 1.5 hrs of fugue - full of variations. Note the...","categories": [],
-        "tags": ["Music"],
-        "url": "/Music/2022-05-20-ClassicalMusic/",
-        "teaser": "/assets/images/Music.png"
-      },{
-        "title": "Resources",
-        "excerpt":"Motivation Being a classical music fan, sometimes you want to learn more music theory… And you want to learn it for fun so it won’t stress you out. Don’t worry, there are tons of Youtube Videos online! Youtube Channels English Videos English-Speaking Audiences: Richard Atkinson (Not Rowan, aka Mr Bean)...","categories": [],
-        "tags": ["Music"],
-        "url": "/Music/2022-12-24-Resources/",
-        "teaser": "/assets/images/Music.png"
-      },{
-        "title": "Pokemon Go PvP Analysis",
-        "excerpt":"Master League A battle between Mewtwo, Zacian, Dialga, Giratina and Dragonite I use PvPoke for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is: \\[\\text{Points}=\\frac{\\text{HP Remaining}}{\\text{ HP Total}}\\] For example, Dialga is expected to win Mewtwo, both without shields, with a...","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/PvP/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
-        "title": "Best Charged and Fast Moves",
-        "excerpt":"Ranking The STRONGEST Charged Moves in Pokemon Go by DPS Methodology I considered some of the strongest known charged moves in Pokemon Go, such as Frenzy Plant, and changed their typings to Psychic. Then, I make Mega Mewtwo Y, the strongest pokemon of all time, to learn these moves and...","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/Moves/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
-        "title": "Pokémons with Potential",
-        "excerpt":"Introduction Many Pokemons have great stats, great potential, but a suboptimal movepool, resulting in suboptimal performance. Now, we’ll analyse some of these pokemons, and see how far they can actually get Slaking Slaking is a Pokemon with Great Potential, having a 290 Attack stat, one of the highest among non-legendary/non-mega...","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/PvE/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
-        "title": "Pokemon Go PVE Abilities",
-        "excerpt":"Mega Medicham  In the main series, both Medicham and mega medicham can double its attack stats. Medicham is still weak with the bonus but mega medicham is an absolute beast!    ","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/Abilities/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
-        "title": "My Pokemon Go Journey",
-        "excerpt":"Starter Pokemon Squirtle Starting Date 25/7/2016, the day Pokemon Go was released in Hong Kong Playing History: Played a lot in 2016, a bit in 2017, a lot in 2018, a bit in 2021, and a lot in 2023 after my friend asked me to play (otherwise no motivation) Highest...","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/Journey/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
-        "title": "Basics of Pokemon Go",
-        "excerpt":"Typing All Pokemons are categorized into types and a pokemon can have 2 types at the same time (So they don’t form an Equivalence Class) Effectiveness All typings take reduced damage from moves of some particular types, and are exceptionally vulnerable to moves of some other types. For example, Fairy...","categories": [],
-        "tags": ["Pokemon","Go"],
-        "url": "/Pokemon/Basics/",
-        "teaser": "/assets/images/Dubrovnik.jpg"
-      },{
         "title": "Astrophysics 1",
-        "excerpt":"Astrophysics Course Notes Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope...","categories": [],
+        "excerpt":"This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with some...","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/Astrophysics/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Astrophysics 2",
-        "excerpt":"This is the PDF I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the offical website of Overleaf and register for a new account. Create a new project and...","categories": [],
-        "tags": ["Astrophysics","2"],
-        "url": "/Astrocont/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Allison Lau - Numerical Methods",
-        "excerpt":"Allison Lau   Allison Lau is a student from the University of Toronto. These are the notes she wrote for her Computer Science course. If you have any suggestions/amendments, please send her!   Please Press HERE to download!  ","categories": [],
+        "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.  ","categories": [],
         "tags": ["Allison","Lau","-","Numerical","Methods"],
         "url": "/AllisonLau/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Leo Chow - Relativity",
-        "excerpt":"Author Introduction Leo Chow is a student in the University of Hong Kong, studying Mathematics and Physics He has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the...","categories": [],
+        "excerpt":"This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the...","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/LeoChow/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "LaTeX Tutorial (Part 1)",
+        "excerpt":"This is Part One of the \\(\\LaTeX\\) tutorials I will make. I will show the fastest (but not the most standard) way to create a \\(\\LaTeX\\) document. Why LaTeX According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "LaTeX Tutorial (2)",
+        "excerpt":"This is Part Two of my \\(\\LaTeX\\) tutorials. Here I present the source code of my LaTeX tutorials. Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample LaTeX Files (Part 1)",
+        "excerpt":"Here I present what a standard LaTeX document will look like, built using the methods I introduced previously.  Introuduction   A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial3/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample LaTeX Files (Part 2)",
+        "excerpt":"This is the source code for the \\(\\LaTeX\\) document in Sample LaTeX Files (Part 1) The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample Tex Files (2)",
+        "excerpt":"This is another \\(\\LaTeX\\) document (With Math Symbols) The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract}...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
         "title": "Physics Book I read before university",
-        "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
+        "excerpt":"The First Physics book I read The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does...","categories": [],
         "tags": ["Physics","Book"],
         "url": "/PhysicsBooks/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Appendix",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad...","categories": [],
+        "excerpt":"This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency. Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos...","categories": [],
         "tags": ["Appendix"],
         "url": "/Appendix/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Classical Mechanics in HKDSE context",
-        "excerpt":"Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may + similar. Intended Audience: Year 1 Math/Physics major. Motivation HKDSE is a public exam taken by...","categories": [],
+        "excerpt":"This is a post on Classical Mechanics in High School style. It serves as a good introduction to High Schoolers wanting to pursue a deeper understanding in Physics. Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I...","categories": [],
         "tags": ["HKDSE"],
         "url": "/HKDSE/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Small Pertubations",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
+        "excerpt":"Small Perbuations is closely related to simple harmonic motions. We try to pertube a planet revolving around a star, and see how its trajectory goes. Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the...","categories": [],
         "tags": ["Small","Pertubations"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Analysis/Fourier Series",
-        "excerpt":"Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric functions. By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time? The...","categories": [],
+        "excerpt":"This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class. Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric functions. By adding more and more trigonometric functions together, the summation itself looks more and more like...","categories": [],
         "tags": ["Analysis/Fourier","Series"],
         "url": "/Dirichlet/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Cosets and Lagrange",
-        "excerpt":"Cosets Theorem Claim: \\(g_1H=g_2H\\) is possible even when \\(g_1 \\neq g_2\\) Proof: Consider a subgroup of \\(S_3\\) that only contains the rotations and the identity element \\(e\\). From above, this subgroup contains \\((n-1)+1=n\\) elements , so the subgroup, denoted by \\(H\\), has \\(3\\) elements, i.e. \\(e, (123),(132)\\). Now consider \\((12)...","categories": [],
-        "tags": ["Cosets","and","Lagrange"],
-        "url": "/CosetsandLagrange/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Different Types of Groups",
-        "excerpt":"Dihedral Groups The symmetries of an n-gon form a group (Proved in Prerequisites) We call it Dihedral Group Theorem 1.1 The dihedral group \\(D_n\\), has precisely \\(\\left|D_n\\right|=2 n\\) elements Proof \\(D_n\\) consists of: The identity \\(e \\in D_n\\) (Trivial) The \\(n-1\\) rotations (any direction) through angles \\(k \\cdot \\frac{2 \\pi}{n}\\),...","categories": [],
-        "tags": ["Different","Types","of","Groups"],
-        "url": "/DiffTypesofGroups/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Pre-requisites for Group Theory",
-        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem Consider the natural numbers \\(\\mathbb{N}\\). Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2. We can group...","categories": [],
+        "excerpt":"Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learning to facilitate its learning. Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem Consider the...","categories": [],
         "tags": ["Pre-requisites","for","Group","Theory"],
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Group Theory",
-        "excerpt":"A gentle introduction to Group Theory, with a heavy emphasis on intuitions.   Pre-requisites: Introduction to graphs, group axioms, equivalence class, etc     Pre-requisites   Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, Normal Subgroups     Types of Groups   Cosets; Lagrange’s Theorem and its properties; Intuitions behind     Cosets; Lagrange’s Theorem   ","categories": [],
-        "tags": ["Group","Theory"],
-        "url": "/GroupTheory/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Multivariable Calculus",
-        "excerpt":"Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides...","categories": [],
+        "excerpt":"Here we are using the language of differential geometry to explore around Green’s Theorem and Stokes’ Theorem. Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor...","categories": [],
         "tags": ["Multivaribale","Calculus"],
         "url": "/EllipseArea/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Einstein Summation",
-        "excerpt":"Disclaimer This page is directly inspired (many parts copied) from my Geometry Course Notes, written by Dr Johans Martens. Introduction Einstein Summation has been very important in many part of physics, especially where we need to sum up a lot of stuff, like in electromagnetism. Mathematicians define it more rigorously...","categories": [],
-        "tags": ["Einstein","Summation"],
-        "url": "/EinsteinSummation/",
         "teaser": "/assets/images/Teaser.png"
       }]
