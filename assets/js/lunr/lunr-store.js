@@ -173,66 +173,6 @@ var store = [{
         "url": "/Jekyll/Interactive/",
         "teaser": "/assets/images/Useless4.png"
       },{
-        "title": "How I Approach Physics",
-        "excerpt":"Introduction Physics is definitely one of the harder subjects to master (if you can master Physics after all!) Skipping lectures My friend recommended me to skip lectures, as it was more of a routine than actually learning stuff. After a year of doing that, my verdict is that it is...","categories": [],
-        "tags": [],
-        "url": "/Journal/HowtostudyPhysics/",
-        "teaser": "/assets/images/Astro.png"
-      },{
-        "title": "My Progress in everything (Updated)",
-        "excerpt":"As said before, the bolded words are comments from 31/7 I have no idea what is happening to me… Introduction It seems that I am spending too much time in everything, and it’s really hard to strike a balance anyways. Writing a page like this takes me approximately 2-3 hours...","categories": [],
-        "tags": [],
-        "url": "/Journal/Progress/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Quitting Social Media!",
-        "excerpt":"Abstract I am unofficially quitting Instagram on 28/11/2022 and I will most likely only share my updates here Motivation I’ll quote this from Toby Lam: “I’m aware that the viewership of this website may be very low, yet that doesn’t particularly concern me. I’ve always intended it to be a...","categories": [],
-        "tags": [],
-        "url": "/Journal/Disgusted/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "I suck at Math!",
-        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years...","categories": [],
-        "tags": [],
-        "url": "/Journal/Isuckatmath/",
-        "teaser": "/assets/images/Pgfplots.png"
-      },{
-        "title": "Tropical Cyclones",
-        "excerpt":"Filmed in 2015. Credits shown in Video. Enjoy!    ","categories": [],
-        "tags": [],
-        "url": "/Journal/TropicalClyclones/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "I suck at Math!",
-        "excerpt":"Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years...","categories": [],
-        "tags": [],
-        "url": "/Journal/Isuckatmath/",
-        "teaser": "/assets/images/Pgfplots.png"
-      },{
-        "title": "Pigeons!!!",
-        "excerpt":"Loading... Candidate 1: London Considerably fat, not scared of people Candidate 2: Dubrovnik Pretty well fed, quite stupid Candidate 3: Hong Kong Very slim, extremely sensitive Candidate 4: Zagreb This particular one is pink which is funny; in general they are quite abundant Candidate 5: Ljubljana Quite stupid/calm as they...","categories": [],
-        "tags": [],
-        "url": "/Journal/Pigeons/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Henry-yip.github.io; Future and thoughts",
-        "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
-        "tags": [],
-        "url": "/Journal/Future/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Self Identity",
-        "excerpt":"Problem In the world of STEM, self-acceptance is really important. Imposter syndrome is really prevalent and students get suffocated seeing the top scorer in the class absolutely crushing everyone and no matter how they study, they can’t understand the materials. I have been there, and I believe everyone has been...","categories": [],
-        "tags": [],
-        "url": "/Journal/SelfIdentity/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Stun Locks",
-        "excerpt":"image_path: /assets/images/Music.png title: “Future of Website” excerpt: “Henry is talking about the future of this website” url: “https://henry-yip.github.io/FutureofWebsite/” btn_label: “Read More” btn_class: “btn–success” image_path: /assets/images/Zagreb.jpg title: “Myself” excerpt: “Self-Introduction” url: “https://henry-yip.github.io/Welcome/” btn_label: “Read More” btn_class: “btn–success” I’ve realized that most people (all) put their CVs in their personal website. Realistically...","categories": [],
-        "tags": ["Journal"],
-        "url": "/Journal/NoCV/",
-        "teaser": "/assets/images/Astro.png"
-      },{
         "title": "LaTeX Tutorial (1)",
         "excerpt":"Why \\(\\LaTeX\\) According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of publishing. Not only can it create beautifully typeset documents, but it allows users to very quickly tackle the more complicated parts of typesetting, such as inputting mathematics,...","categories": [],
         "tags": [],
@@ -275,96 +215,6 @@ var store = [{
         "url": "/Music/2022-12-24-Resources/",
         "teaser": "/assets/images/Music.png"
       },{
-        "title": "Astrophysics 1",
-        "excerpt":"Astrophysics Course Notes Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope...","categories": [],
-        "tags": ["Astrophysics","1"],
-        "url": "/Physics/Astrophysics-1/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Astrophysics 2",
-        "excerpt":"This is the PDF I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the offical website of Overleaf and register for a new account. Create a new project and...","categories": [],
-        "tags": ["Astrophysics","2"],
-        "url": "/Physics/Astrophysics-2/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Allison Lau - Numerical Methods",
-        "excerpt":"Allison Lau   Allison Lau is a student from the University of Toronto. These are the notes she wrote for her Computer Science course. If you have any suggestions/amendments, please send her!   Please Press HERE to download!  ","categories": [],
-        "tags": ["Allison","Lau","-","Numerical","Methods"],
-        "url": "/Physics/Allison-Lau",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Leo Chow - Relativity",
-        "excerpt":"Author Introduction Leo Chow is a student in the University of Hong Kong, studying Mathematics and Physics He has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the...","categories": [],
-        "tags": ["Astrophysics","1"],
-        "url": "/Physics/Leo-Chow",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Physics Book I read before university",
-        "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
-        "tags": ["Physics","Book"],
-        "url": "/Physics/FirstBook/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Appendix",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad...","categories": [],
-        "tags": ["Appendix"],
-        "url": "/Physics/Appendix/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Classical Mechanics in HKDSE context",
-        "excerpt":"Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may + similar. Intended Audience: Year 1 Math/Physics major. Motivation HKDSE is a public exam taken by...","categories": [],
-        "tags": ["HKDSE"],
-        "url": "/Physics/HKDSE/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Small Pertubations",
-        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
-        "tags": ["Small","Pertubations"],
-        "url": "/Physics/SmallPertubations/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Analysis/Fourier Series",
-        "excerpt":"Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric functions. By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time? The...","categories": [],
-        "tags": ["Analysis/Fourier","Series"],
-        "url": "/Physics/Analysis_Fourier/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Cosets and Lagrange",
-        "excerpt":"Cosets Theorem Claim: \\(g_1H=g_2H\\) is possible even when \\(g_1 \\neq g_2\\) Proof: Consider a subgroup of \\(S_3\\) that only contains the rotations and the identity element \\(e\\). From above, this subgroup contains \\((n-1)+1=n\\) elements , so the subgroup, denoted by \\(H\\), has \\(3\\) elements, i.e. \\(e, (123),(132)\\). Now consider \\((12)...","categories": [],
-        "tags": ["Cosets","and","Lagrange"],
-        "url": "/Physics/CosetsandLagrange/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Different Types of Groups",
-        "excerpt":"Dihedral Groups The symmetries of an n-gon form a group (Proved in Prerequisites) We call it Dihedral Group Theorem 1.1 The dihedral group \\(D_n\\), has precisely \\(\\left|D_n\\right|=2 n\\) elements Proof \\(D_n\\) consists of: The identity \\(e \\in D_n\\) (Trivial) The \\(n-1\\) rotations (any direction) through angles \\(k \\cdot \\frac{2 \\pi}{n}\\),...","categories": [],
-        "tags": ["Different","Types","of","Groups"],
-        "url": "/Physics/DiffTypesofGroups/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Pre-requisites for Group Theory",
-        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem Consider the natural numbers \\(\\mathbb{N}\\). Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2. We can group...","categories": [],
-        "tags": ["Pre-requisites","for","Group","Theory"],
-        "url": "/Physics/Pre-requisites_for_Group_Theory/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Group Theory",
-        "excerpt":"A gentle introduction to Group Theory, with a heavy emphasis on intuitions.   Pre-requisites: Introduction to graphs, group axioms, equivalence class, etc     Pre-requisites   Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, Normal Subgroups     Types of Groups   Cosets; Lagrange’s Theorem and its properties; Intuitions behind     Cosets; Lagrange’s Theorem   ","categories": [],
-        "tags": ["Group","Theory"],
-        "url": "/Physics/Group%20Theory/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Multivariable Calculus",
-        "excerpt":"Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides...","categories": [],
-        "tags": ["Multivaribale","Calculus"],
-        "url": "/Physics/Multivaribale%20Calculus/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Einstein Summation",
-        "excerpt":"Disclaimer This page is directly inspired (many parts copied) from my Geometry Course Notes, written by Dr Johans Martens. Introduction Einstein Summation has been very important in many part of physics, especially where we need to sum up a lot of stuff, like in electromagnetism. Mathematicians define it more rigorously...","categories": [],
-        "tags": ["Einstein","Summation"],
-        "url": "/Physics/Einstein%20Summation/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Pokemon Go PvP Analysis",
         "excerpt":"Master League A battle between Mewtwo, Zacian, Dialga, Giratina and Dragonite I use PvPoke for analysis, where Pokemons gain points by winning, and losing points by losing. The formula for the points is: \\[\\text{Points}=\\frac{\\text{HP Remaining}}{\\text{ HP Total}}\\] For example, Dialga is expected to win Mewtwo, both without shields, with a...","categories": [],
         "tags": ["Pokemon","Go"],
@@ -401,51 +251,93 @@ var store = [{
         "url": "/Pokemon/Basics/",
         "teaser": "/assets/images/Dubrovnik.jpg"
       },{
-        "title": "Website Update Log - February",
-        "excerpt":"Date: 25/2/2023 #1: New Post on Dirichlet’s Kernel Spent 1 day. It’s a nice introduction to Fourier Series and Dirichlet’s Kernel. Date: 26/2/2023 #2: Dealing with Cookiebots According to GDPR, I need to include a consent form while using cookies, but according to some online tests my consent form is...","categories": [],
-        "tags": [],
-        "url": "/Updates/February/",
-        "teaser": "/assets/images/LaTeX.png"
+        "title": "Astrophysics 1",
+        "excerpt":"Astrophysics Course Notes Hi Everyone, this set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope...","categories": [],
+        "tags": ["Astrophysics","1"],
+        "url": "/Astrophysics/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Website Update Log - January",
-        "excerpt":"Date: 24/1/2023 #1: Major Error Fix Problem: Some posts in “Journal” don’t show up. Thoughts and Solution: I’ve found out some unnecessary HTML files that may have “masked” my Markdown files. These files seem to come from _sites, and it may be a result of moving files around carelessly. Therefore...","categories": [],
-        "tags": [],
-        "url": "/Updates/January/",
-        "teaser": "/assets/images/LaTeX.png"
+        "title": "Astrophysics 2",
+        "excerpt":"This is the PDF I will also send you the tex code. Below I will show you how to use! 1. Overleaf Overleaf is an online, collaborative LaTeX Editor. Downloading the documents Go to the offical website of Overleaf and register for a new account. Create a new project and...","categories": [],
+        "tags": ["Astrophysics","2"],
+        "url": "/Astrocont/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Website Update Log - March",
-        "excerpt":"Date: 1/3/2023  #1: New section - Pokemon Go   Date: 2/3/2023   Three different pages:     PVP Meta   Underated Pokemons - Slacking   Strongest Charged Moves in PVE   Date: 5/3/2023   Two different pages:     Group Theory   Prerequisites of Group Theory   Date: 9/3/2023   Continuing on the two Group Theory pages!   ","categories": [],
-        "tags": [],
-        "url": "/Updates/March/",
-        "teaser": "/assets/images/LaTeX.png"
+        "title": "Allison Lau - Numerical Methods",
+        "excerpt":"Allison Lau   Allison Lau is a student from the University of Toronto. These are the notes she wrote for her Computer Science course. If you have any suggestions/amendments, please send her!   Please Press HERE to download!  ","categories": [],
+        "tags": ["Allison","Lau","-","Numerical","Methods"],
+        "url": "/AllisonLau/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Website Update Log - October",
-        "excerpt":"Date: 31/10/2023 Sorry haven’t updated this page for a while… These are the things I did in October! I have tried to redirect my page to the “splash page” instead, which took me at least 3 hours. &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;HTML Meta Tag&lt;/title&gt; &lt;meta http-equiv = \"refresh\" content =...","categories": [],
-        "tags": [],
-        "url": "/Updates/October/",
-        "teaser": "/assets/images/LaTeX.png"
+        "title": "Leo Chow - Relativity",
+        "excerpt":"Author Introduction Leo Chow is a student in the University of Hong Kong, studying Mathematics and Physics He has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the right hand side is a recurring structure in the...","categories": [],
+        "tags": ["Astrophysics","1"],
+        "url": "/LeoChow/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Year 2 Summer",
-        "excerpt":"Goals Goal 1 I have identified a large number of loopholes in my mathematical understanding. I will try to fill these up by watching Youtube Videos. Goal 2 I am trying to become a proficient programmer in Python. The first step is to learn object-oriented programming. Goal 3 I am...","categories": [],
-        "tags": [],
-        "url": "/Year_2_Summer/",
-        "teaser": "/assets/images/Wolf.png"
+        "title": "Physics Book I read before university",
+        "excerpt":"The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and...","categories": [],
+        "tags": ["Physics","Book"],
+        "url": "/PhysicsBooks/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "An Introduction to This Website",
-        "excerpt":"Introduction Myself My name is Henry Yip. I am a Mathematical Physics Student from the University of Edinburgh. I study the intersection of Mathematics and Physics, focusing on Quantum Physics, General Relativity, and Geometry. Reasons to create a website Hosting LaTeX documents online February 2022 was when I started to...","categories": [],
-        "tags": [],
-        "url": "/Welcome/",
-        "teaser": "/assets/images/Wolf.png"
+        "title": "Appendix",
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad...","categories": [],
+        "tags": ["Appendix"],
+        "url": "/Appendix/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Writing me constructive comments",
-        "excerpt":"Motivation I enjoy two-sided communication. While I have asked my best friends regarding the depth of my content/asked them to provide general suggestions, I want to know YOUR opinion regarding my website so I can obtain a diversity of ideas because my friends are math-heavy and nerdy, therefore what they...","categories": [],
-        "tags": [],
-        "url": "/Commenting/",
-        "teaser": "/assets/images/Astro.png"
+        "title": "Classical Mechanics in HKDSE context",
+        "excerpt":"Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I tried my best to avoid copying, but some of the flow may + similar. Intended Audience: Year 1 Math/Physics major. Motivation HKDSE is a public exam taken by...","categories": [],
+        "tags": ["HKDSE"],
+        "url": "/HKDSE/",
+        "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "henry-yip.github.io; Future and Thoughts",
-        "excerpt":"Domain Name Several People, like Toby Lam have asked me to buy a domain. However, I think https://henry-yip.github.io/ is a fabulous name and will lead people to my Github page, which is what I intended from beginning. New Content I must say I really enjoyed writing my blog post on...","categories": [],
-        "tags": [],
-        "url": "/FutureofWebsite/",
-        "teaser": "/assets/images/Astro.png"
+        "title": "Small Pertubations",
+        "excerpt":"KaTeX Promotion In case you are confused about how I manage to write Math Equations in a website… Press Here Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the reader. Hint 1: We're dealing...","categories": [],
+        "tags": ["Small","Pertubations"],
+        "url": "/SmallPerbuations/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Analysis/Fourier Series",
+        "excerpt":"Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric functions. By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time? The...","categories": [],
+        "tags": ["Analysis/Fourier","Series"],
+        "url": "/Dirichlet/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Cosets and Lagrange",
+        "excerpt":"Cosets Theorem Claim: \\(g_1H=g_2H\\) is possible even when \\(g_1 \\neq g_2\\) Proof: Consider a subgroup of \\(S_3\\) that only contains the rotations and the identity element \\(e\\). From above, this subgroup contains \\((n-1)+1=n\\) elements , so the subgroup, denoted by \\(H\\), has \\(3\\) elements, i.e. \\(e, (123),(132)\\). Now consider \\((12)...","categories": [],
+        "tags": ["Cosets","and","Lagrange"],
+        "url": "/CosetsandLagrange/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Different Types of Groups",
+        "excerpt":"Dihedral Groups The symmetries of an n-gon form a group (Proved in Prerequisites) We call it Dihedral Group Theorem 1.1 The dihedral group \\(D_n\\), has precisely \\(\\left|D_n\\right|=2 n\\) elements Proof \\(D_n\\) consists of: The identity \\(e \\in D_n\\) (Trivial) The \\(n-1\\) rotations (any direction) through angles \\(k \\cdot \\frac{2 \\pi}{n}\\),...","categories": [],
+        "tags": ["Different","Types","of","Groups"],
+        "url": "/DiffTypesofGroups/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Pre-requisites for Group Theory",
+        "excerpt":"Equivalence Class Why Equivalence Classes? To understand Cosets, hence understand very important theorems like Lagrange’s Theorem Consider the natural numbers \\(\\mathbb{N}\\). Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2. We can group...","categories": [],
+        "tags": ["Pre-requisites","for","Group","Theory"],
+        "url": "/Prerequisites/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Group Theory",
+        "excerpt":"A gentle introduction to Group Theory, with a heavy emphasis on intuitions.   Pre-requisites: Introduction to graphs, group axioms, equivalence class, etc     Pre-requisites   Different Types of Groups: Dihedral Groups, Symmetric Groups, etc; Subgroups, Normal Subgroups     Types of Groups   Cosets; Lagrange’s Theorem and its properties; Intuitions behind     Cosets; Lagrange’s Theorem   ","categories": [],
+        "tags": ["Group","Theory"],
+        "url": "/GroupTheory/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Multivariable Calculus",
+        "excerpt":"Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides...","categories": [],
+        "tags": ["Multivaribale","Calculus"],
+        "url": "/EllipseArea/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Einstein Summation",
+        "excerpt":"Disclaimer This page is directly inspired (many parts copied) from my Geometry Course Notes, written by Dr Johans Martens. Introduction Einstein Summation has been very important in many part of physics, especially where we need to sum up a lot of stuff, like in electromagnetism. Mathematicians define it more rigorously...","categories": [],
+        "tags": ["Einstein","Summation"],
+        "url": "/EinsteinSummation/",
+        "teaser": "/assets/images/Teaser.png"
       }]
