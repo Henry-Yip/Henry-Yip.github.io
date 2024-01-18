@@ -24,13 +24,13 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (Part 1)",
-        "excerpt":"This is Part One of the \\(\\LaTeX\\) tutorials I will make. I will show the fastest (but not the most standard) way to create a \\(\\LaTeX\\) document. Why LaTeX According to Overleaf: “LATEX is used all over the world for scientific documents, books, as well as many other forms of...","categories": [],
+        "excerpt":"This is Part One of the \\(\\LaTeX\\) tutorials I will make. I will show the fastest (but not the most standard) way to create a \\(\\LaTeX\\) document. How to learn \\(\\LaTeX\\) There are plenty of Youtube Videos online. You can also learn quite extensively in the overleaf website. I have...","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial1/",
         "teaser": "/assets/images/LaTeX.png"
       },{
         "title": "LaTeX Tutorial (2)",
-        "excerpt":"This is Part Two of my \\(\\LaTeX\\) tutorials. Here I present the source code of my LaTeX tutorials. Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This...","categories": [],
+        "excerpt":"This is Part Two of my \\(\\LaTeX\\) tutorials. Here I present the source code of my LaTeX tutorials. Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{tikz} \\usepackage{xcolor} \\definecolor{logoBlue}{RGB}{41, 128, 185} \\definecolor{logoText}{RGB}{44, 62, 80} \\usetikzlibrary{calc} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,...","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial2/",
         "teaser": "/assets/images/LaTeX.png"
