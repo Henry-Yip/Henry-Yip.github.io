@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Analysis/Fourier Series | Henry Yip</title>
+<!-- begin _includes/seo.html --><title>Kernels in Fourier Series | Henry Yip</title>
 <meta name="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Analysis/Fourier Series">
+<meta property="og:title" content="Kernels in Fourier Series">
 <meta property="og:url" content="https://henry-yip.github.io/Dirichlet/">
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Analysis/Fourier Series</li>
+        <li class="current">Kernels in Fourier Series</li>
       
     
   </ol>
@@ -327,7 +327,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Analysis/Fourier Series">
+    <meta itemprop="headline" content="Kernels in Fourier Series">
     <meta itemprop="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
     <meta itemprop="datePublished" content="2023-02-24T00:00:00+00:00">
     
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Analysis/Fourier Series
+            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Kernels in Fourier Series
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li><li><a href="#using-it-to-approximate-fourier-series">Using it to approximate Fourier Series</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#which-one-is-a-better-kernel">Which one is a better Kernel?</a></li></ul>
 
             </nav>
           </aside>
@@ -477,16 +477,37 @@ f_N(x)
 
 <p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>It is called Hacovercosine. Such a cool name!
-</code></pre></div></div>
-
 <iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
 
 <p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
 
-<h3 id="using-it-to-approximate-fourier-series">Using it to approximate Fourier Series</h3>
+<h2 id="fejér-kernel">Fejér kernel</h2>
 
-<p>$$</p>
+<p>Fejér kernel is defined as:</p>
+
+\[K_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
+
+<p>I will state without proof that:</p>
+
+\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
+
+<h2 id="which-one-is-a-better-kernel">Which one is a better Kernel?</h2>
+
+<p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
+
+\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0\]
+
+<p>1) \(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\) <br />
+2) \(\int_{-1 / 2}^{1 / 2} k_n(t) d t=1\) <br />
+3) For all \(1 / 2 \geq \delta&gt;0\) we have:</p>
+
+<p>\(\int_{-\delta}^\delta k_n(t) d t \rightarrow 1\)
+\(\text { as } n \rightarrow \infty\)</p>
+
+<p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
+
+<p>Intuitively, the factor \(\frac{1}{N+1}\) “averages” things out (such that it approaches \(f(x)\)) under convolution, then the square (of Dirichlet’s Kernel) makes \(k_n\) positive.</p>
+
 
         
       </section>
@@ -524,7 +545,7 @@ f_N(x)
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Analysis%2FFourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Kernels+in+Fourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
