@@ -1,6 +1,6 @@
 var store = [{
         "title": "Henry Yip",
-        "excerpt":"Photo Follow Me I am putting this part on top because not many people will scroll to the bottom LinkedIn Instagram Education 2021-2025 University of Edinburgh, Scotland Studying Mathematical Physics 2015-2021 St Paul’s Co-educational College, Hong Kong Studied Physics, Chemistry, Biology, M2 2009-2015 S.K.H St Peter’s Primary School, Hong Kong...","categories": [],
+        "excerpt":"Photo My name is Henry Yip, a Year 3 Mathematical Physics Student at the University of Edinburgh. I am interested in Classical Mechanics and Differential Geometry, and I will do a supervised funded summer research on 3-body problem (in Classical Mechanics) this summer. I am a course representative for Mathematical...","categories": [],
         "tags": [],
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
@@ -12,7 +12,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Allison Lau - Numerical Methods",
-        "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.  ","categories": [],
+        "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.   Please Press HERE to download!  ","categories": [],
         "tags": ["Allison","Lau","-","Numerical","Methods"],
         "url": "/AllisonLau/",
         "teaser": "/assets/images/Teaser.png"
