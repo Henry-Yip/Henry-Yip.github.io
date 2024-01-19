@@ -5,8 +5,38 @@ var store = [{
         "url": "/Contributors/HenryYip/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Astrophysics 1",
-        "excerpt":"This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. Prerequisites Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics. Scope Galaxies and Cosmology, with some...","categories": [],
+        "title": "LaTeX Tutorial (Presentation)",
+        "excerpt":"This is a beamer presentation I made on using \\(\\LaTeX\\). Please note that I am not a \\(\\LaTeX\\) expert, and this is for reference(for fun) only!   Tutorial      ","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "LaTeX Tutorial (Source Code of Presentation)",
+        "excerpt":"Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{tikz} \\usepackage{xcolor} \\definecolor{logoBlue}{RGB}{41, 128, 185} \\definecolor{logoText}{RGB}{44, 62, 80} \\usetikzlibrary{calc} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan, pdftitle={Overleaf Example}, pdfpagemode=FullScreen, } \\usetheme{Madrid} \\usecolortheme{default} \\usepackage{xspace} %------------------------------------------------------------ %This block of code defines the information to appear in...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "LaTeX Tutorial (Article Form)",
+        "excerpt":"Introuduction   A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
+        "tags": [],
+        "url": "/LaTeX/LaTeXTutorial3/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample Tex Files (1)",
+        "excerpt":"Here we include more sample Tex Files for reference! The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated project by Henry Yip. Feel free...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex1/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "Sample Tex Files (2)",
+        "excerpt":"This includes mathematics equations which suits people creating \\(\\LaTeX\\) documents to do their problem sheets/hand-in Please Press HERE \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{parskip} \\usepackage [utf8] {inputenc} \\newcommand{\\ie}{\\textit{i}.\\textit{e}. } \\title{Introductory Astrophysics (PHYS08050) Notes} \\author{Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} This set of notes is made with reference to the Astrophysics Coursebook...","categories": [],
+        "tags": [],
+        "url": "/LaTeX/Tex2/",
+        "teaser": "/assets/images/LaTeX.png"
+      },{
+        "title": "A Fun Astrophysics Article on Dark Energy",
+        "excerpt":"Below is something I wrote for fun/to practice my \\(\\LaTeX\\) skills only! Please don’t take it too seriously!   PDF download  Please Press HERE       ","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/Astrophysics/",
         "teaser": "/assets/images/Teaser.png"
@@ -21,6 +51,12 @@ var store = [{
         "excerpt":"This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the...","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/LeoChow/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Astrophysics 1",
+        "excerpt":"This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some! I have gained permission from Professor Catherine Heymans to...","categories": [],
+        "tags": ["Astrophysics","1"],
+        "url": "/Physics/Astrophysics-1/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "LaTeX Tutorial (Part 1)",
@@ -71,7 +107,7 @@ var store = [{
         "url": "/HKDSE/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Small Pertubations",
+        "title": "Small Pertubations in Gravity",
         "excerpt":"Small Perbuations is closely related to simple harmonic motions. We try to pertube a planet revolving around a star, and see how its trajectory goes. Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the...","categories": [],
         "tags": ["Small","Pertubations"],
         "url": "/SmallPerbuations/",
