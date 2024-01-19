@@ -114,7 +114,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Kernels in Fourier Series",
-        "excerpt":"This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class. Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric functions. By adding more and more trigonometric functions together, the summation itself looks more and more like...","categories": [],
+        "excerpt":"This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class. Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes! Start Here if you don’t know Fourier Series A fourier series decomposes a function into trigonometric...","categories": [],
         "tags": ["Analysis/Fourier","Series"],
         "url": "/Dirichlet/",
         "teaser": "/assets/images/Teaser.png"

@@ -368,12 +368,14 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#which-one-is-a-better-kernel">Which one is a better Kernel?</a></li></ul>
+              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#approximation-of-unity">Approximation of Unity?</a></li></ul>
 
             </nav>
           </aside>
         
         <p>This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.</p>
+
+<p>Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes!</p>
 
 <h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
 
@@ -491,7 +493,7 @@ f_N(x)
 
 \[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
 
-<h2 id="which-one-is-a-better-kernel">Which one is a better Kernel?</h2>
+<h2 id="approximation-of-unity">Approximation of Unity?</h2>
 
 <p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
 
@@ -506,8 +508,9 @@ f_N(x)
 
 <p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
 
-<p>Intuitively, the factor \(\frac{1}{N+1}\) “averages” things out (such that it approaches \(f(x)\)) under convolution, then the square (of Dirichlet’s Kernel) makes \(k_n\) positive.</p>
+<p>SideNote: Fejer kernel gives the “Cesàro summation” of Fourier series, it is just the average of Dirichlet’s Kernel!</p>
 
+<p>Fejér kernel, having the “smoothening” factor (by taking average), is more commonly used as it handles discontinuity better, and has less oscillation (almost by definition, since it is the average of Dirihchlet’s Kernel)</p>
 
         
       </section>
