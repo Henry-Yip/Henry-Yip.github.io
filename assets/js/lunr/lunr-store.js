@@ -59,42 +59,6 @@ var store = [{
         "url": "/Physics/Astrophysics-1/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "LaTeX Tutorial (Part 1)",
-        "excerpt":"This is Part One of the \\(\\LaTeX\\) tutorials I will make. I will show the fastest (but not the most standard) way to create a \\(\\LaTeX\\) document. How to learn \\(\\LaTeX\\) There are plenty of Youtube Videos online. You can also learn quite extensively in the overleaf website. I have...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial1/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "LaTeX Tutorial (2)",
-        "excerpt":"This is Part Two of my \\(\\LaTeX\\) tutorials. Here I present the source code of my LaTeX tutorials. Tex Source This is the Tex Source for my beamer presentation \\documentclass{beamer} \\usepackage[utf8]{inputenc} \\usepackage{amsmath} \\usepackage{tikz} \\usepackage{xcolor} \\definecolor{logoBlue}{RGB}{41, 128, 185} \\definecolor{logoText}{RGB}{44, 62, 80} \\usetikzlibrary{calc} \\usepackage{parskip} \\usepackage{amssymb} \\usepackage{hyperref} \\usepackage{float} \\hypersetup{ colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial2/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample LaTeX Files (Part 1)",
-        "excerpt":"Here I present what a standard LaTeX document will look like, built using the methods I introduced previously.  Introuduction   A standardized \\(\\LaTeX\\) document   If you can’t view it below please press HERE     ","categories": [],
-        "tags": [],
-        "url": "/LaTeX/LaTeXTutorial3/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample LaTeX Files (Part 2)",
-        "excerpt":"This is the source code for the \\(\\LaTeX\\) document in Sample LaTeX Files (Part 1) The Product HERE The Source Code \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{hyperref} \\hypersetup{ colorlinks=true, linkcolor=red, urlcolor=cyan } \\title{\\textbf{A Brief Introduction to this Website}} \\author{ Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} \\begin{itemize} \\item This is a self-initiated...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/Tex1/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Sample Tex Files (2)",
-        "excerpt":"This is another \\(\\LaTeX\\) document (With Math Symbols) The Product: HERE Please note that the math are very non-rigorous… I don’t even know what I was doing \\documentclass{article} \\usepackage[utf8]{inputenc} \\usepackage{parskip} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage[thinc]{esdiff} \\usepackage{tikz} \\usetikzlibrary{calc} \\title{2nd order LODE} \\author{ \\textbf{Henry Yip} and \\textbf{Lorian Richmond}\\\\ } \\date{March 2022} \\begin{document} \\maketitle \\begin{abstract}...","categories": [],
-        "tags": [],
-        "url": "/LaTeX/Tex2/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
-        "title": "Physics Book I read before university",
-        "excerpt":"The First Physics book I read The Book This is the link to the first physics book I ever received: HERE! (Obviously I’m not sending the book to you I’m just recommending it to you) It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does...","categories": [],
-        "tags": ["Physics","Book"],
-        "url": "/PhysicsBooks/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Appendix",
         "excerpt":"This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency. Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos...","categories": [],
         "tags": ["Appendix"],
