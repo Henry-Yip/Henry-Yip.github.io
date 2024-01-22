@@ -59,8 +59,8 @@ var store = [{
         "url": "/Physics/Astrophysics-1/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Appendix",
-        "excerpt":"This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency. Appendix B Used in my post about HKDSE Physics Proposition 1.2.1: $$r^2 \\dot{\\theta} \\equiv h=\\frac{ \\underline{L} }{m}$$ Proof Going back to Planar Polar Coordinates: \\[\\hat{r}=\\cos...","categories": [],
+        "title": "Conservations in Physics - Noether's Theorem",
+        "excerpt":"Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad \\hat{\\theta}=-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y} .\\] By Chain Rule, \\[\\dot{\\hat{r}}=\\dot{\\theta}[-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y}]=\\dot{\\theta} \\hat{\\theta}, \\quad \\dot{\\hat{\\theta}}=\\dot{\\theta}[-\\cos (\\theta) \\hat{x}-\\sin (\\theta) \\hat{y}]=-\\dot{\\theta}...","categories": [],
         "tags": ["Appendix"],
         "url": "/Appendix/",
         "teaser": "/assets/images/Teaser.png"

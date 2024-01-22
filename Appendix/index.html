@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Appendix | Henry Yip</title>
-<meta name="description" content="This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency.">
+<!-- begin _includes/seo.html --><title>Conservations in Physics - Noether’s Theorem | Henry Yip</title>
+<meta name="description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Appendix">
+<meta property="og:title" content="Conservations in Physics - Noether’s Theorem">
 <meta property="og:url" content="https://henry-yip.github.io/Appendix/">
 
 
-  <meta property="og:description" content="This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency.">
+  <meta property="og:description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Appendix</li>
+        <li class="current">Conservations in Physics - Noether's Theorem</li>
       
     
   </ol>
@@ -327,8 +327,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Appendix">
-    <meta itemprop="description" content="This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency.">
+    <meta itemprop="headline" content="Conservations in Physics - Noether’s Theorem">
+    <meta itemprop="description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
     
 
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Appendix/" class="u-url" itemprop="url">Appendix
+            <a href="https://henry-yip.github.io/Appendix/" class="u-url" itemprop="url">Conservations in Physics - Noether’s Theorem
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
@@ -368,32 +368,12 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
-              <ul class="toc__menu"><li><a href="#appendix-b">Appendix B</a></li><li><a href="#appendix-c">Appendix C</a></li><li><a href="#appendix-d">Appendix D</a><ul><li><a href="#lemma">Lemma</a></li></ul></li><li><a href="#appendix-e">Appendix E</a></li></ul>
+              <ul class="toc__menu"><li><a href="#noethers-theorem">Noether’s Theorem</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>This Page is to fill in the math gaps of other posts I have written. It is mainly an exercise for me to improve fluency.</p>
-
-<h2 id="appendix-b">Appendix B</h2>
-
-<ul>
-  <li>Used in my post about <a href="/HKDSE/">HKDSE Physics</a></li>
-</ul>
-
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Proposition 1.2.1</strong>: $$r^2 \dot{\theta} \equiv h=\frac{</td>
-      <td>\underline{L}</td>
-      <td>}{m}$$</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><strong>Proof</strong></p>
-
-<p>Going back to Planar Polar Coordinates:</p>
+        <p>Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:</p>
 
 \[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
 
@@ -436,56 +416,31 @@
 
 \[\blacksquare\]
 
-<h2 id="appendix-c">Appendix C</h2>
+<p>Hecen \(h\) is the constant we have here.</p>
 
-<p>Dimensional Analysis is one of the most <em>helpful</em> knowledge in Physics. You can immediately tell if an answer is correct or not using it. For example if we accidentally squared a term that contains dimensions, we can almost immediately identify the mistake.</p>
+<h2 id="noethers-theorem">Noether’s Theorem</h2>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>N.B.: Two objects with different units cannot be added
-</code></pre></div></div>
+<p>Noether’s Theorem stated that every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.</p>
 
-<p><strong>Proposition 1.3</strong>: \(\sin x\) doesn’t have any units</p>
+<p>Action is the integral of Lagrangian over time.</p>
 
-<p>Proof: Consider the series expansion of \(\sin x\), <em>i.e.</em></p>
+<p>So what are conserved?</p>
 
-\[\sin x=x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots=\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}\]
+<p>Homogeneity of space implies conservation of total momentum and isotropy of space implies conservation of total angular momentum.</p>
 
-<p>First note that \(x\) cannot have any units, otherwise \(x-\frac{x^3}{3 !}+\frac{x^5}{5 !}-\cdots\) won’t have any physical sense, as discussed above.</p>
+<p>The later is what we proved above as central force is a conservative force and space is assumed as isotropy in dynamics (usually!)</p>
 
-<p>Therefore \(\frac{x^3}{3 !}\) and \(\frac{x^5}{5 !}\) will have the same units as \(x\), <em>i.e.</em> no units, so as the preceding terms. Hence \(\sum_{k=0}^n \frac{(-1)^k x^{2 k+1}}{(2 k+1) !}\) have no units, and hence \(\sin x\) has no units \(\blacksquare\)</p>
+<p>Also observe that:</p>
 
-<p>Note that dimensional analysis cannot ensure that your answer is correct; rather, it occasionally picks up errors, but this is already <em>extremely</em> useful.</p>
+\[\begin{array}{ll}
+\mathcal{L} \text { invariant under: } &amp; \text { Conserved Quantity } \\
+\hline q_j \rightarrow q_j+\lambda &amp; p_j \\
+t \rightarrow t+\lambda &amp; h=\sum_j p_j \dot{q}_j-\mathcal{L}
+\end{array}\]
 
-<h2 id="appendix-d">Appendix D</h2>
+<p>where the reader may know that \(h\) is closed related to Hamiltonian Dynamics</p>
 
-<ul>
-  <li>Used in my post about <a href="/Prerequisites/">Cosets and Lagrange’s Theorem</a></li>
-</ul>
-
-<h3 id="lemma">Lemma</h3>
-
-<p><strong>Claim:</strong>
-Let \(G\) be a group. If \(g, h \in G\), then</p>
-
-<p>There exists (Existence) a unique element (Uniqueness) \(k \in G\) such that \(k * g=h\)</p>
-
-<p><strong>Proof:</strong>
-(Existence) Let \(k:=h * g^{-1}\). Then
-\(k * g=\left(h * g^{-1}\right) * g=h *\left(g^{-1} * g\right)=h * e=h,\)
-Where we have used <strong>associativity</strong> of group axioms. Hence \(k\) exists \(\blacksquare\)</p>
-
-<p>(Uniqueness)
- Now suppose that \(k^{\prime} * g=h\). Then
-\(k=h * g^{-1}=\left(k^{\prime} * g\right) * g^{-1}=k^{\prime} *\left(g * g^{-1}\right)=k^{\prime} * e=k^{\prime}\)</p>
-
-<p>hence \(k\) is unique \(\blacksquare\)</p>
-
-<p>Therefore there exists a unique element \(k \in G\) such that \(k * g=h\) \(\blacksquare\)</p>
-
-<h2 id="appendix-e">Appendix E</h2>
-
-<p>Ellispes are a form of conic sections.</p>
-
-<p>Incomplete!</p>
+<p><strong>TO BE CONTINUED!</strong></p>
 
 
         
@@ -522,7 +477,7 @@ Where we have used <strong>associativity</strong> of group axioms. Hence \(k\) e
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Appendix%20https%3A%2F%2Fhenry-yip.github.io%2FAppendix%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Conservations+in+Physics+-+Noether%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FAppendix%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FAppendix%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
