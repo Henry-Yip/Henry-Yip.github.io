@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          12 minute read
+          13 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> HKDSE</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li><li><a href="#part-i">Part I:</a><ul><li><a href="#terminologies">Terminologies</a></li><li><a href="#centripetal-force">Centripetal Force</a></li><li><a href="#keplers-third-law">Kepler’s Third Law</a><ul><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li><li><a href="#generalized-case">Generalized Case</a></li></ul></li><li><a href="#orbit-equation">Orbit Equation:</a></li><li><a href="#exercise-1">Exercise 1</a><ul><li><a href="#small-perbuations">Small Perbuations</a></li></ul></li><li><a href="#eccentricity-and-energy">Eccentricity and Energy</a></li><li><a href="#free-fall-to-the-surface-of-planets">Free Fall to the surface of planets</a></li></ul></li><li><a href="#part-ii">Part II</a><ul><li><a href="#gravitational-force">Gravitational Force</a><ul><li><a href="#difficult-question">Difficult Question</a></li><li><a href="#solution">Solution</a></li></ul></li><li><a href="#angularmomentum-conservation">(Angular)Momentum Conservation</a></li><li><a href="#free-fall-of-objects">Free Fall of objects</a></li><li><a href="#dropping-to-center-of-earth">Dropping to center of earth</a><ul><li><a href="#theorem">Theorem</a></li><li><a href="#proof">Proof</a></li></ul></li><li><a href="#lagrangian-for-wedges">Lagrangian For Wedges</a><ul><li><a href="#the-end">The End</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li><li><a href="#part-i">Part I:</a><ul><li><a href="#terminologies">Terminologies</a></li><li><a href="#centripetal-force">Centripetal Force</a></li><li><a href="#keplers-third-law">Kepler’s Third Law</a><ul><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li><li><a href="#generalized-case">Generalized Case</a></li></ul></li><li><a href="#virials-theorem">Virial’s Theorem</a></li><li><a href="#orbit-equation">Orbit Equation:</a></li><li><a href="#exercise-1">Exercise 1</a><ul><li><a href="#small-perbuations">Small Perbuations</a></li></ul></li><li><a href="#eccentricity-and-energy">Eccentricity and Energy</a></li><li><a href="#free-fall-to-the-surface-of-planets">Free Fall to the surface of planets</a></li></ul></li><li><a href="#part-ii">Part II</a><ul><li><a href="#gravitational-force">Gravitational Force</a><ul><li><a href="#difficult-question">Difficult Question</a></li><li><a href="#solution">Solution</a></li></ul></li><li><a href="#angular-momentum-conservation">(Angular) Momentum Conservation</a></li><li><a href="#free-fall-of-objects">Free Fall of objects</a></li><li><a href="#dropping-to-center-of-earth">Dropping to center of earth</a><ul><li><a href="#theorem">Theorem</a></li><li><a href="#proof">Proof</a></li></ul></li><li><a href="#lagrangian-for-wedges">Lagrangian For Wedges</a><ul><li><a href="#the-end">The End</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -393,7 +393,7 @@
 
 <p>\(\omega\) refers to angular velocity. We have \(v= r \omega\). \(\dot{r}\) is the derivative of \(r\) (with respect to time). We have \(F=m \ddot{r}\) (Make sure you can do this!)</p>
 
-<p>Here we have \(\omega= \dot{theta}\)</p>
+<p>Here we have \(\omega= \dot{\theta}\)</p>
 
 <p>\(\hat{r}\) is a unit-normal vector pointing at the direction of \(r\).</p>
 
@@ -491,6 +491,32 @@ F=mr \omega^2 &amp;= \frac{GMm}{r^2} \\
 
 <p>We deduce \((\Delta t)^2 / a^3=(2 \pi)^2 / G M\), which is consistent with the analysis from <strong>HKDSE</strong></p>
 
+<h2 id="virials-theorem">Virial’s Theorem</h2>
+
+<p>Virial’s Theorem relates the average over time of the total kinetic energy of a stable system of discrete particles to its total potential energy. It basically states that the average over time of the total gravitaitonal energy of a stable system of discrete particles is \(-2\) more compared to its total kinetic energy.</p>
+
+<p>Note that this theorem doens’t imply at <strong>all times</strong> the magnitude of gravitational energy is twice of magnitude of kinetic energy, what we have is just a statistical average.</p>
+
+<p>This phenonmoenon is quite surprising because not all paticles have the same orbits while revolving around a star, some have circular and some have really weird shape.s This theorem generalizes for all such orbits shapes however, given that the forces are conservative.</p>
+
+<p>This theorem is useful for caluclating “Jean’s Mass”, as I learnt it in my Year 1 introductory Astrophysics course.</p>
+
+<p>There is indeed a really nice way to think about it, given by Dr Ross Galloway, one of the lecturers for Introductory Astrophysics:</p>
+
+<p>Consider a small star with mass \(m\) rotating around a bigger star with mass \(M\). We have:</p>
+
+\[\begin{aligned}
+T&amp;=\frac{1}{2}mv^2\\
+&amp;=\frac{1}{2}rm\frac{v^2}{r} \\
+&amp;=\frac{1}{2}r(ma) \\
+&amp;=\frac{GMm}{2r}
+\end{aligned}\]
+
+<p>On the other hand, we have:
+\(V=-\frac{GMm}{r}\)</p>
+
+<p>Hence gravitational potential energy is twice the kinetic energy for this case.</p>
+
 <h2 id="orbit-equation">Orbit Equation:</h2>
 
 <ul>
@@ -524,7 +550,7 @@ F=mr \omega^2 &amp;= \frac{GMm}{r^2} \\
 
 \[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
 
-<p>Using substitution, with the fact that \(\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m\), prove that the above holds.</p>
+<p>Using substitution, with the fact that \(\ddot{r}-r \dot{\theta}^2  =F_r(r) / m\), prove that the above holds.</p>
 
 <h3 id="small-perbuations">Small Perbuations</h3>
 
@@ -689,7 +715,7 @@ T&amp;=\frac{R\pi}{2}  \sqrt\frac{2G(m_1+m_2)} \\
 &amp;= \frac{\pi}{2} \sqrt{\frac{R^3}{2G(m_1+m_2)}}
 \end{aligned}\]
 
-<h2 id="angularmomentum-conservation">(Angular)Momentum Conservation</h2>
+<h2 id="angular-momentum-conservation">(Angular) Momentum Conservation</h2>
 
 <table>
   <tbody>
