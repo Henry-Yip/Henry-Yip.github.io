@@ -391,9 +391,13 @@
 
 <h2 id="terminologies">Terminologies</h2>
 
-<p>\(\omega\) refers to angular velocity. We have \(v= r \omega\). \(\dot{r}\) is the derivative of \(r\) (with respect to time). We have \(F=m \ddot{r}\) (Make sure you can do this!)</p>
+<p>\(\omega\) refers to angular velocity. We have \(v= r \omega\).</p>
 
-<p>Here we have \(\omega= \dot{\theta}\)</p>
+<p>\(\dot{r}\) is the derivative of \(r\) (with respect to time).</p>
+
+<p>We have \(F=m \ddot{r}\) (Make sure you can do this!)</p>
+
+<p>Here we denote \(\omega= \dot{\theta}\), \(\dot{\theta}\) is more often used as it shows dependence on \(\theta\).</p>
 
 <p>\(\hat{r}\) is a unit-normal vector pointing at the direction of \(r\).</p>
 
@@ -588,7 +592,7 @@ E = \frac{G^2m^3M^2}{2L^2}\left[\epsilon^2-1\right]
 
 \[E=\frac{m^3h^2k^2}{2L^4}\left[\epsilon^2-1\right]\]
 
-<p>As \(k=GMm\), \(k^2=G^2M^2m^2\). Hence</p>
+<p>As \(k=GMm\), \(k^2=G^2M^2m^2\). Hence:</p>
 
 \[\begin{aligned}
 
@@ -629,11 +633,12 @@ F_{21}&amp;=G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_1 \ddot{x}_1 \\
 
 <p>Therefore the accelerations are given by:</p>
 
-<p>\(\begin{aligned}
+\[\begin{aligned}
 G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
 -G \frac{m_1}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_2
-\end{aligned}\)
-Subtract these two equations will get us:</p>
+\end{aligned}\]
+
+<p>Subtract these two equations will get us:</p>
 
 \[\ddot{x}_2-\ddot{x}_1=\frac{d^2}{d t^2}\left(x_2-x_1\right)=-G \frac{m_1+m_2}{\left(x_2-x_1\right)^2}\]
 
@@ -669,27 +674,27 @@ Subtract these two equations will get us:</p>
 
 <p>From Wolframalpha the left integral is equal to \(\frac{-R\pi}{2}\). Hence:</p>
 
-\[\begin{aligned}
-\frac{-R\pi}{2}&amp;= -\sqrt\frac{R} T \\
-T&amp;=\frac{R\pi}{2}  \sqrt\frac{2G(m_1+m_2)} \\
-&amp;= \frac{\pi}{2} \sqrt{\frac{R^3}{2G(m_1+m_2)}}
-\end{aligned}\]
+\[\frac{-R\pi}{2}= -\sqrt\frac{R} T\]
+
+<p>Resolving it will get us:</p>
+
+\[T= \frac{\pi}{2} \sqrt{\frac{R^3}{2G(m_1+m_2)}}\]
+
+<p>As expected</p>
 
 <h2 id="angular-momentum-conservation">(Angular) Momentum Conservation</h2>
 
-<table>
-  <tbody>
-    <tr>
-      <td>We deduced that $$r^2 \dot{\theta} \equiv h=\frac{</td>
-      <td>\underline{L}</td>
-      <td>}{m}\(, or equivalently\)</td>
-      <td>\underline{L}</td>
-      <td>=mr^2 \dot{\theta}\(Combining the fact that\)v=r\dot{\theta}\(we have\)</td>
-      <td>\underline{L}</td>
-      <td>=mrv$$</td>
-    </tr>
-  </tbody>
-</table>
+<p>We deduced that:</p>
+
+\[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
+
+<p>or equivalently,</p>
+
+\[|\underline{L}|=mr^2 \dot{\theta}\]
+
+<p>Hence we have:</p>
+
+\[|\underline{L}|=mrv\]
 
 <p>Angular Momentum is something you will encounter while skating (or spinning your chair). If you spread your arms and contract your arms, you will realize that you will spin in a different speed, because angular momentum has to be conserved (assumed no friction)</p>
 
