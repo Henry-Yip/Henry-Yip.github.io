@@ -41,19 +41,19 @@ var store = [{
         "url": "/Astrophysics/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Allison Lau - Numerical Methods",
-        "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.   Please Press HERE to download!  ","categories": [],
-        "tags": ["Allison","Lau","-","Numerical","Methods"],
-        "url": "/AllisonLau/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Leo Chow - Relativity",
         "excerpt":"This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the...","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/LeoChow/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Astrophysics 1",
+        "title": "Allison Lau - Numerical Methods",
+        "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.   Please Press HERE to download!  ","categories": [],
+        "tags": ["Allison","Lau","-","Numerical","Methods"],
+        "url": "/Numerical/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "PHYS08050 (Introductory Astrophysics) Course Notes",
         "excerpt":"This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some! I have gained permission from Professor Catherine Heymans to...","categories": [],
         "tags": ["Astrophysics","1"],
         "url": "/Physics/Astrophysics-1/",
@@ -62,7 +62,7 @@ var store = [{
         "title": "Conservations in Physics - Noether's Theorem",
         "excerpt":"Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad \\hat{\\theta}=-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y} .\\] By Chain Rule, \\[\\dot{\\hat{r}}=\\dot{\\theta}[-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y}]=\\dot{\\theta} \\hat{\\theta}, \\quad \\dot{\\hat{\\theta}}=\\dot{\\theta}[-\\cos (\\theta) \\hat{x}-\\sin (\\theta) \\hat{y}]=-\\dot{\\theta}...","categories": [],
         "tags": ["Appendix"],
-        "url": "/Appendix/",
+        "url": "/Conservations/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Classical Mechanics in HKDSE context",
@@ -71,8 +71,8 @@ var store = [{
         "url": "/HKDSE/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Small Pertubations in Gravity",
-        "excerpt":"Small Perbuations is closely related to simple harmonic motions. We try to pertube a planet revolving around a star, and see how its trajectory goes. Orbit Equation: Using the knowledge from Appendix B, we can quite easily deduce the orbit equation: \\[\\ddot{r}-\\frac{h^2}{r^3}=\\frac{F_r(r)}{m}\\] I’ll leave this as an exercise for the...","categories": [],
+        "title": "Pertubations - A view on Classical Mechanics and Quantum Mechanics",
+        "excerpt":"“Pertubations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Classical Pertubation Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \\(F=ma\\), we have \\(F=m\\ddot{x}\\). If there is a restoring force with different direction...","categories": [],
         "tags": ["Small","Pertubations"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
