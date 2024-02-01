@@ -72,7 +72,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Perturbations - A view on Classical Mechanics and Quantum Mechanics",
-        "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Note: The notes I have here are very heavily inspired by Prof Arjun Berera, who has taught me both Introductory Dynamics course and Principles of Quantum Mechanics. Classical Perturbation...","categories": [],
+        "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics...","categories": [],
         "tags": ["Small","perturbations"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"

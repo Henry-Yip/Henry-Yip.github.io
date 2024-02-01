@@ -375,7 +375,7 @@
         
         <p>“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.</p>
 
-<p>Note: The notes I have here are very heavily inspired by Prof Arjun Berera, who has taught me both Introductory Dynamics course and Principles of Quantum Mechanics.</p>
+<p><strong>Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics (PHYS10094)</strong></p>
 
 <h2 id="classical-perturbation">Classical Perturbation</h2>
 <p>Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \(F=ma\), we have \(F=m\ddot{x}\). If there is a restoring force with different direction compared to direction of motion, we get \(-\alpha x=m \ddot{x}\), where \(\alpha \in \mathbb{R}_+\). This is solved using a sinusoidal ansatz. This corresponds to simple harmonic motion!</p>
@@ -431,7 +431,7 @@
 
 \[\hat{H}=\hat{H_0}+\hat{H'}\]
 
-<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector.</p>
+<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector, or, if you are mathematically minded, the geometric multiplicity is smaller than the algebraic multiplicity.</p>
 
 <p>By doing a taylor series, we obtain: (the eigenstates are <strong>no longer normalized</strong>!)</p>
 
@@ -441,6 +441,8 @@
 
 \[|n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\]
 
+<p>where the (0), (1), (2) implies taking to the 0th, 1st, 2nd order respectively.</p>
+
 <p>If we expand everything, we will get:</p>
 
 \[\begin{aligned}
@@ -448,15 +450,24 @@
 &amp; \quad\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)
 \end{aligned}\]
 
+<p>By comparing terms, we get:</p>
+
 \[\lambda^1:  \left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle\]
 
-<p>Considering Left hand side:</p>
+<p>Consider Left hand side. From the term:</p>
+
+\[\hat{H}_0 \left|n^{(1)}\right\rangle\]
+
+<p>We can operate \(\langle k^{(0)} \,\lvert\) and obtain:</p>
 
 \[\left\langle k^{(0)}\left|\hat{H}_0\right| n^{(1)}\right\rangle = E_k^{(0)}\left\langle k^{(0)} \mid n^{(1)}\right\rangle\]
 
-<p>And hence:</p>
+<p>Hence we have:</p>
 
-\[\left(E_k^{(0)}-E_n^{(0)}\right)\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle\]
+\[\begin{aligned}
+    &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
+    &amp;(E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
+\end{aligned}\]
 
 <p>Choosing \(k=n\) will give us:</p>
 
