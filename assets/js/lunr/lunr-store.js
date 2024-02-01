@@ -72,7 +72,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Pertubations - A view on Classical Mechanics and Quantum Mechanics",
-        "excerpt":"“Pertubations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Classical Pertubation Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \\(F=ma\\), we have \\(F=m\\ddot{x}\\). If there is a restoring force with different direction...","categories": [],
+        "excerpt":"“Pertubations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Note: The notes I have here are very heavily inspired by Prof Arjun Berera, who has taught me both Introductory Dynamics course and Principles of Quantum Mechanics. Classical Pertubation...","categories": [],
         "tags": ["Small","Pertubations"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
