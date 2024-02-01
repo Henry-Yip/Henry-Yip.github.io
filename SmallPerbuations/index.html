@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a></li><li><a href="#quantum-perturbation">Quantum Perturbation</a></li></ul>
+              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a></li><li><a href="#quantum-perturbation">Quantum Perturbation</a></li><li><a href="#classic-example">Classic Example</a></li></ul>
 
             </nav>
           </aside>
@@ -411,7 +411,7 @@
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
 </code></pre></div></div>
 
-<p>I don’t know if you have done <strong>Differential Equations</strong> before. Above describes a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
+<p>Assuming knowledge from <strong>Differential Equations</strong>, we have a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
 
 \[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
 
@@ -466,19 +466,48 @@
 
 \[\begin{aligned}
     &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
-    &amp;(E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
+    &amp;\implies (E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 \end{aligned}\]
 
 <p>Choosing \(k=n\) will give us:</p>
 
 \[\begin{aligned}
 E_n^{(1)} \delta_{n, n}-\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle \\
+n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle=0 \\
 \implies E_n^{(1)}=\left\langle 
 n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 \end{aligned}\]
 
 <p>The astute reader will find out that this is an expectation value! So the expected “change in energy” is just the expectation of the perturbation!</p>
+
+<h2 id="classic-example">Classic Example</h2>
+
+<p>Now consider a standard problem in perturbation:</p>
+
+\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right)\]
+
+<p>between \(-a\) to \(a\). What is the ground state perturbation?</p>
+
+<p>From above, we have:</p>
+
+\[\begin{aligned}
+\Delta E_{n} &amp; =\left\langle\psi^{(n)}\mid V \mid \psi^{(n)}\right\rangle \\
+&amp; =\int_{-a}^{+a}  \left[\psi^{(n)}(x)^*\right] V(x) \left[\psi^{(n)}(x)\right]  dx
+\end{aligned}\]
+
+<p>Considering :</p>
+
+\[\psi^1(x)=\frac{1}{\sqrt{a}} \cos{\left(\frac{\pi x}{2a}\right)}\]
+
+<p>We can substitute and get:</p>
+
+\[\begin{aligned}
+\Delta E_n&amp;=\frac{V_0}{a} \int_{-a}^{+a} \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) dx \\
+&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{+\pi / 2}  (\cos ^3 \theta)  d\theta\\
+&amp;=\frac{8 V_0}{3 \pi} 
+\end{aligned}\]
+
+<p>The details are left for an exercise for the reader/WolfamAlpha!</p>
 
 <p><strong>TO BE CONTINUED!</strong></p>
 
