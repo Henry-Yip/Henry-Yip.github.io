@@ -89,7 +89,7 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Multivariable Calculus",
+        "title": "Miscellaneous - Random and intersting ideas on Green's and Stokes' Theorem",
         "excerpt":"Here we are using the language of differential geometry to explore around Green’s Theorem and Stokes’ Theorem. Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor...","categories": [],
         "tags": ["Multivaribale","Calculus"],
         "url": "/EllipseArea/",
