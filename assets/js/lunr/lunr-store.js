@@ -1,10 +1,4 @@
 var store = [{
-        "title": "Henry Yip",
-        "excerpt":"Photo My name is Henry Yip, a Year 3 Mathematical Physics Student at the University of Edinburgh. I am interested in Classical Mechanics and Differential Geometry, and I will do a supervised funded summer research on 3-body problem (in Classical Mechanics) this summer. I am a course representative for Mathematical...","categories": [],
-        "tags": [],
-        "url": "/Contributors/HenryYip/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "LaTeX Tutorial (Presentation)",
         "excerpt":"This is a beamer presentation I made on using \\(\\LaTeX\\). Please note that I am not a \\(\\LaTeX\\) expert, and this is for reference(for fun) only!   Tutorial      ","categories": [],
         "tags": [],
@@ -89,7 +83,7 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Miscellaneous - Random and intersting ideas on Green's and Stokes' Theorem",
+        "title": "Miscellaneous - Random and interesting ideas on Green's and Stokes' Theorem",
         "excerpt":"Here we are using the language of differential geometry to explore around Green’s Theorem and Stokes’ Theorem. Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor...","categories": [],
         "tags": ["Multivaribale","Calculus"],
         "url": "/EllipseArea/",
