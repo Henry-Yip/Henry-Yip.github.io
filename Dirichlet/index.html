@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>PHYS08050 (Introductory Astrophysics) Course Notes | Henry Yip</title>
-<meta name="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
+<!-- begin _includes/seo.html --><title>Kernels in Fourier Series | Henry Yip</title>
+<meta name="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-<meta property="og:url" content="https://henry-yip.github.io/Physics/Astrophysics-1/">
+<meta property="og:title" content="Kernels in Fourier Series">
+<meta property="og:url" content="https://henry-yip.github.io/Dirichlet/">
 
 
-  <meta property="og:description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-07-01T00:00:00+01:00">
+  <meta property="og:description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-02-24T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Physics/Astrophysics-1/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Dirichlet/">
 
 
 
@@ -187,17 +187,7 @@
         <span class="sep">/</span>
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#physics" itemprop="item"><span itemprop="name">Physics</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">PHYS08050 (Introductory Astrophysics) Course Notes</li>
+        <li class="current">Kernels in Fourier Series</li>
       
     
   </ol>
@@ -337,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-    <meta itemprop="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-    <meta itemprop="datePublished" content="2022-07-01T00:00:00+01:00">
+    <meta itemprop="headline" content="Kernels in Fourier Series">
+    <meta itemprop="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+    <meta itemprop="datePublished" content="2023-02-24T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Physics/Astrophysics-1/" class="u-url" itemprop="url">PHYS08050 (Introductory Astrophysics) Course Notes
+            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Kernels in Fourier Series
 </a>
           </h1>
           
@@ -363,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          3 minute read
         
       </span>
     
@@ -377,24 +367,152 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Astro 1</h4></header>
-              <ul class="toc__menu"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#scope">Scope</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
+              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#approximation-of-unity">Approximation of Unity?</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!</p>
+        <p>This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.</p>
 
-<p>I have gained permission from Professor Catherine Heymans to put my modified notes in my website.</p>
+<p>Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes!</p>
 
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics.</p>
+<h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
 
-<h2 id="scope">Scope</h2>
-<p>Galaxies and Cosmology, with some coverage on stars.</p>
+<p>A fourier series decomposes a function into trigonometric functions.</p>
 
-<p>Please Press <a href="https://henry-yip.github.io/assets/PHYS08050.pdf">HERE</a> to download!</p>
+<p>By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?</p>
 
+<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>The equation above is:</p>
+
+\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}\]
+
+<p>Where we increased \(m\) over time. For \(m=1000\), we can get the below:</p>
+
+<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>Fourier Series doesn’t work for all functions, there are certain restrictions.</p>
+
+<p>Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel Problem</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<p>To understand how and why fourier series work, we can study its convergence (pointwise convergence, \(L^2\) convergence, <em>etc</em>). However, this is slightly too difficult without knowing <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a>/<a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a></p>
+
+<h2 id="start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</h2>
+<p>The section below is partly inspired by this amazing video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+
+<h3 id="a-natural-introduction">A Natural Introduction</h3>
+
+<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
+
+<p>Below we take \(f(x)\) to be periodic with period \(2π\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \(N\)th term:</p>
+
+<p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
+
+<p>Within the interval \(−L \leq x \leq L\), we can approximate the function \(f(x)\) as:</p>
+
+\[\begin{aligned}
+f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
+&amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
+\end{aligned}\]
+
+<p>Where we have:</p>
+
+\[\begin{aligned}
+a_m &amp; =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
+\text { Similarly, } \quad b_m &amp; =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
+\end{aligned}\]
+
+<p>However, considering our limit: \(-\pi \leq L \leq \pi\), we can deduce the below:</p>
+
+\[\begin{aligned}
+\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
+a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
+b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
+\end{aligned}\]
+
+<p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
+
+\[\begin{aligned}
+f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
+&amp; =\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n y \cos n x+\sin n y \sin n x)] \frac{f(y)}{2 \pi} d y \\
+&amp;=\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n(x-y))] \frac{f(y)}{2 \pi} d y \\
+&amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
+\end{aligned}\]
+
+<p>Hence (after switching variables) we can <em>naturally</em> define Dirichlet’s Kernel as below:</p>
+
+\[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
+
+<h3 id="a-better-form">A Better Form</h3>
+<p>Using Euler’s Formula \(e^{i \theta}=\cos \theta+i \sin \theta\), we can deduce:</p>
+
+\[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
+
+<ul>
+  <li>Hint: \(e^{-i \theta}=\cos \theta-i \sin \theta\), then cancel out terms</li>
+</ul>
+
+<p>We can use Desmos to see how it looks like:</p>
+
+<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<h3 id="fourier-series-estimation">Fourier Series Estimation</h3>
+<p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
+
+\[\begin{align}
+f_N(x)
+&amp;=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi}\\
+&amp;=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} 
+\end{align}\]
+
+<p>Note that our function has period \(2\pi\), hence we can imagine shifting the function and getting the same result:</p>
+
+\[\begin{align}
+\int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
+\end{align}\]
+
+<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
+
+<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+
+<p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
+
+<h2 id="fejér-kernel">Fejér kernel</h2>
+
+<p>Fejér kernel is defined as:</p>
+
+\[K_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
+
+<p>I will state without proof that:</p>
+
+\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
+
+<h2 id="approximation-of-unity">Approximation of Unity?</h2>
+
+<p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
+
+\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0\]
+
+<p>1) \(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\) <br />
+2) \(\int_{-1 / 2}^{1 / 2} k_n(t) d t=1\) <br />
+3) For all \(1 / 2 \geq \delta&gt;0\) we have:</p>
+
+<p>\(\int_{-\delta}^\delta k_n(t) d t \rightarrow 1\)
+\(\text { as } n \rightarrow \infty\)</p>
+
+<p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
+
+<p>SideNote: Fejer kernel gives the “Cesàro summation” of Fourier series, it is just the average of Dirichlet’s Kernel!</p>
+
+<p>Fejér kernel, having the “smoothening” factor (by taking average), is more commonly used as it handles discontinuity better, and has less oscillation (almost by definition, since it is the average of Dirihchlet’s Kernel)</p>
+
+<p>So in conclusion, how it works is that both kernels convolve with \(f(x)\) to make an approximation to the \(f(x)\), but Fejér kernel does so more smoothly, as any abrupt discontinity won’t affect too much, due to its averaging nature!</p>
 
         
       </section>
@@ -411,9 +529,9 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#1" class="page__taxonomy-item p-category" rel="tag">1</a><span class="sep">, </span>
+      <a href="/tags/#analysis-fourier" class="page__taxonomy-item p-category" rel="tag">Analysis/Fourier</a><span class="sep">, </span>
     
-      <a href="/tags/#astrophysics" class="page__taxonomy-item p-category" rel="tag">Astrophysics</a>
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">Series</a>
     
     </span>
   </p>
@@ -423,7 +541,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-07-01T00:00:00+01:00">July 1, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-24T00:00:00+00:00">February 24, 2023</time></p>
 
       </footer>
 
@@ -432,22 +550,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=PHYS08050+%28Introductory+Astrophysics%29+Course+Notes%20https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Kernels+in+Fourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Numerical/" class="pagination--pager" title="Allison Lau - Numerical Methods
+      <a href="/SmallPerbuations/" class="pagination--pager" title="Perturbations - A view on Classical Mechanics and Quantum Mechanics
 ">Previous</a>
     
     
-      <a href="/Conservations/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
+      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
 ">Next</a>
     
   </nav>
@@ -564,51 +682,6 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Dirichlet/" rel="permalink">Kernels in Fourier Series
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
         <a href="/SmallPerbuations/" rel="permalink">Perturbations - A view on Classical Mechanics and Quantum Mechanics
 </a>
       
@@ -637,6 +710,49 @@
     <p class="archive__item-excerpt" itemprop="description">“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.
 
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/HKDSE/" rel="permalink">Classical Mechanics in HKDSE context
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is a post on Classical Mechanics in High School style. It serves as a good introduction to High Schoolers wanting to pursue a deeper understanding in Ph...</p>
   </article>
 </div>
 
@@ -771,8 +887,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Physics/Astrophysics-1/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Physics/CourseNotes"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Dirichlet/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Dirichlet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
