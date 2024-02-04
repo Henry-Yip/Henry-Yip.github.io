@@ -1,0 +1,514 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>My First Quantum Mechanics Book, and my thoughts Towards Quantum Mechanics | Henry Yip</title>
+<meta name="description" content="I have study The Book">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="My First Quantum Mechanics Book, and my thoughts Towards Quantum Mechanics">
+<meta property="og:url" content="https://henry-yip.github.io/Physics/FirstBook/">
+
+
+  <meta property="og:description" content="I have study The Book">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-09-23T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/Physics/FirstBook/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/Contributors/">Contributors</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Chess/">Chess</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Physics/">Physics</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Jekyll/">Website Building</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Journal/">Journal</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Music/">Music</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Updates/">Website Updates</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Pokemon/">Pokémon GO</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/physics" itemprop="item"><span itemprop="name">Physics</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">My First Quantum Mechanics Book, and my thoughts Towards Quantum Mechanics</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="My First Quantum Mechanics Book, and my thoughts Towards Quantum Mechanics">
+    <meta itemprop="description" content="I have studyThe Book">
+    <meta itemprop="datePublished" content="2022-09-23T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/Physics/FirstBook/" class="u-url" itemprop="url">My First Quantum Mechanics Book, and my thoughts Towards Quantum Mechanics
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Astro 2</h4></header>
+              <ul class="toc__menu"><li><a href="#the-book">The Book</a></li><li><a href="#slow-fast-large-small-physics">Slow Fast Large Small Physics</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>I have study</p>
+<h3 id="the-book">The Book</h3>
+
+<p>This is the link to the first physics book I ever received: <a href="https://www.amazon.com/Modern-Physics-2nd-Randy-Harris/dp/0805303081">HERE!</a></p>
+
+<p>(Obviously I’m not sending the book to you I’m just recommending it to you)</p>
+
+<p>It’s nice introduction to Quantum Physics, even though some math are definitely missing, it does provide some sort of analogies and explanation which is decent.</p>
+
+<p>Well I doubt I know how to do the exercises (I believe some of the stuff like <a href="https://en.wikipedia.org/wiki/Hermite_polynomials">Hermite polynomials</a> are not covered yet in my course. (I think covered in Year 3? Not sure!)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Turns out they briefly touched upon Hermite Polynomials <span class="k">in </span>Modern Physics course
+</code></pre></div></div>
+
+<p>After Year 3 I finally understand it…</p>
+
+<p>From Luigi Del Debbio and Arjun Berera’s Quantum Mechanics books, they say:</p>
+
+<p>Eigenfunctions of a quantum harmonic oscillator can be written as:</p>
+
+\[u_n(x)=C_n \exp \left\{-\alpha^2 x^2 / 2\right\} H_n(\alpha x)\]
+
+<p>\(\alpha^2 \equiv m \omega / \hbar\) and \(H_n(\alpha x)\) are polynomials of degree \(n\), known as Hermite polynomials. Once again using dimensional analysis, you can show that \(\alpha\) has got dimensions of inverse length, so that the product \(\alpha x\) is dimensionless. The Hermite polynomials satisfy the orthogonality relation</p>
+
+\[\int_{-\infty}^{\infty} \exp \left\{-s^2\right\} H_m(s) H_n(s) \mathrm{d} s=2^n \sqrt{\pi} n ! \delta_{m n},\]
+
+<p>The first few Hermite polynomials are:</p>
+
+\[\begin{aligned}
+&amp; H_0(s)=1 \\
+&amp; H_1(s)=2 s \\
+&amp; H_2(s)=4 s^2-2 \\
+&amp; H_3(s)=8 s^3-12 s
+\end{aligned}\]
+
+<p>It’s a good introduction to Physics degree and it intensified my passion towards Physics (funny thing is I almost went to study Earth System Science… I might like typhoons, but oceans and stuff aren’t built for me… and I also hate labs so welp)</p>
+
+<h3 id="slow-fast-large-small-physics">Slow Fast Large Small Physics</h3>
+<p>A short briefing:</p>
+<ul>
+  <li>Slow and “Large Scale” Physics -&gt; Classical Mechanics</li>
+  <li>Slow and “Small Scale” Physics -&gt; Quantum Mechanics</li>
+  <li>Fast and “Large Scale” Physics -&gt; Relavistic Mechanics</li>
+  <li>Fast and “Small Scale” Physics -&gt; Quantum Field Theory</li>
+</ul>
+
+<p>I hate classical Mechanics (Dynamics are just terrible, except when it’s some interesting orbit stuff)</p>
+
+<p>Relavistic Mechanics are more fun but also annoying</p>
+
+<p>Quantum Mechanics is surprisingly fun but it’s assuming you get what’s happening</p>
+
+<p>Quantum Field Theory, I don’t have the knowledge to comment on it!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#book" class="page__taxonomy-item p-category" rel="tag">Book</a><span class="sep">, </span>
+    
+      <a href="/tags/#physics" class="page__taxonomy-item p-category" rel="tag">Physics</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-09-23T00:00:00+01:00">September 23, 2022</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Physics/Leo-Chow" class="pagination--pager" title="Leo Chow - Relativity
+">Previous</a>
+    
+    
+      <a href="/Physics/Appendix/" class="pagination--pager" title="Appendix
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '5CK3MN2B7K',
+  apiKey: '414aa238391f62d601f1f91dbed9649b',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

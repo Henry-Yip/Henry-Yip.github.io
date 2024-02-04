@@ -1,0 +1,522 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>I suck at Math! | Henry Yip</title>
+<meta name="description" content="Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years old), but I nevertheless enjoyed the extra time training for Math Olympiads with Toby Lam.">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="I suck at Math!">
+<meta property="og:url" content="https://henry-yip.github.io/Journal/Isuckatmath/">
+
+
+  <meta property="og:description" content="Primary School I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years old), but I nevertheless enjoyed the extra time training for Math Olympiads with Toby Lam.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Pgfplots.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-12-26T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/Journal/Isuckatmath/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/Contributors/">Contributors</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Chess/">Chess</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Physics/">Physics</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Jekyll/">Website Building</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Journal/">Journal</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Music/">Music</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Updates/">Website Updates</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Pokemon/">Pokémon GO</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/journal" itemprop="item"><span itemprop="name">Journal</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">I suck at Math!</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">Journal</span>
+        
+
+        
+        <ul>
+          
+            <li><a href="/Journal/HowtostudyPhysics/">How to study Physics? </a></li>
+          
+            <li><a href="/Journal/Progress/">My Progress in everything</a></li>
+          
+            <li><a href="/Journal/Disgusted/">Quitting Social Media!</a></li>
+          
+            <li><a href="/Journal/Isuckatmath/" class="active">I Suck at Math!</a></li>
+          
+            <li><a href="/Journal/TropicalCyclones/">Tropical Cylcones</a></li>
+          
+            <li><a href="/Journal/Pigeons/">Pigeons</a></li>
+          
+            <li><a href="/Journal/SelfIdentity/">Self Identity</a></li>
+          
+            <li><a href="/Journal/Future/">Henry-yip.github.io; Future and Thoughts</a></li>
+          
+            <li><a href="/Journal/ChristmasHoliday/">Christmas Holiday 2022/2023</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="I suck at Math!">
+    <meta itemprop="description" content="Primary SchoolI believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years old), but I nevertheless enjoyed the extra time training for Math Olympiads with Toby Lam.">
+    <meta itemprop="datePublished" content="2022-12-26T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/Journal/Isuckatmath/" class="u-url" itemprop="url">I suck at Math!
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> I Suck at Math!</h4></header>
+              <ul class="toc__menu"><li><a href="#primary-school">Primary School</a></li><li><a href="#secondary-school">Secondary School</a><ul><li><a href="#detour">Detour:</a></li></ul></li><li><a href="#continuing">Continuing</a></li><li><a href="#university">University</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h2 id="primary-school">Primary School</h2>
+<p>I believe I had quite a solid foundation in Mathematics when I was young thanks to KUMON/SPPS Math Olympiad Team, having moderate proficiency in algebra, albeit a low proficiency in geometry. I remember being more interested in BioChem, a bit inclined to the chemistry side (until 15 years old), but I nevertheless enjoyed the extra time training for Math Olympiads with <a href="https://tobylam.xyz/">Toby Lam</a>.</p>
+
+<p><a href="http://hkpmc.cswcss.edu.hk/index.php?tokenis=ajrbrh4xy3tfvlcvyjhayraqu219swns55uncob1iu736apujxu7euoznfz51dox88abnb2vwzps04d9ry6wjkmwqbrie65d56ei864uwjdmegmv4jiduvzaxhi2de58b9h96butlx6p4jbysj2c5scszlk3qg2rgardbbwmzt1t23ildan8sqqi21bi740d4ig6j3i9nasg30r6154jmlredtnaoeeimlewfnvtndzh4hdvd85pjnum78nlcsuo3zb9dwsr0iyvq1ht0c99qumos0zvikacabcexvvo3j9kbg31j31zoed753sdetgfujji44wxew7f217bvz19347yyp22998tih2cbp0fbyl4pi5b7xb1r8qgoj9ni77reztgfkmg8xan66p4tqvbpch3lhhueebj4vq952g3phhldxgxd1yt46mfdt0iy1rtn7tizzcf7kra7xybpmukj7pmrgug7czlaiu08w567n75bv7r8r1hpht6neclh2whbg7a3361g3wiotzmbquqxdnaiplpi8wjftj8nfzt9m1n6r087louo2vxh7cq5zzaj89wezgdb8r8pi6mtl78dsvl&amp;wsgid=2.0&amp;wssid=3.2200&amp;wsmid=31&amp;wslan=chi&amp;WEID=">One of the many competitions I joined</a></p>
+
+<h2 id="secondary-school">Secondary School</h2>
+<p>I slackened because High School Mathematics isn’t as fun as before (an emphasize on tedious geometry instead of Number Theory).</p>
+
+<p>They put an emphasize on memorization instead of understanding as they didn’t include Calculus. I only realized the following after taking some non-compulsory calculus classes:</p>
+
+<p>For example, \(ax^2+bx+c=0\) implies stationary Point at \(x=\frac{-b}{2a}\) by simple differentiation… (2nd derivative test shows Max/Min)</p>
+
+<h3 id="detour">Detour:</h3>
+<p>This is similar to the <strong>Hessian Matrix</strong>
+\(\mathbf{H}=\left[\begin{array}{cccc}
+\frac{\partial^2 f}{\partial x_1^2} &amp; \frac{\partial^2 f}{\partial x_1 \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_1 \partial x_n} \\
+\frac{\partial^2 f}{\partial x_2 \partial x_1} &amp; \frac{\partial^2 f}{\partial x_2^2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_2 \partial x_n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+\frac{\partial^2 f}{\partial x_n \partial x_1} &amp; \frac{\partial^2 f}{\partial x_n \partial x_2} &amp; \cdots &amp; \frac{\partial^2 f}{\partial x_n^2}
+\end{array}\right]\)</p>
+
+<p>(Side Note: If you want to type Math Equations in your website <a href="/Jekyll/Katex">PLEASE PRESS HERE</a>)</p>
+
+<h2 id="continuing">Continuing</h2>
+
+<p>I clearly remember myself making tons of careless mistakes and finished the paper with tons of time remaining, but had 9 careless mistakes… 9! (out of 45)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HKDSE Mathematics<span class="o">(</span>Compulsory<span class="o">)</span> is uninspiring
+</code></pre></div></div>
+
+<p>I think M2 kinda went bad because I literally didn’t spend time revising. The only thing I was interested in was calculus because that is related to Physics…</p>
+
+<p>My favourite areas in Physics are <a href="https://en.wikipedia.org/wiki/Perturbation_theory">Perbuation Theory</a> , <a href="https://en.wikipedia.org/wiki/Quantum_mechanics">Quantum Mechanics</a> and <a href="https://en.wikipedia.org/wiki/Lagrangian_mechanics">Lagrangian Mechanics</a>. Sadly both aren’t related to high school Math at all (except Calculus)</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Orbital Mechanics is Fun.... 
+</code></pre></div></div>
+<h2 id="university">University</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Click the links to see the courses I chose:
+</code></pre></div></div>
+
+<p>I just suck at <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08071.htm">Number Theory</a> and <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08066.htm">Probability and Statistics</a>. While I’m ok in <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08063.htm">Multivariable Calculus</a>. I have developed an interest in <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath10066.htm">Differetial Equations</a> because of <a href="https://en.wikipedia.org/wiki/Bessel_function">Bessel function</a>. However, I absolutely hate, or almost abhor, courses related to <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08057.htm">linear algebra</a></p>
+
+<p>I believe I have spent much more time studying so my exam performance is quite decent, but I believe I need time to gain intuition towards what’s happening… I just suck at these…</p>
+
+<p><img src="/assets/images/Pgfplots.png" alt="A description of the image" srcset=" /assets/images/Pgfplots.png 500w" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-26T00:00:00+00:00">December 26, 2022</time></p>
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Journal/TropicalClyclones/" class="pagination--pager" title="Tropical Cyclones
+">Previous</a>
+    
+    
+      <a href="/Journal/Pigeons/" class="pagination--pager" title="Pigeons!!!
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: '5CK3MN2B7K',
+  apiKey: '414aa238391f62d601f1f91dbed9649b',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
