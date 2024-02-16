@@ -83,8 +83,8 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Miscellaneous - Random and interesting ideas on Green's and Stokes' Theorem",
-        "excerpt":"Here we are using the language of differential geometry to explore around Green’s Theorem and Stokes’ Theorem. Targeted Audience: Year 1/2 Math/Physics majors. You may want to read a bit about wedge products and exterior derivatives Multivariable Calculus is a prerequisite. Statement An Ellipse with semi-major axis a and semi-minor...","categories": [],
+        "title": "Multivariable Calculus",
+        "excerpt":"Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides 2 methods to do it, but they are considerably tedious and non-elegant. Here we will use the powerful Green’s Theorem, which is closely related...","categories": [],
         "tags": ["Multivaribale","Calculus"],
         "url": "/EllipseArea/",
         "teaser": "/assets/images/Teaser.png"
