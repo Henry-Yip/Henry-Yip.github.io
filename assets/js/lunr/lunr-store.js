@@ -1,6 +1,6 @@
 var store = [{
         "title": "LaTeX Tutorial (Presentation)",
-        "excerpt":"This is a beamer presentation I made on using \\(\\LaTeX\\). Please note that I am not a \\(\\LaTeX\\) expert, and this is for reference(for fun) only!   Tutorial      ","categories": [],
+        "excerpt":"This is a beamer presentation I made on using \\(\\LaTeX\\). Please note that I am not a \\(\\LaTeX\\) expert, and this is for reference(for fun) only!   Tutorial   Please Press HERE      ","categories": [],
         "tags": [],
         "url": "/LaTeX/LaTeXTutorial1/",
         "teaser": "/assets/images/LaTeX.png"
