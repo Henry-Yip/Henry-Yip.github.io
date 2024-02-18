@@ -90,7 +90,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Transformations",
-        "excerpt":"Motivation The moments of inertia along the principal axes $\\underline{e}_1, \\underline{e}_2, \\underline{e}_3$ of a rigid body are 1,2 and 3 respectively. An observer has a coordinate basis $\\underline{e}_1^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(\\underline{e}_1+ \\underline{e}_2\\right), \\underline{e}_2^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(-\\underline{e}_1+ \\underline{e}_2\\right)$ and $\\underline{e}_3^{\\prime}=\\underline{e}_3$. What are the values of the components of the inertia tensor measured by the observer? Using $R_{ij}=\\underline{e_i}’...","categories": [],
+        "excerpt":"Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors Motivation The moments of inertia along the principal axes \\(\\underline{e}_1, \\underline{e}_2, \\underline{e}_3\\) of a rigid body are 1,2 and 3 respectively. An observer has a coordinate basis \\(\\underline{e}_1^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(\\underline{e}_1+ \\underline{e}_2\\right), \\underline{e}_2^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(-\\underline{e}_1+ \\underline{e}_2\\right)\\) and...","categories": [],
         "tags": ["Trans"],
         "url": "/Transformations/",
         "teaser": "/assets/images/Teaser.png"
