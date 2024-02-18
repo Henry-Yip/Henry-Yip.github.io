@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Transformations | Henry Yip</title>
-<meta name="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.">
+<!-- begin _includes/seo.html --><title>Tensor Transformations | Henry Yip</title>
+<meta name="description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Transformations">
+<meta property="og:title" content="Tensor Transformations">
 <meta property="og:url" content="https://henry-yip.github.io/Transformations/">
 
 
-  <meta property="og:description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.">
+  <meta property="og:description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Transformations</li>
+        <li class="current">Tensor Transformations</li>
       
     
   </ol>
@@ -327,8 +327,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Transformations">
-    <meta itemprop="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.">
+    <meta itemprop="headline" content="Tensor Transformations">
+    <meta itemprop="description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
     <meta itemprop="datePublished" content="2024-02-18T00:00:00+00:00">
     
 
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Transformations/" class="u-url" itemprop="url">Transformations
+            <a href="https://henry-yip.github.io/Transformations/" class="u-url" itemprop="url">Tensor Transformations
 </a>
           </h1>
           
@@ -368,12 +368,12 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Transformations</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#coordinate-transformations">Coordinate Transformations</a></li></ul>
+              <ul class="toc__menu"><li><a href="#motivation">Motivation</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#intuition">Intuition</a><ul><li><a href="#credits">Credits</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.</p>
+        <p>Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.</p>
 
 <h2 id="motivation">Motivation</h2>
 
@@ -432,27 +432,41 @@ I' &amp;= \left(\begin{array}{ccc}
 \end{array}\right) 
 \end{aligned}\]
 
-<p>Notice that Trace of R is \(6\), which shows that trace is unchanged!</p>
+<h2 id="intuition">Intuition</h2>
 
-<p>The above is true for any basis transformations, i.e. not just for tensors.</p>
+<p>We can consider \(T\) and \(T'\) as maps (in fact, it is easy to define Tensors as multilinear maps!):</p>
 
-<h2 id="coordinate-transformations">Coordinate Transformations</h2>
+<p>\(T\) maps \(v\) to \(Tv\),</p>
 
-<p>Coordinate Transformations usually obey the form \(x_i=R_{ij} x_j\).</p>
+<p>\(T'\) maps \(v'\) to \(T'v'\).</p>
 
-<p>In general, we have:</p>
+<p>We can map from \(v\) to \(Tv\) in an interesting way:</p>
 
-\[R_{ij}(\theta, n) = \delta_{ij} \cos \theta + (1 - \cos \theta) n_i n_j - \varepsilon_{ijk} n_k\]
+<ul>
+  <li>
+    <ol>
+      <li>Rotate \(R\) to new basis</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Apply \(T'\)</li>
+    </ol>
+  </li>
+  <li>
+    <ol>
+      <li>Rotate back</li>
+    </ol>
+  </li>
+</ul>
 
-<p>for a rotation by n with angle \(\theta\).</p>
+<p>This gives us: \(Tv=R^{-1}T'Rv\).</p>
 
-<p>It is left for the reader to prove that \(\text{Tr}(R)=1+2 \cos (\theta)\)</p>
+<p>From which we can obtain \(T'=RTR^{-1}\).</p>
 
-<p>and</p>
+<h3 id="credits">Credits</h3>
 
-\[\epsilon_{ijk} R_{jk}=-2 n_i \sin(\theta)\]
-
-<p>Notice that it is considerably less tedious to calculate compared to a basis transformation, due to the lack of need to multiply 3 matrices together.</p>
+<p>The intuition part is inspired by <a href="https://math.stackexchange.com/questions/2303869/tensor-rotation">this post</a>. The motivation part is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/tutorial04.pdf">Dr BJ Pendelton’s Problem Sheet</a></p>
 
 
         
@@ -489,7 +503,7 @@ I' &amp;= \left(\begin{array}{ccc}
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tensor+Transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
