@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Transformations | Henry Yip</title>
-<meta name="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors">
+<meta name="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.55">
 
 
   <meta name="author" content="Henry Yip ">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Transformations/">
 
 
-  <meta property="og:description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors">
+  <meta property="og:description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.55">
 
 
 
@@ -328,7 +328,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Transformations">
-    <meta itemprop="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors">
+    <meta itemprop="description" content="Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.55">
     <meta itemprop="datePublished" content="2024-02-18T00:00:00+00:00">
     
 
@@ -368,16 +368,18 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Transformations</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li></ul>
+              <ul class="toc__menu"><li><a href="#motivation">Motivation</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#coordinate-transformations">Coordinate Transformations</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors</p>
+        <p>Here, we deal with basis transformations, which is fundamentally different from coordinate transformations. We will focus on Tensors.55</p>
 
 <h2 id="motivation">Motivation</h2>
 
 <p>The moments of inertia along the principal axes \(\underline{e}_1, \underline{e}_2, \underline{e}_3\) of a rigid body are 1,2 and 3 respectively.  An observer has a coordinate basis \(\underline{e}_1^{\prime}=\frac{\sqrt{2}}{2}\left(\underline{e}_1+ \underline{e}_2\right), \underline{e}_2^{\prime}=\frac{\sqrt{2}}{2}\left(-\underline{e}_1+ \underline{e}_2\right)\) and \(\underline{e}_3^{\prime}=\underline{e}_3\). What are the values of the components of the inertia tensor measured by the observer?</p>
+
+<h3 id="solution">Solution</h3>
 
 <p>Using \(R_{ij}=\underline{e_i}' \cdot \underline{e_j}\), we get:</p>
 
@@ -387,7 +389,15 @@
 0 &amp; 0 &amp; 1
 \end{array}\right)\]
 
-<p>We know that for a Rank-2 Tensor:</p>
+<p>And also:</p>
+
+\[I=\left(\begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 3 \\
+\end{array}\right)\]
+
+<p>One might be tempted to use coordinate transformations, i.e. \(x_j=R_{ij} x_i\). However, this is not the case here. The key is using the definition below:</p>
 
 \[\begin{aligned}
 I_{i j}^{\prime} &amp; =I_{i p} I_{j q} I_{p q} \\
@@ -395,15 +405,9 @@ I_{i j}^{\prime} &amp; =I_{i p} I_{j q} I_{p q} \\
 &amp; =\left(R I R^T\right)_{i j}
 \end{aligned}\]
 
-<p>We know that rotation matrices satisfy \(R^T=R^{-1}\)</p>
+<p>We know that rotation matrices satisfy \(R^T=R^{-1}\), hence:</p>
 
-<p>Also:</p>
-
-\[I=\left(\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 2 &amp; 0 \\
-0 &amp; 0 &amp; 3 \\
-\end{array}\right)\]
+<p>$$I_{i j}^{\prime} = \left(R I R^{-1}\right)_{i j}</p>
 
 <p>Hence, multiplying will get us:</p>
 
@@ -429,6 +433,24 @@ I' &amp;= \left(\begin{array}{ccc}
 \end{aligned}\]
 
 <p>Notice that Trace of R is \(6\), which shows that trace is unchanged!</p>
+
+<p>The above is true for any basis transformations, i.e. not just for tensors.</p>
+
+<h2 id="coordinate-transformations">Coordinate Transformations</h2>
+
+<p>Coordinate Transformations usually obey the form \(x_i=R_{ij} x_j\).</p>
+
+<p>In general, we have:</p>
+
+\[R_{ij}(\theta, n) = \delta_{ij} \cos \theta + (1 - \cos \theta) n_i n_j - \varepsilon_{ijk} n_k\]
+
+<p>for a rotation by n with angle \(\theta\).</p>
+
+<p>It is left for the reader to prove that \(\text{Tr}(R)=1+2 \cos (\theta)\)</p>
+
+<p>and \(\epsilon_{ijk} R_{jk}=-2 n_i \sin(\theta)\)</p>
+
+<p>Notice that it is considerably less tedious to calculate compared to a basis transformation, due to the lack of need to multiply 3 matrices together.</p>
 
 
         
