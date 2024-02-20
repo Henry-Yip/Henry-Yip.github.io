@@ -35,16 +35,16 @@ var store = [{
         "url": "/Astrophysics/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Leo Chow - Relativity",
-        "excerpt":"This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the...","categories": [],
-        "tags": ["Astrophysics","1"],
-        "url": "/LeoChow/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
         "title": "Allison Lau - Numerical Methods",
         "excerpt":"This set of notes is on numerical methods, created by Allison Lau, a student from University of Toronto. I have met her in person and she has personally provided me this set of notes to put in my website.   Please Press HERE to download!  ","categories": [],
         "tags": ["Allison","Lau","-","Numerical","Methods"],
         "url": "/Numerical/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Leo Chow - Relativity",
+        "excerpt":"This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website. Relativity Let’s take a look at the Lorentz factor: \\[\\gamma_v=\\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}\\] On the...","categories": [],
+        "tags": ["Astrophysics","1"],
+        "url": "/Relativity/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "PHYS08050 (Introductory Astrophysics) Course Notes",
@@ -86,12 +86,18 @@ var store = [{
         "title": "Multivariable Calculus",
         "excerpt":"Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides 2 methods to do it, but they are considerably tedious and non-elegant. Here we will use the powerful Green’s Theorem, which is closely related...","categories": [],
         "tags": ["Multivaribale","Calculus"],
-        "url": "/EllipseArea/",
+        "url": "/Multivariable_Calc/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Tensor Transformations",
         "excerpt":"Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition. Motivation The moments of inertia along the principal axes \\(\\underline{e}_1, \\underline{e}_2, \\underline{e}_3\\) of a rigid body are 1,2 and 3 respectively. An observer has a coordinate basis \\(\\underline{e}_1^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(\\underline{e}_1+ \\underline{e}_2\\right), \\underline{e}_2^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(-\\underline{e}_1+ \\underline{e}_2\\right)\\) and \\(\\underline{e}_3^{\\prime}=\\underline{e}_3\\). What...","categories": [],
         "tags": ["Trans"],
         "url": "/Transformations/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Overview of the Two-body Problem",
+        "excerpt":"Here I will present the exact solution of the two body problem. Definition of terms First we define the center of mass coordinate: \\[\\underline{R}=\\frac{m_1 \\underline{r_1}+m_2 \\underline{r_2}}{m_1+m_2}\\] Now we notice that: \\[\\underline{P}=(m_1+m_2)\\dot{R}\\] How does the center of mass move? As total momentum is conserved (due to homogenity of space, see my...","categories": [],
+        "tags": ["Trans"],
+        "url": "/SummerResearch/",
         "teaser": "/assets/images/Teaser.png"
       }]

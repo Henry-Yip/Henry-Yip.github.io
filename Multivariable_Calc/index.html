@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>PHYS08050 (Introductory Astrophysics) Course Notes | Henry Yip</title>
-<meta name="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
+<!-- begin _includes/seo.html --><title>Multivariable Calculus | Henry Yip</title>
+<meta name="description" content="Statement">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-<meta property="og:url" content="https://henry-yip.github.io/Physics/Astrophysics-1/">
+<meta property="og:title" content="Multivariable Calculus">
+<meta property="og:url" content="https://henry-yip.github.io/Multivariable_Calc/">
 
 
-  <meta property="og:description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-07-01T00:00:00+01:00">
+  <meta property="og:description" content="Statement">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-10-16T00:00:00+01:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Physics/Astrophysics-1/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Multivariable_Calc/">
 
 
 
@@ -187,17 +187,7 @@
         <span class="sep">/</span>
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#physics" itemprop="item"><span itemprop="name">Physics</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">PHYS08050 (Introductory Astrophysics) Course Notes</li>
+        <li class="current">Multivariable Calculus</li>
       
     
   </ol>
@@ -337,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-    <meta itemprop="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-    <meta itemprop="datePublished" content="2022-07-01T00:00:00+01:00">
+    <meta itemprop="headline" content="Multivariable Calculus">
+    <meta itemprop="description" content="Statement">
+    <meta itemprop="datePublished" content="2023-10-16T00:00:00+01:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Physics/Astrophysics-1/" class="u-url" itemprop="url">PHYS08050 (Introductory Astrophysics) Course Notes
+            <a href="https://henry-yip.github.io/Multivariable_Calc/" class="u-url" itemprop="url">Multivariable Calculus
 </a>
           </h1>
           
@@ -363,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          4 minute read
         
       </span>
     
@@ -377,23 +367,174 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Astro 1</h4></header>
-              <ul class="toc__menu"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#scope">Scope</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Multivaribale Calculus</h4></header>
+              <ul class="toc__menu"><li><a href="#statement">Statement</a></li><li><a href="#proof">Proof</a></li><li><a href="#generalized-stokes-theorem">Generalized Stokes’ Theorem</a></li><li><a href="#greens-theorem-special-case">Green’s Theorem (Special Case)</a></li><li><a href="#multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</a><ul><li><a href="#divergence">Divergence:</a></li><li><a href="#curl">Curl</a></li><li><a href="#laplacian">Laplacian</a></li><li><a href="#other-cases">Other cases</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!</p>
+        <h1 id="statement">Statement</h1>
 
-<p>I have gained permission from Professor Catherine Heymans to put my modified notes in my website.</p>
+<p>An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
 
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics.</p>
+<h1 id="proof">Proof</h1>
+<p>There are many ways to approach this problem. Proofwiki provides <a href="https://proofwiki.org/wiki/Area_of_Ellipse">2 methods</a> to do it, but they are considerably tedious and non-elegant.</p>
 
-<h2 id="scope">Scope</h2>
-<p>Galaxies and Cosmology, with some coverage on stars.</p>
+<p>Here we will use the powerful Green’s Theorem, which is closely related to Areas (Since it is the 2D version of Stoke’s theorem). This is rarely explained in lectures and is worth a discussion:</p>
 
-<p>Please Press <a href="https://henry-yip.github.io/assets/PHYS08050.pdf">HERE</a> to download!</p>
+<p>Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
+
+\[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
+
+<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1\)</p>
+
+<p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
+
+<p>So we can estimate the area (denote by \(A\)) as:</p>
+
+\[A=\frac{1}{2} \oint_C(x dy-ydx)\]
+
+<p>Using the standard parameterization of an ellipse (see below), we can quickly calculate \(A\)</p>
+
+\[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
+
+\[\begin{aligned}
+A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
+&amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
+\end{aligned}\]
+
+\[\blacksquare\]
+
+<p><strong>Collorary</strong>: A Circle with radius \(r\) has area \(\pi r^2\). The proof is trivial and is left as an exercise for the reader.</p>
+
+<h1 id="generalized-stokes-theorem">Generalized Stokes’ Theorem</h1>
+
+<p>For a sphere, consider:
+\(\alpha=x^1 d x^2 \wedge d x^3 .\)</p>
+
+<p>Consider:</p>
+
+\[x^1=\sin\alpha\cos\phi\]
+
+\[x^2=\sin\alpha\sin\phi\]
+
+\[x^3=\cos\alpha\]
+
+<p>Thus:
+\(\alpha=\sin ^3 \alpha \cos ^2 \phi d \alpha \wedge d \phi\)</p>
+
+<p>This is clearly a surface integral. Hence, we have:</p>
+
+\[\int_{\partial\Sigma} \alpha=\int_{\alpha=0}^\pi \int_{\phi=0}^{2 \pi} \sin ^3 \alpha \cos ^2 \phi d \alpha d \phi=\frac{4 \pi}{3} .\]
+
+<p>On the other hand, we have:
+\(d \alpha=d x^1 \wedge d x^2 \wedge d x^3\)
+and so</p>
+
+\[\int_{\Sigma} d \alpha=\int_{\Sigma} d  x^1 \wedge d x^2 \wedge d x^3=  \int_{0}^{2\pi} \int_{0}^{ \pi} 
+\int_{0}^{1} (r^2 \sin \phi) dr  d\alpha d\phi = \frac{4}{3} \pi\]
+
+<p>Hence we have showed that Generalized Stokes’ Theorem: 
+\(\int_{\Sigma} d \alpha=\int_{\partial \Sigma} \alpha\)</p>
+
+<p>works on a unit sphere.</p>
+
+<h1 id="greens-theorem-special-case">Green’s Theorem (Special Case)</h1>
+
+<p>Considering <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s Post</a>. We can approach the same problem using wedge products. If you haven’t read his post, the problem we are considering is:</p>
+
+\[\text { Area of } D=\iint_D d x d y=-\int_C y d x\]
+
+<p>First, consider: \(d\alpha=dy \wedge dx\). We can easily see that \(\alpha=ydx\)</p>
+
+\[\text { Area of } D=\iint_\Sigma d x \wedge d y=-\iint_\Sigma d y \wedge d x=-\iint_\Sigma d\alpha=-\int_{\partial \Sigma} \alpha=-\int_{\partial \Sigma} ydx\]
+
+<p>For the general case, using Generalized Stokes’ Theorem , we can consider:</p>
+
+\[\int_{\partial D} P d x+Q d y=\iint_{D}dP \wedge dx+dQ \wedge dy\]
+
+<p>As:</p>
+
+\[d P=\sum_{i=1}^n \frac{\partial P}{\partial x^i} d x^i\]
+
+<p>We have:</p>
+
+\[\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partial x} dx \wedge dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
+
+<p>So:</p>
+
+\[\int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
+
+<p>The astute reader can realized that this is Green’s Theorem - Stokes’ Theorem in 2D!</p>
+
+<h1 id="multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</h1>
+
+<p>This section is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Electromagnetism and Relativity Notes</a>:</p>
+
+<p>We will start from the results of cylindrical Coordinate System: Below I will compute the scale factors and the unit vectors, as a basic exercise.</p>
+
+<p>We know: \(\underline{r} = r \sin \theta \cos \phi \underline{e}_x + r \sin \theta \sin \phi \underline{e}_y + r \cos \theta \underline{e}_z\). Hence:</p>
+
+\[\begin{aligned}
+\frac{\partial \underline{r}}{\partial r} &amp;= \sin \theta \cos \phi \underline{e}_x + \sin \theta \sin \phi \underline{e}_y + \cos \theta \underline{e}_z \Rightarrow h_r = \left|\frac{\partial \underline{r}}{\partial r}\right| = 1 \\
+\frac{\partial \underline{r}}{\partial \theta} &amp;= r \cos \theta \cos \phi \underline{e}_x + r \cos \theta \sin \phi \underline{e}_y - r \sin \theta \underline{e}_z \Rightarrow h_\theta = \left|\frac{\partial \underline{r}}{\partial \theta}\right| = r \\
+\frac{\partial \underline{r}}{\partial \phi} &amp;= -r \sin \theta \sin \phi \underline{e}_x + r \sin \theta \cos \phi \underline{e}_y \Rightarrow h_\phi = \left|\frac{\partial \underline{r}}{\partial \phi}\right| = r \sin \theta
+\end{aligned}\]
+
+<p>Therefore, the unit vectors are:</p>
+
+\[\begin{aligned}
+&amp; \underline{e}_r=\sin \theta \cos \phi \underline{e}_x+\sin \theta \sin \phi \underline{e}_y+\cos \theta \underline{e}_z\\
+&amp; \underline{e}_\theta=\cos \theta \cos \phi \underline{e}_x+\cos \theta \sin \phi \underline{e}_y-\sin \theta \underline{e}_z \\
+&amp; \underline{e}_\phi=-\sin \phi \underline{e}_x+\cos \phi \underline{e}_y
+\end{aligned}\]
+
+<h2 id="divergence">Divergence:</h2>
+
+<p>In general, given the scale factors, we have:</p>
+
+\[\underline{\nabla} \cdot \underline{a}=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(a_1 h_2 h_3\right)+\frac{\partial}{\partial u_2}\left(a_2 h_3 h_1\right)+\frac{\partial}{\partial u_3}\left(a_3 h_1 h_2\right)\right\}\]
+
+<p>In our case of cylindrical coordinates, we have:</p>
+
+\[\begin{aligned}
+\underline{\nabla} \cdot \underline{a}(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta a_r\right)+\frac{\partial}{\partial \theta}\left(r \sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(r a_\phi\right)\right\} \\
+&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right)+\frac{1}{r \sin \theta}\left\{\frac{\partial}{\partial \theta}\left(\sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(a_\phi\right)\right\}
+\end{aligned}\]
+
+<h2 id="curl">Curl</h2>
+
+<p>For curl we have:</p>
+
+\[\underline{\nabla} \times \underline{a}=\frac{1}{h_1 h_2 h_3}\left|\begin{array}{ccc}
+h_1 \underline{e}_1 &amp; h_2 \underline{e}_2 &amp; h_3 \underline{e}_3 \\
+\frac{\partial}{\partial u_1} &amp; \frac{\partial}{\partial u_2} &amp; \frac{\partial}{\partial u_3} \\
+h_1 a_1 &amp; h_2 a_2 &amp; h_3 a_3
+\end{array}\right|\]
+
+<p>In the special case of spherical polars we have:
+\(\underline{\nabla} \times \underline{a}=\frac{1}{r^2 \sin \theta}\left|\begin{array}{ccc}
+\underline{e}_r &amp; r \underline{e}_\theta &amp; r \sin \theta \underline{e}_\phi \\
+\frac{\partial}{\partial r} &amp; \frac{\partial}{\partial \theta} &amp; \frac{\partial}{\partial \phi} \\
+a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
+\end{array}\right|\)</p>
+
+<h2 id="laplacian">Laplacian</h2>
+
+<p>As for the Laplacian (scalar field), we have:</p>
+
+\[\nabla^2 f=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(\frac{h_2 h_3}{h_1} \frac{\partial f}{\partial u_1}\right)+\frac{\partial}{\partial u_2}\left(\frac{h_3 h_1}{h_2} \frac{\partial f}{\partial u_2}\right)+\frac{\partial}{\partial u_3}\left(\frac{h_1 h_2}{h_3} \frac{\partial f}{\partial u_3}\right)\right\}\]
+
+<p>In the special case of spherical polars, we have:</p>
+
+\[\begin{aligned}
+\nabla^2 f(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta \frac{\partial f}{\partial r}\right)+\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial}{\partial \phi}\left(\frac{1}{\sin \theta} \frac{\partial f}{\partial \phi}\right)\right\} \\
+&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin ^2 \theta}\left\{\sin \theta \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial^2 f}{\partial \phi^2}\right\}
+\end{aligned}\]
+
+<h2 id="other-cases">Other cases</h2>
+
+<p>Left as an exercise for the reader!</p>
 
 
         
@@ -411,9 +552,9 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#1" class="page__taxonomy-item p-category" rel="tag">1</a><span class="sep">, </span>
+      <a href="/tags/#calculus" class="page__taxonomy-item p-category" rel="tag">Calculus</a><span class="sep">, </span>
     
-      <a href="/tags/#astrophysics" class="page__taxonomy-item p-category" rel="tag">Astrophysics</a>
+      <a href="/tags/#multivaribale" class="page__taxonomy-item p-category" rel="tag">Multivaribale</a>
     
     </span>
   </p>
@@ -423,7 +564,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-07-01T00:00:00+01:00">July 1, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-10-16T00:00:00+01:00">October 16, 2023</time></p>
 
       </footer>
 
@@ -432,22 +573,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=PHYS08050+%28Introductory+Astrophysics%29+Course+Notes%20https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Multivariable+Calculus%20https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Relativity/" class="pagination--pager" title="Leo Chow - Relativity
+      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
 ">Previous</a>
     
     
-      <a href="/Conservations/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
+      <a href="/Transformations/" class="pagination--pager" title="Tensor Transformations
 ">Next</a>
     
   </nav>
@@ -566,7 +707,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Multivariable_Calc/" rel="permalink">Multivariable Calculus
+        <a href="/Prerequisites/" rel="permalink">Pre-requisites for Group Theory
 </a>
       
     </h2>
@@ -584,16 +725,14 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          9 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Statement
-
-</p>
+    <p class="archive__item-excerpt" itemprop="description">Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learni...</p>
   </article>
 </div>
 
@@ -611,7 +750,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Prerequisites/" rel="permalink">Pre-requisites for Group Theory
+        <a href="/Dirichlet/" rel="permalink">Kernels in Fourier Series
 </a>
       
     </h2>
@@ -636,7 +775,9 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learni...</p>
+    <p class="archive__item-excerpt" itemprop="description">This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.
+
+</p>
   </article>
 </div>
 
@@ -771,8 +912,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Physics/Astrophysics-1/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Physics/CourseNotes"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Multivariable_Calc/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Multivariable_Calc"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

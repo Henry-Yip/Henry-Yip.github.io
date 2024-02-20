@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Multivariable Calculus | Henry Yip</title>
-<meta name="description" content="Statement">
+<!-- begin _includes/seo.html --><title>Overview of the Two-body Problem | Henry Yip</title>
+<meta name="description" content="Here I will present the exact solution of the two body problem.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Multivariable Calculus">
-<meta property="og:url" content="https://henry-yip.github.io/EllipseArea/">
+<meta property="og:title" content="Overview of the Two-body Problem">
+<meta property="og:url" content="https://henry-yip.github.io/SummerResearch/">
 
 
-  <meta property="og:description" content="Statement">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-10-16T00:00:00+01:00">
+  <meta property="og:description" content="Here I will present the exact solution of the two body problem.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-02-20T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/EllipseArea/">
+
+<link rel="canonical" href="https://henry-yip.github.io/SummerResearch/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Multivariable Calculus</li>
+        <li class="current">Overview of the Two-body Problem</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Multivariable Calculus">
-    <meta itemprop="description" content="Statement">
-    <meta itemprop="datePublished" content="2023-10-16T00:00:00+01:00">
+    <meta itemprop="headline" content="Overview of the Two-body Problem">
+    <meta itemprop="description" content="Here I will present the exact solution of the two body problem.">
+    <meta itemprop="datePublished" content="2024-02-20T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/EllipseArea/" class="u-url" itemprop="url">Multivariable Calculus
+            <a href="https://henry-yip.github.io/SummerResearch/" class="u-url" itemprop="url">Overview of the Two-body Problem
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          less than 1 minute read
         
       </span>
     
@@ -367,175 +367,59 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Multivaribale Calculus</h4></header>
-              <ul class="toc__menu"><li><a href="#statement">Statement</a></li><li><a href="#proof">Proof</a></li><li><a href="#generalized-stokes-theorem">Generalized Stokes’ Theorem</a></li><li><a href="#greens-theorem-special-case">Green’s Theorem (Special Case)</a></li><li><a href="#multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</a><ul><li><a href="#divergence">Divergence:</a></li><li><a href="#curl">Curl</a></li><li><a href="#laplacian">Laplacian</a></li><li><a href="#other-cases">Other cases</a></li></ul></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
+              <ul class="toc__menu"><li><a href="#definition-of-terms">Definition of terms</a><ul><li><a href="#how-does-the-center-of-mass-move">How does the center of mass move?</a></li></ul></li><li><a href="#solving-the-system">Solving the System</a></li><li><a href="#concluding-remarks">Concluding Remarks</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="statement">Statement</h1>
+        <p>Here I will present the exact solution of the two body problem.</p>
 
-<p>An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
+<h2 id="definition-of-terms">Definition of terms</h2>
 
-<h1 id="proof">Proof</h1>
-<p>There are many ways to approach this problem. Proofwiki provides <a href="https://proofwiki.org/wiki/Area_of_Ellipse">2 methods</a> to do it, but they are considerably tedious and non-elegant.</p>
+<p>First we define the center of mass coordinate:</p>
 
-<p>Here we will use the powerful Green’s Theorem, which is closely related to Areas (Since it is the 2D version of Stoke’s theorem). This is rarely explained in lectures and is worth a discussion:</p>
+\[\underline{R}=\frac{m_1 \underline{r_1}+m_2 \underline{r_2}}{m_1+m_2}\]
 
-<p>Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
+<p>Now we notice that:</p>
 
-\[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
+\[\underline{P}=(m_1+m_2)\dot{R}\]
 
-<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1\)</p>
+<h3 id="how-does-the-center-of-mass-move">How does the center of mass move?</h3>
 
-<p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
+<p>As total momentum is conserved (due to homogenity of space, see <a href="/Conservations/">my post on Noether’s Theorem</a>), we have (in scalars) \(\dot{R}=\frac{P}{m_1+m_2}\). As this is the slope of \(R\), we have:</p>
 
-<p>So we can estimate the area (denote by \(A\)) as:</p>
+\[\underline{R}(t)=\underline{R}(0)+\frac{\underline{P}}{m_1+m_2} t\]
 
-\[A=\frac{1}{2} \oint_C(x dy-ydx)\]
+<p>Therefore Center-of-Mass is always on a straight line with constant velocity!</p>
 
-<p>Using the standard parameterization of an ellipse (see below), we can quickly calculate \(A\)</p>
+<h2 id="solving-the-system">Solving the System</h2>
 
-\[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
+<p>Now consider \(\underline{r_1}+\underline{r_2}=\underline{R}\). By putting into the expression of \(\underline{R}\), we obtain:</p>
 
-\[\begin{aligned}
-A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
-&amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
-\end{aligned}\]
+\[\underline{r}_1=\underline{R}+\frac{m_2}{m_1+m_2} \underline{r}\]
 
-\[\blacksquare\]
+<p>Further differentiating yields:</p>
 
-<p><strong>Collorary</strong>: A Circle with radius \(r\) has area \(\pi r^2\). The proof is trivial and is left as an exercise for the reader.</p>
+\[\underline{\ddot{r}}_1=\frac{m_2}{m_1+m_2}{\underline{\ddot{r}}}\]
 
-<h1 id="generalized-stokes-theorem">Generalized Stokes’ Theorem</h1>
+<p>Hence we have:</p>
 
-<p>For a sphere, consider:
-\(\alpha=x^1 d x^2 \wedge d x^3 .\)</p>
+\[\frac{m_1 m_2}{m_1+m_2} {\underline{\ddot{r}}}=m_1 {\underline{\ddot{r}}}_1=-\underline{\nabla}_1 V\left(\underline{r}_1-\underline{r}_2\right)=-\underline{\nabla} V(\underline{r})\]
 
-<p>Consider:</p>
+<p>Leading to:</p>
 
-\[x^1=\sin\alpha\cos\phi\]
+\[m {\underline{\ddot{r}}}=-\underline{\nabla} V(\underline{r})\]
 
-\[x^2=\sin\alpha\sin\phi\]
+<p>Where</p>
 
-\[x^3=\cos\alpha\]
+\[m \equiv \frac{m_1 m_2}{m_1+m_2}\]
 
-<p>Thus:
-\(\alpha=\sin ^3 \alpha \cos ^2 \phi d \alpha \wedge d \phi\)</p>
+<p>is named the <em>reduced mass</em>. It is a very important concept in celestial body calculations!</p>
 
-<p>This is clearly a surface integral. Hence, we have:</p>
+<h2 id="concluding-remarks">Concluding Remarks</h2>
 
-\[\int_{\partial\Sigma} \alpha=\int_{\alpha=0}^\pi \int_{\phi=0}^{2 \pi} \sin ^3 \alpha \cos ^2 \phi d \alpha d \phi=\frac{4 \pi}{3} .\]
-
-<p>On the other hand, we have:
-\(d \alpha=d x^1 \wedge d x^2 \wedge d x^3\)
-and so</p>
-
-\[\int_{\Sigma} d \alpha=\int_{\Sigma} d  x^1 \wedge d x^2 \wedge d x^3=  \int_{0}^{2\pi} \int_{0}^{ \pi} 
-\int_{0}^{1} (r^2 \sin \phi) dr  d\alpha d\phi = \frac{4}{3} \pi\]
-
-<p>Hence we have showed that Generalized Stokes’ Theorem: 
-\(\int_{\Sigma} d \alpha=\int_{\partial \Sigma} \alpha\)</p>
-
-<p>works on a unit sphere.</p>
-
-<h1 id="greens-theorem-special-case">Green’s Theorem (Special Case)</h1>
-
-<p>Considering <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s Post</a>. We can approach the same problem using wedge products. If you haven’t read his post, the problem we are considering is:</p>
-
-\[\text { Area of } D=\iint_D d x d y=-\int_C y d x\]
-
-<p>First, consider: \(d\alpha=dy \wedge dx\). We can easily see that \(\alpha=ydx\)</p>
-
-\[\text { Area of } D=\iint_\Sigma d x \wedge d y=-\iint_\Sigma d y \wedge d x=-\iint_\Sigma d\alpha=-\int_{\partial \Sigma} \alpha=-\int_{\partial \Sigma} ydx\]
-
-<p>For the general case, using Generalized Stokes’ Theorem , we can consider:</p>
-
-\[\int_{\partial D} P d x+Q d y=\iint_{D}dP \wedge dx+dQ \wedge dy\]
-
-<p>As:</p>
-
-\[d P=\sum_{i=1}^n \frac{\partial P}{\partial x^i} d x^i\]
-
-<p>We have:</p>
-
-\[\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partial x} dx \wedge dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
-
-<p>So:</p>
-
-\[\int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
-
-<p>The astute reader can realized that this is Green’s Theorem - Stokes’ Theorem in 2D!</p>
-
-<h1 id="multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</h1>
-
-<p>This section is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Electromagnetism and Relativity Notes</a>:</p>
-
-<p>We will start from the results of cylindrical Coordinate System: Below I will compute the scale factors and the unit vectors, as a basic exercise.</p>
-
-<p>We know: \(\underline{r} = r \sin \theta \cos \phi \underline{e}_x + r \sin \theta \sin \phi \underline{e}_y + r \cos \theta \underline{e}_z\). Hence:</p>
-
-\[\begin{aligned}
-\frac{\partial \underline{r}}{\partial r} &amp;= \sin \theta \cos \phi \underline{e}_x + \sin \theta \sin \phi \underline{e}_y + \cos \theta \underline{e}_z \Rightarrow h_r = \left|\frac{\partial \underline{r}}{\partial r}\right| = 1 \\
-\frac{\partial \underline{r}}{\partial \theta} &amp;= r \cos \theta \cos \phi \underline{e}_x + r \cos \theta \sin \phi \underline{e}_y - r \sin \theta \underline{e}_z \Rightarrow h_\theta = \left|\frac{\partial \underline{r}}{\partial \theta}\right| = r \\
-\frac{\partial \underline{r}}{\partial \phi} &amp;= -r \sin \theta \sin \phi \underline{e}_x + r \sin \theta \cos \phi \underline{e}_y \Rightarrow h_\phi = \left|\frac{\partial \underline{r}}{\partial \phi}\right| = r \sin \theta
-\end{aligned}\]
-
-<p>Therefore, the unit vectors are:</p>
-
-\[\begin{aligned}
-&amp; \underline{e}_r=\sin \theta \cos \phi \underline{e}_x+\sin \theta \sin \phi \underline{e}_y+\cos \theta \underline{e}_z\\
-&amp; \underline{e}_\theta=\cos \theta \cos \phi \underline{e}_x+\cos \theta \sin \phi \underline{e}_y-\sin \theta \underline{e}_z \\
-&amp; \underline{e}_\phi=-\sin \phi \underline{e}_x+\cos \phi \underline{e}_y
-\end{aligned}\]
-
-<h2 id="divergence">Divergence:</h2>
-
-<p>In general, given the scale factors, we have:</p>
-
-\[\underline{\nabla} \cdot \underline{a}=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(a_1 h_2 h_3\right)+\frac{\partial}{\partial u_2}\left(a_2 h_3 h_1\right)+\frac{\partial}{\partial u_3}\left(a_3 h_1 h_2\right)\right\}\]
-
-<p>In our case of cylindrical coordinates, we have:</p>
-
-\[\begin{aligned}
-\underline{\nabla} \cdot \underline{a}(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta a_r\right)+\frac{\partial}{\partial \theta}\left(r \sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(r a_\phi\right)\right\} \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right)+\frac{1}{r \sin \theta}\left\{\frac{\partial}{\partial \theta}\left(\sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(a_\phi\right)\right\}
-\end{aligned}\]
-
-<h2 id="curl">Curl</h2>
-
-<p>For curl we have:</p>
-
-\[\underline{\nabla} \times \underline{a}=\frac{1}{h_1 h_2 h_3}\left|\begin{array}{ccc}
-h_1 \underline{e}_1 &amp; h_2 \underline{e}_2 &amp; h_3 \underline{e}_3 \\
-\frac{\partial}{\partial u_1} &amp; \frac{\partial}{\partial u_2} &amp; \frac{\partial}{\partial u_3} \\
-h_1 a_1 &amp; h_2 a_2 &amp; h_3 a_3
-\end{array}\right|\]
-
-<p>In the special case of spherical polars we have:
-\(\underline{\nabla} \times \underline{a}=\frac{1}{r^2 \sin \theta}\left|\begin{array}{ccc}
-\underline{e}_r &amp; r \underline{e}_\theta &amp; r \sin \theta \underline{e}_\phi \\
-\frac{\partial}{\partial r} &amp; \frac{\partial}{\partial \theta} &amp; \frac{\partial}{\partial \phi} \\
-a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
-\end{array}\right|\)</p>
-
-<h2 id="laplacian">Laplacian</h2>
-
-<p>As for the Laplacian (scalar field), we have:</p>
-
-\[\nabla^2 f=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(\frac{h_2 h_3}{h_1} \frac{\partial f}{\partial u_1}\right)+\frac{\partial}{\partial u_2}\left(\frac{h_3 h_1}{h_2} \frac{\partial f}{\partial u_2}\right)+\frac{\partial}{\partial u_3}\left(\frac{h_1 h_2}{h_3} \frac{\partial f}{\partial u_3}\right)\right\}\]
-
-<p>In the special case of spherical polars, we have:</p>
-
-\[\begin{aligned}
-\nabla^2 f(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta \frac{\partial f}{\partial r}\right)+\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial}{\partial \phi}\left(\frac{1}{\sin \theta} \frac{\partial f}{\partial \phi}\right)\right\} \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin ^2 \theta}\left\{\sin \theta \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial^2 f}{\partial \phi^2}\right\}
-\end{aligned}\]
-
-<h2 id="other-cases">Other cases</h2>
-
-<p>Left as an exercise for the reader!</p>
-
+<p>N-body problem is one of the most important problems in physics! (as bodies can be particles, planets, anything!) I am planning to do a supervised summer project with <a href="https://www.ph.ed.ac.uk/people/jenni-smillie">Dr Jenni Smillie</a>, focusing on three-body gravitational problems. I will provide an update on this in due course!</p>
 
         
       </section>
@@ -552,9 +436,7 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#calculus" class="page__taxonomy-item p-category" rel="tag">Calculus</a><span class="sep">, </span>
-    
-      <a href="/tags/#multivaribale" class="page__taxonomy-item p-category" rel="tag">Multivaribale</a>
+      <a href="/tags/#trans" class="page__taxonomy-item p-category" rel="tag">Trans</a>
     
     </span>
   </p>
@@ -564,7 +446,7 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-10-16T00:00:00+01:00">October 16, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-20T00:00:00+00:00">February 20, 2024</time></p>
 
       </footer>
 
@@ -573,23 +455,22 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Multivariable+Calculus%20https%3A%2F%2Fhenry-yip.github.io%2FEllipseArea%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Overview+of+the+Two-body+Problem%20https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FEllipseArea%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FEllipseArea%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
+      <a href="/Transformations/" class="pagination--pager" title="Tensor Transformations
 ">Previous</a>
     
     
-      <a href="/Transformations/" class="pagination--pager" title="Tensor Transformations
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -643,6 +524,51 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
 
 
     <p class="archive__item-excerpt" itemprop="description">Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Multivariable_Calc/" rel="permalink">Multivariable Calculus
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Statement
 
 </p>
   </article>
@@ -731,51 +657,6 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
 
 
     <p class="archive__item-excerpt" itemprop="description">This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/SmallPerbuations/" rel="permalink">Perturbations - A view on Classical Mechanics and Quantum Mechanics
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.
 
 </p>
   </article>
@@ -912,8 +793,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/EllipseArea/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/EllipseArea"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/SummerResearch/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/SummerResearch"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
