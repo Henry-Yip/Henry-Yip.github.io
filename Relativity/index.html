@@ -1,0 +1,892 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Leo Chow - Relativity | Henry Yip</title>
+<meta name="description" content="This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website.">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Leo Chow - Relativity">
+<meta property="og:url" content="https://henry-yip.github.io/Relativity/">
+
+
+  <meta property="og:description" content="This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-06-09T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/Relativity/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Leo Chow - Relativity</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Henry Yip’s Math Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Leo Chow - Relativity">
+    <meta itemprop="description" content="This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website.">
+    <meta itemprop="datePublished" content="2022-06-09T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/Relativity/" class="u-url" itemprop="url">Leo Chow - Relativity
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Leo Chow</h4></header>
+              <ul class="toc__menu"><li><a href="#relativity">Relativity</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This set of notes is from Leo Chow, a student in the University of Hong Kong, on special relativity. I have met him in person and he has personally permitted me to upload his blog in my website.</p>
+
+<h2 id="relativity">Relativity</h2>
+
+<p>Let’s take a look at the Lorentz factor:</p>
+
+\[\gamma_v=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\]
+
+<p>On the right hand side is a recurring structure in the theory of relativity - it shows up in formulae frequently enough for people to give it a symbol. The structure at first sight may seem quite unmotivated apart from students getting some Pythagorean feel from the squares and square root, and judging from the negativie sign that the denominator sould say something about shrinking.</p>
+
+<p>This blog is an attempt to add more intuition to the anatomy of \(\gamma\), and would suggest that an interpretation focusing on velocities instead of length allows for a more succinct and intuitive form for the Lorentz factor:</p>
+
+<p><img src="/assets/images/Leo-1.png" alt="A description of the image" srcset=" /assets/images/Leo-1.png 400w" /></p>
+
+\[\gamma_v=\sec\theta\]
+
+<ul>
+  <li>
+    <p><strong>Precursors: Speed of light and transverse distances are constant between inertial frames</strong></p>
+  </li>
+  <li>
+    <p><strong>Product: Time dilation factor is \(\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\)</strong></p>
+  </li>
+</ul>
+
+<p>(We are just revisiting the derivation of time dilation here, feel free to skip it)</p>
+
+<p>Consider a photon bouncing between two mirrors separated by \(l\), for an inertail frame moving at speed \(v\) perpendicular to \(l\), express the period of light clock \(t\) in terms of the period in the clock \(t\) in terms of the period in the clock’s rest frame \(t_o\).</p>
+
+<p>To keep things short, here’s a usual derivation of the time dilation factor:</p>
+
+\[\begin{gather}
+ct=\sqrt{(2l)^2+(vt)^2} \\
+(ct)^2-(vt)^2=(2l)^2 \\
+t^2=\frac{(2l)^2}{c^2-v^2}=\frac{(ct_o)^2}{c^2-v^2} \\
+t=\frac{ct_o}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-(\frac{v^2}{c^2})^2}}
+\end{gather}\]
+
+<p>and we get our time dilation factor \(\gamma\). (In line one, the LHS follows from the speed of light being constant, the RHS follows from tranverse distance being constant)</p>
+
+<p>With this, we can already interpret why Lorentz factor is the reverse projection factor \(\sec\theta\). All that the above proof is saying is that relative velocity adds to distance but not speed of light, so motion takes longer. That distance, being perpendicular to \(v\), is scaled up by the reverse projection factor \(\sec\theta\) - which can be expressed in terms of \(c\) and \(v\), by considering a similar triangle with sides consisting of velocities instead of lengths - so Lorentz factor is simply that.</p>
+
+<p>Noticing the similar triangle constructed with velocities instead, you probably get a hint that there exist an alternative view of the derivation using velocities instead of distances.</p>
+
+\[(\text{length, reverse projection)} \rightarrow \text{(velocity, projection)}\]
+
+<p>Let’s look at the following incorrect way of deriving the same thing:</p>
+
+<p><img src="/assets/images/Leo-2.png" alt="A description of the image" srcset=" /assets/images/Leo-2.png 400w" /></p>
+
+<p>To the observer, the clock is moving with speed \(v\), a component of \(c\) is used to provide the horizontal velocity to keep up with the clock, thus only the vertical component of \(c\) is used to transverse the distance \(2l\). (The vertical component is just \(c\) reduced by \(v\), i.e. \(\sqrt{c^2-v^2}\), or for a more speakable and conceptual formula, just read it as “the projection of \(c\) onto \(l\)” i.e. \(c\cos{\theta}\). We therefore obtain \(t\) much more elegantly,</p>
+
+\[t=\frac{2l}{\sqrt{c^2-v^2}}=\frac{t_o}{\sqrt{1-\frac{v^2}{c^2}}}\]
+
+<p>It seems to be a better derivation than method one, except it is wrong. (Well, if our method here was correct, why would literally all textbooks choose to use the more clumsy version of the derivation instead…)</p>
+
+<p>We resolve the velocity vertically, resolved the length of path vertically, take their ratio to get a time quantity, then somehow claim that this time quantity is indeed the time for the original motion (1). Where did we get wrong?</p>
+
+<p>For this, we would need to take a step back and ask the question: why can we resolve a motion into components? We can certainly resolve a motion, but what does that ratio of resolved quantities means? It is the duration in an imaginary situation where a photon is moving along a length of \(2l\) at speed \(\sqrt{c^2-v^2}\), but photons always travel at \(c\).</p>
+
+<p>But why did we get the correct result?</p>
+
+<p>When we do things this way, we are actually doing a Galilean transformation implicitly, to say we resolved the velocity vertically and claim that the time of journey remain unchanged is actually to shift into the light clock’s rest frame in a Galilean way. It still gives the correct Lorentz factor because Galilean transformation is an incorrect way to shift reference frames. So in some sense we are still in the observer’s frame, giving us the correct dilated time.</p>
+
+<p>Alternatively, you can say that the result is correct because we did a forbidden move twice, first is to reduce \(c\) (spatial part of Galilean transform), second is to say that the durations are equal (temporal part of Galilean transform).</p>
+
+<p><img src="/assets/images/Leo-3.png" alt="A description of the image" srcset="    /assets/resized/Leo-3-600x210.png 600w, /assets/images/Leo-3.png 713w" /></p>
+
+<p><strong>The problem is not with resolving components, the problem is with jumping to the conclusion that the time quantity obtained as the ratio of resolved quantities equals the time for the unresolved motion. To conclude that they are equal, we need to do a Galilean transformation, which is forbidden. Note the characteristic \(t'=t\) here</strong></p>
+
+<p>We would bump into similar problem if we avoid the above picture and consider instead the time for vertical position to reach its final value. (The difference is subtle but it’s there, a subtle attachment is made which, we will see, forces a detachment at another place.)</p>
+
+<p>At (1) we may be tempted to think that the time for the vertical position to reach its final value is of course the time for the position vector to reach its final value and so our method should be justified, just don’t interpret the physical meaning of the ratio as in the above.</p>
+
+<p>This is in fact true by definition. We can expect the event of position vector \(\bold{p}\) reaching its final value to be defined by all its components \(p_i\) reaching each final value. But then we get another problem, how we came to conclude that duration for vertically resolved motion \(t_y\) is given by the ratio \(\frac{L_y}{v_y}\), where \(L=2l\), when all we actually know is :</p>
+
+<p>\(t=\frac{\sqrt{{L_y}^2+{L_x}^2}}{\sqrt{{v_y}^2+{v_x}^2}}\) (path length over speed).</p>
+
+<p>See , now that we detached our “vertical time” \(t_y\) from the imaginary motion along \(L\), we need a Galilean transformation into the orginal frame to conclude \(t_y=\frac{L_y}{v_y}\), which already feels circular if not wrong.</p>
+
+\[t_y=t=\frac{\sqrt{{L_y}^2+{L_x}^2}}{\sqrt{{v_y}^2+{v_x}^2}}=\frac{\sqrt{{L_y}^2+{L_x}^2-(v_xt)^2}}{\sqrt{{v_y}^2+{v_x}^2-{v_x}^2}}=\frac{L_y}{v_y}\]
+
+<p>The first step follows from the temporal part of the transformation  \((t'=t)\),the third step follows from the spatial part \((x'=x-{v_x}t)\)</p>
+
+<p><img src="/assets/images/Leo-4.png" alt="A description of the image" srcset="    /assets/resized/Leo-4-600x186.png 600w, /assets/images/Leo-4.png 808w" /></p>
+
+<p>We took a forbidden move to step into an imaginary realm, calculate \(t\) there, then bring it back to the real world by doing another forbidden move. This is reminiscent of a recurring theme in math, consider well known examples like differentiation under the integral sign, Laplace transform or even matrix diagonalization (transform to eigen basis, do the transformation easily, return to original basis). They all have the look \(Q \wedge Q^{-1}\).</p>
+
+<p>In fact, even when people refuse to use the forbidden move, they are still implicitly doing it when rearranging the expression in method one to group \(t\) together on one side. It is just a matter of whether you are willing to interpret the algebra beyond the numerical values into physical meanings. Compare the two methods, you can see that they are just playing with the same triangle:</p>
+
+<p><img src="/assets/images/Leo-5.png" alt="A description of the image" srcset=" /assets/images/Leo-5.png 400w" /></p>
+
+<p>only that the triangle in method II is formed by thinking about how perspective shift subtract from velocities, instead of how it adds to displacement, the sides are scaled down by \(t\), \(t\) therefore only shows up in one of the side lengths, making the formula for Lorentz factor immediately obvious.</p>
+
+<p>By pretending that we could just project the velocity downwards onto the transverse, we immediately get the projection factor \({\gamma}^{-1}\) as \(\frac{\sqrt{c^2-v^2}}{c}\), because it is \(c\) reduced by \(v\) over original \(c\).</p>
+
+<p><strong>Side Notes:</strong></p>
+
+\[\gamma_v=\left[1-\left(\frac{c}{v}\right)^2 \right]^{-\frac{1}{2}}\]
+
+<p>Rewriting it just for fun, we can see how it is almost \(\frac{c}{v}\), its as though we constructed it by starting with the proportion \(\frac{c}{v}\), uncoiling it at layer ^-2, then just shove the shell \(s(x)=1-x\) into it as a wedge that stop the layers from collapsing back onto itself. It can act as a wedge because \(s\) does not commute with ^-2.</p>
+
+<p>I mention this because I was planning to in some future write about how a small change in the form of a differential equation relates to the resulting change in the form of its solution, you can see that this is some kind of meta-differentiation, and in that discussion this method of reconstruction will show up again. As a sneak peak for now, consider the solution of the logistic growth,</p>
+
+\[P=\frac{K}{(\frac{K-P_o}{P_o})e^{-rt}+1}\]
+
+<p>motivated by how similar the coefficient of the exponential looks compared to the larger structure outside, we flatten the expression to:</p>
+
+\[k(((k^{-1}P_o-1)e^{rt})^{-1}+1)^{-1}\]
+
+<p>and see that if the \(s(x)=x-1\) shell could commute with the \(e^{rt}\) and the ^-1 shell, the whole structure would collapse onto itself back to the exponential growth. An extra factor of \((1-\frac{P}{K})\) in the DE somehow opens up the solution \(P_oe^{rt}\) at various layers - \(KK^{-1}\), ^(-1) ^(-1), -1+1  —  then swap the order of operations in such a way that cannot be undone. The result is a knot.</p>
+
+\[\begin{gather}
+ P_oe^{rt} \\
+KK^{-1}P_oe^{rt} \\
+K\left[(K^{-1}P_oe^{rt})^{-1}\right]^{-1} \\
+K\left[(K^{-1}P_oe^{rt})^{-1}-1+1\right]^{-1} \\
+K\left\{\left[(K^{-1}P_o-1)e^{rt}\right]^{-1}+1\right\}^{-1}\\
+P=\frac{K}{(KP_o^{-1}-1)e^{-rt}+1}
+\end{gather}\]
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#1" class="page__taxonomy-item p-category" rel="tag">1</a><span class="sep">, </span>
+    
+      <a href="/tags/#astrophysics" class="page__taxonomy-item p-category" rel="tag">Astrophysics</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-06-09T00:00:00+01:00">June 9, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Leo+Chow+-+Relativity%20https%3A%2F%2Fhenry-yip.github.io%2FRelativity%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FRelativity%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FRelativity%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Numerical/" class="pagination--pager" title="Allison Lau - Numerical Methods
+">Previous</a>
+    
+    
+      <a href="/Physics/Astrophysics-1/" class="pagination--pager" title="PHYS08050 (Introductory Astrophysics) Course Notes
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ESRAProject/" rel="permalink">Water Slosh Behaviours
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/SummerResearch/" rel="permalink">Overview of the Two-body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here I will present the exact solution of the two body problem.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Transformations/" rel="permalink">Tensor Transformations
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Multivariable_Calc/" rel="permalink">Multivariable Calculus
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Statement
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'DRH1J5IXZJ',
+  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://henry-yip.github.io/Relativity/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Relativity"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://encompassing-hk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
