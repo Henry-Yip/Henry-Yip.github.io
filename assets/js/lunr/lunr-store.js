@@ -100,4 +100,10 @@ var store = [{
         "tags": ["Trans"],
         "url": "/SummerResearch/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Water Slosh Behaviours",
+        "excerpt":"Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model. Poster We gave a...","categories": [],
+        "tags": ["Trans"],
+        "url": "/ESRAProject/",
+        "teaser": "/assets/images/Teaser.png"
       }]

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Overview of the Two-body Problem | Henry Yip</title>
-<meta name="description" content="Here I will present the exact solution of the two body problem.">
+<!-- begin _includes/seo.html --><title>Water Slosh Behaviours | Henry Yip</title>
+<meta name="description" content="Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Overview of the Two-body Problem">
-<meta property="og:url" content="https://henry-yip.github.io/SummerResearch/">
+<meta property="og:title" content="Water Slosh Behaviours">
+<meta property="og:url" content="https://henry-yip.github.io/ESRAProject/">
 
 
-  <meta property="og:description" content="Here I will present the exact solution of the two body problem.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-02-20T00:00:00+00:00">
+  <meta property="og:description" content="Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-03-19T00:00:00+00:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/SummerResearch/">
+
+<link rel="canonical" href="https://henry-yip.github.io/ESRAProject/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Overview of the Two-body Problem</li>
+        <li class="current">Water Slosh Behaviours</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Overview of the Two-body Problem">
-    <meta itemprop="description" content="Here I will present the exact solution of the two body problem.">
-    <meta itemprop="datePublished" content="2024-02-20T00:00:00+00:00">
+    <meta itemprop="headline" content="Water Slosh Behaviours">
+    <meta itemprop="description" content="Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model.">
+    <meta itemprop="datePublished" content="2024-03-19T00:00:00+00:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/SummerResearch/" class="u-url" itemprop="url">Overview of the Two-body Problem
+            <a href="https://henry-yip.github.io/ESRAProject/" class="u-url" itemprop="url">Water Slosh Behaviours
 </a>
           </h1>
           
@@ -368,58 +368,19 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#definition-of-terms">Definition of terms</a><ul><li><a href="#how-does-the-center-of-mass-move">How does the center of mass move?</a></li></ul></li><li><a href="#solving-the-system">Solving the System</a></li><li><a href="#concluding-remarks">Concluding Remarks</a></li></ul>
+              <ul class="toc__menu"><li><a href="#poster">Poster</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here I will present the exact solution of the two body problem.</p>
+        <p>Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model.</p>
 
-<h2 id="definition-of-terms">Definition of terms</h2>
+<h2 id="poster">Poster</h2>
+<p>We gave a presentation on the project in a conference. The poster for the conference is downloadable <a href="https://henry-yip.github.io/assets/ESRA_Project.pdf">HERE</a></p>
 
-<p>First we define the center of mass coordinate:</p>
+<h2 id="credits">Credits</h2>
+<p>We thank Patrick Truong, Gregory Barbanel and Abdullah Fouzuddeen for their efforts and contribution. We thank Edinburgh Scientific Researchers Association for their support.</p>
 
-\[\underline{R}=\frac{m_1 \underline{r_1}+m_2 \underline{r_2}}{m_1+m_2}\]
-
-<p>Now we notice that:</p>
-
-\[\underline{P}=(m_1+m_2)\dot{R}\]
-
-<h3 id="how-does-the-center-of-mass-move">How does the center of mass move?</h3>
-
-<p>As total momentum is conserved (due to homogenity of space, see <a href="/Conservations/">my post on Noether’s Theorem</a>), we have (in scalars) \(\dot{R}=\frac{P}{m_1+m_2}\). As this is the slope of \(R\), we have:</p>
-
-\[\underline{R}(t)=\underline{R}(0)+\frac{\underline{P}}{m_1+m_2} t\]
-
-<p>Therefore Center-of-Mass is always on a straight line with constant velocity!</p>
-
-<h2 id="solving-the-system">Solving the System</h2>
-
-<p>Now consider \(\underline{r_1}+\underline{r_2}=\underline{R}\). By putting into the expression of \(\underline{R}\), we obtain:</p>
-
-\[\underline{r}_1=\underline{R}+\frac{m_2}{m_1+m_2} \underline{r}\]
-
-<p>Further differentiating yields:</p>
-
-\[\underline{\ddot{r}}_1=\frac{m_2}{m_1+m_2}{\underline{\ddot{r}}}\]
-
-<p>Hence we have:</p>
-
-\[\frac{m_1 m_2}{m_1+m_2} {\underline{\ddot{r}}}=m_1 {\underline{\ddot{r}}}_1=-\underline{\nabla}_1 V\left(\underline{r}_1-\underline{r}_2\right)=-\underline{\nabla} V(\underline{r})\]
-
-<p>Leading to:</p>
-
-\[m {\underline{\ddot{r}}}=-\underline{\nabla} V(\underline{r})\]
-
-<p>Where</p>
-
-\[m \equiv \frac{m_1 m_2}{m_1+m_2}\]
-
-<p>is named the <em>reduced mass</em>. It is a very important concept in celestial body calculations!</p>
-
-<h2 id="concluding-remarks">Concluding Remarks</h2>
-
-<p>N-body problem is one of the most important problems in physics! (as bodies can be particles, planets, anything!) I am planning to do a supervised summer project with <a href="https://www.ph.ed.ac.uk/people/jenni-smillie">Dr Jenni Smillie</a>, focusing on three-body gravitational problems. I will provide an update on this in due course!</p>
 
         
       </section>
@@ -446,7 +407,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-20T00:00:00+00:00">February 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-19T00:00:00+00:00">March 19, 2024</time></p>
 
       </footer>
 
@@ -455,23 +416,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Overview+of+the+Two-body+Problem%20https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Water+Slosh+Behaviours%20https%3A%2F%2Fhenry-yip.github.io%2FESRAProject%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FESRAProject%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSummerResearch%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FESRAProject%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Transformations/" class="pagination--pager" title="Tensor Transformations
+      <a href="/SummerResearch/" class="pagination--pager" title="Overview of the Two-body Problem
 ">Previous</a>
     
     
-      <a href="/ESRAProject/" class="pagination--pager" title="Water Slosh Behaviours
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -499,7 +459,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/ESRAProject/" rel="permalink">Water Slosh Behaviours
+        <a href="/SummerResearch/" rel="permalink">Overview of the Two-body Problem
 </a>
       
     </h2>
@@ -524,7 +484,9 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
+    <p class="archive__item-excerpt" itemprop="description">Here I will present the exact solution of the two body problem.
+
+</p>
   </article>
 </div>
 
@@ -792,8 +754,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/SummerResearch/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/SummerResearch"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/ESRAProject/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ESRAProject"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
