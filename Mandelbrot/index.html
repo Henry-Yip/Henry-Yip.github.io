@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#code">Code</a></li></ul>
 
             </nav>
           </aside>
@@ -381,36 +381,53 @@
 
 <p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration.</p>
 
-<p>Furthermore, define 
-\(n_{\text{max}}\) as the largest \(k\) such that \(|f_c^k(z)| &lt; R\), for any large enough \(R\), say \(1000\) (as below).</p>
+<p>Furthermore, define</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(n_{\text{max}}\) as the largest \(k\) such that $$</td>
+      <td>f_c^k(z)</td>
+      <td>&lt; R\(, for any large enough\)R\(, say\)1000$$ (as below).</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>In our case, \(z=0\).</p>
 
 <p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_\text{max}=\infty\)</p>
 
-<p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\)</p>
+<p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
 
 <p>We thus obtain the Mandelbrot Set:</p>
 
 <p><img src="/assets/images/Mandelbrot_Set.png" alt="" srcset="    /assets/resized/Mandelbrot_Set-600x450.png 600w, /assets/images/Mandelbrot_Set.png 640w" /></p>
 
+<p>Notice that the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
+
+<p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture.</p>
+
 <h2 id="connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</h2>
 
-<p>We can colour Julia Sets using a similar method as above: For each \(c\), find the \(n_\text{Max}\) for each \(z\).</p>
+<p>We can colour Julia Sets using a similar method as above: For a fixed \(c\), find the \(n_\text{max}\) for each \(z\). For a higher \(n_\text{Max}\), denote it with, say, a lighter colour (as long as the colour is different it is ok!)</p>
 
 <p><img src="/assets/images/Julia_Set.png" alt="" srcset="    /assets/resized/Julia_Set-600x485.png 600w, /assets/images/Julia_Set.png 1117w" /></p>
 
 <h2 id="dichotomy-theorem">Dichotomy theorem</h2>
 
-<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. From the image above, it is connected, so the corresponding \(c\) (which is \(i\)) is in the Mandelbrot Set.</p>
+<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. From the image above, it is connected, so the corresponding \(c\) (which is \(0.9i\)) is in the Mandelbrot Set.</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Filled-in Julia Sets: Given \(c\), find behaviour of \(z\)</p>
+<p>Filled-in Julia Sets: Given \(c\), find behaviour of \(z\).</p>
 
-<p>Mandelbrot Sets: Given \(z\), find behaviour of \(c\)</p>
+<p>Mandelbrot Sets: Given \(z\), find behaviour of \(c\).</p>
 
-<p>They are connected by the Dichotomy Theorem</p>
+<p>They are connected by the Dichotomy Theorem.</p>
+
+<h2 id="code">Code</h2>
+
+<p>Given the pseudocodes in wikipedia, it is very easy to plot in python.</p>
 
         
       </section>
