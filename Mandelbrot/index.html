@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Mandelbrot Set | Henry Yip</title>
+<!-- begin _includes/seo.html --><title>Julia Sets and the Mandelbrot Set | Henry Yip</title>
 <meta name="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Mandelbrot Set">
+<meta property="og:title" content="Julia Sets and the Mandelbrot Set">
 <meta property="og:url" content="https://henry-yip.github.io/Mandelbrot/">
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Mandelbrot Set</li>
+        <li class="current">Julia Sets and the Mandelbrot Set</li>
       
     
   </ol>
@@ -327,7 +327,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Mandelbrot Set">
+    <meta itemprop="headline" content="Julia Sets and the Mandelbrot Set">
     <meta itemprop="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
     <meta itemprop="datePublished" content="2024-03-31T00:00:00+00:00">
     
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Mandelbrot/" class="u-url" itemprop="url">Mandelbrot Set
+            <a href="https://henry-yip.github.io/Mandelbrot/" class="u-url" itemprop="url">Julia Sets and the Mandelbrot Set
 </a>
           </h1>
           
@@ -375,19 +375,15 @@
         
         <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
 
-<p>Consider the set \(K_c\), which is also known as the Filled-in Julia Set:</p>
+<p>Consider the function: \(f_c: z \mapsto z^2+c\). \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
 
 \[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
 
 <p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration.</p>
 
-<p>Furthermore, define</p>
+<p>Furthermore, define \(n_{\text{max}}\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
 
-<p>\(n_{\text{max}}\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
-
-<p>In our case, \(z=0\).</p>
-
-<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_\text{max}=\infty\)</p>
+<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_\text{max}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
 
 <p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
 
@@ -395,19 +391,19 @@
 
 <p><img src="/assets/images/Mandelbrot_Set.png" alt="" srcset="    /assets/resized/Mandelbrot_Set-600x450.png 600w, /assets/images/Mandelbrot_Set.png 640w" /></p>
 
-<p>Notice that the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
+<p>Notice that the boundary of the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
 
 <p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture.</p>
 
 <h2 id="connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</h2>
 
-<p>We can colour Julia Sets using a similar method as above: For a fixed \(c\), find the \(n_\text{max}\) for each \(z\). For a higher \(n_\text{Max}\), denote it with, say, a lighter colour (as long as the colour is different it is ok!)</p>
+<p>We can colour Julia Sets using a similar method as above: For a fixed \(c\), find the \(n_\text{max}\) for each \(z\). For a higher \(n_\text{max}\), denote it with, say, a lighter colour (as long as the colour is contrast is large enough)</p>
 
 <p><img src="/assets/images/Julia_Set.png" alt="" srcset="    /assets/resized/Julia_Set-600x485.png 600w, /assets/images/Julia_Set.png 1117w" /></p>
 
 <h2 id="dichotomy-theorem">Dichotomy theorem</h2>
 
-<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. Observe the image above. As it is connected, the corresponding \(c\) (which is \(0.9i\)) is in the Mandelbrot Set (we can observe this in Figure 1!)</p>
+<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. Observe the image above. As it is not connected, the corresponding \(c\) (which is \(0.9i\)) is not in the Mandelbrot Set! (we can observe this in Figure 1).</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -454,7 +450,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Mandelbrot+Set%20https%3A%2F%2Fhenry-yip.github.io%2FMandelbrot%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Julia+Sets+and+the+Mandelbrot+Set%20https%3A%2F%2Fhenry-yip.github.io%2FMandelbrot%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMandelbrot%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 

@@ -107,8 +107,8 @@ var store = [{
         "url": "/ESRAProject/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Mandelbrot Set",
-        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. Consider the set \\(K_c\\), which is also known as the Filled-in Julia Set: \\[K_c=\\left\\{z \\in \\mathbb{C} \\mid\\left(f_c^n(z)\\right)_{n \\in \\mathbb{N}}, \\text { is bounded}\\right\\}.\\] Where \\(f_c^n(z)\\) denotes the \\(n^{\\text {th}}\\) iteration. Furthermore, define \\(n_{\\text{max}}\\) as the largest \\(k\\)...","categories": [],
+        "title": "Julia Sets and the Mandelbrot Set",
+        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. Consider the function: \\(f_c: z \\mapsto z^2+c\\). \\(K_c\\), which is also known as the Filled-in Julia Set, is the set of \\(z\\) which are non-escaping under continuous iterations of \\(f_c\\). In other words: \\[K_c=\\left\\{z \\in \\mathbb{C} \\mid\\left(f_c^n(z)\\right)_{n...","categories": [],
         "tags": ["Trans"],
         "url": "/Mandelbrot/",
         "teaser": "/assets/images/Teaser.png"
