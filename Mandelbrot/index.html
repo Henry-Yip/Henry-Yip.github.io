@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          1 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#code">Code</a></li></ul>
+              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
 
             </nav>
           </aside>
@@ -435,89 +435,6 @@
   </tbody>
 </table>
 
-<h2 id="code">Code</h2>
-
-<p>Given the pseudocodes in wikipedia, it is very easy to plot in python. This is the code for my Julia Set:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
-<span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="nf">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
-
-<span class="k">def</span> <span class="nf">julia</span><span class="p">(</span><span class="n">zx</span><span class="p">,</span> <span class="n">zy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="n">max_iteration</span><span class="p">):</span>
-     <span class="s2">"""
-     Parameters
-     ----------
-     zx : Refers to real part of the point z we are considering
-     zy : Refers to imaginary part of z
-     cx : Refers to real part of the constant
-     cy : Refers to imaginary part of the constant
-     R : Defined in the report above
-     max_iteration : To reduce computational time It is more accurate for a higher iteration number
-     ---------
-     Returns:
-     iteration: Number of iterations, i.e. n_max above
-     iteration_points: The final position of zx and zy (This is not used in the code but I have it in case I need to plot the iteraiton points)
-     ----------
-     """</span>
-     
-     <span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
-        
-     <span class="n">iteration_points</span> <span class="o">=</span> <span class="p">[(</span><span class="n">zx</span><span class="p">,</span> <span class="n">zy</span><span class="p">)]</span>
-    
-     <span class="k">while</span> <span class="n">zx</span> <span class="o">*</span> <span class="n">zx</span> <span class="o">+</span> <span class="n">zy</span> <span class="o">*</span> <span class="n">zy</span> <span class="o">&lt;</span> <span class="no">R</span> <span class="o">*</span> <span class="no">R</span> <span class="n">and</span> <span class="n">iteration</span> <span class="o">&lt;</span> <span class="ss">max_iteration:
-            
-            </span><span class="n">xtemp</span> <span class="o">=</span> <span class="n">zx</span> <span class="o">*</span> <span class="n">zx</span> <span class="o">-</span> <span class="n">zy</span> <span class="o">*</span> <span class="n">zy</span>
-            <span class="n">zy</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">zx</span> <span class="o">*</span> <span class="n">zy</span> <span class="o">+</span> <span class="n">cy</span>
-            <span class="n">zx</span> <span class="o">=</span> <span class="n">xtemp</span> <span class="o">+</span> <span class="n">cx</span>
-            <span class="n">iteration_points</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">zx</span><span class="p">,</span> <span class="n">zy</span><span class="p">))</span>
-            <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-     <span class="k">if</span> <span class="n">iteration</span> <span class="o">==</span> <span class="ss">max_iteration:
-            </span><span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="n">iteration_points</span>
-     <span class="ss">else:
-            </span><span class="k">return</span> <span class="n">iteration</span><span class="p">,</span> <span class="n">iteration_points</span>
-
-<span class="k">def</span> <span class="nf">generate_julia</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="n">max_iteration</span><span class="p">):</span>
-    <span class="s2">"""
-    Generates a julia set containing the maximum iteration for each zx, zy for a given cx, cy
-    """</span>
-        
-    <span class="n">julia_set</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">zeros</span><span class="p">((</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">))</span>
-
-    <span class="k">for</span> <span class="n">x</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">width</span><span class="p">):</span>
-        
-        <span class="k">for</span> <span class="n">y</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">height</span><span class="p">):</span>
-            
-            <span class="n">zx</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="no">R</span> <span class="o">/</span> <span class="n">width</span><span class="p">)</span>  <span class="c1"># Scale x coordinate to be between -R and R</span>
-            <span class="n">zy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="no">R</span> <span class="o">/</span> <span class="n">height</span><span class="p">)</span>  <span class="c1"># Scale y coordinate to be between -R and R</span>
-            <span class="n">julia_set</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">_</span> <span class="o">=</span> <span class="n">julia</span><span class="p">(</span><span class="n">zx</span><span class="p">,</span> <span class="n">zy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="n">max_iteration</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">julia_set</span>
-
-
-<span class="n">width</span> <span class="o">=</span> <span class="mi">800</span>
-<span class="n">height</span> <span class="o">=</span> <span class="mi">800</span>
-<span class="c1"># Real part of c</span>
-<span class="n">cx</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># Imaginary part of c</span>
-<span class="n">cy</span> <span class="o">=</span> <span class="mf">0.9</span>
-
-<span class="c1"># R as defined above</span>
-<span class="no">R</span> <span class="o">=</span> <span class="mi">2</span>   
-
-<span class="n">max_iteration</span> <span class="o">=</span> <span class="mi">1000</span>
-
-<span class="c1"># Generate Julia set</span>
-<span class="n">julia_set</span> <span class="o">=</span> <span class="n">generate_julia</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="n">max_iteration</span><span class="p">)</span>
-
-<span class="c1"># Plot Julia set with a colour scale</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">imshow</span><span class="p">(</span><span class="n">julia_set</span><span class="o">.</span><span class="no">T</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">'hot'</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="no">R</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="o">-</span><span class="no">R</span><span class="p">,</span> <span class="no">R</span><span class="p">))</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">'Iteration'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="s2">"Julia Set for z = {} + {}i, R= {}, Max Iterations {}"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="no">R</span><span class="p">,</span> <span class="n">max_iteration</span><span class="p">))</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="s1">'Real'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="s1">'Imaginary'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span></code></pre></figure>
 
         
       </section>
