@@ -375,7 +375,9 @@
         
         <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
 
-<p>Consider the function: \(f_c: z \mapsto z^2+c\). \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
+<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\).</p>
+
+<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
 
 \[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
 
@@ -383,7 +385,7 @@
 
 <p>Furthermore, define \(n_{\text{max}}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
 
-<p>We are concerned with whether \(0 \in K_c\) , which means whether \(n_\text{max}(z)=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
+<p>We are concerned with whether \(0 \in K_c\) , which means whether \(n_\text{max}(z)=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\)).</p>
 
 <p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
 
@@ -411,7 +413,7 @@
 
 <p>Filled-in Julia Sets: Given \(c\) (defined each time), find behaviour of \(z\) (upon continuous iterations of \(f_c\)).</p>
 
-<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\). (Whether the value of \(c\) will make \(z\) escape or not).</p>
+<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\). (Whether the value of \(c\) will make \(z=0\) escape or not).</p>
 
 <p>The two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected).</p>
 
