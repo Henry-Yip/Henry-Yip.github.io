@@ -112,4 +112,10 @@ var store = [{
         "tags": ["Trans"],
         "url": "/Mandelbrot/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Where does Momentum arise from?",
+        "excerpt":"Since High School I was fascinated by the fact that momentum is simply a derivative of kinetic energy. I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics. By Lagrangian Dynmaics, we know the equation of motion of an object is given by \\[\\frac{d}{dt}\\left(\\frac{\\partial...","categories": [],
+        "tags": ["Trans"],
+        "url": "/Momentum/",
+        "teaser": "/assets/images/Teaser.png"
       }]
