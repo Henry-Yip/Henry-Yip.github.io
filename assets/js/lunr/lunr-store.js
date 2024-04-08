@@ -108,7 +108,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Julia Sets and the Mandelbrot Set",
-        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. In this article we consider the function: \\(f_c: z \\mapsto z^2+c\\). We then define \\(K_c\\), which is also known as the Filled-in Julia Set, is the set of \\(z\\) which are non-escaping under continuous iterations of \\(f_c\\)....","categories": [],
+        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. Consider the function: \\(f_c: z \\mapsto z^2+c\\). \\(K_c\\), which is also known as the Filled-in Julia Set, is the set of \\(z\\) which are non-escaping under continuous iterations of \\(f_c\\). In other words: \\[K_c=\\left\\{z \\in \\mathbb{C} \\mid\\left(f_c^n(z)\\right)_{n...","categories": [],
         "tags": ["Trans"],
         "url": "/Mandelbrot/",
         "teaser": "/assets/images/Teaser.png"
