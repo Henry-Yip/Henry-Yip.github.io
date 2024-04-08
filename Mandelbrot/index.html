@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -375,13 +375,15 @@
         
         <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
 
-<p>Consider the function: \(f_c: z \mapsto z^2+c\). \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
+<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\).</p>
+
+<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
 
 \[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
 
 <p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration.</p>
 
-<p>Furthermore, define \(n_{\text{max}}\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
+<p>Furthermore, define \(n_{\text{max}}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
 
 <p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_\text{max}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
 
@@ -393,7 +395,9 @@
 
 <p>Notice that the boundary of the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
 
-<p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture.</p>
+<p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture, which states that the Mandelbrot set is locally connected.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b005iHf8Z3g?si=aojjMnsA4MLepXHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
 <h2 id="connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</h2>
 
@@ -407,13 +411,11 @@
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Filled-in Julia Sets: Given \(c\) (defined each time), find behaviour of \(z\).</p>
+<p>Filled-in Julia Sets: Given \(c\) (defined each time), find behaviour of \(z\) (upon continuous iterations of \(f_c\)).</p>
 
-<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\).</p>
+<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\). (Whether the value of \(c\) will make \(z=0\) escape or not).</p>
 
-<p>There are hence infinitely many Filled-in Julia Sets and one unique Mandelbrot set.</p>
-
-<p>Finally, the two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected.)</p>
+<p>The two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected).</p>
 
 
         
