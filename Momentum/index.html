@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Where does Momentum arise from? | Henry Yip</title>
-<meta name="description" content="Since High School I have been fascinated by the fact that momentum is simply the derivative of kinetic energy. I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
+<meta name="description" content="Since High School I have been fascinated by the fact that momentum (in the language of HKDSE Physics, \(p=mv\)), is simply the derivative of kinetic energy (\(\frac{1}{2}mv^2\)). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
 
 
   <meta name="author" content="Henry Yip ">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Momentum/">
 
 
-  <meta property="og:description" content="Since High School I have been fascinated by the fact that momentum is simply the derivative of kinetic energy. I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
+  <meta property="og:description" content="Since High School I have been fascinated by the fact that momentum (in the language of HKDSE Physics, \(p=mv\)), is simply the derivative of kinetic energy (\(\frac{1}{2}mv^2\)). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
 
 
 
@@ -328,7 +328,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Where does Momentum arise from?">
-    <meta itemprop="description" content="Since High School I have been fascinated by the fact that momentum is simply the derivative of kinetic energy. I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
+    <meta itemprop="description" content="Since High School I have been fascinated by the fact that momentum (in the language of HKDSE Physics, \(p=mv\)), is simply the derivative of kinetic energy (\(\frac{1}{2}mv^2\)). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
     <meta itemprop="datePublished" content="2024-04-08T00:00:00+01:00">
     
 
@@ -373,23 +373,24 @@
             </nav>
           </aside>
         
-        <p>Since High School I have been fascinated by the fact that momentum is simply the derivative of kinetic energy. I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).</p>
+        <p>Since High School I have been fascinated by the fact that momentum (in the language of HKDSE Physics, \(p=mv\)), is simply the derivative of kinetic energy (\(\frac{1}{2}mv^2\)). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).</p>
 
 <p>By Lagrangian Dynamics, we know the equation of motion of an object is given by</p>
 
 \[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}}\right) = \frac{\partial \mathcal{L}}{\partial q}\]
 
-<p>where \(L=T-V\). Notice if the right hand side is equal to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q}=0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}}\right)=0\), which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}}\) is a constant.</p>
+<p>where \(\mathcal{L}=T-V\). Equating the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q}=0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}}\right)=0\), which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}}\) is a constant.</p>
 
-<p>This appears to be a constant in our equation of motion. What exactly is it?</p>
+<p>What exactly is the “freedom” in the system? Let’s consider a simple case:
+Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Without loss of generality, take \(x\) as the generalized coordinate (it is the only coordinate here). After manipulations we obtain \(m \dot{x}\) is a constant!</p>
 
-<p>Now set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Take \(x\) as the generalized coordinate (it is the only coordinate here), we arrive at \(m \dot{x}\) being a constant!</p>
+<p>As \(v=\dot{x}\)his is exactly the linear momentum of a system. This is known to be conserved in HKDSE syllabus! (As we mentioned that energy does not necessarily conserve in a system but the momentum always conserve).</p>
 
-<p>This is exactly the linear momentum of a system, which is known to be conserved due to Noether’s Theorem!</p>
+<p>This is expected to be true due to Noether’s Theorem, which states that every symmetry will  lead to a conservation, <a href="/Conservations/">which is explained here.</a></p>
 
-<p>Therefore, the energy of a system being independent of position arises a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate. It is not conserved if the energy term involves spatial coordinates, say in the presence of electromagnetic waves!</p>
+<p>Therefore, the energy of a system being independent of position (lack of \(x\) in expression, while \(\dot{x}\) is present) causes a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate (\(x\) in our case). Momentum is not conserved if the energy term involves spatial coordinates, say in a particle is in the presence of electromagnetic force.</p>
 
-<p>Side note: The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - L\). The reader can show that this corresponds to the energy of the system, which is \(T\)!</p>
+<p>Side note: The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - L\). The reader can show that this corresponds to the energy of the system, which is \(T\)! More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function!)</p>
 
         
       </section>
