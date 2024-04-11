@@ -114,7 +114,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Where does Momentum arise from?",
-        "excerpt":"Since High School I have been fascinated by the fact that momentum (in the language of HKDSE Physics, \\(p=mv\\)), is simply the derivative of kinetic energy (\\(\\frac{1}{2}mv^2\\)). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations)....","categories": [],
+        "excerpt":"Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \\(p=mv\\), is simply the derivative of kinetic energy, \\(\\frac{1}{2}mv^2\\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of...","categories": [],
         "tags": ["Trans"],
         "url": "/Momentum/",
         "teaser": "/assets/images/Teaser.png"
