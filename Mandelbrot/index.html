@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2024-03-31T00:00:00+00:00">
+  <meta property="article:published_time" content="2024-03-31T00:00:00+08:00">
 
 
 
@@ -329,7 +329,7 @@
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Julia Sets and the Mandelbrot Set">
     <meta itemprop="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
-    <meta itemprop="datePublished" content="2024-03-31T00:00:00+00:00">
+    <meta itemprop="datePublished" content="2024-03-31T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
@@ -368,24 +368,24 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#exercises-for-the-readers">Exercises for the Readers</a></li></ul>
 
             </nav>
           </aside>
         
         <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
 
-<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\).</p>
+<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\), where \(c\) is a constant.</p>
 
-<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, is the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
+<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, as the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
 
 \[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
 
-<p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration.</p>
+<p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration of the function \(f_c\) on \(z\).</p>
 
-<p>Furthermore, define \(n_{\text{max}}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\), for any large enough \(R\), say \(1000\) (as below).</p>
+<p>Furthermore, define \(n_{\text{max}, R}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\) (In the graphs below, we take \(R=1000\)).</p>
 
-<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_\text{max}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
+<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_{\text{max}, R}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
 
 <p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
 
@@ -417,6 +417,11 @@
 
 <p>The two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected).</p>
 
+<h2 id="exercises-for-the-readers">Exercises for the Readers</h2>
+<ul>
+  <li>Write a python code that plots the Mandelbrot set, and the Julia set. (Difficulty: University Year 1)</li>
+  <li>Defining \(T=\left\{\left(x, \sin \frac{1}{x}\right): x \in(0,1]\right\} \cup\{(0,0)\}\), show that it is connected but not locally connected. Show the relation of \(T\) to the Mandelbrot set. (Difficultly: University Year 2-3)</li>
+</ul>
 
         
       </section>
@@ -443,7 +448,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-31T00:00:00+00:00">March 31, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-31T00:00:00+08:00">March 31, 2024</time></p>
 
       </footer>
 
@@ -463,11 +468,11 @@
       
   <nav class="pagination">
     
-      <a href="/ESRAProject/" class="pagination--pager" title="Water Slosh Behaviours
+      <a href="/ESRAProject/" class="pagination--pager" title="Self-Initiated Reserach Group Project
 ">Previous</a>
     
     
-      <a href="/Momentum/" class="pagination--pager" title="Where does Momentum arise from?
+      <a href="/Momentum/" class="pagination--pager" title="Why is Momentum Conserved?
 ">Next</a>
     
   </nav>
@@ -496,7 +501,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Momentum/" rel="permalink">Where does Momentum arise from?
+        <a href="/Momentum/" rel="permalink">Why is Momentum Conserved?
 </a>
       
     </h2>
@@ -514,14 +519,17 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, ...</p>
+    <p class="archive__item-excerpt" itemprop="description">In this article we explore the conservation of momentum using Lagrangian Dynamics.
+Momentum in Physics
+
+</p>
   </article>
 </div>
 
@@ -539,7 +547,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/ESRAProject/" rel="permalink">Water Slosh Behaviours
+        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
 </a>
       
     </h2>
@@ -600,7 +608,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     

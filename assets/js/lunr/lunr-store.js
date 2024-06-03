@@ -96,25 +96,25 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Overview of the Two-body Problem",
-        "excerpt":"Here I will present the exact solution of the two body problem. Definition of terms First we define the center of mass coordinate: \\[\\underline{R}=\\frac{m_1 \\underline{r_1}+m_2 \\underline{r_2}}{m_1+m_2}\\] Now we notice that: \\[\\underline{P}=(m_1+m_2)\\dot{R}\\] How does the center of mass move? As total momentum is conserved (due to homogenity of space, see my...","categories": [],
+        "excerpt":"Here I will present the exact solution of the two body problem. Definition of terms First we define the center of mass coordinate, \\(R\\): \\[\\underline{R}=\\frac{m_1 \\underline{r_1}+m_2 \\underline{r_2}}{m_1+m_2}\\] As \\(m_1\\) and \\(m_2\\) are invariant, we can express \\(P\\), the total momentum, in terms of \\(\\dot{R}\\): \\[\\underline{P}=(m_1+m_2)\\dot{R}\\] How does the center of...","categories": [],
         "tags": ["Trans"],
         "url": "/SummerResearch/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Water Slosh Behaviours",
+        "title": "Self-Initiated Reserach Group Project",
         "excerpt":"Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model. Poster We gave a...","categories": [],
         "tags": ["Trans"],
         "url": "/ESRAProject/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Julia Sets and the Mandelbrot Set",
-        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. In this article we consider the function: \\(f_c: z \\mapsto z^2+c\\). We then define \\(K_c\\), which is also known as the Filled-in Julia Set, is the set of \\(z\\) which are non-escaping under continuous iterations of \\(f_c\\)....","categories": [],
+        "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. In this article we consider the function: \\(f_c: z \\mapsto z^2+c\\), where \\(c\\) is a constant. We then define \\(K_c\\), which is also known as the Filled-in Julia Set, as the set of \\(z\\) which are non-escaping...","categories": [],
         "tags": ["Trans"],
         "url": "/Mandelbrot/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Where does Momentum arise from?",
-        "excerpt":"Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \\(p=mv\\), is simply the derivative of kinetic energy, \\(\\frac{1}{2}mv^2\\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of...","categories": [],
+        "title": "Why is Momentum Conserved?",
+        "excerpt":"In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics Momentum is defined by \\(p=mv\\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force. In an inertial frame, momentum is a conserved quantity, meaning that it is not affected...","categories": [],
         "tags": ["Trans"],
         "url": "/Momentum/",
         "teaser": "/assets/images/Teaser.png"

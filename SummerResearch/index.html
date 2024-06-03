@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2024-02-20T00:00:00+00:00">
+  <meta property="article:published_time" content="2024-02-20T00:00:00+08:00">
 
 
 
@@ -329,7 +329,7 @@
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Overview of the Two-body Problem">
     <meta itemprop="description" content="Here I will present the exact solution of the two body problem.">
-    <meta itemprop="datePublished" content="2024-02-20T00:00:00+00:00">
+    <meta itemprop="datePublished" content="2024-02-20T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#definition-of-terms">Definition of terms</a><ul><li><a href="#how-does-the-center-of-mass-move">How does the center of mass move?</a></li></ul></li><li><a href="#solving-the-system">Solving the System</a></li><li><a href="#concluding-remarks">Concluding Remarks</a></li></ul>
+              <ul class="toc__menu"><li><a href="#definition-of-terms">Definition of terms</a><ul><li><a href="#how-does-the-center-of-mass-move">How does the center of mass move?</a></li></ul></li><li><a href="#solving-the-system">Solving the System</a></li><li><a href="#concluding-remarks">Concluding Remarks</a></li><li><a href="#exercises-for-the-reader">Exercises for the Reader</a></li></ul>
 
             </nav>
           </aside>
@@ -377,25 +377,29 @@
 
 <h2 id="definition-of-terms">Definition of terms</h2>
 
-<p>First we define the center of mass coordinate:</p>
+<p>First we define the center of mass coordinate, \(R\):</p>
 
 \[\underline{R}=\frac{m_1 \underline{r_1}+m_2 \underline{r_2}}{m_1+m_2}\]
 
-<p>Now we notice that:</p>
+<p>As \(m_1\) and \(m_2\) are invariant, we can express \(P\), the total momentum, in terms of \(\dot{R}\):</p>
 
 \[\underline{P}=(m_1+m_2)\dot{R}\]
 
 <h3 id="how-does-the-center-of-mass-move">How does the center of mass move?</h3>
 
-<p>As total momentum is conserved (due to homogenity of space, see <a href="/Conservations/">my post on Noether’s Theorem</a>), we have (in scalars) \(\dot{R}=\frac{P}{m_1+m_2}\). As this is the slope of \(R\), we have:</p>
+<p>As total momentum is conserved, we have (in scalars) \(\dot{R}=\frac{P}{m_1+m_2}\).</p>
 
-\[\underline{R}(t)=\underline{R}(0)+\frac{\underline{P}}{m_1+m_2} t\]
+<p>Hence, we have</p>
+
+\[\underline{R}(t)=\underline{R}(0)+\frac{\underline{P}}{m_1+m_2} t.\]
 
 <p>Therefore Center-of-Mass is always on a straight line with constant velocity!</p>
 
 <h2 id="solving-the-system">Solving the System</h2>
 
-<p>Now consider \(\underline{r_1}+\underline{r_2}=\underline{R}\). By putting into the expression of \(\underline{R}\), we obtain:</p>
+<p>Now we assume the two bodies interact via some conservative force that depends on the relative coordinate \(\mathbf{r} = \mathbf{r_1} - \mathbf{r_2}\), namely \(V = V(\mathbf{r_1} - \mathbf{r_2})\).</p>
+
+<p>By putting into the expression of \(\underline{R}\), we obtain:</p>
 
 \[\underline{r}_1=\underline{R}+\frac{m_2}{m_1+m_2} \underline{r}\]
 
@@ -419,11 +423,18 @@
 
 \[\frac{1}{m}=\frac{1}{m_1}+\frac{1}{m_2}.\]
 
-<p>Note the similarly between this and the equivalent resistance of a parallel circuit.</p>
-
 <h2 id="concluding-remarks">Concluding Remarks</h2>
 
 <p>N-body problem is one of the most important problems in physics! (as bodies can be particles, planets, anything!) I am planning to do a supervised summer project with <a href="https://www.ph.ed.ac.uk/people/jenni-smillie">Dr Jenni Smillie</a>, focusing on three-body gravitational problems. I will provide an update on this in due course!</p>
+
+<h2 id="exercises-for-the-reader">Exercises for the Reader</h2>
+
+<ul>
+  <li>From \(\dot{R}=\frac{P}{m_1+m_2}\), show that \(\underline{R}(t)=\underline{R}(0)+\frac{\underline{P}}{m_1+m_2} t\). (Difficulty: F4-5 HKDSE)</li>
+  <li>Give the definition for \(\nabla\). Explain the difference between \(\nabla\) and \(\nabla_1\).</li>
+  <li>What is the form of the reduced mass similar to? (Hint: in circuits) (Difficulty: F5 HKDSE)</li>
+  <li>Show that two-body motion is planar (Difficulty: University Year 1-2)</li>
+</ul>
 
         
       </section>
@@ -450,7 +461,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-20T00:00:00+00:00">February 20, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-20T00:00:00+08:00">February 20, 2024</time></p>
 
       </footer>
 
@@ -474,7 +485,7 @@
 ">Previous</a>
     
     
-      <a href="/ESRAProject/" class="pagination--pager" title="Water Slosh Behaviours
+      <a href="/ESRAProject/" class="pagination--pager" title="Self-Initiated Reserach Group Project
 ">Next</a>
     
   </nav>
@@ -503,7 +514,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Momentum/" rel="permalink">Where does Momentum arise from?
+        <a href="/Momentum/" rel="permalink">Why is Momentum Conserved?
 </a>
       
     </h2>
@@ -521,14 +532,17 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, ...</p>
+    <p class="archive__item-excerpt" itemprop="description">In this article we explore the conservation of momentum using Lagrangian Dynamics.
+Momentum in Physics
+
+</p>
   </article>
 </div>
 
@@ -591,7 +605,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/ESRAProject/" rel="permalink">Water Slosh Behaviours
+        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
 </a>
       
     </h2>

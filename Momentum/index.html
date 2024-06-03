@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Where does Momentum arise from? | Henry Yip</title>
-<meta name="description" content="Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, \(\frac{1}{2}mv^2\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
+<!-- begin _includes/seo.html --><title>Why is Momentum Conserved? | Henry Yip</title>
+<meta name="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Where does Momentum arise from?">
+<meta property="og:title" content="Why is Momentum Conserved?">
 <meta property="og:url" content="https://henry-yip.github.io/Momentum/">
 
 
-  <meta property="og:description" content="Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, \(\frac{1}{2}mv^2\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
+  <meta property="og:description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2024-04-08T00:00:00+01:00">
+  <meta property="article:published_time" content="2024-04-08T00:00:00+08:00">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Where does Momentum arise from?</li>
+        <li class="current">Why is Momentum Conserved?</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Where does Momentum arise from?">
-    <meta itemprop="description" content="Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, \(\frac{1}{2}mv^2\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).">
-    <meta itemprop="datePublished" content="2024-04-08T00:00:00+01:00">
+    <meta itemprop="headline" content="Why is Momentum Conserved?">
+    <meta itemprop="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics.Momentum in Physics">
+    <meta itemprop="datePublished" content="2024-04-08T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Momentum/" class="u-url" itemprop="url">Where does Momentum arise from?
+            <a href="https://henry-yip.github.io/Momentum/" class="u-url" itemprop="url">Why is Momentum Conserved?
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -368,29 +368,53 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Source of Momentum</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#momentum-in-physics">Momentum in Physics</a><ul><li><a href="#concluding-remarks">Concluding Remarks</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>Since High School I have been fascinated by the fact that momentum , in the language of HKDSE Physics, \(p=mv\), is simply the derivative of kinetic energy, \(\frac{1}{2}mv^2\). I believe that this can be explained beautifully using the knowledge of more advanced classical mechanics (and some knowledge of calculus of variations).</p>
+        <p>In this article we explore the conservation of momentum using Lagrangian Dynamics.</p>
+<h2 id="momentum-in-physics">Momentum in Physics</h2>
 
-<p>By Lagrangian Dynamics, we know the equation of motion of an object is given by</p>
+<p>Momentum is defined by \(p=mv\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force.</p>
 
-\[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}}\right) = \frac{\partial \mathcal{L}}{\partial q}\]
+<p>In an inertial frame, momentum is a <em>conserved quantity</em>, meaning that it is not affected by external forces in a closed system. This is an example of one of the most important concepts in physics - translational symmetry.</p>
 
-<p>where \(\mathcal{L}=T-V\). Equating the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q}=0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}}\right)=0\), which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}}\) is a constant.</p>
+<p>The astute reader can notice that this is highly unobvious — how can a system allow and ensure a symmetry? Below, I aim to provide a intuitive explanation using more advanced classical mechanics techniques, namely the Lagragian Dynamics Formulation, developed in 1788 by Joseph-Louis Lagrange.</p>
 
-<p>What exactly is the “freedom” in the system? Let’s consider a simple case:
-Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Without loss of generality, take \(x\) as the generalized coordinate (it is the only coordinate here). After manipulations we obtain \(m \dot{x}\) is a constant.</p>
+<p>The equation of motion of an object in Lagrangian Formulation is given by:</p>
 
-<p>As \(v=\dot{x}\)his is exactly the linear momentum of a system. This is known to be conserved in HKDSE syllabus. (As we mentioned that energy does not necessarily conserve in a system but the momentum always conserve).</p>
+\[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = \frac{\partial \mathcal{L}}{\partial q_j}\]
+
+<p>where \(\mathcal{L}=T-V\).</p>
+
+<p>Assuming we can equate the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q_j} = 0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = 0\)
+, which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\) is a constant. There appears to be a “freedom” in the system!</p>
+
+<p>We can verify this is true for a 1 dimensional object. Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), we have \(\mathcal{L}=\frac{1}{2}m\dot{x}^2\). Indeed, \(m \dot{x}\) is the constant obtained, which is the standard result in classical mechanics.</p>
+
+<h3 id="concluding-remarks">Concluding Remarks</h3>
 
 <p>This is expected to be true due to Noether’s Theorem, which states that every symmetry will  lead to a conservation, <a href="/Conservations/">which is explained here.</a></p>
 
 <p>Therefore, the energy of a system being independent of position (lack of \(x\) in expression, while \(\dot{x}\) is present) causes a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate (\(x\) in our case). Momentum is not conserved if the energy term involves spatial coordinates, say in a particle is in the presence of electromagnetic force.</p>
 
-<p>Side note: The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - \mathcal{L}\). The reader can show that this corresponds to the energy of the system, which is \(T\). More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function.)</p>
+<p>The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - \mathcal{L}\). The reader can show that this corresponds to the energy of the system, which is \(T\). More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function).</p>
+
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+
+<ul>
+  <li>What is also conserved in the system mentioned above? (Difficulty: F4 HKDSE)</li>
+  <li>
+    <p>What are the restrictions of the form taken by the potential, if so, why? Why is the potential taken as \(0\)?  (Difficulty: F6 HKDSE)</p>
+  </li>
+  <li>
+    <p>By writing down the Lagrangian for a ball undergoing circular motion, show that the angular momentum is conserved.  (Difficulty: Year 1-2 University)</p>
+  </li>
+  <li>(*) Given that \(\mathcal{L}(\underline{r}, \underline{\dot{r}}, t)=T-\tilde{V}=\frac{1}{2} m|\underline{\dot{r}}|^2-e[\phi(\underline{r}, t)-\underline{\dot{r}} \cdot \underline{A}(\underline{r}, t)]\) is the Lagrangian of a particle in a EM field, show that \(p=mv+eA\). (Difficulty: Year 2-3 University)</li>
+</ul>
+
+<p>Last Updated - 3/6/2024</p>
 
         
       </section>
@@ -417,7 +441,7 @@ Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Wit
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+01:00">April 8, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+08:00">April 8, 2024</time></p>
 
       </footer>
 
@@ -426,7 +450,7 @@ Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Wit
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Where+does+Momentum+arise+from%3F%20https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Why+is+Momentum+Conserved%3F%20https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -514,7 +538,7 @@ Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Wit
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/ESRAProject/" rel="permalink">Water Slosh Behaviours
+        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
 </a>
       
     </h2>
@@ -575,7 +599,7 @@ Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), so \(L=\frac{1}{2}m\dot{x}^2\). Wit
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
