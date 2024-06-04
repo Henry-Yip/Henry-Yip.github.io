@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Multivariable Calculus | Henry Yip</title>
-<meta name="description" content="Statement">
+<!-- begin _includes/seo.html --><title>More on Multivariable Calculus | Henry Yip</title>
+<meta name="description" content="This section covers the content usually omitted in Calculus 3    Area Estimation using Green’s Theorem   An example using Generalized Stoke’s Theorem   Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Multivariable Calculus">
+<meta property="og:title" content="More on Multivariable Calculus">
 <meta property="og:url" content="https://henry-yip.github.io/Multivariable_Calc/">
 
 
-  <meta property="og:description" content="Statement">
+  <meta property="og:description" content="This section covers the content usually omitted in Calculus 3    Area Estimation using Green’s Theorem   An example using Generalized Stoke’s Theorem   Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Multivariable Calculus</li>
+        <li class="current">More on Multivariable Calculus</li>
       
     
   </ol>
@@ -327,8 +327,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Multivariable Calculus">
-    <meta itemprop="description" content="Statement">
+    <meta itemprop="headline" content="More on Multivariable Calculus">
+    <meta itemprop="description" content="This section covers the content usually omitted in Calculus 3  Area Estimation using Green’s Theorem  An example using Generalized Stoke’s Theorem  Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
     <meta itemprop="datePublished" content="2023-10-16T00:00:00+08:00">
     
 
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Multivariable_Calc/" class="u-url" itemprop="url">Multivariable Calculus
+            <a href="https://henry-yip.github.io/Multivariable_Calc/" class="u-url" itemprop="url">More on Multivariable Calculus
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          5 minute read
         
       </span>
     
@@ -368,16 +368,25 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Multivaribale Calculus</h4></header>
-              <ul class="toc__menu"><li><a href="#statement">Statement</a></li><li><a href="#proof">Proof</a></li><li><a href="#generalized-stokes-theorem">Generalized Stokes’ Theorem</a></li><li><a href="#greens-theorem-special-case">Green’s Theorem (Special Case)</a></li><li><a href="#multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</a><ul><li><a href="#divergence">Divergence:</a></li><li><a href="#curl">Curl</a></li><li><a href="#laplacian">Laplacian</a></li><li><a href="#other-cases">Other cases</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#area-estimation-using-greens-theorem">Area Estimation using Green’s Theorem</a></li><li><a href="#proof">Proof</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#generalized-stokes-theorem">Generalized Stokes’ Theorem</a><ul><li><a href="#exercises-for-the-reader-1">Exercises for the reader</a></li></ul></li><li><a href="#greens-theorem-special-case">Green’s Theorem (Special Case)</a></li><li><a href="#multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</a><ul><li><a href="#divergence">Divergence:</a></li><li><a href="#curl">Curl</a></li><li><a href="#laplacian">Laplacian</a></li><li><a href="#exericses-for-the-reader">Exericses for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="statement">Statement</h1>
+        <p>This section covers the content usually omitted in Calculus 3</p>
+<ul>
+  <li>Area Estimation using Green’s Theorem</li>
+  <li>An example using Generalized Stoke’s Theorem</li>
+  <li>Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)</li>
+</ul>
 
-<p>An Ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
+<h2 id="area-estimation-using-greens-theorem">Area Estimation using Green’s Theorem</h2>
 
-<h1 id="proof">Proof</h1>
+<p>I will illustrate this section using an example:</p>
+
+<p>An ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
+
+<h2 id="proof">Proof</h2>
 <p>There are many ways to approach this problem. Proofwiki provides <a href="https://proofwiki.org/wiki/Area_of_Ellipse">2 methods</a> to do it, but they are considerably tedious and non-elegant.</p>
 
 <p>Here we will use the powerful Green’s Theorem, which is closely related to Areas (Since it is the 2D version of Stoke’s theorem). This is rarely explained in lectures and is worth a discussion:</p>
@@ -403,11 +412,22 @@ A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b 
 &amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
 \end{aligned}\]
 
-\[\blacksquare\]
+<p>The reader can show as an exercise (*) that :</p>
 
-<p><strong>Collorary</strong>: A Circle with radius \(r\) has area \(\pi r^2\). The proof is trivial and is left as an exercise for the reader.</p>
+\[\begin{align*}
+A &amp;= \oint_C x \, dy \\
+  &amp;= -\oint_C y \, dx \\
+  &amp;= \frac{1}{2} \oint_C \left(x \, dy - y \, dx\right)
+\end{align*}\]
 
-<h1 id="generalized-stokes-theorem">Generalized Stokes’ Theorem</h1>
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+<ul>
+  <li>Show that the area of the circle is \(\pi r^2\) (Difficulty: HKDSE F3)</li>
+  <li>Show that the area of the area enclosed by \(x = r(t - \sin t), y = r(1 - \cos t)\) and the \(x\)-axis is \(3 \pi r^2\). (Difficulty: University Year 1-2)</li>
+  <li>Give a proof for the exercise (marked as *) above. Explain why this may be a faster method for calculating exercise 2.  (Difficulty: University Year 1-2)</li>
+</ul>
+
+<h2 id="generalized-stokes-theorem">Generalized Stokes’ Theorem</h2>
 
 <p>For a sphere, consider:
 \(\alpha=x^1 d x^2 \wedge d x^3 .\)</p>
@@ -439,9 +459,15 @@ and so</p>
 
 <p>works on a unit sphere.</p>
 
-<h1 id="greens-theorem-special-case">Green’s Theorem (Special Case)</h1>
+<h3 id="exercises-for-the-reader-1">Exercises for the reader</h3>
+<ul>
+  <li>Given \(\alpha = x^1 d x^2 \wedge d x^3\), verify \(d \alpha = d x^1 \wedge d x^2 \wedge d x^3\)  (Difficulty: University Year 3)</li>
+  <li>State the Generalized Stokes’ Theorem (Difficulty: University Year 3)</li>
+</ul>
 
-<p>Considering <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s Post</a>. We can approach the same problem using wedge products. If you haven’t read his post, the problem we are considering is:</p>
+<h2 id="greens-theorem-special-case">Green’s Theorem (Special Case)</h2>
+
+<p>It appears that we can arrive one of the results in section 1 using wedge products.</p>
 
 \[\text { Area of } D=\iint_D d x d y=-\int_C y d x\]
 
@@ -467,7 +493,9 @@ and so</p>
 
 <p>The astute reader can realized that this is Green’s Theorem - Stokes’ Theorem in 2D!</p>
 
-<h1 id="multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</h1>
+<p>An alternative proof can be found in <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s Post</a></p>
+
+<h2 id="multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</h2>
 
 <p>This section is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Electromagnetism and Relativity Notes</a>:</p>
 
@@ -489,7 +517,7 @@ and so</p>
 &amp; \underline{e}_\phi=-\sin \phi \underline{e}_x+\cos \phi \underline{e}_y
 \end{aligned}\]
 
-<h2 id="divergence">Divergence:</h2>
+<h3 id="divergence">Divergence:</h3>
 
 <p>In general, given the scale factors, we have:</p>
 
@@ -502,7 +530,7 @@ and so</p>
 &amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right)+\frac{1}{r \sin \theta}\left\{\frac{\partial}{\partial \theta}\left(\sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(a_\phi\right)\right\}
 \end{aligned}\]
 
-<h2 id="curl">Curl</h2>
+<h3 id="curl">Curl</h3>
 
 <p>For curl we have:</p>
 
@@ -512,14 +540,15 @@ h_1 \underline{e}_1 &amp; h_2 \underline{e}_2 &amp; h_3 \underline{e}_3 \\
 h_1 a_1 &amp; h_2 a_2 &amp; h_3 a_3
 \end{array}\right|\]
 
-<p>In the special case of spherical polars we have:
-\(\underline{\nabla} \times \underline{a}=\frac{1}{r^2 \sin \theta}\left|\begin{array}{ccc}
+<p>In the special case of spherical polars we have:</p>
+
+\[\underline{\nabla} \times \underline{a}=\frac{1}{r^2 \sin \theta}\left|\begin{array}{ccc}
 \underline{e}_r &amp; r \underline{e}_\theta &amp; r \sin \theta \underline{e}_\phi \\
 \frac{\partial}{\partial r} &amp; \frac{\partial}{\partial \theta} &amp; \frac{\partial}{\partial \phi} \\
 a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
-\end{array}\right|\)</p>
+\end{array}\right|\]
 
-<h2 id="laplacian">Laplacian</h2>
+<h3 id="laplacian">Laplacian</h3>
 
 <p>As for the Laplacian (scalar field), we have:</p>
 
@@ -532,9 +561,12 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
 &amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin ^2 \theta}\left\{\sin \theta \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial^2 f}{\partial \phi^2}\right\}
 \end{aligned}\]
 
-<h2 id="other-cases">Other cases</h2>
+<h3 id="exericses-for-the-reader">Exericses for the reader</h3>
+<ul>
+  <li>Write down the all the case for cylindrical coordinates and spherical polars (Difficulty: University Year 2)</li>
+</ul>
 
-<p>Left as an exercise for the reader!</p>
+<p>Last Updated - 4/6/2024</p>
 
 
         
@@ -573,7 +605,7 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Multivariable+Calculus%20https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=More+on+Multivariable+Calculus%20https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 

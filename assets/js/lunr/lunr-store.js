@@ -83,8 +83,8 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Multivariable Calculus",
-        "excerpt":"Statement An Ellipse with semi-major axis a and semi-minor axis b has area \\(\\pi ab\\) Proof There are many ways to approach this problem. Proofwiki provides 2 methods to do it, but they are considerably tedious and non-elegant. Here we will use the powerful Green’s Theorem, which is closely related...","categories": [],
+        "title": "More on Multivariable Calculus",
+        "excerpt":"This section covers the content usually omitted in Calculus 3 Area Estimation using Green’s Theorem An example using Generalized Stoke’s Theorem Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates) Area Estimation using Green’s Theorem I will illustrate this section using an example: An ellipse with semi-major axis a and...","categories": [],
         "tags": ["Multivaribale","Calculus"],
         "url": "/Multivariable_Calc/",
         "teaser": "/assets/images/Teaser.png"
