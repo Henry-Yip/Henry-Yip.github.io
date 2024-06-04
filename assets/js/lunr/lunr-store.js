@@ -54,7 +54,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Conservations in Physics - Noether's Theorem",
-        "excerpt":"Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example: \\[\\hat{r}=\\cos (\\theta) \\hat{x}+\\sin (\\theta) \\hat{y}, \\quad \\hat{\\theta}=-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y} .\\] By Chain Rule, \\[\\dot{\\hat{r}}=\\dot{\\theta}[-\\sin (\\theta) \\hat{x}+\\cos (\\theta) \\hat{y}]=\\dot{\\theta} \\hat{\\theta}, \\quad \\dot{\\hat{\\theta}}=\\dot{\\theta}[-\\cos (\\theta) \\hat{x}-\\sin (\\theta) \\hat{y}]=-\\dot{\\theta}...","categories": [],
+        "excerpt":"This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills. Proof of Noether’s...","categories": [],
         "tags": ["Appendix"],
         "url": "/Conservations/",
         "teaser": "/assets/images/Teaser.png"

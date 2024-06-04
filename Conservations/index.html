@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Conservations in Physics - Noether’s Theorem | Henry Yip</title>
-<meta name="description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
+<meta name="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/Conservations/">
 
 
-  <meta property="og:description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
+  <meta property="og:description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
 
 
 
@@ -328,7 +328,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Conservations in Physics - Noether’s Theorem">
-    <meta itemprop="description" content="Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:">
+    <meta itemprop="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+08:00">
     
 
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -368,12 +368,41 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
-              <ul class="toc__menu"><li><a href="#noethers-theorem">Noether’s Theorem</a></li></ul>
+              <ul class="toc__menu"><li><a href="#proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</a><ul><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul></li><li><a href="#finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Many things are constant (conserved) in Physics. For example, energy is conserved, center of mass is conserved… Below I will given an example:</p>
+        <p>This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.</p>
+
+<h2 id="proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</h2>
+
+<p>The proof of Noether’s Theorem is quite involved. However, it is a good exercise to show the proof for one-dimensional case.</p>
+
+<p>Assume the system has translational symmetry: \(\phi: q \mapsto q + \delta q\). Now assume a trajectory travels from the more bolded line (in the image below) to the less bolded line, in time \(\tau\).</p>
+
+<p>Using the definition of action: \(S = \int L\), we arrive at \(\Delta S=\int \Delta L\). If \(L\) only depends on \(\dot{q}\), \(\Delta L \approx \left(\frac{\partial L}{\partial \dot{q}}\right) \Delta \dot{q}\). From the image, it is also obvious that \(\Delta \dot{q}=\pm \frac{\delta q}{\tau}\).</p>
+
+\[\Delta S=\int \Delta L \approx \int \frac{\partial L}{\partial \dot{q}} \Delta \dot{q} \approx \int \frac{\partial L}{\partial \dot{q}}\left( \pm \frac{\delta q}{\tau}\right) \approx \pm \frac{\partial L}{\partial \dot{q}} \delta q= \pm \frac{\partial L}{\partial \dot{q}} \varphi .\]
+
+<p>As \(\Delta S\) is \(0\), we have:</p>
+
+\[\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_0\right)=\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_1\right)\]
+
+<p>This result is also verified <a href="/Conservations/">in my other post</a>.</p>
+
+<p><img src="/assets/images/Noether.png" alt="" srcset="    /assets/resized/Noether-600x502.png 600w, /assets/images/Noether.png 1110w" /></p>
+
+<p>(Image from Wikipedia)</p>
+
+<h3 id="exercises-for-the-readers">Exercises for the readers</h3>
+<ul>
+  <li>Explain the reason for the \(\pm\) sign in \(\Delta L\). What does it correspond to? (Difficulty: University Year 1)</li>
+  <li>Why is the total action equal to \(0\)? (Difficulty: University Year 2-3)</li>
+  <li>Why is \(\dot{q}\) assumed to be the only contributing term? (Hint: \(\tau\) is taken to appraoch \(0\)) (Difficulty: University Year 2-3)</li>
+</ul>
+
+<h2 id="finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</h2>
 
 \[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
 
@@ -404,7 +433,7 @@
 2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
 \end{aligned}\]
 
-<p>From the second equation</p>
+<p>From the second equation:</p>
 
 \[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
 
@@ -414,33 +443,16 @@
 
 \[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
 
-\[\blacksquare\]
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+<ul>
+  <li>What is being conserved in rotational symmetry? (Difficulty: HKDSE F4)</li>
+  <li>Show the results above using Lagrangian Dynamics. (This is a much faster method) (Difficulty: University Year 2-3)
+    <h2 id="credits">Credits</h2>
+    <p>This section is heavily inspired by 3 sources - Prof Arjun Berera’s Introductory Dynamics course, Dr Jenni Smillie’s Lagrangian Dynamics, and the wikipedia page on Noether’s Theorem.</p>
+  </li>
+</ul>
 
-<p>Hecen \(h\) is the constant we have here.</p>
-
-<h2 id="noethers-theorem">Noether’s Theorem</h2>
-
-<p>Noether’s Theorem stated that every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.</p>
-
-<p>Action is the integral of Lagrangian over time.</p>
-
-<p>So what are conserved?</p>
-
-<p>Homogeneity of space implies conservation of total momentum and isotropy of space implies conservation of total angular momentum.</p>
-
-<p>The later is what we proved above as central force is a conservative force and space is assumed as isotropy in dynamics (usually!)</p>
-
-<p>Also observe that:</p>
-
-\[\begin{array}{ll}
-\mathcal{L} \text { invariant under: } &amp; \text { Conserved Quantity } \\
-\hline q_j \rightarrow q_j+\lambda &amp; p_j \\
-t \rightarrow t+\lambda &amp; h=\sum_j p_j \dot{q}_j-\mathcal{L}
-\end{array}\]
-
-<p>where the reader may know that \(h\) is closed related to Hamiltonian Dynamics.</p>
-
-<p><strong>TO BE CONTINUED!</strong></p>
+<p>Last Updated - 3/6/2024</p>
 
 
         
