@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Tensor Transformations | Henry Yip</title>
-<meta name="description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
+<!-- begin _includes/seo.html --><title>Tensors and its transformations | Henry Yip</title>
+<meta name="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Tensor Transformations">
+<meta property="og:title" content="Tensors and its transformations">
 <meta property="og:url" content="https://henry-yip.github.io/Transformations/">
 
 
-  <meta property="og:description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
+  <meta property="og:description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Tensor Transformations</li>
+        <li class="current">Tensors and its transformations</li>
       
     
   </ol>
@@ -327,8 +327,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Tensor Transformations">
-    <meta itemprop="description" content="Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.">
+    <meta itemprop="headline" content="Tensors and its transformations">
+    <meta itemprop="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
     <meta itemprop="datePublished" content="2024-02-18T00:00:00+08:00">
     
 
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Transformations/" class="u-url" itemprop="url">Tensor Transformations
+            <a href="https://henry-yip.github.io/Transformations/" class="u-url" itemprop="url">Tensors and its transformations
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -368,14 +368,52 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Transformations</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#intuition">Intuition</a></li><li><a href="#credits">Credits</a></li></ul>
+              <ul class="toc__menu"><li><a href="#definition">Definition</a></li><li><a href="#another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</a></li><li><a href="#sample-problem">Sample Problem</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#credits">Credits</a></li><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition.</p>
+        <p>Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.</p>
 
-<h2 id="motivation">Motivation</h2>
+<h2 id="definition">Definition</h2>
+
+<p>Consider a rotation of the \(\{e_i\}\) basis (frame \(S\)) to the \(\{e'_i\}\) basis (frame \(S'\)). This is called a passive rotation.</p>
+
+<p>The components of two arbitrary vectors \(\mathbf{a}\) and \(\mathbf{b}\) in the two frames are related by:</p>
+
+\[a'_i = \ell_{ij} a_j\]
+
+\[b'_i = \ell_{ij} b_j\]
+
+<p>\(T'_{ijk\cdots op} = \ell_{ir} \ell_{js} \ell_{kt} \cdots \ell_{ov} \ell_{pw} T_{rst\cdots vw}\) is the transformation law for a tensor.</p>
+
+<p>In the two dimensional case, this is equivalent to:</p>
+
+\[T'_{ij} = \ell_{ip} \ell_{jq} T_{pq}\]
+
+<p>The astute reader will realize this is equivalent to:</p>
+
+\[T'=LTL\]
+
+<h2 id="another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</h2>
+
+<p>\(T\) maps \(v\) to \(Tv\),</p>
+
+<p>\(T'\) maps \(v'\) to \(T'v'\).</p>
+
+<p>We can map from \(v\) to \(Tv\) in the way below:</p>
+
+<ul>
+  <li>Rotate \(L\) to new basis</li>
+  <li>Apply \(T'\)</li>
+  <li>Rotate back</li>
+</ul>
+
+<p>This gives us: \(Tv=L^{-1}T'Lv\).</p>
+
+<p>From which we can obtain \(T'=LTL^{-1}\).</p>
+
+<h2 id="sample-problem">Sample Problem</h2>
 
 <p>The moments of inertia along the principal axes \(\underline{e}_1, \underline{e}_2, \underline{e}_3\) of a rigid body are 1,2 and 3 respectively.  An observer has a coordinate basis \(\underline{e}_1^{\prime}=\frac{\sqrt{2}}{2}\left(\underline{e}_1+ \underline{e}_2\right), \underline{e}_2^{\prime}=\frac{\sqrt{2}}{2}\left(-\underline{e}_1+ \underline{e}_2\right)\) and \(\underline{e}_3^{\prime}=\underline{e}_3\). What are the values of the components of the inertia tensor measured by the observer?</p>
 
@@ -401,13 +439,13 @@
 
 \[\begin{aligned}
 I_{i j}^{\prime} &amp; =l_{i p} l_{j q} I_{p q} \\
-&amp; =(R)_{i p} I_{p q}\left(R^T\right)_{q j} \\
-&amp; =\left(R I R^T\right)_{i j}
+&amp; =(L)_{i p} I_{p q}\left(L^T\right)_{q j} \\
+&amp; =\left(L I L^T\right)_{i j}
 \end{aligned}\]
 
-<p>We know that rotation matrices satisfy \(R^T=R^{-1}\), hence:</p>
+<p>We know that rotation matrices satisfy \(L^T=L^{-1}\), hence:</p>
 
-\[I_{i j}^{\prime} = \left(R I R^{-1}\right)_{i j}\]
+\[I_{i j}^{\prime} = \left(L I L^{-1}\right)_{i j}\]
 
 <p>Hence, multiplying will get us:</p>
 
@@ -432,29 +470,22 @@ I' &amp;= \left(\begin{array}{ccc}
 \end{array}\right) 
 \end{aligned}\]
 
-<h2 id="intuition">Intuition</h2>
-
-<p>I will use \(T\) and \(T'\) for the tensors below, as I consider \(T\) and \(T'\) as maps (in fact, it is easy to define Tensors as multilinear maps!):</p>
-
-<p>\(T\) maps \(v\) to \(Tv\),</p>
-
-<p>\(T'\) maps \(v'\) to \(T'v'\).</p>
-
-<p>We can map from \(v\) to \(Tv\) in an interesting way:</p>
-
-<ul>
-  <li>Rotate \(R\) to new basis</li>
-  <li>Apply \(T'\)</li>
-  <li>Rotate back</li>
-</ul>
-
-<p>This gives us: \(Tv=R^{-1}T'Rv\).</p>
-
-<p>From which we can obtain \(T'=RTR^{-1}\).</p>
-
 <h2 id="credits">Credits</h2>
 
-<p>The intuition part is inspired by <a href="https://math.stackexchange.com/questions/2303869/tensor-rotation">this post</a>. The motivation part is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/tutorial04.pdf">Dr BJ Pendelton’s Problem Sheet</a>.</p>
+<p>The intuition part is inspired by <a href="https://math.stackexchange.com/questions/2303869/tensor-rotation">this post</a>. The definition of tensors is from <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Notes</a>. The motivation part is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/tutorial04.pdf">Dr BJ Pendelton’s Problem Sheet</a>.</p>
+
+<h2 id="exercises-for-the-readers">Exercises for the readers</h2>
+<ul>
+  <li>What rank is a vector? What rank is a scalar? (Difficulty: University Year 2)</li>
+  <li>Show: 
+\(\det L = +1\) for rotations and 
+\(\det L = -1\) for reflections and inversions of basis 
+(Difficulty: University Year 1-2)</li>
+  <li>Consider \(\mathbf{c} = \mathbf{a} \times \mathbf{b}\). Show that \(\underline{\mathbf{c'}} = \det L \, \underline{\mathbf{c}}\) by considering rotations, reflections and inversion. This is the definition of a psuedovector. (Difficulty: University Year 2)</li>
+  <li>State an example of a psuedovector in physics (Difficulty: University Year 2)</li>
+  <li>(*) Irrelevant but Interesting: Define the Levi-Civita symbol and show that it is a pseudotensor of rank 3 (Difficulty: University Year 2-3)</li>
+  <li>(**) State an example of a pseudoscalar in physics (Difficulty: University Year 3-4).  (Hint: Helicity)</li>
+</ul>
 
 
         
@@ -491,7 +522,7 @@ I' &amp;= \left(\begin{array}{ccc}
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Tensor+Transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tensors+and+its+transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 

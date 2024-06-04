@@ -89,8 +89,8 @@ var store = [{
         "url": "/Multivariable_Calc/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Tensor Transformations",
-        "excerpt":"Here, we deal with the transformation of Tensors. We will conclude with some sort of intuition. Motivation The moments of inertia along the principal axes \\(\\underline{e}_1, \\underline{e}_2, \\underline{e}_3\\) of a rigid body are 1,2 and 3 respectively. An observer has a coordinate basis \\(\\underline{e}_1^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(\\underline{e}_1+ \\underline{e}_2\\right), \\underline{e}_2^{\\prime}=\\frac{\\sqrt{2}}{2}\\left(-\\underline{e}_1+ \\underline{e}_2\\right)\\) and \\(\\underline{e}_3^{\\prime}=\\underline{e}_3\\). What...","categories": [],
+        "title": "Tensors and its transformations",
+        "excerpt":"Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example. Definition Consider a rotation of the \\(\\{e_i\\}\\) basis (frame \\(S\\)) to the \\(\\{e'_i\\}\\) basis (frame \\(S'\\)). This is called a passive rotation. The components of two...","categories": [],
         "tags": ["Trans"],
         "url": "/Transformations/",
         "teaser": "/assets/images/Teaser.png"
