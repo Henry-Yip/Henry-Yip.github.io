@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>More on Multivariable Calculus | Henry Yip</title>
-<meta name="description" content="This section covers the content usually omitted in Calculus 3    Area Estimation using Green’s Theorem   An example using Generalized Stoke’s Theorem   Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
+<!-- begin _includes/seo.html --><title>Two interesting questions related to free fall | Henry Yip</title>
+<meta name="description" content="This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating!">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="More on Multivariable Calculus">
-<meta property="og:url" content="https://henry-yip.github.io/Multivariable_Calc/">
+<meta property="og:title" content="Two interesting questions related to free fall">
+<meta property="og:url" content="https://henry-yip.github.io/FreeFall/">
 
 
-  <meta property="og:description" content="This section covers the content usually omitted in Calculus 3    Area Estimation using Green’s Theorem   An example using Generalized Stoke’s Theorem   Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-10-16T00:00:00+08:00">
+  <meta property="og:description" content="This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating!">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-07-29T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Multivariable_Calc/">
+
+<link rel="canonical" href="https://henry-yip.github.io/FreeFall/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">More on Multivariable Calculus</li>
+        <li class="current">Two interesting questions related to free fall</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="More on Multivariable Calculus">
-    <meta itemprop="description" content="This section covers the content usually omitted in Calculus 3  Area Estimation using Green’s Theorem  An example using Generalized Stoke’s Theorem  Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)">
-    <meta itemprop="datePublished" content="2023-10-16T00:00:00+08:00">
+    <meta itemprop="headline" content="Two interesting questions related to free fall">
+    <meta itemprop="description" content="This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating!">
+    <meta itemprop="datePublished" content="2023-07-29T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Multivariable_Calc/" class="u-url" itemprop="url">More on Multivariable Calculus
+            <a href="https://henry-yip.github.io/FreeFall/" class="u-url" itemprop="url">Two interesting questions related to free fall
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 minute read
+          2 minute read
         
       </span>
     
@@ -367,207 +367,127 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Multivaribale Calculus</h4></header>
-              <ul class="toc__menu"><li><a href="#area-estimation-using-greens-theorem">Area Estimation using Green’s Theorem</a></li><li><a href="#proof">Proof</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#generalized-stokes-theorem">Generalized Stokes’ Theorem</a><ul><li><a href="#exercises-for-the-reader-1">Exercises for the reader</a></li></ul></li><li><a href="#greens-theorem-special-case">Green’s Theorem (Special Case)</a></li><li><a href="#multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</a><ul><li><a href="#divergence">Divergence:</a></li><li><a href="#curl">Curl</a></li><li><a href="#laplacian">Laplacian</a></li><li><a href="#exericses-for-the-reader">Exericses for the reader</a></li></ul></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Free Fall</h4></header>
+              <ul class="toc__menu"><li><a href="#free-fall-of-objects">Free Fall of objects</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#dropping-to-center-of-earth">Dropping to center of earth</a><ul><li><a href="#dubious-assumption">Dubious Assumption?</a></li><li><a href="#gauss-law-for-gravitation">Gauss’ Law for Gravitation</a></li><li><a href="#exercises-for-the-reader-1">Exercises for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>This section covers the content usually omitted in Calculus 3</p>
-<ul>
-  <li>Area Estimation using Green’s Theorem</li>
-  <li>An example using Generalized Stoke’s Theorem</li>
-  <li>Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates)</li>
-</ul>
+        <p>This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating!</p>
 
-<h2 id="area-estimation-using-greens-theorem">Area Estimation using Green’s Theorem</h2>
+<h2 id="free-fall-of-objects">Free Fall of objects</h2>
 
-<p>I will illustrate this section using an example:</p>
+<p>Inspired by a conversation in Shenzhen, I am trying to compare the terminal velocity of a human and a plane under turbulent flow:</p>
 
-<p>An ellipse with semi-major axis <strong>a</strong> and semi-minor axis <strong>b</strong>  has area \(\pi ab\)</p>
-
-<h2 id="proof">Proof</h2>
-<p>There are many ways to approach this problem. Proofwiki provides <a href="https://proofwiki.org/wiki/Area_of_Ellipse">2 methods</a> to do it, but they are considerably tedious and non-elegant.</p>
-
-<p>Here we will use the powerful Green’s Theorem, which is closely related to Areas (Since it is the 2D version of Stoke’s theorem). This is rarely explained in lectures and is worth a discussion:</p>
-
-<p>Consider <strong>Green’s Theorem</strong> (Stoke’s Theorem on \(xy\) plane):</p>
-
-\[\oint_C(P d x+Q d y)=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) d x d y\]
-
-<p>We aim to find polynomials such that \(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}=1\)</p>
-
-<p>Say \(P(x,y)=-\frac{1}{2}y\) and \(Q(x,y)=\frac{1}{2}x\)</p>
-
-<p>So we can estimate the area (denote by \(A\)) as:</p>
-
-\[A=\frac{1}{2} \oint_C(x dy-ydx)\]
-
-<p>Using the standard parameterization of an ellipse (see below), we can quickly calculate \(A\)</p>
-
-\[{\displaystyle (x,y)=(a\cos(t),b\sin(t))\quad {\text{for}}\quad 0\leq t\leq 2\pi }\]
+<p>Consider \(a=\dot{v(t)}\), we have \(F=m\dot{v}\). Now consider downwards as positive. Assume air resistance is \(kv^2\), where \(k \in \mathbb{R}\). Then we have:</p>
 
 \[\begin{aligned}
-A &amp; =\frac{1}{2} \int_C x d y-y d x=\frac{1}{2} \int_0^{2 \pi}[(a \cos t)(b \cos t) d t-(b \sin t)(-a \sin t) d t] \\
-&amp; =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b
+ m\dot{v}&amp;=mg-kv^2 \\
+ m \frac{dv}{dt}&amp;=mg-kv^2 \\
+ mdv&amp;=(mg-kv^2)dt \\
+ \frac{mdv}{mg-kv^2}&amp;=dt \\
+\int_{0}^{v}  \frac{mdv}{mg-kv^2} &amp;= \int_{0}^{t}dt \\
+t&amp;=\int_{0}^{v}  \frac{mdv}{mg-kv^2} 
+ \end{aligned}\]
+
+<p>Where we assumed \(v(0)=0\)</p>
+
+\[\begin{equation}
+\int \frac{d v}{m g-k v^2}  =\frac{1}{m g} \int\frac{d v}{1-\frac{k}{m g} v^2} \\
+\end{equation}\]
+
+<p>Evaluate the indefinite integral first, if we assume \(u=\sqrt\frac{k}{mg} v\), hence \(\sqrt\frac{mg}{k} du=dv\), we have:</p>
+
+\[\begin{aligned}
+&amp;\frac{1}{\sqrt{m g k}} \int \frac{d u}{1-u^2} \\
+&amp; =\frac{1}{\sqrt{m g k}} 
+\tanh ^{-1}(u) \\
+&amp;=\frac{1}{\sqrt{m g k}} \tanh ^{-1}\left(v \sqrt{\frac{k}{m g}}\right)
 \end{aligned}\]
 
-<p>The reader can show as an exercise (*) that :</p>
+<p>The reader can easily check that the definite integral is the same, i.e.</p>
 
-\[\begin{align*}
-A &amp;= \oint_C x \, dy \\
-  &amp;= -\oint_C y \, dx \\
-  &amp;= \frac{1}{2} \oint_C \left(x \, dy - y \, dx\right)
-\end{align*}\]
+\[t=\frac{1}{\sqrt{m g k}} \tanh ^{-1}\left(v \sqrt{\frac{k}{m g}}\right)\]
+
+<p>After this we can do some algebraic manipulations to get :
+\begin{equation}
+v=\sqrt {\frac{mg}{k}}\tanh[(\sqrt{mgk})(t)] 
+\end{equation}</p>
+
+<p>As \(\tanh(x)\) approaches \(1\), \(v_\text{Terminal}=\sqrt{\frac{mg}{k}}\)</p>
+
+<p>Next, we have to find the value of \(k\):
+Using <a href="https://en.wikipedia.org/wiki/Drag_equation">drag equation </a>, assuming turbulent flow:</p>
+
+<p>\(F_{\mathrm{d}}=\frac{1}{2} \rho  c_{\mathrm{d}} A v^2\)
+Hence:</p>
+
+\[\begin{aligned}
+v_\text{Terminal}&amp;=\sqrt{\frac{mg}{k}} \\
+&amp;=\sqrt{\frac{2mg}{\rho c_d A}}
+\end{aligned}\]
+
+<p>As \(m_\text{human}\)«&lt;\(m_\text{plane}\), the difference in \(c_d\) and \(A\) can’t compensate, and hence terminal velocity of planes are much higher during free fall.</p>
 
 <h3 id="exercises-for-the-reader">Exercises for the reader</h3>
 <ul>
-  <li>Show that the area of the circle is \(\pi r^2\) (Difficulty: HKDSE F3)</li>
-  <li>Show that the area of the area enclosed by \(x = r(t - \sin t), y = r(1 - \cos t)\) and the \(x\)-axis is \(3 \pi r^2\). (Difficulty: University Year 1-2)</li>
-  <li>Give a proof for the exercise (marked as *) above. Explain why this may be a faster method for calculating exercise 2.  (Difficulty: University Year 1-2)</li>
+  <li>Develop the theory if the air resistance is linearly proportional to velocity. (Difficulty: University Year 1-2)</li>
+  <li>What are the terminal velocies for the plane and the human if there is no air resistance?  Why? (Difficulty: HKDSE F4)</li>
 </ul>
 
-<h2 id="generalized-stokes-theorem">Generalized Stokes’ Theorem</h2>
+<h2 id="dropping-to-center-of-earth">Dropping to center of earth</h2>
 
-<p>For a sphere, consider:
-\(\alpha=x^1 d x^2 \wedge d x^3 .\)</p>
+<p>How long does it take to drop to the center of earth and what will happen after that?</p>
 
-<p>Consider:</p>
+<p>Force acting on the ball:</p>
 
-\[x^1=\sin\alpha\cos\phi\]
+\[F=G\frac{M'm}{r^2}\]
 
-\[x^2=\sin\alpha\sin\phi\]
+<p>where:</p>
 
-\[x^3=\cos\alpha\]
+\[M'=M\frac{r^3}{R^3}\]
 
-<p>Thus:
-\(\alpha=\sin ^3 \alpha \cos ^2 \phi d \alpha \wedge d \phi\)</p>
+\[\begin{aligned}
+m\ddot{r}&amp;=G\frac{Mm}{R^3}r \\
+\ddot{r}&amp;=G\frac{M}{R^3}r
+\end{aligned}\]
 
-<p>This is clearly a surface integral. Hence, we have:</p>
+<p>Any physics student should recognise this as a simple harmonic motion with frequency:</p>
 
-\[\int_{\partial\Sigma} \alpha=\int_{\alpha=0}^\pi \int_{\phi=0}^{2 \pi} \sin ^3 \alpha \cos ^2 \phi d \alpha d \phi=\frac{4 \pi}{3} .\]
+\[\omega=\sqrt{\frac{GM}{R^3}}\]
 
-<p>On the other hand, we have:
-\(d \alpha=d x^1 \wedge d x^2 \wedge d x^3\)
-and so</p>
+<p>This corresponds to a period of:</p>
 
-\[\int_{\Sigma} d \alpha=\int_{\Sigma} d  x^1 \wedge d x^2 \wedge d x^3=  \int_{0}^{2\pi} \int_{0}^{ \pi} 
-\int_{0}^{1} (r^2 \sin \phi) dr  d\alpha d\phi = \frac{4}{3} \pi\]
+\[T=2 \pi \sqrt{\frac{R^3}{GM}}\]
 
-<p>Hence we have showed that Generalized Stokes’ Theorem: 
-\(\int_{\Sigma} d \alpha=\int_{\partial \Sigma} \alpha\)</p>
+<h3 id="dubious-assumption">Dubious Assumption?</h3>
 
-<p>works on a unit sphere.</p>
+<p>The astute reader will notice that this assumes the gravitational force is <strong>only</strong> contributed from the enclosed mass. Why is this true?</p>
+
+<h3 id="gauss-law-for-gravitation">Gauss’ Law for Gravitation</h3>
+
+<p>Gauss’ Law for electromagnetism (Maxwell’s First Law) is very well known, but his law for gravitation is equally important.</p>
+
+<p>Gauss’ Law for Gravitation states that:</p>
+
+\[\nabla \cdot\left(\frac{\mathbf{r}}{|\mathbf{r}|^3}\right)=4 \pi \delta(\mathbf{r})\]
+
+<p>This can be shown using the steps below. The details are left as an exercise for the readers (see below)</p>
+
+\[\begin{aligned}
+\nabla \cdot\mathbf{g}(\mathbf{r})&amp;=-G \int  \rho(\mathbf{s}) \left [\nabla \cdot\frac{(\mathbf{r}-\mathbf{s})}{|\mathbf{r}-\mathbf{s}|^3} \right] d^3 \mathbf{s} \\
+&amp;=-4 \pi G \int \rho(\mathbf{s}) \delta(\mathbf{r}-\mathbf{s}) d^3 \mathbf{s} 
+\end{aligned}\]
+
+<p>As gravitational force on a particle is proportional to the gravitational field, and gravitaitonal field is only proportional to the mass enclosed, we can concude that gravitational force is <strong>only</strong> contributed from the enclosed mass.</p>
 
 <h3 id="exercises-for-the-reader-1">Exercises for the reader</h3>
+<p>\(\nabla \cdot \mathbf{A}=\frac{1}{r^2} \frac{\partial\left(r^2 A_r\right)}{\partial r}+\frac{1}{r \sin \theta} \frac{\partial}{\partial \theta}\left(A_\theta \sin \theta\right)+\frac{1}{r \sin \theta} \frac{\partial A_{\varphi}}{\partial \varphi}\) can be assumed while attempting the exercises.</p>
 <ul>
-  <li>Given \(\alpha = x^1 d x^2 \wedge d x^3\), verify \(d \alpha = d x^1 \wedge d x^2 \wedge d x^3\)  (Difficulty: University Year 3)</li>
-  <li>State the Generalized Stokes’ Theorem (Difficulty: University Year 3)</li>
+  <li>Show that \(\nabla \cdot (\frac{\mathbf{r}}{\lVert\mathbf{r}\rVert})^3=\left(\frac{1}{r^2}\right)(0)=0\) for \(r \neq 0\).  (Difficulty: University Year 1-2)</li>
+  <li>Use divergence theorem to show what happens at \(r=0\). (Difficulty: University Year 1-2)</li>
+  <li>Show: \(\oiint_{\partial V} \mathbf{g} \cdot d \mathbf{A}=-4 \pi G M\) (Difficulty: University Year 1-2)</li>
 </ul>
-
-<h2 id="greens-theorem-special-case">Green’s Theorem (Special Case)</h2>
-
-<p>It appears that we can arrive one of the results in section 1 using wedge products.</p>
-
-\[\text { Area of } D=\iint_D d x d y=-\int_C y d x\]
-
-<p>First, consider: \(d\alpha=dy \wedge dx\). We can easily see that \(\alpha=ydx\)</p>
-
-\[\text { Area of } D=\iint_\Sigma d x \wedge d y=-\iint_\Sigma d y \wedge d x=-\iint_\Sigma d\alpha=-\int_{\partial \Sigma} \alpha=-\int_{\partial \Sigma} ydx\]
-
-<p>For the general case, using Generalized Stokes’ Theorem , we can consider:</p>
-
-\[\int_{\partial D} P d x+Q d y=\iint_{D}dP \wedge dx+dQ \wedge dy\]
-
-<p>As:</p>
-
-\[d P=\sum_{i=1}^n \frac{\partial P}{\partial x^i} d x^i\]
-
-<p>We have:</p>
-
-\[\iint_{D}\frac{\partial P}{\partial y} d y \wedge dx+\frac{\partial Q}{\partial x} dx \wedge dy = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
-
-<p>So:</p>
-
-\[\int_{\partial D} P d x+Q d y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dxdy\]
-
-<p>The astute reader can realized that this is Green’s Theorem - Stokes’ Theorem in 2D!</p>
-
-<p>An alternative proof can be found in <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s Post</a></p>
-
-<h2 id="multivariable-calculus-in-other-coordinate-systems">Multivariable Calculus in other coordinate systems:</h2>
-
-<p>This section is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Electromagnetism and Relativity Notes</a>:</p>
-
-<p>We will start from the results of cylindrical Coordinate System: Below I will compute the scale factors and the unit vectors, as a basic exercise.</p>
-
-<p>We know: \(\underline{r} = r \sin \theta \cos \phi \underline{e}_x + r \sin \theta \sin \phi \underline{e}_y + r \cos \theta \underline{e}_z\). Hence:</p>
-
-\[\begin{aligned}
-\frac{\partial \underline{r}}{\partial r} &amp;= \sin \theta \cos \phi \underline{e}_x + \sin \theta \sin \phi \underline{e}_y + \cos \theta \underline{e}_z \Rightarrow h_r = \left|\frac{\partial \underline{r}}{\partial r}\right| = 1 \\
-\frac{\partial \underline{r}}{\partial \theta} &amp;= r \cos \theta \cos \phi \underline{e}_x + r \cos \theta \sin \phi \underline{e}_y - r \sin \theta \underline{e}_z \Rightarrow h_\theta = \left|\frac{\partial \underline{r}}{\partial \theta}\right| = r \\
-\frac{\partial \underline{r}}{\partial \phi} &amp;= -r \sin \theta \sin \phi \underline{e}_x + r \sin \theta \cos \phi \underline{e}_y \Rightarrow h_\phi = \left|\frac{\partial \underline{r}}{\partial \phi}\right| = r \sin \theta
-\end{aligned}\]
-
-<p>Therefore, the unit vectors are:</p>
-
-\[\begin{aligned}
-&amp; \underline{e}_r=\sin \theta \cos \phi \underline{e}_x+\sin \theta \sin \phi \underline{e}_y+\cos \theta \underline{e}_z\\
-&amp; \underline{e}_\theta=\cos \theta \cos \phi \underline{e}_x+\cos \theta \sin \phi \underline{e}_y-\sin \theta \underline{e}_z \\
-&amp; \underline{e}_\phi=-\sin \phi \underline{e}_x+\cos \phi \underline{e}_y
-\end{aligned}\]
-
-<h3 id="divergence">Divergence:</h3>
-
-<p>In general, given the scale factors, we have:</p>
-
-\[\underline{\nabla} \cdot \underline{a}=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(a_1 h_2 h_3\right)+\frac{\partial}{\partial u_2}\left(a_2 h_3 h_1\right)+\frac{\partial}{\partial u_3}\left(a_3 h_1 h_2\right)\right\}\]
-
-<p>In our case of cylindrical coordinates, we have:</p>
-
-\[\begin{aligned}
-\underline{\nabla} \cdot \underline{a}(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta a_r\right)+\frac{\partial}{\partial \theta}\left(r \sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(r a_\phi\right)\right\} \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right)+\frac{1}{r \sin \theta}\left\{\frac{\partial}{\partial \theta}\left(\sin \theta a_\theta\right)+\frac{\partial}{\partial \phi}\left(a_\phi\right)\right\}
-\end{aligned}\]
-
-<h3 id="curl">Curl</h3>
-
-<p>For curl we have:</p>
-
-\[\underline{\nabla} \times \underline{a}=\frac{1}{h_1 h_2 h_3}\left|\begin{array}{ccc}
-h_1 \underline{e}_1 &amp; h_2 \underline{e}_2 &amp; h_3 \underline{e}_3 \\
-\frac{\partial}{\partial u_1} &amp; \frac{\partial}{\partial u_2} &amp; \frac{\partial}{\partial u_3} \\
-h_1 a_1 &amp; h_2 a_2 &amp; h_3 a_3
-\end{array}\right|\]
-
-<p>In the special case of spherical polars we have:</p>
-
-\[\underline{\nabla} \times \underline{a}=\frac{1}{r^2 \sin \theta}\left|\begin{array}{ccc}
-\underline{e}_r &amp; r \underline{e}_\theta &amp; r \sin \theta \underline{e}_\phi \\
-\frac{\partial}{\partial r} &amp; \frac{\partial}{\partial \theta} &amp; \frac{\partial}{\partial \phi} \\
-a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
-\end{array}\right|\]
-
-<h3 id="laplacian">Laplacian</h3>
-
-<p>As for the Laplacian (scalar field), we have:</p>
-
-\[\nabla^2 f=\frac{1}{h_1 h_2 h_3}\left\{\frac{\partial}{\partial u_1}\left(\frac{h_2 h_3}{h_1} \frac{\partial f}{\partial u_1}\right)+\frac{\partial}{\partial u_2}\left(\frac{h_3 h_1}{h_2} \frac{\partial f}{\partial u_2}\right)+\frac{\partial}{\partial u_3}\left(\frac{h_1 h_2}{h_3} \frac{\partial f}{\partial u_3}\right)\right\}\]
-
-<p>In the special case of spherical polars, we have:</p>
-
-\[\begin{aligned}
-\nabla^2 f(r, \theta, \phi) &amp; =\frac{1}{r^2 \sin \theta}\left\{\frac{\partial}{\partial r}\left(r^2 \sin \theta \frac{\partial f}{\partial r}\right)+\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial}{\partial \phi}\left(\frac{1}{\sin \theta} \frac{\partial f}{\partial \phi}\right)\right\} \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin ^2 \theta}\left\{\sin \theta \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial^2 f}{\partial \phi^2}\right\}
-\end{aligned}\]
-
-<h3 id="exericses-for-the-reader">Exericses for the reader</h3>
-<ul>
-  <li>Write down the all the case for cylindrical coordinates and spherical polars (Difficulty: University Year 2)</li>
-</ul>
-
-<p>Last Updated - 4/6/2024</p>
-
 
         
       </section>
@@ -584,9 +504,9 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#calculus" class="page__taxonomy-item p-category" rel="tag">Calculus</a><span class="sep">, </span>
+      <a href="/tags/#fall" class="page__taxonomy-item p-category" rel="tag">Fall</a><span class="sep">, </span>
     
-      <a href="/tags/#multivaribale" class="page__taxonomy-item p-category" rel="tag">Multivaribale</a>
+      <a href="/tags/#free" class="page__taxonomy-item p-category" rel="tag">Free</a>
     
     </span>
   </p>
@@ -596,7 +516,7 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-10-16T00:00:00+08:00">October 16, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-07-29T00:00:00+08:00">July 29, 2023</time></p>
 
       </footer>
 
@@ -605,22 +525,22 @@ a_r &amp; r a_\theta &amp; r \sin \theta a_\phi
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=More+on+Multivariable+Calculus%20https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Two+interesting+questions+related+to+free+fall%20https%3A%2F%2Fhenry-yip.github.io%2FFreeFall%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FFreeFall%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMultivariable_Calc%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FFreeFall%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/TwoParticles/" class="pagination--pager" title="Two Particles Collision
+      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
 ">Previous</a>
     
     
-      <a href="/Transformations/" class="pagination--pager" title="Tensors and its transformations
+      <a href="/TwoParticles/" class="pagination--pager" title="Two Particles Collision
 ">Next</a>
     
   </nav>
@@ -943,8 +863,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Multivariable_Calc/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Multivariable_Calc"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/FreeFall/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/FreeFall"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

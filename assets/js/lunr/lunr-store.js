@@ -83,6 +83,18 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Two interesting questions related to free fall",
+        "excerpt":"This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating! Free Fall of objects...","categories": [],
+        "tags": ["Free","Fall"],
+        "url": "/FreeFall/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Two Particles Collision",
+        "excerpt":"Two point masses \\(m_1\\) and \\(m_2\\) are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center? With object 1 on the left and object 2 on the right, we can define...","categories": [],
+        "tags": ["Two","Particles","Collision"],
+        "url": "/TwoParticles/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "More on Multivariable Calculus",
         "excerpt":"This section covers the content usually omitted in Calculus 3 Area Estimation using Green’s Theorem An example using Generalized Stoke’s Theorem Curl and Divergence in generalized OCCs (Orthogonal Curvilinear Coordinates) Area Estimation using Green’s Theorem I will illustrate this section using an example: An ellipse with semi-major axis a and...","categories": [],
         "tags": ["Multivaribale","Calculus"],
