@@ -118,4 +118,10 @@ var store = [{
         "tags": ["Trans"],
         "url": "/Momentum/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Theorema Egregium --- The reason why all maps are wrong",
+        "excerpt":"Theorema Egregium states that isometric surfaces have the same gauss(ian) curvature. Equivalently, surfaces with different gauss curvature are not isometric (with same First Fundamental Forms). Gauss Curvature of a Sphere First note that the Gauss Curvature on the whole sphere is uniform. Next notice that the surface area of a...","categories": [],
+        "tags": ["Trans"],
+        "url": "/TheoremaEgregium/",
+        "teaser": "/assets/images/Teaser.png"
       }]
