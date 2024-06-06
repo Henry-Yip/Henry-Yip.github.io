@@ -137,8 +137,8 @@ var store = [{
         "url": "/TheoremaEgregium/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Euler's Totient function, Reduced Totient function and Carmichael's Number",
-        "excerpt":"This post is a gentle introduction on the famous theorems in Number Theory Motivation I have been given this question in my first Mathematics Class on proving theorems, Accelerated Proofs and Problem Solving: Find \\(a\\) such that \\[3^{124} \\equiv a \\space \\text{mod} \\space 100\\] The answer is \\(81\\) upon my...","categories": [],
+        "title": "Euler's Totient function, Reduced Totient function and Carmichael Number",
+        "excerpt":"This post is a gentle introduction on the famous theorems in Number Theory. Motivation I have been given this question in my first Mathematics Class on proving theorems, Accelerated Proofs and Problem Solving: Find \\(a\\) such that \\[3^{124} \\equiv a \\space \\text{mod} \\space 100\\] The answer is \\(81\\) upon my...","categories": [],
         "tags": ["Trans"],
         "url": "/CarmichaelFunction/",
         "teaser": "/assets/images/Teaser.png"
