@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Carmichael Function | Henry Yip</title>
-<meta name="description" content="This post is a gentle introduction on the famous Carmichael Function.">
+<!-- begin _includes/seo.html --><title>Euler’s Totient function, Reduced Totient function and Carmichael’s Number | Henry Yip</title>
+<meta name="description" content="This post is a gentle introduction on the famous theorems in Number Theory">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Carmichael Function">
+<meta property="og:title" content="Euler’s Totient function, Reduced Totient function and Carmichael’s Number">
 <meta property="og:url" content="https://henry-yip.github.io/CarmichaelFunction/">
 
 
-  <meta property="og:description" content="This post is a gentle introduction on the famous Carmichael Function.">
+  <meta property="og:description" content="This post is a gentle introduction on the famous theorems in Number Theory">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Carmichael Function</li>
+        <li class="current">Euler's Totient function, Reduced Totient function and Carmichael's Number</li>
       
     
   </ol>
@@ -327,8 +327,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Carmichael Function">
-    <meta itemprop="description" content="This post is a gentle introduction on the famous Carmichael Function.">
+    <meta itemprop="headline" content="Euler’s Totient function, Reduced Totient function and Carmichael’s Number">
+    <meta itemprop="description" content="This post is a gentle introduction on the famous theorems in Number Theory">
     <meta itemprop="datePublished" content="2024-06-06T00:00:00+08:00">
     
 
@@ -336,7 +336,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/CarmichaelFunction/" class="u-url" itemprop="url">Carmichael Function
+            <a href="https://henry-yip.github.io/CarmichaelFunction/" class="u-url" itemprop="url">Euler’s Totient function, Reduced Totient function and Carmichael’s Number
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -368,12 +368,12 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Carmichael Function</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li></ul>
+              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li><li><a href="#carmichael-function">Carmichael function</a></li><li><a href="#relation-to-eulers-theorem">Relation to Euler’s Theorem</a><ul><li><a href="#carmichael-number">Carmichael Number</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>This post is a gentle introduction on the famous Carmichael Function.</p>
+        <p>This post is a gentle introduction on the famous theorems in Number Theory</p>
 
 <h2 id="motivation">Motivation</h2>
 <p>I have been given this question in my first Mathematics Class on proving theorems, <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08071.htm">Accelerated Proofs and Problem Solving</a>:</p>
@@ -387,6 +387,65 @@
 \[3^{20} \equiv 1 \space \text{mod} \space 100\]
 
 <p>Is it possible to generalize this?</p>
+
+<h2 id="carmichael-function">Carmichael function</h2>
+
+<p>The Carmichael Function \(\lambda(n)\) is the smallest number of the set of positive numbers \(m\) such that:</p>
+
+\[a^{m} \equiv 1 \space \text{mod} \space n\]
+
+<p>for every integer \(a\) coprime to \(n\)</p>
+
+<p><a href="https://www.wolframalpha.com/input?i=lambda%28100%29&amp;assumption=%7B%22FunClash%22%2C+%22lambda%22%7D+-%3E+%7B%22CarmichaelLambda%22%7D">It can be verified that</a> \(\lambda(100)=20\).</p>
+
+<h2 id="relation-to-eulers-theorem">Relation to Euler’s Theorem</h2>
+
+<p>Euler’s Theorem (in number theory) states that:</p>
+
+\[a^{\varphi(n)} \equiv 1 \space \text{mod} \space n\]
+
+<p>for every integer \(a\) coprime to \(n\). \(\varphi(n)\) is the Euler’s Totient function and it denotes the positive integers up to a given integer \(n\) that are relatively prime to \(n\).</p>
+
+<p>For the unfamilar reader,</p>
+
+\[\varphi(n)=n \prod_{p|n}\left(1-\frac{1}{p}\right).\]
+
+<p>The reader can check that \(\varphi(100)=40\).</p>
+
+<p>This is very similar to Fermat’s little theorem:</p>
+
+\[a^{p-1} \equiv 1 \space \text{mod} \space p\]
+
+<p>This is a special case of Euler’s Theorem and is left as an exercise for the reader (see below).</p>
+
+<p>We can see that \(20\) also satisfies the equation for Euler’s Theorem but is smaller. This gives Carmichael Function the name “Reduced Toitient Function”. \(\lambda(n)\) divides \(\varphi(n)\), and the proof is left as an exercise for the reader (see below).</p>
+
+<h3 id="carmichael-number">Carmichael Number</h3>
+<p>Given Fermat’s Little Theorem, it is tempting to use it as a primality test. This means, we find all integers \(n\) such that</p>
+
+\[b^{n-1} \equiv 1 \space \text{mod} \space n\]
+
+<p>for all \(b\) coprime to \(n\), and claim the set of integers \(n\) are all prime numbers.</p>
+
+<p>This works well until \(561\), which satsifies</p>
+
+\[b^{560} \equiv 1 \space \text{mod} \space 561\]
+
+<p>for all \(b\) coprime to \(561\), but is not a prime number (as \(561=(3)(11)(17)\)). Such numbers are called Carmichael Numbers.</p>
+
+<p>There is a theorem to find Carmicahel Numbers:</p>
+
+<p>A positive composite integer \(n\) is a Carmichael number if and only if \(n\) is square-free, and for all prime divisors \(p\) of \(n\), it is true that \(p-1 \mid n-1\).</p>
+
+<p>For example, \(2 \mid 560\), \(10 \mid 560\), \(16 \mid 560\). and \(n\) is square-free. Hence \(561\) is a Carmichael Number.</p>
+
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+
+<ul>
+  <li>Show that \(\varphi(p)=p-1\) for a prime number \(p\), and hence, using Euler’s Theorem, verify Fermat’s Little Theorem (Difficulty: University Year 1-2).</li>
+  <li>Define what is means to be the exponent of the group and the order of the group. Show that \(\lambda(n)\) divides \(\varphi(n)\).</li>
+  <li>Design a Python Program and print out the first \(10\) Carmichael Numbers.</li>
+</ul>
 
 
         
@@ -423,7 +482,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Carmichael+Function%20https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Euler%27s+Totient+function%2C+Reduced+Totient+function+and+Carmichael%27s+Number%20https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
