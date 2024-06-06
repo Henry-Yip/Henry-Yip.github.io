@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Kernels in Fourier Series | Henry Yip</title>
-<meta name="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+<!-- begin _includes/seo.html --><title>Perturbations - A view on Classical Mechanics and Quantum Mechanics | Henry Yip</title>
+<meta name="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Kernels in Fourier Series">
-<meta property="og:url" content="https://henry-yip.github.io/Dirichlet/">
+<meta property="og:title" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
+<meta property="og:url" content="https://henry-yip.github.io/Perbuations/">
 
 
-  <meta property="og:description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-02-24T00:00:00+08:00">
+  <meta property="og:description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2023-01-13T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Dirichlet/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Perbuations/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Kernels in Fourier Series</li>
+        <li class="current">Perturbations - A view on Classical Mechanics and Quantum Mechanics</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Kernels in Fourier Series">
-    <meta itemprop="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
-    <meta itemprop="datePublished" content="2023-02-24T00:00:00+08:00">
+    <meta itemprop="headline" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
+    <meta itemprop="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+    <meta itemprop="datePublished" content="2023-01-13T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Kernels in Fourier Series
+            <a href="https://henry-yip.github.io/Perbuations/" class="u-url" itemprop="url">Perturbations - A view on Classical Mechanics and Quantum Mechanics
 </a>
           </h1>
           
@@ -367,152 +367,150 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#approximation-of-unity">Approximation of Unity?</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
+              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a></li><li><a href="#quantum-perturbation">Quantum Perturbation</a><ul><li><a href="#classic-example">Classic Example</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.</p>
+        <p>“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.</p>
 
-<p>Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes!</p>
+<p><strong>Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics (PHYS10094)</strong></p>
 
-<h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
+<h2 id="classical-perturbation">Classical Perturbation</h2>
+<p>Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \(F=ma\), we have \(F=m\ddot{x}\). If there is a restoring force with different direction compared to direction of motion, we get \(-\alpha x=m \ddot{x}\), where \(\alpha \in \mathbb{R}_+\). This is solved using a sinusoidal ansatz. This corresponds to simple harmonic motion!</p>
 
-<p>A fourier series decomposes a function into trigonometric functions.</p>
+<p>Now, refering to my post in <a href="/NoetherTheorem/">Conservations in Physics</a>, we can quickly obtain:</p>
 
-<p>By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?</p>
+\[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
 
-<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p>I’ll leave this as an exercise for the reader.</p>
 
-<p>The equation above is:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 1: We<span class="s1">'re dealing with Central Force, only radial force matters
+</span></code></pre></div></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 2: Use Newton<span class="s1">'s Second Law
+</span></code></pre></div></div>
+<p>Now consider the question below:</p>
 
-\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}\]
+<p>There is a small perbuation around a circle with radius \(a\) <em>i.e.</em> \(r(t)=a+\rho(t)\) with \(\rho(0) \ll a\). How will the orbit look like?</p>
 
-<p>Where we increased \(m\) over time. For \(m=1000\), we can get the below:</p>
+<p>Substituting into our orbit equation we have:</p>
 
-<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+\[\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m}\]
 
-<p>Fourier Series doesn’t work for all functions, there are certain restrictions.</p>
+<p>Here we’ll use binomial expansion for negative coefficients. For more details view the wikipedia page for <a href="https://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative Binomial Distribution</a></p>
 
-<p>Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel Problem</a>:</p>
+<p>However there’s a nice trick by differentiating the taylor series.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+\[\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m}\]
 
-<p>To understand how and why fourier series work, we can study its convergence (pointwise convergence, \(L^2\) convergence, <em>etc</em>). However, this is slightly too difficult without knowing <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a>/<a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a></p>
+<p>Further rearranging will get you:</p>
 
-<h2 id="start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</h2>
-<p>The section below is partly inspired by this amazing video:</p>
+\[\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0\]
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
+</code></pre></div></div>
 
-<h3 id="a-natural-introduction">A Natural Introduction</h3>
+<p>Assuming knowledge from <strong>Differential Equations</strong>, we have a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
 
-<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
+\[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
 
-<p>Below we take \(f(x)\) to be periodic with period \(2π\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \(N\)th term:</p>
+<p>Hence if the above stands we have:</p>
 
-<p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
+\[\omega^2 \equiv \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\]
 
-<p>Within the interval \(−L \leq x \leq L\), we can approximate the function \(f(x)\) as:</p>
+<p>This describes a simple harmonic motion with \(\rho(t)=A \cos (\omega t+\phi)\).</p>
+
+<p>The picture below will confirm our intuition is indeed correct!</p>
+
+<p><img src="/assets/images/Orbit.png" alt="" srcset="    /assets/resized/Orbit-600x496.png 600w, /assets/images/Orbit.png 865w" /></p>
+
+<h2 id="quantum-perturbation">Quantum Perturbation</h2>
+
+<p>Assume the Hamiltonian \(H\) cannot be solved analytically. However, if it is <em>close</em> to a solvable Hamiltonian, say \(H_0\), there are ways to approximate it. This technique is called “Perturbation” and the theory is called “Perturbation Theory”. i.e., we have:</p>
+
+\[\hat{H}=\hat{H_0}+\hat{H'}\]
+
+<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector, or, if you are mathematically minded, the geometric multiplicity is smaller than the algebraic multiplicity.</p>
+
+<p>By doing a taylor series, we obtain: (the eigenstates are <strong>no longer normalized</strong>!)</p>
+
+\[E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+...\]
+
+<p>and</p>
+
+\[|n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\]
+
+<p>where the (0), (1), (2) implies taking to the 0th, 1st, 2nd order respectively.</p>
+
+<p>If we expand everything, we will get:</p>
 
 \[\begin{aligned}
-f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
-&amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
+&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)= \\
+&amp; \quad\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)
 \end{aligned}\]
 
-<p>Where we have:</p>
+<p>By comparing terms, we get:</p>
+
+\[\lambda^1:  \left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle\]
+
+<p>Consider Left hand side. From the term:</p>
+
+\[\hat{H}_0 \left|n^{(1)}\right\rangle\]
+
+<p>We can operate \(\langle k^{(0)} \,\lvert\) and obtain:</p>
+
+\[\left\langle k^{(0)}\left|\hat{H}_0\right| n^{(1)}\right\rangle = E_k^{(0)}\left\langle k^{(0)} \mid n^{(1)}\right\rangle\]
+
+<p>Hence we have:</p>
 
 \[\begin{aligned}
-a_m &amp; =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
-\text { Similarly, } \quad b_m &amp; =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
+    &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
+    &amp;\implies (E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 \end{aligned}\]
 
-<p>However, considering our limit: \(-\pi \leq L \leq \pi\), we can deduce the below:</p>
+<p>Choosing \(k=n\) will give us:</p>
 
 \[\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
-a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
-b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
+E_n^{(1)} \delta_{n, n}-\left\langle 
+n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle=0 \\
+\implies E_n^{(1)}=\left\langle 
+n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 \end{aligned}\]
 
-<p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
+<p>The astute reader will find out that this is an expectation value! So the expected “change in energy” is just the expectation of the perturbation!</p>
+
+<h3 id="classic-example">Classic Example</h3>
+
+<p>Now consider a standard problem in perturbation:</p>
+
+\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right)\]
+
+<p>between \(-a\) to \(a\). What is the ground state perturbation?</p>
+
+<p>From above, we have:</p>
 
 \[\begin{aligned}
-f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
-&amp; =\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n y \cos n x+\sin n y \sin n x)] \frac{f(y)}{2 \pi} d y \\
-&amp;=\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n(x-y))] \frac{f(y)}{2 \pi} d y \\
-&amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
+\Delta E_{n} &amp; =\left\langle\psi^{(n)}\mid V \mid \psi^{(n)}\right\rangle \\
+&amp; =\int_{-a}^{+a}  \left[\psi^{(n)}(x)^*\right] V(x) \left[\psi^{(n)}(x)\right]  dx
 \end{aligned}\]
 
-<p>Hence (after switching variables) we can <em>naturally</em> define Dirichlet’s Kernel as below:</p>
+<p>Considering :</p>
 
-\[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
+\[\psi^1(x)=\frac{1}{\sqrt{a}} \cos{\left(\frac{\pi x}{2a}\right)}\]
 
-<h3 id="a-better-form">A Better Form</h3>
-<p>Using Euler’s Formula \(e^{i \theta}=\cos \theta+i \sin \theta\), we can deduce:</p>
+<p>We can substitute and get:</p>
 
-\[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
+\[\begin{aligned}
+\Delta E_n&amp;=\frac{V_0}{a} \int_{-a}^{+a} \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) dx \\
+&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{+\pi / 2}  (\cos ^3 \theta)  d\theta\\
+&amp;=\frac{8 V_0}{3 \pi} 
+\end{aligned}\]
 
-<ul>
-  <li>Hint: \(e^{-i \theta}=\cos \theta-i \sin \theta\), then cancel out terms</li>
-</ul>
+<p>The details are left for an exercise for the reader/WolfamAlpha!</p>
 
-<p>We can use Desmos to see how it looks like:</p>
+<p><strong>TO BE CONTINUED!</strong></p>
 
-<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
-
-<h3 id="fourier-series-estimation">Fourier Series Estimation</h3>
-<p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
-
-\[\begin{align}
-f_N(x)
-&amp;=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi}\\
-&amp;=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} 
-\end{align}\]
-
-<p>Note that our function has period \(2\pi\), hence we can imagine shifting the function and getting the same result:</p>
-
-\[\begin{align}
-\int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
-\end{align}\]
-
-<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
-
-<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
-
-<p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
-
-<h2 id="fejér-kernel">Fejér kernel</h2>
-
-<p>Fejér kernel is defined as:</p>
-
-\[K_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
-
-<p>I will state without proof that:</p>
-
-\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
-
-<h2 id="approximation-of-unity">Approximation of Unity?</h2>
-
-<p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
-
-\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0\]
-
-<p>1) \(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\) <br />
-2) \(\int_{-1 / 2}^{1 / 2} k_n(t) d t=1\) <br />
-3) For all \(1 / 2 \geq \delta&gt;0\) we have:</p>
-
-<p>\(\int_{-\delta}^\delta k_n(t) d t \rightarrow 1\)
-\(\text { as } n \rightarrow \infty\)</p>
-
-<p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
-
-<p>SideNote: Fejer kernel gives the “Cesàro summation” of Fourier series, it is just the average of Dirichlet’s Kernel!</p>
-
-<p>Fejér kernel, having the “smoothening” factor (by taking average), is more commonly used as it handles discontinuity better, and has less oscillation (almost by definition, since it is the average of Dirihchlet’s Kernel)</p>
-
-<p>So in conclusion, how it works is that both kernels convolve with \(f(x)\) to make an approximation to the \(f(x)\), but Fejér kernel does so more smoothly, as any abrupt discontinity won’t affect too much, due to its averaging nature!</p>
 
         
       </section>
@@ -529,9 +527,9 @@ f_N(x)
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#analysis-fourier" class="page__taxonomy-item p-category" rel="tag">Analysis/Fourier</a><span class="sep">, </span>
+      <a href="/tags/#perturbations" class="page__taxonomy-item p-category" rel="tag">perturbations</a><span class="sep">, </span>
     
-      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">Series</a>
+      <a href="/tags/#small" class="page__taxonomy-item p-category" rel="tag">Small</a>
     
     </span>
   </p>
@@ -541,7 +539,7 @@ f_N(x)
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-24T00:00:00+08:00">February 24, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-13T00:00:00+08:00">January 13, 2023</time></p>
 
       </footer>
 
@@ -550,22 +548,22 @@ f_N(x)
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Kernels+in+Fourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+A+view+on+Classical+Mechanics+and+Quantum+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FPerbuations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Perbuations/" class="pagination--pager" title="Perturbations - A view on Classical Mechanics and Quantum Mechanics
+      <a href="/NoetherTheorem/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
 ">Previous</a>
     
     
-      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
+      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series
 ">Next</a>
     
   </nav>
@@ -888,8 +886,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Dirichlet/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Dirichlet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Perbuations/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Perbuations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Kernels in Fourier Series | Henry Yip</title>
-<meta name="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+<!-- begin _includes/seo.html --><title>Tensors and its transformations | Henry Yip</title>
+<meta name="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Kernels in Fourier Series">
-<meta property="og:url" content="https://henry-yip.github.io/Dirichlet/">
+<meta property="og:title" content="Tensors and its transformations">
+<meta property="og:url" content="https://henry-yip.github.io/TensorTransformations/">
 
 
-  <meta property="og:description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-02-24T00:00:00+08:00">
+  <meta property="og:description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-02-18T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Dirichlet/">
+
+<link rel="canonical" href="https://henry-yip.github.io/TensorTransformations/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Kernels in Fourier Series</li>
+        <li class="current">Tensors and its transformations</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Kernels in Fourier Series">
-    <meta itemprop="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
-    <meta itemprop="datePublished" content="2023-02-24T00:00:00+08:00">
+    <meta itemprop="headline" content="Tensors and its transformations">
+    <meta itemprop="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
+    <meta itemprop="datePublished" content="2024-02-18T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Kernels in Fourier Series
+            <a href="https://henry-yip.github.io/TensorTransformations/" class="u-url" itemprop="url">Tensors and its transformations
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          2 minute read
         
       </span>
     
@@ -367,152 +367,128 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#approximation-of-unity">Approximation of Unity?</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Transformations</h4></header>
+              <ul class="toc__menu"><li><a href="#definition">Definition</a></li><li><a href="#another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</a></li><li><a href="#sample-problem">Sample Problem</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#credits">Credits</a></li><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.</p>
+        <p>Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.</p>
 
-<p>Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes!</p>
+<h2 id="definition">Definition</h2>
 
-<h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
+<p>Consider a rotation of the \(\{e_i\}\) basis (frame \(S\)) to the \(\{e'_i\}\) basis (frame \(S'\)). This is called a passive rotation.</p>
 
-<p>A fourier series decomposes a function into trigonometric functions.</p>
+<p>The components of two arbitrary vectors \(\mathbf{a}\) and \(\mathbf{b}\) in the two frames are related by:</p>
 
-<p>By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?</p>
+\[a'_i = \ell_{ij} a_j\]
 
-<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+\[b'_i = \ell_{ij} b_j\]
 
-<p>The equation above is:</p>
+<p>\(T'_{ijk\cdots op} = \ell_{ir} \ell_{js} \ell_{kt} \cdots \ell_{ov} \ell_{pw} T_{rst\cdots vw}\) is the transformation law for a tensor.</p>
 
-\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}\]
+<p>In the two dimensional case, this is equivalent to:</p>
 
-<p>Where we increased \(m\) over time. For \(m=1000\), we can get the below:</p>
+\[T'_{ij} = \ell_{ip} \ell_{jq} T_{pq}\]
 
-<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p>The astute reader will realize this is equivalent to:</p>
 
-<p>Fourier Series doesn’t work for all functions, there are certain restrictions.</p>
+\[T'=LTL\]
 
-<p>Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel Problem</a>:</p>
+<h2 id="another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</h2>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<p>\(T\) maps \(v\) to \(Tv\),</p>
 
-<p>To understand how and why fourier series work, we can study its convergence (pointwise convergence, \(L^2\) convergence, <em>etc</em>). However, this is slightly too difficult without knowing <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a>/<a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a></p>
+<p>\(T'\) maps \(v'\) to \(T'v'\).</p>
 
-<h2 id="start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</h2>
-<p>The section below is partly inspired by this amazing video:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-
-<h3 id="a-natural-introduction">A Natural Introduction</h3>
-
-<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
-
-<p>Below we take \(f(x)\) to be periodic with period \(2π\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \(N\)th term:</p>
-
-<p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
-
-<p>Within the interval \(−L \leq x \leq L\), we can approximate the function \(f(x)\) as:</p>
-
-\[\begin{aligned}
-f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
-&amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
-\end{aligned}\]
-
-<p>Where we have:</p>
-
-\[\begin{aligned}
-a_m &amp; =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
-\text { Similarly, } \quad b_m &amp; =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
-\end{aligned}\]
-
-<p>However, considering our limit: \(-\pi \leq L \leq \pi\), we can deduce the below:</p>
-
-\[\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
-a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
-b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
-\end{aligned}\]
-
-<p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
-
-\[\begin{aligned}
-f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
-&amp; =\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n y \cos n x+\sin n y \sin n x)] \frac{f(y)}{2 \pi} d y \\
-&amp;=\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n(x-y))] \frac{f(y)}{2 \pi} d y \\
-&amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
-\end{aligned}\]
-
-<p>Hence (after switching variables) we can <em>naturally</em> define Dirichlet’s Kernel as below:</p>
-
-\[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
-
-<h3 id="a-better-form">A Better Form</h3>
-<p>Using Euler’s Formula \(e^{i \theta}=\cos \theta+i \sin \theta\), we can deduce:</p>
-
-\[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
+<p>We can map from \(v\) to \(Tv\) in the way below:</p>
 
 <ul>
-  <li>Hint: \(e^{-i \theta}=\cos \theta-i \sin \theta\), then cancel out terms</li>
+  <li>Rotate \(L\) to new basis</li>
+  <li>Apply \(T'\)</li>
+  <li>Rotate back</li>
 </ul>
 
-<p>We can use Desmos to see how it looks like:</p>
+<p>This gives us: \(Tv=L^{-1}T'Lv\).</p>
 
-<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p>From which we can obtain \(T'=LTL^{-1}\).</p>
 
-<h3 id="fourier-series-estimation">Fourier Series Estimation</h3>
-<p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
+<h2 id="sample-problem">Sample Problem</h2>
 
-\[\begin{align}
-f_N(x)
-&amp;=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi}\\
-&amp;=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} 
-\end{align}\]
+<p>The moments of inertia along the principal axes \(\underline{e}_1, \underline{e}_2, \underline{e}_3\) of a rigid body are 1,2 and 3 respectively.  An observer has a coordinate basis \(\underline{e}_1^{\prime}=\frac{\sqrt{2}}{2}\left(\underline{e}_1+ \underline{e}_2\right), \underline{e}_2^{\prime}=\frac{\sqrt{2}}{2}\left(-\underline{e}_1+ \underline{e}_2\right)\) and \(\underline{e}_3^{\prime}=\underline{e}_3\). What are the values of the components of the inertia tensor measured by the observer?</p>
 
-<p>Note that our function has period \(2\pi\), hence we can imagine shifting the function and getting the same result:</p>
+<h3 id="solution">Solution</h3>
 
-\[\begin{align}
-\int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
-\end{align}\]
+<p>Using \(R_{ij}=\underline{e_i}' \cdot \underline{e_j}\), we get:</p>
 
-<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
+\[R=\left(\begin{array}{ccc}
+\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
+-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right)\]
 
-<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<p>And also:</p>
 
-<p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
+\[I=\left(\begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 3 \\
+\end{array}\right)\]
 
-<h2 id="fejér-kernel">Fejér kernel</h2>
+<p>One might be tempted to use coordinate transformations, i.e. \(x_j=R_{ij} x_i\). However, this is not the case here. The key is using the definition below:</p>
 
-<p>Fejér kernel is defined as:</p>
+\[\begin{aligned}
+I_{i j}^{\prime} &amp; =l_{i p} l_{j q} I_{p q} \\
+&amp; =(L)_{i p} I_{p q}\left(L^T\right)_{q j} \\
+&amp; =\left(L I L^T\right)_{i j}
+\end{aligned}\]
 
-\[K_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
+<p>We know that rotation matrices satisfy \(L^T=L^{-1}\), hence:</p>
 
-<p>I will state without proof that:</p>
+\[I_{i j}^{\prime} = \left(L I L^{-1}\right)_{i j}\]
 
-\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
+<p>Hence, multiplying will get us:</p>
 
-<h2 id="approximation-of-unity">Approximation of Unity?</h2>
+\[\begin{aligned}
+I' &amp;= \left(\begin{array}{ccc}
+\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
+-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right) \left(\begin{array}{ccc}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 2 &amp; 0 \\
+0 &amp; 0 &amp; 3 \\
+\end{array}\right) \left(\begin{array}{ccc}
+\frac{\sqrt{2}}{2} &amp; \frac{-\sqrt{2}}{2} &amp; 0 \\
+\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array}\right) \\
+&amp;=\left(\begin{array}{ccc}
+\frac{3}{2} &amp; \frac{1}{2} &amp; 0 \\
+-\frac{1}{2} &amp; \frac{3}{2} &amp; 0 \\
+0 &amp; 0 &amp; 3
+\end{array}\right) 
+\end{aligned}\]
 
-<p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
+<h2 id="credits">Credits</h2>
 
-\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0\]
+<p>The intuition part is inspired by <a href="https://math.stackexchange.com/questions/2303869/tensor-rotation">this post</a>. The definition of tensors is from <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Notes</a>. The motivation part is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/tutorial04.pdf">Dr BJ Pendelton’s Problem Sheet</a>.</p>
 
-<p>1) \(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\) <br />
-2) \(\int_{-1 / 2}^{1 / 2} k_n(t) d t=1\) <br />
-3) For all \(1 / 2 \geq \delta&gt;0\) we have:</p>
+<h2 id="exercises-for-the-readers">Exercises for the readers</h2>
+<ul>
+  <li>What rank is a vector? What rank is a scalar? (Difficulty: University Year 2)</li>
+  <li>Show: 
+\(\det L = +1\) for rotations and 
+\(\det L = -1\) for reflections and inversions of basis 
+(Difficulty: University Year 1-2)</li>
+  <li>Consider \(\mathbf{c} = \mathbf{a} \times \mathbf{b}\). Show that \(\underline{\mathbf{c'}} = \det L \, \underline{\mathbf{c}}\) by considering rotations, reflections and inversion. This is the definition of a psuedovector. (Difficulty: University Year 2)</li>
+  <li>State an example of a psuedovector in physics (Difficulty: University Year 2)</li>
+  <li>(*) Irrelevant but Interesting: Define the Levi-Civita symbol and show that it is a pseudotensor of rank 3 (Difficulty: University Year 2-3)</li>
+  <li>(**) State an example of a pseudoscalar in physics (Difficulty: University Year 3-4).  (Hint: Helicity)</li>
+</ul>
 
-<p>\(\int_{-\delta}^\delta k_n(t) d t \rightarrow 1\)
-\(\text { as } n \rightarrow \infty\)</p>
+<p>Last Updated - 4/6/2024</p>
 
-<p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
-
-<p>SideNote: Fejer kernel gives the “Cesàro summation” of Fourier series, it is just the average of Dirichlet’s Kernel!</p>
-
-<p>Fejér kernel, having the “smoothening” factor (by taking average), is more commonly used as it handles discontinuity better, and has less oscillation (almost by definition, since it is the average of Dirihchlet’s Kernel)</p>
-
-<p>So in conclusion, how it works is that both kernels convolve with \(f(x)\) to make an approximation to the \(f(x)\), but Fejér kernel does so more smoothly, as any abrupt discontinity won’t affect too much, due to its averaging nature!</p>
 
         
       </section>
@@ -529,9 +505,7 @@ f_N(x)
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#analysis-fourier" class="page__taxonomy-item p-category" rel="tag">Analysis/Fourier</a><span class="sep">, </span>
-    
-      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">Series</a>
+      <a href="/tags/#trans" class="page__taxonomy-item p-category" rel="tag">Trans</a>
     
     </span>
   </p>
@@ -541,7 +515,7 @@ f_N(x)
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-24T00:00:00+08:00">February 24, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-18T00:00:00+08:00">February 18, 2024</time></p>
 
       </footer>
 
@@ -550,22 +524,22 @@ f_N(x)
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Kernels+in+Fourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tensors+and+its+transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTensorTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTensorTransformations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FTensorTransformations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Perbuations/" class="pagination--pager" title="Perturbations - A view on Classical Mechanics and Quantum Mechanics
+      <a href="/Multivariable_Calc/" class="pagination--pager" title="More on Multivariable Calculus
 ">Previous</a>
     
     
-      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
+      <a href="/SummerResearch/" class="pagination--pager" title="Overview of the Two-body Problem
 ">Next</a>
     
   </nav>
@@ -888,8 +862,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Dirichlet/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Dirichlet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/TensorTransformations/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/TensorTransformations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

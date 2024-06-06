@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Perturbations - A view on Classical Mechanics and Quantum Mechanics | Henry Yip</title>
-<meta name="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+<!-- begin _includes/seo.html --><title>Why is Momentum Conserved? | Henry Yip</title>
+<meta name="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
-<meta property="og:url" content="https://henry-yip.github.io/SmallPerbuations/">
+<meta property="og:title" content="Why is Momentum Conserved?">
+<meta property="og:url" content="https://henry-yip.github.io/MomentumConservation/">
 
 
-  <meta property="og:description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-01-13T00:00:00+08:00">
+  <meta property="og:description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-04-08T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/SmallPerbuations/">
+
+<link rel="canonical" href="https://henry-yip.github.io/MomentumConservation/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Perturbations - A view on Classical Mechanics and Quantum Mechanics</li>
+        <li class="current">Why is Momentum Conserved?</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
-    <meta itemprop="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
-    <meta itemprop="datePublished" content="2023-01-13T00:00:00+08:00">
+    <meta itemprop="headline" content="Why is Momentum Conserved?">
+    <meta itemprop="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics.Momentum in Physics">
+    <meta itemprop="datePublished" content="2024-04-08T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/SmallPerbuations/" class="u-url" itemprop="url">Perturbations - A view on Classical Mechanics and Quantum Mechanics
+            <a href="https://henry-yip.github.io/MomentumConservation/" class="u-url" itemprop="url">Why is Momentum Conserved?
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          2 minute read
         
       </span>
     
@@ -367,150 +367,54 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a></li><li><a href="#quantum-perturbation">Quantum Perturbation</a><ul><li><a href="#classic-example">Classic Example</a></li></ul></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Source of Momentum</h4></header>
+              <ul class="toc__menu"><li><a href="#momentum-in-physics">Momentum in Physics</a><ul><li><a href="#concluding-remarks">Concluding Remarks</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <p>“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.</p>
+        <p>In this article we explore the conservation of momentum using Lagrangian Dynamics.</p>
+<h2 id="momentum-in-physics">Momentum in Physics</h2>
 
-<p><strong>Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics (PHYS10094)</strong></p>
+<p>Momentum is defined by \(p=mv\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force.</p>
 
-<h2 id="classical-perturbation">Classical Perturbation</h2>
-<p>Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \(F=ma\), we have \(F=m\ddot{x}\). If there is a restoring force with different direction compared to direction of motion, we get \(-\alpha x=m \ddot{x}\), where \(\alpha \in \mathbb{R}_+\). This is solved using a sinusoidal ansatz. This corresponds to simple harmonic motion!</p>
+<p>In an inertial frame, momentum is a <em>conserved quantity</em>, meaning that it is not affected by external forces in a closed system. This is an example of one of the most important concepts in physics - translational symmetry.</p>
 
-<p>Now, refering to my post in <a href="/Conservations/">Conservations in Physics</a>, we can quickly obtain:</p>
+<p>The astute reader can notice that this is highly unobvious — how can a system allow and ensure a symmetry? Below, I aim to provide a intuitive explanation using more advanced classical mechanics techniques, namely the Lagragian Dynamics Formulation, developed in 1788 by Joseph-Louis Lagrange.</p>
 
-\[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
+<p>The equation of motion of an object in Lagrangian Formulation is given by:</p>
 
-<p>I’ll leave this as an exercise for the reader.</p>
+\[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = \frac{\partial \mathcal{L}}{\partial q_j}\]
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 1: We<span class="s1">'re dealing with Central Force, only radial force matters
-</span></code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 2: Use Newton<span class="s1">'s Second Law
-</span></code></pre></div></div>
-<p>Now consider the question below:</p>
+<p>where \(\mathcal{L}=T-V\).</p>
 
-<p>There is a small perbuation around a circle with radius \(a\) <em>i.e.</em> \(r(t)=a+\rho(t)\) with \(\rho(0) \ll a\). How will the orbit look like?</p>
+<p>Assuming we can equate the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q_j} = 0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = 0\)
+, which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\) is a constant. There appears to be a “freedom” in the system!</p>
 
-<p>Substituting into our orbit equation we have:</p>
+<p>We can verify this is true for a 1 dimensional object. Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), we have \(\mathcal{L}=\frac{1}{2}m\dot{x}^2\). Indeed, \(m \dot{x}\) is the constant obtained, which is the standard result in classical mechanics.</p>
 
-\[\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m}\]
+<h3 id="concluding-remarks">Concluding Remarks</h3>
 
-<p>Here we’ll use binomial expansion for negative coefficients. For more details view the wikipedia page for <a href="https://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative Binomial Distribution</a></p>
+<p>This is expected to be true due to Noether’s Theorem, which states that every symmetry will  lead to a conservation, <a href="/NoetherTheorem/">which is explained here.</a></p>
 
-<p>However there’s a nice trick by differentiating the taylor series.</p>
+<p>Therefore, the energy of a system being independent of position (lack of \(x\) in expression, while \(\dot{x}\) is present) causes a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate (\(x\) in our case). Momentum is not conserved if the energy term involves spatial coordinates, say in a particle is in the presence of electromagnetic force.</p>
 
-\[\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m}\]
+<p>The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - \mathcal{L}\). The reader can show that this corresponds to the energy of the system, which is \(T\). More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function).</p>
 
-<p>Further rearranging will get you:</p>
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
 
-\[\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0\]
+<ul>
+  <li>What is also conserved in the system mentioned above? (Difficulty: F4 HKDSE)</li>
+  <li>
+    <p>What are the restrictions of the form taken by the potential, if so, why? Why is the potential taken as \(0\)?  (Difficulty: F6 HKDSE)</p>
+  </li>
+  <li>
+    <p>By writing down the Lagrangian for a ball undergoing circular motion, show that the angular momentum is conserved.  (Difficulty: Year 1-2 University)</p>
+  </li>
+  <li>(*) Given that \(\mathcal{L}(\underline{r}, \underline{\dot{r}}, t)=T-\tilde{V}=\frac{1}{2} m|\underline{\dot{r}}|^2-e[\phi(\underline{r}, t)-\underline{\dot{r}} \cdot \underline{A}(\underline{r}, t)]\) is the Lagrangian of a particle in a EM field, show that \(p=mv+eA\). (Difficulty: Year 2-3 University)</li>
+</ul>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
-</code></pre></div></div>
-
-<p>Assuming knowledge from <strong>Differential Equations</strong>, we have a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
-
-\[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
-
-<p>Hence if the above stands we have:</p>
-
-\[\omega^2 \equiv \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\]
-
-<p>This describes a simple harmonic motion with \(\rho(t)=A \cos (\omega t+\phi)\).</p>
-
-<p>The picture below will confirm our intuition is indeed correct!</p>
-
-<p><img src="/assets/images/Orbit.png" alt="" srcset="    /assets/resized/Orbit-600x496.png 600w, /assets/images/Orbit.png 865w" /></p>
-
-<h2 id="quantum-perturbation">Quantum Perturbation</h2>
-
-<p>Assume the Hamiltonian \(H\) cannot be solved analytically. However, if it is <em>close</em> to a solvable Hamiltonian, say \(H_0\), there are ways to approximate it. This technique is called “Perturbation” and the theory is called “Perturbation Theory”. i.e., we have:</p>
-
-\[\hat{H}=\hat{H_0}+\hat{H'}\]
-
-<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector, or, if you are mathematically minded, the geometric multiplicity is smaller than the algebraic multiplicity.</p>
-
-<p>By doing a taylor series, we obtain: (the eigenstates are <strong>no longer normalized</strong>!)</p>
-
-\[E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+...\]
-
-<p>and</p>
-
-\[|n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\]
-
-<p>where the (0), (1), (2) implies taking to the 0th, 1st, 2nd order respectively.</p>
-
-<p>If we expand everything, we will get:</p>
-
-\[\begin{aligned}
-&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)= \\
-&amp; \quad\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)
-\end{aligned}\]
-
-<p>By comparing terms, we get:</p>
-
-\[\lambda^1:  \left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle\]
-
-<p>Consider Left hand side. From the term:</p>
-
-\[\hat{H}_0 \left|n^{(1)}\right\rangle\]
-
-<p>We can operate \(\langle k^{(0)} \,\lvert\) and obtain:</p>
-
-\[\left\langle k^{(0)}\left|\hat{H}_0\right| n^{(1)}\right\rangle = E_k^{(0)}\left\langle k^{(0)} \mid n^{(1)}\right\rangle\]
-
-<p>Hence we have:</p>
-
-\[\begin{aligned}
-    &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
-    &amp;\implies (E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
-
-<p>Choosing \(k=n\) will give us:</p>
-
-\[\begin{aligned}
-E_n^{(1)} \delta_{n, n}-\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle=0 \\
-\implies E_n^{(1)}=\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
-
-<p>The astute reader will find out that this is an expectation value! So the expected “change in energy” is just the expectation of the perturbation!</p>
-
-<h3 id="classic-example">Classic Example</h3>
-
-<p>Now consider a standard problem in perturbation:</p>
-
-\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right)\]
-
-<p>between \(-a\) to \(a\). What is the ground state perturbation?</p>
-
-<p>From above, we have:</p>
-
-\[\begin{aligned}
-\Delta E_{n} &amp; =\left\langle\psi^{(n)}\mid V \mid \psi^{(n)}\right\rangle \\
-&amp; =\int_{-a}^{+a}  \left[\psi^{(n)}(x)^*\right] V(x) \left[\psi^{(n)}(x)\right]  dx
-\end{aligned}\]
-
-<p>Considering :</p>
-
-\[\psi^1(x)=\frac{1}{\sqrt{a}} \cos{\left(\frac{\pi x}{2a}\right)}\]
-
-<p>We can substitute and get:</p>
-
-\[\begin{aligned}
-\Delta E_n&amp;=\frac{V_0}{a} \int_{-a}^{+a} \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) dx \\
-&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{+\pi / 2}  (\cos ^3 \theta)  d\theta\\
-&amp;=\frac{8 V_0}{3 \pi} 
-\end{aligned}\]
-
-<p>The details are left for an exercise for the reader/WolfamAlpha!</p>
-
-<p><strong>TO BE CONTINUED!</strong></p>
-
+<p>Last Updated - 3/6/2024</p>
 
         
       </section>
@@ -527,9 +431,7 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#perturbations" class="page__taxonomy-item p-category" rel="tag">perturbations</a><span class="sep">, </span>
-    
-      <a href="/tags/#small" class="page__taxonomy-item p-category" rel="tag">Small</a>
+      <a href="/tags/#trans" class="page__taxonomy-item p-category" rel="tag">Trans</a>
     
     </span>
   </p>
@@ -539,7 +441,7 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-13T00:00:00+08:00">January 13, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+08:00">April 8, 2024</time></p>
 
       </footer>
 
@@ -548,22 +450,22 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+A+view+on+Classical+Mechanics+and+Quantum+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Why+is+Momentum+Conserved%3F%20https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/HKDSE/" class="pagination--pager" title="Classical Mechanics in HKDSE context
+      <a href="/MandelbrotSet/" class="pagination--pager" title="Julia Sets and the Mandelbrot Set
 ">Previous</a>
     
     
-      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series
+      <a href="/TheoremaEgregium/" class="pagination--pager" title="Theorema Egregium — The reason why all maps are wrong
 ">Next</a>
     
   </nav>
@@ -578,6 +480,94 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/LaplaceTransforms/" rel="permalink">Integration by Laplace Transform
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/CarmichaelFunction/" rel="permalink">Carmichael Function
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is a gentle introduction on the famous Carmichael Function.
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -635,53 +625,7 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Momentum/" rel="permalink">Why is Momentum Conserved?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">In this article we explore the conservation of momentum using Lagrangian Dynamics.
-Momentum in Physics
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Mandelbrot/" rel="permalink">Julia Sets and the Mandelbrot Set
+        <a href="/MandelbrotSet/" rel="permalink">Julia Sets and the Mandelbrot Set
 </a>
       
     </h2>
@@ -709,49 +653,6 @@ Momentum in Physics
     <p class="archive__item-excerpt" itemprop="description">Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.
 
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
   </article>
 </div>
 
@@ -886,8 +787,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/SmallPerbuations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/SmallPerbuations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/MomentumConservation/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/MomentumConservation"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

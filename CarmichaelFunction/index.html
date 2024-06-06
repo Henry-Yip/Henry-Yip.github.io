@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Conservations in Physics - Noether’s Theorem | Henry Yip</title>
-<meta name="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
+<!-- begin _includes/seo.html --><title>Carmichael Function | Henry Yip</title>
+<meta name="description" content="This post is a gentle introduction on the famous Carmichael Function.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Conservations in Physics - Noether’s Theorem">
-<meta property="og:url" content="https://henry-yip.github.io/Conservations/">
+<meta property="og:title" content="Carmichael Function">
+<meta property="og:url" content="https://henry-yip.github.io/CarmichaelFunction/">
 
 
-  <meta property="og:description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-12-25T00:00:00+08:00">
+  <meta property="og:description" content="This post is a gentle introduction on the famous Carmichael Function.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-06T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Conservations/">
+
+<link rel="canonical" href="https://henry-yip.github.io/CarmichaelFunction/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Conservations in Physics - Noether's Theorem</li>
+        <li class="current">Carmichael Function</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Conservations in Physics - Noether’s Theorem">
-    <meta itemprop="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
-    <meta itemprop="datePublished" content="2022-12-25T00:00:00+08:00">
+    <meta itemprop="headline" content="Carmichael Function">
+    <meta itemprop="description" content="This post is a gentle introduction on the famous Carmichael Function.">
+    <meta itemprop="datePublished" content="2024-06-06T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Conservations/" class="u-url" itemprop="url">Conservations in Physics - Noether’s Theorem
+            <a href="https://henry-yip.github.io/CarmichaelFunction/" class="u-url" itemprop="url">Carmichael Function
 </a>
           </h1>
           
@@ -353,7 +353,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          less than 1 minute read
         
       </span>
     
@@ -367,92 +367,26 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
-              <ul class="toc__menu"><li><a href="#proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</a><ul><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul></li><li><a href="#finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Carmichael Function</h4></header>
+              <ul class="toc__menu"><li><a href="#motivation">Motivation</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.</p>
+        <p>This post is a gentle introduction on the famous Carmichael Function.</p>
 
-<h2 id="proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</h2>
+<h2 id="motivation">Motivation</h2>
+<p>I have been given this question in my first Mathematics Class on proving theorems, <a href="http://www.drps.ed.ac.uk/22-23/dpt/cxmath08071.htm">Accelerated Proofs and Problem Solving</a>:</p>
 
-<p>The proof of Noether’s Theorem is quite involved. However, it is a good exercise to show the proof for one-dimensional case.</p>
+<p>Find \(a\) such that</p>
 
-<p>Assume the system has translational symmetry: \(\phi: q \mapsto q + \delta q\). Now assume a trajectory travels from the more bolded line (in the image below) to the less bolded line, in time \(\tau\).</p>
+\[3^{124} \equiv a \space \text{mod} \space 100\]
 
-<p>Using the definition of action: \(S = \int L\), we arrive at \(\Delta S=\int \Delta L\). If \(L\) only depends on \(\dot{q}\), \(\Delta L \approx \left(\frac{\partial L}{\partial \dot{q}}\right) \Delta \dot{q}\). From the image, it is also obvious that \(\Delta \dot{q}=\pm \frac{\delta q}{\tau}\).</p>
+<p>The answer is \(81\) upon my “discovery” (by clicking the calculator \(19\) times) that</p>
 
-\[\Delta S=\int \Delta L \approx \int \frac{\partial L}{\partial \dot{q}} \Delta \dot{q} \approx \int \frac{\partial L}{\partial \dot{q}}\left( \pm \frac{\delta q}{\tau}\right) \approx \pm \frac{\partial L}{\partial \dot{q}} \delta q= \pm \frac{\partial L}{\partial \dot{q}} \varphi .\]
+\[3^{20} \equiv 1 \space \text{mod} \space 100\]
 
-<p>As \(\Delta S\) is \(0\), we have:</p>
-
-\[\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_0\right)=\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_1\right)\]
-
-<p>This result is also verified <a href="/Conservations/">in my other post</a>.</p>
-
-<p><img src="/assets/images/Noether.png" alt="" srcset="    /assets/resized/Noether-600x502.png 600w, /assets/images/Noether.png 1110w" /></p>
-
-<p>(Image from Wikipedia)</p>
-
-<h3 id="exercises-for-the-readers">Exercises for the readers</h3>
-<ul>
-  <li>Explain the reason for the \(\pm\) sign in \(\Delta L\). What does it correspond to? (Difficulty: University Year 1)</li>
-  <li>Why is the total action equal to \(0\)? (Difficulty: University Year 2-3)</li>
-  <li>Why is \(\dot{q}\) assumed to be the only contributing term? (Hint: \(\tau\) is taken to appraoch \(0\)) (Difficulty: University Year 2-3)</li>
-</ul>
-
-<h2 id="finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</h2>
-
-\[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
-
-<p>By <strong>Chain Rule</strong>,</p>
-
-\[\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\]
-
-<p>And</p>
-
-\[\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\]
-
-<p>Further Differentiation yields:</p>
-
-\[\begin{aligned}
-\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
-&amp; =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
-&amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
-\end{aligned}\]
-
-<p>Since the force is a central force, we have:</p>
-
-\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\]
-
-<p>We can quickly identify two equations:</p>
-
-\[\begin{aligned}
-\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m \\
-2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
-\end{aligned}\]
-
-<p>From the second equation:</p>
-
-\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
-
-\[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
-
-<p>Hence:</p>
-
-\[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
-
-<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
-<ul>
-  <li>What is being conserved in rotational symmetry? (Difficulty: HKDSE F4)</li>
-  <li>Show the results above using Lagrangian Dynamics. (This is a much faster method) (Difficulty: University Year 2-3)</li>
-</ul>
-
-<h2 id="credits">Credits</h2>
-<p>This section is heavily inspired by 3 sources - Prof Arjun Berera’s Introductory Dynamics course, Dr Jenni Smillie’s Lagrangian Dynamics, and the wikipedia page on Noether’s Theorem.</p>
-
-<p>Last Updated - 3/6/2024</p>
+<p>Is it possible to generalize this?</p>
 
 
         
@@ -470,7 +404,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#appendix" class="page__taxonomy-item p-category" rel="tag">Appendix</a>
+      <a href="/tags/#trans" class="page__taxonomy-item p-category" rel="tag">Trans</a>
     
     </span>
   </p>
@@ -480,7 +414,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-25T00:00:00+08:00">December 25, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-06T00:00:00+08:00">June 6, 2024</time></p>
 
       </footer>
 
@@ -489,22 +423,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Conservations+in+Physics+-+Noether%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FConservations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Carmichael+Function%20https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FConservations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FConservations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FCarmichaelFunction%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Physics/Astrophysics-1/" class="pagination--pager" title="PHYS08050 (Introductory Astrophysics) Course Notes
+      <a href="/TheoremaEgregium/" class="pagination--pager" title="Theorema Egregium — The reason why all maps are wrong
 ">Previous</a>
     
     
-      <a href="/HKDSE/" class="pagination--pager" title="Classical Mechanics in HKDSE context
+      <a href="/LaplaceTransforms/" class="pagination--pager" title="Integration by Laplace Transform
 ">Next</a>
     
   </nav>
@@ -519,6 +453,49 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/LaplaceTransforms/" rel="permalink">Integration by Laplace Transform
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve ...</p>
+  </article>
+</div>
+
         
           
 
@@ -576,7 +553,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Momentum/" rel="permalink">Why is Momentum Conserved?
+        <a href="/MomentumConservation/" rel="permalink">Why is Momentum Conserved?
 </a>
       
     </h2>
@@ -622,7 +599,7 @@ Momentum in Physics
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Mandelbrot/" rel="permalink">Julia Sets and the Mandelbrot Set
+        <a href="/MandelbrotSet/" rel="permalink">Julia Sets and the Mandelbrot Set
 </a>
       
     </h2>
@@ -650,49 +627,6 @@ Momentum in Physics
     <p class="archive__item-excerpt" itemprop="description">Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.
 
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
   </article>
 </div>
 
@@ -827,8 +761,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Conservations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Conservations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/CarmichaelFunction/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/CarmichaelFunction"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

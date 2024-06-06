@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Tensors and its transformations | Henry Yip</title>
-<meta name="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
+<!-- begin _includes/seo.html --><title>Julia Sets and the Mandelbrot Set | Henry Yip</title>
+<meta name="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Tensors and its transformations">
-<meta property="og:url" content="https://henry-yip.github.io/Transformations/">
+<meta property="og:title" content="Julia Sets and the Mandelbrot Set">
+<meta property="og:url" content="https://henry-yip.github.io/MandelbrotSet/">
 
 
-  <meta property="og:description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-02-18T00:00:00+08:00">
+  <meta property="og:description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-03-31T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Transformations/">
+
+<link rel="canonical" href="https://henry-yip.github.io/MandelbrotSet/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Tensors and its transformations</li>
+        <li class="current">Julia Sets and the Mandelbrot Set</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Tensors and its transformations">
-    <meta itemprop="description" content="Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.">
-    <meta itemprop="datePublished" content="2024-02-18T00:00:00+08:00">
+    <meta itemprop="headline" content="Julia Sets and the Mandelbrot Set">
+    <meta itemprop="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
+    <meta itemprop="datePublished" content="2024-03-31T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Transformations/" class="u-url" itemprop="url">Tensors and its transformations
+            <a href="https://henry-yip.github.io/MandelbrotSet/" class="u-url" itemprop="url">Julia Sets and the Mandelbrot Set
 </a>
           </h1>
           
@@ -367,128 +367,63 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Transformations</h4></header>
-              <ul class="toc__menu"><li><a href="#definition">Definition</a></li><li><a href="#another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</a></li><li><a href="#sample-problem">Sample Problem</a><ul><li><a href="#solution">Solution</a></li></ul></li><li><a href="#credits">Credits</a></li><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
+              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#exercises-for-the-readers">Exercises for the Readers</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example.</p>
+        <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
 
-<h2 id="definition">Definition</h2>
+<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\), where \(c\) is a constant.</p>
 
-<p>Consider a rotation of the \(\{e_i\}\) basis (frame \(S\)) to the \(\{e'_i\}\) basis (frame \(S'\)). This is called a passive rotation.</p>
+<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, as the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
 
-<p>The components of two arbitrary vectors \(\mathbf{a}\) and \(\mathbf{b}\) in the two frames are related by:</p>
+\[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
 
-\[a'_i = \ell_{ij} a_j\]
+<p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration of the function \(f_c\) on \(z\).</p>
 
-\[b'_i = \ell_{ij} b_j\]
+<p>Furthermore, define \(n_{\text{max}, R}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\) (In the graphs below, we take \(R=1000\)).</p>
 
-<p>\(T'_{ijk\cdots op} = \ell_{ir} \ell_{js} \ell_{kt} \cdots \ell_{ov} \ell_{pw} T_{rst\cdots vw}\) is the transformation law for a tensor.</p>
+<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_{\text{max}, R}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
 
-<p>In the two dimensional case, this is equivalent to:</p>
+<p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
 
-\[T'_{ij} = \ell_{ip} \ell_{jq} T_{pq}\]
+<p>We thus obtain the Mandelbrot Set:</p>
 
-<p>The astute reader will realize this is equivalent to:</p>
+<p><img src="/assets/images/Mandelbrot_Set.png" alt="" srcset="    /assets/resized/Mandelbrot_Set-600x450.png 600w, /assets/images/Mandelbrot_Set.png 640w" /></p>
 
-\[T'=LTL\]
+<p>Notice that the boundary of the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
 
-<h2 id="another-way-to-view-tensor-transformations">Another way to view Tensor Transformations</h2>
+<p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture, which states that the Mandelbrot set is locally connected.</p>
 
-<p>\(T\) maps \(v\) to \(Tv\),</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b005iHf8Z3g?si=aojjMnsA4MLepXHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
-<p>\(T'\) maps \(v'\) to \(T'v'\).</p>
+<h2 id="connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</h2>
 
-<p>We can map from \(v\) to \(Tv\) in the way below:</p>
+<p>We can colour Julia Sets using a similar method as above: For a fixed \(c\), find the \(n_\text{max}\) for each \(z\). For a higher \(n_\text{max}\), denote it with, say, a lighter colour (as long as the colour is contrast is large enough)</p>
 
+<p><img src="/assets/images/Julia_Set.png" alt="" srcset="    /assets/resized/Julia_Set-600x485.png 600w, /assets/images/Julia_Set.png 1117w" /></p>
+
+<h2 id="dichotomy-theorem">Dichotomy theorem</h2>
+
+<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. Observe the image above. As it is not connected, the corresponding \(c\) (which is \(0.9i\)) is not in the Mandelbrot Set! (we can observe this in Figure 1).</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Filled-in Julia Sets: Given \(c\) (defined each time), find behaviour of \(z\) (upon continuous iterations of \(f_c\)).</p>
+
+<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\). (Whether the value of \(c\) will make \(z=0\) escape or not).</p>
+
+<p>The two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected).</p>
+
+<h2 id="exercises-for-the-readers">Exercises for the Readers</h2>
 <ul>
-  <li>Rotate \(L\) to new basis</li>
-  <li>Apply \(T'\)</li>
-  <li>Rotate back</li>
+  <li>Write a python code that plots the Mandelbrot set, and the Julia set. (Difficulty: University Year 1)</li>
+  <li>Defining \(T=\left\{\left(x, \sin \frac{1}{x}\right): x \in(0,1]\right\} \cup\{(0,0)\}\), show that it is connected but not locally connected. Show the relation of \(T\) to the Mandelbrot set. (Difficultly: University Year 2-3)</li>
 </ul>
 
-<p>This gives us: \(Tv=L^{-1}T'Lv\).</p>
-
-<p>From which we can obtain \(T'=LTL^{-1}\).</p>
-
-<h2 id="sample-problem">Sample Problem</h2>
-
-<p>The moments of inertia along the principal axes \(\underline{e}_1, \underline{e}_2, \underline{e}_3\) of a rigid body are 1,2 and 3 respectively.  An observer has a coordinate basis \(\underline{e}_1^{\prime}=\frac{\sqrt{2}}{2}\left(\underline{e}_1+ \underline{e}_2\right), \underline{e}_2^{\prime}=\frac{\sqrt{2}}{2}\left(-\underline{e}_1+ \underline{e}_2\right)\) and \(\underline{e}_3^{\prime}=\underline{e}_3\). What are the values of the components of the inertia tensor measured by the observer?</p>
-
-<h3 id="solution">Solution</h3>
-
-<p>Using \(R_{ij}=\underline{e_i}' \cdot \underline{e_j}\), we get:</p>
-
-\[R=\left(\begin{array}{ccc}
-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
--\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{array}\right)\]
-
-<p>And also:</p>
-
-\[I=\left(\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 2 &amp; 0 \\
-0 &amp; 0 &amp; 3 \\
-\end{array}\right)\]
-
-<p>One might be tempted to use coordinate transformations, i.e. \(x_j=R_{ij} x_i\). However, this is not the case here. The key is using the definition below:</p>
-
-\[\begin{aligned}
-I_{i j}^{\prime} &amp; =l_{i p} l_{j q} I_{p q} \\
-&amp; =(L)_{i p} I_{p q}\left(L^T\right)_{q j} \\
-&amp; =\left(L I L^T\right)_{i j}
-\end{aligned}\]
-
-<p>We know that rotation matrices satisfy \(L^T=L^{-1}\), hence:</p>
-
-\[I_{i j}^{\prime} = \left(L I L^{-1}\right)_{i j}\]
-
-<p>Hence, multiplying will get us:</p>
-
-\[\begin{aligned}
-I' &amp;= \left(\begin{array}{ccc}
-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
--\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{array}\right) \left(\begin{array}{ccc}
-1 &amp; 0 &amp; 0 \\
-0 &amp; 2 &amp; 0 \\
-0 &amp; 0 &amp; 3 \\
-\end{array}\right) \left(\begin{array}{ccc}
-\frac{\sqrt{2}}{2} &amp; \frac{-\sqrt{2}}{2} &amp; 0 \\
-\frac{\sqrt{2}}{2} &amp; \frac{\sqrt{2}}{2} &amp; 0 \\
-0 &amp; 0 &amp; 1
-\end{array}\right) \\
-&amp;=\left(\begin{array}{ccc}
-\frac{3}{2} &amp; \frac{1}{2} &amp; 0 \\
--\frac{1}{2} &amp; \frac{3}{2} &amp; 0 \\
-0 &amp; 0 &amp; 3
-\end{array}\right) 
-\end{aligned}\]
-
-<h2 id="credits">Credits</h2>
-
-<p>The intuition part is inspired by <a href="https://math.stackexchange.com/questions/2303869/tensor-rotation">this post</a>. The definition of tensors is from <a href="https://www2.ph.ed.ac.uk/~bjp/emr/emr.pdf">Dr BJ Pendelton’s Notes</a>. The motivation part is inspired by <a href="https://www2.ph.ed.ac.uk/~bjp/emr/tutorial04.pdf">Dr BJ Pendelton’s Problem Sheet</a>.</p>
-
-<h2 id="exercises-for-the-readers">Exercises for the readers</h2>
-<ul>
-  <li>What rank is a vector? What rank is a scalar? (Difficulty: University Year 2)</li>
-  <li>Show: 
-\(\det L = +1\) for rotations and 
-\(\det L = -1\) for reflections and inversions of basis 
-(Difficulty: University Year 1-2)</li>
-  <li>Consider \(\mathbf{c} = \mathbf{a} \times \mathbf{b}\). Show that \(\underline{\mathbf{c'}} = \det L \, \underline{\mathbf{c}}\) by considering rotations, reflections and inversion. This is the definition of a psuedovector. (Difficulty: University Year 2)</li>
-  <li>State an example of a psuedovector in physics (Difficulty: University Year 2)</li>
-  <li>(*) Irrelevant but Interesting: Define the Levi-Civita symbol and show that it is a pseudotensor of rank 3 (Difficulty: University Year 2-3)</li>
-  <li>(**) State an example of a pseudoscalar in physics (Difficulty: University Year 3-4).  (Hint: Helicity)</li>
-</ul>
-
-<p>Last Updated - 4/6/2024</p>
-
+<p>Last Updated - 3/6/2024</p>
 
         
       </section>
@@ -515,7 +450,7 @@ I' &amp;= \left(\begin{array}{ccc}
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-02-18T00:00:00+08:00">February 18, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-31T00:00:00+08:00">March 31, 2024</time></p>
 
       </footer>
 
@@ -524,22 +459,22 @@ I' &amp;= \left(\begin{array}{ccc}
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Tensors+and+its+transformations%20https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Julia+Sets+and+the+Mandelbrot+Set%20https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FTransformations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Multivariable_Calc/" class="pagination--pager" title="More on Multivariable Calculus
+      <a href="/ESRAProject/" class="pagination--pager" title="Self-Initiated Reserach Group Project
 ">Previous</a>
     
     
-      <a href="/SummerResearch/" class="pagination--pager" title="Overview of the Two-body Problem
+      <a href="/MomentumConservation/" class="pagination--pager" title="Why is Momentum Conserved?
 ">Next</a>
     
   </nav>
@@ -554,6 +489,94 @@ I' &amp;= \left(\begin{array}{ccc}
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/LaplaceTransforms/" rel="permalink">Integration by Laplace Transform
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/CarmichaelFunction/" rel="permalink">Carmichael Function
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is a gentle introduction on the famous Carmichael Function.
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -611,7 +634,7 @@ I' &amp;= \left(\begin{array}{ccc}
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Momentum/" rel="permalink">Why is Momentum Conserved?
+        <a href="/MomentumConservation/" rel="permalink">Why is Momentum Conserved?
 </a>
       
     </h2>
@@ -640,94 +663,6 @@ I' &amp;= \left(\begin{array}{ccc}
 Momentum in Physics
 
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Mandelbrot/" rel="permalink">Julia Sets and the Mandelbrot Set
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
   </article>
 </div>
 
@@ -862,8 +797,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Transformations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Transformations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/MandelbrotSet/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/MandelbrotSet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

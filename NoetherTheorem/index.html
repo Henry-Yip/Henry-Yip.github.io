@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Why is Momentum Conserved? | Henry Yip</title>
-<meta name="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
+<!-- begin _includes/seo.html --><title>Conservations in Physics - Noether’s Theorem | Henry Yip</title>
+<meta name="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Why is Momentum Conserved?">
-<meta property="og:url" content="https://henry-yip.github.io/Momentum/">
+<meta property="og:title" content="Conservations in Physics - Noether’s Theorem">
+<meta property="og:url" content="https://henry-yip.github.io/NoetherTheorem/">
 
 
-  <meta property="og:description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-04-08T00:00:00+08:00">
+  <meta property="og:description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-12-25T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Momentum/">
+
+<link rel="canonical" href="https://henry-yip.github.io/NoetherTheorem/">
 
 
 
@@ -187,7 +187,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Why is Momentum Conserved?</li>
+        <li class="current">Conservations in Physics - Noether's Theorem</li>
       
     
   </ol>
@@ -327,16 +327,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Why is Momentum Conserved?">
-    <meta itemprop="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics.Momentum in Physics">
-    <meta itemprop="datePublished" content="2024-04-08T00:00:00+08:00">
+    <meta itemprop="headline" content="Conservations in Physics - Noether’s Theorem">
+    <meta itemprop="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
+    <meta itemprop="datePublished" content="2022-12-25T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Momentum/" class="u-url" itemprop="url">Why is Momentum Conserved?
+            <a href="https://henry-yip.github.io/NoetherTheorem/" class="u-url" itemprop="url">Conservations in Physics - Noether’s Theorem
 </a>
           </h1>
           
@@ -367,54 +367,93 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Source of Momentum</h4></header>
-              <ul class="toc__menu"><li><a href="#momentum-in-physics">Momentum in Physics</a><ul><li><a href="#concluding-remarks">Concluding Remarks</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
+              <ul class="toc__menu"><li><a href="#proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</a><ul><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul></li><li><a href="#finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>In this article we explore the conservation of momentum using Lagrangian Dynamics.</p>
-<h2 id="momentum-in-physics">Momentum in Physics</h2>
+        <p>This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.</p>
 
-<p>Momentum is defined by \(p=mv\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force.</p>
+<h2 id="proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</h2>
 
-<p>In an inertial frame, momentum is a <em>conserved quantity</em>, meaning that it is not affected by external forces in a closed system. This is an example of one of the most important concepts in physics - translational symmetry.</p>
+<p>The proof of Noether’s Theorem is quite involved. However, it is a good exercise to show the proof for one-dimensional case.</p>
 
-<p>The astute reader can notice that this is highly unobvious — how can a system allow and ensure a symmetry? Below, I aim to provide a intuitive explanation using more advanced classical mechanics techniques, namely the Lagragian Dynamics Formulation, developed in 1788 by Joseph-Louis Lagrange.</p>
+<p>Assume the system has translational symmetry: \(\phi: q \mapsto q + \delta q\). Now assume a trajectory travels from the more bolded line (in the image below) to the less bolded line, in time \(\tau\).</p>
 
-<p>The equation of motion of an object in Lagrangian Formulation is given by:</p>
+<p>Using the definition of action: \(S = \int L\), we arrive at \(\Delta S=\int \Delta L\). If \(L\) only depends on \(\dot{q}\), \(\Delta L \approx \left(\frac{\partial L}{\partial \dot{q}}\right) \Delta \dot{q}\). From the image, it is also obvious that \(\Delta \dot{q}=\pm \frac{\delta q}{\tau}\).</p>
 
-\[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = \frac{\partial \mathcal{L}}{\partial q_j}\]
+\[\Delta S=\int \Delta L \approx \int \frac{\partial L}{\partial \dot{q}} \Delta \dot{q} \approx \int \frac{\partial L}{\partial \dot{q}}\left( \pm \frac{\delta q}{\tau}\right) \approx \pm \frac{\partial L}{\partial \dot{q}} \delta q= \pm \frac{\partial L}{\partial \dot{q}} \varphi .\]
 
-<p>where \(\mathcal{L}=T-V\).</p>
+<p>As \(\Delta S\) is \(0\), we have:</p>
 
-<p>Assuming we can equate the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q_j} = 0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = 0\)
-, which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\) is a constant. There appears to be a “freedom” in the system!</p>
+\[\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_0\right)=\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_1\right)\]
 
-<p>We can verify this is true for a 1 dimensional object. Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), we have \(\mathcal{L}=\frac{1}{2}m\dot{x}^2\). Indeed, \(m \dot{x}\) is the constant obtained, which is the standard result in classical mechanics.</p>
+<p>This result is also verified <a href="/NoetherTheorem/">in my other post</a>.</p>
 
-<h3 id="concluding-remarks">Concluding Remarks</h3>
+<p><img src="/assets/images/Noether.png" alt="" srcset="    /assets/resized/Noether-600x502.png 600w, /assets/images/Noether.png 1110w" /></p>
 
-<p>This is expected to be true due to Noether’s Theorem, which states that every symmetry will  lead to a conservation, <a href="/Conservations/">which is explained here.</a></p>
+<p>(Image from Wikipedia)</p>
 
-<p>Therefore, the energy of a system being independent of position (lack of \(x\) in expression, while \(\dot{x}\) is present) causes a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate (\(x\) in our case). Momentum is not conserved if the energy term involves spatial coordinates, say in a particle is in the presence of electromagnetic force.</p>
-
-<p>The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - \mathcal{L}\). The reader can show that this corresponds to the energy of the system, which is \(T\). More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function).</p>
-
-<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
-
+<h3 id="exercises-for-the-readers">Exercises for the readers</h3>
 <ul>
-  <li>What is also conserved in the system mentioned above? (Difficulty: F4 HKDSE)</li>
-  <li>
-    <p>What are the restrictions of the form taken by the potential, if so, why? Why is the potential taken as \(0\)?  (Difficulty: F6 HKDSE)</p>
-  </li>
-  <li>
-    <p>By writing down the Lagrangian for a ball undergoing circular motion, show that the angular momentum is conserved.  (Difficulty: Year 1-2 University)</p>
-  </li>
-  <li>(*) Given that \(\mathcal{L}(\underline{r}, \underline{\dot{r}}, t)=T-\tilde{V}=\frac{1}{2} m|\underline{\dot{r}}|^2-e[\phi(\underline{r}, t)-\underline{\dot{r}} \cdot \underline{A}(\underline{r}, t)]\) is the Lagrangian of a particle in a EM field, show that \(p=mv+eA\). (Difficulty: Year 2-3 University)</li>
+  <li>Explain the reason for the \(\pm\) sign in \(\Delta L\). What does it correspond to? (Difficulty: University Year 1)</li>
+  <li>Why is the total action equal to \(0\)? (Difficulty: University Year 2-3)</li>
+  <li>Why is \(\dot{q}\) assumed to be the only contributing term? (Hint: \(\tau\) is taken to appraoch \(0\)) (Difficulty: University Year 2-3)</li>
 </ul>
 
+<h2 id="finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</h2>
+
+\[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
+
+<p>By <strong>Chain Rule</strong>,</p>
+
+\[\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\]
+
+<p>And</p>
+
+\[\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\]
+
+<p>Further Differentiation yields:</p>
+
+\[\begin{aligned}
+\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
+&amp; =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
+&amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\end{aligned}\]
+
+<p>Since the force is a central force, we have:</p>
+
+\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\]
+
+<p>We can quickly identify two equations:</p>
+
+\[\begin{aligned}
+\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m \\
+2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
+\end{aligned}\]
+
+<p>From the second equation:</p>
+
+\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
+
+\[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
+
+<p>Hence:</p>
+
+\[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
+
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+<ul>
+  <li>What is being conserved in rotational symmetry? (Difficulty: HKDSE F4)</li>
+  <li>Show the results above using Lagrangian Dynamics. (This is a much faster method) (Difficulty: University Year 2-3)</li>
+</ul>
+
+<h2 id="credits">Credits</h2>
+<p>This section is heavily inspired by 3 sources - Prof Arjun Berera’s Introductory Dynamics course, Dr Jenni Smillie’s Lagrangian Dynamics, and the wikipedia page on Noether’s Theorem.</p>
+
 <p>Last Updated - 3/6/2024</p>
+
 
         
       </section>
@@ -431,7 +470,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#trans" class="page__taxonomy-item p-category" rel="tag">Trans</a>
+      <a href="/tags/#appendix" class="page__taxonomy-item p-category" rel="tag">Appendix</a>
     
     </span>
   </p>
@@ -441,7 +480,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+08:00">April 8, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-25T00:00:00+08:00">December 25, 2022</time></p>
 
       </footer>
 
@@ -450,22 +489,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Why+is+Momentum+Conserved%3F%20https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Conservations+in+Physics+-+Noether%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMomentum%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Mandelbrot/" class="pagination--pager" title="Julia Sets and the Mandelbrot Set
+      <a href="/KeplerVirial/" class="pagination--pager" title="Two Laws Related to Planetary Revolution
 ">Previous</a>
     
     
-      <a href="/TheoremaEgregium/" class="pagination--pager" title="Theorema Egregium — The reason why all maps are wrong
+      <a href="/Perbuations/" class="pagination--pager" title="Perturbations - A view on Classical Mechanics and Quantum Mechanics
 ">Next</a>
     
   </nav>
@@ -480,6 +519,94 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/LaplaceTransforms/" rel="permalink">Integration by Laplace Transform
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/CarmichaelFunction/" rel="permalink">Carmichael Function
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This post is a gentle introduction on the famous Carmichael Function.
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -537,7 +664,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/Mandelbrot/" rel="permalink">Julia Sets and the Mandelbrot Set
+        <a href="/MomentumConservation/" rel="permalink">Why is Momentum Conserved?
 </a>
       
     </h2>
@@ -562,95 +689,8 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ESRAProject/" rel="permalink">Self-Initiated Reserach Group Project
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/SummerResearch/" rel="permalink">Overview of the Two-body Problem
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Here I will present the exact solution of the two body problem.
+    <p class="archive__item-excerpt" itemprop="description">In this article we explore the conservation of momentum using Lagrangian Dynamics.
+Momentum in Physics
 
 </p>
   </article>
@@ -787,8 +827,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Momentum/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Momentum"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/NoetherTheorem/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/NoetherTheorem"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

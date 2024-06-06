@@ -53,22 +53,22 @@ var store = [{
         "url": "/Physics/Astrophysics-1/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "Two Laws Related to Planetary Revolution",
+        "excerpt":"This post is related to Kepler’s Third and Virial’s Theorem, twp famous laws related to planets revolution around the sun. Furthermore, Virial’s Theorem is very important in statistical mechanics and is seen in Quantum Mechanics also (for example in quantum harmonic oscillators). Kepler’s Third Law Using even high school knowledge...","categories": [],
+        "tags": ["HKDSE"],
+        "url": "/KeplerVirial/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "Conservations in Physics - Noether's Theorem",
         "excerpt":"This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills. Proof of Noether’s...","categories": [],
         "tags": ["Appendix"],
-        "url": "/Conservations/",
-        "teaser": "/assets/images/Teaser.png"
-      },{
-        "title": "Classical Mechanics in HKDSE context",
-        "excerpt":"This is a post on Classical Mechanics in High School style. It serves as a good introduction to High Schoolers wanting to pursue a deeper understanding in Physics. Note: Some of the content are similar to lecture notes from my Dynamics courses, Introductory Dynamics (PHYS08052) and Lagrangian Dynamics (PHYS10015). I...","categories": [],
-        "tags": ["HKDSE"],
-        "url": "/HKDSE/",
+        "url": "/NoetherTheorem/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Perturbations - A view on Classical Mechanics and Quantum Mechanics",
         "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics...","categories": [],
         "tags": ["Small","perturbations"],
-        "url": "/SmallPerbuations/",
+        "url": "/Perbuations/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Kernels in Fourier Series",
@@ -83,7 +83,7 @@ var store = [{
         "url": "/Prerequisites/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Two interesting questions related to free fall",
+        "title": "Two Interesting Questions related to Free Fall",
         "excerpt":"This post involves two questions related to free falling. The first is about the terminal velocity of human and a plane under turbulent flow, and the second is about what happens if a human drops to the center of the earth. The results are highly fasicinating! Free Fall of objects...","categories": [],
         "tags": ["Free","Fall"],
         "url": "/FreeFall/",
@@ -104,7 +104,7 @@ var store = [{
         "title": "Tensors and its transformations",
         "excerpt":"Here, we introduce the definition of tensors and the visualization behind it. Then, we discuss its transformation to another basis with a worked example. Definition Consider a rotation of the \\(\\{e_i\\}\\) basis (frame \\(S\\)) to the \\(\\{e'_i\\}\\) basis (frame \\(S'\\)). This is called a passive rotation. The components of two...","categories": [],
         "tags": ["Trans"],
-        "url": "/Transformations/",
+        "url": "/TensorTransformations/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Overview of the Two-body Problem",
@@ -122,18 +122,30 @@ var store = [{
         "title": "Julia Sets and the Mandelbrot Set",
         "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. In this article we consider the function: \\(f_c: z \\mapsto z^2+c\\), where \\(c\\) is a constant. We then define \\(K_c\\), which is also known as the Filled-in Julia Set, as the set of \\(z\\) which are non-escaping...","categories": [],
         "tags": ["Trans"],
-        "url": "/Mandelbrot/",
+        "url": "/MandelbrotSet/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Why is Momentum Conserved?",
         "excerpt":"In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics Momentum is defined by \\(p=mv\\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force. In an inertial frame, momentum is a conserved quantity, meaning that it is not affected...","categories": [],
         "tags": ["Trans"],
-        "url": "/Momentum/",
+        "url": "/MomentumConservation/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Theorema Egregium --- The reason why all maps are wrong",
         "excerpt":"Theorema Egregium states that isometric surfaces have the same gauss(ian) curvature. Equivalently, surfaces with different gauss curvature are not isometric (with same First Fundamental Forms). Gauss Curvature of a Sphere First note that the Gauss Curvature on the whole sphere is uniform. Next notice that the surface area of a...","categories": [],
         "tags": ["Trans"],
         "url": "/TheoremaEgregium/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Carmichael Function",
+        "excerpt":"This post is a gentle introduction on the famous Carmichael Function. Motivation I have been given this question in my first Mathematics Class on proving theorems, Accelerated Proofs and Problem Solving: Find \\(a\\) such that \\[3^{124} \\equiv a \\space \\text{mod} \\space 100\\] The answer is \\(81\\) upon my “discovery” (by...","categories": [],
+        "tags": ["Trans"],
+        "url": "/CarmichaelFunction/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Integration by Laplace Transform",
+        "excerpt":"Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve integrals. Below, I will show how it can be used to prove: \\[\\int_0^{\\infty} \\frac{\\sin(x)}{x} \\, dx=\\frac{\\pi}{2}\\] Transforming the problem into a Laplace Transformation Problem Observe...","categories": [],
+        "tags": ["Trans"],
+        "url": "/LaplaceTransforms/",
         "teaser": "/assets/images/Teaser.png"
       }]
