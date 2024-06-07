@@ -1,0 +1,76 @@
+---
+layout: single
+title: An Application of the LTE lemma and Fermat's Little Theorem 
+katex: True
+tags: 
+ - Number Theory
+toc_label: "IMO 1990"
+toc_sticky: true
+authors: Henry
+sidebar:
+ nav: "IMO 1990"
+---
+
+Here, I am trying to determine all integers $$n > 1$$ such that $$\frac{2^n+1}{n^2}$$ is an integer.
+
+## First Part
+
+Assume $$a \neq 2$$ is the smallest prime that divides $$n$$.
+
+Then, since $$a \vert 2^n+1$$, $$a \vert 2^{2n}-1$$. 
+
+Also, we know that $$a \vert 2^{a-1}-1$$ (Fermat's Little Theorem)
+
+Therefore, $$a \vert 2^{\text{gcd}(2n, \space a-1)}-1$$.
+
+It can be seen that $$\text{gcd}(2n, \space a-1)=2*\text{gcd}(n, \space a-1)=2*1=2$$, hence $$a=3$$. ($$a-1$$ and $$n$$ are coprime and $$a$$ is the smallest prime that divides $$n$$)
+
+Therefore, we can express $$n=(3^x)(y)$$.
+
+## Second Part
+
+To proceed, we shall state the Lifting Exponent Lemma:
+
+For a prime $$p$$, if $$p \mid x+y$$, neither $$x$$ nor $$y$$ is divisible by $$p$$, and $$n$$ is an odd positive integer, then
+
+$$v_p(a^n+b^n)=v_p(n)+v_p(a+b).$$
+
+In our case,
+
+$$v_3(2^n+1)=v_3(n)+v_3(3) = x+1$$
+
+Since $$2^n+1>n^2$$, $$v_3(2^n+1)>v_3(n^2)$$. Hence $$x+1>2x$$.  Hence $$x=1$$. 
+
+
+## Third Part 
+
+Now let $$q$$ be the smallest prime factor of $$y$$.
+
+Now, 
+
+$$
+\begin{align}
+q|2^{\text{gcd}(2n,q-1)}-1 &= 2^{2*\text{gcd}(n,q-1)}-1  \\
+&=2^6-1 \\
+&=63 \\     
+&=7*3^2
+\end{align}
+$$
+
+This gives $$q=7$$, but it is a contradiction, as a power of two can only be congruent to $$1,2,4$$, or $$4$$ modulo $$7$$. 
+
+[$$\text{gcd}(n,q-1)$$ can be $$1$$ or $$3$$, but the case for $$1$$ is rejected also.]
+
+Therefore $$n=3$$ is the only possible solution. 
+
+## Credits
+This question is from International Mathematical Olympiad, 1990, Q3. The solution is inspired by [this website](https://artofproblemsolving.com/community/c6h60740p3217312) and [this PDF](https://cdn.artofproblemsolving.com/attachments/4/8/e58a0b84c28bfde643fd7667167cd3d5010e36.pdf).
+
+## Exercises for the reader
+ - Why is $$a$$ not divisible by $$2$$?
+ - Why if $$a \vert 2^n+1$$, then $$a \vert 2^{2n}-1$$. 
+ - Why is the conclusion  $$a \vert 2^{\text{gcd}(2n, \space a-1)}-1$$ true?
+ - State the Lifting Exponent Lemma and list all the cases. 
+ - Show that $$2^n+1>n^2$$.
+ - Show that $$\text{gcd}(n,q-1)$$ can be $$1$$ or $$3$$. 
+ - Why can't we simply state $$n=3^k$$?

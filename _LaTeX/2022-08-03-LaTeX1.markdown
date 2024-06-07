@@ -1,0 +1,23 @@
+---
+layout: single
+title: LaTeX Tutorial (Presentation)
+katex: True
+permalink: /LaTeX/LaTeXTutorial1/
+tags: 
+ - Latex
+toc: true
+toc_label: "LaTeX"
+toc_sticky: true
+header:
+  teaser: /assets/images/LaTeX.png
+sidebar:
+ nav: "LaTeX"
+---
+This is a beamer presentation I made on using $$\LaTeX$$. Please note that I am not a $$\LaTeX$$ expert, and this is for reference(for fun) only!
+
+### Tutorial 
+
+Please Press [HERE]({{site.url}}/assets/Beamer_Presentation.pdf)
+
+<iframe src="{{site.url}}/assets/Beamer_Presentation.pdf" width="100%" height="500px">
+

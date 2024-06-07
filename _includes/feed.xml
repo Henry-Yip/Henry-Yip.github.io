@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2023-01-12T12:27:10+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>A website including everything</subtitle><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><entry><title type="html">Infinitely Many Chess Puzzles</title><link href="https://henry-yip.github.io/Puzzles/" rel="alternate" type="text/html" title="Infinitely Many Chess Puzzles" /><published>2022-12-23T00:00:00+00:00</published><updated>2022-12-23T00:00:00+00:00</updated><id>https://henry-yip.github.io/Puzzles</id><content type="html" xml:base="https://henry-yip.github.io/Puzzles/"><![CDATA[<p>Let it load for a while:</p>
+<iframe src="https://livetactics.chessbase.com" width="400" height="440"></iframe>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[Let it load for a while:]]></summary></entry><entry><title type="html">Chess AI Analysis</title><link href="https://henry-yip.github.io/Chess/ChessAI/" rel="alternate" type="text/html" title="Chess AI Analysis" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://henry-yip.github.io/Chess/ChessAI</id><content type="html" xml:base="https://henry-yip.github.io/Chess/ChessAI/"><![CDATA[<h2 id="chess-ai">Chess AI</h2>
+<p>In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: <a href="https://www.nytimes.com/2011/02/17/us/17deepblue.html">First Came the Machine That Defeated a Chess Champion</a></p>
+
+<p>Most engines, with <a href="https://en.wikipedia.org/wiki/Stockfish_(chess)">Stockfish</a> topping the list, have a significantly higher <a href="https://www.chessjournal.com/chess-elo/#:~:text=Elo%20is%20a%20primary%20factor%20used%20in%20Chess,Elo%20system%20is%20Australian%20Chess%20master%2C%20Roger%20Cook.">elo</a> than <a href="https://en.wikipedia.org/wiki/Magnus_Carlsen">GM Magnus Carlsen</a>, arguably the best Chess Player ever.</p>
+
+<p>Stockfish has an absurdly high elo. You can see this from different websites, like <a href="https://ccrl.chessdom.com">http://ccrl.chessdom.com</a> . There, <a href="https://ccrl.chessdom.com/ccrl/4040/">Stockfish, Dragon and Fat Fritz 2 have an elo of over 3500</a>. Just to let you see the difference, I have included a banner of Live Chess Ratings, provided by <a href="https://2700chess.com/">2700chess.com</a></p>
+
+<p><a href="https://2700chess.com" target="_blank"><img border="0" src="https://2700chess.com/files/topten.png" alt="2700chess.com for more details and full list" title="2700chess.com for more details and full list" /></a></p>
+
+<p>To check the power of chess engines, you can play one <a href="/Chess/Events/">HERE</a>. You can adjust the difficulty but to be honest, I can’t beat the club level difficulty…</p>
+
+<p>Just to be cool, I have installed two chess engines - Fairy-Max and Stockfish in my computer, so they can play around…</p>
+
+<ul>
+  <li><a href="/Chess/2022-06-05-Game1/">(Game #1) <strong>Rapid</strong> - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-06-05-Game2/">(Game #2) Rapid - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-06-12-Game3/">(Game #3) <strong>Bullet</strong> - Fairy-Max vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game4/">(Game #4) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game5/">(Game #5) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-07-31-Game6/">(Game #6) Bullet - Stockfish vs Fairy-Max</a></li>
+  <li><a href="/Chess/2022-08-10-Game7/">(Game #7) <strong>Classical</strong> - Stockfish vs Fairy-Max</a></li>
+</ul>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><category term="Chess" /><summary type="html"><![CDATA[Chess AI In the late 1990s, Deep Blue defeated GM Garry Kasparov. You can see the complete news in New York Times: First Came the Machine That Defeated a Chess Champion]]></summary></entry><entry><title type="html">The Big RIP</title><link href="https://henry-yip.github.io/BigRIP/" rel="alternate" type="text/html" title="The Big RIP" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://henry-yip.github.io/BigRIP</id><content type="html" xml:base="https://henry-yip.github.io/BigRIP/"><![CDATA[<div class="tenor-gif-embed" data-postid="15138520" data-share-method="host" data-aspect-ratio="1" data-width="100%"><a href="https://tenor.com/view/galaxy-spiral-spinning-gif-15138520">Galaxy Spiral GIF</a>from <a href="https://tenor.com/search/galaxy-gifs">Galaxy GIFs</a></div>
+<script type="text/javascript" async="" src="https://tenor.com/embed.js"></script>
+
+<h2 id="introduction">Introduction</h2>
+<p>I spent around 3-4 days writing this short essay, featuring:</p>
+<ul>
+  <li>Introduction to the Cosmic Distance Scale</li>
+  <li>How Supernova Ia lead to the discovery of Dark Energy</li>
+  <li>Properties of Dark Energy</li>
+  <li>A detour to Einstein’s Field Equation (EFE)</li>
+  <li>Consequences of the Dark Energy</li>
+  <li>Timescale of its occurance using precise data</li>
+</ul>
+
+<h2 id="source-code-viewing">Source Code Viewing</h2>
+<p><a href="https://www.overleaf.com/read/dzzcybcggpnn">https://www.overleaf.com/read/dzzcybcggpnn </a></p>
+
+<h2 id="pdf-download">PDF download</h2>
+<p>Please Press <a href="https://henry-yip.github.io/assets/Dark_Energy_and_the_Big_RIP.pdf">HERE</a></p>
+
+<iframe src="https://henry-yip.github.io/assets/Dark_Energy_and_the_Big_RIP.pdf" width="100%" height="500px">
+
+</iframe>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[Galaxy Spiral GIFfrom Galaxy GIFs Introduction I spent around 3-4 days writing this short essay, featuring: Introduction to the Cosmic Distance Scale How Supernova Ia lead to the discovery of Dark Energy Properties of Dark Energy A detour to Einstein’s Field Equation (EFE) Consequences of the Dark Energy Timescale of its occurance using precise data]]></summary></entry><entry><title type="html">An Introduction to This Website</title><link href="https://henry-yip.github.io/Welcome/" rel="alternate" type="text/html" title="An Introduction to This Website" /><published>2022-08-04T00:00:00+01:00</published><updated>2022-08-04T00:00:00+01:00</updated><id>https://henry-yip.github.io/Welcome</id><content type="html" xml:base="https://henry-yip.github.io/Welcome/"><![CDATA[<h1 id="introduction">Introduction</h1>
+<h2 id="myself">Myself</h2>
+<p><a href="/Contributors/HenryYip/">Henry YIP</a></p>
+
+<p>Mathematical Physics Student from the University of Edinburgh</p>
+<h2 id="before-making-a-website">Before making a website</h2>
+
+<h3 id="latex">LaTeX</h3>
+<p>Feburary 2022 was when I started to create \(LaTeX\) documents. While the process was enjoyable, I was unsatisfied as I lack a platform to host my PDF files (On Quantum Mechanics, Probability).</p>
+
+<p>Inspired by <a href="https://tobylam.xyz/">Toby Lam</a>, I was convinced that websites are more sustainable than Social Medias (like Instagram). According to him in <a href="https://tobylam.xyz/2020/08/11/why-start-a-website.html">his post about “Why start a website”</a></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>With social media sites, attempts to archive content are probably nightmarish. 
+</code></pre></div></div>
+<p>which is exactly my experience with Instagram. It is also nightmarish to write serious academic content due to the inability to include \(KaTeX\). More is explained in my post about <a href="/Chess/TobyLam/">KaTeX</a></p>
+
+<p>It is also cool to have a personal space where you can customize things, and meanwhile picking up basic html/css skills</p>
+
+<h2 id="how-i-learnt-to-build-a-website">How I learnt to build a website</h2>
+
+<p>I am using Jekyll all the way.</p>
+
+<p>If you are asking what Jekyll is or how to download/use it, please check out <a href="/Jekyll/tutorials/">My Tutorials</a>. I spent a huge amount of time on these tutorials so I hope you can at least have a look…</p>
+
+<p>You should probably refer to <a href="/Jekyll/UsingJekyll/">My Tutorial on How to Download Jekyll</a> since there aren’t many tutorials online regarding this.</p>
+
+<h2 id="why-this-particular-website">Why THIS particular website</h2>
+<p>After sucessfully creating a functional website, I started to think about how I can use this website to create something big. One day, upon the recommendation of <a href="/Contributors/LeoChow/">Leo Chow</a>, I decided to create a website to teach people physics, but we slowly figured out it is quite impractical unless we know <strong>Manim</strong> (but we both don’t). Instead, I thought it would just be great if my friends can write anything on my website without any restrictions (since not everyone know how to make a website).</p>
+
+<p>Therefore, in April 2022, I started asking people around me if they want to write stuff, and surprisingly, almost all of them agreed.</p>
+
+<p>I would like to thank everyone who is a part of this website. Your presence is definitely noted!</p>
+
+<h2 id="how-i-feel-about-building-a-website">How I feel about building a website</h2>
+<p>The process of building websites is painful but enjoyable. I had to learn so many stuff, like how to enable RSS FEED, <a href="/Jekyll/skins/">How to Change Skins</a> (in my old website), how to <a href="/Jekyll/Algolia/">Include Algolia Search</a>. Each of these tasks spent me <strong>at least 10 hours</strong>. The solution may seem easy and to be honest, some problems I can’t even solve (like resizing images using plugins).</p>
+
+<h1 id="final-touch">Final Touch</h1>
+<p>As <a href="/Contributors/HenryYip/">I’m currently a Year 2 Student</a>, I don’t have much time to maintain this website. If you want to collaborate with me/have further enquiries please contact me:</p>
+
+<p class="notice--success text-center"><strong><a href="mailto:s2231321@ed.ac.uk">s2231321@ed.ac.uk</a></strong></p>]]></content><author><name>Henry Yip </name><email>s2231321@ed.ac.uk</email></author><summary type="html"><![CDATA[Introduction Myself Henry YIP]]></summary></entry></feed>
