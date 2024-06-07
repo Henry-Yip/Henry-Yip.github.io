@@ -109,7 +109,7 @@ var store = [{
       },{
         "title": "Overview of the Two-body Problem",
         "excerpt":"Here I will present the exact solution of the two body problem. Definition of terms First we define the center of mass coordinate, \\(R\\): \\[\\underline{R}=\\frac{m_1 \\underline{r_1}+m_2 \\underline{r_2}}{m_1+m_2}\\] As \\(m_1\\) and \\(m_2\\) are invariant, we can express \\(P\\), the total momentum, in terms of \\(\\dot{R}\\): \\[\\underline{P}=(m_1+m_2)\\dot{R}\\] How does the center of...","categories": [],
-        "tags": ["Research"],
+        "tags": ["Research","Classical Mechanics"],
         "url": "/SummerResearch/",
         "teaser": "/assets/images/Teaser.png"
       },{
