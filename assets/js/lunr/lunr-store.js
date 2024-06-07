@@ -148,4 +148,10 @@ var store = [{
         "tags": ["Calculus"],
         "url": "/LaplaceTransforms/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "An Application of the LTE lemma and Fermat's Little Theorem",
+        "excerpt":"Here, I am trying to determine all integers \\(n &gt; 1\\) such that \\(\\frac{2^n+1}{n^2}\\) is an integer. First Part Assume \\(a \\neq 2\\) is the smallest prime that divides \\(n\\). Then, since \\(a \\vert 2^n+1\\), \\(a \\vert 2^{2n}-1\\). Also, we know that \\(p \\vert 2^{p-1}-1\\) (Fermat’s Little Theorem) Therefore, \\(a...","categories": [],
+        "tags": ["Number Theory"],
+        "url": "/IMO/",
+        "teaser": "/assets/images/Teaser.png"
       }]
