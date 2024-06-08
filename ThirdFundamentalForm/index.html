@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Two Particles Collision | Henry Yip</title>
-<meta name="description" content="Two point masses \(m_1\) and \(m_2\) are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center?">
+<!-- begin _includes/seo.html --><title>Third Fundamental Form and How to Find it | Henry Yip</title>
+<meta name="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Two Particles Collision">
-<meta property="og:url" content="https://henry-yip.github.io/TwoParticles/">
+<meta property="og:title" content="Third Fundamental Form and How to Find it">
+<meta property="og:url" content="https://henry-yip.github.io/ThirdFundamentalForm/">
 
 
-  <meta property="og:description" content="Two point masses \(m_1\) and \(m_2\) are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center?">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-08-15T00:00:00+08:00">
+  <meta property="og:description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-08T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/TwoParticles/">
+
+<link rel="canonical" href="https://henry-yip.github.io/ThirdFundamentalForm/">
 
 
 
@@ -189,7 +189,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Two Particles Collision</li>
+        <li class="current">Third Fundamental Form and How to Find it</li>
       
     
   </ol>
@@ -329,16 +329,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Two Particles Collision">
-    <meta itemprop="description" content="Two point masses \(m_1\) and \(m_2\) are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center?">
-    <meta itemprop="datePublished" content="2023-08-15T00:00:00+08:00">
+    <meta itemprop="headline" content="Third Fundamental Form and How to Find it">
+    <meta itemprop="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
+    <meta itemprop="datePublished" content="2024-06-08T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/TwoParticles/" class="u-url" itemprop="url">Two Particles Collision
+            <a href="https://henry-yip.github.io/ThirdFundamentalForm/" class="u-url" itemprop="url">Third Fundamental Form and How to Find it
 </a>
           </h1>
           
@@ -367,83 +367,85 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Two Particles Collision</h4></header>
-              <ul class="toc__menu"><li><a href="#credits">Credits</a></li></ul>
+        <p>In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .</p>
 
-            </nav>
-          </aside>
-        
-        <p>Two point masses \(m_1\) and \(m_2\) are spaced apart in a vacuum in space, with no other forces present other than the gravitational force between them. At what time will they meet in the center?</p>
+<h3 id="finding-characteristic-polynomial">Finding Characteristic Polynomial</h3>
+<p>At each point \(x\) of a surface, the tangent space is an inner product space.</p>
 
-<p>With <strong>object 1</strong> on the left and <strong>object 2</strong> on the right, we can define these below:</p>
+<p>\begin{align}
+(S_xv, w) = (dn(v), w)
+\end{align}</p>
+
+<p>Now I will use without proof that \(S\) can be written as:</p>
+
+\[S = \begin{pmatrix}
+L &amp; M \\
+M &amp; N
+\end{pmatrix}\]
+
+<p>Now we attempt to find its Characteristic Polynomial. Recall that it is written as:</p>
+
+\[p_A(\lambda) = \det(A - \lambda I)\]
+
+<p>For the Shape Operator, we have:</p>
+
+\[A - \lambda I = \begin{pmatrix}
+L &amp; M \\
+M &amp; N
+\end{pmatrix} - \lambda \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix} = \begin{pmatrix}
+L - \lambda &amp; M \\
+M &amp; N - \lambda
+\end{pmatrix}\]
+
+<p>Now,</p>
+
+\[p_S(\lambda) = \det \begin{pmatrix}
+L - \lambda &amp; M \\
+M &amp; N - \lambda
+\end{pmatrix}\]
+
+<p>Resulting in</p>
+
+\[p_S(\lambda) = \lambda^2 - (L + N)\lambda + (LN - M^2)\]
+
+<p>It can be easily shown that it is equivalent to:</p>
+
+\[p_S(\lambda)=\lambda^2-2H \lambda +(LN - M^2)\]
+
+<h3 id="cayley-hamilton-theorem-and-simplifications">Cayley-Hamilton Theorem and Simplifications</h3>
+<p>By the Cayley-Hamilton theorem, the shape operator \(S\) satisfies its own characteristic polynomial:</p>
+
+\[S^2 - 2H S + KI = 0\]
+
+<p>Applying it to a vector and with some simplifications:</p>
 
 \[\begin{align}
-F_{21}&amp;=G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_1 \ddot{x}_1 \\
--F_{21}&amp;=-G \frac{m_1 m_2}{\left(x_2-x_1\right)^2}=m_2 \ddot{x}_2
+(S^2 - 2H S + KI)(v) &amp;= 0 \\
+S^2(v)-2HS(v)+K(v) &amp;=0 \\
+S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
+\mathrm{III}(v, w) - 2H \mathrm{II}(v, w) + K\mathrm{I}(v, w) &amp;= 0
 \end{align}\]
 
-<p>Therefore the accelerations are given by:</p>
+<p>Using:</p>
 
-\[\begin{align}
-G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
--G \frac{m_1}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_2
-\end{align}\]
+\[I(v, w) = v \cdot w\]
 
-<p>Subtracting these two equations will get us:</p>
+\[\mathrm{II}(v, w) = S(v) \cdot w\]
 
-\[\ddot{x}_2-\ddot{x}_1=\frac{d^2}{d t^2}\left(x_2-x_1\right)=-G \frac{M}{\left(x_2-x_1\right)^2}\]
+\[\mathrm{III}(v, w) = S^2(v) \cdot w = S(v) \cdot S(w)\]
 
-<p>Notice that we have taken \(M=m_1+m_2\) for convenience.</p>
+<h2 id="exercises-for-the-reader">Exercises for the Reader</h2>
+<ul>
+  <li>Show that the shape operator is self-adjoint.</li>
+  <li>Hence show that \(S^2(v) \cdot w = S(v) \cdot S(w)\) for the Third Fundamental Form (Hint: \((S(v), w) = (v, S^*(w))\))</li>
+  <li>How does the shape operator contain information about the curvature of the surface? (Hint: Eigenvalues)</li>
+  <li>State and prove Cayley-Hamilton Formula and show it works using a matrix as an example.</li>
+  <li>Why is the Third Fundamental Form not that useful?</li>
+</ul>
 
-<p>Next, by defining \(r=x_2-x_1\), we have the standard result:</p>
-
-\[\ddot{r}=-G \frac{M}{r^2}\]
-
-<p>Multiply both sides by \(\dot{r}\):</p>
-
-\[\dot{r}\ddot{r}=-G \frac{M}{r^2} \dot{r}\]
-
-\[\begin{align}
-\frac{d}{dt}\left(\frac{1}{2}\dot{r}^2\right)&amp;=-G \frac{M}{r^2} \left(\frac{dr}{dt}\right) \\
-\int_{0}^{T}\frac{d}{dt}\left(\frac{1}{2}\dot{r}^2\right) dt&amp;= \int_{0}^{T}-G \frac{M}{r^2} \left(\frac{dr}{dt}\right) dt
-\end{align}\]
-
-<p>This is not a calculus article so I won’t discuss the rigor behind. If you want to be rigorous you can do it yourself!</p>
-
-\[\begin{align}
-\frac{1}{2}\dot{r}^2 &amp;= \int_{R}^{r} -G \frac{M}{r^2} \, dr \\
-\left(\frac{dr}{dt}\right)^2 &amp;= 2GM\left[\frac{1}{r}-\frac{1}{R}\right] \\
-\frac{dr}{dt} &amp;= -\sqrt{2GM\left[\frac{1}{r}-\frac{1}{R}\right]}
-\end{align}\]
-
-<p>Where we take the negative square root as \(v\) is positive</p>
-
-\[\begin{align}
-\frac{dr}{-\sqrt{ 2GM \left[\frac{1}{r}-\frac{1}{R}\right]}} &amp;=dt \\
-\sqrt{\frac{Rr}{R-r}} dr  &amp;=-\sqrt{2GM}  dt \\
-\sqrt{\frac{r}{R-r}} dr &amp;= -\sqrt \frac{2GM}{R} dt \\
-\int_{R}^{0}\sqrt{\frac{r}{R-r}} dr  &amp;= -\sqrt \frac{2GM}{R} T
-\end{align}\]
-
-<p>Let’s plug the left integral to <strong>Mathematica</strong>:</p>
-
-<p><img src="/assets/images/Mathematica.png" alt="" srcset="    /assets/resized/Mathematica-600x132.png 600w, /assets/images/Mathematica.png 625w" /></p>
-
-<p>Hence we have:</p>
-
-\[\frac{-\pi R}{2}= -\sqrt\frac{2GM}{R} T\]
-
-<p>Resolving it will get us:</p>
-
-\[T= \frac{\pi}{2} \sqrt{\frac{R^3}{2GM}}\]
-
-<p>As expected.</p>
-
-<h3 id="credits">Credits</h3>
-
-<p>I am heavily inspired by <a href="https://www.physicsforums.com/threads/remarkably-difficult-newtonian-problem.360987/#post-2497098">1</a> and <a href="https://physics.stackexchange.com/questions/34366/time-taken-for-object-in-space-to-fall-to-earth">2</a>:</p>
 
         
       </section>
@@ -460,7 +462,9 @@ G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a>
+      <a href="/tags/#algebra" class="page__taxonomy-item p-category" rel="tag">Algebra</a><span class="sep">, </span>
+    
+      <a href="/tags/#differential-geometry" class="page__taxonomy-item p-category" rel="tag">Differential Geometry</a>
     
     </span>
   </p>
@@ -470,7 +474,7 @@ G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-08-15T00:00:00+08:00">August 15, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-08T00:00:00+08:00">June 8, 2024</time></p>
 
       </footer>
 
@@ -479,23 +483,22 @@ G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Two+Particles+Collision%20https%3A%2F%2Fhenry-yip.github.io%2FTwoParticles%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Third+Fundamental+Form+and+How+to+Find+it%20https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTwoParticles%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FTwoParticles%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/FreeFall/" class="pagination--pager" title="Two Interesting Questions related to Free Fall
+      <a href="/IMO/" class="pagination--pager" title="An Application of the LTE lemma and Fermat’s Little Theorem
 ">Previous</a>
     
     
-      <a href="/Multivariable_Calc/" class="pagination--pager" title="More on Multivariable Calculus
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -509,51 +512,6 @@ G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ThirdFundamentalForm/" rel="permalink">Third Fundamental Form and How to Find it
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -688,6 +646,49 @@ G \frac{m_2}{\left(x_2-x_1\right)^2}&amp;=\ddot{x}_1
 </div>
 
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/TheoremaEgregium/" rel="permalink">Theorema Egregium — The reason why all maps are wrong
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Theorema Egregium states that isometric surfaces have the same gauss(ian) curvature. Equivalently, surfaces with different gauss curvature are not isometric ...</p>
+  </article>
+</div>
+
+        
       </div>
     </div>
   
@@ -818,8 +819,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/TwoParticles/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/TwoParticles"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/ThirdFundamentalForm/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ThirdFundamentalForm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

@@ -154,4 +154,10 @@ var store = [{
         "tags": ["Number Theory"],
         "url": "/IMO/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Third Fundamental Form and How to Find it",
+        "excerpt":"In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form . Finding Characteristic Polynomial At each point \\(x\\) of a surface, the tangent space is an inner product space. \\begin{align} (S_xv, w) = (dn(v), w) \\end{align} Now I will use without proof...","categories": [],
+        "tags": ["Algebra","Differential Geometry"],
+        "url": "/ThirdFundamentalForm/",
+        "teaser": "/assets/images/Teaser.png"
       }]
