@@ -155,6 +155,12 @@ var store = [{
         "url": "/IMO/",
         "teaser": "/assets/images/Teaser.png"
       },{
+        "title": "An Easy and Brief Introduction to Bose Gas and Fermi Gas",
+        "excerpt":"This post is meant to highlight the physical interpretation and results for Bose Gas and Fermi Gas. The level of math is tame to suit audiences with less mathematical exposure. Problem for Ideal Gas By equipartition theorem, \\(E=\\frac{3}{2}kT\\) for \\(1\\) mole of ideal gas. This corresponds to \\(\\frac{3}{2}k\\) for \\(C_V\\),...","categories": [],
+        "tags": ["Quantum Mechanics","Statistical Mechanics"],
+        "url": "/BoseEinstein/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
         "title": "Third Fundamental Form and How to Find it",
         "excerpt":"In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form . Finding Characteristic Polynomial At each point \\(x\\) of a surface, the tangent space is an inner product space. \\begin{align} (S_xv, w) = (dn(v), w) \\end{align} Now I will use without proof...","categories": [],
         "tags": ["Algebra","Differential Geometry"],
