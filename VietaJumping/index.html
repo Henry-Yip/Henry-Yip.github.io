@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Third Fundamental Form and How to Find it | Henry Yip</title>
-<meta name="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
+<!-- begin _includes/seo.html --><title>Infinite Descent and Vieta’s Formulas | Henry Yip</title>
+<meta name="description" content="Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Third Fundamental Form and How to Find it">
-<meta property="og:url" content="https://henry-yip.github.io/ThirdFundamentalForm/">
+<meta property="og:title" content="Infinite Descent and Vieta’s Formulas">
+<meta property="og:url" content="https://henry-yip.github.io/VietaJumping/">
 
 
-  <meta property="og:description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-06-08T00:00:00+08:00">
+  <meta property="og:description" content="Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-09T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/ThirdFundamentalForm/">
+
+<link rel="canonical" href="https://henry-yip.github.io/VietaJumping/">
 
 
 
@@ -189,7 +189,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Third Fundamental Form and How to Find it</li>
+        <li class="current">Infinite Descent and Vieta's Formulas</li>
       
     
   </ol>
@@ -329,16 +329,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Third Fundamental Form and How to Find it">
-    <meta itemprop="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
-    <meta itemprop="datePublished" content="2024-06-08T00:00:00+08:00">
+    <meta itemprop="headline" content="Infinite Descent and Vieta’s Formulas">
+    <meta itemprop="description" content="Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.">
+    <meta itemprop="datePublished" content="2024-06-09T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/ThirdFundamentalForm/" class="u-url" itemprop="url">Third Fundamental Form and How to Find it
+            <a href="https://henry-yip.github.io/VietaJumping/" class="u-url" itemprop="url">Infinite Descent and Vieta’s Formulas
 </a>
           </h1>
           
@@ -355,7 +355,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -367,84 +367,119 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .</p>
+        <p>Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.</p>
 
-<h3 id="finding-characteristic-polynomial">Finding Characteristic Polynomial</h3>
-<p>At each point \(x\) of a surface, the tangent space is an inner product space.</p>
+<h2 id="assumptions">Assumptions</h2>
 
-<p>\begin{align}
-(S_xv, w) = (dn(v), w)
-\end{align}</p>
+<p>Assume there exist positive integers \((a, b)\) for which \(k = \frac{a^2 + b^2}{ab + 1}\), and \(k\) <strong>is not a perfect square</strong>.</p>
 
-<p>Now I will use without proof that \(S\) can be written as:</p>
+<p>Let \((A, B)\) be positive integers that satisfy the above question such that \(A+B\) is minimal. WLOG assume \(A \geq B\).</p>
 
-\[S = \begin{pmatrix}
-L &amp; M \\
-M &amp; N
-\end{pmatrix}\]
+<h2 id="quadratic-formula">Quadratic Formula</h2>
 
-<p>Now we attempt to find its Characteristic Polynomial. Recall that it is written as:</p>
+<p>Therefore, we arrive at:</p>
 
-\[p_A(\lambda) = \det(A - \lambda I)\]
+\[\begin{equation}
+A^2+B^2=k(AB+1) \\
+\implies A^2-(kB)A+(B^2-k)=0
+\end{equation}\]
 
-<p>For the Shape Operator, we have:</p>
+<p>We can see that \(A\) is the root to \(x^2-(kB)x+(B^2-k)=0\). We know there are two roots for a quadratic formula, so let \(C\) be the other root.</p>
 
-\[A - \lambda I = \begin{pmatrix}
-L &amp; M \\
-M &amp; N
-\end{pmatrix} - \lambda \begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; 1
-\end{pmatrix} = \begin{pmatrix}
-L - \lambda &amp; M \\
-M &amp; N - \lambda
-\end{pmatrix}\]
+<h2 id="vietas-formula">Vieta’s Formula</h2>
+<p>By Vieta’s Formula (Sum of Roots and Product of Roots as introduced in High School):</p>
 
-<p>Now,</p>
+<p>We have</p>
 
-\[p_S(\lambda) = \det \begin{pmatrix}
-L - \lambda &amp; M \\
-M &amp; N - \lambda
-\end{pmatrix}\]
+\[A+C=kB\]
 
-<p>Resulting in</p>
+<p>and</p>
 
-\[p_S(\lambda) = \lambda^2 - (L + N)\lambda + (LN - M^2)\]
+\[(A)(C)=B^2-k\]
 
-<p>It can be easily shown that it is equivalent to:</p>
+<p>The latter implies:</p>
 
-\[p_S(\lambda)=\lambda^2-2H \lambda +(LN - M^2)\]
+\[C=\frac{B^2-k}{A}\]
 
-<h3 id="cayley-hamilton-theorem-and-simplifications">Cayley-Hamilton Theorem and Simplifications</h3>
-<p>By the Cayley-Hamilton theorem, the shape operator \(S\) satisfies its own characteristic polynomial:</p>
+<h2 id="showing-contradiction">Showing Contradiction</h2>
 
-\[S^2 - 2H S + KI = 0\]
-
-<p>Applying it to a vector and with some simplifications:</p>
+<p>As we assumed \(A \geq B\), we have:</p>
 
 \[\begin{align}
-(S^2 - 2H S + KI)(v) &amp;= 0 \\
-S^2(v)-2HS(v)+K(v) &amp;=0 \\
-S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
-\mathrm{III}(v, w) - 2H \mathrm{II}(v, w) + K\mathrm{I}(v, w) &amp;= 0
+B^2-k  &amp;\leq A^2-k&lt; A^2 \\
+\implies \frac{B^2-k}{A} &amp;&lt; A \\
 \end{align}\]
 
-<p>Using:</p>
+<p>The left hand side is \(C\), so we have \(C&lt;A\).</p>
 
-\[I(v, w) = v \cdot w\]
+<p>Therefore we have \(C\) that satisfies all the conditions but \(C+B&lt;A+B\), which is a contradiction to the minimality requirement above.</p>
 
-\[\mathrm{II}(v, w) = S(v) \cdot w\]
+<p>Therefore \(\frac{a^2 + b^2}{ab + 1}\) <strong>must be</strong> a perfect square.</p>
 
-\[\mathrm{III}(v, w) = S^2(v) \cdot w = S(v) \cdot S(w)\]
+<h2 id="visualization">Visualization</h2>
+<p>Above shows that there is <strong>no minimal solution</strong> that satisfy the equation above. It can be visualized through Python that if \(k\) is a perfect square, there exists a minimal solution. This process of “jumping” of solutions is called the <strong>Vieta Jumping</strong>.</p>
 
-<h2 id="exercises-for-the-reader">Exercises for the Reader</h2>
+<p><img src="/assets/images/Vieta_4.png" alt="" srcset="    /assets/resized/Vieta_4-600x450.png 600w, /assets/images/Vieta_4.png 640w" /></p>
+
+<p><img src="/assets/images/Vieta_9.png" alt="" srcset="    /assets/resized/Vieta_9-600x450.png 600w, /assets/images/Vieta_9.png 640w" /></p>
+
+<h3 id="code">Code</h3>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="nf">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
+
+<span class="k">def</span> <span class="nf">find_initial_points</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">max_range</span><span class="o">=</span><span class="mi">4000</span><span class="p">):</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">a</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">max_range</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">max_range</span><span class="p">):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span><span class="sr">/ (a * b + 1) == n:
+                    points.append((a, b))
+    return points
+
+def plot_initial_points(points, n):
+    fig, ax = plt.subplots()
+    x_coords = [x for x, y in points]
+    y_coords = [y for x, y in points]
+
+    ax.plot(x_coords, y_coords, marker='o', linestyle='-')
+
+    ax.set_xlabel('a')
+    ax.set_ylabel('b')
+    ax.set_title(f'Vieta Jumping for n = {n}')
+    plt.grid()
+    plt.legend()
+    plt.show()
+
+n = 9
+number_of_points_plotted = 4  
+
+initial_points = find_initial_points(n)
+
+if initial_points:
+    print(f'Found initial points for n = {n}:')
+    for idx, (a, b) in enumerate(initial_points):
+        print(f'{idx + 1}: a = {a}, b = {b}')
+
+    # Flip the order of points every turn
+    for i in range(len(initial_points)):
+        if i % 2 == 1:
+            initial_points[i] = initial_points[i][::-1]
+
+    # Plot the found initial points
+    plot_initial_points(initial_points[:number_of_points_plotted], n)
+else:
+    print('No initial points found')</span></code></pre></figure>
+
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
 <ul>
-  <li>Show that the shape operator is self-adjoint.</li>
-  <li>Hence show that \(S^2(v) \cdot w = S(v) \cdot S(w)\) for the Third Fundamental Form (Hint: \((S(v), w) = (v, S^*(w))\))</li>
-  <li>How does the shape operator contain information about the curvature of the surface? (Hint: Eigenvalues)</li>
-  <li>State and prove Cayley-Hamilton Formula and show it works using a matrix as an example.</li>
-  <li>Why is the Third Fundamental Form not that useful?</li>
+  <li>I have intentionally not checked one of the conditions imposed on \(C\). What is it? Formulate a proof to show that it is valid.</li>
+  <li>State and prove the general case for Vieta’s Formula and show that in the special case, it becomes the formula we showed above.</li>
+  <li>Let \(a\) and \(b\) be positive integers. Show that if \(4ab - 1\) divides \((4a^2 - 1)^2\), then \(a = b\). (2007 IMO Q5)</li>
 </ul>
+
+<h3 id="credits">Credits</h3>
+
+<p>This question is the infamous IMO 1988 Q6. The solution is based on <a href="https://parabola.unsw.edu.au/files/articles/2020-2029/volume-60-2024/issue-1/vol60_no1_8.pdf">this website</a> and <a href="https://www.youtube.com/watch?v=WCI5OaBKME4&amp;list=PLMA9MyQxmU3rwcNML_igRYvfXwhPLakX7">this video</a>.</p>
 
 
         
@@ -462,9 +497,7 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#algebra" class="page__taxonomy-item p-category" rel="tag">Algebra</a><span class="sep">, </span>
-    
-      <a href="/tags/#differential-geometry" class="page__taxonomy-item p-category" rel="tag">Differential Geometry</a>
+      <a href="/tags/#number-theory" class="page__taxonomy-item p-category" rel="tag">Number Theory</a>
     
     </span>
   </p>
@@ -474,7 +507,7 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-08T00:00:00+08:00">June 8, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-09T00:00:00+08:00">June 9, 2024</time></p>
 
       </footer>
 
@@ -483,23 +516,22 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Third+Fundamental+Form+and+How+to+Find+it%20https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Infinite+Descent+and+Vieta%27s+Formulas%20https%3A%2F%2Fhenry-yip.github.io%2FVietaJumping%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FVietaJumping%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FVietaJumping%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/BoseEinstein/" class="pagination--pager" title="An Easy and Brief Introduction to Bose Gas and Fermi Gas
+      <a href="/ThirdFundamentalForm/" class="pagination--pager" title="Third Fundamental Form and How to Find it
 ">Previous</a>
     
     
-      <a href="/VietaJumping/" class="pagination--pager" title="Infinite Descent and Vieta’s Formulas
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -527,7 +559,7 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/VietaJumping/" rel="permalink">Infinite Descent and Vieta’s Formulas
+        <a href="/ThirdFundamentalForm/" rel="permalink">Third Fundamental Form and How to Find it
 </a>
       
     </h2>
@@ -545,14 +577,14 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.
+    <p class="archive__item-excerpt" itemprop="description">In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .
 
 </p>
   </article>
@@ -820,8 +852,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/ThirdFundamentalForm/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/ThirdFundamentalForm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/VietaJumping/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/VietaJumping"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

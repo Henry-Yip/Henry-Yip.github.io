@@ -166,4 +166,10 @@ var store = [{
         "tags": ["Algebra","Differential Geometry"],
         "url": "/ThirdFundamentalForm/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Infinite Descent and Vieta's Formulas",
+        "excerpt":"Let \\(a\\) and \\(b\\) be positive integers such that \\(ab + 1\\) divides \\(a^2 + b^2\\). Show that \\(\\frac{a^2 + b^2}{ab + 1}\\) is the square of an integer. Assumptions Assume there exist positive integers \\((a, b)\\) for which \\(k = \\frac{a^2 + b^2}{ab + 1}\\), and \\(k\\) is not...","categories": [],
+        "tags": ["Number Theory"],
+        "url": "/VietaJumping/",
+        "teaser": "/assets/images/Teaser.png"
       }]
