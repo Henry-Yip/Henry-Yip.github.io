@@ -172,4 +172,10 @@ var store = [{
         "tags": ["Number Theory"],
         "url": "/VietaJumping/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Wilson's Theorem",
+        "excerpt":"Wilson’s Theorem states that: \\[(n-1)! \\equiv -1 \\space (\\text{mod} \\space n)\\] This means: Any integer \\(n&gt;1\\) is a prime number iff \\((n-1)!+1\\) is divisible by \\(n\\). Proof Inverses in residue classes Since the residue classes (mod \\(p\\)) are a field, every non-zero \\(a\\) has a unique multiplicative inverse, \\(a^*\\). This...","categories": [],
+        "tags": ["Number Theory"],
+        "url": "/WilsonTheorem/",
+        "teaser": "/assets/images/Teaser.png"
       }]

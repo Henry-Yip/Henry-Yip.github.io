@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Why is Momentum Conserved? | Henry Yip</title>
-<meta name="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
+<!-- begin _includes/seo.html --><title>Wilson’s Theorem | Henry Yip</title>
+<meta name="description" content="Wilson’s Theorem states that:">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Why is Momentum Conserved?">
-<meta property="og:url" content="https://henry-yip.github.io/MomentumConservation/">
+<meta property="og:title" content="Wilson’s Theorem">
+<meta property="og:url" content="https://henry-yip.github.io/WilsonTheorem/">
 
 
-  <meta property="og:description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics. Momentum in Physics">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-04-08T00:00:00+08:00">
+  <meta property="og:description" content="Wilson’s Theorem states that:">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-10T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/MomentumConservation/">
+
+<link rel="canonical" href="https://henry-yip.github.io/WilsonTheorem/">
 
 
 
@@ -189,7 +189,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Why is Momentum Conserved?</li>
+        <li class="current">Wilson's Theorem</li>
       
     
   </ol>
@@ -329,178 +329,19 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Why is Momentum Conserved?">
-    <meta itemprop="description" content="In this article we explore the conservation of momentum using Lagrangian Dynamics.Momentum in Physics">
-    <meta itemprop="datePublished" content="2024-04-08T00:00:00+08:00">
+    <meta itemprop="headline" content="Wilson’s Theorem">
+    <meta itemprop="description" content="Wilson’s Theorem states that:">
+    <meta itemprop="datePublished" content="2024-06-10T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/MomentumConservation/" class="u-url" itemprop="url">Why is Momentum Conserved?
+            <a href="https://henry-yip.github.io/WilsonTheorem/" class="u-url" itemprop="url">Wilson’s Theorem
 </a>
           </h1>
           
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-        </header>
-      
-
-      <section class="page__content e-content" itemprop="text">
-        
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Source of Momentum</h4></header>
-              <ul class="toc__menu"><li><a href="#momentum-in-physics">Momentum in Physics</a><ul><li><a href="#concluding-remarks">Concluding Remarks</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li></ul>
-
-            </nav>
-          </aside>
-        
-        <p>In this article we explore the conservation of momentum using Lagrangian Dynamics.</p>
-<h2 id="momentum-in-physics">Momentum in Physics</h2>
-
-<p>Momentum is defined by \(p=mv\). It is a vector quantity, meaning the direction matters. The derivative of momentum is force.</p>
-
-<p>In an inertial frame, momentum is a <em>conserved quantity</em>, meaning that it is not affected by external forces in a closed system. This is an example of one of the most important concepts in physics - translational symmetry.</p>
-
-<p>The astute reader can notice that this is highly unobvious — how can a system allow and ensure a symmetry? Below, I aim to provide a intuitive explanation using more advanced classical mechanics techniques, namely the Lagragian Dynamics Formulation, developed in 1788 by Joseph-Louis Lagrange.</p>
-
-<p>The equation of motion of an object in Lagrangian Formulation is given by:</p>
-
-\[\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = \frac{\partial \mathcal{L}}{\partial q_j}\]
-
-<p>where \(\mathcal{L}=T-V\).</p>
-
-<p>Assuming we can equate the expression on RHS to \(0\), i.e. \(\frac{\partial \mathcal{L}}{\partial q_j} = 0\), we have \(\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) = 0\)
-, which implies \(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\) is a constant. There appears to be a “freedom” in the system!</p>
-
-<p>We can verify this is true for a 1 dimensional object. Set \(T=\frac{1}{2}m\dot{x}^2\) and \(V=0\), we have \(\mathcal{L}=\frac{1}{2}m\dot{x}^2\). Indeed, \(m \dot{x}\) is the constant obtained, which is the standard result in classical mechanics.</p>
-
-<h3 id="concluding-remarks">Concluding Remarks</h3>
-
-<p>This is expected to be true due to Noether’s Theorem, which states that every symmetry will  lead to a conservation, <a href="/NoetherTheorem/">which is explained here.</a></p>
-
-<p>Therefore, the energy of a system being independent of position (lack of \(x\) in expression, while \(\dot{x}\) is present) causes a constant in the system, known as the (canonical) momentum. In other words, momentum is a term of freedom caused by the lack of a particular spatial coordinate (\(x\) in our case). Momentum is not conserved if the energy term involves spatial coordinates, say in a particle is in the presence of electromagnetic force.</p>
-
-<p>The other constant is known as the energy function and is given by \(h=\sum_i\frac{\partial L}{\partial \dot{q}_i} \dot{q}_i - \mathcal{L}\). The reader can show that this corresponds to the energy of the system, which is \(T\). More of these is related to Hamiltonian Dynamics, which is a reformulation of Lagrangian Dynamics (very closely related to the energy function).</p>
-
-<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
-
-<ul>
-  <li>What is also conserved in the system mentioned above? (Difficulty: F4 HKDSE)</li>
-  <li>
-    <p>What are the restrictions of the form taken by the potential, if so, why? Why is the potential taken as \(0\)?  (Difficulty: F6 HKDSE)</p>
-  </li>
-  <li>
-    <p>By writing down the Lagrangian for a ball undergoing circular motion, show that the angular momentum is conserved.  (Difficulty: Year 1-2 University)</p>
-  </li>
-  <li>(*) Given that \(\mathcal{L}(\underline{r}, \underline{\dot{r}}, t)=T-\tilde{V}=\frac{1}{2} m|\underline{\dot{r}}|^2-e[\phi(\underline{r}, t)-\underline{\dot{r}} \cdot \underline{A}(\underline{r}, t)]\) is the Lagrangian of a particle in a EM field, show that \(p=mv+eA\). (Difficulty: Year 2-3 University)</li>
-</ul>
-
-<p>Last Updated - 3/6/2024</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-  
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a>
-    
-    </span>
-  </p>
-
-
-
-
-        
-
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+08:00">April 8, 2024</time></p>
-
-      </footer>
-
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Why+is+Momentum+Conserved%3F%20https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMomentumConservation%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
-
-      
-  <nav class="pagination">
-    
-      <a href="/MandelbrotSet/" class="pagination--pager" title="Julia Sets and the Mandelbrot Set
-">Previous</a>
-    
-    
-      <a href="/TheoremaEgregium/" class="pagination--pager" title="Theorema Egregium — The reason why all maps are wrong
-">Next</a>
-    
-  </nav>
-
-    </div>
-
-    
-  </article>
-
-  
-  
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/WilsonTheorem/" rel="permalink">Wilson’s Theorem
-</a>
-      
-    </h2>
-    
 
   <p class="page__meta">
     
@@ -521,12 +362,138 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Wilson’s Theorem states that:
+        </header>
+      
 
-</p>
+      <section class="page__content e-content" itemprop="text">
+        
+        <p>Wilson’s Theorem states that:</p>
+
+\[(n-1)! \equiv -1  \space (\text{mod} \space n)\]
+
+<p>This means:</p>
+
+<p>Any integer \(n&gt;1\) is a prime number iff \((n-1)!+1\) is divisible by \(n\).</p>
+
+<h2 id="proof">Proof</h2>
+
+<h3 id="inverses-in-residue-classes">Inverses in residue classes</h3>
+
+<p>Since the residue classes (mod \(p\)) are a field, every non-zero \(a\) has a unique multiplicative inverse, \(a^*\). This means \(a(a^*) \equiv 1 \space \text{mod} \space p\).</p>
+
+<h3 id="two-numbers-with-inverses-equal-to-itself">Two numbers with inverses equal to itself</h3>
+
+<p>If \(a\)=\(a^*\), we have \(a^2 \equiv 1 \space \text{mod} \space p\). When will this happen?</p>
+
+<p>Notice that this is equivalent to</p>
+
+\[p \vert a^2-1\]
+
+<p>This is equivalent to :</p>
+
+\[p \vert a+1\]
+
+<p>or</p>
+
+\[p \vert a-1\]
+
+<p>which implies</p>
+
+<p>\(a \equiv \pm 1 (\text{mod} \space p)\).</p>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>Remember that 
+\((p - 1)! \equiv 1 \times 2 \times 3 \times \ldots \times (p - 2) \times (p - 1)\) . As the residue classes form a field, and the elements in \((p-1)!\) “span” all the residue classes, we can  pair off each term, other than \(1\) and \(p-1\).</p>
+
+<p>As an illustration:</p>
+
+\[\begin{aligned}
+12! &amp; = 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9 \times 10 \times 11 \times 12 \\
+&amp; = 1 \times (2 \times 6) \times (3 \times 4) \times (5 \times 9) \times (7 \times 8) \times (10 \times 11) \times 12 \\
+&amp; \equiv 1 \times 1 \times 1 \times 1 \times 1 \times 1 \times 12 \\
+&amp; \equiv 12 \equiv -1 \quad (\bmod \space 13)
+\end{aligned}\]
+
+<p>Therefore, \((n-1)! \equiv -1 \space (\text{mod} \space n)\)</p>
+
+<h3 id="credits">Credits</h3>
+<p>I am inspired by the video below:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uWoKhyKcEH4?si=gYhZUXs3YHp2pAlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<p>as well as this <a href="https://empslocal.ex.ac.uk/people/staff/rjchapma/courses/nt13/Wilson.pdf">PDF</a>.</p>
+
+<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+<ul>
+  <li>Show that \(p \vert ab\) implies \(p \vert a\) or \(p \vert b\)</li>
+  <li>Define an equivalent class. Show that equivalent classes form a field.</li>
+  <li>Is Wilson’s Theorem useful as a primality test?</li>
+</ul>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#number-theory" class="page__taxonomy-item p-category" rel="tag">Number Theory</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-10T00:00:00+08:00">June 10, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Wilson%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/VietaJumping/" class="pagination--pager" title="Infinite Descent and Vieta’s Formulas
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
   </article>
-</div>
 
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
         
           
 
@@ -559,7 +526,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          2 minute read
         
       </span>
     
@@ -657,6 +624,51 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">This post is meant to highlight the physical interpretation and results for Bose Gas and Fermi Gas. The level of math is tame to suit audiences with less mat...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/IMO/" rel="permalink">An Application of the LTE lemma and Fermat’s Little Theorem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Here, I am trying to determine all integers \(n &gt; 1\) such that \(\frac{2^n+1}{n^2}\) is an integer.
+
+</p>
   </article>
 </div>
 
@@ -791,8 +803,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/MomentumConservation/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/MomentumConservation"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/WilsonTheorem/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/WilsonTheorem"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
