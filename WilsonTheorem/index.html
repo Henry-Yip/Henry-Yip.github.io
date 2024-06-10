@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Wilson’s Theorem | Henry Yip</title>
-<meta name="description" content="Wilson’s Theorem states that:">
+<meta name="description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/WilsonTheorem/">
 
 
-  <meta property="og:description" content="Wilson’s Theorem states that:">
+  <meta property="og:description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
 
 
 
@@ -330,7 +330,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Wilson’s Theorem">
-    <meta itemprop="description" content="Wilson’s Theorem states that:">
+    <meta itemprop="description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
     <meta itemprop="datePublished" content="2024-06-10T00:00:00+08:00">
     
 
@@ -367,7 +367,10 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>Wilson’s Theorem states that:</p>
+        <p>Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.</p>
+
+<h3 id="statement">Statement</h3>
+<p>Wilson’s Theorem states that:</p>
 
 \[(n-1)! \equiv -1  \space (\text{mod} \space n)\]
 
@@ -383,7 +386,7 @@
 
 <h3 id="two-numbers-with-inverses-equal-to-itself">Two numbers with inverses equal to itself</h3>
 
-<p>If \(a\)=\(a^*\), we have \(a^2 \equiv 1 \space \text{mod} \space p\). When will this happen?</p>
+<p>If \(a=a^*\), we have \(a^2 \equiv 1 \space \text{mod} \space p\). When will this happen?</p>
 
 <p>Notice that this is equivalent to</p>
 
@@ -391,19 +394,19 @@
 
 <p>This is equivalent to :</p>
 
-\[p \vert a+1\]
+\[p \vert a+1, \quad p \vert a-1\]
 
-<p>or</p>
+<p>which implies:</p>
 
-\[p \vert a-1\]
+<p>\(a \equiv \pm 1 \space (\text{mod} \space p)\).</p>
 
-<p>which implies</p>
+<p>Therefore if \(a = 1\) or \(a=p-1\), its inverse is equal to itself.</p>
 
-<p>\(a \equiv \pm 1 (\text{mod} \space p)\).</p>
+<h2 id="conclusion">Conclusion</h2>
 
-<h3 id="conclusion">Conclusion</h3>
-<p>Remember that 
-\((p - 1)! \equiv 1 \times 2 \times 3 \times \ldots \times (p - 2) \times (p - 1)\) . As the residue classes form a field, and the elements in \((p-1)!\) “span” all the residue classes, we can  pair off each term, other than \(1\) and \(p-1\).</p>
+<p>Remember that :</p>
+
+<p>\((p - 1)! \equiv 1 \times 2 \times 3 \times \ldots \times (p - 2) \times (p - 1)\) . As the residue classes form a field, and the elements in \((p-1)!\) “span” all the residue classes, we can  pair off each term, other than \(1\) and \(p-1\).</p>
 
 <p>As an illustration:</p>
 
@@ -416,14 +419,14 @@
 
 <p>Therefore, \((n-1)! \equiv -1 \space (\text{mod} \space n)\)</p>
 
-<h3 id="credits">Credits</h3>
+<h2 id="credits">Credits</h2>
 <p>I am inspired by the video below:</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uWoKhyKcEH4?si=gYhZUXs3YHp2pAlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
 <p>as well as this <a href="https://empslocal.ex.ac.uk/people/staff/rjchapma/courses/nt13/Wilson.pdf">PDF</a>.</p>
 
-<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+<h2 id="exercises-for-the-reader">Exercises for the reader</h2>
 <ul>
   <li>Show that \(p \vert ab\) implies \(p \vert a\) or \(p \vert b\)</li>
   <li>Define an equivalent class. Show that equivalent classes form a field.</li>
