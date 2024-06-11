@@ -180,7 +180,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Solving a system of Congruences",
-        "excerpt":"Motivation Suppose we want to solve the system: \\[\\begin{aligned} &amp; x \\equiv a_1 \\space (\\text{mod} \\space n_1) \\\\ &amp; x \\equiv a_2 \\space (\\text{mod} \\space n_2) \\end{aligned}\\] where \\(n_1\\) and \\(n_2\\) are coprime. It can be easily verified that a solution is given by: \\[x=a_1 m_2 n_2+a_2 m_1 n_1,\\] where...","categories": [],
+        "excerpt":"If you divide \\(x\\) by \\(5\\) you obtain a remainder of \\(2\\). Divide it by \\(3\\) you obtain a remainder of \\(1\\). Divide it by \\(7\\) you obtain a remainder of \\(4\\). What is the general solution? Motivation Suppose we want to solve the system: \\[\\begin{aligned} &amp; x \\equiv a_1...","categories": [],
         "tags": ["Number Theory","Easy"],
         "url": "/ChineseRemainder/",
         "teaser": "/assets/images/Teaser.png"
