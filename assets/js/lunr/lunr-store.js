@@ -66,7 +66,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Perturbations - A view on Classical Mechanics and Quantum Mechanics",
-        "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Note: The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics...","categories": [],
+        "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Classical Perturbation Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \\(F=ma\\), we have \\(F=m\\ddot{x}\\). If there is a restoring force with different direction...","categories": [],
         "tags": ["Classical Mechanics","Quantum Mechanics","Hard"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
@@ -113,7 +113,7 @@ var store = [{
         "url": "/SummerResearch/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Self-Initiated Reserach Group Project",
+        "title": "Group Research in fluid behaviours",
         "excerpt":"Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model. Poster We gave a...","categories": [],
         "tags": ["Research","Hard"],
         "url": "/ESRAProject/",
@@ -177,5 +177,11 @@ var store = [{
         "excerpt":"Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant. Statement Wilson’s Theorem states that: \\[(n-1)! \\equiv -1 \\space (\\text{mod} \\space n)\\] This means: Any integer \\(n&gt;1\\) is a prime number iff \\((n-1)!+1\\) is divisible by \\(n\\). Proof Inverses in residue classes Since the...","categories": [],
         "tags": ["Number Theory","Easy"],
         "url": "/WilsonTheorem/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Solving a system of Congruences",
+        "excerpt":"Motivation Suppose we want to solve the system: \\[\\begin{aligned} &amp; x \\equiv a_1 \\space (\\text{mod} \\space n_1) \\\\ &amp; x \\equiv a_2 \\space (\\text{mod} \\space n_2) \\end{aligned}\\] where \\(n_1\\) and \\(n_2\\) are coprime. It can be easily verified that a solution is given by: \\[x=a_1 m_2 n_2+a_2 m_1 n_1,\\] where...","categories": [],
+        "tags": ["Number Theory","Easy"],
+        "url": "/ChineseRemainder/",
         "teaser": "/assets/images/Teaser.png"
       }]

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Wilson’s Theorem | Henry Yip</title>
-<meta name="description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
+<!-- begin _includes/seo.html --><title>Solving a system of Congruences | Henry Yip</title>
+<meta name="description" content="Motivation">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Wilson’s Theorem">
-<meta property="og:url" content="https://henry-yip.github.io/WilsonTheorem/">
+<meta property="og:title" content="Solving a system of Congruences">
+<meta property="og:url" content="https://henry-yip.github.io/ChineseRemainder/">
 
 
-  <meta property="og:description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-06-10T00:00:00+08:00">
+  <meta property="og:description" content="Motivation">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-11T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/WilsonTheorem/">
+
+<link rel="canonical" href="https://henry-yip.github.io/ChineseRemainder/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Wilson's Theorem</li>
+        <li class="current">Solving a system of Congruences</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Wilson’s Theorem">
-    <meta itemprop="description" content="Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.">
-    <meta itemprop="datePublished" content="2024-06-10T00:00:00+08:00">
+    <meta itemprop="headline" content="Solving a system of Congruences">
+    <meta itemprop="description" content="Motivation">
+    <meta itemprop="datePublished" content="2024-06-11T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/WilsonTheorem/" class="u-url" itemprop="url">Wilson’s Theorem
+            <a href="https://henry-yip.github.io/ChineseRemainder/" class="u-url" itemprop="url">Solving a system of Congruences
 </a>
           </h1>
           
@@ -369,71 +369,99 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.</p>
+        <h2 id="motivation">Motivation</h2>
 
-<h3 id="statement">Statement</h3>
-<p>Wilson’s Theorem states that:</p>
+<p>Suppose we want to solve the system:</p>
 
-\[(n-1)! \equiv -1  \space (\text{mod} \space n)\]
+\[\begin{aligned}
+&amp; x \equiv a_1 \space (\text{mod} \space n_1) \\
+&amp; x \equiv a_2 \space (\text{mod} \space n_2)
+\end{aligned}\]
 
-<p>This means:</p>
+<p>where \(n_1\) and \(n_2\) are coprime.</p>
 
-<p>Any integer \(n&gt;1\) is a prime number iff \((n-1)!+1\) is divisible by \(n\).</p>
+<p>It can be easily verified that a solution is given by:</p>
 
-<h2 id="proof">Proof</h2>
+\[x=a_1 m_2 n_2+a_2 m_1 n_1,\]
 
-<h3 id="inverses-in-residue-classes">Inverses in residue classes</h3>
+<p>where \(m_1\) and \(m_2\) are from Bézout’s identity:</p>
 
-<p>Since the residue classes (mod \(p\)) are a field, every non-zero \(a\) has a unique multiplicative inverse, \(a^*\). This means \(a(a^*) \equiv 1 \space \text{mod} \space p\).</p>
+\[m_1 n_1+m_2 n_2=1\]
 
-<h3 id="two-numbers-with-inverses-equal-to-itself">Two numbers with inverses equal to itself</h3>
+<h3 id="example">Example</h3>
 
-<p>If \(a=a^*\), we have \(a^2 \equiv 1 \space \text{mod} \space p\). When will this happen?</p>
+<p>Given the system of congruences:</p>
 
-<p>Notice that this is equivalent to</p>
+\[\begin{aligned}
+&amp; x \equiv 2 \space (\text{mod} \space 5) \\
+&amp; x \equiv 1 \space (\text{mod} \space 3)
+\end{aligned}\]
 
-\[p \vert a^2-1\]
+<p>Using the Bezout’s identity, we can find the coefficients of the linear combination of the moduli that equal \(1\). In this case, we have:</p>
 
-<p>This is equivalent to :</p>
+\[5(5) - 8(3) = 1\]
 
-\[p \vert a \pm 1\]
+<p>Now, let’s find a solution using the coefficients obtained from the Bezout’s identity. We can substitute these coefficients into the system of congruences:</p>
 
-<p>which implies:</p>
+\[\begin{align*}
+x &amp;= 2(3)(-8) + 1(5)(5) \\
+x &amp;= -48 + 25 \\
+x &amp;= -23
+\end{align*}\]
 
-<p>\(a \equiv \pm 1 \space (\text{mod} \space p)\).</p>
+<p>Now, notice that the first system has a “cycle” of \(5\) (since it is mod \(5\)), whereas the second system has a “cycle” of \(3\). To satisfy both, we need to have a “cycle” of \(15\).</p>
 
-<p>Therefore if \(a = 1\) or \(a=p-1\), its inverse is equal to itself.</p>
+<p>Therefore our solution can be written as:</p>
+
+\[x \equiv -23 \space (\text{mod} \space 15)\]
+
+<p>Or simply:</p>
+
+\[x \equiv 7 \space (\text{mod} \space 15)\]
+
+<h2 id="general-case">General Case</h2>
+
+<p>This process can be generalized using an inductive approach:</p>
+
+<h3 id="example-1">Example</h3>
+<p>Consider:</p>
+
+\[\begin{aligned}
+&amp; x \equiv 2 \space (\text{mod} \space 5) \\
+&amp; x \equiv 1 \space (\text{mod} \space 3) \\
+&amp; x \equiv 4 \space (\text{mod} \space 7)
+\end{aligned}\]
+
+<p>From our solution above, we can simplify it into:</p>
+
+\[\begin{aligned}
+&amp; x \equiv 7 \space (\text{mod} \space 15) \\
+&amp; x \equiv 4 \space (\text{mod} \space 7)
+\end{aligned}\]
+
+<p>Now consider:</p>
+
+\[1(15) - 2(7) = 1\]
+
+<p>As \(x=a_1 m_2 n_2+a_2 m_1 n_1\),</p>
+
+\[\begin{align*}
+x &amp;= 4(15)(1) + 7(7)(-2) \\
+x &amp;= 60-98 \\
+x &amp;= -38
+\end{align*}\]
+
+<p>Hence, the solution is:</p>
+
+\[x \equiv -38 \space (\text{mod} \space 105)\]
+
+<p>Or simply:</p>
+
+\[x \equiv 67 \space (\text{mod} \space 105)\]
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Remember that :</p>
-
-<p>\((p - 1)! \equiv 1 \times 2 \times 3 \times \ldots \times (p - 2) \times (p - 1)\) . As the residue classes form a field, and the elements in \((p-1)!\) “span” all the residue classes, we can  pair off each term, other than \(1\) and \(p-1\).</p>
-
-<p>As an illustration:</p>
-
-\[\begin{aligned}
-12! &amp; = 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9 \times 10 \times 11 \times 12 \\
-&amp; = 1 \times (2 \times 6) \times (3 \times 4) \times (5 \times 9) \times (7 \times 8) \times (10 \times 11) \times 12 \\
-&amp; \equiv 1 \times 1 \times 1 \times 1 \times 1 \times 1 \times 12 \\
-&amp; \equiv 12 \equiv -1 \quad (\bmod \space 13)
-\end{aligned}\]
-
-<p>Therefore, \((n-1)! \equiv -1 \space (\text{mod} \space n)\)</p>
-
-<h2 id="credits">Credits</h2>
-<p>I am inspired by the video below:</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/uWoKhyKcEH4?si=gYhZUXs3YHp2pAlp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-
-<p>as well as this <a href="https://empslocal.ex.ac.uk/people/staff/rjchapma/courses/nt13/Wilson.pdf">PDF</a>.</p>
-
-<h2 id="exercises-for-the-reader">Exercises for the reader</h2>
-<ul>
-  <li>Show that \(p \vert ab\) implies \(p \vert a\) or \(p \vert b\)</li>
-  <li>Define an equivalent class. Show that equivalent classes form a field.</li>
-  <li>Is Wilson’s Theorem useful as a primality test?</li>
-</ul>
+<p>Any reader with experience in Number Theory will realize this is simpliy an example of the famous Chinese Remainder Theorem. It is applications in various applications in number theory, modular arithmetic, and cryptography.</p>
 
 
         
@@ -529,7 +557,7 @@
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-10T00:00:00+08:00">June 10, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-11T00:00:00+08:00">June 11, 2024</time></p>
 
       </footer>
 
@@ -538,23 +566,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Wilson%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Solving+a+system+of+Congruences%20https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FWilsonTheorem%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/VietaJumping/" class="pagination--pager" title="Infinite Descent and Vieta’s Formulas
+      <a href="/WilsonTheorem/" class="pagination--pager" title="Wilson’s Theorem
 ">Previous</a>
     
     
-      <a href="/ChineseRemainder/" class="pagination--pager" title="Solving a system of Congruences
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -582,7 +609,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/ChineseRemainder/" rel="permalink">Solving a system of Congruences
+        <a href="/WilsonTheorem/" rel="permalink">Wilson’s Theorem
 </a>
       
     </h2>
@@ -607,7 +634,7 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">Motivation
+    <p class="archive__item-excerpt" itemprop="description">Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.
 
 </p>
   </article>
@@ -877,8 +904,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/WilsonTheorem/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/WilsonTheorem"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/ChineseRemainder/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ChineseRemainder"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
