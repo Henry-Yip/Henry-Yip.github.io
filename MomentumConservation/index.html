@@ -143,9 +143,11 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/About/">About</a>
             </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX</a>
+              <a href="/LaTeX/">LaTeX Tutorials</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/">Tags</a>
+              <a href="/tagsbycontent/">Tags by Content</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -423,24 +425,92 @@
 
       <footer class="page__meta">
         
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Styling Example</title>
+  <style>
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .entry-tags i.fa-tags {
+      margin-right: 8px;
+      color: #666;
+    }
+
+    .tag-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag-button:hover {
+      opacity: 0.8;
+    }
+
+    .difficulty-tag.easy {
+      background-color: #28a745; /* Green for Easy */
+    }
+
+    .difficulty-tag.easy:hover {
+      background-color: #218838;
+    }
+
+    .difficulty-tag.medium {
+      background-color: #ffc107; /* Yellow for Medium */
+      color: #212529; /* Black text for better contrast */
+    }
+
+    .difficulty-tag.medium:hover {
+      background-color: #e0a800;
+    }
+
+    .difficulty-tag.hard {
+      background-color: #dc3545; /* Red for Hard */
+    }
+
+    .difficulty-tag.hard:hover {
+      background-color: #c82333;
+    }
+
+    .content-tag {
+      background-color: #f0ad4e; /* Orange color for content tags */
+    }
+
+    .content-tag:hover {
+      background-color: #ec971f;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="entry-tags">
+      <i class="fa fa-tags"></i>
+      
         
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
+        
+      
+    </div>
   
-
-
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      <a href="/tags/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a>
-    
-    </span>
-  </p>
-
-
-
-
+</body>
+</html>
         
 
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-04-08T00:00:00+08:00">April 8, 2024</time></p>
