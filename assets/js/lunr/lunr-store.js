@@ -184,4 +184,10 @@ var store = [{
         "tags": ["Number Theory","Easy"],
         "url": "/ChineseRemainder/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Thermodynamic Potentials and Maxwell Relations",
+        "excerpt":"Below we will derive the 4 theromodynamic potentials, as well as provide a short derivation of the Maxwell Relations. Throughout this section we have assumed the system is closed (no exchange in matter). We need to consider the chemical potential energy if the system is open. Central Equation of Thermodynamics...","categories": [],
+        "tags": ["Thermal Physics","Easy"],
+        "url": "/ThermoPotential/",
+        "teaser": "/assets/images/Teaser.png"
       }]
