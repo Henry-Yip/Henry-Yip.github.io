@@ -191,7 +191,7 @@ var store = [{
         "url": "/ThermoPotential/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Blurring Images using Python",
+        "title": "Image Processing using Python and Convolution Theorem",
         "excerpt":"The use of convolution in image processing is widely discussed. The mathematics and intuition behind is very well described by 3B1B: Convolution Theorem Perhaps one of the more important theorems of all: \\[\\mathcal{F}[f(t) \\ast g(t)]=F(s)G(s)\\] describes a faster way to do large scale convolutions: Fourier Transforming \\(f(t)\\) into \\(F(s)\\) and...","categories": [],
         "tags": ["Python","Medium"],
         "url": "/ImageConvolution/",
