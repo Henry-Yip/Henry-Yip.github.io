@@ -198,7 +198,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "An example of Discrete Fourier Transform using FFT Algorithm",
-        "excerpt":"First, we will explore the Theory behind the FFT Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example. Consider a sequence of numbers: \\(x_0, x_1, \\ldots, x_{N-1}\\). Recall that the DFT (Discrete Fourier Transform) is defined by: \\[X_k=\\sum_{m=1}^{N-1}...","categories": [],
+        "excerpt":"First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example. Consider a sequence of numbers: \\(x_0, x_1, \\ldots, x_{N-1}\\). Recall that the DFT (Discrete Fourier Transform) is...","categories": [],
         "tags": ["Discrete Mathematics","Medium"],
         "url": "/DFTandFFT/",
         "teaser": "/assets/images/Teaser.png"
