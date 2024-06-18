@@ -376,7 +376,7 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 
 <h2 id="convolution-theorem">Convolution Theorem</h2>
 
-<p>Perhaps one of the more important theorems of all:</p>
+<p>Perhaps one of the most important theorems of all:</p>
 
 \[\mathcal{F}[f(t) \ast g(t)]=F(s)G(s)\]
 
@@ -384,7 +384,7 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 
 <h2 id="blurring-and-sharpening-of-images">Blurring and Sharpening of Images</h2>
 
-<p>I have created a python program where the user can input an arbitary kernel, which will be convolved with images inputted.</p>
+<p>I have created a python program where the user can input an arbitary kernel, which will be convolved with images inputted. <a href="https://www.pinterest.co.uk/pin/duckling--70437486041471/">Source of Image</a></p>
 
 <p>Using the “Box Blurring Kernel”: (\(50 \times 50\) array filled with ones and normalized)</p>
 
@@ -418,15 +418,17 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
     Returns:
     - scalars (list): A list of floats representing the scalar values read from the file.
     """</span>
-    <span class="n">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="n">as</span> <span class="ss">file:
-        
-        </span><span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="ss">file:
+    <span class="n">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="n">as</span> <span class="ss">file: 
+         </span><span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="ss">file:
             
             </span><span class="n">lst</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">strip</span><span class="p">().</span><span class="nf">split</span><span class="p">()</span>
             
             <span class="c1"># map applies float to all the elements in lst</span>
             <span class="n">scalars</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">map</span><span class="p">(</span><span class="n">float</span><span class="p">,</span> <span class="n">lst</span><span class="p">))</span>
-            
+         <span class="k">if</span> <span class="n">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">:</span>
+           <span class="k">raise</span> <span class="no">Exception</span><span class="p">(</span><span class="s2">"Enter the values row by row, separating them with spaces. An example is: 1 0 0 0 1 0 0 0 1. Only 3x3 Matrices are supported!"</span><span class="p">)</span>                          
+           <span class="k">return</span> <span class="no">None</span>
+       
     <span class="k">return</span> <span class="n">scalars</span>
 
 <span class="c1"># Print out the Kernel</span>
@@ -435,14 +437,15 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 <span class="k">def</span> <span class="nf">custom_filter</span><span class="p">():</span>
     <span class="s2">"""
     Returns:
-   - filt (numpy.ndarray): A custom filter represented as a 3x3 numpy array.
+    - filt (numpy.ndarray): A custom filter represented as a 3x3 numpy array.
      The scalars, a to i, are read from the file as explained above. 
     """</span>
     
-    <span class="c1"># filt = np.array(scalars).reshape((3, 3))</span>
+    <span class="n">filt</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">scalars</span><span class="p">).</span><span class="nf">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
     
-    <span class="c1"># This is for box blurring</span>
-    <span class="n">filt</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">ones</span><span class="p">((</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2500</span>  
+    <span class="c1">#This is for box blurring</span>
+
+    <span class="c1">#filt = np.ones((50, 50)) / 2500  </span>
     <span class="k">return</span> <span class="n">filt</span>
 
 
@@ -499,7 +502,7 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 
 <p>The astute reader may notice that Fast Fourier Transform (FFT) has been used above. It provides a much faster way to compute Fourier Transforms, with a time complexity of \(O(n \log n)\) instead of \(O(n^2)\).</p>
 
-<p>The most wide used Algorithm is the Cooley–Tukey algorithm, which is highly related to Number Theory!</p>
+<p>The most wide used Algorithm is the Cooley–Tukey algorithm. A simplied case is illustrated in my <a href="/DFTandFFT/">other post</a>.</p>
 
         
       </section>
@@ -585,6 +588,11 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
       
         
         
+          <a class="tag-button content-tag" href="/tagsbycontent/#discrete-mathematics">Discrete Mathematics</a>
+        
+      
+        
+        
           <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
         
       
@@ -618,7 +626,8 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/DFTandFFT/" class="pagination--pager" title="An example of Discrete Fourier Transform using FFT Algorithm
+">Next</a>
     
   </nav>
 
@@ -632,6 +641,49 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/DFTandFFT/" rel="permalink">An example of Discrete Fourier Transform using FFT Algorithm
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First, we will explore the Theory behind the FFT Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy e...</p>
+  </article>
+</div>
+
         
           
 
@@ -760,51 +812,6 @@ The mathematics and intuition behind is very well described by 3B1B:</p>
 
 
     <p class="archive__item-excerpt" itemprop="description">Wilson’s Theorem provides another way to find prime numbers. Its proof is surprisingly short and elegant.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/VietaJumping/" rel="permalink">Infinite Descent and Vieta’s Formulas
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Let \(a\) and \(b\) be positive integers such that \(ab + 1\) divides \(a^2 + b^2\). Show that \(\frac{a^2 + b^2}{ab + 1}\) is the square of an integer.
 
 </p>
   </article>
