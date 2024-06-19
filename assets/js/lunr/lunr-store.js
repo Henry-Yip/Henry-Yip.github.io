@@ -203,7 +203,7 @@ var store = [{
         "url": "/DFTandFFT/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Linear Regression using Sklearn in Python",
+        "title": "Linear Regression using scikit-learn in Python",
         "excerpt":"Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python? How to know if your linear regression...","categories": [],
         "tags": ["Python","Statistics"],
         "url": "/LinearRegression/",
