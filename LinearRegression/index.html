@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Linear Regression using Ordinary Least Squares Method in Python | Henry Yip</title>
+<!-- begin _includes/seo.html --><title>Linear Regression using OLS and SGD Methods in Python | Henry Yip</title>
 <meta name="description" content="Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?">
 
 
@@ -22,7 +22,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Linear Regression using Ordinary Least Squares Method in Python">
+<meta property="og:title" content="Linear Regression using OLS and SGD Methods in Python">
 <meta property="og:url" content="https://henry-yip.github.io/LinearRegression/">
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Linear Regression using Ordinary Least Squares Method in Python</li>
+        <li class="current">Linear Regression using OLS and SGD Methods in Python</li>
       
     
   </ol>
@@ -331,7 +331,7 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Linear Regression using Ordinary Least Squares Method in Python">
+    <meta itemprop="headline" content="Linear Regression using OLS and SGD Methods in Python">
     <meta itemprop="description" content="Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?">
     <meta itemprop="datePublished" content="2024-06-19T00:00:00+08:00">
     
@@ -340,7 +340,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/LinearRegression/" class="u-url" itemprop="url">Linear Regression using Ordinary Least Squares Method in Python
+            <a href="https://henry-yip.github.io/LinearRegression/" class="u-url" itemprop="url">Linear Regression using OLS and SGD Methods in Python
 </a>
           </h1>
           
@@ -372,7 +372,7 @@
         <p>Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?</p>
 
 <h2 id="methods-to-fit-a-linear-model">Methods to fit a Linear Model</h2>
-<p>In Python, there are many ways to fit a Linear Model. Below, we will use the OLS (Ordinary Least Square) Method, which will minimize the sum of the squares of the differences. There are more complicated ways, such as using SGDRegressor (Linear model fitted by minimizing a regularized empirical loss with SGD (Stochastic Gradient Descent Algorithm)). More can be found <a href="https://scikit-learn.org/stable/">here</a>.</p>
+<p>In Python, there are many ways to fit a Linear Model. Below, we will mainly focus on the OLS (Ordinary Least Square) Method, which will minimize the sum of the squares of the differences. Afterwards, we will be using rhe SGDRegressor (Linear model fitted by minimizing a regularized empirical loss with SGD (Stochastic Gradient Descent Algorithm)). More can be found <a href="https://scikit-learn.org/stable/">here</a>.</p>
 
 <h2 id="how-to-know-if-your-linear-regression-model-is-accurate">How to know if your linear regression model is accurate?</h2>
 <ul>
@@ -406,120 +406,116 @@
   </li>
 </ul>
 
+<p>We will mainly use  \(R^2\), MSE, and MAE in the analysis below.</p>
+
 <h2 id="running-linear-regression-on-world-population-data">Running Linear Regression on World Population Data</h2>
 <p>Given the <a href="https://www.worldometers.info/world-population/world-population-by-year/">World Population Data</a> we can try to find and plot a linear trend in the data.</p>
 
 <p>We start by storing the data in an Excel file and then read it into Python using the Pandas library. This allows us to handle and manipulate the data easily. The data consists of years (independent variable) and the world population (dependent variable).</p>
 
-<p>We use \(80 \%\) of the data for training our model, which means this portion of the data is used to “learn” the relationship between the years and the world population. The remaining \(20 \%\)is used to test and validate the model’s accuracy.</p>
+<h3 id="ols-method">OLS Method</h3>
 
-<p>The performance of our model is evaluated using the \(R^2\) score, which is defined as:\</p>
+<p>We use \(80 \%\) of the data for training our model, which means this portion of the data is used to “learn” the relationship between the years and the world population (by finding \(m\) and \(c\) in \(y=mx+c\) that minimises the sum of square residues). The remaining \(20 \%\)is used to test and validate the model’s accuracy.</p>
 
-\[R^2=1-\frac{SS_\text{res}}{SS_\text{tot}}\]
+<h3 id="sgd-method">SGD Method</h3>
+<p>For the SGD method, we would first need to scale the independent variable (the years) to ensure fairness in the optimization process. We then use the SGDRegressor function to minimize the MSE by iteratively moving towards the minimum value, with a maximum iteration of \(1000\). After \(1000\) iterations, the best fit line which minimises the MSE will be plotted.</p>
 
-<p>where \(SS_\text{res}\) is the sum of squares of residuals, and \(SS_\text{tot}\) is the total sum of squares (proportional to the variance of the data). The higher the score, the better the fit. An \(R^2\) score above \(0.75\) typically indicates that the model is quite accurate.</p>
+<p>By following these steps, we can attempt to find and visualize the linear trend in the world population data using either the OLS or SGD regression methods.</p>
 
 <h2 id="results">Results</h2>
 
-<p>\(R^2\) score is \(0.9998\), which suggests that the fit is very accurate.</p>
+<p>Linear Regression</p>
+<ul>
+  <li>MSE: 503030576553090.75</li>
+  <li>\(R^2\): 0.9997738328468143</li>
+  <li>MAE: 17666518.47913985</li>
+</ul>
 
-<p>Here is an image of the fit:</p>
+<p>SGD Regressor</p>
+<ul>
+  <li>MSE: 454359657773408.56</li>
+  <li>\(R^2\): 0.9997335657388569</li>
+  <li>MAE: 16986193.058504555</li>
+</ul>
 
-<p><img src="/assets/images/Population_Regression.png" alt="" srcset="    /assets/resized/Population_Regression-600x360.png 600w, /assets/images/Population_Regression.png 1000w" /></p>
+<p>This shows the SGD Regressor is more accurate, but the difference is minimal!</p>
 
-<p>Here is the plot of the residue:</p>
+<p>Here is an image of the fit (Red line for Linear Regression, Blue Line for SGD Regressor, but they almost overlap!):</p>
 
-<p><img src="/assets/images/Residue_Population.png" alt="" srcset="    /assets/resized/Residue_Population-600x360.png 600w, /assets/images/Residue_Population.png 1000w" /></p>
-
-<p>A randomly scattered residue implies the fit is good (the relation between indepedent variable and dependent variable is linear).</p>
-
-<p>(Note that a high \(R^2\) value may not necessary imply the relationship is linear. The graph below has a quadratic relationship between \(y\) and \(x\), but the \(R^2\) score is very high (0.93))</p>
-
-<p><img src="/assets/images/Squared_Plot.png" alt="" srcset="    /assets/resized/Squared_Plot-600x360.png 600w, /assets/images/Squared_Plot.png 1000w" /></p>
-
-<p><img src="/assets/images/Quadratic_Residue.png" alt="" srcset="    /assets/resized/Quadratic_Residue-600x360.png 600w, /assets/images/Quadratic_Residue.png 1000w" /></p>
+<p><img src="/assets/images/Population_Regression.png" alt="" srcset="    /assets/resized/Population_Regression-600x400.png 600w, /assets/images/Population_Regression.png 1200w" /></p>
 
 <h2 id="code-for-population-regression">Code for Population Regression</h2>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="nf">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
 <span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">model_selection</span> <span class="n">import</span> <span class="n">train_test_split</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">linear_model</span> <span class="n">import</span> <span class="no">LinearRegression</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">metrics</span> <span class="n">import</span> <span class="n">r2_score</span>
 <span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">model_selection</span> <span class="n">import</span> <span class="n">train_test_split</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">linear_model</span> <span class="n">import</span> <span class="no">LinearRegression</span><span class="p">,</span> <span class="no">SGDRegressor</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">metrics</span> <span class="n">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
+<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">preprocessing</span> <span class="n">import</span> <span class="no">StandardScaler</span>
 
-<span class="c1"># Read the data from the Excel file. It is downloadable below</span>
+<span class="c1"># Read the data from the Excel file</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_excel</span><span class="p">(</span><span class="s1">'world_population_data.xlsx'</span><span class="p">)</span>
 
-<span class="c1">#years= df['Year'].to_numpy().reshape(-1,1) works also</span>
-<span class="n">years</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
+<span class="c1"># Convert the data to numpy arrays and reshape</span>
+<span class="n">years</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
+<span class="n">populations</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'World Population'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
 
-<span class="c1">#populations= df['World Population'].to_numpy().reshape(-1,1) works also </span>
-<span class="n">populations</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'World Population'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
+<span class="c1"># Split the data into training and testing sets</span>
+<span class="n">years_train</span><span class="p">,</span> <span class="n">years_test</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">populations_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">years</span><span class="p">,</span> <span class="n">populations</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
 
-<span class="c1"># Convention to pick 42</span>
-<span class="n">years_train</span><span class="p">,</span> <span class="n">years_test</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">populations_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">populations</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-
-
+<span class="c1"># Initialize and train the Linear Regression model</span>
 <span class="n">regr</span> <span class="o">=</span> <span class="no">LinearRegression</span><span class="p">()</span>
-
-<span class="c1"># Training the Model using Training Data</span>
 <span class="n">regr</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">years_train</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">)</span>
+<span class="n">populations_pred_lr</span> <span class="o">=</span> <span class="n">regr</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">years_test</span><span class="p">)</span>
 
-<span class="c1"># Make predictions using the testing set</span>
-<span class="n">populations_pred</span> <span class="o">=</span> <span class="n">regr</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">years_test</span><span class="p">)</span>
+<span class="c1"># Calculate metrics for Linear Regression model</span>
+<span class="n">mse_lr</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
+<span class="n">r2_lr</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
+<span class="n">mae_lr</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
 
-<span class="c1"># Calculate R^2. A R^2 of over 0.75 indicates the model is accurate</span>
-<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred</span><span class="p">)</span>
+<span class="c1"># Standardize the data for SGDRegressor</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="no">StandardScaler</span><span class="p">()</span>
+<span class="n">years_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="nf">fit_transform</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">r2</span> <span class="o">&gt;=</span> <span class="mf">0.75</span><span class="p">:</span>
- <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"R^2 Score: {r2}"</span><span class="p">)</span>
- <span class="nb">print</span><span class="p">(</span><span class="s2">"This model is accurate!"</span><span class="p">)</span>
+<span class="c1"># Initialize and train the SGDRegressor</span>
+<span class="n">sgd_reg</span> <span class="o">=</span> <span class="no">SGDRegressor</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">'l2'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">sgd_reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">years_scaled</span><span class="p">,</span> <span class="n">populations</span><span class="p">.</span><span class="nf">ravel</span><span class="p">())</span>
+<span class="n">populations_pred_sgd</span> <span class="o">=</span> <span class="n">sgd_reg</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">years_scaled</span><span class="p">)</span>
 
-<span class="ss">else:
- </span><span class="nb">print</span><span class="p">(</span><span class="s2">"This is not a very accurate!"</span><span class="p">)</span>
+<span class="c1"># Calculate metrics for SGDRegressor model (using all data since we didn't split)</span>
+<span class="n">mse_sgd</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
+<span class="n">r2_sgd</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
+<span class="n">mae_sgd</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="c1"># Print the metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Linear Regression - MSE: {mse_lr}, R²: {r2_lr}, MAE: {mae_lr}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"SGD Regressor - MSE: {mse_sgd}, R²: {r2_sgd}, MAE: {mae_sgd}"</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Regression line'</span><span class="p">)</span>
+<span class="c1"># Plot the results</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 
-<span class="c1"># Plot the training data</span>
+<span class="c1"># Plot the training and testing data</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_train</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Training data'</span><span class="p">)</span>
-
-<span class="c1"># Plot the testing data</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Testing data'</span><span class="p">)</span>
+
+<span class="c1"># Plot the regression lines</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Linear Regression line'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'SGD Regression line'</span><span class="p">)</span>
 
 <span class="c1"># Labels and title</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="s1">'World Population'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="s1">'Year vs World Population'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="no">True</span><span class="p">)</span>
 
 <span class="c1"># Show the plot</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
-
-<span class="c1"># Calculating the residuals, ie the error in each prediction</span>
-<span class="n">residuals</span> <span class="o">=</span> <span class="n">populations_test</span> <span class="o">-</span> <span class="n">populations_pred</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">populations_pred</span><span class="p">)</span>
-
-<span class="c1"># Calculate the sum of square residues</span>
-<span class="n">sum_of_square_residues</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">residuals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Sum of Square Residues: {sum_of_square_residues}"</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'purple'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Residuals'</span><span class="p">)</span>
-
-<span class="c1"># Plot a horizontal line at y=0 for reference</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="s1">'Residuals'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="s1">'Residuals of World Population Predictions'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
-
 <span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span></code></pre></figure>
+
+<h2 id="bonus-the-same-">Bonus (The same )</h2>
 
 
         
@@ -624,7 +620,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Linear+Regression+using+Ordinary+Least+Squares+Method+in+Python%20https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Linear+Regression+using+OLS+and+SGD+Methods+in+Python%20https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
