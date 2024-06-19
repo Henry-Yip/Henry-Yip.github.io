@@ -152,7 +152,7 @@ var store = [{
         "title": "An Application of the LTE lemma and Fermat's Little Theorem",
         "excerpt":"Here, I am trying to determine all integers \\(n &gt; 1\\) such that \\(\\frac{2^n+1}{n^2}\\) is an integer. First Part Assume \\(a \\neq 2\\) is the smallest prime that divides \\(n\\). Then, since \\(a \\vert 2^n+1\\), \\(a \\vert 2^{2n}-1\\). Also, we know that \\(a \\vert 2^{a-1}-1\\) (Fermat’s Little Theorem) Therefore, \\(a...","categories": [],
         "tags": ["Number Theory","Medium"],
-        "url": "/IMO/",
+        "url": "/LTELemma/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "An Easy and Brief Introduction to Bose Gas and Fermi Gas",
@@ -201,5 +201,11 @@ var store = [{
         "excerpt":"First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example. Consider a sequence of numbers: \\(x_0, x_1, \\ldots, x_{N-1}\\). Recall that the DFT (Discrete Fourier Transform) is...","categories": [],
         "tags": ["Discrete Mathematics","Medium"],
         "url": "/DFTandFFT/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Linear Regression using Sklearn in Python",
+        "excerpt":"Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python? How to know if your linear regression...","categories": [],
+        "tags": ["Python","Statistics"],
+        "url": "/LinearRegression/",
         "teaser": "/assets/images/Teaser.png"
       }]
