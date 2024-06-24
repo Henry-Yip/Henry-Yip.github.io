@@ -208,4 +208,10 @@ var store = [{
         "tags": ["Python","Statistics"],
         "url": "/LinearRegression/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Plotting and Visualizing the Three-Body Problem",
+        "excerpt":"This is the first post on my summer research about three-body problems. Today, we will find out what happens if three planets are influenced by each others’ gravitational forces? Mechanism behind Python Code Between two planets, the force is given by: \\[\\mathbf{F}_{12} = -\\frac{G m_1 m_2 (\\mathbf{r}_1 - \\mathbf{r}_2)}{|\\mathbf{r}_1 -...","categories": [],
+        "tags": ["Research","Classical Mechanics","Easy"],
+        "url": "/Figure8Orbit/",
+        "teaser": "/assets/images/Teaser.png"
       }]
