@@ -216,7 +216,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Symplectic Integrators",
-        "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics: Assume Energy is constant. Thus, the result...","categories": [],
+        "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics. We consider a energy-conserved system. As seen...","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/SymplecticIntegrators/",
         "teaser": "/assets/images/Teaser.png"
