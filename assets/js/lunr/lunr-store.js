@@ -115,7 +115,7 @@ var store = [{
       },{
         "title": "Group Research in fluid behaviours",
         "excerpt":"Liquid behaviour is hard to analyze and usually requires the Navier Stokes equation, which does not have an analytic solution. With reference to a published paper, we attempt to model liquid behaviour in the low velocity limit using two models: Continuous Model and Double Pendulum Model. Poster We gave a...","categories": [],
-        "tags": ["Research","Hard"],
+        "tags": ["Research","Medium"],
         "url": "/ESRAProject/",
         "teaser": "/assets/images/Teaser.png"
       },{
@@ -217,7 +217,7 @@ var store = [{
       },{
         "title": "Symplectic Integrators",
         "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics: Assume Energy is constant. Thus, the result...","categories": [],
-        "tags": ["Research","Classical Mechanics","Easy"],
+        "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/SymplecticIntegrators/",
         "teaser": "/assets/images/Teaser.png"
       }]
