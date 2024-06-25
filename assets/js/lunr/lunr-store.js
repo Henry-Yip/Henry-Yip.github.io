@@ -214,4 +214,10 @@ var store = [{
         "tags": ["Research","Classical Mechanics","Easy"],
         "url": "/Figure8Orbit/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Symplectic Integrators",
+        "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics: Assume Energy is constant. Thus, the result...","categories": [],
+        "tags": ["Research","Classical Mechanics","Easy"],
+        "url": "/SymplecticIntegrators/",
+        "teaser": "/assets/images/Teaser.png"
       }]
