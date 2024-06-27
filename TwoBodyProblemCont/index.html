@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>An example of Discrete Fourier Transform using FFT Algorithm | Henry Yip</title>
-<meta name="description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
+<!-- begin _includes/seo.html --><title>Ellipses and the Two-Body Problem | Henry Yip</title>
+<meta name="description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="An example of Discrete Fourier Transform using FFT Algorithm">
-<meta property="og:url" content="https://henry-yip.github.io/DFTandFFT/">
+<meta property="og:title" content="Ellipses and the Two-Body Problem">
+<meta property="og:url" content="https://henry-yip.github.io/TwoBodyProblemCont/">
 
 
-  <meta property="og:description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-06-18T00:00:00+08:00">
+  <meta property="og:description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-06-27T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/DFTandFFT/">
+
+<link rel="canonical" href="https://henry-yip.github.io/TwoBodyProblemCont/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">An example of Discrete Fourier Transform using FFT Algorithm</li>
+        <li class="current">Ellipses and the Two-Body Problem</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="An example of Discrete Fourier Transform using FFT Algorithm">
-    <meta itemprop="description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
-    <meta itemprop="datePublished" content="2024-06-18T00:00:00+08:00">
+    <meta itemprop="headline" content="Ellipses and the Two-Body Problem">
+    <meta itemprop="description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
+    <meta itemprop="datePublished" content="2024-06-27T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/DFTandFFT/" class="u-url" itemprop="url">An example of Discrete Fourier Transform using FFT Algorithm
+            <a href="https://henry-yip.github.io/TwoBodyProblemCont/" class="u-url" itemprop="url">Ellipses and the Two-Body Problem
 </a>
           </h1>
           
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 minute read
+          2 minute read
         
       </span>
     
@@ -371,182 +371,114 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Convolution</h4></header>
-              <ul class="toc__menu"><li><a href="#example">Example</a></li><li><a href="#calculation-using-traditional-method">Calculation using Traditional Method</a></li><li><a href="#calculation-using-fft">Calculation using FFT</a><ul><li><a href="#even-part">Even Part</a></li><li><a href="#odd-part">Odd Part</a></li><li><a href="#combining-results">Combining Results</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Conics</h4></header>
+              <ul class="toc__menu"><li><a href="#ellipses">Ellipses</a><ul><li><a href="#semimajor-and-semiminor-axes">Semimajor and Semiminor Axes</a></li><li><a href="#radius">Radius</a></li></ul></li><li><a href="#two-body-problem">Two-Body Problem</a><ul><li><a href="#energy-of-the-system">Energy of the system</a></li></ul></li><li><a href="#angular-momentum-and-the-runge-lenz-vector">Angular Momentum and the Runge-Lenz Vector</a></li><li><a href="#keplers-laws">Kepler’s Laws</a></li><li><a href="#thoughts-on-the-project">Thoughts on the Project</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.</p>
+        <p>This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.</p>
 
-<p>Consider a sequence of numbers: \(x_0, x_1, \ldots, x_{N-1}\). Recall that the DFT (Discrete Fourier Transform) is defined by:</p>
+<p>This is <a href="/SymplecticIntegrators/">my previous post</a> if you have missed it.</p>
 
-\[X_k=\sum_{m=1}^{N-1} x_m e^{-\frac{2 \pi i}{N} m k}\]
+<h2 id="ellipses">Ellipses</h2>
 
-<p>for \(k\) ranging from \(0\) to \(N-1\).</p>
+<h3 id="semimajor-and-semiminor-axes">Semimajor and Semiminor Axes</h3>
 
-<p>We can decompose the array into two, according to even-indexed elements and odd-indexed elements. The idea is that DFTs of even-indexed inputs and odd-indexed inputs are computed separated then combined to provide the DFT of the whole sequence.</p>
+<p>I have discussed the parametrization of ellipses <a href="/Multivariable_Calc/">here</a>.</p>
 
-<p>The decomposition can be written as:</p>
+<p>Recall that an ellipse can be written as:</p>
 
-\[X_k=\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i }{N}(2 m) k}+\sum_{m=1}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N}(2 m+1) k}.\]
+\[\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1\]
 
-<p>Hence,</p>
+<p>We can express:</p>
 
-\[X_k=\underbrace{\sum_{m=0}^{N / 2-1} x_{2 m } e^{-\frac{2 \pi i }{N / 2} m k}}_{\text {Even Part} }+e^{-\frac{2 \pi i}{N} k} \underbrace{\sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m k}}_{\text {Odd Part}}=E_k+e^{-\frac{2 \pi i}{N} k} O_k \quad \text { for } k=0, \ldots, \frac{N}{2}-1.\]
+\[b^2=a^2(1-e^2)\]
 
-<p>Similarly:</p>
+<p>Where \(e\) is the eccentricity.</p>
+
+<h3 id="radius">Radius</h3>
+
+<p>We can express the radius \(R\) (measured from center):</p>
+
+\[R= \frac{a \sqrt{1-e^2}}{[1-e^2 \cos^2{\theta_{\text{center}}}]^{\frac{1}{2}}}\]
+
+<p>Measured from the focus, it is expressed as:</p>
+
+\[r=\frac{a(1-e^2)}{1+e \cos{\theta_{\text{foci}}}}\]
+
+<p>or simply</p>
+
+\[r=\frac{p}{1+e \cos{\theta_{\text{foci}}}}\]
+
+<p>where \(p\) is the semi-latus rectum. It was introduced briefly in <a href="/KeplerVirial/">my other post</a></p>
+
+<h2 id="two-body-problem">Two-Body Problem</h2>
+
+<p>I have written a post on the Two-Body Problem <a href="/TwoParticles/">Here</a>. I will focus more about the <strong>results</strong> here.</p>
+
+<h3 id="energy-of-the-system">Energy of the system</h3>
+
+<p>Consider:</p>
+
+\[\frac{1}{2}v^2=E+\frac{GM}{r}.\]
+
+<p>Now set \(E=- \alpha^2\).</p>
+
+<p>Let \(a=\frac{GM}{2 \alpha^2}\), we obtain:</p>
+
+\[r \leq 2a.\]
+
+<p>Hence negative energy implies <strong>bounded</strong> orbit.</p>
+
+<h2 id="angular-momentum-and-the-runge-lenz-vector">Angular Momentum and the Runge-Lenz Vector</h2>
+
+<p>As I discussed in <a href="/NoetherTheorem/">this post</a> angular momentum \(\mathbf{C}\) is conserved.</p>
+
+<p>Now we also notice that:</p>
 
 \[\begin{aligned}
-X_{k+\frac{N}{2}} &amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i}{N / 2} m \left(k+\frac{N}{2}\right)}+e^{-\frac{2 \pi i}{N}\left(k+\frac{N}{2}\right)} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m\left(k+\frac{N}{2}\right)} \\
-&amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i}{N / 2} m k} e^{-2 \pi m i}+e^{-\frac{2 m i}{N} k} e^{-\pi i} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m k} e^{-2 \pi m i} \\
-&amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 m i}{N / 2} m k}-e^{-\frac{2 m i}{N} k} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 m i}{N / 2} m k} \\
-&amp; =E_k-e^{-\frac{2 m}{N} k} O_k.
+\frac{\mathrm{d}}{\mathrm{d} t}\left(\mathbf{e}_r\right)=\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\mathbf{r}}{r}\right) &amp; =\frac{r \dot{\mathbf{r}}-\dot{\boldsymbol{r}} \mathbf{r}}{r^2}=\frac{r^2 \dot{\mathbf{r}}-r \dot{r} \mathbf{r}}{r^3} \\
+&amp; =\frac{(\mathbf{r} \cdot \mathbf{r}) \dot{\mathbf{r}}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \mathbf{r}}{r^3}=\frac{\mathbf{r} \times(\dot{\mathbf{r}} \times \mathbf{r})}{r^3}=-\frac{\mathbf{r} \times \mathbf{C}}{r^3}=\frac{\mathbf{C} \times \mathbf{r}}{r^3}
 \end{aligned}\]
 
-<p>To conclude, we have:</p>
+<p>If \(\mathbf{C}=0\), then the two particles collide. If \(\mathbf{C} \neq 0\), we have:</p>
 
-\[\begin{aligned}
-X_k &amp; =E_k+e^{-\frac{2 N i}{N} k} O_k \\
-X_{k+\frac{N}{2}} &amp; =E_k-e^{-\frac{2 \pi i}{N} k} O_k.
-\end{aligned}\]
+<p>\(r \cdot \mathbf{C}=0\),</p>
 
-<h2 id="example">Example</h2>
+<p>Wwich implies \(\mathbf{C}\) is perpendicular to the motion of the particles.</p>
 
-<p>We want to Fourier Transform this array:</p>
+\[\frac{\mathrm{d}}{\mathrm{d} t}\left(\mathbf{e}_r\right)=\frac{\mathbf{C} \times \mathbf{r}}{r^3}=-\frac{\mathbf{C} \times \ddot{\mathbf{r}}}{G M}=-\frac{1}{G M} \frac{\mathrm{d}}{\mathrm{d} t}(\mathbf{C} \times \dot{\mathbf{r}})=\frac{1}{G M} \frac{\mathrm{d}}{\mathrm{d} t}(\mathbf{v} \times \mathbf{C}) .\]
 
-<p>\([1,2,3,4]\).</p>
+<p>Integrating both sides,</p>
 
-<p>How can we do it?</p>
+\[\mu\left(\mathbf{e}_r+\mathbf{e}\right)=\mathbf{v} \times \mathbf{C}=\dot{\mathbf{r}} \times(\mathbf{r} \times \dot{\mathbf{r}})=(\dot{\mathbf{r}} \cdot \dot{\mathbf{r}}) \mathbf{r}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \dot{\mathbf{r}}=v^2 \mathbf{r}-r \dot{r} \dot{\mathbf{r}} .\]
 
-<h2 id="calculation-using-traditional-method">Calculation using Traditional Method</h2>
+<p>where \(\mathbf{e}\) is the constant vector upon integration.</p>
 
-<p>We can calculate the DFT using:</p>
+<p>Now as \(\mathbf{C}\) is normal to both \(\mathbf{r}\) and \(\mathbf{\dot{r}}\).</p>
 
-\[X_k = \sum_{n=0}^{N-1} x_n \cdot e^{-2\pi i \frac{kn}{N}} \quad \text{for} \; k = 0, 1, 2, 3\]
+<p>By considering \(\mathbf{e_r} \cdot \mathbf{C}=0\), we can easily see that \(\mathbf{e} \cdot \mathbf{C}=0\). The reader can show that this implies \(\mathbf{e}\) lies in the plane of the motion.</p>
 
-<p>Where the answer can be expressed in:</p>
+<p>In fact \(\mathbf{e}\) is the Runge-Lenz vector, which is a constant of motion. Any reader having read <a href="/NoetherTheorem/">my post of Noether’s Theorem</a> can immediately see this implies a “hidden” conservation in the system. However in this case it is rather complicated: The reason behind this symmetry is that the two-body problem is mathematically equivalent to a particle moving freely on the surface of a four-dimensional (hyper-)sphere, so that the whole problem is symmetric under certain rotations of the four-dimensional space. This will be a focus in a later part of my research project.</p>
 
-<p>\([X_0, X_1, X_2, X_3]\).</p>
+<p><a href="https://en.wikipedia.org/wiki/Laplace%E2%80%93Runge%E2%80%93Lenz_vector">Here</a> contains more information about the Runge-Lenz Vector.</p>
 
-<p>For \(X_0\):</p>
+<h2 id="keplers-laws">Kepler’s Laws</h2>
 
-\[X_0 = \sum_{n=0}^{3} x_n \cdot e^{-2\pi i \frac{0 \cdot n}{4}} = 1 \cdot e^{0} + 2 \cdot e^{0} + 3 \cdot e^{0} + 4 \cdot e^{0} = 1 + 2 + 3 + 4 = 10.\]
+<ul>
+  <li>First Law: Explained above</li>
+  <li>Second Law and Third Law: Explained in <a href="/KeplerVirial/">my other post</a></li>
+</ul>
 
-<p>For \(X_1\):</p>
+<p>Such an analysis can be done using Lagrangian Dynamics also, but I don’t find it particularly more trivial.</p>
 
-\[\begin{align*}
-X_1 &amp;= 1 \cdot e^{-2\pi i \frac{1 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{1 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{1 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{1 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \frac{\pi}{2}} + 3 \cdot e^{-i \pi} + 4 \cdot e^{-i \frac{3\pi}{2}} \\
-&amp;= 1 + 2 \cdot (-i) + 3 \cdot (-1) + 4 \cdot i \\
-&amp;= 1 - 2i - 3 + 4i \\
-&amp;= -2 + 2i.
-\end{align*}\]
+<h2 id="thoughts-on-the-project">Thoughts on the Project</h2>
 
-<p>For \(X_2\):</p>
-
-\[\begin{align*}
-X_2 &amp;= 1 \cdot e^{-2\pi i \frac{2 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{2 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{2 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{2 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \pi} + 3 \cdot e^{-i 2\pi} + 4 \cdot e^{-i 3\pi} \\
-&amp;= 1 + 2 \cdot (-1) + 3 \cdot 1 + 4 \cdot (-1) \\
-&amp;= 1 - 2 + 3 - 4 \\
-&amp;= -2.
-\end{align*}\]
-
-<p>For \(X_3\):</p>
-
-\[\begin{align*}
-X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{3 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{3 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \frac{3\pi}{2}} + 3 \cdot e^{-i 3\pi} + 4 \cdot e^{-i \frac{9\pi}{2}} \\
-&amp;= 1 + 2 \cdot i + 3 \cdot (-1) + 4 \cdot (-i) \\
-&amp;= 1 + 2i - 3 - 4i \\
-&amp;= -2 - 2i.
-\end{align*}\]
-
-<p>So the answer is:</p>
-
-<p>\([10, -2+2i, -2, -2-2i]\).</p>
-
-<h2 id="calculation-using-fft">Calculation using FFT</h2>
-
-<p>Even-indexed elements:
-\(E_k = [x_0, x_2] = [1, 3]\)</p>
-
-<p>Odd-indexed elements:
-\(O_k = [x_1, x_3] = [2, 4]\)</p>
-
-<h3 id="even-part">Even Part</h3>
-
-<p>DFT for \(k = 0\):</p>
-
-\[E_0 = 1 \cdot e^{-2\pi i \cdot 0 \cdot 0 / 2} + 3 \cdot e^{-2\pi i \cdot 0 \cdot 1 / 2} = 1 + 3 = 4.\]
-
-<p>DFT for \(k = 1\):</p>
-
-\[E_1 = 1 \cdot e^{-2\pi i \cdot 1 \cdot 0 / 2} + 3 \cdot e^{-2\pi i \cdot 1 \cdot 1 / 2} = 1 + 3 \cdot e^{-i\pi} = 1 - 3 = -2.\]
-
-<p>Thus:</p>
-
-\[E_k = [4, -2]\]
-
-<h3 id="odd-part">Odd Part</h3>
-
-<p>DFT for \(k = 0\):</p>
-
-\[O_0 = 2 \cdot e^{-2\pi i \cdot 0 \cdot 0 / 2} + 4 \cdot e^{-2\pi i \cdot 0 \cdot 1 / 2} = 2 + 4 = 6.\]
-
-<p>DFT for \(k = 1\):</p>
-
-\[O_1 = 2 \cdot e^{-2\pi i \cdot 1 \cdot 0 / 2} + 4 \cdot e^{-2\pi i \cdot 1 \cdot 1 / 2} = 2 + 4 \cdot e^{-i\pi} = 2 - 4 = -2.\]
-
-<p>Thus:</p>
-
-\[O_k = [6, -2]\]
-
-<h3 id="combining-results">Combining Results</h3>
-
-<p>We use the results of the smaller DFTs to compute the DFT of the original sequence.</p>
-
-<p>Before that, we shall use \(W_n=e^{-2 \pi i/ n}\) for convenience.</p>
-
-<p>Then, \(W^k_n=e^{-2 \pi i k/ n}\).</p>
-
-<p>This implies that:</p>
-
-\[X_k = E_k + W_N^k \cdot O_k.\]
-
-\[X_{k+N/2} = E_k - W_N^k \cdot O_k.\]
-
-<p>Now Recall:</p>
-
-\[W_4 = e^{-2\pi i / 4} = i.\]
-
-<p>For \(k = 0\):</p>
-
-\[X_0 = E_0 + W_4^0 \cdot O_0 = 4 + 1 \cdot 6 = 10.\]
-
-<p>For \(k = 1\):</p>
-
-\[X_1 = E_1 + W_4^1 \cdot O_1 = -2 + i \cdot (-2) = -2 - 2i.\]
-
-<p>For \(k = 2\):</p>
-
-\[X_2 = E_0 - W_4^0 \cdot O_0 = 4 - 1 \cdot 6 = -2.\]
-
-<p>For \(k = 3\):</p>
-
-\[X_3 = E_1 - W_4^1 \cdot O_1 = -2 - i \cdot (-2) = -2 + 2i.\]
-
-<p>So, the DFT of the sequence \([1, 2, 3, 4]\) using the FFT algorithm is:</p>
-
-\[[10, -2 - 2i, -2, -2 + 2i].\]
-
-<p>Which agrees with the calculation above!</p>
-
-<p>It can be seen that the Fast Fourier Transform is indeed much faster than the traditional method. This method is very useful in image processing, where we convolve the “pixels” in an image with a filter to blur the image or sharpen the edges. More can be seen in <a href="/ImageConvolution/">this post</a>.</p>
+<p>This project is tougher than I thought. I expected 5-6 hours per day, and I ended up spending 8-9 (even 10!) hours per day. Part of it is because I want to work as hard as I can. Reading the literature is quite boring sometimes, but organising my thoughts about it really helps my understand the materials.</p>
 
 <h2 id="credits">Credits</h2>
-<p>The first part is from the <a href="https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm">Wikipedia Page on Cooley-Tukey FFT Algorithm</a>.</p>
+<p>The whole post is based on the book Integrable Systems in Celestial Mechanics. The part about four-dimensional (hyper-)sphere is based on wikipedia.</p>
 
 
         
@@ -628,7 +560,17 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#discrete-mathematics">Discrete Mathematics</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#geometry">Geometry</a>
         
       
         
@@ -642,7 +584,7 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-18T00:00:00+08:00">June 18, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-27T00:00:00+08:00">June 27, 2024</time></p>
 
       </footer>
 
@@ -651,23 +593,22 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=An+example+of+Discrete+Fourier+Transform+using+FFT+Algorithm%20https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Ellipses+and+the+Two-Body+Problem%20https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/ImageConvolution/" class="pagination--pager" title="Image Processing using Python and Convolution Theorem
+      <a href="/SymplecticIntegrators/" class="pagination--pager" title="Symplectic Integrators
 ">Previous</a>
     
     
-      <a href="/LinearRegression/" class="pagination--pager" title="Linear Regression using OLS and SGD Methods in Python
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -681,51 +622,6 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/TwoBodyProblemCont/" rel="permalink">Ellipses and the Two-Body Problem
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -758,7 +654,7 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
@@ -846,7 +742,7 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          3 minute read
         
       </span>
     
@@ -854,6 +750,49 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
 
 
     <p class="archive__item-excerpt" itemprop="description">Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and p...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/DFTandFFT/" rel="permalink">An example of Discrete Fourier Transform using FFT Algorithm
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the tradition...</p>
   </article>
 </div>
 
@@ -988,8 +927,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/DFTandFFT/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/DFTandFFT"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/TwoBodyProblemCont/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/TwoBodyProblemCont"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

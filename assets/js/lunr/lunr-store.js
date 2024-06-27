@@ -110,7 +110,7 @@ var store = [{
         "title": "Overview of the Two-body Problem",
         "excerpt":"Here I will present the exact solution of the two body problem. Definition of terms First we define the center of mass coordinate, \\(R\\): \\[\\underline{R}=\\frac{m_1 \\underline{r_1}+m_2 \\underline{r_2}}{m_1+m_2}\\] As \\(m_1\\) and \\(m_2\\) are invariant, we can express \\(P\\), the total momentum, in terms of \\(\\dot{R}\\): \\[\\underline{P}=(m_1+m_2)\\dot{R}\\] How does the center of...","categories": [],
         "tags": ["Research","Classical Mechanics","Easy"],
-        "url": "/SummerResearch/",
+        "url": "/TwoBodyProblem/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Group Research in fluid behaviours",
@@ -121,7 +121,7 @@ var store = [{
       },{
         "title": "Julia Sets and the Mandelbrot Set",
         "excerpt":"Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set. In this article we consider the function: \\(f_c: z \\mapsto z^2+c\\), where \\(c\\) is a constant. We then define \\(K_c\\), which is also known as the Filled-in Julia Set, as the set of \\(z\\) which are non-escaping...","categories": [],
-        "tags": ["Fractal Geometry","Medium"],
+        "tags": ["Geometry","Medium"],
         "url": "/MandelbrotSet/",
         "teaser": "/assets/images/Teaser.png"
       },{
@@ -133,7 +133,7 @@ var store = [{
       },{
         "title": "Theorema Egregium --- The reason why all maps are wrong",
         "excerpt":"Theorema Egregium states that isometric surfaces have the same gauss(ian) curvature. Equivalently, surfaces with different gauss curvature are not isometric (with same First Fundamental Forms). Gauss Curvature of a Sphere First note that the Gauss Curvature on the whole sphere is uniform. Next notice that the surface area of a...","categories": [],
-        "tags": ["Differential Geometry","Medium"],
+        "tags": ["Geometry","Medium"],
         "url": "/TheoremaEgregium/",
         "teaser": "/assets/images/Teaser.png"
       },{
@@ -163,7 +163,7 @@ var store = [{
       },{
         "title": "Third Fundamental Form and How to Find it",
         "excerpt":"In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form . Finding Characteristic Polynomial At each point \\(x\\) of a surface, the tangent space is an inner product space. \\begin{align} (S_xv, w) = (dn(v), w) \\end{align} Now I will use without proof...","categories": [],
-        "tags": ["Algebra","Differential Geometry","Hard"],
+        "tags": ["Algebra","Geometry","Hard"],
         "url": "/ThirdFundamentalForm/",
         "teaser": "/assets/images/Teaser.png"
       },{
@@ -219,5 +219,11 @@ var store = [{
         "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics. We consider a energy-conserved system. As seen...","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/SymplecticIntegrators/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Ellipses and the Two-Body Problem",
+        "excerpt":"This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem. This is my previous post if you have missed it. Ellipses Semimajor and Semiminor Axes I have discussed the parametrization of ellipses here. Recall that an ellipse can be...","categories": [],
+        "tags": ["Research","Classical Mechanics","Geometry","Medium"],
+        "url": "/TwoBodyProblemCont/",
         "teaser": "/assets/images/Teaser.png"
       }]
