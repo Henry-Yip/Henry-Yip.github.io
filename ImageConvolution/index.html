@@ -1,0 +1,979 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Image Processing using Python and Convolution Theorem | Henry Yip</title>
+<meta name="description" content="The use of convolution in image processing is widely discussed.  The mathematics and intuition behind is very well described by 3B1B:">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Image Processing using Python and Convolution Theorem">
+<meta property="og:url" content="https://henry-yip.github.io/ImageConvolution/">
+
+
+  <meta property="og:description" content="The use of convolution in image processing is widely discussed.  The mathematics and intuition behind is very well described by 3B1B:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-13T00:00:00+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/ImageConvolution/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbycontent/">Tags by Content</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Image Processing using Python and Convolution Theorem</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Henry Yip’s Math Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Image Processing using Python and Convolution Theorem">
+    <meta itemprop="description" content="The use of convolution in image processing is widely discussed. The mathematics and intuition behind is very well described by 3B1B:">
+    <meta itemprop="datePublished" content="2024-06-13T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/ImageConvolution/" class="u-url" itemprop="url">Image Processing using Python and Convolution Theorem
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Convolution</h4></header>
+              <ul class="toc__menu"><li><a href="#convolution-theorem">Convolution Theorem</a></li><li><a href="#blurring-and-sharpening-of-images">Blurring and Sharpening of Images</a></li><li><a href="#python-code-demonstration">Python Code Demonstration</a><ul><li><a href="#fast-fourier-transform">Fast Fourier Transform</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>The use of convolution in image processing is widely discussed. 
+The mathematics and intuition behind is very well described by 3B1B:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KuXjwB4LzSA?si=wUTJuIShq4Wi4NJn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+<h2 id="convolution-theorem">Convolution Theorem</h2>
+
+<p>Perhaps one of the most important theorems of all:</p>
+
+\[\mathcal{F}[f(t) \ast g(t)]=F(s)G(s)\]
+
+<p>describes a faster way to do large scale convolutions: Fourier Transforming \(f(t)\) into \(F(s)\) and \(g(t)\) into \(G(s)\) first, then applying inverse Fourier Transform to the product of \(F(s)\) and \(G(s)\).</p>
+
+<h2 id="blurring-and-sharpening-of-images">Blurring and Sharpening of Images</h2>
+
+<p>I have created a python program where the user can input an arbitary kernel, which will be convolved with images inputted. <a href="https://www.pinterest.co.uk/pin/duckling--70437486041471/">Source of Image</a></p>
+
+<p>Using the “Box Blurring Kernel”: (\(50 \times 50\) array filled with ones and normalized)</p>
+
+<p><img src="/assets/images/Blurred.png" alt="" srcset="    /assets/resized/Blurred-600x328.png 600w,    /assets/resized/Blurred-1440x786.png 1440w, /assets/images/Blurred.png 1920w" /></p>
+
+<p>Using the “Edge Sharpening Kernel”:</p>
+
+\[\begin{bmatrix}
+-1 &amp; 0 &amp; 1 \\
+-2 &amp; 0 &amp; 2 \\
+-1 &amp; 0 &amp; 1 \\
+\end{bmatrix}\]
+
+<p><img src="/assets/images/Sharpen.png" alt="" srcset="    /assets/resized/Sharpen-600x300.png 600w, /assets/images/Sharpen.png 1000w" /></p>
+
+<h2 id="python-code-demonstration">Python Code Demonstration</h2>
+<p>The steps roughly follow that of the Convolution Theorem. The key is to do it separately for each colour channel, then recombine them at the end.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
+<span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="nf">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
+<span class="n">import</span> <span class="n">imageio</span><span class="p">.</span><span class="nf">v2</span> <span class="n">as</span> <span class="n">imageio</span>
+<span class="n">from</span> <span class="n">scipy</span><span class="p">.</span><span class="nf">fftpack</span> <span class="n">import</span> <span class="n">fftn</span><span class="p">,</span> <span class="n">ifftn</span><span class="p">,</span> <span class="n">fftshift</span>
+
+<span class="k">def</span> <span class="nf">read_scalars_from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="s2">"""
+    Reads scalar values from a file and returns them as a list of floats.
+
+    Parameters:
+    - filename (str): The name of the file to read.
+
+    Returns:
+    - scalars (list): A list of floats representing the scalar values read from the file.
+    """</span>
+    <span class="n">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span> <span class="n">as</span> <span class="ss">file: 
+         </span><span class="k">for</span> <span class="n">line</span> <span class="k">in</span> <span class="ss">file:
+            
+            </span><span class="n">lst</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">strip</span><span class="p">().</span><span class="nf">split</span><span class="p">()</span>
+            
+            <span class="c1"># map applies float to all the elements in lst</span>
+            <span class="n">scalars</span> <span class="o">=</span> <span class="n">list</span><span class="p">(</span><span class="n">map</span><span class="p">(</span><span class="n">float</span><span class="p">,</span> <span class="n">lst</span><span class="p">))</span>
+         <span class="k">if</span> <span class="n">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">9</span><span class="p">:</span>
+           <span class="k">raise</span> <span class="no">Exception</span><span class="p">(</span><span class="s2">"Enter the values row by row, separating them with spaces. An example is: 1 0 0 0 1 0 0 0 1. Only 3x3 Matrices are supported!"</span><span class="p">)</span>                          
+           <span class="k">return</span> <span class="no">None</span>
+       
+    <span class="k">return</span> <span class="n">scalars</span>
+
+<span class="c1"># Print out the Kernel</span>
+<span class="n">scalars</span><span class="o">=</span><span class="n">read_scalars_from_file</span><span class="p">(</span><span class="s1">'scalars.txt'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">custom_filter</span><span class="p">():</span>
+    <span class="s2">"""
+    Returns:
+    - filt (numpy.ndarray): A custom filter represented as a 3x3 numpy array.
+     The scalars, a to i, are read from the file as explained above. 
+    """</span>
+    
+    <span class="n">filt</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">scalars</span><span class="p">).</span><span class="nf">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    
+    <span class="c1">#This is for box blurring</span>
+
+    <span class="c1">#filt = np.ones((50, 50)) / 2500  </span>
+    <span class="k">return</span> <span class="n">filt</span>
+
+
+<span class="k">def</span> <span class="nf">apply_filter_to_channel</span><span class="p">(</span><span class="n">channel</span><span class="p">,</span> <span class="n">filt</span><span class="p">):</span>
+   <span class="n">pad_height</span> <span class="o">=</span> <span class="p">(</span><span class="n">channel</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">filt</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span><span class="sr">/ 2
+   pad_width = (channel.shape[1] - filt.shape[1]) /</span><span class="o">/</span> <span class="mi">2</span>
+   <span class="n">filt_pad</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">pad</span><span class="p">(</span><span class="n">filt</span><span class="p">,</span> <span class="p">((</span><span class="n">pad_height</span><span class="p">,</span> <span class="n">channel</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">filt</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">pad_height</span><span class="p">),</span>
+                           <span class="p">(</span><span class="n">pad_width</span><span class="p">,</span> <span class="n">channel</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">filt</span><span class="p">.</span><span class="nf">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">pad_width</span><span class="p">)),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">'constant'</span><span class="p">)</span> 
+   
+   <span class="no">F</span> <span class="o">=</span> <span class="n">fftn</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
+   <span class="no">H</span> <span class="o">=</span> <span class="n">fftn</span><span class="p">(</span><span class="n">fftshift</span><span class="p">(</span><span class="n">filt_pad</span><span class="p">))</span>  <span class="c1"># Shift the padded filter before FFT</span>
+
+   <span class="c1"># Multiply in the frequency domain</span>
+   <span class="no">G</span> <span class="o">=</span> <span class="no">F</span> <span class="o">*</span> <span class="no">H</span>
+
+   <span class="c1"># Perform the inverse Fourier transform and shift</span>
+   <span class="n">g</span> <span class="o">=</span> <span class="n">ifftn</span><span class="p">(</span><span class="no">G</span><span class="p">).</span><span class="nf">real</span>
+
+   <span class="c1"># Normalize the result for display</span>
+   <span class="n">g</span> <span class="o">-=</span> <span class="n">g</span><span class="p">.</span><span class="nf">min</span><span class="p">()</span>
+   <span class="n">g</span> <span class="o">/=</span> <span class="n">g</span><span class="p">.</span><span class="nf">max</span><span class="p">()</span>
+   
+   <span class="k">return</span> <span class="n">g</span>
+
+
+<span class="n">image</span> <span class="o">=</span> <span class="n">imageio</span><span class="p">.</span><span class="nf">imread</span><span class="p">(</span><span class="s2">"duc.jpg"</span><span class="p">)</span>
+
+
+<span class="c1"># Since our image has red, green, blue, they are separatedly convolved with the kernel and recombined at the end</span>
+<span class="n">red_channel</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">green_channel</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">blue_channel</span> <span class="o">=</span> <span class="n">image</span><span class="p">[:,</span> <span class="p">:,</span> <span class="mi">2</span><span class="p">]</span>
+    
+<span class="n">custom_filter</span><span class="o">=</span><span class="n">custom_filter</span><span class="p">()</span>
+<span class="c1"># Apply the filter to each channel</span>
+<span class="n">red_filtered</span> <span class="o">=</span> <span class="n">apply_filter_to_channel</span><span class="p">(</span><span class="n">red_channel</span><span class="p">,</span> <span class="n">custom_filter</span><span class="p">)</span>
+<span class="n">green_filtered</span> <span class="o">=</span> <span class="n">apply_filter_to_channel</span><span class="p">(</span><span class="n">green_channel</span><span class="p">,</span> <span class="n">custom_filter</span><span class="p">)</span>
+<span class="n">blue_filtered</span> <span class="o">=</span> <span class="n">apply_filter_to_channel</span><span class="p">(</span><span class="n">blue_channel</span><span class="p">,</span> <span class="n">custom_filter</span><span class="p">)</span>
+   
+<span class="c1"># Combine the filtered channels back into a color image</span>
+<span class="n">filtered_image</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">stack</span><span class="p">((</span><span class="n">red_filtered</span><span class="p">,</span> <span class="n">green_filtered</span><span class="p">,</span> <span class="n">blue_filtered</span><span class="p">),</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+  
+<span class="c1"># Plotting the two images side by side for comparison </span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">set_title</span><span class="p">(</span><span class="s1">'Original Image'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">imshow</span><span class="p">(</span><span class="n">filtered_image</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">set_title</span><span class="p">(</span><span class="s1">'Filtered Image'</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nf">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span></code></pre></figure>
+
+<h3 id="fast-fourier-transform">Fast Fourier Transform</h3>
+
+<p>The astute reader may notice that Fast Fourier Transform (FFT) has been used above. It provides a much faster way to compute Fourier Transforms, with a time complexity of \(O(n \log n)\) instead of \(O(n^2)\).</p>
+
+<p>The most wide used Algorithm is the Cooley–Tukey algorithm. A simplied case is illustrated in my <a href="/DFTandFFT/">other post</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Styling Example</title>
+  <style>
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .entry-tags i.fa-tags {
+      margin-right: 8px;
+      color: #666;
+    }
+
+    .tag-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag-button:hover {
+      opacity: 0.8;
+    }
+
+    .difficulty-tag.easy {
+      background-color: #28a745; /* Green for Easy */
+    }
+
+    .difficulty-tag.easy:hover {
+      background-color: #218838;
+    }
+
+    .difficulty-tag.medium {
+      background-color: #ffc107; /* Yellow for Medium */
+      color: #212529; /* Black text for better contrast */
+    }
+
+    .difficulty-tag.medium:hover {
+      background-color: #e0a800;
+    }
+
+    .difficulty-tag.hard {
+      background-color: #dc3545; /* Red for Hard */
+    }
+
+    .difficulty-tag.hard:hover {
+      background-color: #c82333;
+    }
+
+    .content-tag {
+      background-color: #f0ad4e; /* Orange color for content tags */
+    }
+
+    .content-tag:hover {
+      background-color: #ec971f;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="entry-tags">
+      <i class="fa fa-tags"></i>
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#python">Python</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#discrete-mathematics">Discrete Mathematics</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
+        
+      
+    </div>
+  
+</body>
+</html>
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-13T00:00:00+08:00">June 13, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Image+Processing+using+Python+and+Convolution+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FImageConvolution%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FImageConvolution%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FImageConvolution%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/ThermoPotential/" class="pagination--pager" title="Thermodynamic Potentials and Maxwell Relations
+">Previous</a>
+    
+    
+      <a href="/DFTandFFT/" class="pagination--pager" title="An example of Discrete Fourier Transform using FFT Algorithm
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/EulerProblem/" rel="permalink">Problem of Two Fixed Centers
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/TwoBodyProblemCont/" rel="permalink">Ellipses and the Two-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/SymplecticIntegrators/" rel="permalink">Symplectic Integrators
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Figure8Orbit/" rel="permalink">Plotting and Visualizing the Three-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the first post on my summer research about three-body problems. Today, we will find out what happens if three planets are influenced by each others’ ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'DRH1J5IXZJ',
+  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://henry-yip.github.io/ImageConvolution/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ImageConvolution"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://encompassing-hk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

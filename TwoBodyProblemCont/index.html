@@ -1,0 +1,945 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Ellipses and the Two-Body Problem | Henry Yip</title>
+<meta name="description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Ellipses and the Two-Body Problem">
+<meta property="og:url" content="https://henry-yip.github.io/TwoBodyProblemCont/">
+
+
+  <meta property="og:description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-27T00:00:00+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/TwoBodyProblemCont/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbycontent/">Tags by Content</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Ellipses and the Two-Body Problem</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Henry Yip’s Math Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Ellipses and the Two-Body Problem">
+    <meta itemprop="description" content="This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.">
+    <meta itemprop="datePublished" content="2024-06-27T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/TwoBodyProblemCont/" class="u-url" itemprop="url">Ellipses and the Two-Body Problem
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Conics</h4></header>
+              <ul class="toc__menu"><li><a href="#ellipses">Ellipses</a><ul><li><a href="#semimajor-and-semiminor-axes">Semimajor and Semiminor Axes</a></li><li><a href="#radius">Radius</a></li></ul></li><li><a href="#two-body-problem">Two-Body Problem</a><ul><li><a href="#energy-of-the-system">Energy of the system</a></li><li><a href="#angular-momentum-and-the-runge-lenz-vector">Angular Momentum and the Runge-Lenz Vector</a></li><li><a href="#keplers-laws">Kepler’s Laws</a></li></ul></li><li><a href="#thoughts-on-the-project">Thoughts on the Project</a></li><li><a href="#credits">Credits</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.</p>
+
+<p>This is <a href="/SymplecticIntegrators/">my previous post</a> if you have missed it.</p>
+
+<h2 id="ellipses">Ellipses</h2>
+
+<h3 id="semimajor-and-semiminor-axes">Semimajor and Semiminor Axes</h3>
+
+<p>I have discussed the parametrization of ellipses <a href="/Multivariable_Calc/">here</a>.</p>
+
+<p>Recall that an ellipse can be written as:</p>
+
+\[\frac{X^2}{a^2}+\frac{Y^2}{b^2}=1\]
+
+<p>We can express:</p>
+
+\[b^2=a^2(1-e^2)\]
+
+<p>Where \(e\) is the eccentricity.</p>
+
+<h3 id="radius">Radius</h3>
+
+<p>We can express the radius \(R\) (measured from center):</p>
+
+\[R= \frac{a \sqrt{1-e^2}}{[1-e^2 \cos^2{\theta_{\text{center}}}]^{\frac{1}{2}}}\]
+
+<p>Measured from the focus, it is expressed as:</p>
+
+\[r=\frac{a(1-e^2)}{1+e \cos{\theta_{\text{foci}}}}\]
+
+<p>or simply</p>
+
+\[r=\frac{p}{1+e \cos{\theta_{\text{foci}}}}\]
+
+<p>where \(p\) is the semi-latus rectum. It was introduced briefly in <a href="/KeplerVirial/">my other post</a>.</p>
+
+<h2 id="two-body-problem">Two-Body Problem</h2>
+
+<p>I have written a post on the Two-Body Problem <a href="/TwoParticles/">Here</a>. I will focus more about the <strong>results</strong> here.</p>
+
+<h3 id="energy-of-the-system">Energy of the system</h3>
+
+<p>Consider:</p>
+
+\[\frac{1}{2}v^2=E+\frac{GM}{r}.\]
+
+<p>Now set \(E=- \alpha^2\).</p>
+
+<p>Let \(a=\frac{GM}{2 \alpha^2}\), we obtain:</p>
+
+\[r \leq 2a.\]
+
+<p>Hence negative energy implies <strong>bounded</strong> orbit.</p>
+
+<h3 id="angular-momentum-and-the-runge-lenz-vector">Angular Momentum and the Runge-Lenz Vector</h3>
+
+<p>As I discussed in <a href="/NoetherTheorem/">this post</a> angular momentum \(\mathbf{C}\) is conserved.</p>
+
+<p>Now we also notice that:</p>
+
+\[\begin{aligned}
+\frac{\mathrm{d}}{\mathrm{d} t}\left(\mathbf{e}_r\right)=\frac{\mathrm{d}}{\mathrm{d} t}\left(\frac{\mathbf{r}}{r}\right) &amp; =\frac{r \dot{\mathbf{r}}-\dot{\boldsymbol{r}} \mathbf{r}}{r^2}=\frac{r^2 \dot{\mathbf{r}}-r \dot{r} \mathbf{r}}{r^3} \\
+&amp; =\frac{(\mathbf{r} \cdot \mathbf{r}) \dot{\mathbf{r}}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \mathbf{r}}{r^3}=\frac{\mathbf{r} \times(\dot{\mathbf{r}} \times \mathbf{r})}{r^3}=-\frac{\mathbf{r} \times \mathbf{C}}{r^3}=\frac{\mathbf{C} \times \mathbf{r}}{r^3}
+\end{aligned}\]
+
+<p>If \(\mathbf{C}=0\), then the two particles collide. If \(\mathbf{C} \neq 0\), we have \(r \cdot \mathbf{C}=0\), which implies \(\mathbf{C}\) is perpendicular to the motion of the particles.</p>
+
+\[\frac{\mathrm{d}}{\mathrm{d} t}\left(\mathbf{e}_r\right)=\frac{\mathbf{C} \times \mathbf{r}}{r^3}=-\frac{\mathbf{C} \times \ddot{\mathbf{r}}}{G M}=-\frac{1}{G M} \frac{\mathrm{d}}{\mathrm{d} t}(\mathbf{C} \times \dot{\mathbf{r}})=\frac{1}{G M} \frac{\mathrm{d}}{\mathrm{d} t}(\mathbf{v} \times \mathbf{C}) .\]
+
+<p>Integrating both sides,</p>
+
+\[\mu\left(\mathbf{e}_r+\mathbf{e}\right)=\mathbf{v} \times \mathbf{C}=\dot{\mathbf{r}} \times(\mathbf{r} \times \dot{\mathbf{r}})=(\dot{\mathbf{r}} \cdot \dot{\mathbf{r}}) \mathbf{r}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \dot{\mathbf{r}}=v^2 \mathbf{r}-r \dot{r} \dot{\mathbf{r}} .\]
+
+<p>where \(\mathbf{e}\) is the constant vector upon integration.</p>
+
+<p>Now as \(\mathbf{C}\) is normal to both \(\mathbf{r}\) and \(\mathbf{\dot{r}}\).</p>
+
+<p>By considering \(\mathbf{e_r} \cdot \mathbf{C}=0\), we can easily see that \(\mathbf{e} \cdot \mathbf{C}=0\). The reader can show that this implies \(\mathbf{e}\) lies in the plane of the motion.</p>
+
+<p>In fact \(\mathbf{e}\) is the Runge-Lenz vector, which is a constant of motion. Any reader having read <a href="/NoetherTheorem/">my post of Noether’s Theorem</a> can immediately see this implies a “hidden” conservation in the system. However in this case it is rather complicated: The reason behind this symmetry is that the two-body problem is mathematically equivalent to a particle moving freely on the surface of a four-dimensional (hyper-)sphere, so that the whole problem is symmetric under certain rotations of the four-dimensional space. This will be a focus in a later part of my research project.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Laplace%E2%80%93Runge%E2%80%93Lenz_vector">Here</a> contains more information about the Runge-Lenz Vector.</p>
+
+<h3 id="keplers-laws">Kepler’s Laws</h3>
+
+<ul>
+  <li>First Law: Explained above.</li>
+  <li>Second Law and Third Law: Explained in <a href="/KeplerVirial/">my other post</a>.</li>
+</ul>
+
+<h2 id="thoughts-on-the-project">Thoughts on the Project</h2>
+
+<p>This project is tougher than I thought. I expected 5-6 hours per day, and I ended up spending 8-9 (even 10!) hours per day. Part of it is because I want to work as hard as I can. Reading the literature is quite boring sometimes, but organising my thoughts about it really helps my understand the materials.</p>
+
+<h2 id="credits">Credits</h2>
+<p>The whole post is based on the book Integrable Systems in Celestial Mechanics. The part about four-dimensional (hyper-)sphere is based on wikipedia.</p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Styling Example</title>
+  <style>
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .entry-tags i.fa-tags {
+      margin-right: 8px;
+      color: #666;
+    }
+
+    .tag-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag-button:hover {
+      opacity: 0.8;
+    }
+
+    .difficulty-tag.easy {
+      background-color: #28a745; /* Green for Easy */
+    }
+
+    .difficulty-tag.easy:hover {
+      background-color: #218838;
+    }
+
+    .difficulty-tag.medium {
+      background-color: #ffc107; /* Yellow for Medium */
+      color: #212529; /* Black text for better contrast */
+    }
+
+    .difficulty-tag.medium:hover {
+      background-color: #e0a800;
+    }
+
+    .difficulty-tag.hard {
+      background-color: #dc3545; /* Red for Hard */
+    }
+
+    .difficulty-tag.hard:hover {
+      background-color: #c82333;
+    }
+
+    .content-tag {
+      background-color: #f0ad4e; /* Orange color for content tags */
+    }
+
+    .content-tag:hover {
+      background-color: #ec971f;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="entry-tags">
+      <i class="fa fa-tags"></i>
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#geometry">Geometry</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag easy" href="/tagsbydifficulty/#easy">Easy</a>
+        
+      
+    </div>
+  
+</body>
+</html>
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-27T00:00:00+08:00">June 27, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Ellipses+and+the+Two-Body+Problem%20https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FTwoBodyProblemCont%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/SymplecticIntegrators/" class="pagination--pager" title="Symplectic Integrators
+">Previous</a>
+    
+    
+      <a href="/EulerProblem/" class="pagination--pager" title="Problem of Two Fixed Centers
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/EulerProblem/" rel="permalink">Problem of Two Fixed Centers
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/SymplecticIntegrators/" rel="permalink">Symplectic Integrators
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Figure8Orbit/" rel="permalink">Plotting and Visualizing the Three-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the first post on my summer research about three-body problems. Today, we will find out what happens if three planets are influenced by each others’ ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/LinearRegression/" rel="permalink">Linear Regression using OLS and SGD Methods in Python
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and p...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'DRH1J5IXZJ',
+  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://henry-yip.github.io/TwoBodyProblemCont/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/TwoBodyProblemCont"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://encompassing-hk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

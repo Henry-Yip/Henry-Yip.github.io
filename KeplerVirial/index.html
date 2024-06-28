@@ -1,0 +1,961 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Two Laws Related to Planetary Revolution | Henry Yip</title>
+<meta name="description" content="This post is related to Kepler’s Third and Virial’s Theorem, twp famous laws related to planets revolution around the sun. Furthermore, Virial’s Theorem is very important in statistical mechanics and is seen in Quantum Mechanics also (for example in quantum harmonic oscillators).">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Two Laws Related to Planetary Revolution">
+<meta property="og:url" content="https://henry-yip.github.io/KeplerVirial/">
+
+
+  <meta property="og:description" content="This post is related to Kepler’s Third and Virial’s Theorem, twp famous laws related to planets revolution around the sun. Furthermore, Virial’s Theorem is very important in statistical mechanics and is seen in Quantum Mechanics also (for example in quantum harmonic oscillators).">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-12-25T00:00:00+08:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/KeplerVirial/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX Tutorials</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbycontent/">Tags by Content</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Two Laws Related to Planetary Revolution</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Henry Yip’s Math Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Two Laws Related to Planetary Revolution">
+    <meta itemprop="description" content="This post is related to Kepler’s Third and Virial’s Theorem, twp famous laws related to planets revolution around the sun. Furthermore, Virial’s Theorem is very important in statistical mechanics and is seen in Quantum Mechanics also (for example in quantum harmonic oscillators).">
+    <meta itemprop="datePublished" content="2022-12-25T00:00:00+08:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/KeplerVirial/" class="u-url" itemprop="url">Two Laws Related to Planetary Revolution
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> HKDSE</h4></header>
+              <ul class="toc__menu"><li><a href="#keplers-third-law">Kepler’s Third Law</a><ul><li><a href="#standard-example">Standard Example</a></li><li><a href="#fun-example">Fun Example</a></li><li><a href="#generalized-case">Generalized Case</a></li><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li><li><a href="#credits">Credits</a></li></ul></li><li><a href="#virials-theorem">Virial’s Theorem</a><ul><li><a href="#jeans-mass">Jeans Mass</a></li><li><a href="#intuition-behind-virials-theorem">Intuition behind Virial’s Theorem</a></li><li><a href="#credits-1">Credits</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This post is related to Kepler’s Third and Virial’s Theorem, twp famous laws related to planets revolution around the sun. Furthermore, Virial’s Theorem is very important in statistical mechanics and is seen in Quantum Mechanics also (for example in quantum harmonic oscillators).</p>
+
+<h2 id="keplers-third-law">Kepler’s Third Law</h2>
+
+<p>Using even high school knowledge we can easily deduce Kepler’s Third Law as below:</p>
+
+\[\begin{align}
+F=mr \omega^2 &amp;= \frac{GMm}{r^2} \\
+ \omega^2 &amp;= \frac{GM}{r^3} \\
+ \left (\frac{2 \pi}{T} \right)^2 &amp;=\frac{GM}{r^3} \\
+  \left (\frac{4 {\pi}^2}{T^2} \right) &amp;=\frac{GM}{r^3} \\
+  T^2&amp;=\frac{4\pi^2}{GM}r^3  \space \space \blacksquare
+\end{align}\]
+
+<p>This is highly significant as periods are much more easily measurable compared to distances.</p>
+
+<h3 id="standard-example">Standard Example</h3>
+
+<p>Consider Geostationary Satellites. It takes \(24 \text{ hours} =1440\text{ minutes}=86400 \text{ seconds}\) for a complete revolution, hence \(T=86400 \text{s}\). Applying the formula we have \(r^3=\frac{GMT^2} {4\pi^2}\). Hence \(r=(4.22 \times 10^7)  \text{ m}\), meaning radius of orbit of geostationary satellite is around \(42200\text{ km}\) from center of earth!</p>
+
+<p>Its velocity is: \(v= r \omega= 3070  ms^{-1}\)</p>
+
+<h3 id="fun-example">Fun Example</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MFcT4Hsx7VQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Estimate Peter Griffin’s weight:</p>
+
+<p>With \(T=2.75s\) and \(r=1m\), we have \(M=7.82 \times 10^{10} \text{kg}\). Hmmmm</p>
+
+<h3 id="generalized-case">Generalized Case</h3>
+
+<p>Unfortunately the case above only works for circles. Below I will show it works for all ellispes.</p>
+
+<p><strong>Proposition</strong>: \(T^2\) is proportional to \(a^3\) for all ellipses, where \(a\) is the semi-major axis.</p>
+
+<p><strong>Proof</strong>:</p>
+
+<p>First Note <strong>Kepler’s Second Law</strong>, the rate at which the area is swept by the <strong>Radius Vector</strong> (surprising a constant!)</p>
+
+\[\dot{A}=\frac{d A}{d t}=\frac{r(r d \theta) / 2}{d t}=\frac{1}{2} r^2 \dot{\theta}=\frac{h}{2}\]
+
+<p>Next, by substitution and using the results from <a href="/Multivariable_Calc/">Area of Ellipse</a>:</p>
+
+\[\Delta t=\frac{A}{\dot{A}}=\frac{\pi a b}{h / 2}=\frac{2 \pi a b}{h}\]
+
+<p>Now let \(l\) as the semi-latus rectum (as shown below)</p>
+
+<p><img src="/assets/images/SemiLatus.png" alt="" srcset=" /assets/images/SemiLatus.png 480w" /></p>
+
+<p>(Source of Image: <a href="https://academickids.com/encyclopedia/index.php/Conic_section">Here</a>)</p>
+
+<p>and \(e\) as the eccentricity, we have:</p>
+
+\[a=\frac{l}{1-e^2}, \quad b=a \sqrt{1-e^2}=\frac{l}{\sqrt{1-e^2}}\]
+
+<p>Using \(l=\frac{mh^2}{k}\), we have:</p>
+
+\[\Delta t=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-e^2} \quad \Longrightarrow \quad(\Delta t)^2=\frac{(2 \pi)^2 a^3}{h^2} l=(2 \pi)^2 a^3 \frac{m}{k}\]
+
+<p>We deduce \((\Delta t)^2 / a^3=(2 \pi)^2 / G M\), which is consistent with the analysis from high school.</p>
+
+<h3 id="exercises-for-the-readers">Exercises for the readers</h3>
+<ul>
+  <li>Verify that Kepler’s Third Law roughly holds for every planet in the solar system. (Difficulty: F4 HKDSE). Hence, plot the best fit line, using the residue sum of squares (Difficulty: University Year 1-2)</li>
+  <li>State Kepler’s First and Second Law (Difficulty: HKDSE F6/ University Year 1)</li>
+</ul>
+
+<h3 id="credits">Credits</h3>
+<p>The post on Kepler’s Third Law is strongly inspired by Prof Arjun Berera’s Introductory Dynamics Notes, in the course <a href="https://www.drps.ed.ac.uk/22-23/dpt/cxphys08052.htm">PHYS08052</a>.</p>
+
+<h2 id="virials-theorem">Virial’s Theorem</h2>
+
+<p>Virial’s Theorem relates the average over time of the total kinetic energy of a stable system of discrete particles to its total potential energy. It basically states that the average over time of the total gravitaitonal energy of a stable system of discrete particles is \(-2\) more compared to its total kinetic energy.</p>
+
+<p>Note that this theorem doens’t imply at <strong>all times</strong> the magnitude of gravitational energy is twice of magnitude of kinetic energy, what we have is just a statistical average.</p>
+
+<p>This phenonmoenon is quite surprising because not all paticles have the same orbits while revolving around a star, some have circular and some have really weird shapes. This theorem generalizes for all such orbits shapes however, given that the forces are conservative.</p>
+
+<p>This theorem is useful for caluclating “Jeans Mass”:</p>
+
+<h3 id="jeans-mass">Jeans Mass</h3>
+
+<p>The gravitational binding energy of a cloud of mass \(M\) and size \(R\) is given by</p>
+
+\[E_{\text {grav }}=-\frac{3}{5} \frac{G M^2}{R}.\]
+
+<p>Each particle at temperature \(T\) has an kinetic energy given by:</p>
+
+\[E_{\mathrm{KE}}=\frac{3 k T}{2}.\]
+
+<p>If the gas cloud has \(N\) particles of mass \(m\), such that the total mass of the cloud is \(M=Nm\) we can say that the total thermal kinetic energy of the cloud is:</p>
+
+\[E_{\text {thermal }}=\frac{3 k T}{2} \frac{M}{m}.\]
+
+<p>For the gas cloud to collapse,</p>
+
+\[-E_{\text {grav }} \geq 2 E_{\text {thermal }}.\]
+
+<p>where the factor of 2 here comes from the <strong>virial theorem</strong>. Hence, the ratio between the mass and radius must be greater than</p>
+
+\[\frac{M}{R} \geq \frac{5 k T}{G m}.\]
+
+<p>This is the source of Jeans Mass.</p>
+
+<h3 id="intuition-behind-virials-theorem">Intuition behind Virial’s Theorem</h3>
+<p>Consider a small star with mass \(m\) rotating around a bigger star with mass \(M\). We have:</p>
+
+\[\begin{aligned}
+T&amp;=\frac{1}{2}mv^2\\
+&amp;=\frac{1}{2}rm\frac{v^2}{r} \\
+&amp;=\frac{1}{2}r(ma) \\
+&amp;=\frac{GMm}{2r}.
+\end{aligned}\]
+
+<p>On the other hand, we have:
+\(V=-\frac{GMm}{r}.\)</p>
+
+<p>Hence the magnitude of gravitational potential energy is twice the magnitude of kinetic energy in this case.</p>
+
+<h3 id="credits-1">Credits</h3>
+<p>The section is very highly inspired by the Course Notes of <a href="http://www.drps.ed.ac.uk/21-22/dpt/cxphys08050.htm">Introductory Astrophysics</a>.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Styling Example</title>
+  <style>
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .entry-tags i.fa-tags {
+      margin-right: 8px;
+      color: #666;
+    }
+
+    .tag-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag-button:hover {
+      opacity: 0.8;
+    }
+
+    .difficulty-tag.easy {
+      background-color: #28a745; /* Green for Easy */
+    }
+
+    .difficulty-tag.easy:hover {
+      background-color: #218838;
+    }
+
+    .difficulty-tag.medium {
+      background-color: #ffc107; /* Yellow for Medium */
+      color: #212529; /* Black text for better contrast */
+    }
+
+    .difficulty-tag.medium:hover {
+      background-color: #e0a800;
+    }
+
+    .difficulty-tag.hard {
+      background-color: #dc3545; /* Red for Hard */
+    }
+
+    .difficulty-tag.hard:hover {
+      background-color: #c82333;
+    }
+
+    .content-tag {
+      background-color: #f0ad4e; /* Orange color for content tags */
+    }
+
+    .content-tag:hover {
+      background-color: #ec971f;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="entry-tags">
+      <i class="fa fa-tags"></i>
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag easy" href="/tagsbydifficulty/#easy">Easy</a>
+        
+      
+    </div>
+  
+</body>
+</html>
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-25T00:00:00+08:00">December 25, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Two+Laws+Related+to+Planetary+Revolution%20https%3A%2F%2Fhenry-yip.github.io%2FKeplerVirial%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FKeplerVirial%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FKeplerVirial%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/Physics/Astrophysics-1/" class="pagination--pager" title="PHYS08050 (Introductory Astrophysics) Course Notes
+">Previous</a>
+    
+    
+      <a href="/NoetherTheorem/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/EulerProblem/" rel="permalink">Problem of Two Fixed Centers
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/TwoBodyProblemCont/" rel="permalink">Ellipses and the Two-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/SymplecticIntegrators/" rel="permalink">Symplectic Integrators
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Figure8Orbit/" rel="permalink">Plotting and Visualizing the Three-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the first post on my summer research about three-body problems. Today, we will find out what happens if three planets are influenced by each others’ ...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'DRH1J5IXZJ',
+  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://henry-yip.github.io/KeplerVirial/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/KeplerVirial"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://encompassing-hk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
