@@ -220,4 +220,10 @@ var store = [{
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/EulerProblem/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Understanding and Visualizing the Shape Sphere",
+        "excerpt":"This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere. This is my previous post if you have missed it. Simplifying the Three Body Problem through Reduction Reduction is a method used to simplify the analysis of three body problems by...","categories": [],
+        "tags": ["Research","Classical Mechanics","Medium"],
+        "url": "/ShapeSphere/",
+        "teaser": "/assets/images/Teaser.png"
       }]

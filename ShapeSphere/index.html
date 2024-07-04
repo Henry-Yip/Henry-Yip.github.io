@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Third Fundamental Form and How to Find it | Henry Yip</title>
-<meta name="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
+<!-- begin _includes/seo.html --><title>Understanding and Visualizing the Shape Sphere | Henry Yip</title>
+<meta name="description" content="This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Third Fundamental Form and How to Find it">
-<meta property="og:url" content="https://henry-yip.github.io/ThirdFundamentalForm/">
+<meta property="og:title" content="Understanding and Visualizing the Shape Sphere">
+<meta property="og:url" content="https://henry-yip.github.io/ShapeSphere/">
 
 
-  <meta property="og:description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-06-08T00:00:00+08:00">
+  <meta property="og:description" content="This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-04T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/ThirdFundamentalForm/">
+
+<link rel="canonical" href="https://henry-yip.github.io/ShapeSphere/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Third Fundamental Form and How to Find it</li>
+        <li class="current">Understanding and Visualizing the Shape Sphere</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Third Fundamental Form and How to Find it">
-    <meta itemprop="description" content="In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .">
-    <meta itemprop="datePublished" content="2024-06-08T00:00:00+08:00">
+    <meta itemprop="headline" content="Understanding and Visualizing the Shape Sphere">
+    <meta itemprop="description" content="This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.">
+    <meta itemprop="datePublished" content="2024-07-04T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/ThirdFundamentalForm/" class="u-url" itemprop="url">Third Fundamental Form and How to Find it
+            <a href="https://henry-yip.github.io/ShapeSphere/" class="u-url" itemprop="url">Understanding and Visualizing the Shape Sphere
 </a>
           </h1>
           
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -371,91 +371,67 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Third Fundamental Form</h4></header>
-              <ul class="toc__menu"><li><a href="#finding-characteristic-polynomial">Finding Characteristic Polynomial</a></li><li><a href="#cayley-hamilton-theorem-and-simplifications">Cayley-Hamilton Theorem and Simplifications</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Shape Sphere</h4></header>
+              <ul class="toc__menu"><li><a href="#simplifying-the-three-body-problem-through-reduction">Simplifying the Three Body Problem through Reduction</a></li><li><a href="#mathematical-details">Mathematical Details</a></li><li><a href="#plotting-in-python">Plotting in Python</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>In this post, we attempt to relate the Third Fundamental Form with the First and Second Fundamental Form .</p>
+        <p>This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.</p>
 
-<h3 id="finding-characteristic-polynomial">Finding Characteristic Polynomial</h3>
-<p>At each point \(x\) of a surface, the tangent space is an inner product space.</p>
+<p>This is <a href="/EulerProblem/">my previous post</a> if you have missed it.</p>
 
-<p>\begin{align}
-(S_xv, w) = (dn(v), w)
-\end{align}</p>
+<h2 id="simplifying-the-three-body-problem-through-reduction">Simplifying the Three Body Problem through Reduction</h2>
 
-<p>Now I will use without proof that \(S\) can be written as:</p>
+<p><em>Reduction</em> is a method used to simplify the analysis of three body problems by eliminating redundant degrees of freedom.</p>
 
-\[S = \begin{pmatrix}
-L &amp; M \\
-M &amp; N
-\end{pmatrix}\]
+<p>The three bodies are lying in the Cartesian Plane \(\mathbb{R}^2 \cong \mathbb{C}\). Without “reduction”, the initial configuration space of the system is \(\mathbb{C}^3\), representing the positions of the three masses. To simplify the problem, we use Galilean invariance to fix the center of mass at the origin. This reduces the configuration space to</p>
 
-<p>Now we attempt to find its Characteristic Polynomial. Recall that it is written as:</p>
+\[X = \left\{ x = (x_1, x_2, x_3) \in \mathbb{C}^3 \mid \sum_{i=1}^3 x_i = 0 \right\}.\]
 
-\[p_A(\lambda) = \det(A - \lambda I)\]
+<p>By removing the translational degree of freedom, we reduce the dimensionality of the configuration space to \(X\), where \(X \sub \mathbb{C}^3\).</p>
 
-<p>For the Shape Operator, we have:</p>
+<p>Next, we consider the rotational symmetry of the system. This includes rotation and reflection:</p>
 
-\[A - \lambda I = \begin{pmatrix}
-L &amp; M \\
-M &amp; N
-\end{pmatrix} - \lambda \begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; 1
-\end{pmatrix} = \begin{pmatrix}
-L - \lambda &amp; M \\
-M &amp; N - \lambda
-\end{pmatrix}\]
+\[R_\theta \cdot (x_1, x_2, x_3) = (e^{i\theta} x_1, e^{i\theta} x_2, e^{i\theta} x_3), \quad S \cdot (x_1, x_2, x_3) = (\bar{x}_1, \bar{x}_2, \bar{x}_3).\]
 
-<p>Now,</p>
+<p>To further reduce the configuration space, we consider the quotient of \(X\) by the rotation group \(SO(2)\), which represents all possible rotations in the plane.</p>
 
-\[p_S(\lambda) = \det \begin{pmatrix}
-L - \lambda &amp; M \\
-M &amp; N - \lambda
-\end{pmatrix}\]
+<p>The reduced configuration space, after factoring out translations and rotations, is homeomorphic to \(\mathbb{R}^3\). This space represents the set of oriented similarity classes of triangles. This space is known as the <em>shape space</em>.</p>
 
-<p>Resulting in</p>
+<h2 id="mathematical-details">Mathematical Details</h2>
 
-\[p_S(\lambda) = \lambda^2 - (L + N)\lambda + (LN - M^2)\]
+<p>We can represent the shape space as a sphere with dots on it, which can be joined in a line.</p>
 
-<p>It can be easily shown that it is equivalent to:</p>
+\[\hat{\vec{n}}=\left(n_x^{\prime}, n_y^{\prime}, n_z^{\prime}\right)=\left(\frac{2 \vec{\rho} \cdot \vec{\lambda}}{R^2}, \frac{\lambda^2-\rho^2}{R^2}, \frac{2(\vec{\rho} \times \vec{\lambda}) \cdot \vec{e}_z}{R^2}\right),\]
 
-\[p_S(\lambda)=\lambda^2-2H \lambda +(LN - M^2)\]
+<p>Where</p>
 
-<h3 id="cayley-hamilton-theorem-and-simplifications">Cayley-Hamilton Theorem and Simplifications</h3>
-<p>By the Cayley-Hamilton theorem, the shape operator \(S\) satisfies its own characteristic polynomial:</p>
+\[\begin{aligned}
+\vec{\rho} &amp; =\frac{1}{\sqrt{2}}\left(\vec{x}_1-\vec{x}_2\right) \\
+\vec{\lambda} &amp; =\frac{1}{\sqrt{6}}\left(\vec{x}_1+\vec{x}_2-2 \vec{x}_3\right)
+\end{aligned}\]
 
-\[S^2 - 2H S + KI = 0\]
+<p>and</p>
 
-<p>Applying it to a vector and with some simplifications:</p>
+\[R=\sqrt{\rho^2+\lambda^2} .\]
 
-\[\begin{align}
-(S^2 - 2H S + KI)(v) &amp;= 0 \\
-S^2(v)-2HS(v)+K(v) &amp;=0 \\
-S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
-\mathrm{III}(v, w) - 2H \mathrm{II}(v, w) + K\mathrm{I}(v, w) &amp;= 0
-\end{align}\]
+<h2 id="plotting-in-python">Plotting in Python</h2>
 
-<p>Using:</p>
+<p><img src="/assets/images/Figure_8_Shape.png" alt="" srcset="    /assets/resized/Figure_8_Shape-600x328.png 600w,    /assets/resized/Figure_8_Shape-1440x786.png 1440w, /assets/images/Figure_8_Shape.png 1920w" /></p>
 
-\[I(v, w) = v \cdot w\]
+<p><img src="/assets/images/Figure_8_Shape_Animation.gif" alt="" srcset="    /assets/resized/Figure_8_Shape_Animation-600x280.gif 600w,    /assets/resized/Figure_8_Shape_Animation-1440x672.gif 1440w, /assets/images/Figure_8_Shape_Animation.gif 1500w" /></p>
 
-\[\mathrm{II}(v, w) = S(v) \cdot w\]
+<p>This can be seen using other shapes also. The interested reader can read <a href="http://three-body.ipb.ac.rs/">this website</a>.</p>
 
-\[\mathrm{III}(v, w) = S^2(v) \cdot w = S(v) \cdot S(w)\]
+<h2 id="progress">Progress</h2>
 
-<h2 id="exercises-for-the-reader">Exercises for the Reader</h2>
-<ul>
-  <li>Show that the shape operator is self-adjoint.</li>
-  <li>Hence show that \(S^2(v) \cdot w = S(v) \cdot S(w)\) for the Third Fundamental Form (Hint: \((S(v), w) = (v, S^*(w))\))</li>
-  <li>How does the shape operator contain information about the curvature of the surface? (Hint: Eigenvalues)</li>
-  <li>State and prove Cayley-Hamilton Formula and show it works using a matrix as an example.</li>
-  <li>Why is the Third Fundamental Form not that useful?</li>
-</ul>
+<p>I haven’t updated this website for several days as I was busy figuring out how to plot the shape sphere, as well as reading the theoretical details. I feel like the math I worked out last week is sometimes too tedious, and the longer the calculation the less interesting it becomes (loss of intuition). Regardless, I will try to classify the orbits of planet influenced by a Fixed Center in the coming days.</p>
 
+<h2 id="credits">Credits</h2>
+<p>This post is based on the paper <a href="https://henry-yip.github.io/assets/Figure_8_Proof.pdf">A remarkable periodic solution of the three-body problem in the case of equal masses</a>. The mathematical details of the shape sphere is given in <a href="http://three-body.ipb.ac.rs/info.php">this website</a>.</p>
+
+<p>I would like to again thank Dr Jenni Smillie for her guidance and support duing this project.</p>
 
         
       </section>
@@ -536,17 +512,17 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#algebra">Algebra</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
         
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#geometry">Geometry</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
         
       
         
         
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
+          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
         
       
     </div>
@@ -555,7 +531,7 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-08T00:00:00+08:00">June 8, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-04T00:00:00+08:00">July 4, 2024</time></p>
 
       </footer>
 
@@ -564,23 +540,22 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Third+Fundamental+Form+and+How+to+Find+it%20https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Understanding+and+Visualizing+the+Shape+Sphere%20https%3A%2F%2Fhenry-yip.github.io%2FShapeSphere%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FShapeSphere%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FThirdFundamentalForm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FShapeSphere%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/BoseEinstein/" class="pagination--pager" title="An Easy and Brief Introduction to Bose Gas and Fermi Gas
+      <a href="/EulerProblem/" class="pagination--pager" title="Problem of Two Fixed Centers
 ">Previous</a>
     
     
-      <a href="/VietaJumping/" class="pagination--pager" title="Infinite Descent and Vieta’s Formulas
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -594,51 +569,6 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ShapeSphere/" rel="permalink">Understanding and Visualizing the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -759,7 +689,7 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
@@ -769,6 +699,49 @@ S^2(v) \cdot w - 2H S(v) \cdot w + K v \cdot w &amp;= 0 \\
     <p class="archive__item-excerpt" itemprop="description">This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators.
 
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Figure8Orbit/" rel="permalink">Plotting and Visualizing the Three-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the first post on my summer research about three-body problems. Today, we will find out what happens if three planets are influenced by each others’ ...</p>
   </article>
 </div>
 
@@ -903,8 +876,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/ThirdFundamentalForm/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/ThirdFundamentalForm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/ShapeSphere/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ShapeSphere"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
