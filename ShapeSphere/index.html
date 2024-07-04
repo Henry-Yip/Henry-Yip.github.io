@@ -401,20 +401,31 @@
 
 <h2 id="mathematical-details">Mathematical Details</h2>
 
-<p>We can represent the shape space as a sphere with dots on it, which can be joined in a line.</p>
+<p>First we define the Jacobi Map:</p>
 
-\[\hat{\vec{n}}=\left(n_x^{\prime}, n_y^{\prime}, n_z^{\prime}\right)=\left(\frac{2 \vec{\rho} \cdot \vec{\lambda}}{R^2}, \frac{\lambda^2-\rho^2}{R^2}, \frac{2(\vec{\rho} \times \vec{\lambda}) \cdot \vec{e}_z}{R^2}\right),\]
+\[\mathcal{J}: \mathcal{X} \rightarrow \mathbb{C}^2\]
 
-<p>Where</p>
+<p>specificed by:</p>
 
-\[\begin{aligned}
-\vec{\rho} &amp; =\frac{1}{\sqrt{2}}\left(\vec{x}_1-\vec{x}_2\right) \\
-\vec{\lambda} &amp; =\frac{1}{\sqrt{6}}\left(\vec{x}_1+\vec{x}_2-2 \vec{x}_3\right)
-\end{aligned}\]
+\[\left(z_1, z_2\right)=\mathcal{J}\left(x_1, x_2, x_3\right)=\left(\frac{1}{\sqrt{2}}\left(x_3-x_2\right), \sqrt{\frac{2}{3}}\left(x_1-\frac{1}{2}\left(x_2+x_3\right)\right)\right).\]
 
-<p>and</p>
+<p>We then define the Hoft Map:</p>
 
-\[R=\sqrt{\rho^2+\lambda^2} .\]
+\[\mathcal{K}: \mathbb{C}^2 \rightarrow \mathbb{R} \times \mathbb{C}=\mathbb{R}^3\]
+
+<p>specified by:</p>
+
+\[\mathcal{K}\left(z_1, z_2\right)=\left(u_1, u_2+i u_3\right)=\left(\left|z_1\right|^2-\left|z_2\right|^2, 2 \bar{z}_1 z_2\right) .\]
+
+<p>The 3-sphere is thus sent by \(\mathcal{K} \circ \mathcal{J}\) to the unit 2-sphere of \(\mathbb{R^3}\).</p>
+
+<p>The reader can notice that:</p>
+
+\[\left|\mathcal{K}\left(z_1, z_2\right)\right|^2=u_1^2+u_2^2+u_3^2=\left(\left|z_1\right|^2+\left|z_2\right|^2\right)^2=I^2 .\]
+
+<p>Where \(I\) is the moment of inertia.</p>
+
+<p>As we take \(I=1\), this is related to the <a href="https://en.wikipedia.org/wiki/Hopf_fibration">Hopf Fibration</a>. A more detailed explanation can be seen in <a href="https://henry-yip.github.io/assets/Figure_8_Proof.pdf">“A remarkable periodic solution of the three-body problem in the case of equal masses”</a>.</p>
 
 <h2 id="plotting-in-python">Plotting in Python</h2>
 
@@ -429,7 +440,7 @@
 <p>I haven’t updated this website for several days as I was busy figuring out how to plot the shape sphere, as well as reading the theoretical details. I feel like the math I worked out last week is sometimes too tedious, and the longer the calculation the less interesting it becomes (loss of intuition). Regardless, I will try to classify the orbits of planet influenced by a Fixed Center in the coming days.</p>
 
 <h2 id="credits">Credits</h2>
-<p>This post is based on the paper <a href="https://henry-yip.github.io/assets/Figure_8_Proof.pdf">A remarkable periodic solution of the three-body problem in the case of equal masses</a>. The mathematical details of the shape sphere is given in <a href="http://three-body.ipb.ac.rs/info.php">this website</a>.</p>
+<p>This post is based on the paper <a href="https://henry-yip.github.io/assets/Figure_8_Proof.pdf">“A remarkable periodic solution of the three-body problem in the case of equal masses”</a>.</p>
 
 <p>I would like to again thank Dr Jenni Smillie for her guidance and support duing this project.</p>
 
