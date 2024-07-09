@@ -204,26 +204,32 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Symplectic Integrators",
-        "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics. We consider a energy-conserved system. As seen...","categories": [],
+        "excerpt":"This is the second post on my summer research about three-body problems. Today we are discussing Symplectic Integrators. This is my previous post about the figure-8 orbit if you have missed it. Definition of Symplectic Integrators First we need to look at Liouville’s Theorem in Hamiltonian Dynamics. We consider a...","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/SymplecticIntegrators/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Ellipses and the Two-Body Problem",
-        "excerpt":"This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem. This is my previous post if you have missed it. Ellipses Semimajor and Semiminor Axes I have discussed the parametrization of ellipses here. Recall that an ellipse can be...","categories": [],
+        "excerpt":"This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem. This is my previous post about symplectic integrators if you have missed it. Ellipses Semimajor and Semiminor Axes I have discussed the parametrization of ellipses here. Recall that an...","categories": [],
         "tags": ["Research","Classical Mechanics","Geometry","Easy"],
         "url": "/TwoBodyProblemCont/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Problem of Two Fixed Centers",
-        "excerpt":"This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s three-body problem. This is my previous post if you have missed it. Momentum Unconserved Problem Solved! A few days ago I mentioned that momentum...","categories": [],
+        "title": "Problem of Two Fixed Centers (Part I)",
+        "excerpt":"This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s three-body problem. This is my previous post about the two body problem if you have missed it. Momentum Unconserved Problem Solved! A few days...","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/EulerProblem/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Understanding and Visualizing the Shape Sphere",
-        "excerpt":"This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere. This is my previous post if you have missed it. Simplifying the Three Body Problem through Reduction Reduction is a method used to simplify the analysis of three body problems by...","categories": [],
+        "excerpt":"This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere. This is my previous post about the problem of two fixed centers if you have missed it. Simplifying the Three Body Problem through Reduction Reduction is a method used to simplify...","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/ShapeSphere/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Problem of Two Fixed Centers (Part II)",
+        "excerpt":"This is the sixth post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. I have a brief introduction on this particular problem here. This is my previous post about shape spheres if you have missed it. Converting from...","categories": [],
+        "tags": ["Research","Classical Mechanics","Medium"],
+        "url": "/EulerProblemPlots/",
         "teaser": "/assets/images/Teaser.png"
       }]
