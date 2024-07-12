@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>PHYS08050 (Introductory Astrophysics) Course Notes | Henry Yip</title>
-<meta name="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
+<!-- begin _includes/seo.html --><title>Sundman’s Power Series Solution and the Möbius Transformation | Henry Yip</title>
+<meta name="description" content="This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-<meta property="og:url" content="https://henry-yip.github.io/Physics/Astrophysics-1/">
+<meta property="og:title" content="Sundman’s Power Series Solution and the Möbius Transformation">
+<meta property="og:url" content="https://henry-yip.github.io/Sundman/">
 
 
-  <meta property="og:description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-07-01T00:00:00+08:00">
+  <meta property="og:description" content="This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-12T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/Physics/Astrophysics-1/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Sundman/">
 
 
 
@@ -191,17 +191,7 @@
         <span class="sep">/</span>
       
       
-        
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/categories/#physics" itemprop="item"><span itemprop="name">Physics</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">PHYS08050 (Introductory Astrophysics) Course Notes</li>
+        <li class="current">Sundman's Power Series Solution and the Möbius Transformation</li>
       
     
   </ol>
@@ -341,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="PHYS08050 (Introductory Astrophysics) Course Notes">
-    <meta itemprop="description" content="This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!">
-    <meta itemprop="datePublished" content="2022-07-01T00:00:00+08:00">
+    <meta itemprop="headline" content="Sundman’s Power Series Solution and the Möbius Transformation">
+    <meta itemprop="description" content="This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless.">
+    <meta itemprop="datePublished" content="2024-07-12T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Physics/Astrophysics-1/" class="u-url" itemprop="url">PHYS08050 (Introductory Astrophysics) Course Notes
+            <a href="https://henry-yip.github.io/Sundman/" class="u-url" itemprop="url">Sundman’s Power Series Solution and the Möbius Transformation
 </a>
           </h1>
           
@@ -367,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          2 minute read
         
       </span>
     
@@ -381,23 +371,62 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Astro 1</h4></header>
-              <ul class="toc__menu"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#scope">Scope</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Möbius Transformation and the Sundman Three Body Problem Solution</h4></header>
+              <ul class="toc__menu"><li><a href="#summary-of-important-points-in-sundmans-paper">Summary of Important Points in Sundman’s Paper</a></li><li><a href="#möbius-transformation">Möbius Transformation</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. There are many errors and I am not free enough to proofread through it, but please send me corrections if you do find some!</p>
+        <p>This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless.</p>
 
-<p>I have gained permission from Professor Catherine Heymans to put my modified notes in my website.</p>
+<p>This is <a href="/EulerProblemPlots/">my previous post about the problem of two fixed centers</a> if you have missed it.</p>
 
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Proficiency in Calculus and Classical Physics, in particular, Newtonian Mechanics.</p>
+<h2 id="summary-of-important-points-in-sundmans-paper">Summary of Important Points in Sundman’s Paper</h2>
+<ul>
+  <li>In a double collision, the distance to the non-participating third body remains bounded.</li>
+  <li>In order for a triple collision to occur, the area integral of the system must equal zero.</li>
+  <li>The velocity and acceleration of the colliding body tends toward infinity at the point of double collision.</li>
+  <li>The unit vector along the radius joining the two colliding bodies tends to a limit.</li>
+  <li>Singularities in the equations of motion can be removed at one of the bodies by the introduction of the independent variable “\(u\)”.</li>
+  <li>An independent variable “\(w\)” was found such that all the singularities of the motion were removed, allowing any number or combinations of double collisions to occur. (This is needed below!)</li>
+  <li>Power series solutions for the coordinates of the three bodies can be developed in powers of \(w-\bar{w}\).</li>
+  <li>The power series solutions were found to converge, although extremely slowly.</li>
+</ul>
 
-<h2 id="scope">Scope</h2>
-<p>Galaxies and Cosmology, with some coverage on stars.</p>
+<h2 id="möbius-transformation">Möbius Transformation</h2>
 
-<p>Please Press <a href="https://henry-yip.github.io/assets/PHYS08050.pdf">HERE</a> to download!</p>
+<p>For the “\(w\)” we have mentioned above, after some complicated analysis which I won’t show here (the interested reader can read the extremely lengthy proof <a href="https://henry-yip.github.io/assets/Sundman.pdf">here</a>), we arrive at \(\vert w - \bar{w} \vert &lt; \Omega\), where \(\Omega\) is real and \(\bar{w}\) is the value of \(w\) when \(t \to \bar{t}\). This corresponds to a convergence strip of \(2 \Omega\). However in power series, it is a convention to express the “convergence area” as a disc. How do we map a strip to a disc? This can be done using Möbius Transformation in Complex Analysis.</p>
+
+<p>We can denote the strip as: \(S = [s : \text{Im}(s) \leq \beta]\).</p>
+
+<p>Notice that \(g(z) = e^{\frac{(\frac{\pi}{2})s}{\beta}}\) maps \(S\) to the right half plane.</p>
+
+<p>Next, notice that for te right half plane, \(\vert z-1 \vert &lt; \vert z+1 \vert\). This implies \(h(z)=\frac{\vert z-1 \vert}{\vert z+1 \vert}&lt;1\) maps the right half plane to the unit disc. \(h(g(z))\) thus maps \(S\) to the unit disc.</p>
+
+<p>This transformation results in many points being mapped near the boundary of the region of convergence. This causes the slow convergence.</p>
+
+<p>This power series only work if \(c \neq 0\), where \(c\) is equal to:</p>
+
+\[m_0 (\vec{r_0} \times \vec{v_0}) + m_1 (\vec{r_1}\times \vec{v_1}) + m_2 ( \vec{r_2} \times \vec{v_2}) = \vec{c}\]
+
+<p>The astute reader can notice this is indeed the sum of angular momentum.</p>
+
+<p>In conclusion, Sundman’s Solution for the Three Body Problem practically works for essentially all cases, but the convergence is too slow (the number of terms can reach \(10^{8 \times 10^6}\) for just a single decimal of accuracy!) (See Belorizky’s Analysis).</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>Reading literature takes me a lot of time and it’s quite tiring. Again, it is good that I keep a blog running so I can always document my thoughts before I forget. I have been working on the BHH orbits also, which I have included below with the corresponding shape sphere (in 2 angles):</p>
+
+<p><img src="/assets/images/Trajectory_2.png" alt="" srcset="    /assets/resized/Trajectory_2-600x450.png 600w, /assets/images/Trajectory_2.png 640w" /></p>
+
+<p><img src="/assets/images/Shape_Sphere_2.png" alt="" srcset="    /assets/resized/Shape_Sphere_2-600x328.png 600w,    /assets/resized/Shape_Sphere_2-1440x786.png 1440w, /assets/images/Shape_Sphere_2.png 1920w" /></p>
+
+<p><img src="/assets/images/Shape_Sphere_3.png" alt="" srcset="    /assets/resized/Shape_Sphere_3-600x328.png 600w,    /assets/resized/Shape_Sphere_3-1440x786.png 1440w, /assets/images/Shape_Sphere_3.png 1920w" /></p>
+
+<h2 id="credits">Credits</h2>
+<p>This post is based on these papers by <a href="https://henry-yip.github.io/assets/Sundman.pdf">Donald K.Yeomans</a> and <a href="https://henry-yip.github.io/assets/Peter_Sundman.pdf">Peter Senchyna</a></p>
+
+<p>I would like to, again, thank Dr Jenni Smillie for her guidance and support duing this project.</p>
 
 
         
@@ -477,13 +506,28 @@
     <div class="entry-tags">
       <i class="fa fa-tags"></i>
       
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
+        
+      
     </div>
   
 </body>
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-07-01T00:00:00+08:00">July 1, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-12T00:00:00+08:00">July 12, 2024</time></p>
 
       </footer>
 
@@ -492,23 +536,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=PHYS08050+%28Introductory+Astrophysics%29+Course+Notes%20https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Sundman%27s+Power+Series+Solution+and+the+M%C3%B6bius+Transformation%20https%3A%2F%2Fhenry-yip.github.io%2FSundman%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSundman%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FPhysics%2FAstrophysics-1%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSundman%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/Relativity/" class="pagination--pager" title="Leo Chow - Relativity
+      <a href="/EulerProblemPlots/" class="pagination--pager" title="Problem of Two Fixed Centers (Part II)
 ">Previous</a>
     
     
-      <a href="/KeplerVirial/" class="pagination--pager" title="Two Laws Related to Planetary Revolution
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -522,49 +565,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Sundman/" rel="permalink">Sundman’s Power Series Solution and the Möbius Transformation
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It al...</p>
-  </article>
-</div>
-
         
           
 
@@ -693,6 +693,51 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/TwoBodyProblemCont/" rel="permalink">Ellipses and the Two-Body Problem
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the third post on my summer research about three-body problems. Today we are discussing ellipses and the kepler problem.
+
+</p>
   </article>
 </div>
 
@@ -827,8 +872,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Physics/Astrophysics-1/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Physics/CourseNotes"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Sundman/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Sundman"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

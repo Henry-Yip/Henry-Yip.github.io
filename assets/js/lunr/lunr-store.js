@@ -229,7 +229,13 @@ var store = [{
       },{
         "title": "Problem of Two Fixed Centers (Part II)",
         "excerpt":"This is the sixth post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. I have a brief introduction on this particular problem here. This is my previous post about shape spheres if you have missed it. Converting from...","categories": [],
-        "tags": ["Research","Classical Mechanics","Medium"],
+        "tags": ["Research","Classical Mechanics","Easy"],
         "url": "/EulerProblemPlots/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Sundman's Power Series Solution and the Möbius Transformation",
+        "excerpt":"This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless. This is my previous post about...","categories": [],
+        "tags": ["Research","Classical Mechanics","Medium"],
+        "url": "/Sundman/",
         "teaser": "/assets/images/Teaser.png"
       }]
