@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          4 minute read
         
       </span>
     
@@ -372,7 +372,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Möbius Transformation and the Sundman Three Body Problem Solution</h4></header>
-              <ul class="toc__menu"><li><a href="#summary-of-important-points-in-sundmans-paper">Summary of Important Points in Sundman’s Paper</a></li><li><a href="#möbius-transformation">Möbius Transformation</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
+              <ul class="toc__menu"><li><a href="#summary-of-important-points-in-sundmans-paper">Summary of Important Points in Sundman’s Paper</a></li><li><a href="#construction-and-convergence-of-w">Construction and Convergence of \(w\)</a><ul><li><a href="#how-singularities-arise">How singularities arise</a></li><li><a href="#definition-of-w">Definition of \(w\)</a></li><li><a href="#convergence-as-a-strip">Convergence as a strip</a></li><li><a href="#mapping-the-strip-to-a-disc-through-möbius-transformation">Mapping the strip to a disc through Möbius Transformation</a></li></ul></li><li><a href="#summary">Summary</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
@@ -393,13 +393,36 @@
   <li>The power series solutions were found to converge, although extremely slowly.</li>
 </ul>
 
-<h2 id="möbius-transformation">Möbius Transformation</h2>
+<h2 id="construction-and-convergence-of-w">Construction and Convergence of \(w\)</h2>
+<h3 id="how-singularities-arise">How singularities arise</h3>
 
-<p>For the “\(w\)” we have mentioned above, after some complicated analysis which I won’t show here (the interested reader can read the extremely lengthy proof <a href="https://henry-yip.github.io/assets/Sundman.pdf">here</a>), we arrive at \(\vert w - \bar{w} \vert &lt; \Omega\), where \(\Omega\) is real and \(\bar{w}\) is the value of \(w\) when \(t \to \bar{t}\). This corresponds to a convergence strip of \(2 \Omega\).</p>
+<p>As seen above we can define an independent variable “\(w\)” that can remove singularities. But why are there singularities while using “\(u\)”?</p>
+
+<p>This is because of the assumption that \(m_0\) and \(m_1\) are the colliding bodies. In the equation of motions, terms such as \(\frac{1}{r_0}\) and \(\frac{1}{r_1}\) appear (proof omitted), which causes singularities when \(r_0=0\) or \(r_1=0\).</p>
+
+<h3 id="definition-of-w">Definition of \(w\)</h3>
+
+<p>We define:</p>
+
+\[dt= \Gamma dw\]
+
+<p>with the initial conditions \(w=0\) when \(t=0\).</p>
+
+<p>Where \(\Gamma\) can be defined as:</p>
+
+\[\Gamma = (1-e^{\frac{-r_0}{l}})(1-e^{\frac{-r_1}{l}})(1-e^{\frac{-r_2}{l}})\]
+
+<p>The symmetry of this set-up causes \(r_0\) to be indistinguishable from \(r_1\) and \(r_2\). The next step is to explore its convergence.</p>
+
+<h3 id="convergence-as-a-strip">Convergence as a strip</h3>
+
+<p>After some complicated analysis which I won’t show here (the interested reader can read the extremely lengthy proof <a href="https://henry-yip.github.io/assets/Sundman.pdf">here</a>), we arrive at \(\vert w - \bar{w} \vert &lt; \Omega\), where \(\Omega\) is real and \(\bar{w}\) is the value of \(w\) when \(t \to \bar{t}\). This corresponds to a convergence strip of \(2 \Omega\).</p>
 
 <p><img src="/assets/images/Omega_Convergence.png" alt="" srcset="    /assets/resized/Omega_Convergence-600x551.png 600w, /assets/images/Omega_Convergence.png 678w" /></p>
 
-<p>However in power series, it is a convention to express the “convergence area” as a disc. How do we map a strip to a disc? This can be done using Möbius Transformation in Complex Analysis.</p>
+<h3 id="mapping-the-strip-to-a-disc-through-möbius-transformation">Mapping the strip to a disc through Möbius Transformation</h3>
+
+<p>In power series, it is a convention to express the “convergence area” as a disc. How do we map a strip to a disc? This can be done using Möbius Transformation in Complex Analysis.</p>
 
 <p>We can denote the strip as: \(S = [s : \text{Im}(s) \leq \beta]\).</p>
 
@@ -421,7 +444,13 @@
 
 <p>The astute reader can notice this is indeed the sum of angular momentum.</p>
 
-<p>In conclusion, Sundman’s Solution for the Three Body Problem practically works for essentially all cases, but the convergence is too slow (the number of terms can reach \(10^{8 \times 10^6}\) for just a single decimal of accuracy!) (See Belorizky’s Analysis).</p>
+<p>Sundman’s Solution for the Three Body Problem practically works for essentially all cases (even collisions between two bodies, but <em>not</em> collision between three bodies, as that will result in \(c=0\)).</p>
+
+<p>The problem is the convergence of the series is too slow (the number of terms can reach \(10^{8 \times 10^6}\) for just a single decimal of accuracy!) (See Belorizky’s Analysis).</p>
+
+<h2 id="summary">Summary</h2>
+
+<p>An independent variable \(w\) that is well-defined for <strong>any</strong> double collisions has been found. It converges in a strip with width \(2 \Omega\), which is then Möbius-transformed to a unit disc with a new variable \(\tau\). This is a general solution for the three body problem, as long as the sum of angular momentum is not equal to \(0\). However its slow convergence causes a problem.</p>
 
 <h2 id="progress">Progress</h2>
 
