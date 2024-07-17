@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Perturbations - A view on Classical Mechanics and Quantum Mechanics | Henry Yip</title>
-<meta name="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+<!-- begin _includes/seo.html --><title>Sundman’s Power Series Solution to the Three Body Problem (Part II) | Henry Yip</title>
+<meta name="description" content="This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem in the previous post.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
-<meta property="og:url" content="https://henry-yip.github.io/SmallPerbuations/">
+<meta property="og:title" content="Sundman’s Power Series Solution to the Three Body Problem (Part II)">
+<meta property="og:url" content="https://henry-yip.github.io/Convergence/">
 
 
-  <meta property="og:description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-01-13T00:00:00+08:00">
+  <meta property="og:description" content="This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem in the previous post.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-16T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/SmallPerbuations/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Convergence/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Perturbations - A view on Classical Mechanics and Quantum Mechanics</li>
+        <li class="current">Sundman's Power Series Solution to the Three Body Problem (Part II)</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
-    <meta itemprop="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
-    <meta itemprop="datePublished" content="2023-01-13T00:00:00+08:00">
+    <meta itemprop="headline" content="Sundman’s Power Series Solution to the Three Body Problem (Part II)">
+    <meta itemprop="description" content="This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem in the previous post.">
+    <meta itemprop="datePublished" content="2024-07-16T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/SmallPerbuations/" class="u-url" itemprop="url">Perturbations - A view on Classical Mechanics and Quantum Mechanics
+            <a href="https://henry-yip.github.io/Convergence/" class="u-url" itemprop="url">Sundman’s Power Series Solution to the Three Body Problem (Part II)
 </a>
           </h1>
           
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          2 minute read
         
       </span>
     
@@ -371,149 +371,85 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a></li><li><a href="#quantum-perturbation">Quantum Perturbation</a><ul><li><a href="#classic-example">Classic Example</a></li><li><a href="#credits">Credits</a></li></ul></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Sundman's Power Series Solution to the Three Body Problem (Part II)</h4></header>
+              <ul class="toc__menu"><li><a href="#lagranges-solution-to-the-three-body-problem">Lagrange’s Solution to the Three Body Problem</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.</p>
+        <p>This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem <a href="/Sundman/">in the previous post</a>.</p>
 
-<h2 id="classical-perturbation">Classical Perturbation</h2>
-<p>Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \(F=ma\), we have \(F=m\ddot{x}\). If there is a restoring force with different direction compared to direction of motion, we get \(-\alpha x=m \ddot{x}\), where \(\alpha \in \mathbb{R}_+\). This is solved using a sinusoidal ansatz. This corresponds to simple harmonic motion!</p>
+<h2 id="lagranges-solution-to-the-three-body-problem">Lagrange’s Solution to the Three Body Problem</h2>
 
-<p>Now, refering to my post in <a href="/NoetherTheorem/">Conservations in Physics</a>, we can quickly obtain:</p>
+<p>In 1772, Lagrange found a family of solutions in which the three masses form an equilateral triangle at each instant. These correspond to either L4 or L5 lagrange points, also known as trojan points.</p>
 
-\[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
+<p>If the mass ratio between the two large masses is below \(24.96\), the orbit will be unstable and any small perturbations will cause their tracks to deviate. This is shown below:</p>
 
-<p>I’ll leave this as an exercise for the reader.</p>
+<p><img src="/assets/images/Lagrange_Animation.gif" alt="" srcset="    /assets/resized/Lagrange_Animation-600x450.gif 600w, /assets/images/Lagrange_Animation.gif 640w" /></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 1: We<span class="s1">'re dealing with Central Force, only radial force matters
-</span></code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 2: Use Newton<span class="s1">'s Second Law
-</span></code></pre></div></div>
-<p>Now consider the question below:</p>
+<p><img src="/assets/images/Lagrange_Trajectory.png" alt="" srcset="    /assets/resized/Lagrange_Trajectory-600x450.png 600w, /assets/images/Lagrange_Trajectory.png 640w" /></p>
 
-<p>There is a small perbuation around a circle with radius \(a\) <em>i.e.</em> \(r(t)=a+\rho(t)\) with \(\rho(0) \ll a\). How will the orbit look like?</p>
+<p>As seen in the trajectories, in a perfect scenario, the trajectories should form a circle.
+This can be parametrized as:</p>
 
-<p>Substituting into our orbit equation we have:</p>
+\[(x,y) = (\cos(t), \sin(t)).\]
 
-\[\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m}\]
+<p>From the previous post, we can easily see that:</p>
 
-<p>Here we’ll use binomial expansion for negative coefficients. For more details view the wikipedia page for <a href="https://en.wikipedia.org/wiki/Negative_binomial_distribution">Negative Binomial Distribution</a></p>
+\[\Gamma = (1-e^{\frac{1}{l}})^3\]
 
-<p>However there’s a nice trick by differentiating the taylor series.</p>
+<p>As \(t=\Gamma w\), we can see:</p>
 
-\[\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m}\]
+\[t=\frac{2 \Omega \Gamma}{\pi} \log {\frac{1+\tau}{1-\tau}}\]
 
-<p>Further rearranging will get you:</p>
+<p>This can be approximated as:</p>
 
-\[\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0\]
+\[t=\frac{4 \Omega \Gamma}{\pi} (\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^6))\]
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
-</code></pre></div></div>
-
-<p>Assuming knowledge from <strong>Differential Equations</strong>, we have a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
-
-\[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
-
-<p>Hence if the above stands we have:</p>
-
-\[\omega^2 \equiv \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\]
-
-<p>This describes a simple harmonic motion with \(\rho(t)=A \cos (\omega t+\phi)\).</p>
-
-<p>The picture below will confirm our intuition is indeed correct!</p>
-
-<p><img src="/assets/images/Orbit.png" alt="" srcset="    /assets/resized/Orbit-600x496.png 600w, /assets/images/Orbit.png 865w" /></p>
-
-<h2 id="quantum-perturbation">Quantum Perturbation</h2>
-
-<p>Assume the Hamiltonian \(H\) cannot be solved analytically. However, if it is <em>close</em> to a solvable Hamiltonian, say \(H_0\), there are ways to approximate it. This technique is called “Perturbation” and the theory is called “Perturbation Theory”. i.e., we have:</p>
-
-\[\hat{H}=\hat{H_0}+\hat{H'}\]
-
-<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector, or, if you are mathematically minded, the geometric multiplicity is smaller than the algebraic multiplicity.</p>
-
-<p>By doing a taylor series, we obtain: (the eigenstates are <strong>no longer normalized</strong>!)</p>
-
-\[E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+...\]
-
-<p>and</p>
-
-\[|n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\]
-
-<p>where the (0), (1), (2) implies taking to the 0th, 1st, 2nd order respectively.</p>
-
-<p>If we expand everything, we will get:</p>
+<p>We can thus express \(\cos(t)\) and \(\sin(t)\) as:</p>
 
 \[\begin{aligned}
-&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)= \\
-&amp; \quad\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)
+\cos(t) &amp;= 1 - 2A^2 \tau^2 - (\frac{4}{3} A^2 - \frac{2}{3} A^4) \tau^4 - (\frac{45}{46}A^2 - \frac{8}{9} A^4 + \frac{4}{45} A^6) \tau^6+O(\tau^8) \\
+\sin(t) &amp;= 2A \tau + (\frac{2A}{3} - \frac{4}{3} A^3) \tau^3 + (\frac{2A}{5} - \frac{4}{3}A^3 + \frac{4}{15} A^5) \tau^5 + O(\tau^7)
 \end{aligned}\]
 
-<p>By comparing terms, we get:</p>
+<p>Now consider the case where \(m_1 = m_0\) and \(m_2 = 1 - 2m_0\).</p>
 
-\[\lambda^1:  \left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle\]
+<p>So, \((m_0, m_1, m_2) = (m_0, m_0, 1-2m_0)\).</p>
 
-<p>Consider Left hand side. From the term:</p>
+<p>Take \(m_1 = \frac{1}{200}\). This corresponds to \(\Omega &lt; 9 \times 10^{-8}\), which corresponds to \(A &lt; 4 \times 10^{-8}\).</p>
 
-\[\hat{H}_0 \left|n^{(1)}\right\rangle\]
+<p>Now consider \(t=1\). This corresponds to:</p>
 
-<p>We can operate \(\langle k^{(0)} \,\lvert\) and obtain:</p>
+\[t=\frac{4 \Omega \Gamma}{\pi} (\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^6)).\]
 
-\[\left\langle k^{(0)}\left|\hat{H}_0\right| n^{(1)}\right\rangle = E_k^{(0)}\left\langle k^{(0)} \mid n^{(1)}\right\rangle\]
+<p>For a one decimal accuracy, we want:</p>
 
-<p>Hence we have:</p>
+\[\sum_ {k=1}^{n} (\frac{4 \Omega \Gamma}{\pi})(\frac{\tau^{2k-1}}{2k-1})&gt;0.9\]
 
-\[\begin{aligned}
-    &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
-    &amp;\implies (E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
+<p>Letting \(\frac{4 \Omega \Gamma}{\pi}\) as \(A\), we have:</p>
 
-<p>Choosing \(k=n\) will give us:</p>
+\[S_\tau = \sum_{k=1}^{n} {\frac{\tau^{2k-1}}{2k-1}} &gt; \frac{9}{20A}\]
 
-\[\begin{aligned}
-E_n^{(1)} \delta_{n, n}-\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle=0 \\
-\implies E_n^{(1)}=\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
+<p>The reader can show that \(A&lt; 4 \times 10^{-8}\) corresponds to \(S_{\tau} &gt; 10^7\).</p>
 
-<p>The astute reader will find out that this is an expectation value! So the expected “change in energy” is just the expectation of the perturbation!</p>
+<p>Now relate this with the series:</p>
 
-<h3 id="classic-example">Classic Example</h3>
+\[S=\sum_{k=1}^{p} \frac{1}{2p-1}\]
 
-<p>Now consider a standard problem in perturbation:</p>
+<p>It has been shown that \(p&gt;e^{2S-2.4}\), and therefore \(p&gt;e^{2S_{\tau}-2.4}\). This corresponds to \(p&gt;10^{8 \times 10^{6}}\).</p>
 
-\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right)\]
+<p>As \(n&gt;p\) (our series add up slower than the geometric series with odd terms, as \(\vert \tau \vert &lt; 1\)), we can see that \(n&gt;10^{8 \times 10^{6}}\). This shows the sundman series converges too slow and is very impractical to use.</p>
 
-<p>between \(-a\) to \(a\). What is the ground state perturbation?</p>
+<h2 id="progress">Progress</h2>
+<p>The coding parts of the project is mainly done. I can finally focus more on the theory behind, which means I have to write more posts, which will greatly help my final report.</p>
 
-<p>From above, we have:</p>
+<p>It has been 3/4 weeks since I started the project, and in general things work quite smoothly and much better than I originally expected.</p>
 
-\[\begin{aligned}
-\Delta E_{n} &amp; =\left\langle\psi^{(n)}\mid V \mid \psi^{(n)}\right\rangle \\
-&amp; =\int_{-a}^{+a}  \left[\psi^{(n)}(x)^*\right] V(x) \left[\psi^{(n)}(x)\right]  dx
-\end{aligned}\]
+<h2 id="credits">Credits</h2>
+<p>This post is based on the paper by <a href="https://henry-yip.github.io/assets/Sundman.pdf">Donald K.Yeomans</a> and <a href="https://adsabs.harvard.edu/full/1930BuAst...6..417B">Belorizky’s Paper</a>.</p>
 
-<p>Considering :</p>
-
-\[\psi^1(x)=\frac{1}{\sqrt{a}} \cos{\left(\frac{\pi x}{2a}\right)}\]
-
-<p>We can substitute and get:</p>
-
-\[\begin{aligned}
-\Delta E_n&amp;=\frac{V_0}{a} \int_{-a}^{+a} \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) dx \\
-&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{+\pi / 2}  (\cos ^3 \theta)  d\theta\\
-&amp;=\frac{8 V_0}{3 \pi} 
-\end{aligned}\]
-
-<p>The details are left for an exercise for the reader.</p>
-
-<h3 id="credits">Credits</h3>
-
-<p>The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics (PHYS10094)**</p>
+<p>I would like to thank Dr Jenni Smillie for her guidance and support duing this project.</p>
 
 
         
@@ -595,17 +531,17 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
       
         
         
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
+        
+      
+        
+        
           <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
         
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#quantum-mechanics">Quantum Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
+          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
         
       
     </div>
@@ -614,7 +550,7 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-13T00:00:00+08:00">January 13, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-16T00:00:00+08:00">July 16, 2024</time></p>
 
       </footer>
 
@@ -623,23 +559,22 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+A+view+on+Classical+Mechanics+and+Quantum+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Sundman%27s+Power+Series+Solution+to+the+Three+Body+Problem+%28Part+II%29%20https%3A%2F%2Fhenry-yip.github.io%2FConvergence%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FConvergence%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FConvergence%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/NoetherTheorem/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
+      <a href="/Sundman/" class="pagination--pager" title="Sundman’s Power Series Solution to the Three Body Problem (Part I)
 ">Previous</a>
     
     
-      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -653,49 +588,6 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
-  </article>
-</div>
-
         
           
 
@@ -824,6 +716,49 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     <p class="archive__item-excerpt" itemprop="description">This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.
 
 </p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/EulerProblem/" rel="permalink">Problem of Two Fixed Centers (Part I)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the fourth post on my summer research about three-body problems. Today we are discussing the problem of two fixed centers, or more famously, Euler’s ...</p>
   </article>
 </div>
 
@@ -958,8 +893,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/SmallPerbuations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/SmallPerbuations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Convergence/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Convergence"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

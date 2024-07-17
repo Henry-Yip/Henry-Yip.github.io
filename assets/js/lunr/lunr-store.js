@@ -233,9 +233,15 @@ var store = [{
         "url": "/EulerProblemPlots/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Sundman's Power Series Solution and the Möbius Transformation",
+        "title": "Sundman's Power Series Solution to the Three Body Problem (Part I)",
         "excerpt":"This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It almost provides a general solution to the Three Body Problem, but its slow convergence renders it completely useless. This is my previous post about...","categories": [],
-        "tags": ["Research","Classical Mechanics","Medium"],
+        "tags": ["Research","Classical Mechanics","Easy"],
         "url": "/Sundman/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Sundman's Power Series Solution to the Three Body Problem (Part II)",
+        "excerpt":"This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem in the previous post. Lagrange’s Solution to the Three Body...","categories": [],
+        "tags": ["Research","Classical Mechanics","Medium"],
+        "url": "/Convergence/",
         "teaser": "/assets/images/Teaser.png"
       }]
