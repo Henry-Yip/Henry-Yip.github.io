@@ -241,7 +241,13 @@ var store = [{
       },{
         "title": "Sundman's Power Series Solution to the Three Body Problem (Part II)",
         "excerpt":"This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the series is impractical to be used. I have a brief introduction on this particular problem in the previous post. Lagrange’s Solution to the Three Body...","categories": [],
-        "tags": ["Research","Classical Mechanics","Medium"],
+        "tags": ["Research","Classical Mechanics","Easy"],
         "url": "/Convergence/",
+        "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Existence of Figure-8 Orbits, Choreographies and Actions",
+        "excerpt":"This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its...","categories": [],
+        "tags": ["Research","Classical Mechanics","Easy"],
+        "url": "/Figure8Proof/",
         "teaser": "/assets/images/Teaser.png"
       }]

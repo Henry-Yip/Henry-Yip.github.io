@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>An example of Discrete Fourier Transform using FFT Algorithm | Henry Yip</title>
-<meta name="description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
+<!-- begin _includes/seo.html --><title>Existence of Figure-8 Orbits, Choreographies and Actions | Henry Yip</title>
+<meta name="description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its stability.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="An example of Discrete Fourier Transform using FFT Algorithm">
-<meta property="og:url" content="https://henry-yip.github.io/DFTandFFT/">
+<meta property="og:title" content="Existence of Figure-8 Orbits, Choreographies and Actions">
+<meta property="og:url" content="https://henry-yip.github.io/Figure8Proof/">
 
 
-  <meta property="og:description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-06-18T00:00:00+08:00">
+  <meta property="og:description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its stability.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-17T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/DFTandFFT/">
+
+<link rel="canonical" href="https://henry-yip.github.io/Figure8Proof/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">An example of Discrete Fourier Transform using FFT Algorithm</li>
+        <li class="current">Existence of Figure-8 Orbits, Choreographies and Actions</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="An example of Discrete Fourier Transform using FFT Algorithm">
-    <meta itemprop="description" content="First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.">
-    <meta itemprop="datePublished" content="2024-06-18T00:00:00+08:00">
+    <meta itemprop="headline" content="Existence of Figure-8 Orbits, Choreographies and Actions">
+    <meta itemprop="description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its stability.">
+    <meta itemprop="datePublished" content="2024-07-17T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/DFTandFFT/" class="u-url" itemprop="url">An example of Discrete Fourier Transform using FFT Algorithm
+            <a href="https://henry-yip.github.io/Figure8Proof/" class="u-url" itemprop="url">Existence of Figure-8 Orbits, Choreographies and Actions
 </a>
           </h1>
           
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 minute read
+          3 minute read
         
       </span>
     
@@ -371,182 +371,83 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Convolution</h4></header>
-              <ul class="toc__menu"><li><a href="#example">Example</a></li><li><a href="#calculation-using-traditional-method">Calculation using Traditional Method</a></li><li><a href="#calculation-using-fft">Calculation using FFT</a><ul><li><a href="#even-part">Even Part</a></li><li><a href="#odd-part">Odd Part</a></li><li><a href="#combining-results">Combining Results</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Existence of Figure-8 Orbits, Choreographies and Actions</h4></header>
+              <ul class="toc__menu"><li><a href="#overview-of-the-proof-of-figure-8-orbits">Overview of the Proof of Figure-8 Orbits</a></li><li><a href="#finding-minimizers">Finding Minimizers</a><ul><li><a href="#definitions">Definitions</a></li></ul></li><li><a href="#proving-the-orbit-from-t0-to-tfracbart12-has-no-collisions">Proving the orbit from \(T=0\) to \(T=\frac{\bar{T}}{12}\) has no collisions</a><ul><li><a href="#step-1">Step 1</a></li><li><a href="#step-2">Step 2</a></li><li><a href="#step-3">Step 3</a></li></ul></li><li><a href="#proving-a-complete-orbit-can-be-obtained-by-copy-pasting-the-orbit-above-for-12-times">Proving a complete orbit can be obtained by “copy-pasting” the orbit above for \(12\) times</a></li><li><a href="#converting-the-orbit-on-shape-sphere-to-an-actual-orbit-and-show-it-is-the-figure-8-orbit">Converting the orbit on shape sphere to an actual orbit (and show it is the Figure-8 Orbit)</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>First, we will explore the Theory behind the FFT (Fast Fourier Transform) Algorithm, applied to a 1D array. We will show that it is faster than the traditional method using an easy example.</p>
+        <p>This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its stability.</p>
 
-<p>Consider a sequence of numbers: \(x_0, x_1, \ldots, x_{N-1}\). Recall that the DFT (Discrete Fourier Transform) is defined by:</p>
+<p>This is <a href="/Convergence/">my previous post about the Sundman Series</a> if you have missed it.</p>
 
-\[X_k=\sum_{m=1}^{N-1} x_m e^{-\frac{2 \pi i}{N} m k}\]
+<h2 id="overview-of-the-proof-of-figure-8-orbits">Overview of the Proof of Figure-8 Orbits</h2>
 
-<p>for \(k\) ranging from \(0\) to \(N-1\).</p>
+<p>To begin the discussion, I will outline the proof of the existence of a figure-8 orbit:</p>
+<ul>
+  <li>In the shape-sphere space, find minimizers travelling from Euler Central Configuration to isosceles configuration. This corresponds to \(1/12\)th of the full orbit.</li>
+  <li>Let \(A_c\) be the <strong>minimum</strong> action of a path with any collisions. Show that \(A&lt; A_c\) for all actions of paths without collisions.</li>
+  <li>Use \(12\) “copies” of the “\(1/12\)“th path mentioned above to form a whole orbit in the shape-sphere space. Argue that it is continuous.</li>
+  <li>Translate the path in shape sphere to a path in the euclidean space. Argue that it corresponds to a figure-8 orbit.</li>
+</ul>
 
-<p>We can decompose the array into two, according to even-indexed elements and odd-indexed elements. The idea is that DFTs of even-indexed inputs and odd-indexed inputs are computed separated then combined to provide the DFT of the whole sequence.</p>
+<p>This orbit is extremely special because it appears to be one of the very few choreographies to be stable. The other significant example is shown in the previous post (Lagrange).</p>
 
-<p>The decomposition can be written as:</p>
+<h2 id="finding-minimizers">Finding Minimizers</h2>
 
-\[X_k=\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i }{N}(2 m) k}+\sum_{m=1}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N}(2 m+1) k}.\]
+<h3 id="definitions">Definitions</h3>
 
-<p>Hence,</p>
+<p>We define an action in the shape sphere as:</p>
 
-\[X_k=\underbrace{\sum_{m=0}^{N / 2-1} x_{2 m } e^{-\frac{2 \pi i }{N / 2} m k}}_{\text {Even Part} }+e^{-\frac{2 \pi i}{N} k} \underbrace{\sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m k}}_{\text {Odd Part}}=E_k+e^{-\frac{2 \pi i}{N} k} O_k \quad \text { for } k=0, \ldots, \frac{N}{2}-1.\]
+\[A = \int_{0}^{T} (\frac{1}{2}K+U) \ dt\]
 
-<p>Similarly:</p>
+<p>over the subspace of \(\Lambda\) of \(H^1([0,T], \chi)\), where \(H^1\) refers to a Sobalev Space. A important fact is about the Sobalev Space is that the function itself and its time derivative are both Square Integrable, and \(\chi\) refers to:</p>
 
-\[\begin{aligned}
-X_{k+\frac{N}{2}} &amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i}{N / 2} m \left(k+\frac{N}{2}\right)}+e^{-\frac{2 \pi i}{N}\left(k+\frac{N}{2}\right)} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m\left(k+\frac{N}{2}\right)} \\
-&amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 \pi i}{N / 2} m k} e^{-2 \pi m i}+e^{-\frac{2 m i}{N} k} e^{-\pi i} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 \pi i}{N / 2} m k} e^{-2 \pi m i} \\
-&amp; =\sum_{m=0}^{N / 2-1} x_{2 m} e^{-\frac{2 m i}{N / 2} m k}-e^{-\frac{2 m i}{N} k} \sum_{m=0}^{N / 2-1} x_{2 m+1} e^{-\frac{2 m i}{N / 2} m k} \\
-&amp; =E_k-e^{-\frac{2 m}{N} k} O_k.
-\end{aligned}\]
+\[\chi = \{ x=(x_1, x_2, x_3) \in (\mathbb{(C)}^3), \sum_{i=1}^{3} x_i =0  \}.\]
 
-<p>To conclude, we have:</p>
+<p>We are starting at an Euler configuration and end at an isosceles configuration with arbitary size.</p>
 
-\[\begin{aligned}
-X_k &amp; =E_k+e^{-\frac{2 N i}{N} k} O_k \\
-X_{k+\frac{N}{2}} &amp; =E_k-e^{-\frac{2 \pi i}{N} k} O_k.
-\end{aligned}\]
+<p>One twelfth of the orbit is obtained by minimizing this action.</p>
 
-<h2 id="example">Example</h2>
+<p>Below we will present the skeleton of the proof:</p>
 
-<p>We want to Fourier Transform this array:</p>
+<h2 id="proving-the-orbit-from-t0-to-tfracbart12-has-no-collisions">Proving the orbit from \(T=0\) to \(T=\frac{\bar{T}}{12}\) has no collisions</h2>
 
-<p>\([1,2,3,4]\).</p>
+<h3 id="step-1">Step 1</h3>
+<p>If a path in \(\Gamma\) which minimizes such an action has collisions (either double or triple), <strong>its action would exceed \(A_2\)</strong>, where \(A_2\) is the action of the two-body collinear solution in which two unit masses start at collision and end with zero velocity at a time \(T\) later, the center of mass being fixed throughout.</p>
 
-<p>How can we do it?</p>
+<h3 id="step-2">Step 2</h3>
+<p>The Euler Equipotential Length satisfies \(l_0&lt; \frac{\pi}{5}\).</p>
 
-<h2 id="calculation-using-traditional-method">Calculation using Traditional Method</h2>
+<h3 id="step-3">Step 3</h3>
+<p>If Step 2 holds, the minimum \(a\) of <strong>the actions of equipotential test paths is smaller than \(A2\)</strong>.</p>
 
-<p>We can calculate the DFT using:</p>
+<p>From the highlighted parts above the reader can clearly see such a path has no collisions.</p>
 
-\[X_k = \sum_{n=0}^{N-1} x_n \cdot e^{-2\pi i \frac{kn}{N}} \quad \text{for} \; k = 0, 1, 2, 3\]
+<p>In other words, \(a&lt; A_2 &lt; A_{\text{Collision}}\) and in fact, \(A_2\) is the infimum of all paths in \(H^1([0,T], \chi)\) with collisions.</p>
 
-<p>Where the answer can be expressed in:</p>
+<h2 id="proving-a-complete-orbit-can-be-obtained-by-copy-pasting-the-orbit-above-for-12-times">Proving a complete orbit can be obtained by “copy-pasting” the orbit above for \(12\) times</h2>
 
-<p>\([X_0, X_1, X_2, X_3]\).</p>
+<p>The main difficulty is to prove the end-points of each orbits are well behaved.</p>
 
-<p>For \(X_0\):</p>
+<p>The first task is to prove that the minimizing arc is orthogonal to the two man
+ifolds E3 and M1 constraining its endpoints.</p>
 
-\[X_0 = \sum_{n=0}^{3} x_n \cdot e^{-2\pi i \frac{0 \cdot n}{4}} = 1 \cdot e^{0} + 2 \cdot e^{0} + 3 \cdot e^{0} + 4 \cdot e^{0} = 1 + 2 + 3 + 4 = 10.\]
+<p>Recall that:</p>
 
-<p>For \(X_1\):</p>
+\[\delta A = \epsilon \left[ \frac{\partial L}{\partial \dot{x}} \eta  \right]_0^T + \epsilon \int_0^T \left(\frac{\partial L}{\partial x} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\right) \eta \ dt\]
 
-\[\begin{align*}
-X_1 &amp;= 1 \cdot e^{-2\pi i \frac{1 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{1 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{1 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{1 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \frac{\pi}{2}} + 3 \cdot e^{-i \pi} + 4 \cdot e^{-i \frac{3\pi}{2}} \\
-&amp;= 1 + 2 \cdot (-i) + 3 \cdot (-1) + 4 \cdot i \\
-&amp;= 1 - 2i - 3 + 4i \\
-&amp;= -2 + 2i.
-\end{align*}\]
+<p>Normally we treat \(\left[ \frac{\partial L}{\partial \dot{x}} \eta  \right]_0^T\) as \(0\) immediately through the assumption \(\eta(0)=0\) and \(\eta(T)=0\), but this cannot be done here as E3 and M1 are not points. Rather, they form a line in the shape sphere.</p>
 
-<p>For \(X_2\):</p>
+<p>We must have:</p>
 
-\[\begin{align*}
-X_2 &amp;= 1 \cdot e^{-2\pi i \frac{2 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{2 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{2 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{2 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \pi} + 3 \cdot e^{-i 2\pi} + 4 \cdot e^{-i 3\pi} \\
-&amp;= 1 + 2 \cdot (-1) + 3 \cdot 1 + 4 \cdot (-1) \\
-&amp;= 1 - 2 + 3 - 4 \\
-&amp;= -2.
-\end{align*}\]
+<p>\([\frac{\partial L}{\partial \dot{x}} \vert _{T=0}] (\eta) = 0\).</p>
 
-<p>For \(X_3\):</p>
+<p>As \(\frac{\partial L}{\partial \dot{x}}\) moves <strong>along</strong> the minimizing curve and \(\eta\) is on the tangent plane of the manifolds, we can conclude that the minimizing arc is orthogonal to the two manifolds E3 and M1 constraining its endpoints.</p>
 
-\[\begin{align*}
-X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 \cdot 1}{4}} + 3 \cdot e^{-2\pi i \frac{3 \cdot 2}{4}} + 4 \cdot e^{-2\pi i \frac{3 \cdot 3}{4}} \\
-&amp;= 1 \cdot 1 + 2 \cdot e^{-i \frac{3\pi}{2}} + 3 \cdot e^{-i 3\pi} + 4 \cdot e^{-i \frac{9\pi}{2}} \\
-&amp;= 1 + 2 \cdot i + 3 \cdot (-1) + 4 \cdot (-i) \\
-&amp;= 1 + 2i - 3 - 4i \\
-&amp;= -2 - 2i.
-\end{align*}\]
+<h2 id="converting-the-orbit-on-shape-sphere-to-an-actual-orbit-and-show-it-is-the-figure-8-orbit">Converting the orbit on shape sphere to an actual orbit (and show it is the Figure-8 Orbit)</h2>
 
-<p>So the answer is:</p>
-
-<p>\([10, -2+2i, -2, -2-2i]\).</p>
-
-<h2 id="calculation-using-fft">Calculation using FFT</h2>
-
-<p>Even-indexed elements:
-\(E_k = [x_0, x_2] = [1, 3]\)</p>
-
-<p>Odd-indexed elements:
-\(O_k = [x_1, x_3] = [2, 4]\)</p>
-
-<h3 id="even-part">Even Part</h3>
-
-<p>DFT for \(k = 0\):</p>
-
-\[E_0 = 1 \cdot e^{-2\pi i \cdot 0 \cdot 0 / 2} + 3 \cdot e^{-2\pi i \cdot 0 \cdot 1 / 2} = 1 + 3 = 4.\]
-
-<p>DFT for \(k = 1\):</p>
-
-\[E_1 = 1 \cdot e^{-2\pi i \cdot 1 \cdot 0 / 2} + 3 \cdot e^{-2\pi i \cdot 1 \cdot 1 / 2} = 1 + 3 \cdot e^{-i\pi} = 1 - 3 = -2.\]
-
-<p>Thus:</p>
-
-\[E_k = [4, -2]\]
-
-<h3 id="odd-part">Odd Part</h3>
-
-<p>DFT for \(k = 0\):</p>
-
-\[O_0 = 2 \cdot e^{-2\pi i \cdot 0 \cdot 0 / 2} + 4 \cdot e^{-2\pi i \cdot 0 \cdot 1 / 2} = 2 + 4 = 6.\]
-
-<p>DFT for \(k = 1\):</p>
-
-\[O_1 = 2 \cdot e^{-2\pi i \cdot 1 \cdot 0 / 2} + 4 \cdot e^{-2\pi i \cdot 1 \cdot 1 / 2} = 2 + 4 \cdot e^{-i\pi} = 2 - 4 = -2.\]
-
-<p>Thus:</p>
-
-\[O_k = [6, -2]\]
-
-<h3 id="combining-results">Combining Results</h3>
-
-<p>We use the results of the smaller DFTs to compute the DFT of the original sequence.</p>
-
-<p>Before that, we shall use \(W_n=e^{-2 \pi i/ n}\) for convenience.</p>
-
-<p>Then, \(W^k_n=e^{-2 \pi i k/ n}\).</p>
-
-<p>This implies that:</p>
-
-\[X_k = E_k + W_N^k \cdot O_k.\]
-
-\[X_{k+N/2} = E_k - W_N^k \cdot O_k.\]
-
-<p>Now Recall:</p>
-
-\[W_4 = e^{-2\pi i / 4} = i.\]
-
-<p>For \(k = 0\):</p>
-
-\[X_0 = E_0 + W_4^0 \cdot O_0 = 4 + 1 \cdot 6 = 10.\]
-
-<p>For \(k = 1\):</p>
-
-\[X_1 = E_1 + W_4^1 \cdot O_1 = -2 + i \cdot (-2) = -2 - 2i.\]
-
-<p>For \(k = 2\):</p>
-
-\[X_2 = E_0 - W_4^0 \cdot O_0 = 4 - 1 \cdot 6 = -2.\]
-
-<p>For \(k = 3\):</p>
-
-\[X_3 = E_1 - W_4^1 \cdot O_1 = -2 - i \cdot (-2) = -2 + 2i.\]
-
-<p>So, the DFT of the sequence \([1, 2, 3, 4]\) using the FFT algorithm is:</p>
-
-\[[10, -2 - 2i, -2, -2 + 2i].\]
-
-<p>Which agrees with the calculation above!</p>
-
-<p>It can be seen that the Fast Fourier Transform is indeed much faster than the traditional method. This method is very useful in image processing, where we convolve the “pixels” in an image with a filter to blur the image or sharpen the edges. More can be seen in <a href="/ImageConvolution/">this post</a>.</p>
-
-<h2 id="credits">Credits</h2>
-<p>The first part is from the <a href="https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm">Wikipedia Page on Cooley-Tukey FFT Algorithm</a>.</p>
+<p>To be continued.</p>
 
 
         
@@ -628,12 +529,17 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#discrete-mathematics">Discrete Mathematics</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
         
       
         
         
-          <a class="tag-button difficulty-tag medium" href="/tagsbydifficulty/#medium">Medium</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag easy" href="/tagsbydifficulty/#easy">Easy</a>
         
       
     </div>
@@ -642,7 +548,7 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-18T00:00:00+08:00">June 18, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-17T00:00:00+08:00">July 17, 2024</time></p>
 
       </footer>
 
@@ -651,23 +557,22 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=An+example+of+Discrete+Fourier+Transform+using+FFT+Algorithm%20https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Existence+of+Figure-8+Orbits%2C+Choreographies+and+Actions%20https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDFTandFFT%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/ImageConvolution/" class="pagination--pager" title="Image Processing using Python and Convolution Theorem
+      <a href="/Convergence/" class="pagination--pager" title="Sundman’s Power Series Solution to the Three Body Problem (Part II)
 ">Previous</a>
     
     
-      <a href="/LinearRegression/" class="pagination--pager" title="Linear Regression using OLS and SGD Methods in Python
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -681,49 +586,6 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">Existence of Figure-8 Orbits, Choreographies and Actions
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
         
           
 
@@ -850,6 +712,51 @@ X_3 &amp;= 1 \cdot e^{-2\pi i \frac{3 \cdot 0}{4}} + 2 \cdot e^{-2\pi i \frac{3 
 
 
     <p class="archive__item-excerpt" itemprop="description">This is the sixth post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. I have a ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/ShapeSphere/" rel="permalink">Understanding and Visualizing the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the fifth post on my summer research about three-body problems. Today we are discussing the shape sphere.
+
+</p>
   </article>
 </div>
 
@@ -984,8 +891,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/DFTandFFT/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/DFTandFFT"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/Figure8Proof/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/Figure8Proof"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
