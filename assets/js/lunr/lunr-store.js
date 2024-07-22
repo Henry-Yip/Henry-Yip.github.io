@@ -245,9 +245,9 @@ var store = [{
         "url": "/Convergence/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Existence of Figure-8 Orbits, Choreographies and Actions",
+        "title": "A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere",
         "excerpt":"This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions. I will extend this discussion to Choreographies and its...","categories": [],
-        "tags": ["Research","Classical Mechanics","Easy"],
+        "tags": ["Research","Classical Mechanics","Hard"],
         "url": "/Figure8Proof/",
         "teaser": "/assets/images/Teaser.png"
       }]
