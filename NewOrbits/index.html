@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Julia Sets and the Mandelbrot Set | Henry Yip</title>
-<meta name="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
+<!-- begin _includes/seo.html --><title>Classifiying and Finding New Possible Orbits (Part I) | Henry Yip</title>
+<meta name="description" content="This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to be part I of the series.">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Julia Sets and the Mandelbrot Set">
-<meta property="og:url" content="https://henry-yip.github.io/MandelbrotSet/">
+<meta property="og:title" content="Classifiying and Finding New Possible Orbits (Part I)">
+<meta property="og:url" content="https://henry-yip.github.io/NewOrbits/">
 
 
-  <meta property="og:description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-03-31T00:00:00+08:00">
+  <meta property="og:description" content="This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to be part I of the series.">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2024-07-22T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://henry-yip.github.io/MandelbrotSet/">
+
+<link rel="canonical" href="https://henry-yip.github.io/NewOrbits/">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Julia Sets and the Mandelbrot Set</li>
+        <li class="current">Classifiying and Finding New Possible Orbits (Part I)</li>
       
     
   </ol>
@@ -331,16 +331,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Julia Sets and the Mandelbrot Set">
-    <meta itemprop="description" content="Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.">
-    <meta itemprop="datePublished" content="2024-03-31T00:00:00+08:00">
+    <meta itemprop="headline" content="Classifiying and Finding New Possible Orbits (Part I)">
+    <meta itemprop="description" content="This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to be part I of the series.">
+    <meta itemprop="datePublished" content="2024-07-22T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/MandelbrotSet/" class="u-url" itemprop="url">Julia Sets and the Mandelbrot Set
+            <a href="https://henry-yip.github.io/NewOrbits/" class="u-url" itemprop="url">Classifiying and Finding New Possible Orbits (Part I)
 </a>
           </h1>
           
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          1 minute read
         
       </span>
     
@@ -371,63 +371,36 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Summer Research</h4></header>
-              <ul class="toc__menu"><li><a href="#connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</a></li><li><a href="#dichotomy-theorem">Dichotomy theorem</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#exercises-for-the-readers">Exercises for the Readers</a></li></ul>
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Classifiying and Finding New Possible Orbits</h4></header>
+              <ul class="toc__menu"><li><a href="#motivation-and-initialization">Motivation and Initialization</a></li><li><a href="#results">Results</a></li></ul>
 
             </nav>
           </aside>
         
-        <p>Here we explore the relationships between Filled-in Julia Sets and the Mandelbrot Set.</p>
+        <p>This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to be part I of the series.</p>
 
-<p>In this article we consider the function: \(f_c: z \mapsto z^2+c\), where \(c\) is a constant.</p>
+<p>This is <a href="/Figure8Proof/">my previous post about the proof of Figure 8 orbit</a> if you have missed it.</p>
 
-<p>We then define \(K_c\), which is also known as the Filled-in Julia Set, as the set of \(z\) which are non-escaping under continuous iterations of \(f_c\). In other words:</p>
+<h2 id="motivation-and-initialization">Motivation and Initialization</h2>
 
-\[K_c=\left\{z \in \mathbb{C} \mid\left(f_c^n(z)\right)_{n \in \mathbb{N}}, \text { is bounded}\right\}.\]
+<p>If you have followed my series closely you will know my code can return the plots and trajectories of the 3 bodies given initial conditions. It has also been shown that trajectories are highly sensitive to initial conditions.</p>
 
-<p>Where \(f_c^n(z)\) denotes the \(n^{\text {th}}\) iteration of the function \(f_c\) on \(z\).</p>
+<p>Now we have two variables \(a\) and \(b\). Assume all three planets have unit mass, i.e. \(M_1 = M_2 = M_3 =1\) and the gravitational constant is unity, i.e. \(G=1\).</p>
 
-<p>Furthermore, define \(n_{\text{max}, R}(z)\) as the largest \(k\) such that the magnitude of \(f_c^k(z)\) is smaller than \(R\) (In the graphs below, we take \(R=1000\)).</p>
+<p>Also, the first planet has a starting position of \((-1,0)\) and a starting velocity \((a,b)\), the second planet has a starting position of \((0,0)\) and a starting velocity of \((a,b)\), and the third planet has a starting position of \((1,0)\) and a starting velocity of \((-2a, -2b)\).</p>
 
-<p>We are concerned with whether \(K_c(z=0)\) is bounded, which means whether \(n_{\text{max}, R}=\infty\). (In other words, whether the point \(z=0\) escapes to infinity under continuous iterations of the function \(f_c: z \mapsto z^2+c\).)</p>
+<p>Now we vary \(a\) and \(b\) <em>both</em> from \(0\) to \(1\), with a \(0.01\) step, what will happen?</p>
 
-<p>On an Argand Diagram, we are plotting the Real Axis of \(c\) vs the Imaginary Axis.  If \(K_c(z=0)\) is bounded, mark the corresponding point of \(c\) as a darker colour for a higher \(n_\text{max}\), and lighter colour for a small \(n_\text{max}\).</p>
+<p>Obviously some orbits will be periodic. As an example, the Figure-8 Orbit will be plotted here, with \((a,b) =(0.35, 0.53)\). Whereas in some orbits two (or even three) of the planets will collide.</p>
 
-<p>We thus obtain the Mandelbrot Set:</p>
+<p>In my code, I run the simulation for \(50000\) steps, with a timestep of \(0.001\). If the sum of displacements of the three particles exceed a certain limit (before the \(50000\) steps are reached), it will return <strong>False</strong>. Otherwise, it will return <strong>True</strong> and the corresponding point will be plotted in a scatter plot.</p>
 
-<p><img src="/assets/images/Mandelbrot_Set.png" alt="" srcset="    /assets/resized/Mandelbrot_Set-600x450.png 600w, /assets/images/Mandelbrot_Set.png 640w" /></p>
+<h2 id="results">Results</h2>
 
-<p>Notice that the boundary of the Mandelbrot Set has no “punctures” or “holes”. In other words, it is compact. (Thus closed and bounded by Heine-Borel Theorem).</p>
+<p><img src="/assets/images/Planets.png" alt="" srcset="    /assets/resized/Planets-600x600.png 600w, /assets/images/Planets.png 800w" /></p>
 
-<p>Enlarging the image of the Mandelbrot Set will result in a connected image (with finer and finer details!). This is related to the MLC Conjecture, which states that the Mandelbrot set is locally connected.</p>
+<p>The code ran for \(32\) hours.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b005iHf8Z3g?si=aojjMnsA4MLepXHF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
-
-<h2 id="connectiveness-of-filled-in-julia-sets">Connectiveness of Filled-in Julia Sets</h2>
-
-<p>We can colour Julia Sets using a similar method as above: For a fixed \(c\), find the \(n_\text{max}\) for each \(z\). For a higher \(n_\text{max}\), denote it with, say, a lighter colour (as long as the colour is contrast is large enough)</p>
-
-<p><img src="/assets/images/Julia_Set.png" alt="" srcset="    /assets/resized/Julia_Set-600x485.png 600w, /assets/images/Julia_Set.png 1117w" /></p>
-
-<h2 id="dichotomy-theorem">Dichotomy theorem</h2>
-
-<p>If \(c\) is in the Mandelbrot set, the corresponding Julia Set is connected. Otherwise, it is disconnected. Observe the image above. As it is not connected, the corresponding \(c\) (which is \(0.9i\)) is not in the Mandelbrot Set! (we can observe this in Figure 1).</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Filled-in Julia Sets: Given \(c\) (defined each time), find behaviour of \(z\) (upon continuous iterations of \(f_c\)).</p>
-
-<p>Mandelbrot Sets: Given \(z\) (Must be \(z=0\)), find behaviour of \(c\). (Whether the value of \(c\) will make \(z=0\) escape or not).</p>
-
-<p>The two sets are connected by the Dichotomy Theorem, so by looking at the Mandelbrot set we can know which Julia Sets are connected and which are disconnected (for example if magnitude of \(c\) is larger than \(2\), the corresponding filled-in Julia Set must be disconnected).</p>
-
-<h2 id="exercises-for-the-readers">Exercises for the Readers</h2>
-<ul>
-  <li>Write a python code that plots the Mandelbrot set, and the Julia set. (Difficulty: University Year 1)</li>
-  <li>Defining \(T=\left\{\left(x, \sin \frac{1}{x}\right): x \in(0,1]\right\} \cup\{(0,0)\}\), show that it is connected but not locally connected. Show the relation of \(T\) to the Mandelbrot set. (Difficultly: University Year 2-3)</li>
-</ul>
-
-<p>Last Updated - 3/6/2024</p>
 
         
       </section>
@@ -508,7 +481,12 @@
       
         
         
-          <a class="tag-button content-tag" href="/tagsbycontent/#geometry">Geometry</a>
+          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
+        
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
         
       
         
@@ -522,7 +500,7 @@
 </html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-03-31T00:00:00+08:00">March 31, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-22T00:00:00+08:00">July 22, 2024</time></p>
 
       </footer>
 
@@ -531,23 +509,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Julia+Sets+and+the+Mandelbrot+Set%20https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Classifiying+and+Finding+New+Possible+Orbits+%28Part+I%29%20https%3A%2F%2Fhenry-yip.github.io%2FNewOrbits%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FNewOrbits%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FMandelbrotSet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FNewOrbits%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/ESRAProject/" class="pagination--pager" title="Group Research in fluid behaviours
+      <a href="/Figure8Proof/" class="pagination--pager" title="A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
 ">Previous</a>
     
     
-      <a href="/MomentumConservation/" class="pagination--pager" title="Why is Momentum Conserved?
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -561,49 +538,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifiying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
         
           
 
@@ -730,6 +664,49 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It al...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/EulerProblemPlots/" rel="permalink">Problem of Two Fixed Centers (Part II)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the sixth post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. I have a ...</p>
   </article>
 </div>
 
@@ -864,8 +841,8 @@ $(document).ready(function () {
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/MandelbrotSet/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/MandelbrotSet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://henry-yip.github.io/NewOrbits/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/NewOrbits"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
