@@ -143,11 +143,11 @@
         <ul class="visible-links"><li class="masthead__menu-item">
               <a href="/About/">About</a>
             </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
-            </li><li class="masthead__menu-item">
               <a href="/tagsbycontent/">Tags by Content</a>
             </li><li class="masthead__menu-item">
               <a href="/tagsbydifficulty/">Tags by Difficulty</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX Tutorials</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          3 minute read
         
       </span>
     
@@ -372,7 +372,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Classifiying and Finding New Possible Orbits</h4></header>
-              <ul class="toc__menu"><li><a href="#motivation-and-initialization">Motivation and Initialization</a></li><li><a href="#results">Results</a></li></ul>
+              <ul class="toc__menu"><li><a href="#motivation-and-initialization">Motivation and Initialization</a></li><li><a href="#results">Results</a></li><li><a href="#downsides">Downsides</a></li><li><a href="#possible-fix-using-the-return-proximity-function">Possible Fix using the Return Proximity Function</a></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
 
             </nav>
           </aside>
@@ -400,6 +400,58 @@
 <p><img src="/assets/images/Planets.png" alt="" srcset="    /assets/resized/Planets-600x600.png 600w, /assets/images/Planets.png 800w" /></p>
 
 <p>The code ran for \(32\) hours.</p>
+
+<p><img src="/assets/images/Planets_Annotated_1.png" alt="" srcset="    /assets/resized/Planets_Annotated_1-600x600.png 600w, /assets/images/Planets_Annotated_1.png 800w" /></p>
+
+<p>I have circled out the region where the Figure-8 orbit lies. The reader can see immediately that around the circled region, it is more susceptible to a change in \(V_y\) compared to \(V_x\).</p>
+
+<p>This confirms the findings of <a href="https://www.maths.ed.ac.uk/~ateckent/vacation_reports/Report_Faustino.pdf">Ramos</a>.</p>
+
+<p>A clearer “zoomed-in” version can be seen below (This ran for around \(15\) hours):</p>
+
+<h2 id="downsides">Downsides</h2>
+
+<p>The separations allowed is too large. In fact, <em>I think</em> it is impossible to determine an upper bound for the maximum distance between particles.</p>
+
+<p>Let \(E\) be the total energy of the system. Now take \(T=0\). Hence \(E=V\).</p>
+
+<p>Now as \(G=1\) and \(M_1 = M_2 = M_3 = 1\), we have:</p>
+
+\[V = \frac{1}{a} + \frac{1}{b} + \frac{1}{c}\]
+
+<p>Meanwhile \(a\), \(b\), \(c\) should form a triangle. Now assume \(a\) is the longest side. Then, we need:</p>
+
+<p>\(b+c \geq a\).</p>
+
+<p>Now we can pick:</p>
+
+\[V = \frac{1}{\lambda} + \frac{1}{\lambda-b} + \frac{1}{b+0.1}\]
+
+<p>The reader can show that for any \(\lambda\) there exists \(b\) satisfying \(b, \lambda&gt;0\) and \(\lambda \neq b\).</p>
+
+<p>Hence I believe there isn’t an upper bound for \(\lambda\).</p>
+
+<p>Therefore, I was quite unsure of what value of maximum displacement I should pick. In fact, I picked \(20\) as the maximum displacement of any particle from the origin. This is proved to be too large.</p>
+
+<h2 id="possible-fix-using-the-return-proximity-function">Possible Fix using the Return Proximity Function</h2>
+
+<p>Using the Return Proximity Function might be a good idea.</p>
+
+\[P(t)=\left|\mathbf{X}(t)-\mathbf{X}_0\right|=\sqrt{\sum_i^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2+\sum_i^3\left[\mathbf{p}_i(t)\right]^2}\]
+
+<p>A periodic orbit will show oscillations, with a small minimum value (The smaller it is, the closer it is to initial conditions). In the next run, I will choose orbits that has \(P&lt;15\) throughout the simulation <em>and</em> with \(P_{min} (t \neq 0) &lt;0.7\)</p>
+
+<h2 id="progress">Progress</h2>
+<p>It is quite frustrating that a simulation takes over \(30\) hours to run. The code seems fairly optimised, so I will try to change the timestep from \(0.001\) to \(0.01\), but first I will double check that the accuracy won’t be too compromised.</p>
+
+<p>It is week \(5\) of the project already (out of \(8\)) and I don’t have much progress in terms of original research. I will see what I can do.</p>
+
+<h2 id="credits">Credits</h2>
+<p>I am inspired by the paper <a href="https://arxiv.org/abs/2205.14709">New Families of Periodic Orbits for the Planar 
+Three-Body Problem Computed with High 
+Precision</a>.</p>
+
+<p>I would like to thank Dr Jenni Smillie for her guidance and support duing this project.</p>
 
 
         
