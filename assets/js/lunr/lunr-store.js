@@ -256,4 +256,10 @@ var store = [{
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/NewOrbits/",
         "teaser": "/assets/images/Teaser.png"
+      },{
+        "title": "Problem of Two Fixed Centers (Part III)",
+        "excerpt":"This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please note that this is the third part of the series. The first part is here and the second part is here. New Types of...","categories": [],
+        "tags": ["Research","Classical Mechanics","Easy"],
+        "url": "/TwoBodyProblemNew/",
+        "teaser": "/assets/images/Teaser.png"
       }]
