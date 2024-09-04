@@ -251,7 +251,7 @@ var store = [{
         "url": "/Figure8Proof/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Classifiying and Finding New Possible Orbits (Part I)",
+        "title": "Classifying and Finding New Possible Orbits (Part I)",
         "excerpt":"This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to be part I of the series. This is my previous post about the proof of Figure 8 orbit if you have missed it....","categories": [],
         "tags": ["Research","Classical Mechanics","Medium"],
         "url": "/NewOrbits/",
