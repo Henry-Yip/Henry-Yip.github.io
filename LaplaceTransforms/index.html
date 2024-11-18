@@ -1,0 +1,890 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Integration by Laplace Transform | Henry Yip</title>
+<meta name="description" content="Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve integrals. Below, I will show how it can be used to prove:">
+
+
+  <meta name="author" content="Henry Yip ">
+  
+  <meta property="article:author" content="Henry Yip ">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Integration by Laplace Transform">
+<meta property="og:url" content="https://henry-yip.github.io/LaplaceTransforms/">
+
+
+  <meta property="og:description" content="Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve integrals. Below, I will show how it can be used to prove:">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-06T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://henry-yip.github.io/LaplaceTransforms/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Henry Yip",
+      "url": "https://henry-yip.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<!DOCTYPE html>
+<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+  </head>
+</html>
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+ 
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK');
+</script>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          <span class="site-subtitle">Version 2.0</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/About/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbycontent/">Tags by Content</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
+            </li><li class="masthead__menu-item">
+              <a href="/LaTeX/">LaTeX Tutorials</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        <li class="current">Integration by Laplace Transform</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Henry Yip’s Math Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Integration by Laplace Transform">
+    <meta itemprop="description" content="Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve integrals. Below, I will show how it can be used to prove:">
+    <meta itemprop="datePublished" content="2024-06-06T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/LaplaceTransforms/" class="u-url" itemprop="url">Integration by Laplace Transform
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Theorema Egregium</h4></header>
+              <ul class="toc__menu"><li><a href="#transforming-the-problem-into-a-laplace-transformation-problem">Transforming the problem into a Laplace Transformation Problem</a></li><li><a href="#solving-the-laplace-transformation">Solving the Laplace Transformation</a></li><li><a href="#credits">Credits</a></li><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Laplace Transform is usually used to “decompose” a function into its constituents, or to solve differential equations. However, it can also be used to solve integrals. Below, I will show how it can be used to prove:</p>
+
+\[\int_0^{\infty} \frac{\sin(x)}{x} \, dx=\frac{\pi}{2}\]
+
+<h2 id="transforming-the-problem-into-a-laplace-transformation-problem">Transforming the problem into a Laplace Transformation Problem</h2>
+
+<p>Observe that for any \(g(t)\),</p>
+
+\[\mathcal{L}\{g(t)\}=F(s)=\int_0^{\infty} e^{-s t} g(t) d t.\]
+
+<p>Taking \(s=0\), we obtain:</p>
+
+\[\int_0^{\infty} g(t) d t\]
+
+<p>Now, we simply substitute \(g(t)=\frac{\sin(t)}{t}\) and solve the Laplace Transformation.</p>
+
+<h2 id="solving-the-laplace-transformation">Solving the Laplace Transformation</h2>
+<p>Recall:</p>
+
+\[\mathcal{L}\{\sin t\}=\frac{1}{s^2+1} .\]
+
+<p>Next, use the standard result:</p>
+
+\[\mathcal{L}\left[\frac{f(t)}{t}\right]=\int_s^{\infty} F(s) d s\]
+
+<p>Where \(F(s)\) is the Laplace Transformation of \(f(t)\).</p>
+
+<p>Combining the results, we arrive at:</p>
+
+\[\begin{align}
+\mathcal{L}\left[\frac{\sin(t)}{t}\right]&amp;=\int_s^{\infty} \frac{1}{s^2+1} d s \\
+&amp;=\frac{\pi}{2}-\arctan(s)
+\end{align}\]
+
+<p>Taking \(s=0\) we obtain \(\frac{\pi}{2}\) as expected.</p>
+
+<p>Therefore,</p>
+
+\[\int_0^{\infty} \frac{\sin(x)}{x} \, dx=\frac{\pi}{2}\]
+
+<p>As required!</p>
+
+<h2 id="credits">Credits</h2>
+<p>The post is inspired by <a href="https://www.youtube.com/watch?v=Tqk1nyUU-RU">this video</a>.</p>
+
+<h2 id="exercises-for-the-reader">Exercises for the reader</h2>
+
+<p>Using the same technique, calculate</p>
+
+\[\int_0^{\infty} \frac{1-\cos t}{t e^t} d t\]
+
+<p>The answer is presented by <a href="https://www.youtube.com/c/blackpenredpen">blackpenredpen</a>:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p8ok5QNNlsc?si=qd9EJedG2HnrgaNz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag Styling Example</title>
+  <style>
+    .entry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+    }
+
+    .entry-tags i.fa-tags {
+      margin-right: 8px;
+      color: #666;
+    }
+
+    .tag-button {
+      display: inline-block;
+      margin: 5px;
+      padding: 5px 10px;
+      font-size: 14px;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .tag-button:hover {
+      opacity: 0.8;
+    }
+
+    .difficulty-tag.easy {
+      background-color: #28a745; /* Green for Easy */
+    }
+
+    .difficulty-tag.easy:hover {
+      background-color: #218838;
+    }
+
+    .difficulty-tag.medium {
+      background-color: #ffc107; /* Yellow for Medium */
+      color: #212529; /* Black text for better contrast */
+    }
+
+    .difficulty-tag.medium:hover {
+      background-color: #e0a800;
+    }
+
+    .difficulty-tag.hard {
+      background-color: #dc3545; /* Red for Hard */
+    }
+
+    .difficulty-tag.hard:hover {
+      background-color: #c82333;
+    }
+
+    .content-tag {
+      background-color: #f0ad4e; /* Orange color for content tags */
+    }
+
+    .content-tag:hover {
+      background-color: #ec971f;
+    }
+  </style>
+</head>
+<body>
+  
+    <div class="entry-tags">
+      <i class="fa fa-tags"></i>
+      
+        
+        
+          <a class="tag-button content-tag" href="/tagsbycontent/#calculus">Calculus</a>
+        
+      
+        
+        
+          <a class="tag-button difficulty-tag easy" href="/tagsbydifficulty/#easy">Easy</a>
+        
+      
+    </div>
+  
+</body>
+</html>
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-06T00:00:00+01:00">June 6, 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Integration+by+Laplace+Transform%20https%3A%2F%2Fhenry-yip.github.io%2FLaplaceTransforms%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FLaplaceTransforms%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FLaplaceTransforms%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/CarmichaelFunction/" class="pagination--pager" title="Euler’s Totient function, Reduced Totient function and Carmichael Number
+">Previous</a>
+    
+    
+      <a href="/LTELemma/" class="pagination--pager" title="An Application of the LTE lemma and Fermat’s Little Theorem
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/Teaser.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
+  <div class="search-hits"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+<!-- Including InstantSearch.js library and styling -->
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+// Instanciating InstantSearch.js with Algolia credentials
+const search = instantsearch({
+  appId: 'DRH1J5IXZJ',
+  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
+  indexName: 'Henry Yip',
+  searchParameters: {
+    restrictSearchableAttributes: [
+      'title',
+      'content'
+    ]
+  }
+});
+
+const hitTemplate = function(hit) {
+  const url = hit.url;
+  const hightlight = hit._highlightResult;
+  const title = hightlight.title && hightlight.title.value  || "";
+  const content = hightlight.html && hightlight.html.value  || "";
+
+  return `
+    <div class="list__item">
+      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
+        <div class="archive__item-excerpt" itemprop="description">${content}</div>
+      </article>
+    </div>
+  `;
+}
+
+// Adding searchbar and results widgets
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '.search-searchbar',
+    poweredBy: true,
+    placeholder: 'Enter your search term...'
+  })
+);
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '.search-hits',
+    templates: {
+      item: hitTemplate,
+      empty: 'No results',
+    }
+  })
+);
+
+// Starting the search only when toggle is clicked
+$(document).ready(function () {
+  $(".search__toggle").on("click", function() {
+    if(!search.started) {
+      search.start();
+    }
+  });
+});
+</script>
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://henry-yip.github.io/LaplaceTransforms/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/LaplaceTransforms"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://encompassing-hk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
