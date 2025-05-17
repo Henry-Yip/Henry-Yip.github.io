@@ -11,12 +11,6 @@ var store = [{
         "url": "/LaTeX/Tex1/",
         "teaser": "/assets/images/LaTeX.png"
       },{
-        "title": "Sample Tex Files (2)",
-        "excerpt":"This includes mathematics equations which suits people creating \\(\\LaTeX\\) documents to do their problem sheets/hand-in. The PDF can be downloaded here: My Page About Astrophysics Course Notes \\documentclass{article} \\usepackage{amsmath} \\usepackage{amssymb} \\usepackage{parskip} \\usepackage [utf8] {inputenc} \\usepackage[margin=0.8in]{geometry} \\newcommand{\\ie}{\\textit{i}.\\textit{e}. } \\title{Introductory Astrophysics (PHYS08050) Notes} \\author{Henry Yip s2231321@ed.ac.uk } \\begin{document} \\maketitle \\begin{abstract} This set...","categories": [],
-        "tags": ["Latex"],
-        "url": "/LaTeX/Tex2/",
-        "teaser": "/assets/images/LaTeX.png"
-      },{
         "title": "A Fun Astrophysics Article on Dark Energy",
         "excerpt":"Below is something I wrote for fun/to practice my \\(\\LaTeX\\) skills only! Please don’t take it too seriously!   PDF download  Please Press HERE       ","categories": [],
         "tags": [],
