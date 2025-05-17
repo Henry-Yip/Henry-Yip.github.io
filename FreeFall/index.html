@@ -357,7 +357,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          4 minute read
         
       </span>
     
@@ -372,7 +372,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Free Fall</h4></header>
-              <ul class="toc__menu"><li><a href="#free-fall-of-objects">Free Fall of objects</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#dropping-to-center-of-earth">Dropping to center of earth</a><ul><li><a href="#dubious-assumption">Dubious Assumption?</a></li><li><a href="#gauss-law-for-gravitation">Gauss’ Law for Gravitation</a></li><li><a href="#exercises-for-the-reader-1">Exercises for the reader</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#free-fall-of-objects">Free Fall of objects</a></li><li><a href="#free-fall-with-altitude-varying-air-density">Free Fall with Altitude-Varying Air Density</a><ul><li><a href="#1-change-of-independent-variable">1. Change of Independent Variable</a></li><li><a href="#2-integrating-factor">2. Integrating Factor</a></li><li><a href="#3-closed-form-speed-vh">3. Closed-Form Speed \(v(h)\)</a></li><li><a href="#4-time-as-a-function-of-altitude">4. Time as a Function of Altitude</a></li></ul></li><li><a href="#6-recovery-of-the-tanh-solution-in-the-limit-htoinfty">6. Recovery of the “tanh” Solution in the Limit (H\to\infty)</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#dropping-to-center-of-earth">Dropping to center of earth</a><ul><li><a href="#dubious-assumption">Dubious Assumption?</a></li><li><a href="#gauss-law-for-gravitation">Gauss’ Law for Gravitation</a></li><li><a href="#exercises-for-the-reader-1">Exercises for the reader</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -432,6 +432,228 @@ v_\text{Terminal}&amp;=\sqrt{\frac{mg}{k}} \\
 \end{aligned}\]
 
 <p>As \(m_\text{human}\)«&lt;\(m_\text{plane}\), the difference in \(c_d\) and \(A\) can’t compensate, and hence terminal velocity of planes are much higher during free fall.</p>
+
+<h2 id="free-fall-with-altitude-varying-air-density">Free Fall with Altitude-Varying Air Density</h2>
+
+<p>Inspired by our constant-density derivation, we now allow the air density to fall off exponentially with altitude:</p>
+
+\[\rho(h)=\rho_0\,e^{-h/H},\]
+
+<p>and seek a closed-form expression for the descent speed \(v\) as a function of the instantaneous altitude \(h\).</p>
+
+<hr />
+
+<p>Consider downward as positive.  The net force on a body of mass \(m\) is gravity minus quadratic drag:</p>
+
+\[\begin{aligned}
+m\dot{v}&amp;=m\,g \;-\;\tfrac12\,\rho(h)\,c_d\,A\,v^2
+        =m\,g \;-\;k\,e^{-h/H}\,v^2,\\
+m\frac{dv}{dt}&amp;=m\,g - k\,e^{-h/H}\,v^2,
+\qquad
+\frac{dh}{dt}=-v,
+\end{aligned}\]
+
+<p>where</p>
+
+\[k=\tfrac12\,\rho_0\,c_d\,A.\]
+
+<hr />
+
+<h3 id="1-change-of-independent-variable">1. Change of Independent Variable</h3>
+
+<p>We trade the time derivative for an \(h\)-derivative via</p>
+
+\[\frac{dv}{dt}
+=\frac{dv}{dh}\,\frac{dh}{dt}
+=-\,v\,\frac{dv}{dh}.\]
+
+<p>Set \(u(h)=v(h)^2\).  Then</p>
+
+\[-\,v\,\frac{dv}{dh}
+=g - \frac{k}{m}\,e^{-h/H}\,v^2
+\;\Longrightarrow\;
+\frac{d}{dh}\bigl(v^2\bigr)
+=\frac{2k}{m}\,e^{-h/H}\,v^2 - 2\,g.\]
+
+<p>Hence</p>
+
+\[\frac{du}{dh}
+-\frac{2k}{m}\,e^{-h/H}\,u
+=-2\,g.\]
+
+<hr />
+
+<h3 id="2-integrating-factor">2. Integrating Factor</h3>
+
+<p>The integrating factor is</p>
+
+\[\mu(h)
+=\exp\!\Bigl(-2\,\frac{k}{m}\int e^{-h/H}\,dh\Bigr)
+=\exp\!\bigl(2\,\tfrac{k\,H}{m}\,e^{-h/H}\bigr).\]
+
+<p>Multiply the ODE by \(\mu(h)\) and integrate from the initial altitude \(h_0\) (where \(v(h_0)=0\implies u(h_0)=0\)):</p>
+
+\[\frac{d}{dh}\!\bigl(u\,\mu\bigr)
+=-2\,g\,\mu(h)
+\;\Longrightarrow\;
+u(h)\,\mu(h)
+=-2\,g
+\int_{h_0}^{\,h}\mu(s)\,ds.\]
+
+<p>Since</p>
+
+\[\int e^{2\frac{kH}{m}e^{-s/H}}\,ds = -H\,\operatorname{Ei}\!\bigl(2\frac{kH}{m}e^{-s/H}\bigr) + C\]
+
+<p>we obtain</p>
+
+\[v(h)^2
+= \exp \! \left(-2\,\tfrac{kH}{m}e^{-h/H}\right)\,
+  2gH\left[\operatorname{Ei} \! \left(2\,\tfrac{kH}{m}e^{-h/H} \right)
+  - \operatorname{Ei} \! \left(2\, \tfrac{kH}{m}e^{-h_0/H}\right) \right].\]
+
+<h3 id="3-closed-form-speed-vh">3. Closed-Form Speed \(v(h)\)</h3>
+
+<p>Taking the square‐root yields:</p>
+
+\[\boxed{
+v(h)
+=\sqrt{2\,g\,H}\;
+\exp\!\Bigl(-\tfrac{k\,H}{m}e^{-h/H}\Bigr)\;
+\sqrt{
+\operatorname{Ei}\!\bigl(2\,\tfrac{k\,H}{m}e^{-h/H}\bigr)
+-\operatorname{Ei} \!\bigl(2\,\tfrac{k\,H}{m}e^{-h_0/H}\bigr)
+}
+}.\]
+
+<hr />
+
+<h3 id="4-time-as-a-function-of-altitude">4. Time as a Function of Altitude</h3>
+
+<p>To recover \(t(h)\), integrate</p>
+
+\[t(h)
+=\int_{h_0}^{\,h}\frac{dh'}{-\,v(h')}
+=\int_{h}^{\,h_0}\frac{dh'}{v(h')}.\]
+
+<p>With the substitution</p>
+
+\[x=2\,\frac{k\,H}{m}\,e^{-h'/H},
+\quad
+dh'=-\frac{H}{x}\,dx,\]
+
+<p>one finds</p>
+
+\[\boxed{
+t(h)
+=\sqrt{\frac{H}{2\,g}}
+\;\Bigl[
+\Gamma\!\bigl(\tfrac12,\,2\,\tfrac{k\,H}{m}e^{-h/H}\bigr)
+-\Gamma\!\bigl(\tfrac12,\,2\,\tfrac{k\,H}{m}e^{-h_0/H}\bigr)
+\Bigr]
+},\]
+
+<p>where \(\Gamma(s,x)\) is the upper incomplete gamma‐function.</p>
+
+<h2 id="6-recovery-of-the-tanh-solution-in-the-limit-htoinfty">6. Recovery of the “tanh” Solution in the Limit (H\to\infty)</h2>
+
+<p>We start from our closed-form time–vs–altitude relation</p>
+
+\[t(h)
+=\sqrt{\frac{H}{2g}}
+\Bigl[
+  \Gamma\!\bigl(\tfrac12,\,2\frac{kH}{m}e^{-h/H}\bigr)
+  \;-\;\Gamma\!\bigl(\tfrac12,\,2\frac{kH}{m}e^{-h_0/H}\bigr)
+\Bigr].\]
+
+<p>Next, use the gamma–error‐function identity</p>
+
+\[\Gamma\!\bigl(\tfrac12,\,z\bigr)
+=\sqrt{\pi}\,\operatorname{erfc}(\sqrt{z}).\]
+
+<p>Define</p>
+
+\[y \;=\; 2\frac{kH}{m}\,e^{-h/H},
+\qquad
+y_0 \;=\; 2\frac{kH}{m}\,e^{-h_0/H}.\]
+
+<p>Then</p>
+
+\[t(h)
+=\sqrt{\frac{H}{2g}}\;\sqrt{\pi}
+\bigl[\operatorname{erfc}(\sqrt{y}) - \operatorname{erfc}\sqrt{y_0})\bigr].\]
+
+<p>As \(H\to\infty\), both \(y,y_0\to\infty\) but their difference</p>
+
+\[y - y_0
+=2\frac{kH}{m}\bigl(e^{-h/H}-e^{-h_0/H}\bigr)
+\;\longrightarrow\;
+2\frac{k}{m}(h_0 - h)\]
+
+<p>remains finite.  For large argument \(w\gg1\),</p>
+
+\[\operatorname{erfc}(w)\sim \frac{e^{-w^2}}{\sqrt{\pi}\,w},\]
+
+<p>so</p>
+
+\[\operatorname{erfc}(\sqrt{y})\approx\frac{e^{-y}}{\sqrt{\pi\,y}},
+\quad
+\operatorname{erfc}(\sqrt{y_0})\approx\frac{e^{-y_0}}{\sqrt{\pi\,y_0}}.\]
+
+<p>Substitute into (t(h)):</p>
+
+\[\begin{aligned}
+t(h)
+&amp;\approx
+\sqrt{\frac{H}{2g}}\;\sqrt{\pi}
+\Bigl[\frac{e^{-y}}{\sqrt{\pi\,y}}
+     -\frac{e^{-y_0}}{\sqrt{\pi\,y_0}}\Bigr] \\[6pt]
+&amp;=
+\sqrt{\frac{H}{2g}}
+\Bigl[\frac{e^{-y}}{\sqrt{y}}
+     -\frac{e^{-y_0}}{\sqrt{y_0}}\Bigr].
+\end{aligned}\]
+
+<p>Now</p>
+
+\[y = 2\frac{kH}{m}-2\frac{k}{m}\,h,
+\quad
+y_0 = 2\frac{kH}{m}-2\frac{k}{m}\,h_0,
+\quad
+\sqrt{y},\sqrt{y_0}\sim\sqrt{\tfrac{2kH}{m}}.\]
+
+<p>Also</p>
+
+<p>\(\,e^{-y}=e^{-2kH/m}\,e^{2kh/m}\),</p>
+
+\[\,e^{-y_0}=e^{-2kH/m}\,e^{2kh_0/m}.\]
+
+<p>Hence</p>
+
+\[t(h)\;\longrightarrow\;
+\sqrt{\frac{m}{gk}}\,
+\bigl[e^{2k(h-h_0)/m}-1\bigr].\]
+
+<p>In the constant‐density case one finds directly</p>
+
+\[v(h)^2
+=\frac{m\,g}{k}\bigl[1-e^{-2k(h_0-h)/m}\bigr],
+\quad
+v(h)
+=\sqrt{\frac{m\,g}{k}}\sqrt{1-e^{-2k(h_0-h)/m}}.\]
+
+<p>Finally, solving \(m\,dv/dt=m\,g-k\,v^2\) by separation of variables gives</p>
+
+\[\boxed{
+v(t)
+= \sqrt{\frac{m\,g}{k}}\;\tanh\!\Bigl(t\sqrt{\tfrac{g\,k}{m}}\Bigr),
+\qquad
+v_{\rm terminal}
+= \sqrt{\frac{m\,g}{k}}.
+}\]
+
+<p>Thus the exponential‐atmosphere formula smoothly reduces to the constant-density “tanh” law as \(H\to\infty\).</p>
+
+<p><img src="/assets/images/Velocity_Altitute_Plot.png" alt="" srcset="    /assets/resized/Velocity_Altitute_Plot-600x342.png 600w,    /assets/resized/Velocity_Altitute_Plot-1440x821.png 1440w, /assets/images/Velocity_Altitute_Plot.png 1920w" /></p>
 
 <h3 id="exercises-for-the-reader">Exercises for the reader</h3>
 <ul>
