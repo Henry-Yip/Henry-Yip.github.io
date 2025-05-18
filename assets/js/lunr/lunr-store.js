@@ -47,15 +47,15 @@ var store = [{
         "url": "/NoetherTheorem/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Smallperbuations",
+        "title": "Perturbations - Classical Mechanics",
         "excerpt":"Perturbations in Classical Mechanics vs. Quantum Physics While both classical mechanics and quantum physics employ the term perturbation to denote a small deviation from some reference state, their implementations and outcomes differ significantly. 1. Classical Perturbations: Simple Harmonic Response A small disturbance of a stable equilibrium in classical mechanics typically...","categories": [],
-        "tags": [],
+        "tags": ["Classical Mechanics","Quantum Mechanics","Hard"],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "Perturbations - Quantum Mechanics",
         "excerpt":"Quantum Perturbation Assume the Hamiltonian \\(H\\) cannot be solved analytically. However, if it is close to a solvable Hamiltonian, say \\(H_0\\), there are ways to approximate it. This technique is called “Perturbation” and the theory is called “Perturbation Theory”. i.e., we have: \\[\\hat{H}=\\hat{H_0}+\\hat{H'}\\] For simplicity, we assume the system does...","categories": [],
-        "tags": ["Classical Mechanics","Quantum Mechanics","Hard"],
+        "tags": ["Quantum Mechanics","Hard"],
         "url": "/QuantumPerturbations/",
         "teaser": "/assets/images/Teaser.png"
       },{
