@@ -72,7 +72,7 @@ var store = [{
         "teaser": "/assets/images/Teaser.png"
       },{
         "title": "The Shell Theorem - A Gravitational Analog to Gauss’ Law",
-        "excerpt":"Below I will motivate the Shell Theorem Dropping to center of earth How long does it take to drop to the center of earth and what will happen after that? Force acting on the ball: \\[F=G\\frac{M'm}{r^2}\\] where: \\[M'=M\\frac{r^3}{R^3}\\] \\[\\begin{aligned} m\\ddot{r}&amp;=G\\frac{Mm}{R^3}r \\\\ \\ddot{r}&amp;=G\\frac{M}{R^3}r \\end{aligned}\\] Any physics student should recognise this as...","categories": [],
+        "excerpt":"Below I will motivate the Shell Theorem, a powerful and useful result that greatly simplifies gravitational problems involving spherical mass distributions. To illustrate its importance, I will start with a simple example and then present a rigorous proof. This approach will help build intuition and show why the theorem is...","categories": [],
         "tags": ["Classical Mechanics","Hard"],
         "url": "/GravityGaussLaw/",
         "teaser": "/assets/images/Teaser.png"
