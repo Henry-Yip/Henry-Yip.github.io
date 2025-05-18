@@ -53,9 +53,9 @@ var store = [{
         "url": "/QuantumPerturbations/",
         "teaser": "/assets/images/Teaser.png"
       },{
-        "title": "Perturbations - A view on Classical Mechanics and Quantum Mechanics",
-        "excerpt":"“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however. Classical Perturbation Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \\(F=ma\\), we have \\(F=m\\ddot{x}\\). If there is a restoring force with different direction...","categories": [],
-        "tags": ["Classical Mechanics","Quantum Mechanics","Hard"],
+        "title": "Smallperbuations",
+        "excerpt":"Perturbations in Classical Mechanics vs. Quantum Physics While both classical mechanics and quantum physics employ the term perturbation to denote a small deviation from some reference state, their implementations and outcomes differ significantly. 1. Classical Perturbations: Simple Harmonic Response A small disturbance of a stable equilibrium in classical mechanics typically...","categories": [],
+        "tags": [],
         "url": "/SmallPerbuations/",
         "teaser": "/assets/images/Teaser.png"
       },{

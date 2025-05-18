@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Perturbations - A view on Classical Mechanics and Quantum Mechanics | Henry Yip</title>
-<meta name="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+<!-- begin _includes/seo.html --><title>Smallperbuations | Henry Yip</title>
+<meta name="description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
 
 
   <meta name="author" content="Henry Yip ">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
+<meta property="og:title" content="Smallperbuations">
 <meta property="og:url" content="https://henry-yip.github.io/SmallPerbuations/">
 
 
-  <meta property="og:description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+  <meta property="og:description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
 
 
 
@@ -191,7 +191,7 @@
         <span class="sep">/</span>
       
       
-        <li class="current">Perturbations - A view on Classical Mechanics and Quantum Mechanics</li>
+        <li class="current">Smallperbuations</li>
       
     
   </ol>
@@ -306,33 +306,13 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
-  
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Perturbations - A view on Classical Mechanics and Quantum Mechanics">
-    <meta itemprop="description" content="“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.">
+    <meta itemprop="headline" content="Smallperbuations">
+    <meta itemprop="description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
     <meta itemprop="datePublished" content="2023-01-13T00:00:00+00:00">
     
 
@@ -340,7 +320,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/SmallPerbuations/" class="u-url" itemprop="url">Perturbations - A view on Classical Mechanics and Quantum Mechanics
+            <a href="https://henry-yip.github.io/SmallPerbuations/" class="u-url" itemprop="url">Smallperbuations
 </a>
           </h1>
           
@@ -369,95 +349,119 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#classical-perturbation">Classical Perturbation</a><ul><li><a href="#escaping-the-system">Escaping the system</a></li><li><a href="#credits">Credits</a></li></ul></li></ul>
+        <h2 id="perturbations-in-classical-mechanics-vs-quantum-physics">Perturbations in Classical Mechanics vs. Quantum Physics</h2>
 
-            </nav>
-          </aside>
-        
-        <p>“Perturbations” have vastly different meanings in classical mechanics and quantum physics. They both mean a small “deviation” from the origin, however.</p>
+<p>While both classical mechanics and quantum physics employ the term <strong>perturbation</strong> to denote a small deviation from some reference state, their implementations and outcomes differ significantly.</p>
 
-<h2 id="classical-perturbation">Classical Perturbation</h2>
-<p>Disturbing a system in classical mechanics usually results in (damped) simple harmonic motion: By \(F=ma\), we have \(F=m\ddot{x}\). If there is a restoring force with different direction compared to direction of motion, we get \(-\alpha x=m \ddot{x}\), where \(\alpha \in \mathbb{R}_+\). This is solved using a sinusoidal ansatz. This corresponds to simple harmonic motion!</p>
+<h3 id="1-classical-perturbations-simple-harmonic-response">1. Classical Perturbations: Simple Harmonic Response</h3>
 
-<p>Now, referring to my post in <a href="/NoetherTheorem/">Conservations in Physics</a>, we can quickly obtain:</p>
+<p>A small disturbance of a stable equilibrium in classical mechanics typically induces (possibly damped) simple harmonic motion.  Starting from Newton’s second law,</p>
 
-\[\ddot{r}-\frac{h^2}{r^3}=\frac{F_r(r)}{m}\]
+\[F = m\ddot{x},\]
 
-<p>I’ll leave this as an exercise for the reader.</p>
+<p>a restoring force of the form $F = -\alpha x$ (with $\alpha &gt; 0$) gives</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 1: We<span class="s1">'re dealing with Central Force, only radial force matters
-</span></code></pre></div></div>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hint 2: Use Newton<span class="s1">'s Second Law
-</span></code></pre></div></div>
-<p>Now consider the question below:</p>
+\[-m\ddot{x} = \alpha x
+\quad\Longrightarrow\quad
+\ddot{x} + \frac{\alpha}{m}\,x = 0,\]
 
-<p>There is a small perturbation around a circle with radius \(a\) <em>i.e.</em> \(r(t)=a+\rho(t)\) with \(\rho(0) \ll a\). How will the orbit look like?</p>
+<p>whose solution is sinusoidal with frequency $\omega = \sqrt{\tfrac{\alpha}{m}}$.</p>
 
-<p>Substituting into our orbit equation we have:</p>
+<h3 id="2-central-force-orbits-and-radial-equation">2. Central-Force Orbits and Radial Equation</h3>
 
-\[\ddot{\rho}-\frac{h^2}{(a+\rho)^3}=\frac{F_r(a+\rho)}{m}\]
+<p>For a particle of mass $m$ under a purely radial force $F_r(r)$, conservation of angular momentum $h = r^2\dot{\theta}$ and Newton’s second law yield:</p>
 
-<p>However there’s a nice trick by differentiating the taylor series.</p>
+\[\ddot{r} - \frac{h^2}{r^3} = \frac{F_r(r)}{m}.\]
 
-\[\ddot{\rho}-\frac{h^2}{a^3}\left(1-3 \frac{\rho}{a}\right)=\frac{F_r(a)}{m}+\frac{d F_r(a)}{d r} \frac{\rho}{m}\]
+<p>A <strong>circular orbit</strong> at radius $r = a$ satisfies:</p>
 
-<p>Further rearranging will get you:</p>
+\[0 - \frac{h^2}{a^3} = \frac{F_r(a)}{m},\quad
+\Longrightarrow\quad F_r(a) = -\frac{m\,h^2}{a^3}.\]
 
-\[\ddot{\rho}+\left[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\right] \rho=0\]
+<h3 id="3-small-radial-perturbations-of-a-circular-orbit">3. Small Radial Perturbations of a Circular Orbit</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Right-Hand-Side surprisingly reduces to 0, can you spot why?
-</code></pre></div></div>
+<p>Introduce a tiny radial displacement:</p>
 
-<p>Assuming knowledge from <strong>Differential Equations</strong>, we have a simple harmonic oscillator with period \(\omega\), in the form of \(\ddot{\rho}+{\omega}^2 \rho=0\). Now we’ll ensure \(\omega^2&gt;0\), <em>s.t.</em> \(\omega\) is real, <em>i.e.</em></p>
+\[r(t) = a + \rho(t),\quad |\rho| \ll a.\]
 
-\[\frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}&gt;0\]
+<p>Substitute into the radial equation:</p>
 
-<p>Hence if the above stands we have:</p>
+\[\ddot{\rho} - \frac{h^2}{(a + \rho)^3} = \frac{F_r(a + \rho)}{m}.\]
 
-\[\omega^2 \equiv \frac{3 h^2}{a^4}-\frac{1}{m} \frac{d F_r(a)}{d r}\]
+<p><strong>Linearize</strong> both sides via Taylor expansion to first order in $\rho$:</p>
 
-<p>This describes a simple harmonic motion with \(\rho(t)=A \cos (\omega t+\phi)\).</p>
+<ol>
+  <li>
+    <p><strong>Centrifugal term</strong></p>
 
-<p>The picture below will confirm our intuition is indeed correct!</p>
+\[\frac{1}{(a + \rho)^3} \approx \frac{1}{a^3}\Bigl(1 - 3\frac{\rho}{a}\Bigr).\]
+  </li>
+  <li>
+    <p><strong>Radial force</strong></p>
+
+\[F_r(a + \rho) \approx F_r(a) + F_r'(a)\,\rho.\]
+  </li>
+</ol>
+
+<p>Plugging in and cancelling the zeroth-order balance $-h^2/a^3 = F_r(a)/m$ leaves:</p>
+
+\[\ddot{\rho} + \Bigl[\tfrac{3h^2}{a^4} - \tfrac{1}{m}F_r'(a)\Bigr]\rho = 0.\]
+
+<p>Define</p>
+
+\[\omega^2 \equiv \tfrac{3h^2}{a^4} - \tfrac{1}{m}F_r'(a).\]
+
+<p>Then</p>
+
+\[\ddot{\rho} + \omega^2\,\rho = 0,\]
+
+<p>with general solution</p>
+
+\[\rho(t) = A\cos(\omega t + \phi).\]
+
+<p><strong>Stability condition</strong>: For oscillatory (bounded) motion, $\omega^2 &gt; 0$, i.e.</p>
+
+\[\frac{3h^2}{a^4} &gt; \frac{1}{m}F_r'(a).\]
 
 <p><img src="/assets/images/Orbit.png" alt="" srcset="    /assets/resized/Orbit-600x250.png 600w, /assets/images/Orbit.png 1200w" /></p>
 
-<h3 id="escaping-the-system">Escaping the system</h3>
+<h3 id="4-escape-criterion-for-an-inverse-square-force">4. Escape Criterion for an Inverse-Square Force</h3>
 
-<p>The total energy is
-\(E = \tfrac{1}{2} m (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r),
-  \quad
-  V'(r) = -F_r(r).\)
-At
-\(t=0, \quad \dot{r} = 0, \quad r_0 = a + \varepsilon,\)
-and
-\(\dot{\theta}(0) = \frac{h}{r_0^2} \quad \text{(so that } h = r_0^2 \dot{\theta} \text{ is conserved)}.\)
-Hence,
-\(E = \tfrac{1}{2} m \left( \frac{h^2}{r_0^2} \right) + V(r_0)
-  = \frac{h^2}{2 m r_0^2} + V(r_0).\)
-The escape threshold is
-\(E = 0.\)
-For an inverse-square force
-\(V(r) = -\frac{k}{r},
-  \quad
-  h^2 = \frac{k a}{m},\)
-one finds
-\(E &lt; 0 \quad \Longleftrightarrow \quad r_0 &lt; 2a,
-  \quad \Longrightarrow \quad \varepsilon_{\max} = a.\)
-Any initial radius
-\(r_0 \geq 2a\)
-(i.e.,
-\(\varepsilon \geq a\))
-gives
-\(E \geq 0\)
-and the particle escapes.</p>
+<p>The conserved total energy is</p>
 
-<h3 id="credits">Credits</h3>
+\[E = \tfrac12 m\bigl(\dot r^2 + r^2\dot{\theta}^2\bigr) + V(r),
+\quad V'(r) = -F_r(r).\]
 
-<p>The notes here are very heavily inspired by the notes written by Prof Arjun Berera, who has taught me both Introductory Dynamics (PHYS08052) and Principles of Quantum Mechanics (PHYS10094)**</p>
+<p>At $t=0$, choose initial conditions</p>
+
+\[\dot r(0) = 0,\quad r_0 = a + \varepsilon,\quad h = r_0^2\dot{\theta}(0),\]
+
+<p>so the energy is</p>
+
+\[E = \frac{h^2}{2m\,r_0^2} + V(r_0).\]
+
+<p>For an inverse-square law $V(r) = -\frac{k}{r}$ with $h^2 = \tfrac{k a}{m}$, the escape threshold $E = 0$ implies</p>
+
+\[\frac{h^2}{2m\,r_0^2} - \frac{k}{r_0} = 0
+\quad\Longrightarrow\quad r_0 = 2a.\]
+
+<p>Thus any $r_0 \ge 2a$ (i.e.\ $\varepsilon \ge a$) yields $E \ge 0$ and the particle escapes.</p>
+
+<ul>
+  <li>
+    <p><strong>Linear (local) stability</strong><br />
+Small oscillations around<br />
+\(r = a\)<br />
+will remain small—nothing “blows up” if<br />
+\(|\rho| \ll a.\)</p>
+  </li>
+  <li>
+    <p><strong>Escape (global) criterion</strong><br />
+If you instead give the particle a large enough “kick” so that<br />
+\(r_0 \ge 2a,\)<br />
+its total energy becomes non‑negative and it will escape to infinity—even though infinitesimal perturbations are stable.</p>
+  </li>
+</ul>
 
 
         
@@ -537,21 +541,6 @@ and the particle escapes.</p>
     <div class="entry-tags">
       <i class="fa fa-tags"></i>
       
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#quantum-mechanics">Quantum Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
-        
-      
     </div>
   
 </body>
@@ -567,7 +556,7 @@ and the particle escapes.</p>
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+A+view+on+Classical+Mechanics+and+Quantum+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Smallperbuations%20https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
