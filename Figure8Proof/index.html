@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere | Henry Yip</title>
-<meta name="description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions.">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere | Henry Yip</title>
+<meta name="description" content="An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere">
+<meta property="og:title" content="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere">
 <meta property="og:url" content="https://henry-yip.github.io/Figure8Proof/">
 
 
-  <meta property="og:description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions.">
+  <meta property="og:description" content="An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/Figure8Proof/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere">
-    <meta itemprop="description" content="This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions.">
+    <meta itemprop="headline" content="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere">
+    <meta itemprop="description" content="An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.">
     <meta itemprop="datePublished" content="2024-07-17T00:00:00+01:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Figure8Proof/" class="u-url" itemprop="url">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
+            <a href="https://henry-yip.github.io/Figure8Proof/" itemprop="url">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -357,11 +329,17 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          5 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
   </p>
+
 
 
         </header>
@@ -370,238 +348,167 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i>  A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere</h4></header>
-              <ul class="toc__menu"><li><a href="#overview-of-the-proof-of-figure-8-orbits">Overview of the Proof of Figure-8 Orbits</a></li><li><a href="#finding-minimizers">Finding Minimizers</a><ul><li><a href="#definitions">Definitions</a></li></ul></li><li><a href="#proving-the-orbit-from-t0-to-tfracbart12-has-no-collisions">Proving the orbit from \(T=0\) to \(T=\frac{\bar{T}}{12}\) has no collisions</a><ul><li><a href="#step-1">Step 1</a></li><li><a href="#step-2">Step 2</a></li><li><a href="#step-3">Step 3</a></li></ul></li><li><a href="#proving-a-complete-orbit-can-be-obtained-by-copy-pasting-the-orbit-above-for-12-times">Proving a complete orbit can be obtained by “copy-pasting” the orbit above for \(12\) times</a></li><li><a href="#converting-the-orbit-on-shape-sphere-to-an-actual-orbit-and-show-it-is-the-figure-8-orbit">Converting the orbit on shape sphere to an actual orbit (and show it is the Figure-8 Orbit)</a><ul><li><a href="#showing-the-orbit-is-periodic">Showing the orbit is periodic</a></li><li><a href="#showing-there-arent-unpleasant-features-in-the-orbit">Showing there aren’t “unpleasant” features in the orbit</a></li></ul></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#outline-of-the-proof">Outline of the proof</a></li><li><a href="#step-1-finding-minimisers">Step 1: finding minimisers</a><ul><li><a href="#the-action">The action</a></li></ul></li><li><a href="#step-2-the-minimiser-has-no-collisions">Step 2: the minimiser has no collisions</a><ul><li><a href="#collisions-are-expensive">Collisions are expensive</a></li><li><a href="#a-cheaper-test-path">A cheaper test path</a></li><li><a href="#conclusion">Conclusion</a></li></ul></li><li><a href="#step-3-assembling-the-full-orbit">Step 3: assembling the full orbit</a></li><li><a href="#step-4-from-the-shape-sphere-back-to-the-plane">Step 4: from the shape sphere back to the plane</a><ul><li><a href="#periodicity">Periodicity</a></li><li><a href="#no-extra-loops">No extra loops</a></li></ul></li><li><a href="#progress">Progress</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the discuss of Shape-Spheres (I mentioned in a previous post), as well as minimizers and actions.</p>
+        <div class="notice series-box">
+  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 9 of 11</p>
+  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p><a href="/Convergence/">&larr; Sundman's Power Series Solution to the Three-Body Problem (Part II)</a> &nbsp;·&nbsp; <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I) &rarr;</a></p>
+</div>
 
-<p>This is <a href="/Convergence/">my previous post about the Sundman Series</a> if you have missed it.</p>
+<p>This post outlines the proof that the figure-eight orbit exists, following Chenciner and Montgomery. It uses the <a href="/ShapeSphere/">shape sphere</a> together with the direct method of the calculus of variations.</p>
 
-<h2 id="overview-of-the-proof-of-figure-8-orbits">Overview of the Proof of Figure-8 Orbits</h2>
+<h2 id="outline-of-the-proof">Outline of the proof</h2>
 
-<p>To begin the discussion, I will outline the proof of the existence of a figure-8 orbit:</p>
-<ul>
-  <li>In the shape-sphere space, find minimizers travelling from Euler Central Configuration to isosceles configuration. This corresponds to \(1/12\)th of the full orbit.</li>
-  <li>Let \(A_c\) be the <strong>minimum</strong> action of a path with any collisions. Show that \(A&lt; A_c\) for all actions of paths without collisions.</li>
-  <li>Use \(12\) “copies” of the “\(1/12\)“th path mentioned above to form a whole orbit in the shape-sphere space. Argue that it is continuous.</li>
-  <li>Translate the path in shape sphere to a path in the euclidean space. Argue that it corresponds to a figure-8 orbit.</li>
-</ul>
+<ol>
+  <li>On the shape sphere, minimise the action over paths that start at an <em>Euler configuration</em> (three bodies collinear, one at the midpoint of the other two) and end at an <em>isosceles configuration</em>. The minimiser is one twelfth of the orbit.</li>
+  <li>Show that the minimiser has no collisions. Let \(A_2\) be a lower bound for the action of any path <em>with</em> a collision, and exhibit a collision-free test path whose action is smaller than \(A_2\). Then the minimiser cannot collide.</li>
+  <li>Use the symmetries of the equal-mass problem to make twelve copies of this arc, and show that they join smoothly into one closed curve on the shape sphere.</li>
+  <li>Reconstruct the motion in the plane from the curve on the shape sphere, and show that the three bodies follow a single figure-eight-shaped curve.</li>
+</ol>
 
-<p>This orbit is extremely special because it appears to be one of the very few choreographies to be stable. The other significant example is shown in the previous post (Lagrange).</p>
+<p>The figure eight is special: numerical work by Simó indicates that it is <em>stable</em>, which is very rare among choreographies (orbits in which all the bodies follow the same curve). By contrast, Lagrange’s equilateral circular orbit with three equal masses is a choreography too, but it is unstable (see Routh’s criterion in <a href="/Convergence/">part 8</a>).</p>
 
-<h2 id="finding-minimizers">Finding Minimizers</h2>
+<h2 id="step-1-finding-minimisers">Step 1: finding minimisers</h2>
 
-<h3 id="definitions">Definitions</h3>
+<h3 id="the-action">The action</h3>
 
-<p>We define an action in the shape sphere as:</p>
+<p>Following Chenciner and Montgomery, define the action</p>
 
-\[A = \int_{0}^{T} (\frac{1}{2}K+U) \ dt\]
+\[A = \int_{0}^{T} \left(\tfrac{1}{2}K+U\right) dt ,\]
 
-<p>over the subspace of \(\Lambda\) of \(H^1([0,T], \chi)\), where \(H^1\) refers to a Sobalev Space. A important fact is about the Sobalev Space is that the function itself and its time derivative are both Square Integrable, and \(\chi\) refers to:</p>
+<p>where \(K = \lvert\dot x\rvert^2\) is <em>twice</em> the kinetic energy and \(U\) is the force function (the negative of the potential energy). The action is minimised over the set \(\Lambda\) of paths in the Sobolev space \(H^1([0,T], X)\) that start at an Euler configuration (of arbitrary size) and end at an isosceles configuration. Here</p>
 
-\[\chi = \{ x=(x_1, x_2, x_3) \in (\mathbb{(C)}^3), \sum_{i=1}^{3} x_i =0  \}.\]
+\[X = \left\{ x=(x_1, x_2, x_3) \in \mathbb{C}^3 \;\middle|\; \sum_{i=1}^{3} x_i =0  \right\},\]
 
-<p>We are starting at an Euler configuration and end at an isosceles configuration with arbitary size.</p>
+<p>and \(H^1\) consists of paths that, together with their time derivatives, are square integrable, which is the right setting for the direct method.</p>
 
-<p>One twelfth of the orbit is obtained by minimizing this action.</p>
+<h2 id="step-2-the-minimiser-has-no-collisions">Step 2: the minimiser has no collisions</h2>
 
-<p>Below we will present the skeleton of the proof:</p>
+<h3 id="collisions-are-expensive">Collisions are expensive</h3>
 
-<h2 id="proving-the-orbit-from-t0-to-tfracbart12-has-no-collisions">Proving the orbit from \(T=0\) to \(T=\frac{\bar{T}}{12}\) has no collisions</h2>
+<p>If a path in \(\Lambda\) has a collision (double or triple), its action is <strong>at least \(A_2\)</strong>, where \(A_2\) is the action of the collinear two-body solution in which two unit masses start at collision and come to rest a time \(T\) later, with the centre of mass fixed.</p>
 
-<h3 id="step-1">Step 1</h3>
-<p>If a path in \(\Gamma\) which minimizes such an action has collisions (either double or triple), <strong>its action would exceed \(A_2\)</strong>, where \(A_2\) is the action of the two-body collinear solution in which two unit masses start at collision and end with zero velocity at a time \(T\) later, the center of mass being fixed throughout.</p>
+<h3 id="a-cheaper-test-path">A cheaper test path</h3>
 
-<h3 id="step-2">Step 2</h3>
-<p>The Euler Equipotential Length satisfies \(l_0&lt; \frac{\pi}{5}\).</p>
+<p>The <em>Euler equipotential length</em> satisfies \(\ell_0&lt; \pi/5\). Using this bound, one constructs an explicit collision-free test path, running along an equipotential curve on the shape sphere, whose action \(a\) is <strong>smaller than \(A_2\)</strong>.</p>
 
-<h3 id="step-3">Step 3</h3>
-<p>If Step 2 holds, the minimum \(A\) of <strong>the actions of equipotential test paths is smaller than \(A2\)</strong>.</p>
+<h3 id="conclusion">Conclusion</h3>
 
-<p>From the highlighted parts above the reader can clearly see such a path has no collisions.</p>
+<p>Putting these together,</p>
 
-<p>In other words, \(a&lt; A_2 &lt; A_{\text{Collision}}\) and in fact, \(A_2\) is the infimum of all paths in \(H^1([0,T], \chi)\) with collisions.</p>
+\[\min_{\Lambda} A \;\le\; a \;&lt;\; A_2 \;\le\; A(\text{any path with a collision}),\]
 
-<h2 id="proving-a-complete-orbit-can-be-obtained-by-copy-pasting-the-orbit-above-for-12-times">Proving a complete orbit can be obtained by “copy-pasting” the orbit above for \(12\) times</h2>
+<p>so the minimiser is collision-free.</p>
 
-<p>The main difficulty is to prove the end-points of each orbits are well behaved.</p>
+<h2 id="step-3-assembling-the-full-orbit">Step 3: assembling the full orbit</h2>
 
-<p>The first task is to prove that the minimizing arc is orthogonal to the two man
-ifolds E3 and M1 constraining its endpoints.</p>
+<p>The main difficulty is to show that the copies fit together smoothly at their endpoints.</p>
 
-<p>Recall that:</p>
+<p>The first task is to show that the minimising arc meets the two curves \(E_3\) and \(M_1\) that constrain its endpoints at right angles. Recall the first variation of the action:</p>
 
-\[\delta A = \epsilon \left[ \frac{\partial L}{\partial \dot{x}} \eta  \right]_0^T + \epsilon \int_0^T \left(\frac{\partial L}{\partial x} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\right) \eta \ dt\]
+\[\delta A = \epsilon \left[ \frac{\partial L}{\partial \dot{x}}\, \eta  \right]_0^T + \epsilon \int_0^T \left(\frac{\partial L}{\partial x} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\right) \eta \, dt .\]
 
-<p>Normally we treat \(\left[ \frac{\partial L}{\partial \dot{x}} \eta  \right]_0^T\) as \(0\) immediately through the assumption \(\eta(0)=0\) and \(\eta(T)=0\), but this cannot be done here as E3 and M1 are not points. Rather, they form a line in the shape sphere.</p>
+<p>Usually the boundary term vanishes because the endpoints are fixed, so \(\eta(0)=\eta(T)=0\). Here the endpoints may slide along \(E_3\) and \(M_1\), so \(\eta\) need not vanish there. The integral vanishes because the minimiser satisfies the Euler–Lagrange equations, so we need</p>
 
-<p>We must have:</p>
+\[\left.\frac{\partial L}{\partial \dot{x}}\right|_{t=0} \cdot \eta(0) = 0,
+\qquad
+\left.\frac{\partial L}{\partial \dot{x}}\right|_{t=T} \cdot \eta(T) = 0\]
 
-<p>\([\frac{\partial L}{\partial \dot{x}} \vert _{T=0}] (\eta) = 0\).</p>
+<p>for every allowed \(\eta\). Since \(\partial L/\partial \dot{x}\) points along the minimising curve, and \(\eta\) can be any vector tangent to the constraint curves, the minimising arc must meet \(E_3\) and \(M_1\) orthogonally. Reflecting across these curves then extends the arc smoothly.</p>
 
-<p>As \(\frac{\partial L}{\partial \dot{x}}\) moves <strong>along</strong> the minimizing curve and \(\eta\) is on the tangent plane of the manifolds, we can conclude that the minimizing arc is orthogonal to the two manifolds E3 and M1 constraining its endpoints.</p>
+<h2 id="step-4-from-the-shape-sphere-back-to-the-plane">Step 4: from the shape sphere back to the plane</h2>
 
-<h2 id="converting-the-orbit-on-shape-sphere-to-an-actual-orbit-and-show-it-is-the-figure-8-orbit">Converting the orbit on shape sphere to an actual orbit (and show it is the Figure-8 Orbit)</h2>
+<h3 id="periodicity">Periodicity</h3>
 
-<h3 id="showing-the-orbit-is-periodic">Showing the orbit is periodic</h3>
-<p>We know that our shape sphere is closed. Then the initial and final triangles in the plane are similar (as they correspond to the same point on the shape sphere). How to find the angle of rotation which relates these two triangles?</p>
+<p>Suppose the curve on the shape sphere is closed. Then the initial and final triangles in the plane are similar, because they correspond to the same point of the shape sphere. What is the angle of rotation between them?</p>
 
-<p>The <em>area rule</em> states that the angle of rotation (as stated above) is equal to twice the spherical area enclosed by the shape curve.</p>
+<p>For motions with zero angular momentum, the <strong>area rule</strong> answers this: the rotation angle equals twice the spherical area enclosed by the shape curve (on the shape sphere of radius \(\tfrac12\), as normalised by Chenciner and Montgomery).</p>
 
-<p>The graph below shows what happens when we start and end on the equator (corresponding to \(E_i\), where \(i\) can be \(1, 2, 3\)) or starting and ending on the Meridian Line \(M_1\). For a clearer illustration, the points \(E_i\) and the meridian line \(M_1\) are defined below:</p>
+<p>The figure below defines the points \(E_i\) on the equator (the collinear configurations with body \(i\) in the middle) and the meridian \(M_1\):</p>
 
-<p><img src="/assets/images/Shape_Sphere_Points.png" alt="" srcset="    /assets/resized/Shape_Sphere_Points-600x588.png 600w, /assets/images/Shape_Sphere_Points.png 886w" /></p>
+<figure class=""><img src="/assets/images/Shape_Sphere_Points.png" alt="Shape sphere with the Euler points E1, E2, E3 on the equator and the meridian M1 marked." loading="lazy" decoding="async" /></figure>
 
-<p>From the graph below, it is clear that the three particles differ <strong>only</strong> by a relative phase.</p>
+<p>Combining the area rule with the symmetries shows that the three bodies move along the same curve and differ <strong>only</strong> by a phase:</p>
 
-<p><img src="/assets/images/Area_Proof.png" alt="" srcset="    /assets/resized/Area_Proof-600x515.png 600w, /assets/images/Area_Proof.png 848w" /></p>
+<figure class=""><img src="/assets/images/Area_Proof.png" alt="Diagram of the twelve arcs on the shape sphere and the corresponding phases of the three bodies." loading="lazy" decoding="async" /></figure>
 
-<h3 id="showing-there-arent-unpleasant-features-in-the-orbit">Showing there aren’t “unpleasant” features in the orbit</h3>
+<h3 id="no-extra-loops">No extra loops</h3>
 
-<p>It can be shown that the angular momentum for each particle remains <em>strictly negative</em> for \(0&lt; t &lt; \bar{T}/2\). As the angular momentum is proportional to \(r^2 \dot{\omega}\), \(\dot{\omega}\) is negative, and hence \(\omega\) decreases. It can be seen that loops cannot occur.</p>
-
-<p>Therefore, the Figure-8 shape is the only possible orbit.</p>
+<p>Finally, one shows that the angular momentum of each individual body about the centre of mass vanishes only when that body passes through the origin. So each body’s polar angle changes monotonically on each lobe, and each lobe is star-shaped: the curve has no extra loops. The curve traced out is therefore a figure eight.</p>
 
 <h2 id="progress">Progress</h2>
 
-<p>Doing such a long project is definitely quite tiring and I am slightly burnt out. It is very nice, however, that I am progressing much faster than I originally planned.</p>
+<p>This has been a long and intense stretch of the project, but I am well ahead of my original plan.</p>
 
 <h2 id="credits">Credits</h2>
-<p>This proof is not original and is based on the paper <a href="https://henry-yip.github.io/assets/Figure_8_Proof.pdf">“A remarkable periodic solution of the three-body problem in the case of equal masses”</a> and the presentation <a href="https://henry-yip.github.io/assets/Overview_Beamer.pdf">“I’ve Got a Three-Body Problem”</a></p>
 
-<p>I would like to thank Dr Jenni Smillie for her guidance and support duing this project.</p>
+<p>This proof is not original. It follows A. Chenciner and R. Montgomery, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>, Annals of Mathematics <strong>152</strong> (2000), 881–901, and the presentation <a href="/assets/Overview_Beamer.pdf"><em>I’ve Got a Three-Body Problem</em></a> by Gareth E. Roberts (College of the Holy Cross).</p>
 
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong> The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide.</p>
+
+<p><strong>What changed.</strong> The outline is rewritten in numbered steps, the configuration space is written \(X\) instead of \(\chi\), and the variational argument at the end is tidied. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
+        
 
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
   
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#research">Research</a>
-        
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
-        
-      
-    </div>
+    
+
+
+
   
-</body>
-</html>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a><span class="sep">, </span>
+    
+      <a href="/topics/#research" class="page__taxonomy-item p-category" rel="tag">Research</a><span class="sep">, </span>
+    
+      <a href="/topics/#three-body-problem" class="page__taxonomy-item p-category" rel="tag">Three-Body Problem</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time></p>
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=A+Proof+of+the+Existence+of+the+Figure-8+Orbit+using+Actions+and+the+Shape+Sphere%20https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FFigure8Proof%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/Convergence/" class="pagination--pager" title="Sundman’s Power Series Solution to the Three Body Problem (Part II)
-">Previous</a>
+      <a href="/Convergence/" class="pagination--pager" title="Sundman’s Power Series Solution to the Three-Body Problem (Part II)">Previous</a>
     
     
-      <a href="/NewOrbits/" class="pagination--pager" title="Classifying and Finding New Possible Orbits (Part I)
-">Next</a>
+      <a href="/NewOrbits/" class="pagination--pager" title="Classifying and Finding New Possible Orbits (Part I)">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -610,194 +517,255 @@ ifolds E3 and M1 constraining its endpoints.</p>
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
-        
-          
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/Sundman/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part I)
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Sundman/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-12T00:00:00+01:00">July 12, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           4 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It al...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Sundman’s 1912 series solves the three-body problem for non-zero angular momentum. How the regularising variable works, and why the series is useless in prac...</p>
   </article>
 </div>
 
-        
-      </div>
-    </div>
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -807,7 +775,10 @@ ifolds E3 and M1 constraining its endpoints.</p>
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -816,120 +787,56 @@ ifolds E3 and M1 constraining its endpoints.</p>
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Figure8Proof/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Figure8Proof"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

@@ -1,19 +1,25 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    
+<meta charset="utf-8">
+
 
 <!-- begin _includes/seo.html --><title>Henry Yip</title>
-<meta name="description" content="A Website including Mathematics and Physics">
+<meta name="description" content="Notes and research on classical mechanics, the three-body problem, mathematical physics and number theory by Henry Yip.">
 
 
-  <meta name="author" content="Henry Yip ">
+  <meta name="author" content="Henry Yip">
   
 
 
@@ -24,40 +30,41 @@
 <meta property="og:url" content="https://henry-yip.github.io/">
 
 
-  <meta property="og:description" content="A Website including Mathematics and Physics">
+  <meta property="og:description" content="Notes and research on classical mechanics, the three-body problem, mathematical physics and number theory by Henry Yip.">
 
 
 
-
-
-
-
-
-
-
-
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
   
 
-  
+
+
+
+
+
+
+
+
+
 
 
 <link rel="canonical" href="https://henry-yip.github.io/">
 
 
 
-  <link rel="next" href="https://henry-yip.github.io/page2/">
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+    "name": "Henry Yip",
+    "url": "https://henry-yip.github.io/",
+    "sameAs": ["https://github.com/Henry-Yip","https://www.linkedin.com/in/henry-yip-100b05222/"]
+}
 </script>
+
+
 
 
 
@@ -70,54 +77,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
-  <body class="layout--home">
-    <nav class="skip-links">
+  </head>
+
+  <body class="layout--single">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -127,25 +121,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -169,23 +172,35 @@
 
 
 
+
+
+
+
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -196,7 +211,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -204,6 +219,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -214,7 +233,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -275,283 +294,87 @@
 </div>
 
   
+  
   </div>
 
 
 
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title"></h1>
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     
     
+    
+    
 
-<h3 class="archive__subtitle">Recent posts</h3>
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
 
 
 
 
-<div class="entries-list">
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <p class="intro">I'm Henry Yip, a mathematical physics student from Hong Kong, based between Edinburgh and Zürich. My recent work is in computational statistical physics and tropical cyclones; before that I worked on the three-body problem and symplectic integrators.</p>
+
+<h2>Publication</h2>
+
+<p>H. Yip and J. M. Smillie, <a href="https://doi.org/10.2218/esjs.10064">An Analysis of the Restricted Euler Problem Using Symplectic Integrators</a>, <em>Edinburgh Student Journal of Science</em> <strong>1</strong>(3), 2025.</p>
+
+<p>
+  <a href="/research/" class="btn btn--primary">Research</a>
+  <a href="/archive/" class="btn btn--inverse">Archive</a>
+</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
   
-    
+
+  
 
 
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
-        
-      </span>
+
+
+
+      </footer>
+
+      
+
+      
+
+
+    </div>
+
     
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
   </article>
-</div>
 
   
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
-  </article>
-</div>
-
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Sundman/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the seventh post on my summer research about three-body problems. Today we are discussing Karl F. Sundman’s Solution to the Three Body Problem. It al...</p>
-  </article>
-</div>
-
   
 </div>
 
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-    <li><a href="#" class="disabled"><span aria-hidden="true">Previous</span></a></li>
-    
-
-    
-    
-      <li><a href="#" class="disabled current">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
       
-        
-        
-        
-        <li><a href="/page2/">2</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page3/">3</a></li>
-      
-    
-
-    
-    
-      <li><a href="#" class="disabled">&hellip;</a></li>
-    
-
-    
-      <li><a href="/page8/">8</a></li>
-    
-
-    
-    
-      <li><a href="/page2/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
-</div>
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -561,7 +384,10 @@
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -570,98 +396,53 @@
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
+
 
 
 

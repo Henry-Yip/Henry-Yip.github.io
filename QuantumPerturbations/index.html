@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Perturbations - Quantum Mechanics | Henry Yip</title>
-<meta name="description" content="Quantum Perturbation">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Perturbations in Quantum Mechanics | Henry Yip</title>
+<meta name="description" content="First-order non-degenerate perturbation theory: the energy shift is the expectation value of the perturbation, with a worked infinite-well example.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Perturbations - Quantum Mechanics">
+<meta property="og:title" content="Perturbations in Quantum Mechanics">
 <meta property="og:url" content="https://henry-yip.github.io/QuantumPerturbations/">
 
 
-  <meta property="og:description" content="Quantum Perturbation">
+  <meta property="og:description" content="First-order non-degenerate perturbation theory: the energy shift is the expectation value of the perturbation, with a worked infinite-well example.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/QuantumPerturbations/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Perturbations - Quantum Mechanics</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,446 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Perturbations - Quantum Mechanics">
-    <meta itemprop="description" content="Quantum Perturbation">
+    <meta itemprop="headline" content="Perturbations in Quantum Mechanics">
+    <meta itemprop="description" content="First-order non-degenerate perturbation theory: the energy shift is the expectation value of the perturbation, with a worked infinite-well example.">
     <meta itemprop="datePublished" content="2023-01-14T00:00:00+00:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/QuantumPerturbations/" class="u-url" itemprop="url">Perturbations - Quantum Mechanics
+            <a href="https://henry-yip.github.io/QuantumPerturbations/" itemprop="url">Perturbations in Quantum Mechanics
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
         
-          1 minute read
-        
+        <time datetime="2023-01-14T00:00:00+00:00">January 14, 2023</time>
       </span>
     
-  </p>
 
-
-        </header>
-      
-
-      <section class="page__content e-content" itemprop="text">
-        
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#quantum-perturbation">Quantum Perturbation</a><ul><li><a href="#classic-example">Classic Example</a></li></ul></li></ul>
-
-            </nav>
-          </aside>
-        
-        <h2 id="quantum-perturbation">Quantum Perturbation</h2>
-
-<p>Assume the Hamiltonian \(H\) cannot be solved analytically. However, if it is <em>close</em> to a solvable Hamiltonian, say \(H_0\), there are ways to approximate it. This technique is called “Perturbation” and the theory is called “Perturbation Theory”. i.e., we have:</p>
-
-\[\hat{H}=\hat{H_0}+\hat{H'}\]
-
-<p>For simplicity, we assume the system does not have “degeneracy”, i.e., each eigenvalue only corresponds to an eigenvector, or, if you are mathematically minded, the geometric multiplicity is smaller than the algebraic multiplicity.</p>
-
-<p>By doing a taylor series, we obtain: (the eigenstates are <strong>no longer normalized</strong>!)</p>
-
-\[E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+...\]
-
-<p>and</p>
-
-\[|n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\]
-
-<p>where the (0), (1), (2) implies taking to the 0th, 1st, 2nd order respectively.</p>
-
-<p>If we expand everything, we will get:</p>
-
-\[\begin{aligned}
-&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)= \\
-&amp; \quad\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\ldots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\ldots\right)
-\end{aligned}\]
-
-<p>By comparing terms, we get:</p>
-
-\[\lambda^1:  \left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle\]
-
-<p>Consider Left hand side. From the term:</p>
-
-\[\hat{H}_0 \left|n^{(1)}\right\rangle\]
-
-<p>We can operate \(\langle k^{(0)} \,\lvert\) and obtain:</p>
-
-\[\left\langle k^{(0)}\left|\hat{H}_0\right| n^{(1)}\right\rangle = E_k^{(0)}\left\langle k^{(0)} \mid n^{(1)}\right\rangle\]
-
-<p>Hence we have:</p>
-
-\[\begin{aligned}
-    &amp;\langle k^{(0)} \lvert \left(\hat{H}_0 - E_n^{(0)}\right) \lvert n^{(1)} \rangle \\
-    &amp;\implies (E_k^{(0)}-E_n^{(0)})\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k, n}-\left\langle k^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
-
-<p>Choosing \(k=n\) will give us:</p>
-
-\[\begin{aligned}
-E_n^{(1)} \delta_{n, n}-\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle=0 \\
-\implies E_n^{(1)}=\left\langle 
-n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
-\end{aligned}\]
-
-<p>The astute reader will find out that this is an expectation value! So the expected “change in energy” is just the expectation of the perturbation!</p>
-
-<h3 id="classic-example">Classic Example</h3>
-
-<p>Now consider a standard problem in perturbation:</p>
-
-\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right)\]
-
-<p>between \(-a\) to \(a\). What is the ground state perturbation?</p>
-
-<p>From above, we have:</p>
-
-\[\begin{aligned}
-\Delta E_{n} &amp; =\left\langle\psi^{(n)}\mid V \mid \psi^{(n)}\right\rangle \\
-&amp; =\int_{-a}^{+a}  \left[\psi^{(n)}(x)^*\right] V(x) \left[\psi^{(n)}(x)\right]  dx
-\end{aligned}\]
-
-<p>Considering :</p>
-
-\[\psi^1(x)=\frac{1}{\sqrt{a}} \cos{\left(\frac{\pi x}{2a}\right)}\]
-
-<p>We can substitute and get:</p>
-
-\[\begin{aligned}
-\Delta E_n&amp;=\frac{V_0}{a} \int_{-a}^{+a} \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) \cos \left(\frac{\pi x}{2 a}\right) dx \\
-&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{+\pi / 2}  (\cos ^3 \theta)  d\theta\\
-&amp;=\frac{8 V_0}{3 \pi} 
-\end{aligned}\]
-
-<p>The details are left for an exercise for the reader.</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
-  
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#quantum-mechanics">Quantum Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
-        
-      
-    </div>
-  
-</body>
-</html>
-        
-
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-14T00:00:00+00:00">January 14, 2023</time></p>
-
-      </footer>
-
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+Quantum+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FQuantumPerturbations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FQuantumPerturbations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FQuantumPerturbations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
-
-      
-  <nav class="pagination">
-    
-      <a href="/SmallPerbuations/" class="pagination--pager" title="Perturbations - Classical Mechanics
-">Previous</a>
-    
-    
-      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series
-">Next</a>
-    
-  </nav>
-
-    </div>
-
-    
-  </article>
-
-  
-  
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
@@ -758,26 +333,414 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
-  </article>
-</div>
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2023). Corrected in October 2026; see the note at the end.</p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#setting-up-perturbation-theory">Setting up perturbation theory</a></li><li><a href="#first-order-energy-shift">First-order energy shift</a></li><li><a href="#a-classic-example">A classic example</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
+            </nav>
+          </aside>
+        
+        <p>This is the quantum companion to <a href="/SmallPerbuations/">Perturbations in Classical Mechanics</a>.</p>
+
+<h2 id="setting-up-perturbation-theory">Setting up perturbation theory</h2>
+
+<p>Suppose a Hamiltonian \(\hat H\) cannot be diagonalised exactly, but is <em>close</em> to one that can, \(\hat H_0\). Then we can approximate its spectrum systematically. Write</p>
+
+\[\hat{H}=\hat{H}_0+\lambda\hat{H}',\]
+
+<p>where \(\hat H'\) is the perturbation and \(\lambda\) is a bookkeeping parameter that we set to \(1\) at the end.</p>
+
+<p>For simplicity, assume the spectrum of \(\hat H_0\) is <strong>non-degenerate</strong>: each eigenvalue \(E_n^{(0)}\) has a one-dimensional eigenspace, spanned by \(\lvert n^{(0)}\rangle\).</p>
+
+<p>We expand the exact eigenvalues and eigenstates as power series in \(\lambda\):</p>
+
+\[E_n=E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\cdots\]
+
+<p>and</p>
+
+\[\lvert n\rangle=\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots,\]
+
+<p>where the superscript \((j)\) labels the \(j\)-th order correction. (The states \(\lvert n\rangle\) written this way are not normalised in general.)</p>
+
+<p>Substituting into \(\hat H\lvert n\rangle = E_n\lvert n\rangle\):</p>
+
+\[\begin{aligned}
+&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right) \\
+&amp; \quad=\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\cdots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right).
+\end{aligned}\]
+
+<h2 id="first-order-energy-shift">First-order energy shift</h2>
+
+<p>Comparing the terms of order \(\lambda^1\) gives</p>
+
+\[\left(\hat{H}_0-E_n^{(0)}\right)\left|n^{(1)}\right\rangle =\left(E_n^{(1)}-\hat{H}^{\prime}\right)\left|n^{(0)}\right\rangle .\]
+
+<p>Take the inner product with \(\langle k^{(0)}\rvert\). Since \(\hat H_0\) is Hermitian, \(\langle k^{(0)} \rvert \hat{H}_0 \lvert n^{(1)} \rangle = E_k^{(0)} \langle k^{(0)} \mid n^{(1)} \rangle\), so</p>
+
+\[\left(E_k^{(0)}-E_n^{(0)}\right)\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k n}-\left\langle k^{(0)}\right|\hat{H}^{\prime}\left| n^{(0)}\right\rangle .\]
+
+<p>Choosing \(k=n\) makes the left-hand side vanish, giving</p>
+
+\[E_n^{(1)}=\left\langle n^{(0)}\right|\hat{H}^{\prime}\left| n^{(0)}\right\rangle .\]
+
+<p>This is an expectation value: <strong>to first order, the shift in energy is the expectation value of the perturbation in the unperturbed state.</strong> (Choosing \(k \neq n\) instead gives the first-order correction to the state.)</p>
+
+<h2 id="a-classic-example">A classic example</h2>
+
+<p>Consider a particle in an infinite square well on \(-a \le x \le a\), perturbed by</p>
+
+\[V(x)=V_0 \cos\left(\frac{\pi x}{2a}\right).\]
+
+<p>What is the first-order shift in the ground-state energy?</p>
+
+<p>The unperturbed ground state is</p>
+
+\[\psi_1(x)=\frac{1}{\sqrt{a}} \cos\left(\frac{\pi x}{2a}\right),\]
+
+<p>so</p>
+
+\[\begin{aligned}
+\Delta E_1 &amp;= \langle \psi_1 \rvert V \lvert \psi_1 \rangle = \int_{-a}^{a} \psi_1^*(x)\, V(x)\, \psi_1(x)\, dx \\
+&amp;=\frac{V_0}{a} \int_{-a}^{a} \cos^3 \left(\frac{\pi x}{2 a}\right) dx \\
+&amp;=\frac{2 V_0}{\pi} \int_{-\pi / 2}^{\pi / 2} \cos^3 \theta \, d\theta\\
+&amp;=\frac{8 V_0}{3 \pi},
+\end{aligned}\]
+
+<p>using the substitution \(\theta = \pi x/2a\). Filling in the integral is left as an exercise.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>These notes are heavily inspired by Prof. Arjun Berera’s courses <em>Introductory Dynamics</em> (PHYS08052) and <em>Principles of Quantum Mechanics</em> (PHYS10094) at the University of Edinburgh.</p>
+
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong> The expansion parameter \(\lambda\) appeared in the series without being introduced, and the worked example labelled the ground-state shift inconsistently (\(\Delta E_n\), \(\psi^{(n)}\) and \(\psi^1\) for the same thing).</p>
+
+<p><strong>What changed.</strong> \(\lambda\) is defined at the start, the example uses \(\psi_1\) and \(\Delta E_1\) throughout, and the bra–ket notation is cleaned up. Previously titled “Perturbations - Quantum Mechanics”.</p>
 
         
-      </div>
-    </div>
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
   
+    
+
+
+
   
-</div>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#quantum-mechanics" class="page__taxonomy-item p-category" rel="tag">Quantum Mechanics</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
+        
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
+
+      </footer>
+
+      
+
+      
+
+  <nav class="pagination" aria-label="Post pagination">
+    
+      <a href="/SmallPerbuations/" class="pagination--pager" title="Perturbations in Classical Mechanics">Previous</a>
+    
+    
+      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series: Dirichlet and Fejér">Next</a>
+    
+  </nav>
+
 
     </div>
 
     
+  </article>
+
+  
+  
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -787,7 +750,10 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -796,120 +762,56 @@ n^{(0)}\left|\hat{H}^{\prime}\right| n^{(0)}\right\rangle
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/QuantumPerturbations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/QuantumPerturbations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

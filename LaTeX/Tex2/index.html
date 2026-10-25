@@ -1,0 +1,1256 @@
+
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-GB" class="no-js" dir="ltr">
+  <head>
+    
+<meta charset="utf-8">
+
+
+<!-- begin _includes/seo.html --><title>Sample LaTeX Source: Course Notes | Henry Yip</title>
+<meta name="description" content="The complete LaTeX source of a set of astrophysics course notes, as a template for longer documents.">
+
+
+  <meta name="author" content="Henry Yip">
+  
+  <meta property="article:author" content="Henry Yip">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Sample LaTeX Source: Course Notes">
+<meta property="og:url" content="https://henry-yip.github.io/LaTeX/Tex2/">
+
+
+  <meta property="og:description" content="The complete LaTeX source of a set of astrophysics course notes, as a template for longer documents.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/LaTeX.png">
+  
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-04T00:00:00+01:00">
+
+
+
+
+
+
+<link rel="canonical" href="https://henry-yip.github.io/LaTeX/Tex2/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
+</script>
+
+  </head>
+
+  <body class="layout--single">
+    
+<nav class="skip-links" aria-label="Skip links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
+        
+        <a class="site-title" href="/">
+          Henry Yip
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+
+
+<div id="main" role="main">
+  
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
+            <meta itemprop="email" content="s2231321@ed.ac.uk" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Sample LaTeX Source: Course Notes">
+    <meta itemprop="description" content="The complete LaTeX source of a set of astrophysics course notes, as a template for longer documents.">
+    <meta itemprop="datePublished" content="2022-08-04T00:00:00+01:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://henry-yip.github.io/LaTeX/Tex2/" itemprop="url">Sample LaTeX Source: Course Notes
+</a>
+          </h1>
+          
+
+
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              
+            </nav>
+          </aside>
+        
+        <p>The full source of my <a href="/Physics/Astrophysics-1/">PHYS08050 Introductory Astrophysics notes</a>: a longer document with plenty of mathematics, useful as a template for problem sheets and course notes.</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amssymb<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>parskip<span class="p">}</span>
+<span class="k">\usepackage</span> [utf8] <span class="p">{</span>inputenc<span class="p">}</span>
+<span class="k">\usepackage</span><span class="na">[margin=0.8in]</span><span class="p">{</span>geometry<span class="p">}</span>
+<span class="k">\newcommand</span><span class="p">{</span><span class="k">\ie</span><span class="p">}{</span><span class="k">\textit</span><span class="p">{</span>i<span class="p">}</span>.<span class="k">\textit</span><span class="p">{</span>e<span class="p">}</span>. <span class="p">}</span>
+<span class="k">\title</span><span class="p">{</span>Introductory Astrophysics (PHYS08050) Notes<span class="p">}</span>
+<span class="k">\author</span><span class="p">{</span>Henry Yip
+s2231321@ed.ac.uk
+<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="k">\maketitle</span>
+<span class="nt">\begin{abstract}</span>
+This set of notes is made with reference to the Astrophysics Coursebook by The University of Edinburgh. I have gained permission from Professor Catherine Heymans to put my modified notes in my website. It is also available in my personal website.
+<span class="nt">\end{abstract}</span>
+<span class="k">\section</span><span class="p">{</span>Stars<span class="p">}</span>
+<span class="k">\subsection</span><span class="p">{</span>White dwarfs<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> The assumption that white dwarfs can be described as ideal gas is wrong.
+    <span class="nt">\begin{itemize}</span>
+        <span class="k">\item</span> Because at <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="m">10</span><span class="p">}</span><span class="nb">k</span><span class="p">$</span>, the next phase of fusion burning would commence, turning the white dwarfs Carbon and Oxygen core into Neon and Magnesium and the luminosity would rocket up.
+       <span class="k">\item</span> This does not happen!
+    <span class="nt">\end{itemize}</span>
+    <span class="k">\item</span>  The gas in a white dwarf is called 
+    <span class="k">\textbf</span><span class="p">{</span>degenerate<span class="p">}</span>
+    <span class="k">\item</span> Carbon nuclei (including oxygen?!) (as the end products of the triple-alpha process) and electrons inside a white dwarf are packed together at such extreme densities that electrons start to overlap with each other
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Supernovae<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Note that the sections about supernovae are directly copied out from coursebook as I have very limited knowledge!<span class="p">}</span>
+<span class="k">\item</span> The most massive stars become short-lived, very luminous, supergiants where the core temperature becomes so extreme that successive fusion <span class="k">\textbf</span><span class="p">{</span>s-processes<span class="p">}</span> occur
+<span class="k">\item</span> Heavier and heavier elements are created in different shells within the star, resulting in an onion-like structure around a central Iron core
+<span class="k">\item</span> Iron has the highest binding energy per nucleon
+<span class="k">\item</span> No further fusion reactions will produce energy and so the core starts to contracts. Just as in the white dwarf star, electron degeneracy pressure will increase as the star shrinks, but in these massive stars even it is unable to halt the collapse.
+<span class="k">\item</span> Large quantities of neutrons are created by the collapse as Iron nuclei are broken up by photons. Elements heavier than Iron are then produced through rapid <span class="k">\textbf</span><span class="p">{</span>r-process<span class="p">}</span> reactions with the new flux of neutrons. The core crushing continues and the core becomes neutron degenerate. Neutron degeneracy pressure builds up quickly causing the inner part of the core collapse to come to a sudden halt and rebound slightly.(<span class="k">\ie</span>  It is still stopped by Neutron degeneracy pressure. What if it doesn't? Check the case for Black Holes!) This sends a giant shock wave out through the star, the end result of which is a giant supernova explosion.
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Supernova 1a<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Stars often come in pairs
+    <span class="k">\item</span> They will typically start life with <span class="k">\textbf</span><span class="p">{</span>different masses<span class="p">}</span> and hence evolve at different rates.
+    <span class="k">\item</span> We will therefore often find binary pairings of white dwarf stars with other main sequence stars
+    <span class="k">\item</span>  As the white dwarf cannibal gains in mass, its
+radius shrinks 
+    <span class="k">\item</span> the uncertainty electron momentum increases until the electron
+speeds become relativistic.
+    <span class="k">\item</span> When the mass exceeds the Chandrasekhar limit with <span class="p">$</span><span class="nb">M </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">4</span><span class="nb">M</span><span class="p">_</span><span class="nv">\odot</span><span class="p">$</span>,
+    <span class="k">\item</span> The white dwarf diamond core starts to collapse. <span class="k">\item</span> When the compressed core finally becomes neutron degenerate the core collapse will come to a sudden halt and rebound slightly causing a supernova explosion
+    <span class="k">\item</span> Supernova 1a occurs at the precise moment when the mass exceeds the Chandrasekhar limit. It therefore looks the same, at any point in space or time,
+<span class="nt">\end{itemize}</span>
+<span class="k">\section</span><span class="p">{</span>Galaxies<span class="p">}</span>
+<span class="k">\subsection</span><span class="p">{</span>Definition<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Luminosity<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The total amount of energy an object radiates each second
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Flux<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The energy per second flowing through each square metre
+<span class="k">\item</span> Defined as the <span class="k">\textbf</span><span class="p">{</span>Apparent Brightness<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Surface Brightness <span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The flux of light coming each unit solid angle on the sky (Refer to the back for the definition of <span class="k">\textbf</span><span class="p">{</span>steradians<span class="p">}</span>)
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span> <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">3</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span> law<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> We can define the formula below:
+<span class="nt">\begin{equation}</span>
+D<span class="p">_</span><span class="k">\text</span><span class="p">{</span>max<span class="p">}</span>=<span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>4 <span class="k">\pi</span> F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>min<span class="p">}}</span> <span class="k">\right</span>) <span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> We can hence define <span class="p">$</span><span class="nb">V</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">max</span><span class="p">}$</span> as:
+<span class="nt">\begin{align}</span>
+V<span class="p">_</span><span class="k">\text</span><span class="p">{</span>max<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>4<span class="p">}{</span>3<span class="p">}</span> <span class="k">\pi</span> <span class="p">{</span>D<span class="p">_</span><span class="k">\text</span><span class="p">{</span>Max<span class="p">}}^</span>3 <span class="k">\\</span>
+<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>6 <span class="p">{</span><span class="k">\pi</span><span class="p">}^{</span><span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}}}</span> <span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>min<span class="p">}}</span><span class="k">\right</span>)<span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>3<span class="p">}{</span>2<span class="p">}}</span>
+<span class="nt">\end{align}</span>
+With a number density of <span class="p">$</span><span class="nb">n</span><span class="p">$</span> stars per unit volume<span class="k">\footnote</span><span class="p">{</span>Here, we have assumed a constant density, which is rather fishy in my opinion<span class="p">}</span>, we have:
+<span class="nt">\begin{equation}</span>
+N=<span class="k">\frac</span><span class="p">{</span>n<span class="p">}{</span>6 <span class="p">{</span><span class="k">\pi</span><span class="p">}^{</span><span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}}}</span> <span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>min<span class="p">}}</span><span class="k">\right</span>)<span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>3<span class="p">}{</span>2<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+Where <span class="p">$</span><span class="nb">N</span><span class="p">$</span> is the total number of stars.
+<span class="k">\item</span> In reality things don't work like this. The slope becomes <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span> for low fluxes. Why?
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The likely reason is that the space is not infinite. There are fewer faint stars than our formula predicted <span class="k">\footnote</span><span class="p">{</span>Why however, what happens to stars with high flux?<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> The reasons why the flattening off the star counts is gradual and not sharp:
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span>  The Milky Way star system probably does not have a hard edge, but fades out gradually
+<span class="k">\item</span>  Stars are not all the same luminosity, so stars near the edge actually appear at a range
+of fluxes
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Important Symbols<span class="p">}</span>
+Below we introduce some of the most important symbols in Astrophysics.
+<span class="nt">\begin{table}</span>[h]
+  <span class="nt">\begin{center}</span>
+    <span class="nt">\begin{tabular}</span><span class="p">{</span>c|c|c<span class="p">}</span>
+      <span class="k">\textbf</span><span class="p">{</span>Symbol<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Name<span class="p">}&amp;</span><span class="k">\textbf</span><span class="p">{</span>Definition<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\hline</span>
+      <span class="p">$</span><span class="nv">\theta</span><span class="p">^</span><span class="nb">o</span><span class="p">$</span> <span class="p">&amp;</span> Degree <span class="p">&amp;</span><span class="k">\\</span>
+      <span class="p">$</span><span class="nv">\theta</span><span class="nb">'</span><span class="p">$</span> <span class="p">&amp;</span> Arcminute <span class="p">&amp;</span> <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">60</span><span class="p">}$</span> of a degree<span class="k">\\</span>
+      <span class="p">$</span><span class="nv">\theta</span><span class="nb">"</span><span class="p">$</span> <span class="p">&amp;</span> Arcsecond <span class="p">&amp;</span> <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="m">60</span><span class="p">}$</span> of an arcminute
+      <span class="nt">\end{tabular}</span>
+  <span class="nt">\end{center}</span>
+<span class="nt">\end{table}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> We have 
+<span class="nt">\begin{align}</span>
+1<span class="k">\text</span><span class="p">{</span>rad<span class="p">}&amp;</span>= <span class="p">{</span><span class="k">\frac</span><span class="p">{</span>180<span class="p">}{</span><span class="k">\pi</span><span class="p">}}^{</span><span class="k">\circ</span><span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>= <span class="p">{</span><span class="k">\frac</span><span class="p">{</span>(180)(60)<span class="p">}{</span><span class="k">\pi</span><span class="p">}}</span> <span class="k">\text</span><span class="p">{</span>arcminutes<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=<span class="p">{</span><span class="k">\frac</span><span class="p">{</span>(180)(3600)<span class="p">}{</span><span class="k">\pi</span><span class="p">}}</span> <span class="k">\text</span><span class="p">{</span>arcseconds<span class="p">}</span>
+<span class="nt">\end{align}</span>
+Rearranging, we also obtain:
+<span class="nt">\begin{align}</span>
+1 <span class="k">\text</span><span class="p">{</span>arcsecond<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span><span class="k">\frac</span><span class="p">{</span>(180)(3600)<span class="p">}{</span><span class="k">\pi</span><span class="p">}}</span> <span class="k">\text</span><span class="p">{</span>rad<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=4.848...*10<span class="p">^{</span>-6<span class="p">}</span><span class="k">\text</span><span class="p">{</span>rad<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=4.85  <span class="k">\text</span><span class="p">{</span>micro-radians<span class="p">}</span>
+<span class="nt">\end{align}</span>
+Meanwhile, 1 steradian (sr) is equal to:
+<span class="nt">\begin{equation}</span>
+<span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>180<span class="p">}{</span><span class="k">\pi</span><span class="p">}</span> <span class="k">\right</span>)<span class="p">^</span>2 <span class="k">\text</span><span class="p">{</span>sq degrees<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Angular resolution<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> By some complex analysis, we obtain the formula:
+<span class="nt">\begin{equation}</span>
+<span class="k">\theta</span>=<span class="k">\frac</span><span class="p">{</span>1.22 <span class="k">\lambda</span><span class="p">}{</span>D<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Factors that affect angular resolution
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Optical distortions
+<span class="k">\item</span> Atmospheric turbulence
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Brightness of the sky<span class="p">}</span>
+Assuming stars have constant number density <span class="p">$</span><span class="nb">n</span><span class="p">$</span>. Consider a shell of thickness <span class="p">$</span><span class="nb">dR</span><span class="p">$</span> at distance <span class="p">$</span><span class="nb">R</span><span class="p">$</span> from us. The number of stars in this shell is hence <span class="p">$</span><span class="nb">N</span><span class="o">=</span><span class="nb"> </span><span class="m">4</span><span class="nv">\pi</span><span class="nb"> n  R</span><span class="p">^</span><span class="m">2</span><span class="nb"> dR</span><span class="p">$</span>. Since each star produces a flux of  
+<span class="nt">\begin{equation}</span>
+F=<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>4<span class="k">\pi</span> R<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+The total flux is therefore:
+<span class="nt">\begin{align}</span>
+F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>tot<span class="p">}&amp;</span>=NF<span class="k">\\</span>
+<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>NL<span class="p">}{</span>4<span class="k">\pi</span> R<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{align}</span>
+With the definition of surface brightness, 
+<span class="nt">\begin{equation}</span>
+B=<span class="k">\frac</span><span class="p">{</span>nLdR<span class="p">}{</span>4 <span class="k">\pi</span><span class="p">}</span>
+<span class="nt">\end{equation}</span>
+If we sum up the total brightness by integration, we can see that it doesn't converge, so there's something wrong with our approximations.
+<span class="k">\subsection</span><span class="p">{</span>Dust<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The space between stars is not empty, they are filled with dust.
+<span class="k">\item</span> Let <span class="p">$</span><span class="nb">x</span><span class="p">$</span> be the distance travelled by the dust. Consider that when <span class="p">$</span><span class="nb">dF</span><span class="o">=</span><span class="m">0</span><span class="p">$</span>, <span class="p">$</span><span class="nb">dx</span><span class="o">=</span><span class="m">0</span><span class="p">$</span>. With other estimations, we have:
+<span class="nt">\begin{equation}</span>
+<span class="k">\frac</span><span class="p">{</span>dF<span class="p">}{</span>F<span class="p">}</span>=-kdx
+<span class="nt">\end{equation}</span>
+Hence,
+<span class="nt">\begin{equation}</span>
+<span class="k">\frac</span><span class="p">{</span>F<span class="p">}{</span>F<span class="p">_</span>o<span class="p">}</span>=e<span class="p">^{</span>-kx<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> We define <span class="p">$</span><span class="nb">x</span><span class="p">_</span><span class="nb">e</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="nb">k</span><span class="p">}$</span>, which is the distance over which the flux changes by a factor or <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">1</span><span class="p">}{</span><span class="nb">e</span><span class="p">}$</span>.
+Hence, 
+<span class="nt">\begin{equation}</span>
+<span class="k">\frac</span><span class="p">{</span>F<span class="p">}{</span>F<span class="p">_</span>o<span class="p">}</span>=e<span class="p">^{</span>-<span class="k">\frac</span><span class="p">{</span>x<span class="p">}{</span>x<span class="p">_</span>e<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+
+<span class="k">\item</span> For example, if every 2 kly light is reduced by a factor of <span class="p">$</span><span class="nb">e</span><span class="p">$</span>, at 6 kly, light is reduced by a factor of <span class="p">$</span><span class="nb">e</span><span class="p">^</span><span class="m">3</span><span class="p">$</span>.
+<span class="k">\item</span> Longer wavelength light has a longer scale length as it is absorbed less.
+<span class="k">\item</span> The size of cosmic dust grains is similar to the wavelength of visible light, which is why extinction is so sensitive to wavelength - much larger waves sail past and hardly notice
+the dust; much smaller waves are simply blocked.
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Cosmic Distances<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+
+<span class="k">\item</span> The radius of the earth is denoted by <span class="p">$</span><span class="nb">R</span><span class="p">_</span><span class="nb">E</span><span class="p">$</span>, which is defined as 1 A.U. (Astronomical Unit)
+
+<span class="k">\item</span> Angle between direction of Sun and direction Venus is called the angle of elongation (<span class="p">$</span><span class="nv">\theta</span><span class="p">_</span><span class="nb">E</span><span class="p">$</span>)
+
+<span class="k">\item</span> When <span class="p">$</span><span class="nv">\theta</span><span class="p">_</span><span class="nb">E</span><span class="p">$</span> is maximum, the line joining Venus and Earth is perpendicular to the line joining Venus and Sun <span class="k">\footnote</span><span class="p">{</span>Why?<span class="p">}</span>. We can hence measure the distance to Venus easily.<span class="k">\footnote</span><span class="p">{</span>Using trigonometry, try to deduce a formula on your own!<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Parallex<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Why it works?
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Very distant stars show minimal angular motion compared to nearby stars as size of angular motion is inversely proportional to distance of the star , so we can assume the pattern of
+ background stars is fixed.
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> The distance at which a star has an annual parallex of 1 arcsec is defined as 1 parsec (pc)
+<span class="nt">\begin{equation}</span>
+D(pc)=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span><span class="k">\theta</span>"<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+For example, the nearest known star, Proxima Centauri, is at a distance of 1.30pc. The distance to Alpha Centauri is around 1.34 pc. 
+<span class="k">\item</span> It is very difficult to measure parallax accurately in Ground-based measurements. The Hipparcos space mission, however, enables us to measure measure parallaxs with an error or 1mas, for relatively bright stars.
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>True luminosity<span class="p">}</span>
+ <span class="nt">\begin{itemize}</span>
+ <span class="k">\item</span> If we know the true luminosity<span class="k">\footnote</span><span class="p">{</span>Check previous Notes!<span class="p">}</span> <span class="p">$</span><span class="nb">L</span><span class="p">$</span> of an object and measure its flux <span class="p">$</span><span class="nb">F</span><span class="p">$</span>, then we can deduce the distance. Recall that:
+ <span class="nt">\begin{align}</span>
+ F<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>4 <span class="k">\pi</span> D<span class="p">^</span>2<span class="p">}</span> <span class="k">\\</span>
+ D<span class="p">&amp;</span>=<span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>4 <span class="k">\pi</span> F<span class="p">}</span> <span class="k">\right</span>) <span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}}</span>
+ <span class="k">\label</span><span class="p">{</span>Distance Formula<span class="p">}</span>
+ <span class="nt">\end{align}</span>
+<span class="k">\item</span> To deduce the true luminosity, we can try to locate it on the HR diagram. However, how do we find its temperature? By Wien's displacement law <span class="k">\footnote</span><span class="p">{</span> Which should be memorized at this very stage<span class="p">}</span>, we can try to estimate its colour.
+However, we encounter some problems
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Colours don't necessarily uniquely correspond to a particular temperature.
+<span class="k">\item</span> Colours are wrong due to dust extinction <span class="k">\footnote</span><span class="p">{</span>it depends on the wavelength of light<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+Besides, the distance between us and the stars is overestimated as dust reduces the flux of the stars <span class="k">\footnote</span><span class="p">{</span>Is it correct to say flux of the stars?<span class="p">}</span>
+<span class="k">\item</span> Solution: Detailed <span class="k">\textbf</span><span class="p">{</span>spectroscopy<span class="p">}</span>
+<span class="k">\item</span> Recall that Flux scales are the inverse square of distance. For example, if a thing is 2 times apart, the flux is 4 times less.
+<span class="k">\item</span> Check how to convert from arcsec to angles, angles to pc and pc to meters!
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Pulsating Variables as Standard Candles<span class="p">}</span>
+You can read off the period of a Type 1 Cepheid and locate it to its luminosity in the log graph in figure 21. Afterwards, we can find its flux <span class="k">\footnote</span><span class="p">{</span>Find out how to find the flux of a star!<span class="p">}</span> and using <span class="p">$</span><span class="o">(</span><span class="nv">\ref</span><span class="p">{</span><span class="nb">Distance Formula</span><span class="p">}</span><span class="o">)</span><span class="p">$</span>, we can find the distance.
+<span class="k">\subsection</span><span class="p">{</span>Supernovae as Standard Candles<span class="p">}</span>
+Type I (in particular Type 1a) are “white dwarf bombs”.
+this involves the conflagration of a White Dwarf exactly at its Chandrasekhar limit, the amount
+of energy released is always the same, so they make excellent standard candles.(See the above for details!)
+<span class="k">\subsection</span><span class="p">{</span>Stellar Luminosity function<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The stellar luminosity function <span class="p">$</span><span class="nv">\phi</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="p">$</span> refers to the number of stars per unit
+luminosity per unit volume of space
+<span class="k">\item</span> More luminous stars can be seen further away, so plotting a graph of number of stars/luminosity is misleading. Solutions:
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Method 1<span class="p">}</span>: Try to measure all stars. However, this is difficult.
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Method 2<span class="p">}</span>: Recall that :
+<span class="nt">\begin{equation}</span>
+N(L)=<span class="k">\phi</span>(L)*V<span class="p">_</span><span class="k">\text</span><span class="p">{</span>max<span class="p">}</span>(L)
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> From <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="m">3</span><span class="p">}{</span><span class="m">2</span><span class="p">}$</span> law as discussed in Chapter 4, we have:
+<span class="nt">\begin{equation}</span>
+N(L) <span class="k">\propto</span>  L<span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>3<span class="p">}{</span>2<span class="p">}}</span><span class="k">\phi</span>(L)
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> After correcting for <span class="p">$</span><span class="nb">V</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">max</span><span class="p">}$</span> effect, We have found out that <span class="p">$</span><span class="nv">\phi</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="nb"> </span><span class="nv">\propto</span><span class="nb"> L</span><span class="p">^{</span><span class="o">-</span><span class="nv">\alpha</span><span class="p">}$</span>, where <span class="p">$</span><span class="nv">\alpha</span><span class="o">=-</span><span class="m">1</span><span class="nb">.</span><span class="m">35</span><span class="p">$</span> by observations.
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Stellar Mass Function<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> We can rearrange equations and obtain:
+<span class="nt">\begin{equation}</span>
+n(M)= <span class="k">\phi</span> (L) <span class="k">\frac</span><span class="p">{</span>dL<span class="p">}{</span>dM<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+Hence, with the assumption that <span class="p">$</span><span class="nb">L </span><span class="nv">\propto</span><span class="nb"> M</span><span class="p">^{</span><span class="nv">\beta</span><span class="p">}$</span>
+<span class="nt">\begin{equation}</span>
+n(M) <span class="k">\propto</span> L<span class="p">^{</span>-<span class="k">\alpha</span><span class="p">}</span> M<span class="p">^{</span><span class="k">\beta</span>-1<span class="p">}</span> <span class="k">\propto</span> M<span class="p">^{</span>-<span class="k">\alpha\beta</span>+<span class="k">\beta</span>-1<span class="p">}</span> <span class="k">\propto</span> M<span class="p">^{</span><span class="k">\beta</span>(1-<span class="k">\alpha</span>)-1<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Now we plug in <span class="p">$</span><span class="nv">\alpha</span><span class="o">=-</span><span class="m">1</span><span class="nb">.</span><span class="m">35</span><span class="p">$</span> and <span class="p">$</span><span class="nv">\beta</span><span class="o">=</span><span class="m">4</span><span class="p">$</span> and obtain <span class="p">$</span><span class="nb">n</span><span class="o">(</span><span class="nb">M</span><span class="o">)</span><span class="nb"> </span><span class="nv">\propto</span><span class="nb"> M</span><span class="p">^{</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">4</span><span class="p">}$</span>
+<span class="k">\item</span> However, in the coursebook, rather confusingly, we use <span class="p">$</span><span class="nb">n</span><span class="o">(</span><span class="nb">M</span><span class="o">)</span><span class="nb"> </span><span class="nv">\propto</span><span class="nb"> M</span><span class="p">^{</span><span class="o">-</span><span class="m">2</span><span class="nb">.</span><span class="m">35</span><span class="p">}$</span> and <span class="p">$</span><span class="nv">\phi</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="nb"> </span><span class="nv">\propto</span><span class="nb"> L</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="nb">.</span><span class="m">35</span><span class="p">}$</span>
+<span class="k">\item</span> While <span class="k">\textbf</span><span class="p">{</span>integrating<span class="p">}</span>, remember that we are calculating <span class="p">$</span><span class="nb">L </span><span class="nv">\times</span><span class="nb"> </span><span class="nv">\phi</span><span class="o">(</span><span class="nb">L</span><span class="o">)</span><span class="nb">dL</span><span class="p">$</span> and <span class="p">$</span><span class="nb"> m </span><span class="nv">\times</span><span class="nb"> n</span><span class="o">(</span><span class="nb">m</span><span class="o">)</span><span class="nb">dm</span><span class="p">$</span> respectively - For More <span class="k">\textbf</span><span class="p">{</span>please check Exercise 59<span class="p">}</span> 
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Lifetime of stars<span class="p">}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Motivation<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In Pleiades, <span class="p">$</span><span class="nb">L</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="nb">.</span><span class="m">35</span><span class="p">}$</span> is consistent for all solar masses
+<span class="k">\item</span> This isn't expected for <span class="p">$</span><span class="nb">&gt; </span><span class="m">5</span><span class="nb"> M</span><span class="p">_</span><span class="nv">\odot</span><span class="p">$</span>
+<span class="k">\item</span> It shows that some original high mass stars have disappeared, why?
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Calculation<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In general, burnable fraction <span class="p">$</span><span class="nb">f</span><span class="p">$</span> varies along the mass range, with <span class="p">$</span><span class="nb">f </span><span class="nv">\propto</span><span class="nb"> M</span><span class="p">$</span>. Considering other factors:
+<span class="nt">\begin{equation}</span>
+t<span class="p">_</span>*=10.8 <span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>M<span class="p">_</span>*<span class="p">}{</span>M<span class="p">_</span><span class="k">\odot</span><span class="p">}</span> <span class="k">\right</span>)<span class="p">^{</span>-2<span class="p">}</span> <span class="k">\text</span><span class="p">{</span>Gyr<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Lifetime of Milky way<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The fraction of all the <span class="p">$</span><span class="nb">M</span><span class="p">_</span><span class="o">*</span><span class="p">$</span> stars that are still here is <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">t</span><span class="p">_</span><span class="o">*</span><span class="p">}{</span><span class="nb">T</span><span class="p">}$</span> <span class="k">\footnote</span><span class="p">{</span>I personally don't quite understand this statement<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Hydrogen gas<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In Hydrogen 1s state, there are two levels with slightly different energy levels, caused by Nuclear spin and Electron spin. The parallel state has a slightly higher energy than the anti-parallel state (think about the case of magnets)
+<span class="k">\item</span> The total 21cm line luminosity from a region is just proportional to the number of H atoms it contains 
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Molecular gas<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In most of the ISM (Interstellar Medium) hydrogen is in atomic form
+<span class="k">\item</span> In cold dense regions the starlight can be blocked out and molecules form
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Dust<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The energy of starlight that dust particles are absorbing
+in the visible light regime has to come out somewhere else
+<span class="k">\item</span> Flat-slab approximation:
+<span class="nt">\begin{align}</span>
+P<span class="p">_</span><span class="k">\text</span><span class="p">{</span>abs<span class="p">}&amp;</span>=A <span class="k">\times</span> <span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span>4 <span class="k">\pi</span> D<span class="p">^</span>2<span class="p">}</span><span class="k">\\</span>
+P<span class="p">_</span><span class="k">\text</span><span class="p">{</span>emit<span class="p">}&amp;</span>= A <span class="k">\sigma</span> T<span class="p">^</span>4
+<span class="nt">\end{align}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Galaxy Types<span class="p">}</span>
+<span class="nt">\begin{table}</span>[h!]
+  <span class="nt">\begin{center}</span>
+    <span class="nt">\begin{tabular}</span><span class="p">{</span>c|c|c<span class="p">}</span>
+      <span class="k">\textbf</span><span class="p">{</span>Spirals<span class="p">}</span> <span class="p">&amp;</span> <span class="k">\textbf</span><span class="p">{</span>Ellipticals<span class="p">}</span> <span class="p">&amp;</span><span class="k">\textbf</span><span class="p">{</span>Irregulars<span class="p">}</span><span class="k">\\</span>
+      <span class="k">\hline\hline</span>
+      Flat disc with spiral arms <span class="p">&amp;</span> No disc <span class="p">&amp;</span> Disc<span class="k">\\</span>
+      Central bulge and spheroidal halo <span class="p">&amp;</span> Single spheroidal component <span class="p">&amp;</span> Sometimes bulge/halo<span class="k">\\</span>
+      Blue and red stars <span class="p">&amp;</span> Red stars only <span class="p">&amp;</span> Blue and red stars<span class="k">\\</span>
+      Lots of gas <span class="p">&amp;</span> No gas <span class="p">&amp;</span> Lots of gas<span class="k">\\</span>   
+    <span class="nt">\end{tabular}</span>
+  <span class="nt">\end{center}</span>
+<span class="nt">\end{table}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Spirals<span class="p">}</span> mainly form stars along the spiral arms 
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Ellipticals<span class="p">}</span> stopped making stars a long time ago since the massive blue stars have all disappeared)<span class="k">\footnote</span><span class="p">{</span>Since blue stars have a shorter lifespan<span class="p">}</span>
+<span class="k">\item</span> The reason is that they have no gas, which is the material needed to make new stars
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Irregulars<span class="p">}</span> don't have gas because:
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Gas has not “settled down” into a disc
+<span class="k">\item</span> The disc has been disrupted by collision with another galaxy
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Spiral Discs<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The brightness <span class="p">$</span><span class="nb">I</span><span class="p">$</span> as a function of separation from the centre <span class="p">$</span><span class="nb">R</span><span class="p">$</span> is given by:
+<span class="nt">\begin{equation}</span>
+I(R)=I<span class="p">_</span>0e<span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>-R<span class="p">}{</span>R<span class="p">_</span>d<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Nearly all spiral discs have pretty much the same value of <span class="p">$</span><span class="nb">I</span><span class="p">_</span><span class="m">0</span><span class="p">$</span>, but different values
+of <span class="p">$</span><span class="nb">R</span><span class="p">_</span><span class="nb">d</span><span class="p">$</span>
+<span class="k">\item</span> With <span class="p">$</span><span class="nv">\int</span><span class="p">_</span><span class="m">0</span><span class="p">^{</span><span class="nv">\infty</span><span class="p">}</span><span class="nb"> x</span><span class="p">^</span><span class="nb">n e</span><span class="p">^{</span><span class="o">-</span><span class="nb">x</span><span class="p">}</span><span class="nb"> dx </span><span class="o">=</span><span class="nb"> n</span><span class="o">!</span><span class="p">$</span>, the reader can try to prove that the total light present is given by:
+<span class="nt">\begin{equation}</span>
+    F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>tot<span class="p">}</span>=2<span class="k">\pi</span> <span class="p">{</span>R<span class="p">_</span>d<span class="p">}^</span>2 I<span class="p">_</span>0
+<span class="nt">\end{equation}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Ellipticals<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+I(R)=I<span class="p">_</span>0 <span class="k">\exp</span><span class="na">[{\frac{-R}{R_e}]</span><span class="p">^{</span><span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>4<span class="p">}}}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Dark Matter<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The predicted rotation curve still disagrees with the observations badly
+<span class="k">\item</span> The expected rotation curve is flat
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> For increasing radius the velocity remains constant
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> How does dark matter depend on radius?
+<span class="nt">\begin{equation}</span>
+V<span class="p">^</span>2=<span class="k">\frac</span><span class="p">{</span>GM<span class="p">}{</span>R<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Therefore <span class="p">$</span><span class="nb">M</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">dark</span><span class="p">}</span><span class="o">(</span><span class="nb">&lt;R</span><span class="o">)</span><span class="nb"> </span><span class="nv">\propto</span><span class="nb"> R</span><span class="p">$</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> The <span class="p">$</span><span class="o">(</span><span class="nb">&lt;R</span><span class="o">)</span><span class="p">$</span> part is an obvious consequence of Birkhoff's theorem from General Relativity
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> Considering the density <span class="p">$</span><span class="o">(</span><span class="nv">\rho</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">dark</span><span class="p">}</span><span class="o">)</span><span class="p">$</span>:
+<span class="nt">\begin{align}</span>
+<span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>dark<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>M<span class="p">_</span><span class="k">\text</span><span class="p">{</span>dark<span class="p">}}{</span>R<span class="p">^</span>3<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span> <span class="k">\propto</span> <span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>R<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{align}</span>
+<span class="k">\item</span> Therefore dark Matter is concentrated near the center
+<span class="k">\item</span> A large galaxy like the Milky Way has about <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="m">11</span><span class="p">}</span><span class="nb">M</span><span class="p">_</span><span class="nv">\odot</span><span class="p">$</span> in stars, and <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="m">12</span><span class="p">}</span><span class="nb">M</span><span class="p">_</span><span class="nv">\odot</span><span class="p">$</span> in dark matter
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Random star motions and interactions in spheroids<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Elliptical galaxies do not rotate.
+<span class="k">\item</span> What is the chance of star collisions?
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Probability<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Given by the ratio of <span class="p">$</span><span class="nv">\pi</span><span class="p">{</span><span class="nb">R</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">sep</span><span class="p">}}^</span><span class="m">2</span><span class="p">$</span> and <span class="p">$</span><span class="nv">\pi</span><span class="nb"> R</span><span class="p">^</span><span class="m">2</span><span class="p">$</span>, <span class="k">\textbf</span><span class="p">{</span>where <span class="p">$</span><span class="nb">R</span><span class="o">=</span><span class="m">2</span><span class="nb">R</span><span class="p">_</span><span class="o">*</span><span class="p">$</span> and <span class="p">$</span><span class="nb">R</span><span class="p">_</span><span class="o">*</span><span class="p">$</span> is the radius of the stars<span class="p">}</span> 
+<span class="nt">\begin{align}</span>
+p=<span class="p">{</span><span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>R<span class="p">}{</span>R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>sep<span class="p">}}</span><span class="k">\right</span>)<span class="p">}^</span>2<span class="k">\\</span>
+=<span class="p">{</span><span class="k">\left</span>(<span class="k">\frac</span><span class="p">{</span>2R<span class="p">_</span>*<span class="p">}{</span>R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>sep<span class="p">}}</span><span class="k">\right</span>)<span class="p">}^</span>2 
+<span class="nt">\end{align}</span>
+<span class="k">\textbf</span><span class="p">{</span>The second line only applies if they have the same size<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Time between collisions<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Consider a cylinder covering the path of the stars
+<span class="k">\item</span> As a convention, we let <span class="p">$</span><span class="nv">\sigma</span><span class="p">$</span> as the cross-sectional area of the cylinder
+<span class="k">\item</span> Consider the number density of the stars is <span class="p">$</span><span class="nb">n</span><span class="p">$</span>, then the number of stars in the cylinder:
+<span class="nt">\begin{equation}</span>
+N=n <span class="k">\sigma</span> vt<span class="p">_</span><span class="k">\text</span><span class="p">{</span>collision<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+We set <span class="p">$</span><span class="nb">N</span><span class="o">=</span><span class="m">1</span><span class="p">$</span> and hence:
+<span class="nt">\begin{equation}</span>
+t<span class="p">_</span><span class="k">\text</span><span class="p">{</span>coll<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>n <span class="k">\sigma</span> v<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> After substitution, we find out <span class="p">$</span><span class="nb">t</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">coll</span><span class="p">}</span><span class="nb"> &gt; </span><span class="nv">\text</span><span class="p">{</span><span class="nb">age of universe</span><span class="p">}$</span>
+
+<span class="k">\subsection</span><span class="p">{</span>Gravitational Radius<span class="p">}</span>
+The radius in which the kinetic and potential energy of the passing star are equal in magnitude is defined as the <span class="p">$</span><span class="nb">R</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">grav</span><span class="p">}$</span>. For <span class="p">$</span><span class="nb">R</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">star</span><span class="p">}</span><span class="nb">&lt;R</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">grav</span><span class="p">}</span><span class="nb"> </span><span class="p">$</span>, its path is deflected by the other star. Assuming both stars have the same mass <span class="p">$</span><span class="nb">m</span><span class="p">$</span>:
+For potential energy:
+<span class="nt">\begin{equation}</span>
+U=<span class="k">\frac</span><span class="p">{</span>-Gm<span class="p">^</span>2<span class="p">}{</span>R<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+For kinetic energy:
+<span class="nt">\begin{equation}</span>
+K=<span class="k">\frac</span><span class="p">{</span>mv<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+Taking their magnitudes:
+<span class="nt">\begin{align}</span>
+<span class="k">\frac</span><span class="p">{</span>Gm<span class="p">^</span>2<span class="p">}{</span>R<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>mv<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}</span><span class="k">\\</span>
+2Gm<span class="p">&amp;</span>=Rv<span class="p">^</span>2<span class="k">\\</span>
+R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>grav<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>2Gm<span class="p">}{</span>v<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{align}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Galaxy collisions<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Stars almost never collide, but galaxies do
+<span class="k">\item</span> Galaxy interactions make strange non-symmetric disturbed structures as they pass by each other
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Active Galactic Nuclei<span class="p">}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Luminosity<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> All galaxies except irregulars are brightest at the centre. However a minority have an especially bright central spot
+<span class="k">\item</span> Example: Quasars
+<span class="k">\item</span> Some galaxies can have nuclear luminosities which are around <span class="p">$</span><span class="m">10</span><span class="nv">\%</span><span class="p">$</span> of the luminosity of an entire normal galaxy of stars like the Milky Way
+<span class="k">\item</span> Do exercise <span class="k">\text</span><span class="p">{</span>73<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Board emission lines<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> AGN emission lines are very broad. The <span class="p">$</span><span class="nb">H</span><span class="nv">\alpha</span><span class="p">$</span> line at 656.3nm is about 20nm across.
+<span class="k">\item</span> The broadening of the emission lines must be due to internal gas motions
+in the nucleus
+<span class="k">\item</span> See the notes for Doppler Shift!
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Multi-wavelength spectral energy distribution<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> AGNs radiate strongly at all sorts of wavelengths
+<span class="k">\item</span> The feature which dominates the energy output for most
+AGN output however is the “Big Blue Bump”, which peaks in the UV 
+<span class="k">\item</span> There are secondary peaks of emission in the mid-infrared (at a wavelength of around 10<span class="p">$</span><span class="nv">\mu</span><span class="nb"> </span><span class="p">$</span>m), and in the X-rays.
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>UV<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span>  It peaks around <span class="p">$</span><span class="nv">\lambda</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">03</span><span class="nb"> </span><span class="nv">\mu</span><span class="nb"> m</span><span class="p">$</span> suggesting <span class="p">$</span><span class="nb">T </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">10</span><span class="p">^</span><span class="m">5</span><span class="nb">K</span><span class="p">$</span>
+<span class="k">\item</span>  However, the UV bump looks broader than a single blackbody
+<span class="k">\item</span>  It is variable 
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>IR<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span>   It peaks around <span class="p">$</span><span class="nv">\lambda</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">10</span><span class="nb"> </span><span class="nv">\mu</span><span class="nb"> m</span><span class="p">$</span> suggesting <span class="p">$</span><span class="nb">T </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">10</span><span class="p">^</span><span class="m">5</span><span class="nb">K</span><span class="p">$</span>
+<span class="k">\item</span> The IR bump is almost certainly due to dust re-radiation, but the dust is hotter than the dust we normally see in the interstellar medium in normal galaxies, which is it at <span class="p">$</span><span class="nb">T </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">50</span><span class="nb">K</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>X-rays<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span>  It is almost certainly not due to blackbody radiation, but if the emission is due to hot gas in some way, it must
+have a wide range of temperatures, <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="m">7</span><span class="o">-</span><span class="m">9</span><span class="p">}</span><span class="nb">K</span><span class="p">$</span>.
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Variability of AGNs<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Vary erratically, cannot be used like Cepheids
+<span class="k">\item</span> There is some disturbance transmission mechanism (some sort of waves). The transmittion time:
+<span class="nt">\begin{equation}</span>
+<span class="k">\Delta</span> t =<span class="k">\frac</span><span class="p">{</span>R<span class="p">}{</span>v<span class="p">_</span>d<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Waves are transmitted by particle collisions
+<span class="k">\item</span> If we equate the Thermal Energy:
+<span class="nt">\begin{equation}</span>
+E=<span class="k">\frac</span><span class="p">{</span>3kT<span class="p">}{</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+with the Kinetic Energy:
+<span class="nt">\begin{equation}</span>
+K=<span class="k">\frac</span><span class="p">{</span>mv<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> We obtain:
+<span class="nt">\begin{align}</span>
+<span class="k">\frac</span><span class="p">{</span>3kT<span class="p">}{</span>2<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>mv<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}</span><span class="k">\\</span>
+3kT<span class="p">&amp;</span>=mv<span class="p">^</span>2<span class="k">\\</span>
+v<span class="p">&amp;</span>=<span class="k">\sqrt</span><span class="p">{</span><span class="k">\frac</span><span class="p">{</span>3kT<span class="p">}{</span>m<span class="p">}}</span>
+<span class="nt">\end{align}</span>
+<span class="k">\item</span> Assume <span class="p">$</span><span class="nb">T</span><span class="o">=</span><span class="m">10</span><span class="p">^</span><span class="m">5</span><span class="nb">k</span><span class="p">$</span> and we obtain 49.8 <span class="p">$</span><span class="nb">km s</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}$</span><span class="k">\textbf</span><span class="p">{</span>, and according to Astrophysicists<span class="k">\footnote</span><span class="p">{</span>The assumptions in all the calculations are too approximate for my liking!<span class="p">}</span>, 31.7 <span class="p">$</span><span class="nv">\approx</span><span class="p">$</span> 49.8, so we can see it probably comes from sound waves	<span class="p">}</span><span class="k">\footnote</span><span class="p">{</span>31.7 <span class="p">$</span><span class="nb">kms</span><span class="p">^{</span><span class="o">-</span><span class="m">1</span><span class="p">}$</span> is obtained in <span class="k">\textbf</span><span class="p">{</span>Exercise 77<span class="p">}}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Motion around AGN<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Recall our equation:
+<span class="nt">\begin{equation}</span>
+v<span class="p">^</span>2=<span class="k">\frac</span><span class="p">{</span>GM<span class="p">}{</span>R<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Most of the time we only see a single unresolved spot 
+<span class="k">\item</span> However, for some of the closest AGN, we can see glowing gas which is ionised by the AGN at large enough distances to visually separate from the central spot
+<span class="k">\item</span> Need to correct the angle since movements along the plane of sky (as opposed to plane of sight) don't induce Doppler's shift
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Solution: Observe the image on the sky, if it looks like a ellipse
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Emission line widths and time lag<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Some gases emit lines, they are ionised by the time-varying UV light
+<span class="k">\item</span> Time lag <span class="p">$</span><span class="nb">t</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">lag</span><span class="p">}$</span> exists since light need time to travel from centre of AGN to the gas
+<span class="nt">\begin{equation}</span>
+R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>Broad line region<span class="p">}</span>=ct<span class="p">_</span><span class="k">\text</span><span class="p">{</span>lag<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+Afterwards, we can obtain <span class="p">$</span><span class="nb">V</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">BLR</span><span class="p">}$</span> by estimating the line width. The mass <span class="p">$</span><span class="nb">M</span><span class="p">$</span> can be estimated by:
+<span class="nt">\begin{equation}</span>
+M=<span class="k">\frac</span><span class="p">{</span>R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>BLR<span class="p">}</span>V<span class="p">_</span><span class="k">\text</span><span class="p">{</span>BLR<span class="p">}^</span>2<span class="p">}{</span>G<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>AGN masses and luminosity<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Stars range over about a factor of <span class="p">$</span><span class="m">10</span><span class="p">^</span><span class="m">9</span><span class="p">$</span> (1 billion) in luminosity, but only about a factor of <span class="p">$</span><span class="m">500</span><span class="p">$</span> in mass
+<span class="k">\item</span> Similarly, AGNs range over about a factor of <span class="p">$</span><span class="m">10</span><span class="p">^</span><span class="m">6</span><span class="p">$</span> (1 million) in luminosity, but only about a factor of <span class="p">$</span><span class="m">1000</span><span class="p">$</span> in mass
+<span class="k">\item</span> In AGNs, there is little correlation between mass and luminosity, as opposed to stars
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Dark masses<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> By measuring the width of absorption lines in the light from a galaxy, we can estimate the speed of random motions of the stars in that galaxy <span class="k">\footnote</span><span class="p">{</span>How is it linked to "broad emission lines" in the section above?<span class="p">}</span>
+<span class="k">\item</span> If we make such a measurement at a series of different locations within the galaxy, we can see that stellar velocities start to increase rapidly towards the centre of most galaxies
+<span class="k">\item</span> From the methods introduced above, we can deduce the mass in the centre of AGN, which is far less than the stellar mass estimated from starlight 
+<span class="k">\item</span> We deduce the "missing mass" is dark mass
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Power from black hole accretion<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> If a small mass <span class="p">$</span><span class="nv">\Delta</span><span class="nb"> m</span><span class="p">$</span> starts from a distance and falls onto a large mass <span class="p">$</span><span class="nb">M</span><span class="p">$</span>, it gains kinetic energy:
+<span class="nt">\begin{equation}</span>
+E=<span class="k">\frac</span><span class="p">{</span>GM <span class="k">\Delta</span> m<span class="p">}{</span>R<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> For gases however, friction and collisions randomise the energy and turn it into heat
+<span class="k">\item</span> For a black hole:
+<span class="nt">\begin{equation}</span>
+R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>Event Horizon<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>2GM<span class="p">}{</span>c<span class="p">^</span>2<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> By substitution,
+<span class="nt">\begin{align}</span>
+E<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>GM <span class="k">\Delta</span> m<span class="p">}{</span><span class="k">\frac</span><span class="p">{</span>2GM<span class="p">}{</span>c<span class="p">^</span>2<span class="p">}}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}</span><span class="k">\Delta</span> m c<span class="p">^</span>2
+<span class="nt">\end{align}</span>
+<span class="k">\item</span> The efficiency, <span class="p">$</span><span class="nv">\mu</span><span class="p">$</span>, is 0.5, which is much higher than <span class="p">$</span><span class="nv">\mu</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">nuc</span><span class="p">}</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">007</span><span class="p">$</span>
+<span class="k">\item</span> This is obviously, a fallacy
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>Incorrect Assumptions<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Radial free fall is unlikely
+<span class="k">\item</span> At larger distances, the
+accreting material will always have some angular momentum, and end up forming a rotating disc around the black hole
+<span class="k">\item</span> Friction between neighbouring radial annuli then allows
+the material to slowly spiral inwards, forming a gradually heated accretion disc
+<span class="k">\item</span> Efficiency <span class="p">$</span><span class="nv">\mu</span><span class="p">$</span> is reduced by the following 2 effects:
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Effective radius is <span class="k">\textbf</span><span class="p">{</span>not<span class="p">}</span> the Event Horizon. For non-rotating black-holes, the ISCO is located at:
+<span class="nt">\begin{align}</span>
+r<span class="p">_</span><span class="k">\text</span><span class="p">{</span>ms<span class="p">}&amp;</span>=6<span class="k">\frac</span><span class="p">{</span>GM<span class="p">}{</span>c<span class="p">^</span>2<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=3R<span class="p">_</span><span class="k">\text</span><span class="p">{</span>EH<span class="p">}</span>
+<span class="nt">\end{align}</span>
+<span class="k">\item</span> I.e. There is no stable orbit <span class="p">$</span><span class="nb">&lt;</span><span class="m">3</span><span class="nb">R</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">EH</span><span class="p">}$</span>
+<span class="k">\item</span> And therefore the thermal energy gained by the gas decreases
+<span class="k">\item</span> Some energy (half) is converted to rotational energy, as:
+<span class="nt">\begin{align}</span>
+<span class="k">\Delta</span> K<span class="p">&amp;</span> =<span class="k">\dfrac</span><span class="p">{</span>dK<span class="p">}{</span>dR<span class="p">}</span> <span class="k">\Delta</span> R<span class="k">\\</span>
+<span class="p">&amp;</span>=-<span class="k">\frac</span><span class="p">{</span>GM<span class="k">\Delta</span> m<span class="p">}{</span>2R<span class="p">^</span>2<span class="p">}</span> <span class="k">\Delta</span> R
+<span class="nt">\end{align}</span>
+<span class="nt">\begin{align}</span>
+<span class="k">\Delta</span> U<span class="p">&amp;</span> =<span class="k">\dfrac</span><span class="p">{</span>dU<span class="p">}{</span>dR<span class="p">}</span> <span class="k">\Delta</span> R<span class="k">\\</span>
+<span class="p">&amp;</span>=-<span class="k">\frac</span><span class="p">{</span>GM<span class="k">\Delta</span> m<span class="p">}{</span>R<span class="p">^</span>2<span class="p">}</span> <span class="k">\Delta</span> R
+<span class="nt">\end{align}</span>
+<span class="nt">\begin{align}</span>
+<span class="k">\frac</span><span class="p">{</span><span class="k">\Delta</span> K<span class="p">}{</span><span class="k">\Delta</span> U<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>-<span class="k">\frac</span><span class="p">{</span>GM<span class="k">\Delta</span> m<span class="p">}{</span>2R<span class="p">^</span>2<span class="p">}</span> <span class="k">\Delta</span> R<span class="p">}{</span>-<span class="k">\frac</span><span class="p">{</span>GM<span class="k">\Delta</span> m<span class="p">}{</span>R<span class="p">^</span>2<span class="p">}</span> <span class="k">\Delta</span> R<span class="p">}</span><span class="k">\\</span>
+<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>2<span class="p">}</span>
+<span class="nt">\end{align}</span>
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+Combining with other effects, we have <span class="p">$</span><span class="nv">\mu</span><span class="nb"> </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Eddington Luminosity<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> A photon has energy <span class="p">$</span><span class="nb">E</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">hc</span><span class="p">}{</span><span class="nv">\lambda</span><span class="p">}$</span> and momentum <span class="p">$</span><span class="nb">p</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">h</span><span class="p">}{</span><span class="nv">\lambda</span><span class="p">}</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">E</span><span class="p">}{</span><span class="nb">c</span><span class="p">}$</span>. So you can visualize momentum flux being <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">S</span><span class="p">}{</span><span class="nb">c</span><span class="p">}$</span>, where <span class="p">$</span><span class="nb">S</span><span class="p">$</span> is the radiation flux
+    <span class="k">\item</span> Most of that flux may pass straight through, but some of it will scatter on the electrons inside atoms. That scattering produces a force on the electrons, which drag the
+     atoms with them. The scattering process has a cross-section:
+     <span class="p">$</span><span class="nv">\sigma</span><span class="p">_</span><span class="nb">e </span><span class="o">=</span><span class="nb"> </span><span class="m">6</span><span class="nb">.</span><span class="m">65</span><span class="nb"> </span><span class="nv">\times</span><span class="nb"> </span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">29</span><span class="p">}$</span> meter square
+    <span class="k">\item</span> The <span class="k">\textbf</span><span class="p">{</span>rate<span class="p">}</span> <span class="k">\footnote</span><span class="p">{</span>This implies differentiation<span class="p">}</span> of momentum transfer (or in other words, radiation force on each atom) is therefore:
+     <span class="nt">\begin{equation}</span>
+        <span class="k">\dfrac</span><span class="p">{</span>dp<span class="p">}{</span>dt<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>S <span class="k">\sigma</span><span class="p">_</span>e<span class="p">}{</span>c<span class="p">}</span>
+     <span class="nt">\end{equation}</span>
+    <span class="k">\item</span> Combining with <span class="p">$</span><span class="nb">L</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">S</span><span class="p">}{</span><span class="m">4</span><span class="nb"> </span><span class="nv">\pi</span><span class="nb"> R</span><span class="p">^</span><span class="m">2</span><span class="p">}$</span> we obtain:
+    <span class="nt">\begin{equation}</span>
+        F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>radiation<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>L <span class="k">\sigma</span><span class="p">_</span>e<span class="p">}{</span>4 <span class="k">\pi</span> R<span class="p">^</span>2 c<span class="p">}</span>
+    <span class="nt">\end{equation}</span>
+    <span class="k">\item</span> Assuming all the gas are hydrogen and each hydrogen atom composes of 1 proton, which has mass of <span class="p">$</span><span class="nb">m</span><span class="p">_</span><span class="nb">p</span><span class="p">$</span>. As <span class="p">$</span><span class="nb">m</span><span class="p">_</span><span class="nb">e&lt;&lt;m</span><span class="p">_</span><span class="nb">p</span><span class="p">$</span>, we have:
+    <span class="nt">\begin{equation}</span>
+        F<span class="p">_</span><span class="k">\text</span><span class="p">{</span>gravitation<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>GMm<span class="p">_</span>p<span class="p">}{</span>R<span class="p">^</span>2<span class="p">}</span>
+    <span class="nt">\end{equation}</span>
+    <span class="k">\item</span> At the limiting luminosity, the outward radiation force is equal to the inwards gravitational force, <span class="k">\ie</span> <span class="p">$</span><span class="nb">F</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">radiation</span><span class="p">}</span><span class="o">=</span><span class="nb">F</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">gravitation</span><span class="p">}$</span>. Combining everything gives us:
+    <span class="nt">\begin{equation}</span>
+        L<span class="p">_</span><span class="k">\text</span><span class="p">{</span>Max<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>4 <span class="k">\pi</span> G m<span class="p">_</span>p c<span class="p">}{</span><span class="k">\sigma</span><span class="p">_</span>e<span class="p">}</span> <span class="k">\times</span> M
+    <span class="nt">\end{equation}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\section</span><span class="p">{</span>Cosmology<span class="p">}</span>
+<span class="k">\subsection</span><span class="p">{</span>Big Bang<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Consider a galaxy on the edge of a sphere in the universe centered on us
+<span class="k">\item</span> By Birkhoff's theorem
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> This galaxy is effected gravitationally only by the mass within the sphere
+    <span class="k">\item</span> The mass within a sphere acts like a point mass at the centre
+<span class="nt">\end{itemize}</span>
+<span class="k">\item</span> Hence the energy of the galaxy:
+<span class="nt">\begin{equation}</span>
+    E=<span class="k">\frac</span><span class="p">{</span>mV<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}</span>-<span class="k">\frac</span><span class="p">{</span>GMm<span class="p">}{</span>r<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>If <span class="p">$</span><span class="nb">E&lt;</span><span class="m">0</span><span class="p">$</span>, the universe re-collaspes in a big crunch<span class="p">}</span>
+<span class="k">\item</span> <span class="k">\textbf</span><span class="p">{</span>If <span class="p">$</span><span class="nb">E&gt;</span><span class="m">0</span><span class="p">$</span>, the universe continues to expand<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Hubble constant<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> It changes with radius (see below)
+    <span class="k">\item</span> An important equation:
+    <span class="nt">\begin{equation}</span>
+        z=<span class="k">\frac</span><span class="p">{</span>H<span class="p">_</span>0D<span class="p">}{</span>c<span class="p">}</span>
+    <span class="nt">\end{equation}</span>
+This is an obvious result from Doppler's shift. Recall that <span class="p">$</span><span class="nb">z</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nv">\Delta</span><span class="nb"> </span><span class="nv">\lambda</span><span class="p">}{</span><span class="nv">\lambda</span><span class="p">}$</span>, <span class="p">$</span><span class="nb">V</span><span class="o">=</span><span class="nb">H</span><span class="p">_</span><span class="m">0</span><span class="nb">r</span><span class="p">$</span> and <span class="p">$</span><span class="nv">\frac</span><span class="p">{</span><span class="nv">\Delta</span><span class="nb"> </span><span class="nv">\lambda</span><span class="p">}{</span><span class="nv">\lambda</span><span class="p">}</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">v</span><span class="p">_</span><span class="nb">r</span><span class="p">}{</span><span class="nb">v</span><span class="p">_</span><span class="nb">w</span><span class="p">}$</span>. Substitute everything and you'll get it.
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Critical Density of the Universe<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Consider the equations below:
+    <span class="nt">\begin{align}</span>
+        <span class="k">\frac</span><span class="p">{</span>mV<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>GMm<span class="p">}{</span>r<span class="p">}</span><span class="k">\\</span>
+    M<span class="p">&amp;</span>=<span class="k">\frac</span><span class="p">{</span>4 <span class="k">\pi</span> r<span class="p">^</span>3<span class="p">}{</span>3<span class="p">}</span> <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}</span>
+    <span class="nt">\end{align}</span>
+    We can find <span class="p">$</span><span class="nv">\rho</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">crit</span><span class="p">}$</span> by combining the equations and using <span class="p">$</span><span class="nb">V</span><span class="o">=</span><span class="nb">H</span><span class="p">_</span><span class="m">0</span><span class="nb">r</span><span class="p">$</span>
+    <span class="nt">\begin{align}</span>
+        <span class="k">\frac</span><span class="p">{</span>mV<span class="p">^</span>2<span class="p">}{</span>2<span class="p">}&amp;</span>=<span class="k">\frac</span><span class="p">{</span>4Gm<span class="k">\pi</span> r<span class="p">^</span>3 <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}}{</span>3r<span class="p">}</span><span class="k">\\</span>
+         3V<span class="p">^</span>2<span class="p">&amp;</span>=8G<span class="k">\pi</span> r<span class="p">^</span>2 <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}</span><span class="k">\\</span>
+         3<span class="p">{</span>H<span class="p">_</span>0<span class="p">}^</span>2<span class="p">{</span>r<span class="p">^</span>2<span class="p">}&amp;</span>=8G<span class="k">\pi</span> r<span class="p">^</span>2 <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}</span><span class="k">\\</span>
+          3<span class="p">{</span>H<span class="p">_</span>0<span class="p">}^</span>2<span class="p">&amp;</span>=8G<span class="k">\pi\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}</span><span class="k">\\</span>
+         <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}&amp;</span>=<span class="k">\frac</span> <span class="p">{</span>3<span class="p">{</span>H<span class="p">_</span>0<span class="p">}^</span>2<span class="p">}{</span>8G<span class="k">\pi</span><span class="p">}</span>
+    <span class="nt">\end{align}</span>
+    <span class="k">\item</span> As <span class="p">$</span><span class="nv">\rho</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">crit</span><span class="p">}$</span> decrease with increasing <span class="p">$</span><span class="nb">r</span><span class="p">$</span>, by referring to the equation above, we can proof that <span class="p">$</span><span class="nb">H</span><span class="p">_</span><span class="m">0</span><span class="p">$</span> changes with time
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Cosmic Scale Factor<span class="p">}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Definition<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+    R(t)=<span class="k">\frac</span><span class="p">{</span>r(t)<span class="p">}{</span>r(t=<span class="k">\text</span><span class="p">{</span>today<span class="p">}</span>)<span class="p">}</span>
+    <span class="nt">\end{equation}</span>
+    Note that it can be rewritten as:
+<span class="nt">\begin{equation}</span>
+    R(t<span class="p">_</span><span class="k">\text</span><span class="p">{</span>emit<span class="p">}</span>)=<span class="k">\frac</span><span class="p">{</span><span class="k">\lambda</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>emit<span class="p">}}{</span><span class="k">\lambda</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>obs<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsubsection</span><span class="p">{</span>Redshift<span class="p">}</span>
+<span class="nt">\begin{equation}</span>
+z=<span class="k">\frac</span><span class="p">{</span><span class="k">\lambda</span><span class="p">_{</span><span class="k">\circ</span><span class="p">}</span>-<span class="k">\lambda</span><span class="p">_</span>e<span class="p">}{</span><span class="k">\lambda</span><span class="p">_</span>e<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+And hence:
+<span class="nt">\begin{equation}</span>
+    R(t)=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>1+z<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\subsection</span><span class="p">{</span>Geometry of the universe<span class="p">}</span>
+We define the density parameter as:
+<span class="nt">\begin{equation}</span>
+    <span class="k">\Omega</span><span class="p">_</span>0=<span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">}{</span><span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Closed (the big crunch): <span class="p">$</span><span class="nv">\Omega</span><span class="nb">&gt;</span><span class="m">1</span><span class="p">$</span>, <span class="p">$</span><span class="nb">E&lt;</span><span class="m">0</span><span class="p">$</span>
+    <span class="k">\item</span> Open(Expanding):<span class="p">$</span><span class="nv">\Omega</span><span class="nb">&lt;</span><span class="m">1</span><span class="p">$</span>,<span class="p">$</span><span class="nb">E&gt;</span><span class="m">0</span><span class="p">$</span>
+    <span class="k">\item</span> Flat: <span class="p">$</span><span class="nv">\Omega</span><span class="o">=</span><span class="m">1</span><span class="p">$</span>,<span class="p">$</span><span class="nb">E</span><span class="o">=</span><span class="m">0</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Problems of the Big Bang Model<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Flatness Problem
+    <span class="nt">\begin{itemize}</span>
+        <span class="k">\item</span> The fine-tuning of density such that it is so close to the critical density
+    <span class="nt">\end{itemize}</span>
+    <span class="k">\item</span> Horizon Problem
+    <span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Two ends of the horizon looks the same and has the same temperature, which implies they must have been connected. By def, as our horizon is the furthest light can travel since the big bang, these two regions (in this case separated by 2 horizon scales) can not have been connected at the big bang
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Guth Inflation Solution<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Alan Guth developed a theory called <span class="k">\textbf</span><span class="p">{</span>Inflation<span class="p">}</span> where a new form of energy from a field created roughly <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">30</span><span class="p">}$</span> seconds after the big bang accelerated the
+expansion of the Universe at speeds faster than light 
+    <span class="k">\item</span> How it solved the aforementioned problems?
+    <span class="nt">\begin{itemize}</span>
+        <span class="k">\item</span> Flatness Problem:
+        <span class="nt">\begin{itemize}</span>
+            <span class="k">\item</span>  The rapid acceleration would flatten out any irregularity in the geometry of the early post-big-bang Universe
+        <span class="nt">\end{itemize}</span>
+        <span class="k">\item</span> Horizon Problem:
+        <span class="nt">\begin{itemize}</span>
+            <span class="k">\item</span> The Universe was all connected before inflation
+        <span class="nt">\end{itemize}</span>
+    <span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Energy density of matter and radiation<span class="p">}</span>
+<span class="nt">\begin{align}</span>
+<span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>m<span class="p">}</span> <span class="p">&amp;</span><span class="k">\propto</span> <span class="p">{</span>R(t)<span class="p">}^{</span>-3<span class="p">}</span><span class="k">\\</span>
+<span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>r<span class="p">}</span> <span class="p">&amp;</span><span class="k">\propto</span> <span class="p">{</span>R(t)<span class="p">}^{</span>-4<span class="p">}</span>
+<span class="nt">\end{align}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> At the start of the universe, <span class="p">$</span><span class="nb">R</span><span class="o">(</span><span class="nb">t</span><span class="o">)</span><span class="p">$</span> was small, and the universe was dominated by radiation.
+<span class="k">\item</span> What is the redshift at the time when energy density of matter and radiation equal? We are given:
+<span class="nt">\begin{equation}</span>
+    <span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">_</span>r(t=<span class="k">\text</span><span class="p">{</span>today)<span class="p">}}{</span><span class="k">\rho</span><span class="p">_</span>m(t=<span class="k">\text</span><span class="p">{</span>today<span class="p">}</span>)<span class="p">}</span>=0.0003
+<span class="nt">\end{equation}</span>
+At the redshift where the energy density of matter and radiation were equal:
+<span class="nt">\begin{equation}</span>
+ <span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">_</span>r(t=<span class="k">\text</span><span class="p">{</span>equal)<span class="p">}}{</span><span class="k">\rho</span><span class="p">_</span>m(t=<span class="k">\text</span><span class="p">{</span>equal<span class="p">}</span>)<span class="p">}</span>=1
+<span class="nt">\end{equation}</span>
+Remember from above,
+<span class="nt">\begin{align}</span>
+    <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>m<span class="p">}</span> <span class="p">&amp;</span><span class="k">\propto</span> <span class="p">{</span>R(t)<span class="p">}^{</span>-3<span class="p">}</span><span class="k">\\</span>
+    <span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>r<span class="p">}</span> <span class="p">&amp;</span><span class="k">\propto</span> <span class="p">{</span>R(t)<span class="p">}^{</span>-4<span class="p">}</span>
+<span class="nt">\end{align}</span>
+Here, <span class="p">$</span><span class="nb">t</span><span class="o">=</span><span class="nv">\text</span><span class="p">{</span><span class="nb">equal</span><span class="p">}$</span>:
+<span class="nt">\begin{equation}</span>
+<span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">_</span>r(t=<span class="k">\text</span><span class="p">{</span>equal)<span class="p">}}{</span><span class="k">\rho</span><span class="p">_</span>m(t=<span class="k">\text</span><span class="p">{</span>equal<span class="p">}</span>)<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>k<span class="p">}{</span>R(t<span class="p">_</span><span class="k">\text</span><span class="p">{</span>equal<span class="p">}</span>)<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+We can compare it with:
+<span class="nt">\begin{equation}</span>
+<span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">_</span>r(t=<span class="k">\text</span><span class="p">{</span>today)<span class="p">}}{</span><span class="k">\rho</span><span class="p">_</span>m(t=<span class="k">\text</span><span class="p">{</span>today<span class="p">}</span>)<span class="p">}</span>=<span class="k">\frac</span><span class="p">{</span>k<span class="p">}{</span>R(t<span class="p">_</span><span class="k">\text</span><span class="p">{</span>today<span class="p">}</span>)<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="p">$</span><span class="nb">R</span><span class="o">(</span><span class="nb">t</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">today</span><span class="p">}</span><span class="o">)=</span><span class="m">1</span><span class="p">$</span>, and <span class="p">$</span><span class="nb">k</span><span class="p">$</span> is a the same for both cases, so <span class="p">$</span><span class="nb">k</span><span class="o">=</span><span class="m">0</span><span class="nb">.</span><span class="m">0003</span><span class="p">$</span>, and therefore <span class="p">$</span><span class="nb">R</span><span class="o">(</span><span class="nb">t</span><span class="p">_</span><span class="nv">\text</span><span class="p">{</span><span class="nb">equal</span><span class="p">}</span><span class="o">)=</span><span class="m">0</span><span class="nb">.</span><span class="m">0003</span><span class="p">$</span>.
+We have defined:
+<span class="nt">\begin{equation}</span>
+    R(t)=<span class="k">\frac</span><span class="p">{</span>1<span class="p">}{</span>1+z<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+And we can easily rearrange find <span class="p">$</span><span class="nb">z </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">3332</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Beginning of the universe<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> This era was described as "opaque" as the light from this era cannot travel out into the Universe ,<span class="k">\textbf</span><span class="p">{</span>because the photons scatter off electrons<span class="p">}</span>
+<span class="k">\item</span> The particles in the early Universe are not distributed randomly and
+there are fluctuations due to tiny random <span class="k">\textbf</span><span class="p">{</span>quantum fluctuations<span class="p">}</span>
+in the pea-sized Universe that existed after the big bang and before <span class="p">$</span><span class="m">10</span><span class="p">^{</span><span class="o">-</span><span class="m">30</span><span class="p">}</span><span class="nb">s</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Recombination<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In the radiation dominated Universe, the photons are so dense that the
+photon pressure can push the clumps apart. An ongoing battle between matter trying to clump
+and photon pressure pushing these apart can be observed in the first view of the Universe at
+<span class="k">\textbf</span><span class="p">{</span>Recombination<span class="p">}</span>.
+<span class="k">\item</span> Recombination is the era where the energy density of matter now dominates and the charged
+particles have combined to form neutral atoms so the photons freely travel out into the expanding
+Universe. We detect the first radiation from this era in the form of the cosmic microwave
+background.
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Chemical building blocks<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> In the very early radiation dominated Universe, protons and neutrons move fast, collide often and fuse to form nuclei. The high density of high energy gamma ray photon however manage to
+blast any nuclei that form apart <span class="p">$</span><span class="nv">\implies</span><span class="p">$</span> None are formed
+<span class="k">\item</span> In a later stage, the expansion has reduced the photon energy to such an extent that they are unable to break the more stable nuclei up, while the Universe is dense and hot
+enough for particle collisions and nuclear fusion to occur <span class="p">$</span><span class="nv">\implies</span><span class="p">$</span> Starts to form
+<span class="k">\item</span> At the end of the nucleosynthesis period the Universe has cooled to such an extent that no
+heavier elements can be made as the density decreases (with the expansion) the collisions
+become rare and unimportant. The rest of the chemicals on our periodic table are created much
+later on in the history of the Universe in the cores of stars <span class="k">\footnote</span><span class="p">{</span>You have learnt them before!<span class="p">}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Deuterium<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Heavy Hydrogen 
+<span class="k">\item</span> Why important?
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> There is no way to produce any quantity of this element at
+any other point in the history of the Universe except during nucleosynthesis.
+<span class="k">\item</span>  The cores of stars have the required temperatures for Deuterium to be created, but the stars are so dense, the chain of reactions don’t stop and they use up all of their Deuterium in other reactions
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Nucleosynthesis and the baryon density<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Protons, neutrons, everything in the periodic table is baryons
+<span class="k">\item</span> We define the baryon density parameter as:
+<span class="nt">\begin{equation}</span>
+<span class="k">\Omega</span><span class="p">_</span>b=<span class="k">\frac</span><span class="p">{</span><span class="k">\rho</span><span class="p">_</span>b<span class="p">}{</span><span class="k">\rho</span><span class="p">_</span><span class="k">\text</span><span class="p">{</span>crit<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> From nucleosynthesis observation we measure <span class="p">$</span><span class="nv">\Omega</span><span class="p">_</span><span class="nb">b</span><span class="p">$</span> = 0.045
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Cosmic Microwave Background<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> If the Universe started in a hot big bang, then the atoms would have interacted so strongly that all detailed features in their energy distribution are washed out and we would expect to see a thermal continuous blackbody spectrum from the Big Bang
+<span class="k">\item</span> Experimental data fits extremely well with blackbody curve for <span class="p">$</span><span class="nb">T</span><span class="o">=</span><span class="m">2</span><span class="nb">.</span><span class="m">74</span><span class="nb">k</span><span class="p">$</span>, which confirms our theory on the competition between matter and radiation in the early Universe
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>What is Dark Matter<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> An early hypothesis was that this dark matter was cold baryonic matter bound up in dark objects such as failed faint Brown Dwarf stars
+<span class="k">\item</span> We know from nucleosynthesis that only <span class="p">$</span><span class="nv">\approx</span><span class="p">$</span> 5<span class="k">\%</span> of the Universe is made up of baryons, so whatever this extra mass is it must be
+non-baryonic
+<span class="k">\item</span> Our best guess is that it's <span class="k">\textbf</span><span class="p">{</span>cold non-baryonic massive particles<span class="p">}</span>
+<span class="k">\item</span> Modified Newtonian Dynamics uses <span class="p">$</span><span class="nb">F</span><span class="o">=</span><span class="nb">ma</span><span class="p">^</span><span class="m">2</span><span class="p">$</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Need a tuning parameter which changes for different galaxies
+<span class="k">\item</span> Goes against the Cosmological Principle that everything (including the law
+of physics) is homogenous and isotropic
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Distance-redshift relation<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> This section resulted in a Nobel Prize in 2011. They used distant supernova as standard candles to probe the Universe
+<span class="k">\item</span> We have the formula <span class="p">$</span><span class="nb">D</span><span class="o">=</span><span class="nv">\frac</span><span class="p">{</span><span class="nb">cz</span><span class="p">}{</span><span class="nb">H</span><span class="p">_</span><span class="m">0</span><span class="p">}$</span>. There is an extension that works for more distant galaxies:
+<span class="nt">\begin{equation}</span>
+D<span class="p">_</span>L <span class="k">\approx</span> <span class="k">\frac</span><span class="p">{</span>c(1+z)(z-<span class="k">\frac</span><span class="p">{</span>1+q<span class="p">}{</span>2<span class="p">}</span>z<span class="p">^</span>2)<span class="p">}{</span>H<span class="p">_</span>0<span class="p">}</span>
+<span class="nt">\end{equation}</span>
+<span class="k">\item</span> Where <span class="p">$</span><span class="nb">q</span><span class="o">=-</span><span class="nv">\left</span><span class="o">(</span><span class="m">1</span><span class="o">+</span><span class="nv">\frac</span><span class="p">{</span><span class="nv">\dot</span><span class="p">{</span><span class="nb">H</span><span class="p">}}{</span><span class="nb">H</span><span class="p">^</span><span class="m">2</span><span class="p">}</span><span class="nv">\right</span><span class="o">)</span><span class="p">$</span> and <span class="p">$</span><span class="nv">\dot</span><span class="p">{</span><span class="nb">H</span><span class="p">}$</span> is the rate of change of the Hubble parameter
+<span class="nt">\end{itemize}</span>
+<span class="k">\subsection</span><span class="p">{</span>Concordant cosmology<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> Baryonic content  <span class="p">$</span><span class="nv">\Omega</span><span class="p">_</span><span class="nb">b </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">05</span><span class="p">$</span>
+<span class="k">\item</span> The total dark and baryonic matter content <span class="p">$</span><span class="nv">\Omega</span><span class="p">_</span><span class="nb">m </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">3</span><span class="p">$</span>
+<span class="k">\item</span> Dark energy content <span class="p">$</span><span class="nv">\Omega</span><span class="p">_</span><span class="nv">\Lambda</span><span class="nb"> </span><span class="nv">\approx</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">7</span><span class="p">$</span>
+<span class="k">\item</span> The universe is flat and has critical density:  <span class="p">$</span><span class="nv">\Omega</span><span class="p">_</span><span class="nb">b</span><span class="o">+</span><span class="nv">\Omega</span><span class="p">_</span><span class="nb">m</span><span class="o">+</span><span class="nv">\Omega</span><span class="p">_</span><span class="nv">\Lambda</span><span class="o">=</span><span class="m">1</span><span class="p">$</span>
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{document}</span>
+
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+  
+
+  
+
+
+        
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-08-04T00:00:00+01:00">August 4, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+
+  <nav class="pagination" aria-label="Post pagination">
+    
+      <a href="/LaTeX/Tex1/" class="pagination--pager" title="Sample Tex Files (1)">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

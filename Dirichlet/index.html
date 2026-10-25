@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Kernels in Fourier Series | Henry Yip</title>
-<meta name="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Kernels in Fourier Series: Dirichlet and Fejér | Henry Yip</title>
+<meta name="description" content="How Fourier partial sums arise as convolutions with the Dirichlet kernel, and why the Fejér kernel, an approximate identity, behaves better.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Kernels in Fourier Series">
+<meta property="og:title" content="Kernels in Fourier Series: Dirichlet and Fejér">
 <meta property="og:url" content="https://henry-yip.github.io/Dirichlet/">
 
 
-  <meta property="og:description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+  <meta property="og:description" content="How Fourier partial sums arise as convolutions with the Dirichlet kernel, and why the Fejér kernel, an approximate identity, behaves better.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/Dirichlet/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Kernels in Fourier Series</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Kernels in Fourier Series">
-    <meta itemprop="description" content="This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.">
+    <meta itemprop="headline" content="Kernels in Fourier Series: Dirichlet and Fejér">
+    <meta itemprop="description" content="How Fourier partial sums arise as convolutions with the Dirichlet kernel, and why the Fejér kernel, an approximate identity, behaves better.">
     <meta itemprop="datePublished" content="2023-02-24T00:00:00+00:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Dirichlet/" class="u-url" itemprop="url">Kernels in Fourier Series
+            <a href="https://henry-yip.github.io/Dirichlet/" itemprop="url">Kernels in Fourier Series: Dirichlet and Fejér
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-24T00:00:00+00:00">February 24, 2023</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -361,7 +333,15 @@
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2023). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,265 +350,200 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Analysis/Fourier Series</h4></header>
-              <ul class="toc__menu"><li><a href="#start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</a></li><li><a href="#start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</a><ul><li><a href="#a-natural-introduction">A Natural Introduction</a></li><li><a href="#a-better-form">A Better Form</a></li><li><a href="#fourier-series-estimation">Fourier Series Estimation</a></li></ul></li><li><a href="#fejér-kernel">Fejér kernel</a></li><li><a href="#approximation-of-unity">Approximation of Unity?</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#if-you-are-new-to-fourier-series">If you are new to Fourier series</a></li><li><a href="#if-you-already-know-fourier-series">If you already know Fourier series</a><ul><li><a href="#where-the-dirichlet-kernel-comes-from">Where the Dirichlet kernel comes from</a></li><li><a href="#a-closed-form">A closed form</a></li><li><a href="#partial-sums-as-convolutions">Partial sums as convolutions</a></li></ul></li><li><a href="#the-fejér-kernel">The Fejér kernel</a></li><li><a href="#approximate-identities">Approximate identities</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>This is an introduction to Fourier Series. I am trying to understand Dirichlet’s Kernel taught in class.</p>
+        <p>This is an introduction to Fourier series, written while I was trying to understand the Dirichlet kernel from my <em>Honours Analysis</em> course. Parts of it are inspired by my notes from <em>Honours Analysis</em> and <em>Introductory Waves</em>.</p>
 
-<p>Disclaimer: Some of the content below are inspired by my Honours Analysis Notes and Introductory Waves Notes!</p>
+<h2 id="if-you-are-new-to-fourier-series">If you are new to Fourier series</h2>
 
-<h2 id="start-here-if-you-dont-know-fourier-series">Start Here if you don’t know Fourier Series</h2>
+<p>A Fourier series decomposes a periodic function into sines and cosines. Adding more and more terms makes the sum look more and more like the original function. The graph below adds terms one at a time. Can you see a sawtooth emerging?</p>
 
-<p>A fourier series decomposes a function into trigonometric functions.</p>
+<iframe class="desmos-embed" src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" title="Desmos: partial sums of a sawtooth Fourier series" loading="lazy"></iframe>
 
-<p>By adding more and more trigonometric functions together, the summation itself looks more and more like the original function. Look at the graph below, does it look like a sawtooth over time?</p>
+<p>The function plotted is</p>
 
-<iframe src="https://www.desmos.com/calculator/u1rkoxoa9g?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n},\]
 
-<p>The equation above is:</p>
+<p>with \(m\) increasing over time. For \(m=1000\):</p>
 
-\[1+\frac{4}{\pi}\sum_{n=1}^{m}\frac{\sin\left(\pi nx\right)}{n}\]
+<iframe class="desmos-embed" src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" title="Desmos: the sawtooth partial sum with m = 1000" loading="lazy"></iframe>
 
-<p>Where we increased \(m\) over time. For \(m=1000\), we can get the below:</p>
+<p>Not every function has a convergent Fourier series; some regularity conditions are needed. Fourier series are also surprisingly effective for some classic problems, such as the <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel problem</a>:</p>
 
-<iframe src="https://www.desmos.com/calculator/zkpjqzfqcj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
+<!-- Courtesy of embedresponsively.com -->
 
-<p>Fourier Series doesn’t work for all functions, there are certain restrictions.</p>
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
-<p>Fourier Series is surprisingly helpful and concise in solving some neat mathematical problems, like <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel Problem</a>:</p>
+<p>To understand how and why Fourier series work, we study their convergence (pointwise, uniform, \(L^2\), …). That is hard to do without <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a> and <a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s theorem</a>.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<h2 id="if-you-already-know-fourier-series">If you already know Fourier series</h2>
 
-<p>To understand how and why fourier series work, we can study its convergence (pointwise convergence, \(L^2\) convergence, <em>etc</em>). However, this is slightly too difficult without knowing <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a>/<a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s Theorem</a></p>
+<p>The section below is partly inspired by this excellent video:</p>
 
-<h2 id="start-here-if-you-know-fourier-series">Start Here if you know Fourier Series</h2>
-<p>The section below is partly inspired by this amazing video:</p>
+<!-- Courtesy of embedresponsively.com -->
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
-<h3 id="a-natural-introduction">A Natural Introduction</h3>
+<h3 id="where-the-dirichlet-kernel-comes-from">Where the Dirichlet kernel comes from</h3>
 
-<p><strong>Dirichlet’s Kernel</strong> is intimately related to <strong>Fourier Series</strong>, by design.</p>
+<p>The <strong>Dirichlet kernel</strong> arises naturally from Fourier series. Recall that on \(-L \leq x \leq L\) we write</p>
 
-<p>Below we take \(f(x)\) to be periodic with period \(2π\), continuous, finite, and have continuous and finite first derivative. Now consider the fourier series approximation to the \(N\)th term:</p>
+\[f(x) =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right],\]
 
-<p>In case you aren’t familiar with <em>Fourier Series</em>, here is a brief reminder:</p>
+<p>with</p>
 
-<p>Within the interval \(−L \leq x \leq L\), we can approximate the function \(f(x)\) as:</p>
+\[a_m =\frac{1}{L} \int_{-L}^L f(x) \cos \left(\frac{m \pi x}{L}\right) d x, \qquad b_m =\frac{1}{L} \int_{-L}^L f(x)\sin \left(\frac{m \pi x}{L}\right)  d x .\]
 
-\[\begin{aligned}
-f(x) &amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty} a_n \cos \left(\frac{n \pi x}{L}\right)+\sum_{n=1}^{\infty} b_n \sin \left(\frac{n \pi x}{L}\right) \\
-&amp; =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right]
-\end{aligned}\]
+<p>From now on let \(f\) be \(2\pi\)-periodic, continuous, with a continuous first derivative, and take \(L = \pi\). Then</p>
 
-<p>Where we have:</p>
+\[\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f(x)\, dx, \qquad
+a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \cos(nx)\, d x, \qquad
+b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \sin(nx)\, d x .\]
 
-\[\begin{aligned}
-a_m &amp; =\frac{1}{L} \int_{-L}^L d x \cos \left(\frac{m \pi x}{L}\right) f(x) \\
-\text { Similarly, } \quad b_m &amp; =\frac{1}{L} \int_{-L}^L d x \sin \left(\frac{m \pi x}{L}\right) f(x) .
-\end{aligned}\]
-
-<p>However, considering our limit: \(-\pi \leq L \leq \pi\), we can deduce the below:</p>
-
-\[\begin{aligned}
-\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f\left(x\right) dx \quad \\
-a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{cos}\left(nx\right) d x \\
-b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f\left(x\right) \operatorname{sin}\left(nx\right) d x
-\end{aligned}\]
-
-<p>Using the information above, we can deduce (with a bit of algebraic manipulation):</p>
+<p>Substituting these into the \(N\)-th partial sum and using \(\cos ny \cos nx+\sin ny \sin nx = \cos n(x-y)\),</p>
 
 \[\begin{aligned}
 f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
-&amp; =\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n y \cos n x+\sin n y \sin n x)] \frac{f(y)}{2 \pi} d y \\
-&amp;=\int_{-\pi}^\pi[1+2 \sum_{n=1}^N (\cos n(x-y))] \frac{f(y)}{2 \pi} d y \\
-&amp; =\int_{-\pi}^\pi K_N(x-y) f(y) \frac{d y}{2 \pi}
+&amp; =\int_{-\pi}^\pi\left[1+2 \sum_{n=1}^N \left(\cos n y \cos n x+\sin n y \sin n x\right)\right] \frac{f(y)}{2 \pi}\, d y \\
+&amp;=\int_{-\pi}^\pi\left[1+2 \sum_{n=1}^N \cos n(x-y)\right] \frac{f(y)}{2 \pi}\, d y \\
+&amp; =\int_{-\pi}^\pi D_N(x-y)\, f(y)\, \frac{d y}{2 \pi},
 \end{aligned}\]
 
-<p>Hence (after switching variables) we can <em>naturally</em> define Dirichlet’s Kernel as below:</p>
+<p>which <em>defines</em> the Dirichlet kernel</p>
 
-\[K_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta,\]
+\[D_N(\theta)=1+2 \sum_{n=1}^N \cos n \theta .\]
 
-<h3 id="a-better-form">A Better Form</h3>
-<p>Using Euler’s Formula \(e^{i \theta}=\cos \theta+i \sin \theta\), we can deduce:</p>
+<h3 id="a-closed-form">A closed form</h3>
 
-\[K_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=\left(1+2 \sum_{k=1}^N \cos (k \theta)\right)=\frac{\sin ((N+1 / 2) \theta)}{\sin (\theta / 2)}\]
+<p>Using Euler’s formula \(e^{i \theta}=\cos \theta+i \sin \theta\),</p>
+
+\[D_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=1+2 \sum_{k=1}^N \cos (k \theta)=\frac{\sin \left(\left(N+\tfrac12\right) \theta\right)}{\sin (\theta / 2)} .\]
+
+<p>(Hint: sum the geometric series, then multiply the numerator and denominator by \(e^{-i\theta/2}\).)</p>
+
+<p>Here is what it looks like:</p>
+
+<iframe class="desmos-embed" src="https://www.desmos.com/calculator/5l0s8t96rq?embed" title="Desmos: the Dirichlet kernel" loading="lazy"></iframe>
+
+<h3 id="partial-sums-as-convolutions">Partial sums as convolutions</h3>
+
+<p>Because \(D_N\) is even, we can shift variables:</p>
+
+\[f_N(x)
+=\int_{-\pi}^\pi D_N(y-x)\, f(y)\, \frac{d y}{2 \pi}
+=\int_{-\pi-x}^{\pi-x} D_N(\theta)\, f(x+\theta)\, \frac{d \theta}{2 \pi} .\]
+
+<p>Since the integrand has period \(2\pi\), the interval of integration can be shifted back without changing the result:</p>
+
+\[f_N(x) = \int_{-\pi}^\pi D_N(\theta)\, f(x+\theta)\, \frac{d \theta}{2 \pi} .\]
+
+<p>For illustration, take \(f(x)=\frac{1+ \sin x}{2}\). Notice that the area between the moving vertical lines never changes:</p>
+
+<iframe class="desmos-embed" src="https://www.desmos.com/calculator/st6tgiveja?embed" title="Desmos: shifting the integration window for a periodic function" loading="lazy"></iframe>
+
+<h2 id="the-fejér-kernel">The Fejér kernel</h2>
+
+<p>For the rest of the post it is convenient to use period \(1\), writing \(D_n(x)=\sum_{k=-n}^{n} e^{2\pi i k x} = \frac{\sin\left((2n+1)\pi x\right)}{\sin(\pi x)}\). The <strong>Fejér kernel</strong> is the average of the first \(N+1\) Dirichlet kernels:</p>
+
+\[F_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
+
+<p>I will state without proof that</p>
+
+\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin^2 (\pi x)} = \frac{\sin^2\left((N+1)\pi x\right)}{\sin^2(\pi x)} .\]
+
+<p>Convolving with \(F_N\) gives the Cesàro means of the Fourier series, that is, the averages of its partial sums.</p>
+
+<h2 id="approximate-identities">Approximate identities</h2>
+
+<p>A sequence of \(1\)-periodic functions \(k_n\) is called an <strong>approximate identity</strong> (or <em>approximation to the identity</em>) if</p>
+
+<ol>
+  <li>\(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\);</li>
+  <li>\(\displaystyle\int_{-1/2}^{1/2} k_n(t)\, d t=1\);</li>
+  <li>for every \(0&lt;\delta \le 1/2\), \(\displaystyle\int_{-\delta}^\delta k_n(t)\, d t \rightarrow 1\) as \(n \rightarrow \infty\).</li>
+</ol>
+
+<p>The key theorem is that for every continuous \(1\)-periodic \(f\),</p>
+
+\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0,\]
+
+<p>so convolution with an approximate identity converges uniformly to \(f\).</p>
+
+<p>The reader can check that the Fejér kernel satisfies (1), (2) and (3), while the Dirichlet kernel fails (1) because it takes negative values. This is the heart of <strong>Fejér’s theorem</strong>: the Cesàro means of the Fourier series of any continuous periodic function converge uniformly to it, even though the partial sums themselves need not.</p>
+
+<p>In short, both kernels approximate \(f\) by convolution. The Fejér kernel does it more gently: averaging smooths out the oscillations of the Dirichlet kernel, so it copes much better with rough behaviour in \(f\).</p>
+
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong></p>
 
 <ul>
-  <li>Hint: \(e^{-i \theta}=\cos \theta-i \sin \theta\), then cancel out terms</li>
+  <li>The Dirichlet kernel was written \(K_N\), the symbol usually kept for the Fejér kernel, and later the Fejér kernel was also written \(K_N\).</li>
+  <li>One line read \(-\pi \le L \le \pi\) where it should have said \(L = \pi\).</li>
 </ul>
 
-<p>We can use Desmos to see how it looks like:</p>
-
-<iframe src="https://www.desmos.com/calculator/5l0s8t96rq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
-
-<h3 id="fourier-series-estimation">Fourier Series Estimation</h3>
-<p>Going back to \(f_N(x)\), which is our fourier approximate for our (specifically defined) function, we can shift the variables around:</p>
-
-\[\begin{align}
-f_N(x)
-&amp;=\int_{-\pi}^\pi K_N(y-x) f(y) \frac{d y}{2 \pi}\\
-&amp;=\int_{-\pi-x}^{\pi-x} K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi} 
-\end{align}\]
-
-<p>Note that our function has period \(2\pi\), hence we can imagine shifting the function and getting the same result:</p>
-
-\[\begin{align}
-\int_{-\pi}^\pi K_N(\theta) f(x+\theta) \frac{d \theta}{2 \pi}
-\end{align}\]
-
-<p>For illustration, consider \(f(x)=\frac{1+ \sin x}{2}\). Notice the area between the vertical moving line never changes.</p>
-
-<iframe src="https://www.desmos.com/calculator/st6tgiveja?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder="0"></iframe>
-
-<p>I hope the above shows you some intuition regarding Dirichlet’s Kernel.</p>
-
-<h2 id="fejér-kernel">Fejér kernel</h2>
-
-<p>Fejér kernel is defined as:</p>
-
-\[K_N(x)=\frac{1}{N+1} \sum_{n=0}^N D_n(x) .\]
-
-<p>I will state without proof that:</p>
-
-\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin (\pi x)^2}\]
-
-<h2 id="approximation-of-unity">Approximation of Unity?</h2>
-
-<p>Below we define an approximation of unity (under specific conditions where I won’t show here):</p>
-
-\[\sup _{x \in \mathbb{R}}\left|f * k_n(x)-f(x)\right| \rightarrow 0\]
-
-<p>1) \(k_n(x) \geq 0\) for all \(x \in \mathbb{R}\) <br />
-2) \(\int_{-1 / 2}^{1 / 2} k_n(t) d t=1\) <br />
-3) For all \(1 / 2 \geq \delta&gt;0\) we have:</p>
-
-<p>\(\int_{-\delta}^\delta k_n(t) d t \rightarrow 1\)
-\(\text { as } n \rightarrow \infty\)</p>
-
-<p>The reader can attempt to show that Fejér kernel satisfies all (1), (2), (3) but Dirichlet’s Kernel fails to satisfy (1). Hence Fejér kernel is an approximation of unity!</p>
-
-<p>SideNote: Fejer kernel gives the “Cesàro summation” of Fourier series, it is just the average of Dirichlet’s Kernel!</p>
-
-<p>Fejér kernel, having the “smoothening” factor (by taking average), is more commonly used as it handles discontinuity better, and has less oscillation (almost by definition, since it is the average of Dirihchlet’s Kernel)</p>
-
-<p>So in conclusion, how it works is that both kernels convolve with \(f(x)\) to make an approximation to the \(f(x)\), but Fejér kernel does so more smoothly, as any abrupt discontinity won’t affect too much, due to its averaging nature!</p>
+<p><strong>What changed.</strong> The kernels are now \(D_N\) and \(F_N\), the closed form of the Fejér kernel is given, and the steps of the derivation are filled in. Previously titled “Kernels in Fourier Series”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
-  
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-    </div>
-  
-</body>
-</html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-02-24T00:00:00+00:00">February 24, 2023</time></p>
+  
+    
+
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#analysis" class="page__taxonomy-item p-category" rel="tag">Analysis</a><span class="sep">, </span>
+    
+      <a href="/topics/#fourier-analysis" class="page__taxonomy-item p-category" rel="tag">Fourier Analysis</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
+        
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Kernels+in+Fourier+Series%20https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FDirichlet%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/QuantumPerturbations/" class="pagination--pager" title="Perturbations - Quantum Mechanics
-">Previous</a>
+      <a href="/QuantumPerturbations/" class="pagination--pager" title="Perturbations in Quantum Mechanics">Previous</a>
     
     
-      <a href="/Prerequisites/" class="pagination--pager" title="Pre-requisites for Group Theory
-">Next</a>
+      <a href="/Prerequisites/" class="pagination--pager" title="Prerequisites for Group Theory">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -637,194 +552,255 @@ f_N(x)
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -834,7 +810,10 @@ f_N(x)
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -843,120 +822,56 @@ f_N(x)
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Dirichlet/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Dirichlet"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

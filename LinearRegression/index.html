@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Linear Regression using OLS and SGD Methods in Python | Henry Yip</title>
-<meta name="description" content="Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Linear Regression with OLS and SGD in Python | Henry Yip</title>
+<meta name="description" content="Fitting a straight line to world population data with ordinary least squares and with stochastic gradient descent in scikit-learn, and how to judge the fit.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Linear Regression using OLS and SGD Methods in Python">
+<meta property="og:title" content="Linear Regression with OLS and SGD in Python">
 <meta property="og:url" content="https://henry-yip.github.io/LinearRegression/">
 
 
-  <meta property="og:description" content="Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?">
+  <meta property="og:description" content="Fitting a straight line to world population data with ordinary least squares and with stochastic gradient descent in scikit-learn, and how to judge the fit.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/LinearRegression/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Linear Regression using OLS and SGD Methods in Python</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Linear Regression using OLS and SGD Methods in Python">
-    <meta itemprop="description" content="Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?">
+    <meta itemprop="headline" content="Linear Regression with OLS and SGD in Python">
+    <meta itemprop="description" content="Fitting a straight line to world population data with ordinary least squares and with stochastic gradient descent in scikit-learn, and how to judge the fit.">
     <meta itemprop="datePublished" content="2024-06-19T00:00:00+01:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/LinearRegression/" class="u-url" itemprop="url">Linear Regression using OLS and SGD Methods in Python
+            <a href="https://henry-yip.github.io/LinearRegression/" itemprop="url">Linear Regression with OLS and SGD in Python
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-19T00:00:00+01:00">June 19, 2024</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -361,7 +333,15 @@
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-introductory" class="level-badge level-badge--introductory" title="Accessible to mathematically minded secondary-school students.">Introductory</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2024). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,281 +350,200 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Linear Regression</h4></header>
-              <ul class="toc__menu"><li><a href="#methods-to-fit-a-linear-model">Methods to fit a Linear Model</a></li><li><a href="#how-to-know-if-your-linear-regression-model-is-accurate">How to know if your linear regression model is accurate?</a></li><li><a href="#running-linear-regression-on-world-population-data">Running Linear Regression on World Population Data</a><ul><li><a href="#ols-method">OLS Method</a></li><li><a href="#sgd-method">SGD Method</a></li></ul></li><li><a href="#results">Results</a></li><li><a href="#code-for-population-regression">Code for Population Regression</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#ways-to-fit-a-linear-model">Ways to fit a linear model</a></li><li><a href="#how-good-is-the-fit">How good is the fit?</a></li><li><a href="#world-population-data">World population data</a><ul><li><a href="#ols">OLS</a></li><li><a href="#sgd">SGD</a></li></ul></li><li><a href="#results">Results</a></li><li><a href="#code">Code</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>Linear Regression is very widely used in data analysis. Many people run the analysis in Excel, but do you know you can read the data from an Excel file and plot the analysis (as well as calculate many very useful metrics) in Python?</p>
+        <p>Linear regression is one of the most widely used tools in data analysis. Many people run it in Excel, but Python can read the same spreadsheet, fit the model, compute useful metrics and plot the result in a few lines.</p>
 
-<h2 id="methods-to-fit-a-linear-model">Methods to fit a Linear Model</h2>
-<p>In Python, there are many ways to fit a Linear Model. Below, we will mainly focus on the OLS (Ordinary Least Square) Method, which will minimize the sum of the squares of the differences. Afterwards, we will be using rhe SGDRegressor (Linear model fitted by minimizing a regularized empirical loss with SGD (Stochastic Gradient Descent Algorithm)). More can be found <a href="https://scikit-learn.org/stable/">here</a>.</p>
+<h2 id="ways-to-fit-a-linear-model">Ways to fit a linear model</h2>
 
-<h2 id="how-to-know-if-your-linear-regression-model-is-accurate">How to know if your linear regression model is accurate?</h2>
+<p>We compare two methods from <a href="https://scikit-learn.org/stable/">scikit-learn</a>:</p>
+
 <ul>
-  <li>\(R^2\) Score
-    <ul>
-      <li>It represents the proportion of the variance in the dependent variable that can be explained by the independent variables used in the model. (See below for more theoretical details)</li>
-      <li>Scikit-Learn Function: sklearn.metrics.r2_score</li>
-    </ul>
-  </li>
-  <li>Mean Absolute Error (MAE)
-    <ul>
-      <li>The average of the absolute errors between the predicted values and the actual values.</li>
-      <li>Scikit-Learn Function: sklearn.metrics.mean_absolute_error</li>
-    </ul>
-  </li>
-  <li>Mean Squared Error (MSE) (Mainly used for SGD)
-    <ul>
-      <li>The average of the squared errors between the predicted values and the actual values</li>
-      <li>Scikit-Learn Function: sklearn.metrics.mean_squared_error</li>
-    </ul>
-  </li>
-  <li>Root Mean Squared Error (RMSE)
-    <ul>
-      <li>The square root of the MSE. It provides error in the same unit as the dependent variable.</li>
-    </ul>
-  </li>
-  <li>Residual Plots
-    <ul>
-      <li>A good fit is indicated by residuals randomly scattered around zero without any discernible pattern.</li>
-    </ul>
-  </li>
+  <li><strong>Ordinary least squares (OLS)</strong>, which finds the line minimising the sum of squared residuals. For a straight line this has an exact closed-form solution.</li>
+  <li><strong>Stochastic gradient descent (SGD)</strong>, via <code class="language-plaintext highlighter-rouge">SGDRegressor</code>, which minimises a (regularised) squared-error loss iteratively.</li>
 </ul>
 
-<p>We will mainly use  \(R^2\), MSE, and MAE in the analysis below.</p>
+<h2 id="how-good-is-the-fit">How good is the fit?</h2>
 
-<h2 id="running-linear-regression-on-world-population-data">Running Linear Regression on World Population Data</h2>
-<p>Given the <a href="https://www.worldometers.info/world-population/world-population-by-year/">World Population Data</a> we can try to find and plot a linear trend in the data.</p>
+<ul>
+  <li><strong>\(R^2\) score:</strong> the proportion of the variance in the dependent variable explained by the model. (<code class="language-plaintext highlighter-rouge">sklearn.metrics.r2_score</code>)</li>
+  <li><strong>Mean absolute error (MAE):</strong> the average absolute difference between predicted and actual values. (<code class="language-plaintext highlighter-rouge">sklearn.metrics.mean_absolute_error</code>)</li>
+  <li><strong>Mean squared error (MSE):</strong> the average squared difference, which is the loss that <code class="language-plaintext highlighter-rouge">SGDRegressor</code> minimises by default. (<code class="language-plaintext highlighter-rouge">sklearn.metrics.mean_squared_error</code>)</li>
+  <li><strong>Root mean squared error (RMSE):</strong> the square root of the MSE, in the same units as the dependent variable.</li>
+  <li><strong>Residual plots:</strong> for a good fit, the residuals scatter randomly around zero with no visible pattern.</li>
+</ul>
 
-<p>We start by storing the data in an Excel file and then read it into Python using the Pandas library. This allows us to handle and manipulate the data easily. The data consists of years (independent variable) and the world population (dependent variable).</p>
+<p>Below we use \(R^2\), MSE and MAE.</p>
 
-<h3 id="ols-method">OLS Method</h3>
+<h2 id="world-population-data">World population data</h2>
 
-<p>We use \(80 \%\) of the data for training our model, which means this portion of the data is used to “learn” the relationship between the years and the world population (by finding \(m\) and \(c\) in \(y=mx+c\) that minimises the sum of square residues). The remaining \(20 \%\)is used to test and validate the model’s accuracy.</p>
+<p>We fit a linear trend to the <a href="https://www.worldometers.info/world-population/world-population-by-year/">world population by year</a>. The data are stored in an Excel file and read into Python with pandas; the year is the independent variable and the world population the dependent variable.</p>
 
-<h3 id="sgd-method">SGD Method</h3>
-<p>For the SGD method, we would first need to scale the independent variable (the years) to ensure fairness in the optimization process. We then use the SGDRegressor function to minimize the MSE by iteratively moving towards the minimum value, with a maximum iteration of \(1000\). After \(1000\) iterations, the best fit line which minimises the MSE will be plotted.</p>
+<h3 id="ols">OLS</h3>
 
-<p>By following these steps, we can attempt to find and visualize the linear trend in the world population data using either the OLS or SGD regression methods.</p>
+<p>We use \(80\%\) of the data to train the model, that is, to find \(m\) and \(c\) in \(y=mx+c\) that minimise the sum of squared residuals. The remaining \(20\%\) is held back to test it.</p>
+
+<h3 id="sgd">SGD</h3>
+
+<p>For SGD we first standardise the independent variable (the years), so that the optimisation is well conditioned. <code class="language-plaintext highlighter-rouge">SGDRegressor</code> then moves step by step towards the minimum of the loss, for at most \(1000\) iterations.</p>
 
 <h2 id="results">Results</h2>
 
-<p>OLS Method</p>
-<ul>
-  <li>MSE: 503030576553090.75</li>
-  <li>\(R^2\): 0.9997738328468143</li>
-  <li>MAE: 17666518.47913985</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>MSE</th>
+      <th>\(R^2\)</th>
+      <th>MAE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OLS (on the test set)</td>
+      <td>\(5.03 \times 10^{14}\)</td>
+      <td>\(0.99977\)</td>
+      <td>\(1.77 \times 10^{7}\)</td>
+    </tr>
+    <tr>
+      <td>SGD (on all data)</td>
+      <td>\(4.54 \times 10^{14}\)</td>
+      <td>\(0.99973\)</td>
+      <td>\(1.70 \times 10^{7}\)</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>SGD Method</p>
-<ul>
-  <li>MSE: 454359657773408.56</li>
-  <li>\(R^2\): 0.9997335657388569</li>
-  <li>MAE: 16986193.058504555</li>
-</ul>
+<p>Both models fit the data extremely well, and the two lines are almost indistinguishable (red: OLS; orange: SGD):</p>
 
-<p>The difference is very minimal, but the SGD Method is slightly more accurate!</p>
+<figure class=""><img src="/assets/images/Population_Regression.png" alt="Scatter plot of world population against year with two nearly overlapping regression lines." loading="lazy" decoding="async" /></figure>
 
-<p>Here is an image of the fit (Red line for OLS Method, Orange Line for SGD Method, but they almost overlap!):</p>
+<p>Note that the two rows are <strong>not directly comparable</strong>: in the code below the OLS model is scored on the held-out test set, while the SGD model is trained and scored on all the data. To compare them fairly, train both on the same training set and evaluate both on the same test set. For a one-variable linear model, OLS is also the natural choice, since its exact solution leaves nothing for SGD to improve on; SGD comes into its own for very large datasets and models.</p>
 
-<p><img src="/assets/images/Population_Regression.png" alt="" srcset="    /assets/resized/Population_Regression-600x400.png 600w, /assets/images/Population_Regression.png 1200w" /></p>
+<h2 id="code">Code</h2>
 
-<h2 id="code-for-population-regression">Code for Population Regression</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">from</span> <span class="n">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="n">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span><span class="p">,</span> <span class="n">SGDRegressor</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
+<span class="kn">from</span> <span class="n">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">import</span> <span class="n">matplotlib</span><span class="p">.</span><span class="nf">pyplot</span> <span class="n">as</span> <span class="n">plt</span>
-<span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
-<span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">model_selection</span> <span class="n">import</span> <span class="n">train_test_split</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">linear_model</span> <span class="n">import</span> <span class="no">LinearRegression</span><span class="p">,</span> <span class="no">SGDRegressor</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">metrics</span> <span class="n">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span><span class="p">,</span> <span class="n">mean_absolute_error</span>
-<span class="n">from</span> <span class="n">sklearn</span><span class="p">.</span><span class="nf">preprocessing</span> <span class="n">import</span> <span class="no">StandardScaler</span>
+<span class="c1"># Read the data from the Excel file
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_excel</span><span class="p">(</span><span class="sh">'</span><span class="s">world_population_data.xlsx</span><span class="sh">'</span><span class="p">)</span>
 
-<span class="c1"># Read the data from the Excel file</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">read_excel</span><span class="p">(</span><span class="s1">'world_population_data.xlsx'</span><span class="p">)</span>
+<span class="c1"># Convert the data to column vectors
+</span><span class="n">years</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sh">'</span><span class="s">Year</span><span class="sh">'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="n">newaxis</span><span class="p">]</span>
+<span class="n">populations</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="sh">'</span><span class="s">World Population</span><span class="sh">'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="n">newaxis</span><span class="p">]</span>
 
-<span class="c1"># Convert the data to numpy arrays and reshape</span>
-<span class="n">years</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Year'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
-<span class="n">populations</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'World Population'</span><span class="p">].</span><span class="nf">to_numpy</span><span class="p">()[:,</span> <span class="n">np</span><span class="p">.</span><span class="nf">newaxis</span><span class="p">]</span>
-
-<span class="c1"># Split the data into training and testing sets</span>
-<span class="n">years_train</span><span class="p">,</span> <span class="n">years_test</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">populations_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+<span class="c1"># Split the data into training and testing sets
+</span><span class="n">years_train</span><span class="p">,</span> <span class="n">years_test</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">populations_test</span> <span class="o">=</span> <span class="nf">train_test_split</span><span class="p">(</span>
     <span class="n">years</span><span class="p">,</span> <span class="n">populations</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
 <span class="p">)</span>
 
-<span class="c1"># Initialize and train the Linear Regression model</span>
-<span class="n">regr</span> <span class="o">=</span> <span class="no">LinearRegression</span><span class="p">()</span>
+<span class="c1"># Ordinary least squares
+</span><span class="n">regr</span> <span class="o">=</span> <span class="nc">LinearRegression</span><span class="p">()</span>
 <span class="n">regr</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">years_train</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">)</span>
 <span class="n">populations_pred_lr</span> <span class="o">=</span> <span class="n">regr</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">years_test</span><span class="p">)</span>
 
-<span class="c1"># Calculate metrics for Linear Regression model</span>
-<span class="n">mse_lr</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
-<span class="n">r2_lr</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
-<span class="n">mae_lr</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
+<span class="n">mse_lr</span> <span class="o">=</span> <span class="nf">mean_squared_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
+<span class="n">r2_lr</span> <span class="o">=</span> <span class="nf">r2_score</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
+<span class="n">mae_lr</span> <span class="o">=</span> <span class="nf">mean_absolute_error</span><span class="p">(</span><span class="n">populations_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">)</span>
 
-<span class="c1"># Standardize the data for SGDRegressor</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="no">StandardScaler</span><span class="p">()</span>
+<span class="c1"># Standardise the years for SGDRegressor
+</span><span class="n">scaler</span> <span class="o">=</span> <span class="nc">StandardScaler</span><span class="p">()</span>
 <span class="n">years_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="p">.</span><span class="nf">fit_transform</span><span class="p">(</span><span class="n">years</span><span class="p">)</span>
 
-<span class="c1"># Initialize and train the SGDRegressor</span>
-<span class="n">sgd_reg</span> <span class="o">=</span> <span class="no">SGDRegressor</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="s1">'l2'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="c1"># Stochastic gradient descent
+</span><span class="n">sgd_reg</span> <span class="o">=</span> <span class="nc">SGDRegressor</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="sh">'</span><span class="s">l2</span><span class="sh">'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0001</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">sgd_reg</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">years_scaled</span><span class="p">,</span> <span class="n">populations</span><span class="p">.</span><span class="nf">ravel</span><span class="p">())</span>
 <span class="n">populations_pred_sgd</span> <span class="o">=</span> <span class="n">sgd_reg</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">years_scaled</span><span class="p">)</span>
 
-<span class="c1"># Calculate metrics for SGDRegressor model (using all data since we didn't split)</span>
-<span class="n">mse_sgd</span> <span class="o">=</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
-<span class="n">r2_sgd</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
-<span class="n">mae_sgd</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
+<span class="c1"># Metrics for SGD (computed on all the data, since this model was not split)
+</span><span class="n">mse_sgd</span> <span class="o">=</span> <span class="nf">mean_squared_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
+<span class="n">r2_sgd</span> <span class="o">=</span> <span class="nf">r2_score</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
+<span class="n">mae_sgd</span> <span class="o">=</span> <span class="nf">mean_absolute_error</span><span class="p">(</span><span class="n">populations</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">)</span>
 
-<span class="c1"># Print the metrics</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"Linear Regression - MSE: {mse_lr}, R²: {r2_lr}, MAE: {mae_lr}</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">"SGD Regressor - MSE: {mse_sgd}, R²: {r2_sgd}, MAE: {mae_sgd}"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Linear Regression - MSE: </span><span class="si">{</span><span class="n">mse_lr</span><span class="si">}</span><span class="s">, R²: </span><span class="si">{</span><span class="n">r2_lr</span><span class="si">}</span><span class="s">, MAE: </span><span class="si">{</span><span class="n">mae_lr</span><span class="si">}</span><span class="se">\n</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">SGD Regressor - MSE: </span><span class="si">{</span><span class="n">mse_sgd</span><span class="si">}</span><span class="s">, R²: </span><span class="si">{</span><span class="n">r2_sgd</span><span class="si">}</span><span class="s">, MAE: </span><span class="si">{</span><span class="n">mae_sgd</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
 
-<span class="c1"># Plot the results</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-
-<span class="c1"># Plot the training and testing data</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_train</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'blue'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Training data'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Testing data'</span><span class="p">)</span>
-
-<span class="c1"># Plot the regression lines</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Linear Regression line'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'SGD Regression line'</span><span class="p">)</span>
-
-<span class="c1"># Labels and title</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="s1">'Year'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="s1">'World Population'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="s1">'Year vs World Population'</span><span class="p">)</span>
+<span class="c1"># Plot the data and both regression lines
+</span><span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_train</span><span class="p">,</span> <span class="n">populations_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">blue</span><span class="sh">'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Training data</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">scatter</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_test</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">green</span><span class="sh">'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Testing data</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years_test</span><span class="p">,</span> <span class="n">populations_pred_lr</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">red</span><span class="sh">'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">Linear Regression line</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">years</span><span class="p">,</span> <span class="n">populations_pred_sgd</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="sh">'</span><span class="s">orange</span><span class="sh">'</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">'</span><span class="s">SGD Regression line</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">xlabel</span><span class="p">(</span><span class="sh">'</span><span class="s">Year</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">ylabel</span><span class="p">(</span><span class="sh">'</span><span class="s">World Population</span><span class="sh">'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">title</span><span class="p">(</span><span class="sh">'</span><span class="s">Year vs World Population</span><span class="sh">'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="no">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span>
+</code></pre></div></div>
 
-<span class="c1"># Show the plot</span>
-<span class="n">plt</span><span class="p">.</span><span class="nf">show</span><span class="p">()</span></code></pre></figure>
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
 
+<p><strong>What was wrong.</strong> Nothing in the content.</p>
+
+<p><strong>What changed.</strong> The introduction and explanations are shorter and clearer. Previously titled “Linear Regression using OLS and SGD Methods in Python”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
+        
 
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
   
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#python">Python</a>
-        
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#statistics">Statistics</a>
-        
-      
-    </div>
+    
+
+
+
   
-</body>
-</html>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#python" class="page__taxonomy-item p-category" rel="tag">Python</a><span class="sep">, </span>
+    
+      <a href="/topics/#statistics" class="page__taxonomy-item p-category" rel="tag">Statistics</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-19T00:00:00+01:00">June 19, 2024</time></p>
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Linear+Regression+using+OLS+and+SGD+Methods+in+Python%20https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FLinearRegression%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/DFTandFFT/" class="pagination--pager" title="An example of Discrete Fourier Transform using FFT Algorithm
-">Previous</a>
+      <a href="/DFTandFFT/" class="pagination--pager" title="The Discrete Fourier Transform and the FFT: A Worked Example">Previous</a>
     
     
-      <a href="/Figure8Orbit/" class="pagination--pager" title="Plotting and Visualizing the Three-Body Problem
-">Next</a>
+      <a href="/Figure8Orbit/" class="pagination--pager" title="Plotting and Visualising the Three-Body Problem">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -653,194 +552,255 @@
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -850,7 +810,10 @@
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -859,120 +822,56 @@
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/LinearRegression/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/LinearRegression"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

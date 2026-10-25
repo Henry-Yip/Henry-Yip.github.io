@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Solving a system of Congruences | Henry Yip</title>
-<meta name="description" content="If you divide \(x\) by \(5\) you obtain a remainder of \(2\). Divide it by \(3\) you obtain a remainder of \(1\). Divide it by \(7\) you obtain a remainder of \(4\). What is the general solution?">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Solving Systems of Congruences: The Chinese Remainder Theorem | Henry Yip</title>
+<meta name="description" content="A number leaves remainder 2 on division by 5, 1 by 3 and 4 by 7. What is it? Solving simultaneous congruences with Bézout’s identity.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Solving a system of Congruences">
+<meta property="og:title" content="Solving Systems of Congruences: The Chinese Remainder Theorem">
 <meta property="og:url" content="https://henry-yip.github.io/ChineseRemainder/">
 
 
-  <meta property="og:description" content="If you divide \(x\) by \(5\) you obtain a remainder of \(2\). Divide it by \(3\) you obtain a remainder of \(1\). Divide it by \(7\) you obtain a remainder of \(4\). What is the general solution?">
+  <meta property="og:description" content="A number leaves remainder 2 on division by 5, 1 by 3 and 4 by 7. What is it? Solving simultaneous congruences with Bézout’s identity.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/ChineseRemainder/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Solving a system of Congruences</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Solving a system of Congruences">
-    <meta itemprop="description" content="If you divide \(x\) by \(5\) you obtain a remainder of \(2\). Divide it by \(3\) you obtain a remainder of \(1\). Divide it by \(7\) you obtain a remainder of \(4\). What is the general solution?">
+    <meta itemprop="headline" content="Solving Systems of Congruences: The Chinese Remainder Theorem">
+    <meta itemprop="description" content="A number leaves remainder 2 on division by 5, 1 by 3 and 4 by 7. What is it? Solving simultaneous congruences with Bézout’s identity.">
     <meta itemprop="datePublished" content="2024-06-11T00:00:00+01:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/ChineseRemainder/" class="u-url" itemprop="url">Solving a system of Congruences
+            <a href="https://henry-yip.github.io/ChineseRemainder/" itemprop="url">Solving Systems of Congruences: The Chinese Remainder Theorem
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-06-11T00:00:00+01:00">June 11, 2024</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -361,7 +333,15 @@
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-introductory" class="level-badge level-badge--introductory" title="Accessible to mathematically minded secondary-school students.">Introductory</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2024). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,231 +350,141 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Chinese Remainder Theorem </h4></header>
-              <ul class="toc__menu"><li><a href="#motivation">Motivation</a><ul><li><a href="#example">Example</a></li></ul></li><li><a href="#general-case">General Case</a><ul><li><a href="#example-1">Example</a></li></ul></li><li><a href="#conclusion">Conclusion</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#two-congruences">Two congruences</a><ul><li><a href="#example">Example</a></li></ul></li><li><a href="#more-congruences">More congruences</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>If you divide \(x\) by \(5\) you obtain a remainder of \(2\). Divide it by \(3\) you obtain a remainder of \(1\). Divide it by \(7\) you obtain a remainder of \(4\). What is the general solution?</p>
+        <p>A number leaves a remainder of \(2\) when divided by \(5\), a remainder of \(1\) when divided by \(3\), and a remainder of \(4\) when divided by \(7\). What are all such numbers?</p>
 
-<h2 id="motivation">Motivation</h2>
+<h2 id="two-congruences">Two congruences</h2>
 
-<p>Suppose we want to solve the system:</p>
+<p>Suppose we want to solve</p>
 
 \[\begin{aligned}
-&amp; x \equiv a_1 \space (\text{mod} \space n_1) \\
-&amp; x \equiv a_2 \space (\text{mod} \space n_2)
+x &amp;\equiv a_1 \pmod{n_1}, \\
+x &amp;\equiv a_2 \pmod{n_2},
 \end{aligned}\]
 
-<p>where \(n_1\) and \(n_2\) are coprime.</p>
+<p>where \(n_1\) and \(n_2\) are coprime. By <strong>Bézout’s identity</strong> there are integers \(m_1, m_2\) with</p>
 
-<p>It can be easily verified that a solution is given by:</p>
+\[m_1 n_1+m_2 n_2=1 .\]
 
-\[x=a_1 m_2 n_2+a_2 m_1 n_1,\]
+<p>Then a solution is</p>
 
-<p>where \(m_1\) and \(m_2\) are from Bézout’s identity:</p>
+\[x=a_1 m_2 n_2+a_2 m_1 n_1 .\]
 
-\[m_1 n_1+m_2 n_2=1\]
+<p>To check this, note that \(m_2 n_2 = 1 - m_1 n_1 \equiv 1 \pmod{n_1}\), so \(x \equiv a_1 \pmod{n_1}\); similarly \(x \equiv a_2 \pmod{n_2}\).</p>
 
 <h3 id="example">Example</h3>
 
-<p>Given the system of congruences:</p>
+<p>Solve</p>
 
 \[\begin{aligned}
-&amp; x \equiv 2 \space (\text{mod} \space 5) \\
-&amp; x \equiv 1 \space (\text{mod} \space 3)
+x &amp;\equiv 2 \pmod{5}, \\
+x &amp;\equiv 1 \pmod{3}.
 \end{aligned}\]
 
-<p>Using the Bezout’s identity, we can find the coefficients of the linear combination of the moduli that equal \(1\). In this case, we have:</p>
+<p>Bézout’s identity for \(5\) and \(3\) can be taken as</p>
 
-\[5(5) - 8(3) = 1\]
+\[5 \cdot 5 + (-8) \cdot 3 = 1,\]
 
-<p>Now, let’s find a solution using the coefficients obtained from the Bezout’s identity. We can substitute these coefficients into the system of congruences:</p>
+<p>so \(m_1 = 5\) and \(m_2 = -8\). Then</p>
 
-\[\begin{align*}
-x &amp;= 2(3)(-8) + 1(5)(5) \\
-x &amp;= -48 + 25 \\
-x &amp;= -23
-\end{align*}\]
+\[x = 2 \cdot (-8) \cdot 3 + 1 \cdot 5 \cdot 5 = -48 + 25 = -23 .\]
 
-<p>Now, notice that the first system has a “cycle” of \(5\) (since it is mod \(5\)), whereas the second system has a “cycle” of \(3\). To satisfy both, we need to have a “cycle” of \(15\).</p>
+<p>Any two solutions differ by a multiple of both \(5\) and \(3\), hence by a multiple of \(\operatorname{lcm}(5, 3) = 15\). So the general solution is</p>
 
-<p>Therefore our solution can be written as:</p>
+\[x \equiv -23 \equiv 7 \pmod{15}.\]
 
-\[x \equiv -23 \space (\text{mod} \space 15)\]
+<h2 id="more-congruences">More congruences</h2>
 
-<p>Or simply:</p>
-
-\[x \equiv 7 \space (\text{mod} \space 15)\]
-
-<h2 id="general-case">General Case</h2>
-
-<p>This process can be generalized using an inductive approach:</p>
-
-<h3 id="example-1">Example</h3>
-<p>Consider:</p>
+<p>The same method handles more congruences one at a time. Returning to the opening question,</p>
 
 \[\begin{aligned}
-&amp; x \equiv 2 \space (\text{mod} \space 5) \\
-&amp; x \equiv 1 \space (\text{mod} \space 3) \\
-&amp; x \equiv 4 \space (\text{mod} \space 7)
+x &amp;\equiv 2 \pmod{5}, \\
+x &amp;\equiv 1 \pmod{3}, \\
+x &amp;\equiv 4 \pmod{7},
 \end{aligned}\]
 
-<p>From our solution above, we can simplify it into:</p>
+<p>the first two congruences combine to \(x \equiv 7 \pmod{15}\), so it remains to solve</p>
 
 \[\begin{aligned}
-&amp; x \equiv 7 \space (\text{mod} \space 15) \\
-&amp; x \equiv 4 \space (\text{mod} \space 7)
+x &amp;\equiv 7 \pmod{15}, \\
+x &amp;\equiv 4 \pmod{7}.
 \end{aligned}\]
 
-<p>Now consider:</p>
+<p>Now \(1 \cdot 15 + (-2) \cdot 7 = 1\), so \(m_1 = 1\), \(m_2 = -2\), and</p>
 
-\[1(15) - 2(7) = 1\]
+\[x = 7 \cdot (-2) \cdot 7 + 4 \cdot 1 \cdot 15 = -98 + 60 = -38 .\]
 
-<p>As \(x=a_1 m_2 n_2+a_2 m_1 n_1\),</p>
+<p>Hence the solution is</p>
 
-\[\begin{align*}
-x &amp;= 4(15)(1) + 7(7)(-2) \\
-x &amp;= 60-98 \\
-x &amp;= -38
-\end{align*}\]
+\[x \equiv -38 \equiv 67 \pmod{105}.\]
 
-<p>Hence, the solution is:</p>
-
-\[x \equiv -38 \space (\text{mod} \space 105)\]
-
-<p>Or simply:</p>
-
-\[x \equiv 67 \space (\text{mod} \space 105)\]
+<p>Indeed, \(67 = 13 \cdot 5 + 2 = 22 \cdot 3 + 1 = 9 \cdot 7 + 4\).</p>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Any reader with experience in Number Theory will realize this is simpliy an example of the famous Chinese Remainder Theorem. It is applications in various applications in number theory, modular arithmetic, and cryptography.</p>
+<p>This is an instance of the <strong>Chinese remainder theorem</strong>: if \(n_1, \ldots, n_k\) are pairwise coprime, the system \(x \equiv a_i \pmod{n_i}\) has a solution, unique modulo \(n_1 n_2 \cdots n_k\). The theorem has applications throughout number theory, modular arithmetic and cryptography; for example, it is used to speed up RSA decryption.</p>
 
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong> Nothing. The explanation of why the formula works was brief.</p>
+
+<p><strong>What changed.</strong> I added that explanation and a check that 67 satisfies all three congruences. Previously titled “Solving a system of Congruences”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
+        
 
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
   
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#number-theory">Number Theory</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag easy" href="/tagsbydifficulty/#easy">Easy</a>
-        
-      
-    </div>
+    
+
+
+
   
-</body>
-</html>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#number-theory" class="page__taxonomy-item p-category" rel="tag">Number Theory</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-11T00:00:00+01:00">June 11, 2024</time></p>
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Solving+a+system+of+Congruences%20https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FChineseRemainder%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/WilsonTheorem/" class="pagination--pager" title="Wilson’s Theorem
-">Previous</a>
+      <a href="/WilsonTheorem/" class="pagination--pager" title="Wilson’s Theorem">Previous</a>
     
     
-      <a href="/ThermoPotential/" class="pagination--pager" title="Thermodynamic Potentials and Maxwell Relations
-">Next</a>
+      <a href="/ThermoPotential/" class="pagination--pager" title="Thermodynamic Potentials and Maxwell Relations">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -603,194 +493,255 @@ x &amp;= -38
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -800,7 +751,10 @@ x &amp;= -38
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -809,120 +763,56 @@ x &amp;= -38
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/ChineseRemainder/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/ChineseRemainder"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

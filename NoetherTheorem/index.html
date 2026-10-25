@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Conservations in Physics - Noether’s Theorem | Henry Yip</title>
-<meta name="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Conservation Laws in Physics: Noether’s Theorem | Henry Yip</title>
+<meta name="description" content="A one-dimensional sketch of why translational symmetry implies conservation of momentum, followed by a derivation of angular momentum conservation for central forces.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Conservations in Physics - Noether’s Theorem">
+<meta property="og:title" content="Conservation Laws in Physics: Noether’s Theorem">
 <meta property="og:url" content="https://henry-yip.github.io/NoetherTheorem/">
 
 
-  <meta property="og:description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
+  <meta property="og:description" content="A one-dimensional sketch of why translational symmetry implies conservation of momentum, followed by a derivation of angular momentum conservation for central forces.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/NoetherTheorem/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Conservations in Physics - Noether's Theorem</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Conservations in Physics - Noether’s Theorem">
-    <meta itemprop="description" content="This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.">
+    <meta itemprop="headline" content="Conservation Laws in Physics: Noether’s Theorem">
+    <meta itemprop="description" content="A one-dimensional sketch of why translational symmetry implies conservation of momentum, followed by a derivation of angular momentum conservation for central forces.">
     <meta itemprop="datePublished" content="2022-12-25T00:00:00+00:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/NoetherTheorem/" class="u-url" itemprop="url">Conservations in Physics - Noether’s Theorem
+            <a href="https://henry-yip.github.io/NoetherTheorem/" itemprop="url">Conservation Laws in Physics: Noether’s Theorem
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-12-25T00:00:00+00:00">December 25, 2022</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -357,11 +329,19 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2022). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,216 +350,161 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Appendix</h4></header>
-              <ul class="toc__menu"><li><a href="#proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</a><ul><li><a href="#exercises-for-the-readers">Exercises for the readers</a></li></ul></li><li><a href="#finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</a><ul><li><a href="#exercises-for-the-reader">Exercises for the reader</a></li></ul></li><li><a href="#credits">Credits</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#translational-symmetry-and-conserved-momentum">Translational symmetry and conserved momentum</a><ul><li><a href="#exercises">Exercises</a></li></ul></li><li><a href="#rotational-symmetry-and-conserved-angular-momentum">Rotational symmetry and conserved angular momentum</a><ul><li><a href="#exercises-1">Exercises</a></li></ul></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>This article is built for two types of audiences. The first part is quite involved and assumes knowledge of advanced classical mechanics (for example Lagrangian Dynamics and Variational Principle). The second part is more mild and is targeted for students with some experiences in basic calculus skills.</p>
+        <p>This article has two parts for two audiences. The first part assumes some advanced classical mechanics (Lagrangian dynamics and the variational principle). The second part needs only basic calculus.</p>
 
-<h2 id="proof-of-noethers-theorem-in-translational-symmetry">Proof of Noether’s Theorem in translational symmetry</h2>
+<h2 id="translational-symmetry-and-conserved-momentum">Translational symmetry and conserved momentum</h2>
 
-<p>The proof of Noether’s Theorem is quite involved. However, it is a good exercise to show the proof for one-dimensional case.</p>
+<p>A full proof of Noether’s theorem is quite involved, but the one-dimensional case already shows the idea.</p>
 
-<p>Assume the system has translational symmetry: \(\phi: q \mapsto q + \delta q\). Now assume a trajectory travels from the more bolded line (in the image below) to the less bolded line, in time \(\tau\).</p>
+<p>Suppose the system has translational symmetry, \(q \mapsto q + \delta q\): shifting a trajectory by \(\delta q\) does not change the Lagrangian. Take a true trajectory (the bold line in the figure below) and build a varied path that follows it, switches onto the shifted trajectory (the lighter line) over a short time \(\tau\) around \(t_0\), and switches back over a short time \(\tau\) around \(t_1\).</p>
 
-<p>Using the definition of action: \(S = \int L\), we arrive at \(\Delta S=\int \Delta L\). If \(L\) only depends on \(\dot{q}\), \(\Delta L \approx \left(\frac{\partial L}{\partial \dot{q}}\right) \Delta \dot{q}\). From the image, it is also obvious that \(\Delta \dot{q}=\pm \frac{\delta q}{\tau}\).</p>
+<p>The action is \(S = \int L \, dt\), so \(\Delta S=\int \Delta L \, dt\). Away from the two switches, \(L\) is unchanged by the symmetry. During a switch, \(L\) does not depend on \(q\) itself, so to first order</p>
 
-\[\Delta S=\int \Delta L \approx \int \frac{\partial L}{\partial \dot{q}} \Delta \dot{q} \approx \int \frac{\partial L}{\partial \dot{q}}\left( \pm \frac{\delta q}{\tau}\right) \approx \pm \frac{\partial L}{\partial \dot{q}} \delta q= \pm \frac{\partial L}{\partial \dot{q}} \varphi .\]
+\[\Delta L \approx \frac{\partial L}{\partial \dot{q}}\, \Delta \dot{q}, \qquad \Delta \dot{q}=\pm \frac{\delta q}{\tau},\]
 
-<p>As \(\Delta S\) is \(0\), we have:</p>
+<p>with the \(+\) sign when switching on and the \(-\) sign when switching off. Each switch therefore contributes</p>
 
-\[\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_0\right)=\left(\frac{\partial L}{\partial \dot{q}} \varphi\right)\left(t_1\right)\]
+\[\int_{\text{switch}} \frac{\partial L}{\partial \dot{q}}\left( \pm \frac{\delta q}{\tau}\right) dt \approx \pm \frac{\partial L}{\partial \dot{q}}\, \delta q .\]
 
-<p>This result is also verified <a href="/NoetherTheorem/">in my other post</a>.</p>
+<p>Since the true path makes the action stationary, \(\Delta S = 0\) to first order, so the two contributions cancel:</p>
 
-<p><img src="/assets/images/Noether.png" alt="" srcset="    /assets/resized/Noether-600x502.png 600w, /assets/images/Noether.png 1110w" /></p>
+\[\left(\frac{\partial L}{\partial \dot{q}}\, \delta q\right)\Big|_{t_0}=\left(\frac{\partial L}{\partial \dot{q}}\, \delta q\right)\Big|_{t_1},\]
 
-<p>(Image from Wikipedia)</p>
+<p>so the momentum \(p = \partial L/\partial \dot q\) is the same at all times: it is conserved. The same conclusion follows directly from the Euler–Lagrange equations, as shown in <a href="/MomentumConservation/">Why is momentum conserved?</a>.</p>
 
-<h3 id="exercises-for-the-readers">Exercises for the readers</h3>
+<figure class=""><img src="/assets/images/Noether.png" alt="Two nearby trajectories in the q–t plane: the original path and a path shifted by delta q, with the transition taking time tau." loading="lazy" decoding="async" /><figcaption>
+      Image: Wikipedia.
+
+    </figcaption></figure>
+
+<h3 id="exercises">Exercises</h3>
+
 <ul>
-  <li>Explain the reason for the \(\pm\) sign in \(\Delta L\). What does it correspond to? (Difficulty: University Year 1)</li>
-  <li>Why is the total action equal to \(0\)? (Difficulty: University Year 2-3)</li>
-  <li>Why is \(\dot{q}\) assumed to be the only contributing term? (Hint: \(\tau\) is taken to approach \(0\)) (Difficulty: University Year 2-3)</li>
+  <li>Draw the varied path and check the sign of \(\Delta \dot q\) at each switch. (<em>Undergraduate, year 1</em>)</li>
+  <li>Why is the <em>change</em> in action \(\Delta S\) zero? (<em>Undergraduate, years 2–3</em>)</li>
+  <li>Why is the \(\dot{q}\) term the only one that contributes? (Hint: \(\tau\) is taken to approach \(0\).) (<em>Undergraduate, years 2–3</em>)</li>
 </ul>
 
-<h2 id="finding-the-constant-in-rotational-symmetry">Finding the constant in rotational symmetry</h2>
+<h2 id="rotational-symmetry-and-conserved-angular-momentum">Rotational symmetry and conserved angular momentum</h2>
 
-\[\hat{r}=\cos (\theta) \hat{x}+\sin (\theta) \hat{y}, \quad \hat{\theta}=-\sin (\theta) \hat{x}+\cos (\theta) \hat{y} .\]
+<p>In plane polar coordinates the unit vectors are</p>
 
-<p>By <strong>Chain Rule</strong>,</p>
+\[\hat{\mathbf{r}}=\cos \theta\, \hat{\mathbf{x}}+\sin \theta\, \hat{\mathbf{y}}, \quad \hat{\boldsymbol{\theta}}=-\sin \theta\, \hat{\mathbf{x}}+\cos \theta\, \hat{\mathbf{y}} .\]
 
-\[\dot{\hat{r}}=\dot{\theta}[-\sin (\theta) \hat{x}+\cos (\theta) \hat{y}]=\dot{\theta} \hat{\theta}, \quad \dot{\hat{\theta}}=\dot{\theta}[-\cos (\theta) \hat{x}-\sin (\theta) \hat{y}]=-\dot{\theta} \hat{r} .\]
+<p>By the chain rule,</p>
 
-<p>And</p>
+\[\dot{\hat{\mathbf{r}}}=\dot{\theta}\left(-\sin \theta\, \hat{\mathbf{x}}+\cos \theta\, \hat{\mathbf{y}}\right)=\dot{\theta}\, \hat{\boldsymbol{\theta}}, \quad \dot{\hat{\boldsymbol{\theta}}}=\dot{\theta}\left(-\cos \theta\, \hat{\mathbf{x}}-\sin \theta\, \hat{\mathbf{y}}\right)=-\dot{\theta}\, \hat{\mathbf{r}} ,\]
 
-\[\underline{\dot{r}}=\frac{d}{d t}(r \hat{r})=\dot{r} \hat{r}+r \dot{\hat{r}}=\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}\]
+<p>so the velocity is</p>
 
-<p>Further Differentiation yields:</p>
+\[\dot{\mathbf{r}}=\frac{d}{d t}(r \hat{\mathbf{r}})=\dot{r} \hat{\mathbf{r}}+r \dot{\hat{\mathbf{r}}}=\dot{r} \hat{\mathbf{r}}+r \dot{\theta}\, \hat{\boldsymbol{\theta}} .\]
+
+<p>Differentiating again,</p>
 
 \[\begin{aligned}
-\underline{\ddot{r}}=\frac{d}{d t}(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta}) &amp; =\ddot{r} \hat{r}+\dot{r} \dot{\hat{r}}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}+r \dot{\theta} \dot{\hat{\theta}} \\
-&amp; =\ddot{r} \hat{r}+\dot{r} \dot{\theta} \hat{\theta}+\dot{r} \dot{\theta} \hat{\theta}+r \ddot{\theta} \hat{\theta}-r \dot{\theta} \dot{\theta} \hat{r} \\
-&amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}
+\ddot{\mathbf{r}} &amp; =\ddot{r} \hat{\mathbf{r}}+\dot{r} \dot{\hat{\mathbf{r}}}+\dot{r} \dot{\theta} \hat{\boldsymbol{\theta}}+r \ddot{\theta} \hat{\boldsymbol{\theta}}+r \dot{\theta} \dot{\hat{\boldsymbol{\theta}}} \\
+&amp; =\ddot{r} \hat{\mathbf{r}}+\dot{r} \dot{\theta} \hat{\boldsymbol{\theta}}+\dot{r} \dot{\theta} \hat{\boldsymbol{\theta}}+r \ddot{\theta} \hat{\boldsymbol{\theta}}-r \dot{\theta}^2 \hat{\mathbf{r}} \\
+&amp; =\left(\ddot{r}-r \dot{\theta}^2\right) \hat{\mathbf{r}}+(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\boldsymbol{\theta}} .
 \end{aligned}\]
 
-<p>Since the force is a central force, we have:</p>
+<p>For a central force \(\mathbf{F} = F_r(r)\,\hat{\mathbf{r}}\), Newton’s second law gives</p>
 
-\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{r}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\theta}=F_r(r) \hat{r} .\]
+\[m\left(\ddot{r}-r \dot{\theta}^2\right) \hat{\mathbf{r}}+m(2 \dot{r} \dot{\theta}+r \ddot{\theta}) \hat{\boldsymbol{\theta}}=F_r(r) \hat{\mathbf{r}} ,\]
 
-<p>We can quickly identify two equations:</p>
+<p>and comparing components,</p>
 
 \[\begin{aligned}
-\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m \\
+\ddot{r}-r \dot{\theta}^2 &amp; =F_r(r) / m, \\
 2 \dot{r} \dot{\theta}+r \ddot{\theta} &amp; =0 .
 \end{aligned}\]
 
-<p>From the second equation:</p>
+<p>The second equation can be written as</p>
 
-\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text { const }\]
+\[\frac{1}{r} \frac{d}{d t}\left(r^2 \dot{\theta}\right)=0 \quad \Longrightarrow \quad r^2 \dot{\theta} \equiv h=\text{const.}\]
 
-\[\underline{L}=\underline{r} \times \underline{p}=m r \hat{r} \times \underline{\dot{r}}=m r \hat{r} \times(\dot{r} \hat{r}+r \dot{\theta} \hat{\theta})=m r \hat{r} \times r \dot{\theta} \hat{\theta}=m r^2 \dot{\theta} \hat{n} \equiv m h \hat{n}\]
+<p>To interpret \(h\), compute the angular momentum:</p>
 
-<p>Hence:</p>
+\[\mathbf{L}=\mathbf{r} \times \mathbf{p}=m r\, \hat{\mathbf{r}} \times \dot{\mathbf{r}}=m r\, \hat{\mathbf{r}} \times(\dot{r} \hat{\mathbf{r}}+r \dot{\theta} \hat{\boldsymbol{\theta}})=m r^2 \dot{\theta}\, \hat{\mathbf{n}} = m h\, \hat{\mathbf{n}},\]
 
-\[r^2 \dot{\theta} \equiv h=\frac{|\underline{L}|}{m}\]
+<p>where \(\hat{\mathbf{n}} = \hat{\mathbf{r}}\times\hat{\boldsymbol{\theta}}\) is normal to the plane of motion. Hence</p>
 
-<h3 id="exercises-for-the-reader">Exercises for the reader</h3>
+\[r^2 \dot{\theta} = h=\frac{|\mathbf{L}|}{m},\]
+
+<p>the angular momentum per unit mass, is conserved.</p>
+
+<h3 id="exercises-1">Exercises</h3>
+
 <ul>
-  <li>What is being conserved in rotational symmetry? (Difficulty: HKDSE F4)</li>
-  <li>Show the results above using Lagrangian Dynamics. (This is a much faster method) (Difficulty: University Year 2-3)</li>
+  <li>Which quantity is conserved as a consequence of rotational symmetry? (<em>Secondary school</em>)</li>
+  <li>Derive the results above using Lagrangian dynamics, which is much faster. (<em>Undergraduate, years 2–3</em>)</li>
 </ul>
 
 <h2 id="credits">Credits</h2>
-<p>This section is heavily inspired by 3 sources - Prof Arjun Berera’s Introductory Dynamics course, Dr Jenni Smillie’s Lagrangian Dynamics, and the wikipedia page on Noether’s Theorem.</p>
 
-<p>Last Updated - 3/6/2024</p>
+<p>This article draws on three sources: Prof. Arjun Berera’s <em>Introductory Dynamics</em> course, Prof. Jenni Smillie’s <em>Lagrangian Dynamics</em> course, and the Wikipedia article on Noether’s theorem.</p>
 
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong> The switching argument used a symbol \(\varphi\) that was never defined, and the action integrals were missing their \(dt\).</p>
+
+<p><strong>What changed.</strong> The argument now uses \(\delta q\) throughout and explains each step, vectors are in bold and the wording is tighter. Previously titled “Conservations in Physics - Noether’s Theorem”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
+        
 
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
   
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
-        
-      
-    </div>
+    
+
+
+
   
-</body>
-</html>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-12-25T00:00:00+00:00">December 25, 2022</time></p>
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Conservations+in+Physics+-+Noether%27s+Theorem%20https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FNoetherTheorem%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/KeplerVirial/" class="pagination--pager" title="Two Laws Related to Planetary Revolution
-">Previous</a>
+      <a href="/KeplerVirial/" class="pagination--pager" title="Kepler’s Third Law and the Virial Theorem">Previous</a>
     
     
-      <a href="/SmallPerbuations/" class="pagination--pager" title="Perturbations - Classical Mechanics
-">Next</a>
+      <a href="/SmallPerbuations/" class="pagination--pager" title="Perturbations in Classical Mechanics">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -588,194 +513,255 @@
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -785,7 +771,10 @@
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -794,120 +783,56 @@
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/NoetherTheorem/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/NoetherTheorem"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

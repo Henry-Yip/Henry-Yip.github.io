@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Perturbations - Classical Mechanics | Henry Yip</title>
-<meta name="description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Perturbations in Classical Mechanics | Henry Yip</title>
+<meta name="description" content="Small perturbations of a circular orbit: the radial equation, the condition for stable oscillation, and when a large kick lets a particle escape.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Perturbations - Classical Mechanics">
+<meta property="og:title" content="Perturbations in Classical Mechanics">
 <meta property="og:url" content="https://henry-yip.github.io/SmallPerbuations/">
 
 
-  <meta property="og:description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
+  <meta property="og:description" content="Small perturbations of a circular orbit: the radial equation, the condition for stable oscillation, and when a large kick lets a particle escape.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/SmallPerbuations/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Perturbations - Classical Mechanics</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Perturbations - Classical Mechanics">
-    <meta itemprop="description" content="Perturbations in Classical Mechanics vs. Quantum Physics">
+    <meta itemprop="headline" content="Perturbations in Classical Mechanics">
+    <meta itemprop="description" content="Small perturbations of a circular orbit: the radial equation, the condition for stable oscillation, and when a large kick lets a particle escape.">
     <meta itemprop="datePublished" content="2023-01-13T00:00:00+00:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/SmallPerbuations/" class="u-url" itemprop="url">Perturbations - Classical Mechanics
+            <a href="https://henry-yip.github.io/SmallPerbuations/" itemprop="url">Perturbations in Classical Mechanics
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-01-13T00:00:00+00:00">January 13, 2023</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -357,11 +329,19 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          2 minute read
+          3 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2023). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,254 +350,161 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Small Perturbations</h4></header>
-              <ul class="toc__menu"><li><a href="#perturbations-in-classical-mechanics-vs-quantum-physics">Perturbations in Classical Mechanics vs. Quantum Physics</a><ul><li><a href="#1-classical-perturbations-simple-harmonic-response">1. Classical Perturbations: Simple Harmonic Response</a></li><li><a href="#2-central-force-orbits-and-radial-equation">2. Central-Force Orbits and Radial Equation</a></li><li><a href="#3-small-radial-perturbations-of-a-circular-orbit">3. Small Radial Perturbations of a Circular Orbit</a></li><li><a href="#4-escape-criterion-for-an-inverse-square-force">4. Escape Criterion for an Inverse-Square Force</a></li></ul></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#simple-harmonic-response">Simple harmonic response</a></li><li><a href="#central-forces-and-the-radial-equation">Central forces and the radial equation</a></li><li><a href="#small-radial-perturbations-of-a-circular-orbit">Small radial perturbations of a circular orbit</a></li><li><a href="#large-kicks-when-does-the-particle-escape">Large kicks: when does the particle escape?</a></li><li><a href="#summary">Summary</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <h2 id="perturbations-in-classical-mechanics-vs-quantum-physics">Perturbations in Classical Mechanics vs. Quantum Physics</h2>
+        <p>Both classical mechanics and quantum mechanics use the word <strong>perturbation</strong> for a small deviation from a reference state, but the two theories use the idea very differently. This post covers the classical side; the <a href="/QuantumPerturbations/">companion post</a> covers perturbation theory in quantum mechanics.</p>
 
-<p>While both classical mechanics and quantum physics employ the term <strong>perturbation</strong> to denote a small deviation from some reference state, their implementations and outcomes differ significantly.</p>
+<h2 id="simple-harmonic-response">Simple harmonic response</h2>
 
-<h3 id="1-classical-perturbations-simple-harmonic-response">1. Classical Perturbations: Simple Harmonic Response</h3>
+<p>A small disturbance of a stable equilibrium typically produces (possibly damped) simple harmonic motion. Starting from Newton’s second law, \(F = m\ddot{x}\), a restoring force \(F = -\alpha x\) with \(\alpha &gt; 0\) gives</p>
 
-<p>A small disturbance of a stable equilibrium in classical mechanics typically induces (possibly damped) simple harmonic motion.  Starting from Newton’s second law,</p>
-
-\[F = m\ddot{x},\]
-
-<p>a restoring force of the form $F = -\alpha x$ (with $\alpha &gt; 0$) gives</p>
-
-\[-m\ddot{x} = \alpha x
+\[m\ddot{x} = -\alpha x
 \quad\Longrightarrow\quad
 \ddot{x} + \frac{\alpha}{m}\,x = 0,\]
 
-<p>whose solution is sinusoidal with frequency $\omega = \sqrt{\tfrac{\alpha}{m}}$.</p>
+<p>whose solutions are sinusoidal with angular frequency \(\omega = \sqrt{\alpha/m}\).</p>
 
-<h3 id="2-central-force-orbits-and-radial-equation">2. Central-Force Orbits and Radial Equation</h3>
+<h2 id="central-forces-and-the-radial-equation">Central forces and the radial equation</h2>
 
-<p>For a particle of mass $m$ under a purely radial force $F_r(r)$, conservation of angular momentum $h = r^2\dot{\theta}$ and Newton’s second law yield:</p>
+<p>For a particle of mass \(m\) under a purely radial force \(F_r(r)\), the angular momentum per unit mass \(h = r^2\dot{\theta}\) is conserved (see <a href="/NoetherTheorem/">Noether’s theorem</a>), and the radial component of Newton’s second law becomes</p>
 
 \[\ddot{r} - \frac{h^2}{r^3} = \frac{F_r(r)}{m}.\]
 
-<p>A <strong>circular orbit</strong> at radius $r = a$ satisfies:</p>
+<p>A <strong>circular orbit</strong> of radius \(r = a\) has \(\ddot r = 0\), so</p>
 
-\[0 - \frac{h^2}{a^3} = \frac{F_r(a)}{m},\quad
-\Longrightarrow\quad F_r(a) = -\frac{m\,h^2}{a^3}.\]
+\[-\frac{h^2}{a^3} = \frac{F_r(a)}{m}
+\quad\Longrightarrow\quad F_r(a) = -\frac{m\,h^2}{a^3}.\]
 
-<h3 id="3-small-radial-perturbations-of-a-circular-orbit">3. Small Radial Perturbations of a Circular Orbit</h3>
+<h2 id="small-radial-perturbations-of-a-circular-orbit">Small radial perturbations of a circular orbit</h2>
 
-<p>Introduce a tiny radial displacement:</p>
+<p>Now displace the orbit slightly,</p>
 
-\[r(t) = a + \rho(t),\quad |\rho| \ll a.\]
+\[r(t) = a + \rho(t),\qquad |\rho| \ll a,\]
 
-<p>Substitute into the radial equation:</p>
+<p>keeping \(h\) fixed. Substituting into the radial equation,</p>
 
-\[\ddot{\rho} - \frac{h^2}{(a + \rho)^3} = \frac{F_r(a + \rho)}{m}.\]
+\[\ddot{\rho} - \frac{h^2}{(a + \rho)^3} = \frac{F_r(a + \rho)}{m},\]
 
-<p><strong>Linearize</strong> both sides via Taylor expansion to first order in $\rho$:</p>
+<p>and linearising both sides to first order in \(\rho\):</p>
 
 <ol>
-  <li>
-    <p><strong>Centrifugal term</strong></p>
-
-\[\frac{1}{(a + \rho)^3} \approx \frac{1}{a^3}\Bigl(1 - 3\frac{\rho}{a}\Bigr).\]
-  </li>
-  <li>
-    <p><strong>Radial force</strong></p>
-
-\[F_r(a + \rho) \approx F_r(a) + F_r'(a)\,\rho.\]
-  </li>
+  <li><strong>Centrifugal term:</strong> \(\displaystyle \frac{1}{(a + \rho)^3} \approx \frac{1}{a^3}\left(1 - 3\frac{\rho}{a}\right).\)</li>
+  <li><strong>Radial force:</strong> \(F_r(a + \rho) \approx F_r(a) + F_r'(a)\,\rho.\)</li>
 </ol>
 
-<p>Plugging in and cancelling the zeroth-order balance $-h^2/a^3 = F_r(a)/m$ leaves:</p>
+<p>The zeroth-order terms cancel by the circular-orbit condition, leaving</p>
 
-\[\ddot{\rho} + \Bigl[\tfrac{3h^2}{a^4} - \tfrac{1}{m}F_r'(a)\Bigr]\rho = 0.\]
+\[\ddot{\rho} + \left[\frac{3h^2}{a^4} - \frac{1}{m}F_r'(a)\right]\rho = 0.\]
 
-<p>Define</p>
+<p>Defining</p>
 
-\[\omega^2 \equiv \tfrac{3h^2}{a^4} - \tfrac{1}{m}F_r'(a).\]
+\[\omega^2 \equiv \frac{3h^2}{a^4} - \frac{1}{m}F_r'(a),\]
 
-<p>Then</p>
+<p>this is \(\ddot{\rho} + \omega^2\rho = 0\), with general solution \(\rho(t) = A\cos(\omega t + \phi)\).</p>
 
-\[\ddot{\rho} + \omega^2\,\rho = 0,\]
-
-<p>with general solution</p>
-
-\[\rho(t) = A\cos(\omega t + \phi).\]
-
-<p><strong>Stability condition</strong>: For oscillatory (bounded) motion, $\omega^2 &gt; 0$, i.e.</p>
+<p><strong>Stability condition.</strong> The perturbation stays bounded and oscillates provided \(\omega^2 &gt; 0\), that is,</p>
 
 \[\frac{3h^2}{a^4} &gt; \frac{1}{m}F_r'(a).\]
 
-<p><img src="/assets/images/Orbit.png" alt="" srcset="    /assets/resized/Orbit-600x250.png 600w, /assets/images/Orbit.png 1200w" /></p>
+<p>For an inverse-square force \(F_r = -k/r^2\), using \(h^2 = ka/m\) gives \(\omega^2 = \frac{3k}{ma^3} - \frac{2k}{ma^3} = \frac{k}{ma^3} &gt; 0\): circular Kepler orbits are stable, and the radial oscillation has the same frequency as the orbit itself, which is why the perturbed orbit closes into an ellipse.</p>
 
-<h3 id="4-escape-criterion-for-an-inverse-square-force">4. Escape Criterion for an Inverse-Square Force</h3>
+<h2 id="large-kicks-when-does-the-particle-escape">Large kicks: when does the particle escape?</h2>
 
-<p>The conserved total energy is</p>
+<p>The linear analysis says nothing about large displacements, so for those we use the conserved energy</p>
 
-\[E = \tfrac12 m\bigl(\dot r^2 + r^2\dot{\theta}^2\bigr) + V(r),
-\quad V'(r) = -F_r(r).\]
+\[E = \tfrac12 m\left(\dot r^2 + r^2\dot{\theta}^2\right) + V(r),
+\qquad V(r) = -\frac{k}{r}.\]
 
-<p>At $t=0$, choose initial conditions</p>
+<p>Displace the particle from the circular orbit of radius \(a\) to \(r_0\), with no radial velocity. What happens depends on what the kick preserves.</p>
 
-\[\dot r(0) = 0,\quad r_0 = a + \varepsilon,\quad h = r_0^2\dot{\theta}(0),\]
+<p><strong>Same angular momentum.</strong> If \(h = \sqrt{ka/m}\) is unchanged, then</p>
 
-<p>so the energy is</p>
+\[E = \frac{m h^2}{2 r_0^2} - \frac{k}{r_0} = \frac{k a}{2 r_0^2} - \frac{k}{r_0},\]
 
-\[E = \frac{h^2}{2m\,r_0^2} + V(r_0).\]
+<p>which is negative for every \(r_0 &gt; a/2\). A particle pushed <em>outwards</em> at fixed angular momentum therefore always stays bound. The figure shows \(r_0 = 1.8a\): the radius oscillates between about \(0.69a\) and \(1.8a\).</p>
 
-<p>For an inverse-square law $V(r) = -\frac{k}{r}$ with $h^2 = \tfrac{k a}{m}$, the escape threshold $E = 0$ implies</p>
+<figure class=""><img src="/assets/images/Orbit.png" alt="Left: a bound elliptical orbit around the centre after a displacement to r0 = 1.8. Right: r(t) oscillating between about 0.69 and 1.8, below the dotted line r = 2a." loading="lazy" decoding="async" /><figcaption>
+      Displacement to \(r_0 = 1.8a\) at fixed angular momentum. The orbit stays bound. The dotted line \(r = 2a\) is the escape radius for a displacement at fixed <em>speed</em> (below).
 
-\[\frac{h^2}{2m\,r_0^2} - \frac{k}{r_0} = 0
-\quad\Longrightarrow\quad r_0 = 2a.\]
+    </figcaption></figure>
 
-<p>Thus any $r_0 \ge 2a$ (i.e.\ $\varepsilon \ge a$) yields $E \ge 0$ and the particle escapes.</p>
+<p><strong>Same speed.</strong> If instead the particle keeps the circular-orbit speed \(v_0 = \sqrt{k/(ma)}\), then</p>
+
+\[E = \tfrac12 m v_0^2 - \frac{k}{r_0} = \frac{k}{2a} - \frac{k}{r_0},\]
+
+<p>so \(E \ge 0\), and the particle escapes, exactly when \(r_0 \ge 2a\).</p>
+
+<h2 id="summary">Summary</h2>
 
 <ul>
-  <li>
-    <p><strong>Linear (local) stability</strong><br />
-Small oscillations around<br />
-\(r = a\)<br />
-will remain small—nothing “blows up” if<br />
-\(|\rho| \ll a.\)</p>
-  </li>
-  <li>
-    <p><strong>Escape (global) criterion</strong><br />
-If you instead give the particle a large enough “kick” so that<br />
-\(r_0 \ge 2a,\)<br />
-its total energy becomes non‑negative and it will escape to infinity—even though infinitesimal perturbations are stable.</p>
-  </li>
+  <li><strong>Linear (local) stability.</strong> Small displacements, \(\lvert\rho\rvert \ll a\), produce bounded oscillations about \(r = a\) whenever \(\omega^2 &gt; 0\).</li>
+  <li><strong>Global behaviour.</strong> Whether a large kick unbinds the particle is decided by the sign of the energy, and depends on how the kick changes the velocity as well as the position. Infinitesimal stability does not rule out escape after a large enough kick.</li>
 </ul>
 
+<h2 id="credits">Credits</h2>
+
+<p>These notes are heavily inspired by Prof. Arjun Berera’s courses <em>Introductory Dynamics</em> (PHYS08052) and <em>Principles of Quantum Mechanics</em> (PHYS10094) at the University of Edinburgh.</p>
+
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+
+<p><strong>What was wrong.</strong> The post said a particle escapes if it starts at \(r_0 \ge 2a\). That holds when the kick keeps the speed fixed, but the plot keeps the angular momentum fixed, and in that case a particle pushed outwards always stays bound.</p>
+
+<p><strong>What changed.</strong> Both cases are now worked out, each with its energy. Typos are fixed. Previously titled “Perturbations - Classical Mechanics”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
+        
 
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
   
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#classical-mechanics">Classical Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button content-tag" href="/tagsbycontent/#quantum-mechanics">Quantum Mechanics</a>
-        
-      
-        
-        
-          <a class="tag-button difficulty-tag hard" href="/tagsbydifficulty/#hard">Hard</a>
-        
-      
-    </div>
+    
+
+
+
   
-</body>
-</html>
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#classical-mechanics" class="page__taxonomy-item p-category" rel="tag">Classical Mechanics</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-13T00:00:00+00:00">January 13, 2023</time></p>
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Perturbations+-+Classical+Mechanics%20https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FSmallPerbuations%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/NoetherTheorem/" class="pagination--pager" title="Conservations in Physics - Noether’s Theorem
-">Previous</a>
+      <a href="/NoetherTheorem/" class="pagination--pager" title="Conservation Laws in Physics: Noether’s Theorem">Previous</a>
     
     
-      <a href="/QuantumPerturbations/" class="pagination--pager" title="Perturbations - Quantum Mechanics
-">Next</a>
+      <a href="/QuantumPerturbations/" class="pagination--pager" title="Perturbations in Quantum Mechanics">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -626,194 +513,255 @@ its total energy becomes non‑negative and it will escape to infinity—even th
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -823,7 +771,10 @@ its total energy becomes non‑negative and it will escape to infinity—even th
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -832,120 +783,56 @@ its total energy becomes non‑negative and it will escape to infinity—even th
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/SmallPerbuations/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/SmallPerbuations"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 

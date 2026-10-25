@@ -1,32 +1,43 @@
+
+
 <!doctype html>
 <!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
+  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
+  Copyright 2024-2026 iBug - ibugone.com | @iBug
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
 -->
-<html lang="en" class="no-js">
+
+<html lang="en-GB" class="no-js" dir="ltr">
   <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>Pre-requisites for Group Theory | Henry Yip</title>
-<meta name="description" content="Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learning to facilitate its learning.">
+    
+<meta charset="utf-8">
 
 
-  <meta name="author" content="Henry Yip ">
+<!-- begin _includes/seo.html --><title>Prerequisites for Group Theory | Henry Yip</title>
+<meta name="description" content="Equivalence relations, bijections and graph symmetries, building up to groups, subgroups, dihedral and symmetric groups, and cosets.">
+
+
+  <meta name="author" content="Henry Yip">
   
-  <meta property="article:author" content="Henry Yip ">
+  <meta property="article:author" content="Henry Yip">
   
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Pre-requisites for Group Theory">
+<meta property="og:title" content="Prerequisites for Group Theory">
 <meta property="og:url" content="https://henry-yip.github.io/Prerequisites/">
 
 
-  <meta property="og:description" content="Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learning to facilitate its learning.">
+  <meta property="og:description" content="Equivalence relations, bijections and graph symmetries, building up to groups, subgroups, dihedral and symmetric groups, and cosets.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
 
 
 
@@ -38,11 +49,9 @@
 
 
 
+  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
 
 
-  
-
-  
 
 
 <link rel="canonical" href="https://henry-yip.github.io/Prerequisites/">
@@ -50,16 +59,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Henry Yip",
-      "url": "https://henry-yip.github.io/"
-    
-  }
-</script>
+
 
 
 
@@ -72,54 +72,41 @@
 
 
   <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
 
 
-    <!-- start custom head snippets -->
-<!DOCTYPE html>
-<!-- KaTeX requires the use of the HTML5 doctype. Without it, KaTeX may not render properly -->
-<html>
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
-    <!-- The loading of KaTeX is deferred to speed up page rendering -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-  </head>
-</html>
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
- 
-  </head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-LRB2GYEFGK');
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
 </script>
 
+  </head>
+
   <body class="layout--single">
-    <nav class="skip-links">
+    
+<nav class="skip-links" aria-label="Skip links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
     <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
@@ -129,25 +116,34 @@
 
     
 
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-          <a class="site-logo" href="/"><img src="/assets/images/Wolf.png" alt="Henry Yip"></a>
+      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
         
         <a class="site-title" href="/">
           Henry Yip
-          <span class="site-subtitle">Version 2.0</span>
+          
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/About/">About</a>
+              <a
+                href="/about/"
+                
+                
+              >About</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbycontent/">Tags by Content</a>
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
             </li><li class="masthead__menu-item">
-              <a href="/tagsbydifficulty/">Tags by Difficulty</a>
-            </li><li class="masthead__menu-item">
-              <a href="/LaTeX/">LaTeX Tutorials</a>
+              <a
+                href="/archive/"
+                
+                
+              >Archive</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -172,51 +168,34 @@
 
 
 
-  
-    
 
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        <li class="current">Pre-requisites for Group Theory</li>
-      
-    
-  </ol>
-</nav>
-
-  
 
 
 <div id="main" role="main">
   
+
   <div class="sidebar sticky">
   
+
 
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
 
   
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip </a>
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Henry Yip’s Math Blog</p>
+        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
 
       </div>
     
@@ -227,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh, United Kingdom</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
         </li>
       
 
@@ -235,6 +214,10 @@
         
           
             <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
       
@@ -245,7 +228,7 @@
         <li>
           <a href="mailto:s2231321@ed.ac.uk" rel="me" class="u-email">
             <meta itemprop="email" content="s2231321@ed.ac.uk" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
           </a>
         </li>
       
@@ -306,49 +289,38 @@
 </div>
 
   
-    
-      
-      
-      
-      
-    
-    
-      
-
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-  </ul>
-</nav>
-
-    
   
   </div>
 
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Pre-requisites for Group Theory">
-    <meta itemprop="description" content="Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learning to facilitate its learning.">
+    <meta itemprop="headline" content="Prerequisites for Group Theory">
+    <meta itemprop="description" content="Equivalence relations, bijections and graph symmetries, building up to groups, subgroups, dihedral and symmetric groups, and cosets.">
     <meta itemprop="datePublished" content="2023-03-05T00:00:00+00:00">
-    
+    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/Prerequisites/" class="u-url" itemprop="url">Pre-requisites for Group Theory
+            <a href="https://henry-yip.github.io/Prerequisites/" itemprop="url">Prerequisites for Group Theory
 </a>
           </h1>
           
 
+
   <p class="page__meta">
     
-
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-03-05T00:00:00+00:00">March 5, 2023</time>
+      </span>
     
+
+    <span class="page__meta-sep"></span>
 
     
       
@@ -357,11 +329,19 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          9 minute read
+          8 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
+
+
+  <p class="archive-note">From the <a href="/archive/">archive</a> (2023). Corrected in October 2026; see the note at the end.</p>
 
 
         </header>
@@ -370,505 +350,333 @@
       <section class="page__content e-content" itemprop="text">
         
           <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Pre-requisites for Group Theory</h4></header>
-              <ul class="toc__menu"><li><a href="#equivalence-class">Equivalence Class</a><ul><li><a href="#partitions">Partitions</a></li></ul></li><li><a href="#functions">Functions</a><ul><li><a href="#exercise-1">Exercise 1</a></li><li><a href="#exercise-2">Exercise 2</a></li></ul></li><li><a href="#bijections">Bijections</a></li><li><a href="#isomorphism">Isomorphism</a></li><li><a href="#definition-of-groups">Definition of Groups</a></li><li><a href="#symmetries-and-groups-relationships">Symmetries and Groups Relationships</a></li><li><a href="#extra-definitions">Extra Definitions</a></li><li><a href="#dihedral-groups">Dihedral Groups</a><ul><li><a href="#theorem-11">Theorem 1.1</a></li><li><a href="#proof">Proof</a></li><li><a href="#exercise">Exercise</a></li></ul></li><li><a href="#symmetric-groups">Symmetric Groups</a></li><li><a href="#matrices">Matrices</a><ul><li><a href="#theorem-13">Theorem 1.3</a></li><li><a href="#proof-1">Proof</a></li></ul></li><li><a href="#subgroups">Subgroups</a><ul><li><a href="#a-detour-on-operatornameso3">A detour on \(\operatorname{SO}(3)\)</a></li><li><a href="#exercise-1">Exercise</a></li></ul></li><li><a href="#abelian-groups">Abelian Groups</a><ul><li><a href="#exercise-2">Exercise:</a></li></ul></li><li><a href="#normal-subgroups">Normal Subgroups</a><ul><li><a href="#theorem-12">Theorem 1.2</a></li><li><a href="#proof-2">Proof</a></li><li><a href="#exercise-3">Exercise:</a></li></ul></li><li><a href="#theorem">Theorem</a></li></ul>
-
+            <nav class="toc" aria-label="Table of contents">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#equivalence-relations">Equivalence relations</a><ul><li><a href="#partitions">Partitions</a></li></ul></li><li><a href="#functions">Functions</a><ul><li><a href="#exercise-1">Exercise 1</a></li><li><a href="#exercise-2">Exercise 2</a></li></ul></li><li><a href="#composition-of-bijections">Composition of bijections</a></li><li><a href="#graph-isomorphisms-and-symmetries">Graph isomorphisms and symmetries</a></li><li><a href="#groups">Groups</a><ul><li><a href="#theorem-1-the-symmetries-of-a-graph-form-a-group">Theorem 1: the symmetries of a graph form a group</a></li></ul></li><li><a href="#homomorphisms">Homomorphisms</a></li><li><a href="#dihedral-groups">Dihedral groups</a><ul><li><a href="#theorem-2">Theorem 2</a></li><li><a href="#exercise">Exercise</a></li></ul></li><li><a href="#symmetric-groups">Symmetric groups</a></li><li><a href="#matrix-groups">Matrix groups</a><ul><li><a href="#theorem-3">Theorem 3</a></li></ul></li><li><a href="#subgroups">Subgroups</a><ul><li><a href="#a-detour-mathrmso3">A detour: \(\mathrm{SO}(3)\)</a></li></ul></li><li><a href="#abelian-groups">Abelian groups</a></li><li><a href="#normal-subgroups">Normal subgroups</a><ul><li><a href="#theorem-4">Theorem 4</a></li></ul></li><li><a href="#cyclic-groups">Cyclic groups</a></li><li><a href="#cosets">Cosets</a><ul><li><a href="#the-alternating-group">The alternating group</a></li></ul></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>Group Theory is one of the most important theories in Physics. Here we try to complete a basic introduction to it, or at least complete the background learning to facilitate its learning.</p>
+        <p>Group theory is one of the most important tools in physics. This post collects the background needed to start learning it, and ends with the first few definitions and examples of groups.</p>
 
-<h2 id="equivalence-class">Equivalence Class</h2>
+<p>Throughout, permutations are composed <strong>right to left</strong>: \(\sigma\tau\) means “apply \(\tau\) first, then \(\sigma\)”.</p>
+
+<h2 id="equivalence-relations">Equivalence relations</h2>
+
+<p><em>Why?</em> Equivalence classes are needed to understand cosets, and hence important results such as Lagrange’s theorem.</p>
+
+<p>Consider the natural numbers \(\mathbb{N}\) and their remainders on division by \(3\). Every number has remainder \(0\), \(1\) or \(2\), so we can group the numbers into three <strong>classes</strong> according to their remainder. Notice that <strong>every number lies in one of the classes</strong>, and <strong>no number lies in more than one</strong>.</p>
+
+<p>In general, a relation \(\sim\) on a set \(S\) is an <strong>equivalence relation</strong> if it is:</p>
 
 <ul>
-  <li>Why Equivalence Classes?</li>
-  <li>To understand Cosets, hence understand very important theorems like Lagrange’s Theorem</li>
+  <li><strong>Reflexive:</strong> \(a \sim a\) for all \(a\).
+<em>Non-example:</em> “is smaller than” is not reflexive, because \(a&lt;a\) is false.</li>
+  <li><strong>Symmetric:</strong> \(a \sim b\) implies \(b \sim a\).
+<em>Non-example:</em> “is less than or equal to” is not symmetric: \(5 \le 7\) but not \(7 \le 5\).</li>
+  <li><strong>Transitive:</strong> \(a \sim b\) and \(b \sim c\) imply \(a \sim c\).
+<em>Non-example:</em> in rock–paper–scissors, rock beats scissors and scissors beats paper, but rock does not beat paper.</li>
 </ul>
 
-<p>Consider the natural numbers \(\mathbb{N}\). Consider the remainder when divided by 3. It is clear that some numbers has remainder 0, some has remainder 1, and the rest has remainder 2.</p>
-
-<p>We can group all the numbers with remainder 0 into a “class”, numbers with reaminer 1 into another class, and the remaning numbers into another class.</p>
-
-<p>So we have 3 classes that contains the same number of elements. We can also
-observe that <strong>every element is in one of the equivalence classes</strong>  and <strong>no element is in more than one equivalence classes</strong>.</p>
-
-<p>Rigorously, the elements of the set S have to have a notion of equivalence relation. That means that it has to satisfy:</p>
+<p>The relation above is called <em>congruence modulo 3</em>. Other equivalence relations include:</p>
 
 <ul>
-  <li>
-    <p>Reflexivity</p>
-
-    <ul>
-      <li>e.g. “is smaller than” is <strong>NOT</strong> an equivalence relation because \(a&lt;a\) is incorrect.</li>
-    </ul>
-  </li>
-  <li>
-    <p>Symmetry</p>
-
-    <ul>
-      <li>e.g. “ is equal or smaller than” is <strong>NOT</strong> an equivalence relation because \(5 \le 7\) does not imply \(7 \le 5\)</li>
-    </ul>
-  </li>
-  <li>
-    <p>Transitivity</p>
-
-    <ul>
-      <li>e.g.  In rock-paper-scissors, rock beats scissors and scissors beat paper, but rock doesn’t beat paper.</li>
-    </ul>
-  </li>
-</ul>
-
-<p>The equivalence relation above is called “congruence modulo 3”.</p>
-
-<p>Other equivalence relations include:</p>
-
-<ul>
-  <li>
-    <p>“Is equal to” on the set of real numbers.</p>
-  </li>
-  <li>
-    <p>“Has the same real part” on the set of complex numbers.</p>
-  </li>
-  <li>
-    <p>“Is similar to” on the set of triangles.</p>
-  </li>
+  <li>“is equal to” on the real numbers;</li>
+  <li>“has the same real part as” on the complex numbers;</li>
+  <li>“is similar to” on the set of triangles.</li>
 </ul>
 
 <h3 id="partitions">Partitions</h3>
-<p>Let \(A\) be a set and \(A_1, A_2, \ldots, A_n\) be its non-empty subsets. The subsets form a partition \(P\) of \(A\) if</p>
+
+<p>Let \(A\) be a set and \(A_1, A_2, \ldots, A_n\) subsets of \(A\). They form a <strong>partition</strong> of \(A\) if</p>
 
 <ul>
-  <li>The union of the subsets in \(P\) is equal to \(A\)</li>
+  <li>their union is \(A\): \(\displaystyle\bigcup_{i=1}^n A_i=A\);</li>
+  <li>none of them is empty: \(A_i \neq \varnothing\) for all \(i\);</li>
+  <li>distinct subsets are disjoint: \(A_i \cap A_j=\varnothing\) for all \(i \neq j\).</li>
 </ul>
 
-\[\bigcup_{i=1}^n A_i=A_1 \cup A_2 \cup \ldots \cup A_n=A\]
-
-<ul>
-  <li>The partition \(P\) does not contain the empty set \(\varnothing\)</li>
-</ul>
-
-\[A_i \neq \emptyset \quad \forall i\]
-
-<ul>
-  <li>The intersection of any distinct subsets in \(P\) is empty</li>
-</ul>
-
-\[A_i \cap A_j=\emptyset \quad \forall i \neq j\]
+<p>The equivalence classes of any equivalence relation form a partition, and conversely every partition defines an equivalence relation.</p>
 
 <h2 id="functions">Functions</h2>
 
-<ul>
-  <li>Why Functions</li>
-  <li>Bijection is the key of group theory. As an elementary example, Symmetric Groups themselves are bijections.</li>
-</ul>
+<p><em>Why?</em> Bijections are at the heart of group theory: for example, the elements of the symmetric groups <em>are</em> bijections.</p>
 
-<p>I assume knowledge of functions. <em>i.e.</em> <a href="https://en.wikipedia.org/wiki/Injective_function">Injection</a>, <a href="https://en.wikipedia.org/wiki/Surjective_function">Surjection</a>, <a href="https://en.wikipedia.org/wiki/Bijection">Bijection</a>.</p>
+<p>I assume familiarity with <a href="https://en.wikipedia.org/wiki/Injective_function">injections</a>, <a href="https://en.wikipedia.org/wiki/Surjective_function">surjections</a> and <a href="https://en.wikipedia.org/wiki/Bijection">bijections</a>.</p>
 
 <h3 id="exercise-1">Exercise 1</h3>
-<p>Is \(f: \mathbb{R} \rightarrow \mathbb{R}\) s.t. \(f(x)=x^2\) Injective? Surjective? Bijective?</p>
 
-<p>Solution:</p>
+<p>Is \(f: \mathbb{R} \rightarrow \mathbb{R}\), \(f(x)=x^2\), injective? Surjective? Bijective?</p>
 
-<p>Injective: Pick \(y=1\). Then \(x=1\) or \(x=-1\). Hence not injective</p>
-
-<p>Surjective: No (Do it yourself)</p>
-
-<p>Bijective: No (Not Injective Not Surjective so not bijective)</p>
+<p><em>Solution.</em> Not injective: \(f(1) = f(-1) = 1\). Not surjective: no real \(x\) has \(f(x) = -1\). Hence not bijective.</p>
 
 <h3 id="exercise-2">Exercise 2</h3>
-<p>Is \(x=y^2\) a function?</p>
 
-<h2 id="bijections">Bijections</h2>
+<p>Does \(x=y^2\) define \(y\) as a function of \(x\)?</p>
 
-<p><strong>Claim:</strong>
- Let \(f: V \rightarrow V\) and \(g: V \rightarrow V\). \(f, g\) are bijections implies that \(f \circ g\) is a bijection</p>
+<h2 id="composition-of-bijections">Composition of bijections</h2>
 
-<p>Significance: This is important in symmetric groups as it justifies operations like \((123)(12)=(13)\)</p>
+<p><strong>Claim.</strong> If \(f: V \rightarrow V\) and \(g: V \rightarrow V\) are bijections, then so is \(f \circ g\).</p>
 
-<p><strong>Proof:</strong>
-Suppose \(v \in V\).</p>
+<p><em>Why it matters:</em> it is what makes products of permutations such as \((1\,2\,3)(1\,2)=(1\,3)\) meaningful.</p>
 
-<p>\(f\) is a bijection \(\Rightarrow\) \(\exists\)!\(v^{\prime \prime} \in V\) s.t. \(f\left(v^{\prime \prime}\right)=v\)</p>
+<p><strong>Proof.</strong></p>
 
-<p>\(g\) is a bijection \(\Rightarrow\) \(\exists\)!\(v^{\prime} \in V\) s.t. \(g\left(v^{\prime}\right)=v^{\prime \prime}\)</p>
+<p><em>Injective.</em> Suppose \(f(g(v_1)) = f(g(v_2))\). Since \(f\) is injective, \(g(v_1) = g(v_2)\), and since \(g\) is injective, \(v_1 = v_2\).</p>
 
-<p>Hence \(\exists\)!\(v^{\prime} \in V\) s.t.  \(f\left(g\left(v^{\prime}\right)\right)=v\)</p>
+<p><em>Surjective.</em> Let \(v \in V\). Since \(f\) is surjective there is \(v'' \in V\) with \(f(v'') = v\), and since \(g\) is surjective there is \(v' \in V\) with \(g(v') = v''\). Then \(f(g(v')) = v\).</p>
 
-<p>Suppose \(v^{\prime \prime \prime} \in V\).  \(v^{\prime \prime \prime} \neq v^{\prime}\) \(\Rightarrow\) \(f\left(g\left(v^{\prime \prime \prime}\right)\right) \neq f\left(g\left(v^{\prime}\right)\right)\)</p>
+<p>Being injective and surjective, \(f \circ g\) is a bijection. \(\blacksquare\)</p>
 
-<p>This proves Injection</p>
+<h2 id="graph-isomorphisms-and-symmetries">Graph isomorphisms and symmetries</h2>
 
-<p>\(\forall v \in V\) \(\exists\) \(v^{\prime}\) s.t.  \(f\left(g\left(v^{\prime}\right)\right)=v\)</p>
+<p>An <strong>isomorphism</strong> between two graphs is a bijection between their vertex sets that preserves edges: two vertices are joined by an edge if and only if their images are. If graphs \(G\) and \(H\) are isomorphic we write \(G \cong H\). An isomorphism from a graph to itself is called a <strong>symmetry</strong> of the graph.</p>
 
-<p>This proves Surjection.</p>
+<h2 id="groups">Groups</h2>
 
-<p>Hence Injection and Surjection proves Bijection.
-\(\blacksquare\)</p>
+<p>A <strong>group</strong> \((G, *)\) is a set \(G\) with a binary operation \(*\) satisfying:</p>
 
-<h2 id="isomorphism">Isomorphism</h2>
-<p>An isomorphism between two graphs is a bijection between them
-that preserves all edges. <em>i.e.</em> the vertices are still connected by the same edges. If two graphs \(G\) and \(H\) are isomorphic we denote by \(G \cong H\) 
-If the two graphs is the same then this is called a symmetry.</p>
+<ol>
+  <li><strong>Closure:</strong> \(a * b \in G\) for all \(a, b \in G\);</li>
+  <li><strong>Associativity:</strong> \((a * b) * c=a *(b * c)\) for all \(a, b, c \in G\);</li>
+  <li><strong>Identity:</strong> there is \(e \in G\) with \(a * e=e * a=a\) for all \(a \in G\);</li>
+  <li><strong>Inverses:</strong> for every \(a \in G\) there is \(a^{-1} \in G\) with \(a * a^{-1}=a^{-1} * a=e\).</li>
+</ol>
 
-<h2 id="definition-of-groups">Definition of Groups</h2>
-<p>A group \((G, *)\) is a set \(G\) with a binary operation \(*\) satisfying the following axioms:</p>
+<h3 id="theorem-1-the-symmetries-of-a-graph-form-a-group">Theorem 1: the symmetries of a graph form a group</h3>
 
-<p>(1) \(a * b \in G\) \(\quad\) \(\forall\) \(a, b, \in G\) (Closure)</p>
+<p><em>Why it matters:</em> the dihedral group is exactly the set of symmetries of a regular \(n\)-gon.</p>
 
-<p>(2) \((a * b) * c=a *(b * c)\) \(\quad\) \(\forall\) \(a, b, c \in G\) (Associativity)</p>
-
-<p>(3) \(\exists\) \(e \in G\) <em>s.t.</em> \(a * e=e * a=a\) \(\quad\) \(\forall\) \(a \in G\) (Identity)</p>
-
-<p>(4) For any \(a \in G\)  \(\quad\) \(\exists\) \(a^{-1} \in G\) <em>s.t.</em> \(a * a^{-1}=\) \(a^{-1} * a=e\) (Inverse)</p>
-
-<h2 id="symmetries-and-groups-relationships">Symmetries and Groups Relationships</h2>
-<p><strong>Claim</strong>
-The set of symmetries of a graph forms a group (under composition).</p>
-
-<p>Significance:
-Dihedral group itself is the set of symmetries of a n-gon</p>
-
-<p><strong>Proof:</strong></p>
+<p><strong>Proof.</strong></p>
 
 <ul>
-  <li>(<strong>G1</strong>) 
-Claim: The composition of two symmetries \(f\) and \(g\) is a symmetry.</li>
+  <li><strong>(G1)</strong> Let \(f\) and \(g\) be symmetries. Then \(f \circ g\) is a bijection by the claim above, and \(v_1, v_2\) are joined by an edge \(\iff\) \(g(v_1), g(v_2)\) are joined \(\iff\) \(f(g(v_1)), f(g(v_2))\) are joined. So \(f \circ g\) is a symmetry.</li>
+  <li><strong>(G2)</strong> Composition of maps is associative: \((f \circ g) \circ h=f \circ(g \circ h)\). (Check this by evaluating both sides at a vertex.)</li>
+  <li><strong>(G3)</strong> The identity map \(e\) is a symmetry, and \(e \circ f = f \circ e =f\).</li>
+  <li><strong>(G4)</strong> A symmetry \(f\) is a bijection, so it has an inverse map \(f^{-1}\), and \(f^{-1}\) also preserves edges (try proving this by contradiction). Then \(f \circ f^{-1}=f^{-1} \circ f=e\).</li>
 </ul>
 
-<p>Proof: Since \(f, g\) are bijections implies that \(f \circ g\) is a bijection. (<strong>Lemma 1.1</strong>)</p>
+<p>Hence the symmetries of a graph form a group under composition. \(\blacksquare\)</p>
 
-<p>\(v_1\) and \(v_2\) are joined by an edge if and only if \(g\left(v_1\right)\) and \(g\left(v_2\right)\) are joined by an edge if and only if \(f \circ g\left(v_1\right)\) and \(f \circ g\left(v_2\right)\) are joined by an edge. Hence  \(f * g\) is a symmetry  \(\blacksquare\)</p>
+<h2 id="homomorphisms">Homomorphisms</h2>
+
+<p>A map \(\phi : G \rightarrow H\) between groups is a <strong>homomorphism</strong> if</p>
+
+\[\phi(x \circ y) = \phi(x) * \phi(y) \quad \text{for all } x, y \in G,\]
+
+<p>where \(\circ\) is the operation of \(G\) and \(*\) the operation of \(H\).</p>
+
+<p>On the left, we combine \(x\) and \(y\) in \(G\) first and then apply \(\phi\). On the right, we apply \(\phi\) to each first and then combine the results in \(H\). A homomorphism is a map for which the two routes agree.</p>
+
+<p><em>Example.</em> Let \(G = (\mathbb{R}, +)\) and \(H = (\mathbb{R}_{&gt;0}, \times)\), and take \(\phi = \exp\). Then \(\phi(x+y) = e^{x+y} = e^x e^y = \phi(x)\phi(y)\), so \(\exp\) is a homomorphism.</p>
+
+<p>A homomorphism that is also a bijection is an <strong>isomorphism</strong> of groups, and we write \(G \cong H\). (The exponential map above is an isomorphism.)</p>
+
+<h2 id="dihedral-groups">Dihedral groups</h2>
+
+<p>The symmetries of a regular \(n\)-gon form a group by Theorem 1, called the <strong>dihedral group</strong> \(D_n\).</p>
+
+<h3 id="theorem-2">Theorem 2</h3>
+
+<p>The dihedral group \(D_n\) has exactly \(2n\) elements.</p>
+
+<p><strong>Proof.</strong> \(D_n\) consists of:</p>
 
 <ul>
-  <li>(<strong>G2</strong>)
-The composition of maps is associative
-\((f * g) * h:=(f \circ g) \circ h=f \circ(g \circ h):=f *(g * h)\)
-for all symmetries \(f, g, h\)</li>
+  <li>the identity \(e\);</li>
+  <li>the \(n-1\) anticlockwise rotations through angles \(\frac{2 \pi k}{n}\), \(k=1, \ldots, n-1\);</li>
+  <li>\(n\) reflections (checking this is left as an exercise).</li>
 </ul>
 
-<p>This is left as an exercise for the readers \(\blacksquare\)</p>
-
-<ul>
-  <li>
-    <p>(<strong>G3</strong>)
-The identity map \(e\) itself satisfies \(e \circ f = f \circ e =f\)  \(\blacksquare\)</p>
-  </li>
-  <li>
-    <p>(<strong>G4</strong>)
-If \(f: V \rightarrow V\) is a symmetry then we can easily show the existence of the symmetry \(f^{-1}\) s.t.  \(f^{-1}: V \rightarrow V\) (Try Contradiction)</p>
-  </li>
-</ul>
-
-<p>Since \(f \circ f^{-1}=f^{-1} \circ f=e\), we prove <strong>G4</strong> \(\blacksquare\)</p>
-
-<p>Since <strong>G1-G4</strong> are all satisfied, the set of symmetries of a graph forms a group (under composition).  \(\blacksquare\)</p>
-
-<p>for all symmetries \(f, g, h\)</p>
-
-<p>This is left as an exercise for the readers \(\blacksquare\)</p>
-
-<h2 id="extra-definitions">Extra Definitions</h2>
-
-<p>A map \(\phi\) : \(G \rightarrow H\) is  a group homomorphism if</p>
-
-\[\phi(x \circ y) = \phi(x) * \phi(y) \quad \forall x, y \in G\]
-
-<p>where \(\circ\) is the operation of G and \(*\) is the operation of H.</p>
-
-<p>Intuitively, the LHS means you can do operations (of \(G\)) on \(x\) and \(y\) first, and then apply \(\phi\) to \(x \circ y\). The RHS means you do \(\phi(x)\) and \(\phi(y)\) first, then do operation of \(H\) on \(\phi(x)\) and \(\phi(y)\) later.</p>
-
-<p>Below I will give an example:</p>
-
-<p>Consider \(\mathbb{R}\) under addition and \(\mathbb{R}^*_+\) under multiplication. The map Exp: \(\mathbb{R} \rightarrow \mathbb{R}^*_+\) is a homomorphism.</p>
-
-<p>Don’t get lost! \(\phi(x \circ y)\) is the LHS, where \(\circ\) is \(+\)!. \(\phi\) is the operation as the map is Exp: \(\mathbb{R} \rightarrow \mathbb{R}^*_+\)</p>
-
-<p>So , as \(e^{x+y}=e^{x}*e^{y}\) is true, we can prove \(\phi(x \circ y) = \phi(x) * \phi(y) \quad \forall x, y \in G\). Therefore it’s an homomorphism!</p>
-
-<p>A Group Homomorphism \(\phi : G → H\) that is also a bijection is called an isomorphism of groups. We write \(G \cong H\)</p>
-
-<h2 id="dihedral-groups">Dihedral Groups</h2>
-
-<p>The symmetries of an <strong>n-gon</strong> form a group (Proved in <strong>Prerequisites</strong>) We call it <strong>Dihedral Group</strong></p>
-
-<h3 id="theorem-11"><strong>Theorem 1.1</strong></h3>
-<p>The dihedral group \(D_n\), has precisely \(\left|D_n\right|=2 n\) elements</p>
-
-<h3 id="proof"><strong>Proof</strong></h3>
-<p>\(D_n\) consists of:</p>
-<ul>
-  <li>The identity \(e \in D_n\) (Trivial)</li>
-  <li>The \(n-1\) rotations (any direction) through angles \(k \cdot \frac{2 \pi}{n}\), \(k \in \mathbb{Z}\) and \(k=1, \ldots, n-1\).</li>
-  <li>The \(n\) reflections (This is left as an exercise for the readers)</li>
-</ul>
-
-<p>Since \(1+(n-1)+n=2n\) we have \(\left|D_n\right|=2 n\) 
-\(\blacksquare\)</p>
-
-<p>Now if we denote \(g\) as rotation and \(h\) as reflection through a particular vertex.</p>
+<p>Since \(1+(n-1)+n=2n\), \(\lvert D_n\rvert=2 n\). \(\blacksquare\)</p>
 
 <h3 id="exercise">Exercise</h3>
 
-\[D_n=\left\{e, g, g^2, \ldots, g^{n-1}, h, g h, g^2 h, \ldots, g^{n-1} h\right\}\]
+<p>Let \(g\) be the rotation through \(2\pi/n\) and \(h\) the reflection in the axis through a particular vertex. Show that</p>
 
-<p><strong>Hint</strong>:
-What is the physical meaning of \(g^{n-1} h\)</p>
+\[D_n=\left\{e, g, g^2, \ldots, g^{n-1}, h, g h, g^2 h, \ldots, g^{n-1} h\right\}.\]
 
-<h2 id="symmetric-groups">Symmetric Groups</h2>
-<p>The set \(S_n\) of all symmetries of \(\{1, \ldots, n\}\) is called the symmetric group, where \(\left|S_n\right|=n !\).
-Consider a graph with \(n\) vertices and no edges connecting them. This is \(S_n\)</p>
+<p><em>Hint:</em> what is the geometric meaning of \(g^{k} h\)?</p>
 
-<p>Showing \(S_n\) is a group is left as an exercise for the reader \(\blacksquare\)</p>
+<h2 id="symmetric-groups">Symmetric groups</h2>
 
-<h2 id="matrices">Matrices</h2>
+<p>The group \(S_n\) of all bijections of \(\{1, \ldots, n\}\) is the <strong>symmetric group</strong>, and \(\lvert S_n\rvert=n !\). It is also the symmetry group of the graph with \(n\) vertices and no edges. (Showing that \(S_n\) is a group is a good exercise.)</p>
 
-<h3 id="theorem-13"><strong>Theorem 1.3</strong></h3>
-<p>\(\mathrm{GL}(n, \mathbb{R})\) is a group under matrix multiplication.</p>
+<h2 id="matrix-groups">Matrix groups</h2>
 
-<h3 id="proof-1"><strong>Proof</strong></h3>
+<h3 id="theorem-3">Theorem 3</h3>
 
-<p><strong>G1 (Closure):</strong>
-Claim: Consider two Matrices \(A\) and \(B\). If \(A\) and \(B\) are invertible then \(AB\) is invertible.</p>
+<p>\(\mathrm{GL}(n, \mathbb{R})\), the set of invertible \(n\times n\) real matrices, is a group under matrix multiplication.</p>
 
-<p>Proof: \(A\) and \(B\) invertible \(\Rightarrow\)  \({\displaystyle \det(A) \neq 0}\) and \({\displaystyle \det(B) \neq 0}\). From \({\displaystyle \det(AB)=\det(A)\det(B)}\) we can see the above implies \({\displaystyle \det(AB) \neq 0}\). Hence \(AB\) is invertible \(\blacksquare\)</p>
+<p><strong>Proof.</strong></p>
 
-<p><strong>G2 (Associative):</strong>
-\(A(BC)=(AB)(C)\)
-This is left as an exercise for the reader \(\blacksquare\)</p>
+<ul>
+  <li><strong>(G1)</strong> If \(A\) and \(B\) are invertible then \(\det A \neq 0\) and \(\det B \neq 0\), so \(\det(AB)=\det(A)\det(B) \neq 0\) and \(AB\) is invertible.</li>
+  <li><strong>(G2)</strong> Matrix multiplication is associative: \(A(BC)=(AB)C\) (exercise).</li>
+  <li><strong>(G3)</strong> The identity matrix \(I\) is the identity element.</li>
+  <li><strong>(G4)</strong> Every invertible \(A\) has an inverse \(A^{-1}\) with \(AA^{-1}=A^{-1}A=I\), and \(A^{-1}\) is itself invertible.</li>
+</ul>
 
-<p><strong>G3(Identity):</strong>
-The Matrix <strong>I</strong> is the Identity element  \(\blacksquare\)</p>
-
-<p><strong>G4(Inverse):</strong>
-For every invertible matrix \(\exists\) a inverse matrix. Let  \(A\) be any invertible matrix. Then \(A^{-1}\) is the invertible matrix s.t. \(AA^{-1}=A^{-1}A=I\) 
- \(\blacksquare\)</p>
-
-<p>From \(G1-G4\), \(\mathrm{GL}(n, \mathbb{R})\) is a group under matrix multiplication \(\blacksquare\)</p>
+<p>Hence \(\mathrm{GL}(n, \mathbb{R})\) is a group. \(\blacksquare\)</p>
 
 <h2 id="subgroups">Subgroups</h2>
 
-<p>S1. \(H\) is not empty.
-S2. If \(h, k \in H\) then \(h * k \in H\)
-S3. If \(h \in H\) then \(h^{-1} \in H\).</p>
+<p>A subset \(H \subseteq G\) is a <strong>subgroup</strong>, written \(H \leq G\), if</p>
 
-<h3 id="a-detour-on-operatornameso3">A detour on \(\operatorname{SO}(3)\)</h3>
-<p><strong>\(\operatorname{SO}(3)\)</strong> is very important in physics.</p>
+<ol>
+  <li>\(H\) is not empty;</li>
+  <li>\(h, k \in H\) implies \(h * k \in H\);</li>
+  <li>\(h \in H\) implies \(h^{-1} \in H\).</li>
+</ol>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dSZNFP60Tc0?start=297" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+<h3 id="a-detour-mathrmso3">A detour: \(\mathrm{SO}(3)\)</h3>
 
-<p>Heard the word <strong>SO(3)</strong>?</p>
+<p>The rotation group \(\mathrm{SO}(3)\) is everywhere in physics.</p>
 
-<p>\(\operatorname{SO}(n, \mathbb{R}):=\left\{A \in G L(n, \mathbb{R}) \mid \operatorname{det} A=1\right.\) and \(\left.A^T=A^{-1}\right\}\). It is related to <strong>Linear Algebra</strong>,  in particular, <strong>Isometry</strong>.</p>
+<!-- Courtesy of embedresponsively.com -->
 
-<p>Sidenote: \(\operatorname{SO}(n, \mathbb{R})\) is the “combination” of \(\mathrm{SL}(n, \mathbb{R})\) and \(\mathrm{O}(n, \mathbb{R})\)</p>
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/dSZNFP60Tc0" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
-<h3 id="exercise-1">Exercise</h3>
-<p>\(\operatorname{SO}(n, \mathbb{R})\) is a subgroup of \(\mathrm{GL}(n, \mathbb{R})\)</p>
+<p>In general,</p>
 
-<h2 id="abelian-groups">Abelian Groups</h2>
+\[\mathrm{SO}(n):=\left\{A \in \mathrm{GL}(n, \mathbb{R}) \;\middle|\; \det A=1 \text{ and } A^{T}=A^{-1}\right\},\]
 
-<p>Suppose that \(G\) is a group. If \(g * h=h * g\) for all \(g, h \in G\), then \(G\) is an abelian group.</p>
+<p>the group of rotations of \(\mathbb{R}^n\): linear isometries that preserve orientation. It is the intersection \(\mathrm{SO}(n) = \mathrm{SL}(n, \mathbb{R}) \cap \mathrm{O}(n)\).</p>
 
-<h3 id="exercise-2">Exercise:</h3>
-<p><strong>Claim:</strong> \(D_3\) is not abelian:</p>
+<p><strong>Exercise.</strong> Show that \(\mathrm{SO}(n)\) is a subgroup of \(\mathrm{GL}(n, \mathbb{R})\).</p>
 
-<p><strong>Proof:</strong></p>
+<h2 id="abelian-groups">Abelian groups</h2>
 
-\[\sigma=\left(\begin{array}{lll}
+<p>A group \(G\) is <strong>abelian</strong> if \(g * h=h * g\) for all \(g, h \in G\).</p>
+
+<p><strong>Claim.</strong> \(D_3\) is not abelian.</p>
+
+<p><strong>Proof.</strong> Labelling the vertices of the triangle \(1, 2, 3\) identifies \(D_3\) with \(S_3\). Take</p>
+
+\[\sigma=\begin{pmatrix}
 1 &amp; 2 &amp; 3 \\
 3 &amp; 2 &amp; 1
-\end{array}\right), \quad \tau=\left(\begin{array}{lll}
+\end{pmatrix}, \quad \tau=\begin{pmatrix}
 1 &amp; 2 &amp; 3 \\
 2 &amp; 3 &amp; 1
-\end{array}\right), \quad \sigma \tau=\left(\begin{array}{lll}
-1 &amp; 2 &amp; 3 \\
-1 &amp; 3 &amp; 2
-\end{array}\right), \quad \tau \sigma=\left(\begin{array}{lll}
+\end{pmatrix}.\]
+
+<p>Composing right to left,</p>
+
+\[\sigma \tau=\begin{pmatrix}
 1 &amp; 2 &amp; 3 \\
 2 &amp; 1 &amp; 3
-\end{array}\right) .\]
+\end{pmatrix}, \quad \tau \sigma=\begin{pmatrix}
+1 &amp; 2 &amp; 3 \\
+1 &amp; 3 &amp; 2
+\end{pmatrix} .\]
 
-<p>Since \(\sigma \tau \neq \tau \sigma\), \(D_3\) is not abelian \(\blacksquare\)</p>
+<p>Since \(\sigma \tau \neq \tau \sigma\), \(D_3\) is not abelian. \(\blacksquare\)</p>
 
-<h2 id="normal-subgroups">Normal Subgroups</h2>
+<h2 id="normal-subgroups">Normal subgroups</h2>
 
-<p>\(N\) is a normal subgroup and only if \(g n g^{-1} \in N\) for all \(g \in G\) and \(n \in N\). We denote: \(N \triangleleft G\).</p>
+<p>A subgroup \(N \leq G\) is <strong>normal</strong>, written \(N \trianglelefteq G\), if and only if \(g n g^{-1} \in N\) for all \(g \in G\) and \(n \in N\).</p>
 
-<h3 id="theorem-12"><strong>Theorem 1.2</strong></h3>
-<p>Claim: Every Subgroup of an Abelian Group is Normal</p>
+<h3 id="theorem-4">Theorem 4</h3>
 
-<h3 id="proof-2"><strong>Proof</strong></h3>
+<p>Every subgroup of an abelian group is normal.</p>
 
-<p>Suppose \(G\) is abelian and let \(H \leq G\). 
-Then \(\forall g\) \(\in\) \(G\), \(\forall h\) \(\in\) \(H\),<br />
- \(g h g^{-1}=g g^{-1} h=e h=h \in H\)</p>
+<p><strong>Proof.</strong> Let \(G\) be abelian and \(H \leq G\). For all \(g \in G\) and \(h \in H\), \(g h g^{-1}=g g^{-1} h= h \in H\). Hence \(H \trianglelefteq G\). \(\blacksquare\)</p>
 
-<p>Hence \(H \triangleleft G \quad \blacksquare\)</p>
+<h2 id="cyclic-groups">Cyclic groups</h2>
 
-<p><strong>Definition:</strong></p>
+<p>For \(g \in G\), define</p>
 
-<p>Let \(G\) be a group and let \(g \in G\) be an element. We define the subset
-\(\langle g\rangle:=\left\{g^k \mid k \in \mathbb{Z}\right\}=\left\{\ldots, g^{-2}, g^{-1}, e, g, g^2, \ldots\right\}\)</p>
+\[\langle g\rangle:=\left\{g^k \mid k \in \mathbb{Z}\right\}=\left\{\ldots, g^{-2}, g^{-1}, e, g, g^2, \ldots\right\}.\]
 
-<p><strong>Definition:</strong></p>
+<p>A group (or subgroup) \(H\) is <strong>cyclic</strong> if \(H=\langle h\rangle\) for some \(h \in H\).</p>
 
-<p>A subgroup \(H \leq G\) is cyclic if \(H=\langle h\rangle\) for some \(h \in H\).</p>
+<p>In the dihedral group \(D_n\), the subgroup of rotations</p>
 
-<p>Returning to our Dihedral Group \(D_n\), the subgroup \(H\) consisting of the identity and all the rotations, i.e.
-\(H=\left\{e, g, g^2, \ldots, g^{n-1}\right\}\)
-is a cyclic subgroup since \(H=\langle g\rangle\)</p>
+\[H=\left\{e, g, g^2, \ldots, g^{n-1}\right\} = \langle g\rangle\]
 
-<p>You should verify that \(H\) is abelian, this is left as an exercise for the reader \(\blacksquare\)</p>
+<p>is cyclic. Verify that \(H\) is abelian; the same argument shows that every cyclic group is abelian.</p>
 
-<p>If you have done the exercise above, it should be clear that \(G\) is cyclic \(\Rightarrow\) \(G\) is abelian \(\blacksquare\)</p>
+<p><strong>Exercise.</strong> Explain why the converse fails: an abelian group need not be cyclic. (<em>Hint:</em> consider \(\mathbb{R}\) under addition.)</p>
 
-<h3 id="exercise-3"><strong>Exercise:</strong></h3>
+<h2 id="cosets">Cosets</h2>
 
-<p>Explain why the converse statement is <strong>not</strong> true? <em>i.e.</em>, \(G\) is abelian \(\nRightarrow\) \(G\) is cyclic</p>
+<p>For a subgroup \(H \leq G\) and \(g \in G\), the <strong>left coset</strong> of \(H\) by \(g\) is \(gH = \{gh : h \in H\}\).</p>
 
-<p><strong>Hint:</strong> Consider \(\mathbb{R}\) under addition</p>
+<p><strong>Claim.</strong> \(g_1H=g_2H\) is possible even when \(g_1 \neq g_2\).</p>
 
-<p>First, define \(A_n\), the Alternating Group, as the even permutations of \(S_n\). As \(S_n\) has the same number of odd and even permutations (for any groups this holds!), order of \(A_n=\frac{n!}{2}\). For \(A_4\), order \(\frac{4!}{2}=12\)</p>
+<p><strong>Proof.</strong> In \(S_3\), let \(H = \{e, (1\,2\,3), (1\,3\,2)\}\) be the subgroup of rotations. Then</p>
 
-<h2 id="theorem">Theorem</h2>
+\[\begin{aligned}
+(1\,2)H&amp;=\{(1\,2),\ (1\,2)(1\,2\,3),\ (1\,2)(1\,3\,2)\} =\{(1\,2),(2\,3),(1\,3)\}, \\
+(2\,3)H&amp;=\{(2\,3),\ (2\,3)(1\,2\,3),\ (2\,3)(1\,3\,2)\}=\{(2\,3),(1\,3),(1\,2)\},
+\end{aligned}\]
 
-<p>Claim: \(g_1H=g_2H\) is <em>possible</em> even when \(g_1 \neq g_2\)</p>
+<p>so \((1\,2)H = (2\,3)H\) although \((1\,2) \neq (2\,3)\). \(\blacksquare\)</p>
 
-<p>Proof: Consider a subgroup of \(S_3\) that only contains the rotations and the identity element \(e\). From above, this subgroup contains \((n-1)+1=n\) elements , so the subgroup, denoted by \(H\), has \(3\) elements, <em>i.e.</em>   \(e, (123),(132)\). Now consider \((12) \in S_3\):</p>
+<p>In general, \(g_1H=g_2H\) if and only if \(g_1^{-1}g_2 \in H\). Here \((1\,2)^{-1}(2\,3) = (1\,2\,3) \in H\). So the map \(G \to \{\text{cosets of } H\}\), \(g \mapsto gH\), is <em>not</em> injective. (By contrast, left multiplication \(g \mapsto hg\) by a fixed element is always a bijection of \(G\).) The cosets of \(H\) partition \(G\) into equivalence classes of equal size, which is exactly the idea behind Lagrange’s theorem.</p>
 
-\[\begin{align}
-(12)(H)&amp;=(12),(12)(123),(12)(132) \\
-&amp;=(12),(23),(13)
-\end{align}\]
+<h3 id="the-alternating-group">The alternating group</h3>
 
-<p>Now consider \((23) \in S_3\):</p>
+<p>The even permutations in \(S_n\) form a subgroup, the <strong>alternating group</strong> \(A_n\). For \(n \ge 2\), exactly half of the permutations in \(S_n\) are even (composing with a fixed transposition swaps even and odd permutations), so \(\lvert A_n\rvert=\frac{n!}{2}\). For example, \(\lvert A_4\rvert = 12\).</p>
 
-\[\begin{align}
-(23)(H)&amp;=(23),(23)(123),(23)(132) \\
-&amp;=(23),(13),(12) \\
-&amp;=(12),(23),(13) \\
-&amp;=(12)(H)
-\end{align}\]
+<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
 
-<p>Physical interpretation: It works for the rotation group of \(S_3\) because of symmetry, <em>i.e.</em> \(1,2,3\) can be relabelled between themselves freely as long as the relabelling itself is bijective</p>
+<p><strong>What was wrong.</strong> Nothing in the results, but the convention for composing permutations was never stated, and one exercise solution only said “do it yourself”.</p>
 
-<p>This shows that \(g_1H=g_2H\) is <em>possible</em> even when \(g_1 \neq g_2\) . The function \(f: G \rightarrow G\) s.t. \(g_n \rightarrow hg_n\) for any \(n \in \mathbb{N}\) is not <em>injective</em> as 
-\((f(g_1)=f(g_2)) \nrightarrow (g_1=g_2)\) 
-\(\blacksquare\)</p>
-
+<p><strong>What changed.</strong> The composition convention is stated at the start, the solutions are written out, and the notation and wording are tidied. Previously titled “Pre-requisites for Group Theory”.</p>
 
         
       </section>
 
       <footer class="page__meta">
         
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Styling Example</title>
-  <style>
-    .entry-tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 10px 0;
-    }
-
-    .entry-tags i.fa-tags {
-      margin-right: 8px;
-      color: #666;
-    }
-
-    .tag-button {
-      display: inline-block;
-      margin: 5px;
-      padding: 5px 10px;
-      font-size: 14px;
-      color: #fff;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .tag-button:hover {
-      opacity: 0.8;
-    }
-
-    .difficulty-tag.easy {
-      background-color: #28a745; /* Green for Easy */
-    }
-
-    .difficulty-tag.easy:hover {
-      background-color: #218838;
-    }
-
-    .difficulty-tag.medium {
-      background-color: #ffc107; /* Yellow for Medium */
-      color: #212529; /* Black text for better contrast */
-    }
-
-    .difficulty-tag.medium:hover {
-      background-color: #e0a800;
-    }
-
-    .difficulty-tag.hard {
-      background-color: #dc3545; /* Red for Hard */
-    }
-
-    .difficulty-tag.hard:hover {
-      background-color: #c82333;
-    }
-
-    .content-tag {
-      background-color: #f0ad4e; /* Orange color for content tags */
-    }
-
-    .content-tag:hover {
-      background-color: #ec971f;
-    }
-  </style>
-</head>
-<body>
-  
-    <div class="entry-tags">
-      <i class="fa fa-tags"></i>
-      
-    </div>
-  
-</body>
-</html>
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-03-05T00:00:00+00:00">March 5, 2023</time></p>
+  
+    
+
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/topics/#group-theory" class="page__taxonomy-item p-category" rel="tag">Group Theory</a>
+    
+    </span>
+  </p>
+
+
+  
+
+  
+
+
+        
+
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
+
 
       </footer>
 
-      <section class="page__share">
-  
-    <h4 class="page__share-title">Share on</h4>
-  
-
-  <a href="https://twitter.com/intent/tweet?text=Pre-requisites+for+Group+Theory%20https%3A%2F%2Fhenry-yip.github.io%2FPrerequisites%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
-
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhenry-yip.github.io%2FPrerequisites%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
-
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhenry-yip.github.io%2FPrerequisites%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
-</section>
-
+      
 
       
-  <nav class="pagination">
+
+  <nav class="pagination" aria-label="Post pagination">
     
-      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series
-">Previous</a>
+      <a href="/Dirichlet/" class="pagination--pager" title="Kernels in Fourier Series: Dirichlet and Fejér">Previous</a>
     
     
-      <a href="/FreeFall/" class="pagination--pager" title="Plane Crash Problem - How Long Does It Take to Fall?
-">Next</a>
+      <a href="/FreeFall/" class="pagination--pager" title="Plane Crash Problem: How Long Does It Take to Fall?">Next</a>
     
   </nav>
+
 
     </div>
 
@@ -877,194 +685,255 @@ is a cyclic subgroup since \(H=\langle g\rangle\)</p>
 
   
   
-    <div class="page__related">
-      <h2 class="page__related-title">You may also enjoy</h2>
-      <div class="grid__wrapper">
-        
-          
+    
+
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
 
 
 
 <div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
       
-        <a href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centers (Part III)
+        <a class="u-url" href="/TwoBodyProblemNew/" rel="permalink">Problem of Two Fixed Centres (Part III)
 </a>
       
     </h2>
     
 
+
   <p class="page__meta">
     
-
-    
-
-    
       
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-          3 minute read
-        
+        <time datetime="2024-07-26T00:00:00+01:00">July 26, 2024</time>
       </span>
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">This is the eleventh post on my summer research about three-body problems. Today we are continuing our discussion on the problem of Two Fixed Centers. Please...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
+    <span class="page__meta-sep"></span>
 
     
       
       
 
       <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the tenth post on my summer research about three-body problems. Today we are discussing my search of possible new planet orbits. This is intended to ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Figure8Proof/" rel="permalink">A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">This is the nineth post on my summer research about three-body problems. Today we are discussing the existence of the Figure-8 orbits. This will involve the ...</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Teaser.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three Body Problem (Part II)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
         
           2 minute read
         
       </span>
     
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">This is the eighth post on my summer research about three-body problems. Today we are continuing our discussion on Sundman’s Power Series, showing why the se...</p>
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.
+</p>
   </article>
 </div>
 
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/NewOrbits/" rel="permalink">Classifying and Finding New Possible Orbits (Part I)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
         
-      </div>
-    </div>
+        <time datetime="2024-07-22T00:00:00+01:00">July 22, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-undergraduate" class="level-badge level-badge--undergraduate" title="Assumes the first two years of a mathematics or physics degree.">Undergraduate</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Figure8Proof/" rel="permalink">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-17T00:00:00+01:00">July 17, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">An outline of Chenciner and Montgomery’s variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure e...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc p-name" itemprop="headline">
+      
+        <a class="u-url" href="/Convergence/" rel="permalink">Sundman’s Power Series Solution to the Three-Body Problem (Part II)
+</a>
+      
+    </h2>
+    
+
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-07-16T00:00:00+01:00">July 16, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+    
+      
+      <span class="page__meta-sep"></span>
+      <a href="/topics/#level-advanced" class="level-badge level-badge--advanced" title="For students specialising in mathematical or theoretical physics.">Advanced</a>
+    
+  </p>
+
+
+
+    <p class="archive__item-excerpt p-summary" itemprop="description">Applying Sundman’s series to Lagrange’s equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of...</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
   
   
 </div>
 
+      
     </div>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><div class="search-searchbar"></div>
-  <div class="search-hits"></div></div>
+        
+<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
 
       </div>
     
@@ -1074,7 +943,10 @@ is a cyclic subgroup since \(H=\langle g\rangle\)</p>
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
@@ -1083,120 +955,56 @@ is a cyclic subgroup since \(H=\langle g\rangle\)</p>
     
       
         
-      
-        
-      
-        
           <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
         
       
         
-      
-        
-      
+          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
         
       
     
 
     
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 Henry Yip. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
 
     
+
   <script src="/assets/js/main.min.js"></script>
 
 
-<!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3.3/dist/instantsearch-theme-algolia.min.css">
 
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
 <script>
-// Instanciating InstantSearch.js with Algolia credentials
-const search = instantsearch({
-  appId: 'DRH1J5IXZJ',
-  apiKey: '3697eb8dfe9ee889a57bd52a21be656a',
-  indexName: 'Henry Yip',
-  searchParameters: {
-    restrictSearchableAttributes: [
-      'title',
-      'content'
-    ]
-  }
-});
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-const hitTemplate = function(hit) {
-  const url = hit.url;
-  const hightlight = hit._highlightResult;
-  const title = hightlight.title && hightlight.title.value  || "";
-  const content = hightlight.html && hightlight.html.value  || "";
-
-  return `
-    <div class="list__item">
-      <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-        <h2 class="archive__item-title" itemprop="headline"><a href="${url}">${title}</a></h2>
-        <div class="archive__item-excerpt" itemprop="description">${content}</div>
-      </article>
-    </div>
-  `;
-}
-
-// Adding searchbar and results widgets
-search.addWidget(
-  instantsearch.widgets.searchBox({
-    container: '.search-searchbar',
-    poweredBy: true,
-    placeholder: 'Enter your search term...'
-  })
-);
-search.addWidget(
-  instantsearch.widgets.hits({
-    container: '.search-hits',
-    templates: {
-      item: hitTemplate,
-      empty: 'No results',
-    }
-  })
-);
-
-// Starting the search only when toggle is clicked
-$(document).ready(function () {
-  $(".search__toggle").on("click", function() {
-    if(!search.started) {
-      search.start();
-    }
-  });
-});
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
 
 
 
 
-
-    
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://henry-yip.github.io/Prerequisites/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/Prerequisites"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
-    };
-    (function() { /* DON'T EDIT BELOW THIS LINE */
-      var d = document, s = d.createElement('script');
-      s.src = 'https://encompassing-hk.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
-  
 
 
 
