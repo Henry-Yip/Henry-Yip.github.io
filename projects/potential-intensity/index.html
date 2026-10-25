@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    
+<!-- begin _includes/seo.html --><title>How strong can a hurricane get? | Henry Yip</title>
+<meta name="description" content="Tropical cyclone potential intensity explained: the Carnot-cycle argument, how well the bound holds, the ERA5 reanalysis, and what spatial and temporal remapping do to it.">
+
+
+  <meta name="author" content="Henry Yip">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="How strong can a hurricane get?">
+<meta property="og:url" content="https://henry-yip.github.io/projects/potential-intensity/">
+
+
+  <meta property="og:description" content="Tropical cyclone potential intensity explained: the Carnot-cycle argument, how well the bound holds, the ERA5 reanalysis, and what spatial and temporal remapping do to it.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://henry-yip.github.io/projects/potential-intensity/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+  </head>
+  <body class="xp">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+      <a class="xp-brand" href="/">Henry Yip</a>
+      <nav aria-label="Site">
+        <a href="/research/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/archive/">Archive</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="xp-hero">
+      <div class="xp-hero-text">
+        <p class="xp-kicker">Semester project · Atmospheric Physics, ETH Zürich · 2026</p>
+        <h1>How strong can a hurricane get?</h1>
+        <p class="xp-sub">Background to my semester project on tropical cyclone potential intensity: where the theory comes from, what reanalysis data look like, and why regridding and time-averaging the inputs can change the answer.</p>
+        
+        <dl class="xp-facts">
+          <div><dt>Topic</dt><dd>Potential intensity (PI)</dd></div><div><dt>Data</dt><dd>ERA5 ensemble, 0.5°, 3-hourly</dd></div><div><dt>Region</dt><dd>Western tropical Atlantic</dd></div><div><dt>Supervisors</dt><dd>Prof. U. Lohmann, Dr B. Enz</dd></div>
+        </dl>
+        
+      </div>
+      
+      <figure class="xp-hero-fig">
+        <canvas id="hero-engine" aria-label="Animated cross-section of a hurricane drawn as a heat engine: air flows in along the warm sea surface, rises in the eyewall, flows out near the cold tropopause and slowly sinks far from the centre." role="img"></canvas>
+        <figcaption>A hurricane as a heat engine: warm air in at the bottom, cold air out at the top. Schematic, not to scale.</figcaption>
+      </figure>
+      
+    </section>
+
+    <div class="xp-body">
+      <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      <main class="xp-article" id="xp-main">
+        <p>My semester project in the Atmospheric Physics group at ETH Zürich was about a single number: the potential intensity of a tropical cyclone, the strongest wind its surroundings could in principle support. Computing it from reanalysis data involves choices that are easy to overlook, such as how finely the input fields are gridded and over how long they are averaged. The project tested how much those choices matter.</p>
+
+<p>This page is not a summary of my results. It explains the ideas the project rests on: where the potential-intensity formula comes from, how well it works, what the ERA5 data are, and what regridding and averaging actually do. The interactive figures use synthetic or idealised data.</p>
+
+<h2 id="why"><span class="num">01</span>Why potential intensity</h2>
+
+<p>In 2005 Hurricane Katrina killed well over a thousand people and caused more than 100 billion US dollars of damage, and Rita and Wilma followed within weeks. Forecasting where a storm goes has improved steadily for decades. Forecasting how strong it gets, and especially when it will intensify rapidly, remains much harder.</p>
+
+<p>How strong a storm can become depends largely on its environment: how warm the ocean is, how cold the upper troposphere is, and how moist the air near the surface is. Potential intensity (PI) condenses this into one wind speed. It is used as a predictor in statistical intensity forecasts such as SHIPS and in rapid-intensification indices, and in climate studies of how storm intensity might change with warming.</p>
+
+<h2 id="carnot"><span class="num">02</span>A hurricane as a heat engine</h2>
+
+<p>Kerry Emanuel’s insight, developed in the 1980s, was that a mature hurricane works like a Carnot heat engine. Follow a parcel of air around the circulation in the animation at the top of the page:</p>
+
+<ol>
+  <li><strong>Inflow.</strong> Air spirals in towards the centre along the sea surface. It stays at roughly the sea-surface temperature \(T_s\) and picks up heat and moisture from the ocean, mostly through evaporation.</li>
+  <li><strong>Ascent.</strong> In the eyewall the air rises quickly, cooling as it expands. The water vapour condenses and releases the latent heat it picked up at the surface.</li>
+  <li><strong>Outflow.</strong> Near the tropopause the air flows outwards at a very low temperature \(T_o\), around −70 °C, and loses heat by radiating to space.</li>
+  <li><strong>Descent.</strong> Far from the centre it sinks slowly back towards the surface.</li>
+</ol>
+
+<p>Heat goes in at the warm end and out at the cold end. A Carnot engine working between these two temperatures converts a fraction</p>
+
+\[\varepsilon = \frac{T_s - T_o}{T_s}\]
+
+<p>of the heat it takes in into mechanical work. With \(T_s \approx 300\) K and \(T_o \approx 200\) K that is about one third. In the hurricane, the work keeps the winds going against friction at the sea surface.</p>
+
+<h3 id="from-the-energy-balance-to-a-wind-speed">From the energy balance to a wind speed</h3>
+
+<p>The derivation fits on a few lines. Consider the region near the radius of maximum wind and work per unit area of sea surface. The ocean supplies heat at a rate set by bulk formulas,</p>
+
+\[\text{heat input} \propto \rho\, C_k\, |V|\, (k_0^* - k),\]
+
+<p>where \(C_k\) is the exchange coefficient for enthalpy, \(k_0^*\) is the saturation enthalpy of air at the sea-surface temperature and \(k\) is the enthalpy of the boundary-layer air. Their difference measures how far the air and the sea are from equilibrium. Friction dissipates kinetic energy at the rate</p>
+
+\[\text{dissipation} \propto \rho\, C_d\, |V|^3 ,\]
+
+<p>with drag coefficient \(C_d\). One subtlety is that the dissipated energy turns into heat in the boundary layer, so it is fed back into the engine as extra heat input (Bister and Emanuel, 1998). In a steady state, work produced equals work dissipated:</p>
+
+\[C_d |V|^3 = \varepsilon \left[ C_k |V| (k_0^* - k) + C_d |V|^3 \right].\]
+
+<p>Solving for \(\lvert V\rvert\) gives</p>
+
+\[V_{\max}^2 = \frac{C_k}{C_d}\, \frac{T_s - T_o}{T_o}\, (k_0^* - k).\]
+
+<p>Including the dissipative heating replaces \(T_s\) by \(T_o\) in the denominator of the efficiency, which raises the estimate by about 20%.</p>
+
+<p>In practice the formula is evaluated in an equivalent form that uses convective available potential energy (CAPE), computed from the full temperature and humidity profile (Bister and Emanuel, 2002):</p>
+
+\[V_{\max}^2 = \frac{C_k}{C_d}\, \frac{T_s}{T_o}\, \left( \mathrm{CAPE}^* - \mathrm{CAPE} \right)\Big|_{r_{\max}} .\]
+
+<p>The CAPE values depend on the surface pressure under the eyewall, which itself depends on the wind speed, so the equations are solved iteratively. Implementations such as pyPI (Gilford, 2021) do this from gridded reanalysis fields, and the result is usually multiplied by about 0.8 to convert from the wind at the top of the boundary layer to a 10-metre wind.</p>
+
+<h2 id="calculator"><span class="num">03</span>Changing the inputs</h2>
+
+<p>The simplified enthalpy form above is enough to see which ingredients matter. The calculator assumes boundary-layer air 1 °C cooler than the sea at the chosen relative humidity, and a surface pressure of 1015 hPa.</p>
+
+<div class="xp-widget" id="pi-calc">
+  <div class="xp-widget-head"><span class="xp-tag">Interactive</span><h3>Potential intensity from the heat-engine formula</h3></div>
+  <div class="xp-stage">
+    <div class="xp-plot"></div>
+    <div class="xp-controls">
+      <label class="xp-slider"><span><span>Sea surface temperature</span> <output data-out="sst">29.0 °C</output></span>
+        <input type="range" min="24" max="32" step="0.1" value="29" data-ctl="sst" /></label>
+      <label class="xp-slider"><span><span>Outflow temperature</span> <output data-out="tout">−75 °C</output></span>
+        <input type="range" min="-90" max="-55" step="1" value="-75" data-ctl="tout" /></label>
+      <label class="xp-slider"><span><span>Near-surface relative humidity</span> <output data-out="rh">80 %</output></span>
+        <input type="range" min="60" max="95" step="1" value="80" data-ctl="rh" /></label>
+      <label class="xp-slider"><span><span>C<sub>k</sub> / C<sub>d</sub></span> <output data-out="ckcd">0.90</output></span>
+        <input type="range" min="0.5" max="1.2" step="0.05" value="0.9" data-ctl="ckcd" /></label>
+      <dl class="xp-readout">
+        <div><dt>Carnot efficiency</dt><dd data-out="carnot">–</dd></div>
+        <div><dt>k₀* − k</dt><dd data-out="dk">–</dd></div>
+        <div><dt>Gradient-level wind</dt><dd data-out="V">–</dd></div>
+        <div><dt>≈ 10 m wind</dt><dd data-out="V10">–</dd></div>
+        <div><dt>Saffir–Simpson</dt><dd data-out="cat">–</dd></div>
+      </dl>
+    </div>
+  </div>
+  <p class="xp-caption">Both curves vary the sea surface temperature with the other settings held fixed; the dot marks the current settings on the 10 m curve, and the dashed lines are the Category 1 and Category 5 thresholds for 10 m winds. Drier near-surface air or a colder outflow raise the potential intensity. In the real atmosphere these quantities are not independent of the sea surface temperature, and the full calculation uses the measured profile, so treat the numbers as illustrative.</p>
+</div>
+
+<p>The efficiency barely changes across realistic conditions; what moves the answer is the air–sea disequilibrium \(k_0^* - k\), which grows quickly with sea surface temperature because saturation humidity rises by about 7% per degree (the Clausius–Clapeyron relation). The ratio \(C_k/C_d\) enters directly, and it is one of the less certain parts of the theory: measurements in strong winds are difficult, and estimates of the ratio in hurricane conditions mostly fall somewhat below 1.</p>
+
+<h2 id="bound"><span class="num">04</span>Does the bound hold?</h2>
+
+<p>Potential intensity is a ceiling, not a forecast. Most storms never get near it. Emanuel (2000) found that once a storm’s peak intensity is expressed as a fraction of its potential intensity, the values are spread widely below 1. Storms are held back by things the theory leaves out: vertical wind shear tilting the vortex, dry air mixing into the core, the storm cooling the ocean beneath it by stirring up colder water, and landfall.</p>
+
+<p>The more interesting question is when observed winds go above the bound. There are several reasons this can happen:</p>
+
+<ul>
+  <li><strong>Unbalanced flow.</strong> The theory assumes the wind is in gradient balance. In the boundary layer of strong storms it is not, and axisymmetric simulations produce winds that exceed potential intensity by a substantial margin, an effect called superintensity (Persing and Montgomery, 2003; Bryan and Rotunno, 2009).</li>
+  <li><strong>The environment seen by the calculation.</strong> PI is computed from the fields at or near the storm. A storm moving slowly over its own cold wake lowers the sea-surface temperature there, so the PI evaluated under the storm can be lower than the PI of the environment the storm drew its energy from.</li>
+  <li><strong>Different winds.</strong> Best-track intensities are 1-minute sustained winds, while potential intensity is a theoretical gradient-level or reduced surface wind. The conversions between them are approximate.</li>
+  <li><strong>Other energy sources.</strong> During extratropical transition a storm starts to draw energy from horizontal temperature gradients, which a heat-engine argument does not include.</li>
+  <li><strong>Storm motion.</strong> The wind on one side of a moving storm is the rotational wind plus the translation speed.</li>
+</ul>
+
+<p>For most of a storm’s life PI does behave as an upper bound; the cases where winds exceed it are usually short and fall into one of these categories.</p>
+
+<h2 id="era5"><span class="num">05</span>ERA5</h2>
+
+<p>To compute potential intensity everywhere and at every time, you need the temperature and humidity of the whole atmosphere above each point of ocean. No observing system measures that directly, so the project used a reanalysis.</p>
+
+<p>A reanalysis runs a weather-forecast model through the past and corrects it continuously with observations from satellites, weather balloons, aircraft, ships and buoys. ERA5, produced by ECMWF, covers 1940 to the present (Hersbach et al., 2020). Every 12 hours a 4D-Var data assimilation step combines the model state with the observations available in that window, giving a physically consistent best estimate of the atmosphere.</p>
+
+<p>The main product is hourly on a 0.25° grid (about 31 km). ERA5 also has a 10-member ensemble at 0.5° and 3-hourly resolution. Each member is run with perturbed observations, sea-surface temperatures and model physics, so their spread gives an estimate of the uncertainty of the reanalysis itself. Internally the model has 137 vertical levels; the data are distributed on 37 standard pressure levels from 1000 hPa near the surface up to 1 hPa.</p>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag">Idealised</span><h3>ERA5's 37 pressure levels against a tropical temperature profile</h3></div>
+  <div id="era5-levels"></div>
+  <p class="xp-caption">Each dot is one ERA5 pressure level; hover for its approximate height. The temperature profile is idealised: a saturated moist adiabat from 26 °C at 1000 hPa up to a tropopause near 100 hPa, then typical stratospheric values. The levels are closely spaced near the surface and in the region where the outflow temperature is set.</p>
+</div>
+
+<p>For potential intensity the inputs are the sea-surface temperature, the mean sea-level pressure, and the temperature and specific humidity on the pressure levels. The outflow temperature \(T_o\) is not an input: it comes out of the calculation as the temperature at which a parcel lifted from the sea surface stops being buoyant, usually near the tropopause.</p>
+
+<h2 id="spatial"><span class="num">06</span>Spatial remapping</h2>
+
+<p>Remapping means transferring a field from one grid to another. A coarser grid is often what is available or affordable: statistical intensity predictors are traditionally computed from fields at 1° to 2.5°, and climatologies of potential intensity are often built on grids of about 2.5°.</p>
+
+<p>There are several ways to remap. Nearest-neighbour remapping copies the closest value, and bilinear remapping interpolates between neighbours. Conservative remapping (Jones, 1999), which my project used through the CDO toolkit, gives each target cell \(T\) the area-weighted mean of the source cells \(i\) that overlap it:</p>
+
+\[\phi_T = \frac{\sum_{i} A_{iT}\, \phi_i}{\sum_{i} A_{iT}},\]
+
+<p>where \(A_{iT}\) is the area of overlap. It conserves the area integral of the field, which is why it is the usual choice for fluxes and averages.</p>
+
+<div class="xp-widget" id="remap">
+  <div class="xp-widget-head"><span class="xp-tag">Interactive</span><h3>Conservative remapping of a sea-surface temperature field</h3></div>
+  <div class="xp-stage even">
+    <div class="xp-panel"><div class="xp-panel-title">Source grid · 0.5°</div><canvas class="xp-fine" style="width:100%;aspect-ratio:1;border-radius:10px" aria-label="Fine-grid sea surface temperature with land" role="img"></canvas></div>
+    <div class="xp-panel"><div class="xp-panel-title">Target grid · <span data-out="res">1°</span></div><canvas class="xp-coarse" style="width:100%;aspect-ratio:1;border-radius:10px" aria-label="Coarse-grid sea surface temperature after conservative remapping" role="img"></canvas></div>
+  </div>
+  <div class="xp-controls" style="margin-top:14px">
+    <div class="xp-row">
+      <div class="xp-seg" role="group" aria-label="Target resolution"><button data-res="0.75" aria-pressed="false">0.75°</button><button data-res="1" aria-pressed="true">1°</button><button data-res="1.5" aria-pressed="false">1.5°</button></div>
+      <div class="xp-seg" role="group" aria-label="Warm eddy"><button data-eddy="on" aria-pressed="true">Warm eddy on</button><button data-eddy="off" aria-pressed="false">off</button></div>
+    </div>
+    <dl class="xp-readout">
+      <div><dt>Warmest source cell</dt><dd data-out="fmax">–</dd></div>
+      <div><dt>Warmest target cell</dt><dd data-out="cmax">–</dd></div>
+      <div><dt>Mixed coastal cells</dt><dd data-out="mixed">–</dd></div>
+    </dl>
+    <div class="xp-key"><span><i style="--c:#2a3140"></i>land</span><span><i style="background:linear-gradient(90deg,#5b3324,#f2b98c)"></i>colder → warmer sea</span><span><i class="ring"></i>target cell overlapping both land and sea</span></div>
+  </div>
+  <p class="xp-caption">A synthetic field on a 6° × 6° box. Land cells have no sea-surface temperature and are skipped in the average, which is what CDO does when missing values are flagged. Two things change as the target grid coarsens: the small warm eddy is averaged with its cooler surroundings, so its peak drops, and more target cells straddle the coastline.</p>
+</div>
+
+<p>The demo shows the two effects that matter for potential intensity.</p>
+
+<p>The first is smoothing. A narrow maximum gets averaged with its surroundings, so the coarse grid sees a weaker peak, and sometimes a different feature becomes the maximum. Because potential intensity is a nonlinear function of its inputs, coarsening the inputs and then computing PI is also not the same as computing PI and then coarsening it.</p>
+
+<p>The second is the coast. A target cell that straddles the coastline gets its sea-surface temperature only from the sea part, but its atmospheric profile is an average over sea and land, and the air over land can be very different. The result can be a physically inconsistent column that still produces a finite, plausible-looking number. Comparisons between grids therefore have to deal with coastlines explicitly, for example by keeping only cells that are entirely ocean on both grids, or by measuring the distance of each point from the coast.</p>
+
+<h2 id="temporal"><span class="num">07</span>Temporal remapping</h2>
+
+<p>The same questions arise in time. ERA5’s ensemble provides fields every 3 hours, but many applications use daily or monthly means. There are two ways to produce a windowed potential intensity:</p>
+
+<ul>
+  <li>compute PI at every 3-hourly time step and then average the results;</li>
+  <li>average the input fields over the window first and compute PI once.</li>
+</ul>
+
+<p>The second is much cheaper, since PI is computed far fewer times. The two are not equal, because PI is a nonlinear function of its inputs: for a concave function \(f\), the average of \(f(x)\) is smaller than \(f\) of the average (Jensen’s inequality). Separately from that, any averaging removes short-lived peaks.</p>
+
+<div class="xp-widget" id="temporal-lab">
+  <div class="xp-widget-head"><span class="xp-tag">Interactive</span><h3>Averaging before or after computing PI</h3></div>
+  <div class="xp-plot"></div>
+  <div class="xp-controls" style="margin-top:12px">
+    <label class="xp-slider"><span><span>Averaging window</span> <output data-out="w">3 h</output></span>
+      <input type="range" min="0" max="5" step="1" value="2" data-ctl="w" /></label>
+    <dl class="xp-readout">
+      <div><dt>3-hourly peak</dt><dd data-out="peak">–</dd></div>
+      <div><dt>Peak after averaging</dt><dd data-out="ref">–</dd></div>
+      <div><dt>Largest gap between the two orders</dt><dd data-out="cut">–</dd></div>
+    </dl>
+  </div>
+  <p class="xp-caption">A synthetic month of 3-hourly inputs with a daily cycle, a short favourable spell around day 12 (warmer sea, colder outflow, drier near-surface air) and a cooler period later on. PI is computed with the formula from section 3. As the window grows, the brief peak around day 12 disappears. Here the two orders of averaging agree to a few hundredths of a m/s, because the inputs vary little within each window; the gap grows with the spread of the inputs inside the window and with how curved the PI function is over that spread.</p>
+</div>
+
+<p>This matters for intensity forecasting. Rapid intensification, usually defined as an increase of at least 30 knots in 24 hours, is a short-lived event. A monthly-mean potential intensity is fine for climatology, but it removes exactly the brief high-PI conditions that rapid-intensification predictors are meant to pick up.</p>
+
+<h2 id="project"><span class="num">08</span>What the project looked at</h2>
+
+<p>Using the ERA5 ensemble over the western tropical Atlantic, the project compared potential intensity computed on the native 0.5° grid with potential intensity computed after remapping the inputs to coarser grids, with particular attention to coastlines. It compared the two orders of time-averaging over windows from 6 hours to a month. It also checked whether PI stays above the observed winds along the tracks of ten Category 5 hurricanes, including Katrina, Rita and Wilma in 2005.</p>
+
+<p>I was supervised by Prof. Ulrike Lohmann and Dr Bernhard Enz in the Atmospheric Physics group of the Institute for Atmospheric and Climate Science. The report itself is not published here.</p>
+
+<h2 id="references"><span class="num">09</span>References</h2>
+
+<ol class="refs">
+  <li>M. Bister and K. A. Emanuel, “Dissipative heating and hurricane intensity,” <em>Meteorol. Atmos. Phys.</em> <strong>65</strong>, 233 (1998).</li>
+  <li>M. Bister and K. A. Emanuel, “Low frequency variability of tropical cyclone potential intensity 1. Interannual to interdecadal variability,” <em>J. Geophys. Res.</em> <strong>107</strong>, 4801 (2002).</li>
+  <li>G. H. Bryan and R. Rotunno, “The maximum intensity of tropical cyclones in axisymmetric numerical model simulations,” <em>Mon. Weather Rev.</em> <strong>137</strong>, 1770 (2009).</li>
+  <li>M. DeMaria and J. Kaplan, “A statistical hurricane intensity prediction scheme (SHIPS) for the Atlantic basin,” <em>Weather Forecast.</em> <strong>9</strong>, 209 (1994).</li>
+  <li>K. A. Emanuel, “An air–sea interaction theory for tropical cyclones. Part I: Steady-state maintenance,” <em>J. Atmos. Sci.</em> <strong>43</strong>, 585 (1986).</li>
+  <li>K. A. Emanuel, “The maximum intensity of hurricanes,” <em>J. Atmos. Sci.</em> <strong>45</strong>, 1143 (1988).</li>
+  <li>K. A. Emanuel, “A statistical analysis of tropical cyclone intensity,” <em>Mon. Weather Rev.</em> <strong>128</strong>, 1139 (2000).</li>
+  <li>D. M. Gilford, “pyPI (v1.3): Tropical cyclone potential intensity calculations in Python,” <em>Geosci. Model Dev.</em> <strong>14</strong>, 2351 (2021).</li>
+  <li>H. Hersbach et al., “The ERA5 global reanalysis,” <em>Q. J. R. Meteorol. Soc.</em> <strong>146</strong>, 1999 (2020).</li>
+  <li>P. W. Jones, “First- and second-order conservative remapping schemes for grids in spherical coordinates,” <em>Mon. Weather Rev.</em> <strong>127</strong>, 2204 (1999).</li>
+  <li>J. Kaplan and M. DeMaria, “Large-scale characteristics of rapidly intensifying tropical cyclones in the North Atlantic basin,” <em>Weather Forecast.</em> <strong>18</strong>, 1093 (2003).</li>
+  <li>J. Persing and M. T. Montgomery, “Hurricane superintensity,” <em>J. Atmos. Sci.</em> <strong>60</strong>, 2349 (2003).</li>
+</ol>
+
+      </main>
+    </div>
+
+    <footer class="xp-footer">
+      <p>&copy; 2026 Henry Yip · <a href="/projects/">More projects</a> · <a href="/">Home</a></p>
+    </footer>
+
+    <script type="module" src="/assets/explore/pi.js"></script>
+    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
+</script>
+
+
+
+
+  </body>
+</html>

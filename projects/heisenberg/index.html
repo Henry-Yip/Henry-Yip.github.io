@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    
+<!-- begin _includes/seo.html --><title>Simulating the 3D Heisenberg magnet | Henry Yip</title>
+<meta name="description" content="My Monte Carlo study of the 3D classical Heisenberg model, from the Ising model and cluster algorithms to finite-size scaling, with live simulations and the real data.">
+
+
+  <meta name="author" content="Henry Yip">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="Simulating the 3D Heisenberg magnet">
+<meta property="og:url" content="https://henry-yip.github.io/projects/heisenberg/">
+
+
+  <meta property="og:description" content="My Monte Carlo study of the 3D classical Heisenberg model, from the Ising model and cluster algorithms to finite-size scaling, with live simulations and the real data.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://henry-yip.github.io/projects/heisenberg/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+  </head>
+  <body class="xp" data-csp="/assets/data/csp.json">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+      <a class="xp-brand" href="/">Henry Yip</a>
+      <nav aria-label="Site">
+        <a href="/research/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/archive/">Archive</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <section class="xp-hero">
+      <div class="xp-hero-text">
+        <p class="xp-kicker">Final project · Computational Statistical Physics · ETH Zürich · Spring 2026</p>
+        <h1>Simulating the 3D Heisenberg magnet</h1>
+        <p class="xp-sub">My final project for Computational Statistical Physics: a Monte Carlo measurement of the critical temperature and critical exponents of the classical Heisenberg model, with small versions of the simulations running in your browser.</p>
+        
+        <dl class="xp-facts">
+          <div><dt>Critical temperature</dt><dd>Tc = 1.4430(10)</dd></div><div><dt>Correlation exponent</dt><dd>ν = 0.718(11)</dd></div><div><dt>Largest lattice</dt><dd>256³ ≈ 16.8 million spins</dd></div><div><dt>Universality class</dt><dd>3D O(3), all within 1σ</dd></div>
+        </dl>
+        
+      </div>
+      
+      <figure class="xp-hero-fig">
+        <canvas id="hero-cube" aria-label="A rotating 14 by 14 by 14 lattice of Heisenberg spins at the critical temperature, each arrow coloured by its direction." role="img"></canvas>
+        <figcaption>A live 14³ Heisenberg magnet at its critical temperature, updated by Wolff cluster flips. Drag to rotate.</figcaption>
+      </figure>
+      
+    </section>
+
+    <div class="xp-body">
+      <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      <main class="xp-article" id="xp-main">
+        <p>For my final project in <em>Computational Statistical Physics</em> at ETH Zürich I simulated the classical Heisenberg model on a cubic lattice and measured its critical temperature and five critical exponents. The project received full marks. The numbers themselves are known to much higher precision already. The point of the project was to get them from scratch and to understand where every error bar comes from.</p>
+
+<p>I have written this page for someone who knows some physics but has not met critical phenomena before, so it starts with the Ising model and works up to the measurements. The interactive simulations are small JavaScript versions I wrote for this page. The project code itself (Python with Numba, run on ETH’s Euler cluster) is not published here. The plots in the second half use the project’s actual data.</p>
+
+<h2 id="phase-transitions"><span class="num">01</span>Phase transitions</h2>
+
+<p>Iron stops being magnetic above 770 °C, its Curie temperature. Below that temperature the atomic magnetic moments line up and the metal has a net magnetisation \(m\). Above it they point in random directions and \(m = 0\).</p>
+
+<p>What makes the transition interesting is how \(m\) goes to zero. It does not jump. As the temperature approaches the critical temperature \(T_c\) from below, it shrinks like a power law,</p>
+
+\[m \sim (T_c - T)^{\beta}.\]
+
+<p>Close to \(T_c\) the magnet is full of fluctuating regions that are already ordered, with sizes up to a correlation length \(\xi\), and \(\xi\) diverges as</p>
+
+\[\xi \sim |T - T_c|^{-\nu}.\]
+
+<p>At \(T_c\) itself there are ordered patches of every size and no length scale stands out. The same thing happens at the liquid–gas critical point of a fluid, where density fluctuations become large enough to scatter light and the fluid turns milky (critical opalescence).</p>
+
+<p>The exponents \(\beta\), \(\nu\) and a few others are the critical exponents. Measuring them for the 3D Heisenberg model is what this project was about.</p>
+
+<h2 id="ising"><span class="num">02</span>The Ising model</h2>
+
+<p>The simplest model of a magnet puts a spin \(s_i = \pm 1\) on each site of a lattice. Neighbouring spins lower the energy when they agree:</p>
+
+\[H = -J \sum_{\langle i j\rangle} s_i s_j \;-\; h \sum_i s_i .\]
+
+<p>The first sum runs over nearest-neighbour pairs and \(h\) is an external field. At temperature \(T\) a configuration \(s\) appears with probability \(e^{-H(s)/T}/Z\), where \(Z\) normalises the distribution. I use units with \(k_B = J = 1\) throughout.</p>
+
+<p>Wilhelm Lenz proposed the model in 1920 and gave it to his student Ernst Ising, who solved the one-dimensional chain in 1925. He found no transition and guessed, wrongly, that there would be none in higher dimensions either. Peierls showed in 1936 that the 2D model does order, and Onsager solved it exactly in 1944. On the square lattice</p>
+
+\[T_c = \frac{2}{\ln(1+\sqrt 2)} \approx 2.269 .\]
+
+<p>Even this model is far too big to sum over directly. The lattice below has \(128^2\) spins and so \(2^{16\,384}\) configurations. A Monte Carlo simulation instead produces a sequence of configurations in which each one turns up with its Boltzmann probability.</p>
+
+<div class="xp-widget" id="ising-lab">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>The 2D Ising model, 128 × 128 spins</h3></div>
+  <div class="xp-stage">
+    <canvas class="xp-lattice" aria-label="Live 2D Ising lattice: light squares are up spins, dark squares are down spins." role="img"></canvas>
+    <div class="xp-controls">
+      <label class="xp-slider"><span><span>Temperature T</span> <output data-out="T">2.27</output></span>
+        <input type="range" min="1.0" max="4.0" step="0.01" value="2.27" data-ctl="T" /></label>
+      <div class="xp-row">
+        <button class="xp-btn" data-preset="1.6">Cold (1.6)</button>
+        <button class="xp-btn" data-preset="2.27">Critical (2.27)</button>
+        <button class="xp-btn" data-preset="3.4">Hot (3.4)</button>
+      </div>
+      <div class="xp-row">
+        <div class="xp-seg" role="group" aria-label="Update algorithm"><button data-algo="metropolis" aria-pressed="true">Metropolis</button><button data-algo="wolff" aria-pressed="false">Wolff</button></div>
+        <button class="xp-btn" data-act="play">Pause</button>
+      </div>
+      <div class="xp-row">
+        <button class="xp-btn" data-act="hot">Randomise</button>
+        <button class="xp-btn" data-act="cold">All up</button>
+      </div>
+      <dl class="xp-readout">
+        <div><dt>T / T<sub>c</sub></dt><dd data-out="ratio">1.00</dd></div>
+        <div><dt>|m|</dt><dd data-out="m">0</dd></div>
+        <div><dt>Energy per spin</dt><dd data-out="e">0</dd></div>
+      </dl>
+      <div>
+        <div class="xp-panel-title">|m| over time</div>
+        <canvas class="xp-trace" aria-hidden="true"></canvas>
+      </div>
+    </div>
+  </div>
+  <p class="xp-caption">Light squares are up spins, dark squares are down spins. Well below T<sub>c</sub> one direction takes over; well above it the lattice is noise. Near T<sub>c</sub> you get clusters on every scale, and with the Metropolis update they change slowly. The Wolff button switches to the cluster algorithm from section 6.</p>
+</div>
+
+<p>The Ising model gets used well outside magnetism, because “many two-state units that prefer to agree with their neighbours” describes a lot of systems:</p>
+
+<ul>
+  <li><strong>Fluids.</strong> Read each site as occupied or empty and you have a lattice gas (Lee and Yang, 1952). The liquid–gas critical point of real fluids has the same exponents as the 3D Ising model.</li>
+  <li><strong>Alloys.</strong> Order–disorder transitions in alloys such as β-brass (CuZn), where the two atom types arrange themselves on alternating sites.</li>
+  <li><strong>Neural networks.</strong> Hopfield networks (1982) and Boltzmann machines (1985) are Ising models whose couplings store patterns. This was the work behind the 2024 Nobel Prize in Physics.</li>
+  <li><strong>Images.</strong> Ising-type priors, in which neighbouring pixels tend to agree, were an early tool for denoising images (Geman and Geman, 1984).</li>
+  <li><strong>Optimisation.</strong> Problems such as max-cut can be written as finding the ground state of an Ising model, which is what quantum annealers are built to do.</li>
+  <li><strong>Biophysics.</strong> The helix–coil transition of polypeptides follows a one-dimensional Ising-type model (Zimm and Bragg, 1959).</li>
+</ul>
+
+<h2 id="vectors"><span class="num">03</span>From arrows to vectors</h2>
+
+<p>In the classical Heisenberg model each spin is a unit vector in three dimensions instead of a sign:</p>
+
+\[H = -J \sum_{\langle ij\rangle} \mathbf S_i \cdot \mathbf S_j \;-\; h \sum_i S_i^{z}, \qquad \lVert \mathbf S_i \rVert = 1 .\]
+
+<p>Heisenberg’s 1928 quantum version explained ferromagnetism through the exchange interaction; the classical model is its limit of large spin. Ising (\(n=1\) component), XY (\(n=2\)) and Heisenberg (\(n=3\)) together are the O(n) models.</p>
+
+<p>The difference that matters is the symmetry. Ising spins can only all be flipped, which is a discrete symmetry. Heisenberg spins can all be rotated together by any angle without changing the energy. A continuous symmetry allows spin waves, slow twists of the magnetisation across the sample that cost almost no energy, and in low dimensions these destroy order.</p>
+
+<div class="note"><span class="label">Mermin–Wagner theorem (1966)</span>
+<p>In one and two dimensions, a continuous symmetry cannot be spontaneously broken at any non-zero temperature if the interactions are short-ranged. A spin wave with wavevector \(k\) costs energy proportional to \(k^2\), so in two dimensions the total fluctuation \(\int \mathrm d^2k / k^2\) grows logarithmically with system size, and long-range order is lost.</p></div>
+
+<p>So the 2D Ising model orders but the 2D Heisenberg model never does. (The 2D XY model is a special case: it has no long-range order but still has the Berezinskii–Kosterlitz–Thouless transition, driven by vortices, which earned the 2016 Nobel Prize.) Three dimensions is the lowest dimension in which the Heisenberg model has an ordinary transition, at \(T_c \approx 1.443\) on the simple cubic lattice. Isotropic magnets such as EuO and EuS belong to the same universality class.</p>
+
+<p>The widget below runs both models at the same ratio \(T/T_c\).</p>
+
+<div class="xp-widget" id="compare">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>2D Ising and 3D Heisenberg at the same T / T<sub>c</sub></h3></div>
+  <div class="xp-stage even">
+    <div class="xp-panel">
+      <div class="xp-panel-title">2D Ising · 96 × 96 · two states</div>
+      <canvas class="xp-ising" aria-label="2D Ising lattice" role="img"></canvas>
+      <dl class="xp-readout"><div><dt>T</dt><dd data-out="Ti">2.27</dd></div><div><dt>|m|</dt><dd data-out="mi">0</dd></div></dl>
+    </div>
+    <div class="xp-panel">
+      <div class="xp-panel-title">3D Heisenberg · 16 × 16 × 16 · any direction</div>
+      <canvas class="xp-cube" aria-label="3D lattice of Heisenberg spins, drag to rotate" role="img"></canvas>
+      <canvas class="xp-slice" aria-label="Horizontal slice through the 3D Heisenberg lattice" role="img" hidden=""></canvas>
+      <dl class="xp-readout"><div><dt>T</dt><dd data-out="Th">1.44</dd></div><div><dt>|m|</dt><dd data-out="mh">0</dd></div></dl>
+    </div>
+  </div>
+  <div class="xp-controls" style="margin-top:16px">
+    <label class="xp-slider"><span><span>Relative temperature T / T<sub>c</sub></span> <output data-out="r">1.00</output></span>
+      <input type="range" min="0.5" max="1.8" step="0.01" value="1.0" data-ctl="r" /></label>
+    <div class="xp-row">
+      <button class="xp-btn" data-preset="0.7">Ordered (0.7)</button>
+      <button class="xp-btn" data-preset="1.0">Critical (1.0)</button>
+      <button class="xp-btn" data-preset="1.4">Disordered (1.4)</button>
+      <div class="xp-seg" role="group" aria-label="Heisenberg view"><button data-view="cube" aria-pressed="true">3D view</button><button data-view="slice" aria-pressed="false">Slice</button></div>
+      <button class="xp-btn" data-act="play">Pause</button>
+    </div>
+    <div class="xp-key"><span><i class="spin-wheel"></i>hue: direction in the horizontal plane</span><span>brightness: vertical component (bright = up, dark = down)</span></div>
+  </div>
+  <p class="xp-caption">Both lattices are updated with Wolff cluster moves and local Metropolis sweeps. In the ordered phase the Ising lattice settles on one of two colours. The Heisenberg magnet settles on one direction out of a whole sphere, and that direction drifts over time, which is why its colour changes slowly as a whole. You can rotate the cube or look at a slice through its middle.</p>
+</div>
+
+<h2 id="exponents"><span class="num">04</span>Critical exponents</h2>
+
+<p>Near the critical point most quantities behave as power laws in the reduced temperature \(t = (T - T_c)/T_c\) or in the field \(h\). The five exponents I measured are:</p>
+
+<table class="table-scroll">
+  <thead>
+    <tr>
+      <th>Exponent</th>
+      <th>Definition</th>
+      <th>Describes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>\(\beta\)</td>
+      <td>\(m \sim (-t)^{\beta}\)</td>
+      <td>how the magnetisation vanishes</td>
+    </tr>
+    <tr>
+      <td>\(\gamma\)</td>
+      <td>\(\chi \sim \lvert t\rvert^{-\gamma}\)</td>
+      <td>divergence of the susceptibility</td>
+    </tr>
+    <tr>
+      <td>\(\nu\)</td>
+      <td>\(\xi \sim \lvert t\rvert^{-\nu}\)</td>
+      <td>divergence of the correlation length</td>
+    </tr>
+    <tr>
+      <td>\(\eta\)</td>
+      <td>\(G(r) \sim r^{-(d-2+\eta)}\) at \(T_c\)</td>
+      <td>decay of correlations at \(T_c\)</td>
+    </tr>
+    <tr>
+      <td>\(\delta\)</td>
+      <td>\(M \sim h^{1/\delta}\) at \(T_c\)</td>
+      <td>response to a field at \(T_c\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>They are related by scaling laws, for example \(\gamma = \nu(2-\eta)\) and \(\gamma = \beta(\delta - 1)\). The one I used as a check is hyperscaling, which in terms of the ratios I measured reads</p>
+
+\[\frac{2\beta}{\nu} + \frac{\gamma}{\nu} = d .\]
+
+<p>The exponents are universal: they depend only on the dimension, on the number of spin components \(n\) and on the interactions being short-ranged, not on the lattice or the coupling strength. Kadanoff’s block-spin argument (1966) and Wilson’s renormalisation group (1971) explain why. The table shows how close the 3D classes are, which is what makes the measurement non-trivial.</p>
+
+<div class="table-scroll">
+<table>
+<thead><tr><th>Universality class</th><th class="num">β</th><th class="num">γ</th><th class="num">ν</th><th class="num">η</th><th class="num">δ</th></tr></thead>
+<tbody>
+<tr><td>Mean-field theory</td><td class="num">1/2</td><td class="num">1</td><td class="num">1/2</td><td class="num">0</td><td class="num">3</td></tr>
+<tr><td>2D Ising (exact)</td><td class="num">1/8</td><td class="num">7/4</td><td class="num">1</td><td class="num">1/4</td><td class="num">15</td></tr>
+<tr><td>3D Ising (n = 1)</td><td class="num">0.326</td><td class="num">1.237</td><td class="num">0.630</td><td class="num">0.036</td><td class="num">4.79</td></tr>
+<tr><td>3D XY (n = 2)</td><td class="num">0.349</td><td class="num">1.318</td><td class="num">0.672</td><td class="num">0.038</td><td class="num">4.78</td></tr>
+<tr class="hl"><td>3D Heisenberg (n = 3)</td><td class="num">0.369</td><td class="num">1.396</td><td class="num">0.711</td><td class="num">0.038</td><td class="num">4.78</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>The Heisenberg values are from Campostrini et al. (2002), the others from Pelissetto and Vicari (2002).</p>
+
+<h2 id="fss"><span class="num">05</span>Finite-size scaling</h2>
+
+<p>A simulation box of \(L \times L \times L\) spins with periodic boundaries cannot hold a correlation length much larger than \(L\), so nothing diverges. Finite-size scaling uses this. Near \(T_c\) the box size plays the role of \(\xi\), and at \(T_c\)</p>
+
+\[m(L, T_c) \sim L^{-\beta/\nu}, \qquad \chi(L, T_c) \sim L^{\gamma/\nu} .\]
+
+<p>More generally an observable \(Q\) with exponent \(\rho\) satisfies</p>
+
+\[Q(T, L) = L^{\rho/\nu}\, f\!\left((T - T_c)\, L^{1/\nu}\right).\]
+
+<p>For dimensionless ratios such as the Binder cumulant \(U_4\) and \(\xi_L / L\), \(\rho = 0\), so their curves for different \(L\) cross at \(T_c\). These relations only hold up to corrections of order \(L^{-\omega}\), with \(\omega \approx 0.773\) for this model (Hasenbusch, 2001). In practice that meant the small lattices were not much use for the final numbers, and I needed lattices up to \(L = 256\).</p>
+
+<h2 id="monte-carlo"><span class="num">06</span>Monte Carlo and cluster algorithms</h2>
+
+<h3 id="metropolis">Metropolis</h3>
+
+<p>A Markov chain Monte Carlo simulation moves between configurations with transition probabilities \(W(a \to b)\) chosen so that the chain samples the Boltzmann distribution. The standard sufficient condition is detailed balance, \(P(a)\, W(a \to b) = P(b)\, W(b \to a)\), together with every configuration being reachable.</p>
+
+<p>The Metropolis algorithm (1953) proposes a small change and accepts it with probability \(\min(1, e^{-\Delta E / T})\). For Heisenberg spins I rotated a spin by an angle \(\theta \in [-\theta_{\max}, \theta_{\max}]\) towards a random perpendicular direction \(\mathbf p\):</p>
+
+\[\mathbf S_i' = \cos\theta\, \mathbf S_i + \sin\theta\, \mathbf p .\]
+
+<p>I tried three cone widths at \(T_c\) with \(L = 10\). A narrow cone (\(\theta_{\max} = 0.35\)) was accepted 92% of the time but barely moved the spins; a completely random new direction was accepted only 43% of the time. I used a wide cone (\(\theta_{\max} = 1.20\), 73% acceptance) as a compromise. One sweep is \(L^3\) attempted updates.</p>
+
+<h3 id="critical-slowing-down">Critical slowing down</h3>
+
+<p>Near \(T_c\), Metropolis gets slow exactly where the measurements have to be made. The system consists of correlated regions as large as the box, and changing them one spin at a time takes many sweeps. The autocorrelation time grows as \(\tau \sim L^{z}\), and for my Metropolis runs \(z \approx 1.8\): about 300 sweeps at \(L = 16\) and about 3700 at \(L = 64\). At \(L = 256\) that would make every independent measurement far too expensive.</p>
+
+<h3 id="wolff-cluster-updates">Wolff cluster updates</h3>
+
+<p>Swendsen and Wang (1987), building on Fortuin and Kasteleyn’s random-cluster representation, showed how to flip whole clusters of spins without ever rejecting a move. Wolff (1989) simplified this to growing one cluster at a time:</p>
+
+<ol>
+  <li>Pick a random seed spin.</li>
+  <li>Add each aligned neighbour to the cluster with probability \(P_{\text{add}} = 1 - e^{-2J/T}\).</li>
+  <li>Repeat from every newly added spin until nothing more joins.</li>
+  <li>Flip the cluster.</li>
+</ol>
+
+<p>The reason this is exact is a short counting argument. Let \(n_{\text{same}}\) be the number of aligned bonds on the boundary of the cluster (all of which must have been rejected for the cluster to stop there) and \(n_{\text{opp}}\) the number of anti-aligned ones. Building the same cluster in the reverse move gives the factor \((1-P_{\text{add}})^{n_{\text{opp}}}\) instead of \((1-P_{\text{add}})^{n_{\text{same}}}\). The ratio, \(e^{-2J(n_{\text{same}} - n_{\text{opp}})/T}\), is exactly the Boltzmann factor of the energy change, so detailed balance holds with acceptance probability 1.</p>
+
+<p>The widget grows one cluster bond by bond.</p>
+
+<div class="xp-widget" id="wolff-grow">
+  <div class="xp-widget-head"><span class="xp-tag">Step by step</span><h3>Growing one Wolff cluster</h3></div>
+  <div class="xp-stage">
+    <canvas class="xp-lattice" aria-label="A 32 by 32 Ising lattice with a Wolff cluster highlighted" role="img"></canvas>
+    <div class="xp-controls">
+      <label class="xp-slider"><span><span>Temperature T</span> <output data-out="T">2.27</output></span>
+        <input type="range" min="1.5" max="3.5" step="0.01" value="2.27" data-ctl="T" /></label>
+      <dl class="xp-readout">
+        <div><dt>P<sub>add</sub> = 1 − e<sup>−2/T</sup></dt><dd data-out="p">0.586</dd></div>
+        <div><dt>Cluster size</dt><dd data-out="size">0</dd></div>
+        <div><dt>Bonds tested</dt><dd data-out="tested">0</dd></div>
+        <div><dt>Bonds accepted</dt><dd data-out="accepted">0</dd></div>
+        <div><dt>Waiting to grow</dt><dd data-out="waiting">0</dd></div>
+      </dl>
+      <div class="xp-row">
+        <button class="xp-btn primary" data-act="seed">Seed a cluster</button>
+        <button class="xp-btn" data-act="step">Grow one step</button>
+        <button class="xp-btn" data-act="auto" aria-pressed="false">Auto-grow</button>
+        <button class="xp-btn" data-act="flip">Flip cluster</button>
+      </div>
+      <p class="xp-caption" data-out="status" aria-live="polite"></p>
+      <div class="xp-key"><span><i style="--c:#d95926"></i>in the cluster</span><span><i style="--c:#199e70"></i>added, neighbours not yet checked</span><span><i class="ring"></i>seed and current site</span></div>
+    </div>
+  </div>
+  <p class="xp-caption">At low temperature P<sub>add</sub> is close to 1 and a cluster takes most of its domain. At high temperature clusters stay small. Near T<sub>c</sub> their sizes vary over every scale, roughly like the physical correlations, and that is why the algorithm decorrelates so quickly.</p>
+</div>
+
+<p>For Heisenberg spins Wolff’s idea needs one extra step. Choose a random unit vector \(\hat{\mathbf r}\) and use reflections through the plane perpendicular to it as the cluster move,</p>
+
+\[\mathbf S \to \mathbf S - 2(\mathbf S \cdot \hat{\mathbf r})\, \hat{\mathbf r}.\]
+
+<p>A neighbour joins the cluster with probability</p>
+
+\[P_{\text{add}} = 1 - \exp\!\left[-\frac{2}{T}\,(\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r})\right] \quad \text{when } (\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r}) &gt; 0 .\]
+
+<p>The projections onto \(\hat{\mathbf r}\) behave like Ising spins with bond-dependent couplings, so the same argument applies.</p>
+
+<h3 id="metropolis-against-wolff">Metropolis against Wolff</h3>
+
+<p>Both lattices below start from the same critical configuration, and each gets one sweep’s worth of work per frame.</p>
+
+<div class="xp-widget" id="race">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>Metropolis and Wolff at T<sub>c</sub></h3></div>
+  <div class="xp-stage even">
+    <div class="xp-panel"><div class="xp-panel-title">Metropolis (local)</div><canvas class="xp-metro" aria-label="Ising lattice updated by Metropolis" role="img"></canvas></div>
+    <div class="xp-panel"><div class="xp-panel-title">Wolff (cluster)</div><canvas class="xp-wolff" aria-label="Ising lattice updated by Wolff" role="img"></canvas></div>
+  </div>
+  <div style="margin-top:14px">
+    <div class="xp-key" style="margin-bottom:6px"><span><i style="--c:#3987e5"></i>Metropolis magnetisation m</span><span><i style="--c:#d95926"></i>Wolff magnetisation m</span><span>sweeps: <b data-out="sweeps">0</b></span></div>
+    <canvas class="xp-trace" aria-label="Magnetisation over time for both algorithms" role="img"></canvas>
+  </div>
+  <div class="xp-row" style="margin-top:12px"><button class="xp-btn" data-act="play">Pause</button><button class="xp-btn" data-act="reset">Restart from the same state</button></div>
+  <p class="xp-caption">The Metropolis magnetisation wanders slowly because its large domains hardly move. The Wolff magnetisation changes sign every few sweeps, so consecutive frames are close to independent samples.</p>
+</div>
+
+<p>In the real 3D runs the difference was large. One Wolff update flips only a fraction \(\langle \lvert C\rvert \rangle / L^3\) of the lattice, so to compare fairly I converted cluster updates to sweep-equivalents. In those units the Wolff autocorrelation time stayed between about 1 and 2 sweeps at every size I measured, while Metropolis grew as \(L^{1.8}\):</p>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Autocorrelation time at T<sub>c</sub>, 3D Heisenberg model</h3></div>
+  <div id="chart-tau"></div>
+  <p class="xp-caption">Integrated autocorrelation times of the magnetisation, estimated by blocking over independent seeds. The dashed line is a weighted power-law fit to the Metropolis points, with exponent z = <span data-out="zmetro">1.8</span>.</p>
+</div>
+
+<p>The reflection move only works because the zero-field energy is symmetric under \(\mathbf S \to -\mathbf S\). A field breaks that, so for the critical-isotherm runs in section 11 I went back to Metropolis. (There is a way around this: add a “ghost” spin coupled to every site, so that the field becomes an ordinary bond; Kent-Dobias and Sethna, 2018.)</p>
+
+<h2 id="observables"><span class="num">07</span>What gets measured</h2>
+
+<p>For each lattice size and temperature the simulation records:</p>
+
+<ul>
+  <li>the magnetisation per spin \(\mathbf M = \frac{1}{N}\sum_i \mathbf S_i\), with \(N = L^3\), and its length \(m = \lVert \mathbf M\rVert\). In a finite box at zero field \(\langle \mathbf M\rangle = \mathbf 0\) because the direction wanders (you can see this in the cube above), so I work with \(m\);</li>
+  <li>the susceptibility \(\chi = \frac{N}{T}\langle m^2\rangle\);</li>
+  <li>the Binder cumulant \(U_4 = 1 - \dfrac{\langle m^4\rangle}{3\langle m^2\rangle^2}\), which for three-component spins goes from \(2/3\) in the ordered phase to \(4/9\) in the disordered phase;</li>
+  <li>the correlation function \(G(r) = \frac{1}{N}\sum_i \langle \mathbf S_i \cdot \mathbf S_{i+r}\rangle\);</li>
+  <li>the second-moment correlation length, from the structure factor \(S(\mathbf k) = \sum_{\mathbf x} e^{i\mathbf k \cdot \mathbf x}\langle \mathbf S_0 \cdot \mathbf S_{\mathbf x}\rangle\):
+\(\xi_L = \frac{1}{2\sin(\pi/L)}\sqrt{\frac{S(\mathbf 0)}{S(\mathbf k_{\min})} - 1}, \qquad \mathbf k_{\min} = \frac{2\pi}{L}\hat{\mathbf e}_\alpha .\)</li>
+</ul>
+
+<p>Summing for \(S(\mathbf k)\) directly costs \(\mathcal O(L^6)\) per measurement, which is hopeless at \(L = 128\). With a fast Fourier transform, \(S(\mathbf k) = \lvert \mathrm{FFT}[\mathbf S(\mathbf x)]\rvert^2\) costs \(\mathcal O(L^3 \log L)\), and an inverse FFT of \(S(\mathbf k)\) gives \(G(r)\) for all displacements at once.</p>
+
+<p>Every \((L, T)\) point was run with 8 independent seeds. At large \(L\) I started Wolff from a fully ordered state, because starting from random spins took a long time to build up the magnetisation near \(T_c\). After thermalisation I estimated autocorrelation times by blocking: the time series is grouped into bins of size \(b = 2^\ell\) and</p>
+
+\[\tau^{(\ell)} = \tfrac12\left(\frac{b\,\sigma_\ell^2}{\sigma_0^2} - 1\right)\]
+
+<p>levels off at the true \(\tau\) once \(b \gg \tau\).</p>
+
+<h2 id="tc"><span class="num">08</span>Finding T<sub>c</sub></h2>
+
+<p>Because \(U_4\) does not depend on \(L\) at \(T_c\), the curves for different lattice sizes cross there.</p>
+
+<div class="xp-widget" id="chart-binder">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Binder cumulant crossings</h3>
+    <div class="xp-seg" role="group" aria-label="Lattice sizes"><button data-binder="large" aria-pressed="true">L = 48 – 128</button><button data-binder="small" aria-pressed="false">L = 4 – 12</button></div></div>
+  <div class="xp-plot"></div>
+  <p class="xp-caption">Brighter curves are larger lattices. The large lattices cross in a narrow window. The small lattices (other tab) were a preliminary check; their crossings drift with L because of the L<sup>−ω</sup> corrections, so I left them out of the final estimate.</p>
+</div>
+
+<p>The five large sizes give ten pairwise crossings. Taking their mean, with a seed bootstrap for the error (section 12),</p>
+
+\[T_c = 1.4430 \pm 0.0010 ,\]
+
+<p>which agrees with \(T_c = 1/\beta_c = 1.4430(2)\) from Holm and Janke (1993). All the critical-point runs below use \(T = 1.443\).</p>
+
+<h2 id="ratios"><span class="num">09</span>β/ν and γ/ν</h2>
+
+<p>At \(T_c\) the magnetisation and susceptibility are power laws in \(L\), so the slopes on a log–log plot give \(-\beta/\nu\) and \(\gamma/\nu\).</p>
+
+<div class="xp-grid2">
+  <div class="xp-widget"><div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Magnetisation at T<sub>c</sub></h3></div><div id="chart-fss-m"></div></div>
+  <div class="xp-widget"><div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Susceptibility at T<sub>c</sub></h3></div><div id="chart-fss-chi"></div></div>
+</div>
+
+<p>The small lattices clearly bend away from the line. I chose the lower cutoff from the fit quality: with \(L_{\min} \le 32\) the reduced \(\chi^2\) was between about 30 and 100, and with \(L_{\min} = 48\) it dropped to about 1.0 and 1.9. Fitting \(L = 48\) to \(256\) gives</p>
+
+\[\frac{\beta}{\nu} = 0.508 \pm 0.012, \qquad \frac{\gamma}{\nu} = 1.991 \pm 0.030,\]
+
+<p>both within \(1\sigma\) of the literature. The hyperscaling check gives \(2\beta/\nu + \gamma/\nu = 3.006 \pm 0.039\), which is \(0.15\sigma\) from 3.</p>
+
+<h2 id="collapse"><span class="num">10</span>ν from a data collapse</h2>
+
+<p>The scaling form says that \(\xi_L / L\) depends on \(T\) and \(L\) only through \(x = (T - T_c)\, L^{1/\nu}\). If you plot the data against \(x\) with the right \(T_c\) and \(\nu\), all five lattice sizes should lie on one curve; with the wrong values they spread apart. The sliders below do exactly this with my data.</p>
+
+<div class="xp-widget" id="collapse-lab">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Data collapse</h3></div>
+  <div class="xp-plot"></div>
+  <div class="xp-controls" style="margin-top:12px">
+    <label class="xp-slider"><span><span>Exponent ν</span> <output data-out="nu">0.7175</output></span>
+      <input type="range" min="0.45" max="1.05" step="0.0025" value="0.7175" data-ctl="nu" /></label>
+    <label class="xp-slider"><span><span>Critical temperature T<sub>c</sub></span> <output data-out="tc">1.4430</output></span>
+      <input type="range" min="1.438" max="1.448" step="0.0002" value="1.4430" data-ctl="tc" /></label>
+    <div class="xp-row">
+      <button class="xp-btn" data-nu="0.5" data-tc="1.443">Mean field (ν = 1/2)</button>
+      <button class="xp-btn" data-nu="0.63" data-tc="1.443">3D Ising (0.630)</button>
+      <button class="xp-btn" data-nu="0.6717" data-tc="1.443">3D XY (0.672)</button>
+      <button class="xp-btn primary" data-nu="0.7175" data-tc="1.443">My best fit (0.7175)</button>
+    </div>
+    <dl class="xp-readout">
+      <div><dt>Collapse score χ²/pt</dt><dd data-out="score">–</dd></div>
+      <div><dt>Verdict</dt><dd data-out="quality">–</dd></div>
+    </dl>
+  </div>
+  <p class="xp-caption">The score holds out each lattice size in turn, predicts it by interpolating the other four along the rescaled axis, and averages the squared misses in units of the error bars. A value near 1 means the curves agree within their errors. The Ising and XY values of ν do not collapse the data.</p>
+</div>
+
+<p>A collapse has no fitting function, so the usual count of degrees of freedom does not apply. I scored candidate \((T_c, \nu)\) pairs with the leave-one-out score above and minimised it on a grid. The result is</p>
+
+\[\nu = 0.7175 \pm 0.0106 ,\]
+
+<p>where 0.0064 of the error comes from a seed bootstrap and 0.0085 from how much \(\nu\) moved when I dropped the smallest lattice. That is \(0.6\sigma\) from the literature value \(0.7112(5)\). I tried the same collapse with \(U_4\) and got \(\nu = 0.719 \pm 0.013\), but its score was about 3.1 compared with 1.29 for \(\xi_L/L\), so I used \(\xi_L/L\) for the final number.</p>
+
+<h2 id="eta-delta"><span class="num">11</span>η and δ</h2>
+
+<h3 id="the-correlation-function-at-tc">The correlation function at T<sub>c</sub></h3>
+
+<p>At \(T_c\) in three dimensions, \(G(r) \sim r^{-(1+\eta)}\). On a periodic lattice, though, two spins a distance \(r\) apart are also a distance \(L - r\) apart the other way round the box, and both paths contribute. That is why the measured curves bend upwards as \(r\) approaches \(L/2\):</p>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag">Schematic</span><h3>Why G(r) bends up in a periodic box (L = 128)</h3></div>
+  <div id="chart-images"></div>
+</div>
+
+<p>I fitted all five lattice sizes together with one shared exponent and an amplitude and offset for each size:</p>
+
+\[G(L, r) = A_L\left[r^{-(1+\eta)} + (L - r)^{-(1+\eta)}\right] + B_L, \qquad 8 \le r \le L/2 .\]
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Spin–spin correlation function at T<sub>c</sub></h3></div>
+  <div id="chart-gr"></div>
+  <p class="xp-caption">Points are measurements, brighter for larger lattices. The lines are the joint fit with a single η, drawn over the fit range 8 ≤ r ≤ L/2.</p>
+</div>
+
+<p>This gives \(\eta = 0.036 \pm 0.022\), within \(0.1\sigma\) of the literature value \(0.0375(5)\). Most of the error comes from the choice of inner cutoff: \(\eta\) moved by about 0.04 as I varied \(r_{\min}\) from 4 to 8. As a cross-check, \(\chi \sim L^{2-\eta}\) on the same lattices gives \(\eta = 0.026 \pm 0.013\).</p>
+
+<h3 id="the-critical-isotherm">The critical isotherm</h3>
+
+<p>The last exponent describes the response to a field at \(T_c\), \(M_z \sim h^{1/\delta}\). A straight log–log fit on the largest lattice gives \(\delta_{\text{eff}} = 5.01\), well above the literature value. The problem is corrections to scaling in the field. The renormalisation group (derived in the appendix of my report) suggests</p>
+
+\[M_z(L, h) = A_L\, h^{1/\delta}\left(1 + B_L\, h^{p} + C_L\, h^{2p}\right), \qquad p = \frac{\omega \nu}{\beta \delta} \simeq 0.31 ,\]
+
+<p>which I fitted jointly over \(L \ge 32\) and \(h \le 0.1\):</p>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Critical isotherm M<sub>z</sub>(h) at T<sub>c</sub></h3></div>
+  <div id="chart-isotherm"></div>
+  <p class="xp-caption">Three of the eight lattice sizes are shown. Solid lines are the fit with correction terms over its range, h ≤ 0.1; the shaded region lies outside it. The dashed line is a pure power law with the literature δ. At larger fields the data fall below the pure power law, which is what biases a naive fit.</p>
+</div>
+
+<p>The corrected fit gives \(\delta = 4.79 \pm 0.09\) with \(\chi^2/\text{dof} = 0.70\), against \(4.783(3)\) in the literature.</p>
+
+<h2 id="errors"><span class="num">12</span>Error bars</h2>
+
+<p>Each uncertainty I quote has two parts added in quadrature,</p>
+
+\[\sigma = \sqrt{\sigma_{\text{sample}}^2 + \sigma_{\text{choice}}^2} .\]
+
+<p>The sample part estimates how much the answer would move with new random seeds. For the slope fits (β/ν, γ/ν, η, δ) this is the usual least-squares error, the change in the parameter that raises \(\chi^2\) by 1. \(T_c\) and \(\nu\) come from crossings and collapses rather than slopes, so for those I used a seed bootstrap: resample the eight seeds with replacement, rebuild every \((L, T)\) point from the same resampled seeds, redo the analysis, and repeat 2000 times. Using the same seeds at every temperature keeps the correlations between neighbouring temperatures intact.</p>
+
+<p>The choice part covers decisions the data do not settle, mainly which lattice sizes go into a fit. I took the largest shift when the smallest lattices were dropped, or for \(\eta\) half the spread over \(r_{\min} \in \{4, 5, 6, 8\}\).</p>
+
+<p>For most of the exponents the choice part was the larger of the two. Corrections to scaling, not statistical noise, were the main limitation.</p>
+
+<h2 id="results"><span class="num">13</span>Results</h2>
+
+<div class="table-scroll">
+<table>
+<thead><tr><th>Quantity</th><th class="num">This work</th><th class="num">Literature</th><th class="num">Deviation</th></tr></thead>
+<tbody>
+<tr><td>T<sub>c</sub></td><td class="num">1.4430(10)</td><td class="num">1.4430(2)</td><td class="num">0.0σ</td></tr>
+<tr><td>β/ν</td><td class="num">0.508(12)</td><td class="num">0.5188(3)</td><td class="num">0.9σ</td></tr>
+<tr><td>γ/ν</td><td class="num">1.991(30)</td><td class="num">1.9625(5)</td><td class="num">1.0σ</td></tr>
+<tr><td>ν</td><td class="num">0.7175(106)</td><td class="num">0.7112(5)</td><td class="num">0.6σ</td></tr>
+<tr><td>η</td><td class="num">0.036(22)</td><td class="num">0.0375(5)</td><td class="num">0.1σ</td></tr>
+<tr><td>δ</td><td class="num">4.79(9)</td><td class="num">4.783(3)</td><td class="num">0.1σ</td></tr>
+<tr><td>2β/ν + γ/ν</td><td class="num">3.006(39)</td><td class="num">3 (exact)</td><td class="num">0.15σ</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Each result against the literature</h3></div>
+  <div id="chart-pull"></div>
+  <p class="xp-caption">Each point is (this work − literature) divided by the combined error. The shaded band is ±1σ.</p>
+</div>
+
+<p>All six results agree with the 3D O(3) values within one standard deviation, and the collapse rules out the neighbouring Ising and XY values of \(\nu\). Without the Wolff algorithm, lattices of \(L = 256\) would have been out of reach.</p>
+
+<h2 id="outlook"><span class="num">14</span>Limitations</h2>
+
+<p>The literature values come from Campostrini et al. (2002), who used an improved φ⁴ Hamiltonian, tuned so that the leading \(L^{-\omega}\) corrections cancel, together with high-temperature series. Their error bars are far smaller than anything a direct simulation of the standard model can reach, so my results are best seen as a consistency check on the universality class, not a competing measurement.</p>
+
+<p>The main limitations were:</p>
+
+<ul>
+  <li>the standard model has sizeable \(L^{-\omega}\) corrections, which dominate several of my error bars;</li>
+  <li>eight seeds per point was what the compute time allowed;</li>
+  <li>the field runs used Metropolis, which is slow at large \(L\), so the isotherm stops at \(L = 128\);</li>
+  <li>several observables come from the same Wolff runs, so their errors are correlated.</li>
+</ul>
+
+<p>A more precise follow-up would use histogram reweighting around \(T_c\), a denser temperature grid, or an improved Hamiltonian.</p>
+
+<h2 id="references"><span class="num">15</span>References</h2>
+
+<ol class="refs">
+  <li>K. Binder, “Finite size scaling analysis of Ising model block distribution functions,” <em>Z. Phys. B</em> <strong>43</strong>, 119 (1981).</li>
+  <li>M. Campostrini, M. Hasenbusch, A. Pelissetto, P. Rossi and E. Vicari, “Critical exponents and equation of state of the three-dimensional Heisenberg universality class,” <em>Phys. Rev. B</em> <strong>65</strong>, 144520 (2002).</li>
+  <li>M. Hasenbusch, “Eliminating leading corrections to scaling in the three-dimensional O(N)-symmetric φ⁴ model: N = 3 and 4,” <em>J. Phys. A</em> <strong>34</strong>, 8221 (2001).</li>
+  <li>C. Holm and W. Janke, “Critical exponents of the classical three-dimensional Heisenberg model: a single-cluster Monte Carlo study,” <em>Phys. Rev. B</em> <strong>48</strong>, 936 (1993).</li>
+  <li>J. Kent-Dobias and J. P. Sethna, “Cluster representations and the Wolff algorithm in arbitrary external fields,” <em>Phys. Rev. E</em> <strong>98</strong>, 063306 (2018).</li>
+  <li>J.-K. Kim, A. J. F. de Souza and D. P. Landau, “Numerical computation of finite size scaling functions: an alternative approach to finite size scaling,” <em>Phys. Rev. E</em> <strong>54</strong>, 2291 (1996).</li>
+  <li>N. D. Mermin and H. Wagner, “Absence of ferromagnetism or antiferromagnetism in one- or two-dimensional isotropic Heisenberg models,” <em>Phys. Rev. Lett.</em> <strong>17</strong>, 1133 (1966).</li>
+  <li>N. Metropolis, A. W. Rosenbluth, M. N. Rosenbluth, A. H. Teller and E. Teller, “Equation of state calculations by fast computing machines,” <em>J. Chem. Phys.</em> <strong>21</strong>, 1087 (1953).</li>
+  <li>A. Pelissetto and E. Vicari, “Critical phenomena and renormalization-group theory,” <em>Phys. Rep.</em> <strong>368</strong>, 549 (2002).</li>
+  <li>R. H. Swendsen and J.-S. Wang, “Nonuniversal critical dynamics in Monte Carlo simulations,” <em>Phys. Rev. Lett.</em> <strong>58</strong>, 86 (1987).</li>
+  <li>U. Wolff, “Collective Monte Carlo updating for spin systems,” <em>Phys. Rev. Lett.</em> <strong>62</strong>, 361 (1989).</li>
+</ol>
+
+      </main>
+    </div>
+
+    <footer class="xp-footer">
+      <p>&copy; 2026 Henry Yip · <a href="/projects/">More projects</a> · <a href="/">Home</a></p>
+    </footer>
+
+    <script type="module" src="/assets/explore/csp.js"></script>
+    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
+</script>
+
+
+
+
+  </body>
+</html>
