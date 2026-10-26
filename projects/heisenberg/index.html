@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light">
     
 <!-- begin _includes/seo.html --><title>Simulating the 3D Heisenberg magnet | Henry Yip</title>
 <meta name="description" content="My Monte Carlo study of the 3D classical Heisenberg model, from the Ising model and cluster algorithms to finite-size scaling, with live simulations and the real data.">
@@ -71,7 +71,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
     <link rel="stylesheet" href="/assets/explore/explore.css">
   </head>
   <body class="xp" data-csp="/assets/data/csp.json">
@@ -79,10 +79,10 @@
     <header class="xp-bar">
       <a class="xp-brand" href="/">Henry Yip</a>
       <nav aria-label="Site">
+        <a href="/about/">About</a>
         <a href="/research/">Research</a>
         <a href="/projects/">Projects</a>
         <a href="/archive/">Archive</a>
-        <a href="/about/">About</a>
       </nav>
     </header>
 
@@ -112,7 +112,7 @@
 
 <p>I have written this page for someone who knows some physics but has not met critical phenomena before, so it starts with the Ising model and works up to the measurements. The interactive simulations are small JavaScript versions I wrote for this page. The project code itself (Python with Numba, run on ETH’s Euler cluster) is not published here. The plots in the second half use the project’s actual data.</p>
 
-<h2 id="phase-transitions"><span class="num">01</span>Phase transitions</h2>
+<h2 id="phase-transitions"><span class="num">1</span>Phase transitions</h2>
 
 <p>Iron stops being magnetic above 770 °C, its Curie temperature. Below that temperature the atomic magnetic moments line up and the metal has a net magnetisation \(m\). Above it they point in random directions and \(m = 0\).</p>
 
@@ -128,7 +128,7 @@
 
 <p>The exponents \(\beta\), \(\nu\) and a few others are the critical exponents. Measuring them for the 3D Heisenberg model is what this project was about.</p>
 
-<h2 id="ising"><span class="num">02</span>The Ising model</h2>
+<h2 id="ising"><span class="num">2</span>The Ising model</h2>
 
 <p>The simplest model of a magnet puts a spin \(s_i = \pm 1\) on each site of a lattice. Neighbouring spins lower the energy when they agree:</p>
 
@@ -187,7 +187,7 @@
   <li><strong>Biophysics.</strong> The helix–coil transition of polypeptides follows a one-dimensional Ising-type model (Zimm and Bragg, 1959).</li>
 </ul>
 
-<h2 id="vectors"><span class="num">03</span>From arrows to vectors</h2>
+<h2 id="vectors"><span class="num">3</span>From arrows to vectors</h2>
 
 <p>In the classical Heisenberg model each spin is a unit vector in three dimensions instead of a sign:</p>
 
@@ -234,7 +234,7 @@
   <p class="xp-caption">Both lattices are updated with Wolff cluster moves and local Metropolis sweeps. In the ordered phase the Ising lattice settles on one of two colours. The Heisenberg magnet settles on one direction out of a whole sphere, and that direction drifts over time, which is why its colour changes slowly as a whole. You can rotate the cube or look at a slice through its middle.</p>
 </div>
 
-<h2 id="exponents"><span class="num">04</span>Critical exponents</h2>
+<h2 id="exponents"><span class="num">4</span>Critical exponents</h2>
 
 <p>Near the critical point most quantities behave as power laws in the reduced temperature \(t = (T - T_c)/T_c\) or in the field \(h\). The five exponents I measured are:</p>
 
@@ -296,7 +296,7 @@
 
 <p>The Heisenberg values are from Campostrini et al. (2002), the others from Pelissetto and Vicari (2002).</p>
 
-<h2 id="fss"><span class="num">05</span>Finite-size scaling</h2>
+<h2 id="fss"><span class="num">5</span>Finite-size scaling</h2>
 
 <p>A simulation box of \(L \times L \times L\) spins with periodic boundaries cannot hold a correlation length much larger than \(L\), so nothing diverges. Finite-size scaling uses this. Near \(T_c\) the box size plays the role of \(\xi\), and at \(T_c\)</p>
 
@@ -308,7 +308,7 @@
 
 <p>For dimensionless ratios such as the Binder cumulant \(U_4\) and \(\xi_L / L\), \(\rho = 0\), so their curves for different \(L\) cross at \(T_c\). These relations only hold up to corrections of order \(L^{-\omega}\), with \(\omega \approx 0.773\) for this model (Hasenbusch, 2001). In practice that meant the small lattices were not much use for the final numbers, and I needed lattices up to \(L = 256\).</p>
 
-<h2 id="monte-carlo"><span class="num">06</span>Monte Carlo and cluster algorithms</h2>
+<h2 id="monte-carlo"><span class="num">6</span>Monte Carlo and cluster algorithms</h2>
 
 <h3 id="metropolis">Metropolis</h3>
 
@@ -356,7 +356,7 @@
       <div class="xp-row">
         <button class="xp-btn primary" data-act="seed">Seed a cluster</button>
         <button class="xp-btn" data-act="step">Grow one step</button>
-        <button class="xp-btn" data-act="auto" aria-pressed="false">Auto-grow</button>
+        <button class="xp-btn" data-act="play" aria-pressed="true">Pause</button>
         <button class="xp-btn" data-act="flip">Flip cluster</button>
       </div>
       <p class="xp-caption" data-out="status" aria-live="polite"></p>
@@ -404,7 +404,7 @@
 
 <p>The reflection move only works because the zero-field energy is symmetric under \(\mathbf S \to -\mathbf S\). A field breaks that, so for the critical-isotherm runs in section 11 I went back to Metropolis. (There is a way around this: add a “ghost” spin coupled to every site, so that the field becomes an ordinary bond; Kent-Dobias and Sethna, 2018.)</p>
 
-<h2 id="observables"><span class="num">07</span>What gets measured</h2>
+<h2 id="observables"><span class="num">7</span>What gets measured</h2>
 
 <p>For each lattice size and temperature the simulation records:</p>
 
@@ -425,7 +425,7 @@
 
 <p>levels off at the true \(\tau\) once \(b \gg \tau\).</p>
 
-<h2 id="tc"><span class="num">08</span>Finding T<sub>c</sub></h2>
+<h2 id="tc"><span class="num">8</span>Finding T<sub>c</sub></h2>
 
 <p>Because \(U_4\) does not depend on \(L\) at \(T_c\), the curves for different lattice sizes cross there.</p>
 
@@ -442,7 +442,7 @@
 
 <p>which agrees with \(T_c = 1/\beta_c = 1.4430(2)\) from Holm and Janke (1993). All the critical-point runs below use \(T = 1.443\).</p>
 
-<h2 id="ratios"><span class="num">09</span>β/ν and γ/ν</h2>
+<h2 id="ratios"><span class="num">9</span>β/ν and γ/ν</h2>
 
 <p>At \(T_c\) the magnetisation and susceptibility are power laws in \(L\), so the slopes on a log–log plot give \(-\beta/\nu\) and \(\gamma/\nu\).</p>
 

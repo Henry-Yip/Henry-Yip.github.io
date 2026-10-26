@@ -3,12 +3,12 @@
 export const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // Run `tick` every frame while `node` is visible and `isPlaying()` is true.
-export function onScreenLoop(node, tick, isPlaying = () => true) {
-  let visible = false, raf = 0;
-  const frame = () => {
+export function onScreenLoop(node, tick, isPlaying = () => true, fps = 60) {
+  let visible = false, raf = 0, last = -Infinity;
+  const frame = (now) => {
     raf = 0;
     if (!visible || document.hidden || !isPlaying()) return;
-    tick();
+    if (now - last >= 1000 / fps - 1) { last = now; tick(); }
     raf = requestAnimationFrame(frame);
   };
   const kick = () => { if (!raf && visible && isPlaying()) raf = requestAnimationFrame(frame); };

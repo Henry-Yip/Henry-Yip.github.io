@@ -5,7 +5,7 @@ import { serifGreek } from "./lib/greek.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
-const BLUE = "#3987e5", ORANGE = "#d95926", AQUA = "#199e70", INK_MUTED = "#8b94a3";
+const BLUE = "#2a78d6", ORANGE = "#eb6834", AQUA = "#1baf7a", INK_MUTED = "#6b7483"; // light-page chart colours
 
 // ---------------------------------------------------------------- thermodynamics
 const LV = 2.5e6, CP = 1005, EPS = 0.622, RD = 287.04, G = 9.81;

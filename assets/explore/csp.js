@@ -8,9 +8,9 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 // Colour roles (validated on the dark chart surface).
-const L_RAMP = ["#1c5cab", "#2a78d6", "#5598e7", "#86b6ef", "#b7d3f6"]; // ordinal: small L -> large L
+const L_RAMP = ["#86b6ef", "#5598e7", "#2a78d6", "#1c5cab", "#104281"]; // ordinal on a light page: small L light -> large L dark
 const METRO = "#3987e5", WOLFF = "#d95926", AQUA = "#199e70";
-const INK_MUTED = "#8b94a3";
+const INK_MUTED = "#6b7483";
 
 const fmt = (v, d = 3) => (Math.abs(v) < 1e-12 ? "0" : v.toFixed(d));
 
@@ -42,12 +42,12 @@ function hero() {
   if (!canvas) return;
   const model = new Heisenberg3D(14, 11);
   for (let k = 0; k < 60; k++) model.wolffSweep(HEIS_TC);
-  const view = new CubeView(canvas, model, { autoRotate: 0.003 });
+  const view = new CubeView(canvas, model, { autoRotate: 0.0015 });
   let frame = 0;
   view.draw(false);
   if (reducedMotion) return;
   onScreenLoop(canvas, () => {
-    if (frame++ % 3 === 0) model.wolff(HEIS_TC);
+    if (frame++ % 90 === 0) model.wolff(HEIS_TC); // one cluster flip every 1.5 s
     view.draw();
   });
   window.addEventListener("resize", () => { view.resize(); view.draw(false); });
@@ -73,7 +73,7 @@ function isingLab() {
     out("m", fmt(Math.abs(m)));
     out("e", fmt(model.energy()));
   };
-  const loop = onScreenLoop(root, step, () => play.playing);
+  const loop = onScreenLoop(root, step, () => play.playing, 10);
   play.onToggle(() => loop.kick());
   slider.addEventListener("input", () => {
     T = +slider.value;
@@ -96,7 +96,7 @@ function compare() {
   const ising = new Ising2D(96, 5), heis = new Heisenberg3D(16, 9);
   const iv = new LatticeView($("canvas.xp-ising", root), 96);
   const cubeCanvas = $("canvas.xp-cube", root), sliceCanvas = $("canvas.xp-slice", root);
-  const cv = new CubeView(cubeCanvas, heis, { autoRotate: 0.002, onDrag: () => !play.playing && cv.draw(false) });
+  const cv = new CubeView(cubeCanvas, heis, { autoRotate: 0, onDrag: () => !play.playing && cv.draw(false) });
   const slider = $('[data-ctl="r"]', root);
   let r = +slider.value, mode = "cube", frame = 0;
   const play = bindPlay(root);
@@ -115,7 +115,7 @@ function compare() {
     if (frame++ % 2 === 0) { heis.wolffSweep(r * HEIS_TC); heis.metropolisSweep(r * HEIS_TC); }
     drawAll(true);
   };
-  const loop = onScreenLoop(root, step, () => play.playing);
+  const loop = onScreenLoop(root, step, () => play.playing, 10);
   play.onToggle(() => loop.kick());
   slider.addEventListener("input", () => {
     r = +slider.value;
@@ -144,9 +144,8 @@ function wolffGrow() {
   const L = 32, model = new Ising2D(L, 17);
   const view = new LatticeView($("canvas.xp-lattice", root), L, { layers: [WOLFF, AQUA], grid: true });
   const slider = $('[data-ctl="T"]', root);
-  let T = +slider.value, grow = null, auto = false, timer = 0;
+  let T = +slider.value, grow = null, hold = 0;
   const out = (k, v) => { const o = $(`[data-out="${k}"]`, root); if (o) o.textContent = v; };
-  const autoBtn = $('[data-act="auto"]', root);
 
   const equilibrate = () => { for (let k = 0; k < 200; k++) model.wolffSweep(T); };
   const redraw = () => {
@@ -157,27 +156,35 @@ function wolffGrow() {
     out("tested", grow ? grow.tested : 0);
     out("accepted", grow ? grow.accepted : 0);
     out("waiting", grow ? grow.stack.length : 0);
-    out("status", !grow ? "Press “Seed a cluster”." : grow.done ? "Cluster complete: flip it." : "Growing…");
+    out("status", !grow ? "Seeding a new cluster…" : grow.done ? "Cluster complete; flipping it." : "Growing…");
   };
   const newCluster = () => { grow = new WolffGrowth(model, T); redraw(); };
-  const stopAuto = () => { auto = false; clearInterval(timer); autoBtn.textContent = "Auto-grow"; autoBtn.setAttribute("aria-pressed", false); };
+  // runs on its own: seed, grow (faster as the cluster gets bigger), show it, flip it, repeat
+  const play = bindPlay(root);
+  const stopAuto = () => { play.playing = false; };
+  const tick = () => {
+    if (hold > 0) { hold--; return; }
+    if (!grow) { newCluster(); hold = 2; return; }
+    if (!grow.done) {
+      const k = 1 + Math.floor(grow.size / 8);
+      for (let i = 0; i < k && grow.step(); i++);
+      redraw();
+      if (grow.done) hold = 10;
+      return;
+    }
+    grow.flip(); grow = null; redraw(); hold = 6;
+  };
+  const loop = onScreenLoop(root, tick, () => play.playing, 8);
+  play.onToggle(() => loop.kick());
 
   slider.addEventListener("input", () => {
     T = +slider.value;
     out("T", T.toFixed(2));
     out("p", (1 - Math.exp(-2 / T)).toFixed(3));
   });
-  slider.addEventListener("change", () => { stopAuto(); grow = null; equilibrate(); redraw(); });
+  slider.addEventListener("change", () => { grow = null; hold = 0; equilibrate(); redraw(); });
   $('[data-act="seed"]', root).addEventListener("click", () => { stopAuto(); newCluster(); });
-  $('[data-act="step"]', root).addEventListener("click", () => { if (!grow) newCluster(); else grow.step(); redraw(); });
-  autoBtn.addEventListener("click", () => {
-    if (auto) return stopAuto();
-    if (!grow || grow.done) newCluster();
-    auto = true;
-    autoBtn.textContent = "Stop";
-    autoBtn.setAttribute("aria-pressed", true);
-    timer = setInterval(() => { if (!grow.step()) stopAuto(); redraw(); }, reducedMotion ? 400 : 60);
-  });
+  $('[data-act="step"]', root).addEventListener("click", () => { stopAuto(); if (!grow) newCluster(); else grow.step(); redraw(); });
   $('[data-act="flip"]', root).addEventListener("click", () => {
     stopAuto();
     if (!grow) return;
@@ -213,7 +220,7 @@ function race() {
     trace.push(a.magnetization(), b.magnetization());
     out("sweeps", sweeps);
   };
-  const loop = onScreenLoop(root, step, () => play.playing);
+  const loop = onScreenLoop(root, step, () => play.playing, 10);
   play.onToggle(() => loop.kick());
   $('[data-act="reset"]', root).addEventListener("click", () => { b.s.set(a.s); trace.clear(); sweeps = 0; va.draw(a.s); vb.draw(b.s); });
   va.draw(a.s);
@@ -223,6 +230,8 @@ function race() {
 
 // ---------------------------------------------------------------- charts from the simulation data
 async function dataCharts() {
+  // charts sit on the light page, so they use the light-surface versions of the same three hues
+  const METRO = "#2a78d6", WOLFF = "#eb6834", AQUA = "#1baf7a";
   if (!$("#chart-binder")) return;
   const D = await (await fetch(document.body.dataset.csp)).json();
   const lColor = (series) => (L) => L_RAMP[series.map((s) => s.L).indexOf(L)];

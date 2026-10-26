@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark">
+    <meta name="color-scheme" content="light">
     
 <!-- begin _includes/seo.html --><title>How strong can a hurricane get? | Henry Yip</title>
 <meta name="description" content="Tropical cyclone potential intensity explained: the Carnot-cycle argument, how well the bound holds, the ERA5 reanalysis, and what spatial and temporal remapping do to it.">
@@ -71,7 +71,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
     <link rel="stylesheet" href="/assets/explore/explore.css">
   </head>
   <body class="xp">
@@ -79,10 +79,10 @@
     <header class="xp-bar">
       <a class="xp-brand" href="/">Henry Yip</a>
       <nav aria-label="Site">
+        <a href="/about/">About</a>
         <a href="/research/">Research</a>
         <a href="/projects/">Projects</a>
         <a href="/archive/">Archive</a>
-        <a href="/about/">About</a>
       </nav>
     </header>
 
@@ -112,13 +112,13 @@
 
 <p>This page is not a summary of my results. It explains the ideas the project rests on: where the potential-intensity formula comes from, how well it works, what the ERA5 data are, and what regridding and averaging actually do. The interactive figures use synthetic or idealised data.</p>
 
-<h2 id="why"><span class="num">01</span>Why potential intensity</h2>
+<h2 id="why"><span class="num">1</span>Why potential intensity</h2>
 
 <p>In 2005 Hurricane Katrina killed well over a thousand people and caused more than 100 billion US dollars of damage, and Rita and Wilma followed within weeks. Forecasting where a storm goes has improved steadily for decades. Forecasting how strong it gets, and especially when it will intensify rapidly, remains much harder.</p>
 
 <p>How strong a storm can become depends largely on its environment: how warm the ocean is, how cold the upper troposphere is, and how moist the air near the surface is. Potential intensity (PI) condenses this into one wind speed. It is used as a predictor in statistical intensity forecasts such as SHIPS and in rapid-intensification indices, and in climate studies of how storm intensity might change with warming.</p>
 
-<h2 id="carnot"><span class="num">02</span>A hurricane as a heat engine</h2>
+<h2 id="carnot"><span class="num">2</span>A hurricane as a heat engine</h2>
 
 <p>Kerry Emanuel’s insight, developed in the 1980s, was that a mature hurricane works like a Carnot heat engine. Follow a parcel of air around the circulation in the animation at the top of the page:</p>
 
@@ -161,7 +161,7 @@
 
 <p>The CAPE values depend on the surface pressure under the eyewall, which itself depends on the wind speed, so the equations are solved iteratively. Implementations such as pyPI (Gilford, 2021) do this from gridded reanalysis fields, and the result is usually multiplied by about 0.8 to convert from the wind at the top of the boundary layer to a 10-metre wind.</p>
 
-<h2 id="calculator"><span class="num">03</span>Changing the inputs</h2>
+<h2 id="calculator"><span class="num">3</span>Changing the inputs</h2>
 
 <p>The simplified enthalpy form above is enough to see which ingredients matter. The calculator assumes boundary-layer air 1 °C cooler than the sea at the chosen relative humidity, and a surface pressure of 1015 hPa.</p>
 
@@ -192,7 +192,7 @@
 
 <p>The efficiency barely changes across realistic conditions; what moves the answer is the air–sea disequilibrium \(k_0^* - k\), which grows quickly with sea surface temperature because saturation humidity rises by about 7% per degree (the Clausius–Clapeyron relation). The ratio \(C_k/C_d\) enters directly, and it is one of the less certain parts of the theory: measurements in strong winds are difficult, and estimates of the ratio in hurricane conditions mostly fall somewhat below 1.</p>
 
-<h2 id="bound"><span class="num">04</span>Does the bound hold?</h2>
+<h2 id="bound"><span class="num">4</span>Does the bound hold?</h2>
 
 <p>Potential intensity is a ceiling, not a forecast. Most storms never get near it. Emanuel (2000) found that once a storm’s peak intensity is expressed as a fraction of its potential intensity, the values are spread widely below 1. Storms are held back by things the theory leaves out: vertical wind shear tilting the vortex, dry air mixing into the core, the storm cooling the ocean beneath it by stirring up colder water, and landfall.</p>
 
@@ -208,7 +208,7 @@
 
 <p>For most of a storm’s life PI does behave as an upper bound; the cases where winds exceed it are usually short and fall into one of these categories.</p>
 
-<h2 id="era5"><span class="num">05</span>ERA5</h2>
+<h2 id="era5"><span class="num">5</span>ERA5</h2>
 
 <p>To compute potential intensity everywhere and at every time, you need the temperature and humidity of the whole atmosphere above each point of ocean. No observing system measures that directly, so the project used a reanalysis.</p>
 
@@ -224,7 +224,7 @@
 
 <p>For potential intensity the inputs are the sea-surface temperature, the mean sea-level pressure, and the temperature and specific humidity on the pressure levels. The outflow temperature \(T_o\) is not an input: it comes out of the calculation as the temperature at which a parcel lifted from the sea surface stops being buoyant, usually near the tropopause.</p>
 
-<h2 id="spatial"><span class="num">06</span>Spatial remapping</h2>
+<h2 id="spatial"><span class="num">6</span>Spatial remapping</h2>
 
 <p>Remapping means transferring a field from one grid to another. A coarser grid is often what is available or affordable: statistical intensity predictors are traditionally computed from fields at 1° to 2.5°, and climatologies of potential intensity are often built on grids of about 2.5°.</p>
 
@@ -261,7 +261,7 @@
 
 <p>The second is the coast. A target cell that straddles the coastline gets its sea-surface temperature only from the sea part, but its atmospheric profile is an average over sea and land, and the air over land can be very different. The result can be a physically inconsistent column that still produces a finite, plausible-looking number. Comparisons between grids therefore have to deal with coastlines explicitly, for example by keeping only cells that are entirely ocean on both grids, or by measuring the distance of each point from the coast.</p>
 
-<h2 id="temporal"><span class="num">07</span>Temporal remapping</h2>
+<h2 id="temporal"><span class="num">7</span>Temporal remapping</h2>
 
 <p>The same questions arise in time. ERA5’s ensemble provides fields every 3 hours, but many applications use daily or monthly means. There are two ways to produce a windowed potential intensity:</p>
 
@@ -289,13 +289,13 @@
 
 <p>This matters for intensity forecasting. Rapid intensification, usually defined as an increase of at least 30 knots in 24 hours, is a short-lived event. A monthly-mean potential intensity is fine for climatology, but it removes exactly the brief high-PI conditions that rapid-intensification predictors are meant to pick up.</p>
 
-<h2 id="project"><span class="num">08</span>What the project looked at</h2>
+<h2 id="project"><span class="num">8</span>What the project looked at</h2>
 
 <p>Using the ERA5 ensemble over the western tropical Atlantic, the project compared potential intensity computed on the native 0.5° grid with potential intensity computed after remapping the inputs to coarser grids, with particular attention to coastlines. It compared the two orders of time-averaging over windows from 6 hours to a month. It also checked whether PI stays above the observed winds along the tracks of ten Category 5 hurricanes, including Katrina, Rita and Wilma in 2005.</p>
 
 <p>I was supervised by Prof. Ulrike Lohmann and Dr Bernhard Enz in the Atmospheric Physics group of the Institute for Atmospheric and Climate Science. The report itself is not published here.</p>
 
-<h2 id="references"><span class="num">09</span>References</h2>
+<h2 id="references"><span class="num">9</span>References</h2>
 
 <ol class="refs">
   <li>M. Bister and K. A. Emanuel, “Dissipative heating and hurricane intensity,” <em>Meteorol. Atmos. Phys.</em> <strong>65</strong>, 233 (1998).</li>
