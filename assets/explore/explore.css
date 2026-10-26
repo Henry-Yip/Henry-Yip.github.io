@@ -158,6 +158,7 @@ canvas.xp-lattice, canvas.xp-ising, canvas.xp-slice, canvas.xp-metro, canvas.xp-
   display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: var(--screen); image-rendering: pixelated;
 }
 canvas.xp-raster { display: block; width: 100%; margin-top: 8px; }
+canvas.tb-orbit, canvas.tb-sphere { display: block; width: 100%; max-width: 100%; background: var(--screen); border-radius: 2px; }
 canvas.xp-cube { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); cursor: grab; touch-action: none; }
 canvas.xp-cube:active { cursor: grabbing; }
 canvas.xp-trace { display: block; width: 100%; height: 90px; background: var(--screen); border-radius: 2px; }
@@ -176,6 +177,7 @@ canvas.xp-trace { display: block; width: 100%; height: 90px; background: var(--s
 }
 .xp-btn:hover, .xp-seg button:hover { background: var(--surface); }
 .xp-btn.primary { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+a.xp-btn { display: inline-block; text-decoration: none; margin: 4px 6px 4px 0; }
 .xp-btn.primary:hover { background: var(--ink-2); }
 .xp-btn:focus-visible, .xp-seg button:focus-visible, .xp-slider input:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .xp-seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 4px; overflow: hidden; }

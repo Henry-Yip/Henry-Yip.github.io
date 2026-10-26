@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    
+<!-- begin _includes/seo.html --><title>The three-body problem | Henry Yip</title>
+<meta name="description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, periodic orbits on the shape sphere, the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres, with live simulations.">
+
+
+  <meta name="author" content="Henry Yip">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="The three-body problem">
+<meta property="og:url" content="https://henry-yip.github.io/projects/three-body/">
+
+
+  <meta property="og:description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, periodic orbits on the shape sphere, the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres, with live simulations.">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://henry-yip.github.io/projects/three-body/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
+</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+  </head>
+  <body class="xp">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+      <a class="xp-brand" href="/">Henry Yip</a>
+      <nav aria-label="Site">
+        <a href="/about/">About</a>
+        <a href="/research/">Research</a>
+        <a href="/projects/">Projects</a>
+        <a href="/archive/">Archive</a>
+      </nav>
+    </header>
+
+    <section class="xp-hero">
+      <div class="xp-hero-text">
+        <p class="xp-kicker">Summer research project · School of Physics and Astronomy, University of Edinburgh · 2024</p>
+        <h1>The three-body problem</h1>
+        <p class="xp-sub">My 2024 summer research project: why three gravitating bodies have no general solution, how to integrate them without losing energy, and a set of periodic orbits computed in your browser.</p>
+        
+        <dl class="xp-facts">
+          <div><dt>Supervisor</dt><dd>Prof. Jenni Smillie</dd></div><div><dt>Funding</dt><dd>Career Development Scholarship</dd></div><div><dt>Period</dt><dd>June–September 2024</dd></div><div><dt>Paper</dt><dd>Edinburgh Student Journal of Science, 2025</dd></div>
+        </dl>
+        
+      </div>
+      
+      <figure class="xp-hero-fig">
+        <canvas id="hero-orbit" aria-label="Three bodies of equal mass chasing each other around a figure-eight orbit, each leaving a fading trail." role="img"></canvas>
+        <figcaption>The figure-eight orbit, computed in your browser with a fourth-order symplectic integrator.</figcaption>
+      </figure>
+      
+    </section>
+
+    <div class="xp-body">
+      <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      <main class="xp-article" id="xp-main">
+        <p>In the summer of 2024 I spent eight weeks on the gravitational three-body problem in the School of Physics and Astronomy at the University of Edinburgh, supervised by Prof. Jenni Smillie and funded by a Career Development Scholarship. The project had two aims: to reproduce and visualise important orbits, and to understand two landmark results, the proof that the figure-eight orbit exists and the convergence of Sundman’s series.</p>
+
+<p>This page goes through the main ideas, with small simulations running in your browser. The full write-up is in the <a href="/assets/Project_Report.pdf">final report (PDF)</a>, and I kept a <a href="/research/#research-log">research log</a> while the project ran. One part became a short <a href="https://doi.org/10.2218/esjs.10064">student journal paper</a> on Euler’s problem of two fixed centres.</p>
+
+<h2 id="problem"><span class="num">1</span>The problem</h2>
+
+<p>Three point masses attract each other by Newtonian gravity:</p>
+
+\[m_i\,\ddot{\mathbf r}_i = \sum_{j\neq i} \frac{G m_i m_j\,(\mathbf r_j-\mathbf r_i)}{\lVert \mathbf r_j-\mathbf r_i\rVert^3}, \qquad i = 1, 2, 3.\]
+
+<p>For two bodies this reduces to one body moving in a central force, and the orbits are conic sections: Kepler’s ellipses, parabolas and hyperbolas. With three bodies there is no such reduction. The conserved quantities (energy, momentum and angular momentum) are not enough to pin down the motion, and many motions are chaotic: two starting points that differ by a tiny amount end up far apart.</p>
+
+<p>Throughout this page the three masses are equal and I use units with \(G = m = 1\).</p>
+
+<h2 id="history"><span class="num">2</span>A short history</h2>
+
+<ul>
+  <li><strong>1687.</strong> Newton’s <em>Principia</em> treats the motion of the Moon under the pull of both the Earth and the Sun, the first three-body problem.</li>
+  <li><strong>1767.</strong> Euler finds solutions in which the three bodies stay on a rotating straight line.</li>
+  <li><strong>1772.</strong> Lagrange finds solutions in which they stay at the corners of a rotating equilateral triangle.</li>
+  <li><strong>1887.</strong> Bruns shows that there are no further conserved quantities of a simple algebraic kind.</li>
+  <li><strong>1890.</strong> Poincaré’s prize memoir for King Oscar II uncovers the extreme sensitivity to initial conditions that we now call chaos.</li>
+  <li><strong>1912.</strong> Sundman finds a power series that solves the problem for all time (section 6).</li>
+  <li><strong>1993.</strong> Moore finds the figure-eight orbit numerically.</li>
+  <li><strong>2000.</strong> Chenciner and Montgomery prove that it exists (section 5).</li>
+  <li><strong>2013.</strong> Šuvakov and Dmitrašinović find thirteen new families of periodic orbits, with names such as butterfly, moth and yin-yang.</li>
+  <li><strong>2017.</strong> Li and Liao find more than six hundred more.</li>
+</ul>
+
+<h2 id="integrators"><span class="num">3</span>Integrating without losing energy</h2>
+
+<p>With no formula, the orbits have to be computed numerically. The simplest method, Euler’s, moves the positions and velocities forward along their current rates of change. It is easy to write and it fails: the energy drifts steadily, so orbits slowly spiral outwards or inwards.</p>
+
+<p>Gravity is a Hamiltonian system, with energy \(H = T(\mathbf p) + V(\mathbf q)\), and its time evolution preserves areas in phase space (it is a <em>symplectic</em> map). A symplectic integrator is a time step that preserves them too. Splitting each step into <em>kicks</em>, in which only the velocities change, and <em>drifts</em>, in which only the positions change, gives such steps automatically, because each piece is an exact Hamiltonian flow on its own:</p>
+
+\[\mathbf v \leftarrow \mathbf v + c_k\,\Delta t\,\mathbf a(\mathbf x), \qquad \mathbf x \leftarrow \mathbf x + d_k\,\Delta t\,\mathbf v, \qquad k = 1, \ldots, s.\]
+
+<p>One kick and one drift give symplectic Euler. With \(c = (\tfrac12, \tfrac12)\) and \(d = (1, 0)\) this is the velocity Verlet method. Ruth’s third-order scheme and Forest and Ruth’s fourth-order scheme use three and four stages with carefully chosen coefficients. A symplectic integrator does not conserve the energy exactly, but it exactly conserves a slightly modified Hamiltonian, so the energy error stays bounded instead of drifting. The classical fourth-order Runge–Kutta method is just as accurate per step but not symplectic, and its error keeps growing.</p>
+
+<div class="xp-widget" id="drift-lab">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>Energy error of five integrators on the figure-eight orbit</h3></div>
+  <div class="xp-plot"></div>
+  <div class="xp-controls" style="margin-top:10px">
+    <label class="xp-slider"><span><span>Time step Δt</span> <output data-out="dt">0.01</output></span>
+      <input type="range" min="0" max="4" step="1" value="2" data-ctl="dt" /></label>
+    <div class="table-scroll"><table>
+      <thead><tr><th>Method</th><th class="num">Largest relative energy error</th><th class="num">Force evaluations per unit time</th></tr></thead>
+      <tbody></tbody>
+    </table></div>
+  </div>
+  <p class="xp-caption">Each method integrates twenty periods of the figure-eight from the same starting point. The two dashed methods are not symplectic, and their errors keep growing; the symplectic ones level off. Forest–Ruth costs four force evaluations per step, the same as Runge–Kutta, and at the default step its error is about eight times smaller.</p>
+</div>
+
+<h2 id="orbits"><span class="num">4</span>Periodic orbits</h2>
+
+<p>Most three-body motions are chaotic, but special starting points give orbits that repeat exactly. A family studied by Šuvakov and Dmitrašinović starts with the three bodies on a line, at \((-1, 0)\), \((1, 0)\) and \((0, 0)\), with velocities \((a, b)\), \((a, b)\) and \((-2a, -2b)\), so that the total momentum is zero. Different values of \((a, b)\) give the figure-eight, butterflies, moths and more.</p>
+
+<p>The orbits below are computed in your browser over one period with the fourth-order integrator and \(\Delta t = 10^{-4}\).</p>
+
+<div class="xp-widget" id="gallery">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>Five periodic orbits and their paths on the shape sphere</h3></div>
+  <div class="xp-stage even">
+    <div class="xp-panel"><div class="xp-panel-title">The three bodies</div><canvas class="tb-orbit" role="img" aria-label="The three bodies moving along the selected periodic orbit."></canvas></div>
+    <div class="xp-panel"><div class="xp-panel-title">The shape sphere</div><canvas class="tb-sphere" role="img" aria-label="The path of the triangle's shape on the shape sphere, with the collinear shapes on the equator."></canvas></div>
+  </div>
+  <div class="xp-controls" style="margin-top:12px">
+    <div class="xp-row">
+      <div class="xp-seg" role="group" aria-label="Orbit"><button data-orbit="figure-eight" aria-pressed="true">Figure-eight</button><button data-orbit="butterfly I" aria-pressed="false">Butterfly I</button><button data-orbit="moth I" aria-pressed="false">Moth I</button><button data-orbit="goggles" aria-pressed="false">Goggles</button><button data-orbit="yin-yang I" aria-pressed="false">Yin-yang I</button></div>
+      <button class="xp-btn" data-act="play" aria-pressed="true">Pause</button>
+    </div>
+    <dl class="xp-readout">
+      <div><dt>Period</dt><dd data-out="T">–</dd></div>
+      <div><dt>Distance from the start after one period</dt><dd data-out="gap">–</dd></div>
+    </dl>
+  </div>
+  <p class="xp-caption">Left: the bodies over one period, with the whole orbit drawn faintly. Right: the same motion on the shape sphere described in the next section; the dashed equator holds the collinear shapes. Many of these orbits are unstable, so a small error grows until the orbit breaks apart after a few periods; the figure-eight is a notable exception.</p>
+</div>
+
+<p>Some orbits, such as the dragonfly and the yarn, include very close encounters that a fixed step of \(10^{-4}\) cannot follow; they need much smaller steps, or steps that shrink during the encounter. All sixteen orbits, computed with \(\Delta t = 10^{-5}\), are in the visualisation described in section 8.</p>
+
+<h2 id="figure-eight"><span class="num">5</span>The shape sphere and the figure-eight</h2>
+
+<p>Much of the motion of three bodies does not change the shape of the triangle they form: moving it around, rotating it, or scaling it up and down. Removing these leaves just the shape, and the possible shapes form a sphere, the <em>shape sphere</em>. Writing the positions as complex numbers \(x_1, x_2, x_3\) with their centre of mass at the origin, the Jacobi coordinates</p>
+
+\[z_1=\tfrac{1}{\sqrt2}\left(x_3-x_2\right), \qquad z_2=\sqrt{\tfrac23}\left(x_1-\tfrac12\left(x_2+x_3\right)\right)\]
+
+<p>map to a point on the unit sphere,</p>
+
+\[\left(u_1,\; u_2 + i u_3\right) = \frac{\left(\lvert z_1\rvert^2-\lvert z_2\rvert^2,\; 2\bar z_1 z_2\right)}{\lvert z_1\rvert^2+\lvert z_2\rvert^2}.\]
+
+<p>Collinear triangles make up the equator \(u_3 = 0\), with the three binary collisions on it, and the two equilateral triangles, one for each orientation, are the poles. On the sphere the figure-eight crosses the equator at the Euler configurations, where one body sits exactly midway between the other two, and passes over isosceles shapes in between.</p>
+
+<p>Chenciner and Montgomery’s proof that the figure-eight exists works on this sphere:</p>
+
+<ol>
+  <li>Minimise the action \(A = \int_0^{T} \left(\tfrac12 K + U\right) dt\), where \(K\) is the kinetic term and \(U\) the sum of the inverse distances, over paths from an Euler configuration to an isosceles configuration. The minimiser is one twelfth of the orbit.</li>
+  <li>Show that the minimiser has no collisions: find a lower bound for the action of any path that contains a collision, and a collision-free test path whose action is smaller.</li>
+  <li>Use the symmetries of the equal-mass problem to join twelve copies of this arc smoothly into one closed curve.</li>
+  <li>Check that the result solves the equations of motion and traces a figure eight in the plane.</li>
+</ol>
+
+<p>The <a href="/Figure8Proof/">figure-eight post</a> in the research log goes through the steps in more detail.</p>
+
+<h2 id="sundman"><span class="num">6</span>Sundman’s series</h2>
+
+<p>In 1912 Karl Sundman proved that as long as the total angular momentum is not zero, so that all three bodies cannot collide at once, the motion can be written as a power series that converges for all time. He removed the singularities of two-body collisions with a new time variable, then mapped the region where the solution is analytic onto the unit disc.</p>
+
+<p>In principle this is a general solution. In practice it is useless. For a simple case, Lagrange’s equilateral solution, my estimate in the research log is that following the motion to one decimal place, even for a short time, needs about \(10^{8\,000\,000}\) terms. The research log goes through the construction in <a href="/Sundman/">part 1</a> and the estimate in <a href="/Convergence/">part 2</a>.</p>
+
+<h2 id="euler"><span class="num">7</span>Euler’s problem of two fixed centres</h2>
+
+<p>If two of the bodies are held in place and only the third moves, the problem becomes Euler’s problem of two fixed centres. Unlike the full problem it is integrable: in prolate spheroidal coordinates the motion separates, and besides the energy there is a second conserved quantity. Its orbits fall into three types: satellite orbits around one centre, planetary orbits around both, and lemniscate orbits that pass between them.</p>
+
+<p>Reproducing these orbits with the symplectic integrator, and checking them against the two conserved quantities, became a short <a href="https://doi.org/10.2218/esjs.10064">student journal paper</a>, an early and exploratory piece of work. The research log covers the coordinates and the orbit types in <a href="/EulerProblem/">part I</a>, <a href="/EulerProblemPlots/">part II</a> and <a href="/TwoBodyProblemNew/">part III</a>.</p>
+
+<h2 id="visualisation"><span class="num">8</span>The visualisation, with Allison Lau</h2>
+
+<p>Allison Lau (University of Toronto) built an interactive website on top of the project. It plays sixteen periodic orbits, computed with the project’s symplectic integrators at orders one to four, so you can see how the lower-order methods distort an orbit, alongside their paths on the shape sphere.</p>
+
+<p><a href="https://three-body-problem.vercel.app/" class="xp-btn primary">Open the visualisation</a> <a href="https://github.com/Henry-Yip/Three-Body-Problem" class="xp-btn">Source code on GitHub</a></p>
+
+<h2 id="references"><span class="num">9</span>References</h2>
+
+<ol class="refs">
+  <li>J. Barrow-Green, <em>Poincaré and the Three Body Problem</em> (American Mathematical Society, 1997).</li>
+  <li>A. Chenciner and R. Montgomery, “A remarkable periodic solution of the three-body problem in the case of equal masses,” <em>Ann. Math.</em> <strong>152</strong>, 881 (2000).</li>
+  <li>E. Forest and R. D. Ruth, “Fourth-order symplectic integration,” <em>Physica D</em> <strong>43</strong>, 105 (1990).</li>
+  <li>E. Hairer, C. Lubich and G. Wanner, <em>Geometric Numerical Integration</em>, 2nd ed. (Springer, 2006).</li>
+  <li>X. Li and S. Liao, “More than six hundred new families of Newtonian periodic planar collisionless three-body orbits,” <em>Sci. China Phys. Mech. Astron.</em> <strong>60</strong>, 129511 (2017).</li>
+  <li>C. Moore, “Braids in classical dynamics,” <em>Phys. Rev. Lett.</em> <strong>70</strong>, 3675 (1993).</li>
+  <li>D. Ó'Mathúna, <em>Integrable Systems in Celestial Mechanics</em> (Birkhäuser, 2008).</li>
+  <li>R. D. Ruth, “A canonical integration technique,” <em>IEEE Trans. Nucl. Sci.</em> <strong>30</strong>, 2669 (1983).</li>
+  <li>K. F. Sundman, “Mémoire sur le problème des trois corps,” <em>Acta Math.</em> <strong>36</strong>, 105 (1912).</li>
+  <li>M. Šuvakov and V. Dmitrašinović, “Three classes of Newtonian three-body planar periodic orbits,” <em>Phys. Rev. Lett.</em> <strong>110</strong>, 114301 (2013).</li>
+  <li>H. Yip and J. M. Smillie, “An analysis of the restricted Euler problem using symplectic integrators,” <em>Edinburgh Student Journal of Science</em> <strong>1</strong>(3) (2025).</li>
+</ol>
+
+      </main>
+    </div>
+
+    <footer class="xp-footer">
+      <p>&copy; 2026 Henry Yip · <a href="/projects/">More projects</a> · <a href="/">Home</a></p>
+    </footer>
+
+    <script type="module" src="/assets/explore/threebody.js"></script>
+    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
+</script>
+
+
+
+
+  </body>
+</html>
