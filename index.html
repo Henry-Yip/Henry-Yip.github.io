@@ -1,20 +1,10 @@
-
-
 <!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
-  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
-  Copyright 2024-2026 iBug - ibugone.com | @iBug
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-
-<html lang="en-GB" class="no-js" dir="ltr">
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
     
-<meta charset="utf-8">
-
-
 <!-- begin _includes/seo.html --><title>Henry Yip</title>
 <meta name="description" content="Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.">
 
@@ -34,7 +24,7 @@
 
 
 
-  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/henry-portrait.jpg">
   
 
 
@@ -74,24 +64,10 @@
 
 <!-- end _includes/seo.html -->
 
-
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  window.enable_copy_code_button = true;
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
-
-
-
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
 <!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -107,227 +83,47 @@
   });
 </script>
 
+<!-- Looping animations play like GIFs, except for readers who ask for reduced motion -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll("video.gif-video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+  });
+</script>
+
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+    <link rel="stylesheet" href="/assets/explore/site.css">
   </head>
-
-  <body class="layout--single">
-    
-<nav class="skip-links" aria-label="Skip links">
-  <ul>
-    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-  </ul>
-</nav>
-
-    
-
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
-        
-        <a class="site-title" href="/">
-          Henry Yip
-          
-        </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >About</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/research/"
-                
-                
-              >Research</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/projects/"
-                
-                
-              >Projects</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/archive/"
-                
-                
-              >Archive</a>
-            </li></ul>
-        
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
+  <body class="xp xp-site">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+  <a class="xp-brand" href="/">Henry Yip</a>
+  <nav aria-label="Site">
+    <a href="/about/">About</a>
+    <a href="/research/">Research</a>
+    <a href="/projects/">Projects</a>
+    <a href="/archive/">Archive</a>
+    <a class="xp-search-link" href="/search/" aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+  </nav>
+</header>
 
 
-    <div class="initial-content">
-      
-
-
-
-
-
-
-
-<div id="main" role="main">
-  
-
-  <div class="sidebar sticky">
-  
-
-
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="https://henry-yip.github.io/">
-        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
-
+    <section class="xp-hero xp-hero--text">
+      <div class="xp-hero-text xp-person">
+        <img class="xp-portrait" src="/assets/images/henry-portrait.jpg" alt="Henry Yip" width="600" height="600">
+        <div>
+          <p class="xp-kicker">MSc Physics · ETH Zürich</p>
+          <h1>Henry Yip</h1>
+          <p class="xp-sub">I work at the intersection of computational physics, atmospheric dynamics and machine learning for weather prediction, with a focus on tropical cyclones.</p>
+          <p class="xp-contact"><a href="mailto:hoyiph@student.ethz.ch">hoyiph@student.ethz.ch</a><span aria-hidden="true"> · </span><a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a><span aria-hidden="true"> · </span><a href="https://github.com/Henry-Yip">GitHub</a></p>
+        </div>
       </div>
-    
-  </div>
+    </section>
 
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-          
-            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
-            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
-            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  
-  </div>
-
-
-
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    
-    
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          
-          
-
-
-
-
-        </header>
-      
-
-      <section class="page__content e-content" itemprop="text">
-        
-        <p class="intro">I'm Henry Yip, an MSc Physics student at ETH Zürich. I work at the intersection of computational physics, atmospheric dynamics and machine learning for weather prediction, with a focus on tropical cyclones.</p>
-
-<h2>Research</h2>
+    <div class="xp-body">
+      <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      <main class="xp-article" id="xp-main">
+        <h2 id="research">Research</h2>
 
 <ul class="timeline">
   <li><span class="timeline__when">Summer 2026</span><span class="timeline__what"><strong>Hong Kong Observatory, summer intern.</strong> AI-based tropical cyclone track and intensity prediction: a machine-learning post-processing pipeline for global AI weather models that substantially reduces intensity forecast errors. First-author paper submitted.</span></li>
@@ -338,21 +134,57 @@
   <li><span class="timeline__when">2023–24</span><span class="timeline__what"><strong><a href="/ESRAProject/">Research team leader</a></strong>, Edinburgh Scientific Researchers Association. Modelling liquid slosh with coupled pendulums and a wave equation.</span></li>
 </ul>
 
-<h2>Interests</h2>
+<h2 id="interests">Interests</h2>
 
 <p>Tropical cyclones, numerical weather prediction, climate modelling, and machine learning for atmospheric science.</p>
 
-<h2>Write-ups</h2>
+<h2 id="write-ups">Write-ups</h2>
 
-<ul>
-  <li><a href="/projects/heisenberg/">Simulating the 3D Heisenberg magnet</a>: Ising and Heisenberg spins, cluster algorithms and finite-size scaling, with live simulations.</li>
-  <li><a href="/projects/potential-intensity/">How strong can a hurricane get?</a> Potential intensity from the Carnot cycle, the ERA5 reanalysis, and what regridding and time-averaging do to the inputs.</li>
-  <li><a href="/ESRAProject/">Modelling liquid slosh with pendulums and waves</a>: a research problem with simulations of both models.</li>
-  <li><a href="/projects/kolmogorov/">JAX-CFD and Dedalus on Kolmogorov flow</a>: two spectral solvers compared on an exact solution, the onset of instability, chaos and turbulence, with a live solver.</li>
-  <li><a href="/projects/three-body/">The three-body problem</a>: history, symplectic integrators, and a map of periodic orbits you can explore in 3D.</li>
-</ul>
+<div class="xp-cards wide">
+  <a class="xp-card" href="/projects/heisenberg/">
+    <img src="/assets/images/og/heisenberg-thumb.jpg" alt="" width="600" height="315" loading="lazy" decoding="async">
+    <span class="xp-card-body">
+      <span class="xp-card-kicker">Final project · Computational Statistical Physics · ETH Zürich · 2026</span>
+      <span class="xp-card-title">Simulating the 3D Heisenberg magnet</span>
+      <span class="xp-card-text">Ising and Heisenberg spins, Metropolis and Wolff updates and finite-size scaling, with live simulations and the measured critical temperature and exponents.</span>
+    </span>
+  </a>
+  <a class="xp-card" href="/projects/potential-intensity/">
+    <img src="/assets/images/og/potential-intensity-thumb.jpg" alt="" width="600" height="315" loading="lazy" decoding="async">
+    <span class="xp-card-body">
+      <span class="xp-card-kicker">Semester project · Atmospheric Physics · ETH Zürich · 2026</span>
+      <span class="xp-card-title">How strong can a hurricane get?</span>
+      <span class="xp-card-text">Potential intensity from the Carnot cycle, when the bound fails, the ERA5 reanalysis, and what regridding and time-averaging do to the inputs.</span>
+    </span>
+  </a>
+  <a class="xp-card" href="/projects/kolmogorov/">
+    <img src="/assets/images/og/kolmogorov-thumb.jpg" alt="" width="600" height="315" loading="lazy" decoding="async">
+    <span class="xp-card-body">
+      <span class="xp-card-kicker">Methods comparison · tools from summer research, University of Edinburgh · 2025</span>
+      <span class="xp-card-title">JAX-CFD and Dedalus on Kolmogorov flow</span>
+      <span class="xp-card-text">Two spectral solvers on the same 2D flow: an exact solution, the onset of instability, chaos at Re = 40, turbulence at Re = 2000, cost and gradients, with a live solver.</span>
+    </span>
+  </a>
+  <a class="xp-card" href="/projects/three-body/">
+    <img src="/assets/images/og/three-body-thumb.jpg" alt="" width="600" height="315" loading="lazy" decoding="async">
+    <span class="xp-card-body">
+      <span class="xp-card-kicker">Summer research · University of Edinburgh · 2024</span>
+      <span class="xp-card-title">The three-body problem</span>
+      <span class="xp-card-text">History, symplectic integrators and energy drift, a map of periodic orbits with a live 3D view, and the figure-eight proof.</span>
+    </span>
+  </a>
+  <a class="xp-card" href="/ESRAProject/">
+    <img src="/assets/images/og/slosh-thumb.jpg" alt="" width="600" height="315" loading="lazy" decoding="async">
+    <span class="xp-card-body">
+      <span class="xp-card-kicker">Research problem · Edinburgh Scientific Researchers Association · 2023–24</span>
+      <span class="xp-card-title">Modelling liquid slosh with pendulums and waves</span>
+      <span class="xp-card-text">A chain of pendulums and a shallow-water wave equation for the surface of liquid in a moving tank, with simulations of both.</span>
+    </span>
+  </a>
+</div>
 
-<h2>Publications</h2>
+
+<h2 id="publications">Publications</h2>
 
 <p>H. Yip et al., <em>A Model-Agnostic Post-Processor for Tropical Cyclone Intensity and Central Pressure in Machine-Learning Weather Forecasts</em>, submitted (2026).<br>
 <span class="pub-note">First-author paper from my summer 2026 internship at the Hong Kong Observatory.</span></p>
@@ -360,113 +192,16 @@
 <p>H. Yip and J. M. Smillie, <a href="https://doi.org/10.2218/esjs.10064">An Analysis of the Restricted Euler Problem Using Symplectic Integrators</a>, <em>Edinburgh Student Journal of Science</em> <strong>1</strong>(3), 2025.<br>
 <span class="pub-note">Written up from my first research project, an eight-week summer project in 2024: an early, exploratory piece of work.</span></p>
 
-<p>
-  <a href="/about/" class="btn btn--primary">About</a>
-  <a href="/research/" class="btn btn--inverse">Research</a>
-  <a href="/projects/" class="btn btn--inverse">Projects</a>
-  <a href="/archive/" class="btn btn--inverse">Archive</a>
-</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-  
-
-  
-
-
-        
-
-
-
-      </footer>
-
-      
-
-      
-
-
+      </main>
     </div>
 
-    
-  </article>
-
-  
-  
-</div>
-
-      
-    </div>
+    <footer class="xp-footer">
+  <p><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/feed.xml">Feed</a></p>
+  <p>&copy; 2026 Henry Yip</p>
+</footer>
 
     
-      <div class="search-content">
-        
-<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
     
-
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
-        
-
-
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
-    
-
-    
-      
-        
-          <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-        
-      
-        
-          <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-        
-      
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-square-rss" aria-hidden="true"></i> Feed</a></li>
-    
-  </ul>
-</div>
-
-
-<div class="page__footer-copyright">&copy; 2026 <a href="https://henry-yip.github.io">Henry Yip</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
-
-      </footer>
-    </div>
-
-    
-
-  <script src="/assets/js/main.min.js"></script>
-
-
-
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793051574"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
-
-
-
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -478,11 +213,6 @@
 
   gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
-
-
-
-
-
 
 
 

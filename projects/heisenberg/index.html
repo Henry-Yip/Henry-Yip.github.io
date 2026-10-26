@@ -24,7 +24,9 @@
 
 
 
-  <meta property="og:image" content="https://henry-yip.github.io/assets/images/Henry-Profile-Pic.jpeg">
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/og/heisenberg.jpg">
+  
+    <meta property="og:image:alt" content="A cubic lattice of Heisenberg spins near the critical temperature, each arrow coloured by its direction.">
   
 
 
@@ -53,7 +55,10 @@
 
 <!-- end _includes/seo.html -->
 
-    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 
 <!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -69,22 +74,30 @@
   });
 </script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<!-- Looping animations play like GIFs, except for readers who ask for reduced motion -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll("video.gif-video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+  });
+</script>
+
     <link rel="stylesheet" href="/assets/explore/explore.css">
+    <link rel="stylesheet" href="/assets/explore/site.css">
   </head>
   <body class="xp" data-csp="/assets/data/csp.json">
     <a class="xp-skip" href="#xp-main">Skip to content</a>
     <header class="xp-bar">
-      <a class="xp-brand" href="/">Henry Yip</a>
-      <nav aria-label="Site">
-        <a href="/about/">About</a>
-        <a href="/research/">Research</a>
-        <a href="/projects/">Projects</a>
-        <a href="/archive/">Archive</a>
-      </nav>
-    </header>
+  <a class="xp-brand" href="/">Henry Yip</a>
+  <nav aria-label="Site">
+    <a href="/about/">About</a>
+    <a href="/research/">Research</a>
+    <a href="/projects/" aria-current="page">Projects</a>
+    <a href="/archive/">Archive</a>
+    <a class="xp-search-link" href="/search/" aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+  </nav>
+</header>
+
 
     <section class="xp-hero">
       <div class="xp-hero-text">
@@ -600,8 +613,10 @@
     </div>
 
     <footer class="xp-footer">
-      <p>&copy; 2026 Henry Yip · <a href="/projects/">More projects</a> · <a href="/">Home</a></p>
-    </footer>
+  <p><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/feed.xml">Feed</a></p>
+  <p>&copy; 2026 Henry Yip</p>
+</footer>
+
 
     <script type="module" src="/assets/explore/csp.js"></script>
     

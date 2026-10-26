@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-10-26T21:52:54+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="notice series-box">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-10-26T22:21:02+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="notice series-box">
   <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 11 of 11</p>
   <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p><a href="/NewOrbits/">&larr; Classifying and Finding New Possible Orbits (Part I)</a></p>
@@ -291,7 +291,8 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>The configuration is linearly stable only when one mass dominates. In the restricted problem, the two large masses must differ by a factor of more than about \(25\) (Routh’s criterion: a mass ratio above \(24.96\)). Otherwise any small perturbation grows and the triangle breaks up:</p>
 
-<figure class=""><img src="/assets/images/Lagrange_Animation.gif" alt="Animation of three bodies in Lagrange&#39;s equilateral configuration drifting apart after a small perturbation." loading="lazy" decoding="async" /></figure>
+<figure class="">
+  <video class="gif-video" src="/assets/video/Lagrange_Animation.mp4" poster="/assets/video/Lagrange_Animation.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of three bodies in Lagrange&#39;s equilateral configuration drifting apart after a small perturbation."></video></figure>
 
 <figure class=""><img src="/assets/images/Lagrange_Trajectory.png" alt="Trajectories of a perturbed Lagrange solution that start circular and then deviate." loading="lazy" decoding="async" /></figure>
 
@@ -589,7 +590,8 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <figure class=""><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></figure>
 
-<figure class=""><img src="/assets/images/Figure_8_Shape_Animation.gif" alt="Animation of the figure-eight orbit alongside its moving point on the shape sphere." loading="lazy" decoding="async" /></figure>
+<figure class="">
+  <video class="gif-video" src="/assets/video/Figure_8_Shape_Animation.mp4" poster="/assets/video/Figure_8_Shape_Animation.jpg" width="1500" height="700" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of the figure-eight orbit alongside its moving point on the shape sphere."></video></figure>
 
 <p>The same picture works for other periodic orbits; the <a href="http://three-body.ipb.ac.rs/">Three-body gallery</a> is a good place to explore them.</p>
 
@@ -635,7 +637,8 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>To simulate the problem, I held two of the masses fixed and let the third move freely:</p>
 
-<figure class=""><img src="/assets/images/Euler_Problem.gif" alt="Animation of a test mass orbiting two fixed masses." loading="lazy" decoding="async" /></figure>
+<figure class="">
+  <video class="gif-video" src="/assets/video/Euler_Problem.mp4" poster="/assets/video/Euler_Problem.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of a test mass orbiting two fixed masses."></video></figure>
 
 <h2 id="the-lagrangian">The Lagrangian</h2>
 
@@ -915,7 +918,8 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <p>And an animation of a perturbed figure-eight:</p>
 
-<figure class=""><img src="/assets/images/Beautiful_Figure_8.gif" alt="Animation of a slightly perturbed figure-eight orbit drifting away from the exact solution." loading="lazy" decoding="async" /></figure>
+<figure class="">
+  <video class="gif-video" src="/assets/video/Beautiful_Figure_8.mp4" poster="/assets/video/Beautiful_Figure_8.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of a slightly perturbed figure-eight orbit drifting away from the exact solution."></video></figure>
 
 <h2 id="credits">Credits</h2>
 

@@ -1,0 +1,71 @@
+/* Main pages (home, About, Research, Projects, Archive): the frame of the project pages, without figures.
+   Loaded after explore.css and built from its tokens. */
+
+/* header: current page and search */
+.xp-bar nav { align-items: center; }
+.xp-bar nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+.xp-search-link { display: inline-flex; align-items: center; padding: 2px; }
+.xp-search-link svg { width: 18px; height: 18px; }
+
+/* home: name and a small portrait */
+.xp-person { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start; gap: 20px 32px; max-width: calc(var(--measure) + 40px); }
+.xp-portrait { width: 152px; height: 152px; flex: none; object-fit: cover; border-radius: 4px; background: var(--surface); }
+@media (max-width: 640px) {
+  .xp-person { flex-direction: column; }
+  .xp-portrait { width: 104px; height: 104px; }
+}
+.xp-contact { margin: 16px 0 0; font: 15px/1.6 var(--sans); color: var(--muted); }
+.xp-site .xp-hero { padding-bottom: 0; }
+.xp-site .xp-article > :first-child { margin-top: 32px; }
+.xp-site .xp-article h2 { margin-top: 48px; }
+
+/* research timeline */
+.timeline { list-style: none; margin: 8px 0 0; padding: 0 !important; border-top: 1px solid var(--line); }
+.timeline li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 2px 20px; margin: 0; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.timeline__when { font: 14px/1.9 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.timeline__what { line-height: 1.6; }
+@media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; } }
+
+/* project cards, as on /projects/ */
+.xp-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin: 20px 0 8px; }
+@media (min-width: 720px) { .xp-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.xp-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none !important; color: inherit !important; background: var(--bg); transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+.xp-card:hover { border-color: var(--line-2); box-shadow: 0 6px 22px rgba(28, 34, 48, 0.1); }
+.xp-card:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.xp-card img { display: block; width: 100%; height: auto; aspect-ratio: 600 / 315; object-fit: cover; background: var(--surface); }
+.xp-card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 18px; }
+.xp-card-kicker { font: 13px/1.4 var(--sans); color: var(--muted); }
+.xp-card-title { font: 600 18px/1.3 var(--sans); color: var(--ink); text-wrap: balance; }
+.xp-card:hover .xp-card-title { color: var(--link); }
+.xp-card-text { font-size: 16px; line-height: 1.55; color: var(--ink-2); }
+
+/* publications */
+.publication { margin: 0 0 22px; }
+.publication__title { font-weight: 600; }
+.publication__venue { font-style: italic; }
+.publication__links { margin-top: 2px; font: 15px/1.6 var(--sans); }
+.publication__links a { margin-right: 14px; }
+.pub-note { display: block; margin-top: 4px; font: 14.5px/1.5 var(--sans); color: var(--muted); }
+.xp-site .xp-article blockquote { margin: 0 0 24px; padding: 4px 0 4px 18px; border-left: 2px solid var(--line-2); color: var(--ink-2); font-size: 16.5px; }
+
+/* experience and education (About): a definition list */
+.xp-site .xp-article dl { margin: 12px 0 8px; }
+.xp-site .xp-article dt { margin-top: 22px; font: 16px/1.45 var(--sans); color: var(--ink-2); }
+.xp-site .xp-article dt strong { color: var(--ink); }
+.xp-site .xp-article dd { margin: 6px 0 0; }
+
+/* numbered research log */
+.series-list { list-style: none; counter-reset: series; padding-left: 0 !important; }
+.series-list li { counter-increment: series; position: relative; padding-left: 2.2em; }
+.series-list li::before { content: counter(series); position: absolute; left: 0; width: 1.5em; text-align: right; font: 14px/1.9 var(--sans); color: var(--muted); }
+.taxonomy__count, .xp-entry-meta { font: 14px/1.6 var(--sans); color: var(--muted); margin-left: 8px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* archive: posts by year */
+.xp-entry-list { list-style: none; padding-left: 0 !important; margin: 8px 0 0; border-top: 1px solid var(--line); }
+.xp-entry-list li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 16px; margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.xp-entry-list a { text-decoration: none; }
+.xp-entry-list a:hover { text-decoration: underline; }
+.xp-entry-list .xp-entry-meta { margin-left: 0; }
+
+/* buttons written as links in markdown */
+.xp-article p > a.xp-btn { margin: 4px 8px 4px 0; }
