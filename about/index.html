@@ -195,7 +195,7 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>Mathematical physics student. Statistical physics, tropical cyclones and dynamical systems.</p>
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
 
       </div>
     
@@ -206,7 +206,7 @@
     <ul class="author__urls social-icons">
       
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Edinburgh · Zürich</span>
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
         </li>
       
 
@@ -317,50 +317,59 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>I’m Henry Yip (葉昊彥), born and raised in Hong Kong. My training is in mathematical physics at the University of Edinburgh, and I am drawn to problems where geometry, dynamics and computation meet.</p>
+        <p>I’m Henry Yip (葉昊彥), an MSc Physics student at ETH Zürich from Hong Kong. I work at the intersection of computational physics, atmospheric dynamics and machine learning for weather prediction.</p>
 
-<h2 id="research-interests">Research interests</h2>
+<p>My research focuses on tropical cyclones and atmospheric modelling. At ETH Zürich I investigate how the resolution of ERA5 reanalysis data affects environmental tropical cyclone metrics. During my internship at the Hong Kong Observatory I worked on AI-based tropical cyclone track and intensity prediction, developing a machine-learning post-processing pipeline for global AI weather models that substantially reduced intensity forecast errors.</p>
+
+<p>Alongside atmospheric science, I have worked on projects in computational statistical physics, computational fluid dynamics and computational astrophysics: critical exponents of the 3D Heisenberg model (full marks), synchronisation in 2D turbulence using JAX-CFD, and computational studies of the three-body problem. They have given me experience applying numerical methods to problems across different areas of physics.</p>
+
+<h2 id="interests">Interests</h2>
 
 <ul>
-  <li>The gravitational three-body problem and celestial mechanics</li>
-  <li>Integrable systems, in particular Euler’s problem of two fixed centres</li>
-  <li>Symplectic and geometric numerical integration</li>
-  <li>Dynamical systems and chaos</li>
+  <li>Tropical cyclones</li>
+  <li>Numerical weather prediction</li>
+  <li>Climate modelling</li>
+  <li>Machine learning for atmospheric science</li>
 </ul>
-
-<h2 id="education">Education</h2>
-
-<p><strong>BSc Mathematical Physics</strong>, University of Edinburgh</p>
 
 <h2 id="research-experience">Research experience</h2>
 
-<p><strong>Summer research project, School of Physics and Astronomy, University of Edinburgh (2024).</strong> The gravitational three-body problem, supervised by Prof. Jenni Smillie. I built symplectic integrators to study the figure-eight, Lagrange and Broucke–Hadjidemetriou–Hénon orbits and Euler’s two-centre problem, and studied the existence proof of the figure-eight orbit and the convergence of Sundman’s series. The work led to a <a href="/research/#publication">publication</a>; the <a href="/research/#research-log">research log</a> documents it week by week.</p>
+<dl>
+  <dt><strong>Summer intern, Hong Kong Observatory</strong> (June–September 2026)</dt>
+  <dd>I developed a model-agnostic machine-learning post-processing pipeline that improves tropical cyclone intensity forecasts from global AI weather models, correcting systematic biases in maximum wind speed and minimum sea-level pressure. A first-author manuscript has been submitted to a peer-reviewed journal.</dd>
+  <dt><strong>Semester project, Department of Environmental Systems Science, ETH Zürich</strong> (February–July 2026)</dt>
+  <dd><em>The resolution dependence of environmental tropical cyclone metrics</em>, supervised by Prof. Ulrike Lohmann and Dr Bernhard Enz. I studied how changing the spatial resolution and time averaging of ERA5 data affects estimates of tropical cyclone potential intensity, with a focus on coastal regions and extreme values. Differences from spatial resolution appear mainly near coastlines, and time averaging lowers peak values. The maximum potential intensity for major storms stays similar across moderate resolutions, which suggests that the estimates are generally robust to regridding away from the coast. <a href="/projects/potential-intensity/">Background and interactive figures</a></dd>
+  <dt><strong>Final project, Computational Statistical Physics, ETH Zürich</strong> (spring 2026)</dt>
+  <dd>A Monte Carlo study of the critical temperature and critical exponents of the 3D classical Heisenberg model, using Metropolis and Wolff cluster updates on lattices up to 256³ spins. It received full marks. <a href="/projects/heisenberg/">Interactive write-up</a></dd>
+  <dt><strong>Summer student researcher, School of Mathematics, University of Edinburgh</strong> (June–September 2025)</dt>
+  <dd>Synchronisation of small scales in two-dimensional Kolmogorov-forced turbulence, simulated with JAX-CFD and checked against results in the literature. I am now extending the theory to include Coriolis effects on the beta-plane. Supervised by Dr Jacob Page, with assistance from Dr Dmitriy Zhigunov.</dd>
+  <dt><strong>Summer student researcher, School of Physics and Astronomy, University of Edinburgh</strong> (June–September 2024)</dt>
+  <dd>The gravitational three-body problem, supervised by Prof. Jenni Smillie and funded by a Career Development Scholarship. I wrote symplectic integrators to reproduce important orbits and studied the existence proof of the figure-eight orbit and the convergence of Sundman’s series. The work led to a <a href="/research/#publications">student journal paper</a>, and a <a href="/research/#research-log">research log</a> follows it week by week.</dd>
+  <dt><strong>Research team leader, Edinburgh Scientific Researchers Association</strong> (September 2023 – March 2024)</dt>
+  <dd>I led a group project modelling liquid slosh with coupled pendulums and a wave equation, presented at the association’s annual conference. <a href="/ESRAProject/">The research problem</a></dd>
+  <dt><strong>Research analyst, HYPED</strong> (September 2022 – May 2023)</dt>
+  <dd>Part of a group studying vacuum pumps for hyperloop systems. I researched liquid ring pumps, and the group concluded that they are not suitable because of their poor performance.</dd>
+</dl>
 
-<p><strong>Research problem: liquid slosh with pendulums and waves.</strong> Originally a group research project at the Edinburgh Scientific Researchers Association, with Patrick Truong, Gregory Barbanel and Abdullah Fouzuddeen. <a href="/ESRAProject/">The problem and simulations</a></p>
+<h2 id="education">Education</h2>
 
-<h2 id="teaching-and-notes">Teaching and notes</h2>
+<dl>
+  <dt><strong>MSc Physics, ETH Zürich</strong> (September 2025 – February 2027)</dt>
+  <dd>Relevant courses include Dynamics of the Large-Scale Atmosphere, Cloud Dynamics: Hurricanes, Computational Statistical Physics, Computational Astrophysics, and AI in the Sciences and Engineering.</dd>
+  <dt><strong>BSc Mathematical Physics, University of Edinburgh</strong> (2021–2025)</dt>
+  <dd>First Class Honours. Pre-Honours Certificates of Merit for high academic achievement in years 1 and 2, and a Career Development Scholarship in year 3.</dd>
+</dl>
+
+<h2 id="publications">Publications</h2>
 
 <ul>
-  <li><a href="/LaTeX/LaTeXTutorial1/">Introduction to LaTeX</a>: a short slide course and handout for students writing their first documents</li>
-  <li><a href="/Physics/Astrophysics-1/">PHYS08050 Introductory Astrophysics notes</a>, shared with the permission of Prof. Catherine Heymans</li>
-</ul>
-
-<h2 id="guest-contributions">Guest contributions</h2>
-
-<p>These pieces were written by friends and are hosted here with their permission:</p>
-
-<ul>
-  <li>Leo Chow (University of Hong Kong), <a href="/Relativity/">Beyond a cursory look at the Lorentz factor</a></li>
-  <li>Allison Lau (University of Toronto), <a href="/Numerical/">CSC336 Numerical Methods notes</a></li>
+  <li>H. Yip et al., <em>A Model-Agnostic Post-Processor for Tropical Cyclone Intensity and Central Pressure in Machine-Learning Weather Forecasts</em>, submitted (2026).</li>
+  <li>H. Yip and J. M. Smillie, <a href="https://doi.org/10.2218/esjs.10064">An Analysis of the Restricted Euler Problem Using Symplectic Integrators</a>, <em>Edinburgh Student Journal of Science</em> <strong>1</strong>(3), 2025.</li>
 </ul>
 
 <h2 id="contact">Contact</h2>
 
-<p>The quickest way to reach me is by <a href="mailto:s2231321@ed.ac.uk">email</a> or on <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a>. Corrections to any article are always welcome.</p>
-
-<h2 id="about-this-site">About this site</h2>
-
-<p>The site is built with <a href="https://jekyllrb.com/">Jekyll</a> and the <a href="https://mmistakes.github.io/minimal-mistakes/">Minimal Mistakes</a> theme; mathematics is typeset with <a href="https://katex.org/">KaTeX</a>. The source is on <a href="https://github.com/Henry-Yip/Henry-Yip.github.io">GitHub</a>.</p>
+<p>The quickest way to reach me is by <a href="mailto:s2231321@ed.ac.uk">email</a> or on <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a>.</p>
 
         
       </section>
