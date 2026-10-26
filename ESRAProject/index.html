@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          4 minute read
         
       </span>
     
@@ -394,10 +394,11 @@
 
 <p>Starting at rest from \(\theta_1 = \theta_2 = 0.2\) rad, with \(m = 0.1\) kg, \(M = 1\) kg, \(d = 0.05\) kg and \(\ell = 5\) cm, fourth-order Runge–Kutta with a 1 ms step keeps the energy constant to \(6\times10^{-12}\) and agrees with a high-accuracy adaptive solver to \(6\times10^{-9}\) rad over 5 s. Nothing diverges, even with a step of 50 ms.</p>
 
-<figure class=""><img src="/assets/images/ESRA_angles.png" alt="The two pendulum angles over 2.5 seconds: the upper angle oscillates between plus and minus 0.2 radians, the lower one with a larger, modulated amplitude." loading="lazy" decoding="async" /><figcaption>
-      The two pendulum angles. The lower point swings further, up to 0.28 rad, and the container moves back and forth by up to 5 mm.
-
-    </figcaption></figure>
+<figure class="slosh" id="slosh-discrete" data-src="/assets/data/esra_discrete.json">
+  <canvas role="img" aria-label="Animation of a container of liquid with two pendulums hanging from the centre of the surface. As the pendulums swing, the surface tilts: its middle part perpendicular to the upper rod, its outer parts perpendicular to the lower rod."></canvas>
+  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
+  <figcaption>The two-pendulum model in motion, at half speed. The pendulums hang from the centre of the surface; the middle part of the surface stays perpendicular to the upper rod (teal) and the outer parts to the lower rod (orange). The container is 20 cm wide and moves because the liquid pushes on it; the tick on the ground marks where it started.</figcaption>
+</figure>
 
 <h3 id="continuous-model">Continuous model</h3>
 
@@ -411,10 +412,13 @@
 
 <p>and with damping each mode is a damped driven oscillator. The series agrees with a direct finite-difference simulation of the equation to \(4\times10^{-4}\) of the amplitude.</p>
 
-<figure class=""><img src="/assets/images/ESRA_surface.png" alt="Surface plot of the height u over position and time: a hump across the string that oscillates, with the start-up transient dying away." loading="lazy" decoding="async" /><figcaption>
-      The surface height with c = l = 1, F/m = 1, ω = 2 and γ = 0.3. The start-up transient dies away and leaves a steady oscillation at the driving frequency.
+<figure class="slosh" id="slosh-continuous">
+  <canvas role="img" aria-label="Animation of a liquid surface that rises and falls in a container, pinned at both walls, with an arrow showing the oscillating driving force."></canvas>
+  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
+  <figcaption>The forced-string model with c = l = 1, F/m = 1, ω = 2 and γ = 0.3, at two time units per second. The arrow shows the driving force. Like a string with fixed ends, the model pins the surface at both walls (the blue dots). The start-up transient dies away over about ten time units and leaves a steady oscillation at the driving frequency.</figcaption>
+</figure>
 
-    </figcaption></figure>
+<script src="/assets/js/slosh.js" defer=""></script>
 
 <h2 id="credits">Credits</h2>
 
