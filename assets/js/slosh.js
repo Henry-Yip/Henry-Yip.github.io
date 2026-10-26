@@ -97,51 +97,51 @@
     window.addEventListener("resize", function () { size(); p.redraw(); });
   }
 
-  // ---------------------------------------------------------------- continuous (forced string) model
+  // ---------------------------------------------------------------- continuous model: shallow liquid in a container shaken sideways
+  // In the container's frame the surface height eta obeys eta_tt + gamma eta_t = c^2 eta_xx (c^2 = g h), and the walls
+  // force a slope of -a/g, where a(t) = X0 w^2 cos(w t) for a container at X(t) = X0 (1 - cos w t). In cosine modes:
+  // q_n'' + gamma q_n' + w_n^2 q_n = (4h/L) a(t) for odd n, starting flat and at rest.
   function continuous(root) {
     var canvas = root.querySelector("canvas"), out = root.querySelector("[data-read]");
-    var A = 1, c = 1, len = 1, w = 2, gamma = 0.3, N = 41, depth = 0.5, H = 0.85, scale = 0.6, view;
-    var modes = [];
-    for (var k = 1; k <= 39; k += 2) {
-      var wn = (k * Math.PI * c) / len, bn = (4 * A) / (k * Math.PI);
-      var Rr = bn / Math.hypot(wn * wn - w * w, gamma * w), phi = Math.atan2(gamma * w, wn * wn - w * w);
+    var g = 9.81, L = 0.2, h = 0.03, H = 0.07, X0 = 0.006, w = 6, gamma = 0.5, c = Math.sqrt(g * h), N = 61, view;
+    var b = ((4 * h) / L) * X0 * w * w, modes = [];
+    for (var k = 1; k <= 59; k += 2) {
+      var wn = (k * Math.PI * c) / L;
+      var Rr = b / Math.hypot(wn * wn - w * w, gamma * w), phi = Math.atan2(gamma * w, wn * wn - w * w);
       var Om = Math.sqrt(wn * wn - (gamma * gamma) / 4), C1 = -Rr * Math.cos(phi), C2 = ((gamma / 2) * C1 - Rr * w * Math.sin(phi)) / Om;
       modes.push({ k: k, R: Rr, phi: phi, Om: Om, C1: C1, C2: C2 });
     }
-    function u(x, t) {
+    function eta(x, t) {
       var sum = 0, e = Math.exp((-gamma * t) / 2);
       for (var i = 0; i < modes.length; i++) {
         var m = modes[i];
         var q = m.R * Math.cos(w * t - m.phi) + e * (m.C1 * Math.cos(m.Om * t) + m.C2 * Math.sin(m.Om * t));
-        sum += q * Math.sin((m.k * Math.PI * x) / len);
+        sum += q * Math.cos((m.k * Math.PI * x) / L);
       }
       return sum;
     }
-    function size() { view = fitCanvas(canvas, 0.62); }
+    function size() { view = fitCanvas(canvas, 0.42); }
     function drawAt(t) {
-      var ctx = view.ctx, wd = view.w, h = view.h;
-      var s = Math.min(wd / 1.3, h / (H + 0.1)), x0 = wd / 2, y0 = h - 0.04 * s;
-      function X(x) { return x0 + (x - 0.5) * s; }
+      var ctx = view.ctx, wd = view.w, ht = view.h;
+      var s = Math.min(wd / (L + 0.07), ht / (H + 0.02)), x0 = wd / 2 - (X0 + L / 2) * s, y0 = ht - 0.008 * s;
+      function X(x) { return x0 + x * s; }
       function Y(y) { return y0 - y * s; }
-      ctx.clearRect(0, 0, wd, h);
+      var shift = X0 * (1 - Math.cos(w * t));
+      ctx.clearRect(0, 0, wd, ht);
+      ctx.strokeStyle = COL.faint; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(X(-0.02), Y(0)); ctx.lineTo(X(L + 2 * X0 + 0.02), Y(0)); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(X(L / 2), Y(0)); ctx.lineTo(X(L / 2), Y(-0.004)); ctx.stroke();
       var pts = [];
-      for (var i = 0; i < N; i++) { var x = i / (N - 1); pts.push([x, depth + scale * u(x, t)]); }
-      fillLiquid(ctx, X, Y, pts, 0, 1, 0);
-      ctx.setLineDash([2, 4]); ctx.strokeStyle = COL.faint; ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.moveTo(X(0), Y(depth)); ctx.lineTo(X(1), Y(depth)); ctx.stroke(); ctx.setLineDash([]);
-      dot(ctx, X(0), Y(depth), 4, COL.surface); dot(ctx, X(1), Y(depth), 4, COL.surface);
-      drawContainer(ctx, X, Y, 0, 1, 0, H);
-      // driving force: an arrow whose length follows cos(w t)
-      var f = Math.cos(w * t), ax = X(1.12), ay = Y(depth), len2 = f * 0.12 * s;
-      ctx.strokeStyle = COL.text; ctx.fillStyle = COL.text; ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(ax, ay - len2); ctx.stroke();
-      if (Math.abs(len2) > 4) { var d = len2 > 0 ? -1 : 1; ctx.beginPath(); ctx.moveTo(ax, ay - len2); ctx.lineTo(ax - 5, ay - len2 - d * 7); ctx.lineTo(ax + 5, ay - len2 - d * 7); ctx.closePath(); ctx.fill(); }
-      ctx.font = "12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"; ctx.textAlign = "center";
-      ctx.fillText("force", ax, Y(depth - 0.07));
-      out.innerHTML = "t = " + t.toFixed(1) + " (in units of l/c)";
+      for (var i = 0; i < N; i++) { var xi = (i / (N - 1)) * L; pts.push([shift + xi, h + eta(xi, t)]); }
+      fillLiquid(ctx, X, Y, pts, shift, shift + L, 0);
+      ctx.setLineDash([2, 4]); ctx.strokeStyle = COL.faint;
+      ctx.beginPath(); ctx.moveTo(X(shift), Y(h)); ctx.lineTo(X(shift + L), Y(h)); ctx.stroke(); ctx.setLineDash([]);
+      drawContainer(ctx, X, Y, shift, shift + L, 0, H);
+      out.innerHTML = "t = " + t.toFixed(1) + " s &nbsp;·&nbsp; container at " + (shift * 1000).toFixed(1) + " mm &nbsp;·&nbsp; surface " +
+        (eta(0, t) * 1000).toFixed(1) + " mm at the left wall, " + (eta(L, t) * 1000).toFixed(1) + " mm at the right";
     }
     size();
-    var p = play(root, drawAt, 20, 2);
+    var p = play(root, drawAt, 20, 0.5);
     window.addEventListener("resize", function () { size(); p.redraw(); });
   }
 

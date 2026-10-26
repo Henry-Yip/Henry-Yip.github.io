@@ -15,8 +15,8 @@
 <meta charset="utf-8">
 
 
-<!-- begin _includes/seo.html --><title>Pendulum Models for Liquid Slosh | Henry Yip</title>
-<meta name="description" content="A group project modelling the sloshing of a confined liquid with a multi-pendulum model and a continuous forced-string model.">
+<!-- begin _includes/seo.html --><title>Modelling Liquid Slosh with Pendulums and Waves | Henry Yip</title>
+<meta name="description" content="A research problem that began as a group project at ESRA: can coupled pendulums, or a simple wave equation, describe the surface of a liquid sloshing in a moving container?">
 
 
   <meta name="author" content="Henry Yip">
@@ -28,11 +28,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Pendulum Models for Liquid Slosh">
+<meta property="og:title" content="Modelling Liquid Slosh with Pendulums and Waves">
 <meta property="og:url" content="https://henry-yip.github.io/ESRAProject/">
 
 
-  <meta property="og:description" content="A group project modelling the sloshing of a confined liquid with a multi-pendulum model and a continuous forced-string model.">
+  <meta property="og:description" content="A research problem that began as a group project at ESRA: can coupled pendulums, or a simple wave equation, describe the surface of a liquid sloshing in a moving container?">
 
 
 
@@ -301,8 +301,8 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Pendulum Models for Liquid Slosh">
-    <meta itemprop="description" content="A group project modelling the sloshing of a confined liquid with a multi-pendulum model and a continuous forced-string model.">
+    <meta itemprop="headline" content="Modelling Liquid Slosh with Pendulums and Waves">
+    <meta itemprop="description" content="A research problem that began as a group project at ESRA: can coupled pendulums, or a simple wave equation, describe the surface of a liquid sloshing in a moving container?">
     <meta itemprop="datePublished" content="2024-03-19T00:00:00+00:00">
     <meta itemprop="dateModified" content="2026-10-26T00:00:00+00:00">
 
@@ -310,7 +310,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/ESRAProject/" itemprop="url">Pendulum Models for Liquid Slosh
+            <a href="https://henry-yip.github.io/ESRAProject/" itemprop="url">Modelling Liquid Slosh with Pendulums and Waves
 </a>
           </h1>
           
@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          4 minute read
+          5 minute read
         
       </span>
     
@@ -358,30 +358,23 @@
           <aside class="sidebar__right sticky">
             <nav class="toc" aria-label="Table of contents">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#the-models">The models</a></li><li><a href="#poster">Poster</a></li><li><a href="#redoing-the-simulations-2026">Redoing the simulations (2026)</a><ul><li><a href="#discrete-model">Discrete model</a></li><li><a href="#continuous-model">Continuous model</a></li></ul></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li><li><a href="#poster-corrections-26-october-2026">Poster corrections (26 October 2026)</a></li></ul>
+              <ul class="toc__menu"><li><a href="#the-starting-point">The starting point</a></li><li><a href="#discrete-model-coupled-pendulums">Discrete model: coupled pendulums</a></li><li><a href="#continuous-model-the-surface-as-a-wave">Continuous model: the surface as a wave</a></li><li><a href="#open-questions">Open questions</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li><li><a href="#changes-on-26-october-2026">Changes on 26 October 2026</a></li></ul>
             </nav>
           </aside>
         
-        <p>Liquid motion is hard to analyse in general: it is governed by the Navier–Stokes equations, which have closed-form solutions only in special cases. Building on a published paper, our group modelled the sloshing of a confined liquid at low speeds using two simplified models.</p>
+        <p>When a container of liquid starts or stops suddenly, as it does on a packaging line, the liquid sloshes. The full problem is governed by the Navier–Stokes equations, which have closed-form solutions only in special cases. This page sets out a simpler research problem: can a few coupled pendulums, or a simple wave equation, describe the moving surface well enough to be useful?</p>
 
-<h2 id="the-models">The models</h2>
+<p>It began as a group research project at the Edinburgh Scientific Researchers Association (ESRA), with Patrick Truong, Gregory Barbanel and Abdullah Fouzuddeen.</p>
 
-<p>The starting point was the paper <em>Modelling Transient Liquid Slosh Behavior at Variable Operating Speeds Induced by Intermittent Motions in Packaging Machines</em>, which represents the liquid surface as a plane that tilts with a single pendulum. In practice the surface does not stay flat, so we proposed two refinements:</p>
+<h2 id="the-starting-point">The starting point</h2>
 
-<ul>
-  <li>a <strong>discrete model</strong>: an \(n\)-pendulum system in which each pendulum tracks two points on the surface, with the surface shape recovered by interpolating between them (the double pendulum is the simplest case); we derived its equations of motion from the Lagrangian;</li>
-  <li>a <strong>continuous model</strong>: the surface treated like a string vibrating under an oscillating force, which leads to an inhomogeneous wave equation.</li>
-</ul>
+<p>The paper <em>Modelling Transient Liquid Slosh Behavior at Variable Operating Speeds Induced by Intermittent Motions in Packaging Machines</em> represents the liquid surface as a plane that stays perpendicular to a single imaginary pendulum. A real surface does not stay flat, so we looked at two ways of letting it bend: several coupled pendulums, each setting the direction of part of the surface, and a continuous description of the surface as a wave.</p>
 
-<h2 id="poster">Poster</h2>
+<h2 id="discrete-model-coupled-pendulums">Discrete model: coupled pendulums</h2>
 
-<p>We presented the project at a conference. The poster is available <a href="/assets/ESRAProject.pdf">here (PDF)</a>. It contains some errors, listed in the note at the end; the poster itself is kept as it was. The next section redoes its simulations with corrected equations.</p>
+<p>With two pendulums, one hanging from the other, the middle part of the surface stays perpendicular to the upper rod and the outer parts to the lower rod. More pendulums would give more pieces and a finer surface.</p>
 
-<h2 id="redoing-the-simulations-2026">Redoing the simulations (2026)</h2>
-
-<h3 id="discrete-model">Discrete model</h3>
-
-<p>I derived the equations of motion from the poster’s Lagrangian with its three typing errors corrected:</p>
+<p>For a container of mass \(M\) at position \(x\), two pendulum masses \(m\) on rods of length \(\ell\), and an extra mass \(d\) that moves horizontally with each pendulum point, the Lagrangian is</p>
 
 \[\begin{aligned}
 \mathcal{L} ={}&amp; \left(m+\tfrac12 M\right)\dot x^2 + m\ell\,\dot x\left(2\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)\\
@@ -390,39 +383,51 @@
 &amp;+ \tfrac12 d\ell^2\left[\cos^2\theta_1\,\dot\theta_1^2+\left(\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)^2\right].
 \end{aligned}\]
 
-<p>Here \(M\) is the mass of the container and \(x\) its position, the two pendulum masses \(m\) hang on rods of length \(\ell\), and the \(d\) terms are the kinetic energy of extra mass that moves horizontally with each pendulum point.</p>
-
-<p>Starting at rest from \(\theta_1 = \theta_2 = 0.2\) rad, with \(m = 0.1\) kg, \(M = 1\) kg, \(d = 0.05\) kg and \(\ell = 5\) cm, fourth-order Runge–Kutta with a 1 ms step keeps the energy constant to \(6\times10^{-12}\) and agrees with a high-accuracy adaptive solver to \(6\times10^{-9}\) rad over 5 s. Nothing diverges, even with a step of 50 ms.</p>
+<p>There is no analytic solution, so the equations of motion are integrated numerically. Starting at rest from \(\theta_1 = \theta_2 = 0.2\) rad, with \(m = 0.1\) kg, \(M = 1\) kg, \(d = 0.05\) kg and \(\ell = 5\) cm, fourth-order Runge–Kutta with a 1 ms step keeps the energy constant to \(6\times10^{-12}\) and agrees with a high-accuracy adaptive solver to \(6\times10^{-9}\) rad over 5 s.</p>
 
 <figure class="slosh" id="slosh-discrete" data-src="/assets/data/esra_discrete.json">
   <canvas role="img" aria-label="Animation of a container of liquid with two pendulums hanging from the centre of the surface. As the pendulums swing, the surface tilts: its middle part perpendicular to the upper rod, its outer parts perpendicular to the lower rod."></canvas>
   <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
-  <figcaption>The two-pendulum model in motion, at half speed. The pendulums hang from the centre of the surface; the middle part of the surface stays perpendicular to the upper rod (teal) and the outer parts to the lower rod (orange). The container is 20 cm wide and moves because the liquid pushes on it; the tick on the ground marks where it started.</figcaption>
+  <figcaption>The two-pendulum model at half speed. The pendulums hang from the centre of the surface; the middle part of the surface stays perpendicular to the upper rod (teal) and the outer parts to the lower rod (orange). The container is 20 cm wide and is free to move, so the liquid pushes it back and forth; the tick on the ground marks where it started.</figcaption>
 </figure>
 
-<h3 id="continuous-model">Continuous model</h3>
+<h2 id="continuous-model-the-surface-as-a-wave">Continuous model: the surface as a wave</h2>
 
-<p>The surface is treated as a string of length \(l\) with both ends fixed, driven by a uniform oscillating force, starting flat and at rest. I replaced the poster’s damping term with ordinary linear damping:</p>
+<p>The second model has no pendulums. It describes the surface as a smooth curve, the height \(\eta(x, t)\) of the surface above its resting level at each point \(x\) across the container, and asks how that curve moves.</p>
 
-\[\frac{\partial^2 u}{\partial t^2} + \gamma\,\frac{\partial u}{\partial t} - c^2\,\frac{\partial^2 u}{\partial x^2} = \frac{F}{m}\cos(\omega t), \qquad u(0,t) = u(l,t) = 0.\]
+<p>The picture is a guitar string. If one part of a string is pulled up, its neighbours pull it back, and the disturbance travels along the string as a wave. A shallow layer of liquid behaves in the same way: where the surface is raised, the extra weight pushes the water underneath sideways, which lowers that part and raises its neighbours. For small motions this gives the wave equation</p>
 
-<p>Expanding in the eigenfunctions \(\sin(n\pi x/l)\), the Sturm–Liouville approach mentioned on the poster, turns the equation into independent driven oscillators, and only the odd modes are forced. Without damping the solution is</p>
+\[\frac{\partial^2 \eta}{\partial t^2} + \gamma\,\frac{\partial \eta}{\partial t} = c^2\,\frac{\partial^2 \eta}{\partial x^2}, \qquad c = \sqrt{gh},\]
 
-\[u(x,t)=\sum_{n\ \mathrm{odd}} \frac{4F}{n\pi m}\;\frac{\cos\omega t-\cos\omega_n t}{\omega_n^2-\omega^2}\;\sin\frac{n\pi x}{l},\qquad \omega_n=\frac{n\pi c}{l},\]
+<p>where \(h\) is the depth of the liquid and \(\gamma\) accounts for friction. Waves cross the container at speed \(c\).</p>
 
-<p>and with damping each mode is a damped driven oscillator. The series agrees with a direct finite-difference simulation of the equation to \(4\times10^{-4}\) of the amplitude.</p>
+<p>The shaking comes in through the walls. Water cannot flow through a wall, so when the container is pushed sideways with acceleration \(a(t)\), the surface has to meet each wall with slope \(-a/g\). This is the same tilt that a cup of coffee takes when you carry it forward too quickly. Writing the surface as a sum of modes \(\cos(n\pi x/L)\), where \(L\) is the width of the container, turns each mode into a damped oscillator with natural frequency \(\omega_n = n\pi c/L\), driven by the shaking:</p>
+
+\[\ddot q_n + \gamma\,\dot q_n + \omega_n^2\, q_n = \frac{4h}{L}\,a(t), \qquad n = 1, 3, 5, \ldots\]
+
+<p>Only the odd modes are excited: the ones that raise one side of the surface and lower the other. This solution agrees with a direct simulation of the shallow-water equations to 0.2 % of the wave height.</p>
 
 <figure class="slosh" id="slosh-continuous">
-  <canvas role="img" aria-label="Animation of a liquid surface that rises and falls in a container, pinned at both walls, with an arrow showing the oscillating driving force."></canvas>
+  <canvas role="img" aria-label="Animation of a container of shallow liquid being shaken from side to side. The surface rises at one wall and falls at the other, and waves run back and forth."></canvas>
   <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
-  <figcaption>The forced-string model with c = l = 1, F/m = 1, ω = 2 and γ = 0.3, at two time units per second. The arrow shows the driving force. Like a string with fixed ends, the model pins the surface at both walls (the blue dots). The start-up transient dies away over about ten time units and leaves a steady oscillation at the driving frequency.</figcaption>
+  <figcaption>The wave model at half speed, drawn to scale: a 20 cm wide container holding 3 cm of liquid, shaken back and forth over 1.2 cm about once a second (ω = 6 rad/s, a little below the lowest natural frequency ω₁ = 8.5 rad/s). The surface rises at one wall and falls at the other, by up to about 7 mm, and the waves set off at the start slowly die away.</figcaption>
 </figure>
 
 <script src="/assets/js/slosh.js" defer=""></script>
 
+<h2 id="open-questions">Open questions</h2>
+
+<ul>
+  <li><strong>How should the pendulums define the surface?</strong> The construction above, straight pieces perpendicular to each rod, is one choice. With more pendulums one could fit a smooth curve through the points instead, and it is not obvious which choice best matches a real surface.</li>
+  <li><strong>Can the pendulum model match a real tank?</strong> For small motions, liquid of depth \(h\) in a rectangular tank of width \(L\) sloshes at the frequencies \(\omega_n^2 = g k_n \tanh(k_n h)\) with \(k_n = n\pi/L\). A natural test is whether \(m\), \(d\) and \(\ell\) can be chosen to reproduce them.</li>
+  <li><strong>Deeper liquid and larger motions.</strong> The wave model assumes shallow liquid and small waves. Deep liquid, large sloshing and splashing need more of the full fluid equations.</li>
+  <li><strong>Driving the container.</strong> In the pendulum simulation the container moves freely. On a packaging line its motion is prescribed, with sudden starts and stops, which is the case the original paper studies.</li>
+  <li><strong>Comparison with experiment.</strong> Filming the surface in a container moved along a rail would test both models directly.</li>
+</ul>
+
 <h2 id="credits">Credits</h2>
 
-<p>This was joint work with Patrick Truong, Gregory Barbanel and Abdullah Fouzuddeen, whom I thank for their efforts and contributions. We are grateful to the Edinburgh Scientific Researchers Association for their support.</p>
+<p>This began as a group research project at the Edinburgh Scientific Researchers Association with Patrick Truong, Gregory Barbanel and Abdullah Fouzuddeen, whom I thank for their work on it. In October 2026 I redid the calculations and simulations on this page; the parameter values in them are illustrative.</p>
 
 <h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
 
@@ -430,19 +435,17 @@
 
 <p><strong>What changed.</strong> The summary is rewritten to explain the two models more clearly. Previously titled “Group Research in fluid behaviours”.</p>
 
-<h2 id="poster-corrections-26-october-2026">Poster corrections (26 October 2026)</h2>
+<h2 id="changes-on-26-october-2026">Changes on 26 October 2026</h2>
 
 <p><strong>What was wrong.</strong></p>
 
 <ul>
-  <li>The printed solution of the wave equation was wrong. It satisfies neither the equation nor its initial and boundary conditions, and its prefactor has the wrong units. Only one boundary condition was given, although the solution depends on the length \(l\).</li>
-  <li>The damping term \(-d\,(\partial u/\partial t)^2\) always has the same sign, so it does not oppose the motion.</li>
-  <li>Three terms of the Lagrangian were mistyped: \(m\ell\,\theta_1\theta_2\cos(\theta_1-\theta_2)\) for \(m\ell^2\,\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2)\), \(m\ell\,\dot\theta_2^2\) for \(m\ell^2\,\dot\theta_2^2\), and \(\tfrac12 M\dot x\) for \(\tfrac12 M\dot x^2\). The equation of motion for \(x\) printed on the poster matches the corrected Lagrangian, so these were typing errors.</li>
-  <li>The poster said the two-pendulum simulation diverges because of Runge–Kutta errors. Integrating the equations again, from either the corrected or the printed Lagrangian, shows no divergence, so the problem was most likely in the original code.</li>
-  <li>Several typos, including “Disecrete model”.</li>
+  <li>The page described the models only in words.</li>
+  <li>The group’s original calculations contained errors. The solution given for the continuous model satisfied neither its equation nor its initial and boundary conditions; its damping term, \(-d\,(\partial u/\partial t)^2\), did not oppose the motion; three terms of the pendulum Lagrangian were mistyped; and the reported divergence of the two-pendulum simulation could not be reproduced.</li>
+  <li>The continuous model treated the surface as a string held fixed at both walls and pushed up and down everywhere at once. In a real container the surface moves most at the walls, and sideways shaking acts through the walls.</li>
 </ul>
 
-<p><strong>What changed.</strong> The poster itself is unchanged. The section <em>Redoing the simulations</em> above gives the corrected equations and new simulations of both models. The parameter values there are illustrative, since the poster did not give any.</p>
+<p><strong>What changed.</strong> The page now sets the problem out as a research problem, with corrected equations, new simulations and animations of both models, and a list of open questions. The continuous model is now the shallow-water wave equation with the walls handled as above. Previously titled “Pendulum Models for Liquid Slosh”.</p>
 
         
       </section>
