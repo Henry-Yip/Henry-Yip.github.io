@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          5 minute read
+          7 minute read
         
       </span>
     
@@ -358,7 +358,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc" aria-label="Table of contents">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#the-starting-point">The starting point</a></li><li><a href="#discrete-model-coupled-pendulums">Discrete model: coupled pendulums</a></li><li><a href="#continuous-model-the-surface-as-a-wave">Continuous model: the surface as a wave</a></li><li><a href="#open-questions">Open questions</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li><li><a href="#changes-on-26-october-2026">Changes on 26 October 2026</a></li></ul>
+              <ul class="toc__menu"><li><a href="#the-starting-point">The starting point</a></li><li><a href="#discrete-model-a-chain-of-pendulums">Discrete model: a chain of pendulums</a></li><li><a href="#continuous-model-the-surface-as-a-wave">Continuous model: the surface as a wave</a></li><li><a href="#open-questions">Open questions</a></li><li><a href="#credits">Credits</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li><li><a href="#changes-on-26-october-2026">Changes on 26 October 2026</a></li></ul>
             </nav>
           </aside>
         
@@ -370,11 +370,19 @@
 
 <p>The paper <em>Modelling Transient Liquid Slosh Behavior at Variable Operating Speeds Induced by Intermittent Motions in Packaging Machines</em> represents the liquid surface as a plane that stays perpendicular to a single imaginary pendulum. A real surface does not stay flat, so we looked at two ways of letting it bend: several coupled pendulums, each setting the direction of part of the surface, and a continuous description of the surface as a wave.</p>
 
-<h2 id="discrete-model-coupled-pendulums">Discrete model: coupled pendulums</h2>
+<h2 id="discrete-model-a-chain-of-pendulums">Discrete model: a chain of pendulums</h2>
 
-<p>With two pendulums, one hanging from the other, the middle part of the surface stays perpendicular to the upper rod and the outer parts to the lower rod. More pendulums would give more pieces and a finer surface.</p>
+<p>The surface is split into straight pieces, and each piece takes its direction from a pendulum. The pendulums form a chain hanging from the centre of the surface, each from the one above. With \(n\) pendulums the surface has \(2n\) pieces, and the \(k\)-th piece on each side stays perpendicular to rod \(k\). One pendulum gives the flat, tilting surface of the original paper; more pendulums let the surface bend.</p>
 
-<p>For a container of mass \(M\) at position \(x\), two pendulum masses \(m\) on rods of length \(\ell\), and an extra mass \(d\) that moves horizontally with each pendulum point, the Lagrangian is</p>
+<p>For a container of mass \(M\) at position \(x\) and bobs of mass \(m\) on rods of length \(\ell\), bob \(k\) sits at</p>
+
+\[X_k = x + \ell \sum_{j=1}^{k}\sin\theta_j, \qquad Y_k = -\ell \sum_{j=1}^{k}\cos\theta_j,\]
+
+<p>and the Lagrangian is</p>
+
+\[\mathcal{L} = \tfrac12 M\dot x^2 + \sum_{k=1}^{n}\left[\tfrac12 m\left(\dot X_k^2+\dot Y_k^2\right) + \tfrac12 d\left(\dot X_k-\dot x\right)^2 - mgY_k\right],\]
+
+<p>where the \(d\) terms add an extra mass \(d\) that moves horizontally with each pendulum point. For two pendulums this expands to</p>
 
 \[\begin{aligned}
 \mathcal{L} ={}&amp; \left(m+\tfrac12 M\right)\dot x^2 + m\ell\,\dot x\left(2\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)\\
@@ -383,13 +391,15 @@
 &amp;+ \tfrac12 d\ell^2\left[\cos^2\theta_1\,\dot\theta_1^2+\left(\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)^2\right].
 \end{aligned}\]
 
-<p>There is no analytic solution, so the equations of motion are integrated numerically. Starting at rest from \(\theta_1 = \theta_2 = 0.2\) rad, with \(m = 0.1\) kg, \(M = 1\) kg, \(d = 0.05\) kg and \(\ell = 5\) cm, fourth-order Runge–Kutta with a 1 ms step keeps the energy constant to \(6\times10^{-12}\) and agrees with a high-accuracy adaptive solver to \(6\times10^{-9}\) rad over 5 s.</p>
+<p>There is no analytic solution, so the equations of motion are integrated numerically. To compare different \(n\) fairly, the totals are kept fixed: the rods add up to 10 cm, the bobs to 0.2 kg and the extra masses to 0.1 kg, in a 1 kg container. Starting at rest with every rod at 0.2 rad, a high-accuracy adaptive solver conserves the energy to better than \(10^{-12}\) for every \(n\) from 2 to 5, and fourth-order Runge–Kutta with a 1 ms step agrees with it to better than \(2\times10^{-7}\) rad.</p>
 
 <figure class="slosh" id="slosh-discrete" data-src="/assets/data/esra_discrete.json">
-  <canvas role="img" aria-label="Animation of a container of liquid with two pendulums hanging from the centre of the surface. As the pendulums swing, the surface tilts: its middle part perpendicular to the upper rod, its outer parts perpendicular to the lower rod."></canvas>
-  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
-  <figcaption>The two-pendulum model at half speed. The pendulums hang from the centre of the surface; the middle part of the surface stays perpendicular to the upper rod (teal) and the outer parts to the lower rod (orange). The container is 20 cm wide and is free to move, so the liquid pushes it back and forth; the tick on the ground marks where it started.</figcaption>
+  <canvas role="img" aria-label="Animation of a container of liquid with a chain of pendulums hanging from the centre of the surface. As the pendulums swing, each piece of the surface stays perpendicular to its rod, so the surface tilts and bends."></canvas>
+  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small" data-act="play">Pause</button><span class="slosh__seg" role="group" aria-label="Number of pendulums"><button type="button" data-n="2" aria-pressed="true">2</button><button type="button" data-n="3" aria-pressed="false">3</button><button type="button" data-n="4" aria-pressed="false">4</button><button type="button" data-n="5" aria-pressed="false">5</button> pendulums</span><span class="slosh__read" data-read=""></span></div>
+  <figcaption>The pendulum model at half speed; choose how many pendulums. They hang in a chain from the centre of the surface, top rod teal and bottom rod orange, and the k-th piece of the surface on each side stays perpendicular to rod k. The container is 20 cm wide and is free to move, so the liquid pushes it back and forth; the tick on the ground marks where it started.</figcaption>
 </figure>
+
+<p>More pendulums let the surface bend more: the largest rod angle grows from 0.28 rad with two pendulums to 0.42 rad with five. The lowest sloshing frequency of the chain, found from its small oscillations, settles as \(n\) grows: 9.20, 9.46, 9.61 and 9.70 rad/s for \(n\) = 2, 3, 4 and 5. A real tank of the same size, 20 cm wide with 12 cm of liquid, sloshes at 12.1 rad/s, so with these parameters the chain is about 20 % too slow.</p>
 
 <h2 id="continuous-model-the-surface-as-a-wave">Continuous model: the surface as a wave</h2>
 
@@ -409,7 +419,7 @@
 
 <figure class="slosh" id="slosh-continuous">
   <canvas role="img" aria-label="Animation of a container of shallow liquid being shaken from side to side. The surface rises at one wall and falls at the other, and waves run back and forth."></canvas>
-  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small">Pause</button><span class="slosh__read" data-read=""></span></div>
+  <div class="slosh__bar"><button type="button" class="btn btn--inverse btn--small" data-act="play">Pause</button><span class="slosh__read" data-read=""></span></div>
   <figcaption>The wave model at half speed, drawn to scale: a 20 cm wide container holding 3 cm of liquid, shaken back and forth over 1.2 cm about once a second (ω = 6 rad/s, a little below the lowest natural frequency ω₁ = 8.5 rad/s). The surface rises at one wall and falls at the other, by up to about 7 mm, and the waves set off at the start slowly die away.</figcaption>
 </figure>
 
@@ -418,8 +428,8 @@
 <h2 id="open-questions">Open questions</h2>
 
 <ul>
-  <li><strong>How should the pendulums define the surface?</strong> The construction above, straight pieces perpendicular to each rod, is one choice. With more pendulums one could fit a smooth curve through the points instead, and it is not obvious which choice best matches a real surface.</li>
-  <li><strong>Can the pendulum model match a real tank?</strong> For small motions, liquid of depth \(h\) in a rectangular tank of width \(L\) sloshes at the frequencies \(\omega_n^2 = g k_n \tanh(k_n h)\) with \(k_n = n\pi/L\). A natural test is whether \(m\), \(d\) and \(\ell\) can be chosen to reproduce them.</li>
+  <li><strong>How should the pendulums define the surface?</strong> The construction above, straight pieces perpendicular to each rod, is one choice. One could instead fit a smooth curve through the points, or let the pieces have different widths, and it is not obvious which choice best matches a real surface.</li>
+  <li><strong>Can the pendulum model match a real tank?</strong> For small motions, liquid of depth \(h\) in a rectangular tank of width \(L\) sloshes at the frequencies \(\omega_n^2 = g k_n \tanh(k_n h)\) with \(k_n = n\pi/L\). With the parameters above, the chain’s lowest frequency is about 20 % below the tank’s first one. Whether \(m\), \(d\) and \(\ell\) can be chosen to reproduce the whole set is open.</li>
   <li><strong>Deeper liquid and larger motions.</strong> The wave model assumes shallow liquid and small waves. Deep liquid, large sloshing and splashing need more of the full fluid equations.</li>
   <li><strong>Driving the container.</strong> In the pendulum simulation the container moves freely. On a packaging line its motion is prescribed, with sudden starts and stops, which is the case the original paper studies.</li>
   <li><strong>Comparison with experiment.</strong> Filming the surface in a container moved along a rail would test both models directly.</li>
@@ -445,7 +455,7 @@
   <li>The continuous model treated the surface as a string held fixed at both walls and pushed up and down everywhere at once. In a real container the surface moves most at the walls, and sideways shaking acts through the walls.</li>
 </ul>
 
-<p><strong>What changed.</strong> The page now sets the problem out as a research problem, with corrected equations, new simulations and animations of both models, and a list of open questions. The continuous model is now the shallow-water wave equation with the walls handled as above. Previously titled “Pendulum Models for Liquid Slosh”.</p>
+<p><strong>What changed.</strong> The page now sets the problem out as a research problem, with corrected equations, new simulations and animations of both models, and a list of open questions. The pendulum model is extended from two pendulums to any number. The continuous model is now the shallow-water wave equation with the walls handled as above. Previously titled “Pendulum Models for Liquid Slosh”.</p>
 
         
       </section>

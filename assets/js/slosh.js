@@ -19,7 +19,7 @@
   // only while the figure is on screen. Starts playing unless the reader prefers reduced motion.
   function play(root, drawAt, duration, speed) {
     var playing = !reduced, visible = false, simT = 0, last = null, raf = 0;
-    var btn = root.querySelector("button");
+    var btn = root.querySelector('button[data-act="play"]');
     function sync() { btn.textContent = playing ? "Pause" : "Play"; btn.setAttribute("aria-pressed", String(playing)); }
     function frame(now) {
       raf = 0;
@@ -56,44 +56,62 @@
     ctx.lineWidth = 2; ctx.strokeStyle = "#ffffff"; ctx.stroke();
   }
 
-  // ---------------------------------------------------------------- discrete (two-pendulum) model
+  // ---------------------------------------------------------------- discrete model: n pendulums in a chain
+  // data.runs[n] = { x: container position, th: [theta_1 ... theta_n] }, sampled every data.dt seconds.
+  // Totals are fixed as n changes: rod length 10 cm, so each rod is 10/n cm and each surface piece 10/n cm wide.
   function discrete(root, data) {
     var canvas = root.querySelector("canvas"), out = root.querySelector("[data-read]");
-    var l = data.params.l, W = 4 * l, depth = 0.12, H = 0.17, seg = W / 4;   // container 20 cm wide, surface segments of length l
-    var n = data.x.length, dt = data.dt, duration = (n - 1) * dt, view;
+    var W = 0.2, depth = 0.12, H = 0.17, dt = data.dt, n = 2, run = data.runs[2], view;
+    var teal = [10, 143, 153], orange = [217, 102, 31];
+    function bobColour(k) {
+      var f = n === 1 ? 0 : (k - 1) / (n - 1), c = teal.map(function (v, i) { return Math.round(v + f * (orange[i] - v)); });
+      return "rgb(" + c.join(",") + ")";
+    }
     function size() { view = fitCanvas(canvas, 0.62); }
-    function at(arr, t) { var f = t / dt, i = Math.min(n - 2, Math.floor(f)), a = f - i; return arr[i] * (1 - a) + arr[i + 1] * a; }
+    function at(arr, t) { var f = t / dt, i = Math.min(arr.length - 2, Math.floor(f)), a = f - i; return arr[i] * (1 - a) + arr[i + 1] * a; }
     function drawAt(t) {
       var ctx = view.ctx, w = view.w, h = view.h;
       var s = Math.min(w / (W + 0.08), h / (H + 0.05)), x0 = w / 2, y0 = h - 0.025 * s;
       function X(x) { return x0 + x * s; }
       function Y(y) { return y0 - y * s; }
-      var cx = at(data.x, t), t1 = at(data.th1, t), t2 = at(data.th2, t);
+      var l = run.l, seg = W / (2 * n), cx = at(run.x, t), th = run.th.map(function (a) { return at(a, t); });
       ctx.clearRect(0, 0, w, h);
-      // ground with the container's rest position
       ctx.strokeStyle = COL.faint; ctx.lineWidth = 1;
       ctx.beginPath(); ctx.moveTo(X(-W / 2 - 0.035), Y(0)); ctx.lineTo(X(W / 2 + 0.035), Y(0)); ctx.stroke();
       ctx.beginPath(); ctx.moveTo(X(0), Y(0)); ctx.lineTo(X(0), Y(-0.012)); ctx.stroke();
-      // surface: inner segments perpendicular to the upper rod, outer ones to the lower rod, extended to the walls
-      var left = cx - W / 2, right = cx + W / 2, P = [cx, depth];
-      var A1 = [P[0] + seg * Math.cos(t1), P[1] + seg * Math.sin(t1)], Am1 = [P[0] - seg * Math.cos(t1), P[1] - seg * Math.sin(t1)];
-      var R = [right, A1[1] + (right - A1[0]) * Math.tan(t2)], L = [left, Am1[1] - (Am1[0] - left) * Math.tan(t2)];
-      fillLiquid(ctx, X, Y, [L, Am1, P, A1, R], left, right, 0);
-      // the two pendulums hanging from the centre of the surface
-      var B1 = [P[0] + l * Math.sin(t1), P[1] - l * Math.cos(t1)], B2 = [B1[0] + l * Math.sin(t2), B1[1] - l * Math.cos(t2)];
+      // surface: the k-th piece on each side is perpendicular to rod k; the outermost pieces run to the walls
+      var left = cx - W / 2, right = cx + W / 2, P = [cx, depth], rightPts = [], leftPts = [], r = P, q = P;
+      for (var k = 0; k < n - 1; k++) {
+        r = [r[0] + seg * Math.cos(th[k]), r[1] + seg * Math.sin(th[k])]; rightPts.push(r);
+        q = [q[0] - seg * Math.cos(th[k]), q[1] - seg * Math.sin(th[k])]; leftPts.unshift(q);
+      }
+      var tn = Math.tan(th[n - 1]);
+      var pts = [[left, q[1] - (q[0] - left) * tn]].concat(leftPts, [P], rightPts, [[right, r[1] + (right - r[0]) * tn]]);
+      fillLiquid(ctx, X, Y, pts, left, right, 0);
+      // the chain of pendulums hanging from the centre of the surface
       ctx.setLineDash([2, 4]); ctx.strokeStyle = COL.faint; ctx.lineWidth = 1;
-      ctx.beginPath(); ctx.moveTo(X(P[0]), Y(P[1])); ctx.lineTo(X(P[0]), Y(P[1] - 2 * l)); ctx.stroke(); ctx.setLineDash([]);
-      ctx.strokeStyle = COL.rod; ctx.lineWidth = 2;
-      ctx.beginPath(); ctx.moveTo(X(P[0]), Y(P[1])); ctx.lineTo(X(B1[0]), Y(B1[1])); ctx.lineTo(X(B2[0]), Y(B2[1])); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(X(P[0]), Y(P[1])); ctx.lineTo(X(P[0]), Y(P[1] - n * l)); ctx.stroke(); ctx.setLineDash([]);
+      var B = P, bobs = [];
+      ctx.strokeStyle = COL.rod; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(X(P[0]), Y(P[1]));
+      for (k = 0; k < n; k++) { B = [B[0] + l * Math.sin(th[k]), B[1] - l * Math.cos(th[k])]; bobs.push(B); ctx.lineTo(X(B[0]), Y(B[1])); }
+      ctx.stroke();
       dot(ctx, X(P[0]), Y(P[1]), 3.5, COL.rod);
-      dot(ctx, X(B1[0]), Y(B1[1]), 7, COL.bob1);
-      dot(ctx, X(B2[0]), Y(B2[1]), 7, COL.bob2);
+      var rad = Math.max(4.5, 8 - n);
+      bobs.forEach(function (b, i) { dot(ctx, X(b[0]), Y(b[1]), rad, bobColour(i + 1)); });
       drawContainer(ctx, X, Y, left, right, 0, H);
-      out.innerHTML = "t = " + t.toFixed(2) + " s &nbsp;·&nbsp; θ<sub>1</sub> = " + t1.toFixed(2) + " rad &nbsp;·&nbsp; θ<sub>2</sub> = " +
-        t2.toFixed(2) + " rad &nbsp;·&nbsp; container moved " + (cx * 1000).toFixed(1) + " mm";
+      out.innerHTML = "t = " + t.toFixed(2) + " s &nbsp;·&nbsp; lowest rod at " + th[n - 1].toFixed(2) + " rad &nbsp;·&nbsp; container moved " + (cx * 1000).toFixed(1) + " mm";
     }
+    function choose(k) {
+      n = k; run = data.runs[k]; run.l = data.totals.rod_length / k;
+      root.querySelectorAll("[data-n]").forEach(function (b) { b.setAttribute("aria-pressed", String(+b.getAttribute("data-n") === k)); });
+    }
+    choose(2);
     size();
+    var duration = (run.x.length - 1) * dt;
     var p = play(root, drawAt, duration, 0.5);
+    root.querySelectorAll("[data-n]").forEach(function (b) {
+      b.addEventListener("click", function () { choose(+b.getAttribute("data-n")); p.redraw(); });
+    });
     window.addEventListener("resize", function () { size(); p.redraw(); });
   }
 
