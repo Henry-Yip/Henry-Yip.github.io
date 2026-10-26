@@ -158,7 +158,13 @@ canvas.xp-lattice, canvas.xp-ising, canvas.xp-slice, canvas.xp-metro, canvas.xp-
   display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: var(--screen); image-rendering: pixelated;
 }
 canvas.xp-raster { display: block; width: 100%; margin-top: 8px; }
-canvas.tb-orbit, canvas.tb-sphere { display: block; width: 100%; max-width: 100%; background: var(--screen); border-radius: 2px; }
+.tb-mapwrap { position: relative; }
+canvas.tb-map { display: block; width: 100%; max-width: 100%; background: var(--screen); border-radius: 2px; cursor: crosshair; touch-action: manipulation; }
+canvas.tb-map:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+canvas.tb-view { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); cursor: grab; touch-action: none; }
+canvas.tb-view:active { cursor: grabbing; }
+.xp-key i.tb-ramp { width: 56px; }
+.xp-key i.tb-arc { width: 18px; height: 0; border-radius: 0; background: none; border-top: 1px dashed var(--ink-2); vertical-align: 3px; }
 canvas.xp-cube { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); cursor: grab; touch-action: none; }
 canvas.xp-cube:active { cursor: grabbing; }
 canvas.xp-trace { display: block; width: 100%; height: 90px; background: var(--screen); border-radius: 2px; }
@@ -180,6 +186,9 @@ canvas.xp-trace { display: block; width: 100%; height: 90px; background: var(--s
 a.xp-btn { display: inline-block; text-decoration: none; margin: 4px 6px 4px 0; }
 .xp-btn.primary:hover { background: var(--ink-2); }
 .xp-btn:focus-visible, .xp-seg button:focus-visible, .xp-slider input:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.xp-select { font: 14px/1.2 var(--sans); color: var(--ink); background: var(--bg); border: 1px solid var(--line-2); border-radius: 4px; padding: 7px 8px; max-width: 100%; }
+.xp-select:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.xp-field { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-2); }
 .xp-seg { display: inline-flex; border: 1px solid var(--line-2); border-radius: 4px; overflow: hidden; }
 .xp-seg button { border: 0; border-radius: 0; color: var(--ink-2); padding: 7px 12px; }
 .xp-seg button + button { border-left: 1px solid var(--line-2); }

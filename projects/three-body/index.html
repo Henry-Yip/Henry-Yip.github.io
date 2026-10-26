@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     
 <!-- begin _includes/seo.html --><title>The three-body problem | Henry Yip</title>
-<meta name="description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, periodic orbits on the shape sphere, the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres, with live simulations.">
+<meta name="description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, a map of periodic orbits with a live 3D view, the shape sphere and the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres.">
 
 
   <meta name="author" content="Henry Yip">
@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/projects/three-body/">
 
 
-  <meta property="og:description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, periodic orbits on the shape sphere, the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres, with live simulations.">
+  <meta property="og:description" content="The gravitational three-body problem: its history, symplectic integrators and energy drift, a map of periodic orbits with a live 3D view, the shape sphere and the figure-eight proof, Sundman’s series and Euler’s problem of two fixed centres.">
 
 
 
@@ -90,7 +90,7 @@
       <div class="xp-hero-text">
         <p class="xp-kicker">Summer research project · School of Physics and Astronomy, University of Edinburgh · 2024</p>
         <h1>The three-body problem</h1>
-        <p class="xp-sub">My 2024 summer research project: why three gravitating bodies have no general solution, how to integrate them without losing energy, and a set of periodic orbits computed in your browser.</p>
+        <p class="xp-sub">My 2024 summer research project: why three gravitating bodies have no general solution, how to integrate them without losing energy, and a search for periodic orbits that you can explore in three dimensions.</p>
         
         <dl class="xp-facts">
           <div><dt>Supervisor</dt><dd>Prof. Jenni Smillie</dd></div><div><dt>Funding</dt><dd>Career Development Scholarship</dd></div><div><dt>Period</dt><dd>June–September 2024</dd></div><div><dt>Paper</dt><dd>Edinburgh Student Journal of Science, 2025</dd></div>
@@ -163,30 +163,58 @@
 
 <h2 id="orbits"><span class="num">4</span>Periodic orbits</h2>
 
-<p>Most three-body motions are chaotic, but special starting points give orbits that repeat exactly. A family studied by Šuvakov and Dmitrašinović starts with the three bodies on a line, at \((-1, 0)\), \((1, 0)\) and \((0, 0)\), with velocities \((a, b)\), \((a, b)\) and \((-2a, -2b)\), so that the total momentum is zero. Different values of \((a, b)\) give the figure-eight, butterflies, moths and more.</p>
+<p>Most three-body motions are chaotic, but special starting points give orbits that repeat exactly. A family studied by Šuvakov and Dmitrašinović starts with the three bodies on a line, at \((-1, 0)\), \((1, 0)\) and \((0, 0)\), with velocities \((a, b)\), \((a, b)\) and \((-2a, -2b)\), so that the total momentum and the angular momentum are both zero. Different values of \((a, b)\) give the figure-eight, butterflies, moths and yin-yangs. Šuvakov and Dmitrašinović found them by scanning the \((a, b)\) plane for starting points whose motion comes back close to where it began.</p>
 
-<p>The orbits below are computed in your browser over one period with the fourth-order integrator and \(\Delta t = 10^{-4}\).</p>
+<p>The last part of my project was a smaller search of the same kind. I varied \(a\) and \(b\) from 0 to 1, integrated each orbit with a fixed time step, and kept the ones that stayed bounded with an energy error below 1. Looking back, that test said more about the integrator than about the orbits: a fixed step fails during close encounters, so a large energy error mostly meant that the step could not follow one.</p>
 
-<div class="xp-widget" id="gallery">
-  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>Five periodic orbits and their paths on the shape sphere</h3></div>
+<p>The map below redoes the search. Each of 401 × 401 starting velocities is integrated to \(t = 100\) with the Forest–Ruth method and a step that shrinks during close encounters,</p>
+
+\[\Delta t = \min\left(10^{-3},\; 0.005\, r_{\min}^{3/2}\right),\]
+
+<p>where \(r_{\min}\) is the smallest distance between two of the bodies. For each orbit the map records whether a body escapes, which I count as moving more than 20 from the centre of mass. If none does, it records the closest return: the smallest distance, over time, between the state and the starting state, measured over all positions and velocities. Bright points come back almost exactly, so they are candidates for periodic orbits. Orbits whose energy error exceeded \(10^{-3}\) are marked as not resolved. These make up 4 % of the grid, most of them at small \(b\), where the bodies start almost in a line and pass very close to each other.</p>
+
+<div class="xp-widget" id="playground" data-map="/assets/data/threebody_map.bin">
+  <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>The (a, b) family, and any orbit in it in three dimensions</h3></div>
   <div class="xp-stage even">
-    <div class="xp-panel"><div class="xp-panel-title">The three bodies</div><canvas class="tb-orbit" role="img" aria-label="The three bodies moving along the selected periodic orbit."></canvas></div>
-    <div class="xp-panel"><div class="xp-panel-title">The shape sphere</div><canvas class="tb-sphere" role="img" aria-label="The path of the triangle's shape on the shape sphere, with the collinear shapes on the equator."></canvas></div>
+    <div class="xp-panel">
+      <div class="xp-panel-title">Starting velocity: click or drag on the map</div>
+      <div class="tb-mapwrap"><canvas class="tb-map" tabindex="0" role="img" aria-label="Map of starting velocities a and b from 0 to 1. Bright points return close to their starting state, dark points lose a body. With the map focused, the arrow keys move the chosen point."></canvas><div class="xp-tip"></div></div>
+      <div class="xp-key"><span><i class="tb-ramp"></i>closest return, 3 (dim) to 0.001 (bright)</span><span><i style="--c:#1d2430"></i>a body escaped before t = 100</span><span><i style="--c:#5c626e"></i>not resolved</span><span><i class="ring"></i>known periodic orbit</span><span><i class="tb-arc"></i>zero total energy</span></div>
+    </div>
+    <div class="xp-panel">
+      <div class="xp-panel-title">The orbit: drag to rotate</div>
+      <canvas class="tb-view" role="img" aria-label="The three bodies moving along the chosen orbit, drawn in three dimensions."></canvas>
+      <div class="xp-row"><div class="xp-seg" role="group" aria-label="View"><button data-view="space" aria-pressed="true">Space</button><button data-view="braid" aria-pressed="false">Space–time</button><button data-view="shape" aria-pressed="false">Shape sphere</button></div></div>
+    </div>
   </div>
   <div class="xp-controls" style="margin-top:12px">
     <div class="xp-row">
-      <div class="xp-seg" role="group" aria-label="Orbit"><button data-orbit="figure-eight" aria-pressed="true">Figure-eight</button><button data-orbit="butterfly I" aria-pressed="false">Butterfly I</button><button data-orbit="moth I" aria-pressed="false">Moth I</button><button data-orbit="goggles" aria-pressed="false">Goggles</button><button data-orbit="yin-yang I" aria-pressed="false">Yin-yang I</button></div>
+      <label class="xp-field">Orbit <select class="xp-select" data-ctl="preset"></select></label>
       <button class="xp-btn" data-act="play" aria-pressed="true">Pause</button>
+      <button class="xp-btn" data-act="restart">Restart</button>
+      <div class="xp-seg" role="group" aria-label="Speed"><button data-speed="1" aria-pressed="true">1×</button><button data-speed="4" aria-pressed="false">4×</button><button data-speed="16" aria-pressed="false">16×</button></div>
     </div>
+    <label class="xp-slider"><span><span>Push out of the plane, δ</span> <output data-out="delta">0.00</output></span>
+      <input type="range" min="0" max="0.3" step="0.01" value="0" data-ctl="delta" /></label>
     <dl class="xp-readout">
-      <div><dt>Period</dt><dd data-out="T">–</dd></div>
-      <div><dt>Distance from the start after one period</dt><dd data-out="gap">–</dd></div>
+      <div><dt>Starting velocity (a, b)</dt><dd data-out="ab">–</dd></div>
+      <div><dt>Time</dt><dd data-out="t">–</dd></div>
+      <div><dt>Energy</dt><dd data-out="E">–</dd></div>
+      <div><dt>Relative energy error</dt><dd data-out="dE">–</dd></div>
+      <div><dt>Closest return so far</dt><dd data-out="ret">–</dd></div>
+      <div><dt>Status</dt><dd data-out="status">–</dd></div>
     </dl>
   </div>
-  <p class="xp-caption">Left: the bodies over one period, with the whole orbit drawn faintly. Right: the same motion on the shape sphere described in the next section; the dashed equator holds the collinear shapes. Many of these orbits are unstable, so a small error grows until the orbit breaks apart after a few periods; the figure-eight is a notable exception.</p>
+  <p class="xp-caption">The map is precomputed. Rings mark the sixteen orbits in Šuvakov and Dmitrašinović's table, the figure-eight among them; hover over a point to see its values. The chosen orbit is integrated live in your browser with the same method. At 1× it runs at 1.5 time units per second, so the figure-eight takes about four seconds per period. The space view shows the starting plane as a grid. The space–time view draws the motion in that plane with time running upwards, so each body traces one strand of a braid. The shape sphere keeps only the shape of the triangle (section 5).</p>
 </div>
 
-<p>Some orbits, such as the dragonfly and the yarn, include very close encounters that a fixed step of \(10^{-4}\) cannot follow; they need much smaller steps, or steps that shrink during the encounter. All sixteen orbits, computed with \(\Delta t = 10^{-5}\), are in the visualisation described in section 8.</p>
+<p>Outside the dashed arc the total energy, \(3(a^2+b^2) - \tfrac52\), is positive, so the three bodies cannot all stay together, and 99.8 % of the orbits there lose a body within 100 time units. Inside the arc a third of them do. Fifteen of the sixteen known orbits fall on grid points that stay bound and come back to within 0.06 of their starting state. The goggles orbit lies in such a thin strip that its nearest grid point escapes. The figure-eight sits in a broad bright patch: it is stable, so starting points near it stay near it. Most of the others are unstable, and in the live view a small error grows until the orbit breaks apart. The goggles orbit loses a body after about 125 time units, and butterfly I after about 140.</p>
+
+<p>The space–time view is how Moore found the figure-eight in 1993. Followed through time, three bodies in a plane trace a braid, and he looked, for each braid, for the orbit with the least action.</p>
+
+<p>The slider pushes bodies 1 and 2 out of the plane in opposite directions. This gives the system angular momentum about an axis that lies in the plane, so the plane itself slowly turns over, as the space view shows. The push changes the side lengths of the triangle only at second order, so it changes the shape much less. For the figure-eight, a push of 0.01 keeps the path on the shape sphere within 0.05 of the unpushed one for about 140 time units; an in-plane push of the same size moves it that far within two. The figure-eight survives pushes of up to 0.1 for at least 300 time units. After a push of 0.2, one body escapes after about 120.</p>
+
+<p>The varying step also handles the very close encounters of the dragonfly and the yarn, which a fixed step of \(10^{-4}\) could not follow.</p>
 
 <h2 id="figure-eight"><span class="num">5</span>The shape sphere and the figure-eight</h2>
 
