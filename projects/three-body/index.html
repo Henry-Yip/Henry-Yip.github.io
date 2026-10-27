@@ -181,21 +181,32 @@
 
 <p>Most three-body motions are chaotic, but special starting points give orbits that repeat exactly. A family studied by Šuvakov and Dmitrašinović starts with the three bodies on a line, at \((-1, 0)\), \((1, 0)\) and \((0, 0)\), with velocities \((a, b)\), \((a, b)\) and \((-2a, -2b)\), so that the total momentum and the angular momentum are both zero. Different values of \((a, b)\) give the figure-eight, butterflies, moths and yin-yangs. Šuvakov and Dmitrašinović found them by scanning the \((a, b)\) plane for starting points whose motion comes back close to where it began.</p>
 
-<p>The last part of my project was a smaller search of the same kind. I varied \(a\) and \(b\) from 0 to 1, integrated each orbit with a fixed time step, and kept the ones that stayed bounded with an energy error below 1. Looking back, that test said more about the integrator than about the orbits: a fixed step fails during close encounters, so a large energy error mostly meant that the step could not follow one.</p>
+<p>The last part of my project was a search of this family for “well-behaved” orbits. I varied \(a\) and \(b\) from 0 to 1, integrated each orbit with the fourth-order method and a fixed step of \(10^{-4}\), and called an orbit well-behaved if it stayed bounded and its energy deviation, \((E_{\max}-E_{\min})/\lvert E_0\rvert\), stayed below 1. I also noticed that the well-behaved region around the figure-eight is wider along \(a\) than along \(b\).</p>
 
-<p>The map below redoes the search. Each of 401 × 401 starting velocities is integrated to \(t = 100\) with the Forest–Ruth method and a step that shrinks during close encounters,</p>
+<p>In October 2026 I reran that search and added the check it was missing. The map below shows three views of the family:</p>
+
+<ul>
+  <li><strong>2024 energy test.</strong> The 2024 search on a 201 × 201 grid: a fixed step of \(10^{-4}\), the energy deviation over 10 or 50 time units, and each run stopped once two bodies are more than 100 apart.</li>
+  <li><strong>Trust horizon.</strong> Each orbit is run again with half the step, and the map shows how long the two runs agree to within 0.01. Where halving the step does not change the answer, the computed orbit can be trusted. For the orbits I checked, comparing with a far more accurate run gave the same times, so halving the step is enough to tell.</li>
+  <li>
+    <p><strong>Closest return.</strong> The method Šuvakov and Dmitrašinović used to find their orbits, here at a lower resolution: it reproduces their search rather than finding new orbits. Each of 401 × 401 starting velocities is integrated to \(t = 100\) with the Forest–Ruth method and a step that shrinks during close encounters,</p>
 
 \[\Delta t = \min\left(10^{-3},\; 0.005\, r_{\min}^{3/2}\right),\]
 
-<p>where \(r_{\min}\) is the smallest distance between two of the bodies. For each orbit the map records whether a body escapes, which I count as moving more than 20 from the centre of mass. If none does, it records the closest return: the smallest distance, over time, between the state and the starting state, measured over all positions and velocities. Bright points come back almost exactly, so they are candidates for periodic orbits. Orbits whose energy error exceeded \(10^{-3}\) are marked as not resolved. These make up 4 % of the grid, most of them at small \(b\), where the bodies start almost in a line and pass very close to each other.</p>
+    <p>where \(r_{\min}\) is the smallest distance between two of the bodies. The map records whether a body escapes, which I count as moving more than 20 from the centre of mass. If none does, it records the closest return: the smallest distance, over time, between the state and the starting state, measured over all positions and velocities. Bright points come back almost exactly, so they are candidates for periodic orbits. Orbits whose energy error exceeded \(10^{-3}\) are marked as not resolved: 4 % of the grid, most of them at small \(b\), where the bodies start almost in a line and pass very close to each other.</p>
+  </li>
+</ul>
 
-<div class="xp-widget" id="playground" data-map="/assets/data/threebody_map.bin">
+<div class="xp-widget" id="playground" data-map="/assets/data/threebody_map.bin" data-trust="/assets/data/threebody_trust.bin">
   <div class="xp-widget-head"><span class="xp-tag">Live simulation</span><h3>The (a, b) family, and any orbit in it in three dimensions</h3></div>
   <div class="xp-stage even">
     <div class="xp-panel">
       <div class="xp-panel-title">Starting velocity: click or drag on the map</div>
+      <div class="xp-seg" role="group" aria-label="What the map shows" style="margin-bottom:6px"><button data-mapview="return" aria-pressed="true">Closest return</button><button data-mapview="energy" aria-pressed="false">2024 energy test</button><button data-mapview="trust" aria-pressed="false">Trust horizon</button></div>
       <div class="tb-mapwrap"><canvas class="tb-map" tabindex="0" role="img" aria-label="Map of starting velocities a and b from 0 to 1. Bright points return close to their starting state, dark points lose a body. With the map focused, the arrow keys move the chosen point."></canvas><div class="xp-tip"></div></div>
-      <div class="xp-key"><span><i class="tb-ramp"></i>closest return, 3 (dim) to 0.001 (bright)</span><span><i style="--c:#1d2430"></i>a body escaped before t = 100</span><span><i style="--c:#5c626e"></i>not resolved</span><span><i class="ring"></i>known periodic orbit</span><span><i class="tb-arc"></i>zero total energy</span></div>
+      <div class="xp-key" data-key="return"><span><i class="tb-ramp"></i>closest return, 3 (dim) to 0.001 (bright)</span><span><i style="--c:#1d2430"></i>a body escaped before t = 100</span><span><i style="--c:#5c626e"></i>not resolved</span><span><i class="ring"></i>known periodic orbit</span><span><i class="tb-arc"></i>zero total energy</span></div>
+      <div class="xp-key" data-key="energy" hidden=""><span><i class="tb-ramp"></i>energy deviation, 1 (dim) to 10<sup>−14</sup> (bright): passes</span><span><i style="--c:#5c626e"></i>1 or more: fails</span><span><i style="--c:#1d2430"></i>two bodies flew apart first</span><span class="xp-seg" role="group" aria-label="Length of the run"><button data-window="10" aria-pressed="true">t ≤ 10</button><button data-window="50" aria-pressed="false">t ≤ 50</button></span></div>
+      <div class="xp-key" data-key="trust" hidden=""><span><i class="tb-ramp"></i>run agrees with a half-step run (to 0.01) until t = 0 (dim) to t = 50, or until two bodies part (bright)</span><span><i class="ring"></i>known periodic orbit</span></div>
     </div>
     <div class="xp-panel">
       <div class="xp-panel-title">The orbit: drag to rotate</div>
@@ -219,18 +230,29 @@
       <div><dt>Relative energy error</dt><dd data-out="dE">–</dd></div>
       <div><dt>Closest return so far</dt><dd data-out="ret">–</dd></div>
       <div><dt>Status</dt><dd data-out="status">–</dd></div>
+      <div><dt>2024 energy test (fixed step)</dt><dd data-out="test2024">–</dd></div>
+      <div><dt>Trust horizon of the fixed step</dt><dd data-out="horizon">–</dd></div>
     </dl>
   </div>
-  <p class="xp-caption">The map is precomputed. Rings mark the sixteen orbits in Šuvakov and Dmitrašinović's table, the figure-eight among them; hover over a point to see its values. The chosen orbit is integrated live in your browser with the same method. At 1× it runs at 1.5 time units per second, so the figure-eight takes about four seconds per period. The space view shows the starting plane as a grid. The space–time view draws the motion in that plane with time running upwards, so each body traces one strand of a braid. The shape sphere keeps only the shape of the triangle (section 5).</p>
+  <p class="xp-caption">The maps are precomputed; switch between them above the map. Rings mark the sixteen orbits in Šuvakov and Dmitrašinović's table, the figure-eight among them; hover over a point to see its values in all three views. The chosen orbit is integrated live in your browser with the same method. At 1× it runs at 1.5 time units per second, so the figure-eight takes about four seconds per period. The space view shows the starting plane as a grid. The space–time view draws the motion in that plane with time running upwards, so each body traces one strand of a braid. The shape sphere keeps only the shape of the triangle (section 5).</p>
 </div>
 
-<p>Outside the dashed arc the total energy, \(3(a^2+b^2) - \tfrac52\), is positive, so the three bodies cannot all stay together, and 99.8 % of the orbits there lose a body within 100 time units. Inside the arc a third of them do. Fifteen of the sixteen known orbits fall on grid points that stay bound and come back to within 0.06 of their starting state. The goggles orbit lies in such a thin strip that its nearest grid point escapes. The figure-eight sits in a broad bright patch: it is stable, so starting points near it stay near it. Most of the others are unstable, and in the live view a small error grows until the orbit breaks apart. The goggles orbit loses a body after about 125 time units, and butterfly I after about 140.</p>
+<p><strong>What the 2024 test measured.</strong> Comparing the first two views:</p>
+
+<ul>
+  <li>It catches close encounters, which a fixed step cannot follow, but for the same reason it rejects real periodic orbits. Four of the sixteen known orbits fail it within 10 time units (butterfly II, butterfly IV and both yin-yang II orbits), and seven within 50. In two of them the step error even flings a body away before \(t = 10\).</li>
+  <li>It misses sensitivity. Of the orbits that pass it over 10 time units, 7 % already disagree with the half-step run within those 10 time units, and 29 % before \(t = 50\). A symplectic step keeps the energy close to constant while the trajectory drifts away from the true one: butterfly I passes with an energy deviation of \(10^{-3}\) but agrees with the half-step run only until \(t = 19\).</li>
+  <li>The fixed step invents escapes. In half of the runs two bodies end up more than 100 apart before \(t = 50\). Inside the dashed arc, where the total energy is negative, the accurate run keeps every body within 20 of the centre of mass until \(t = 100\) for 64 % of those orbits.</li>
+  <li>The observation about the figure-eight holds. The region whose runs can be trusted to \(t = 50\) spans \(a\) = 0.22 to 0.50 but only \(b\) = 0.525 to 0.545, and the closest-return view shows the same long, thin island.</li>
+</ul>
+
+<p>So the 2024 search found where a fixed step copes, which is a fair question about the integrator, but not which orbits are well-behaved.</p>
+
+<p><strong>What the closest-return view shows.</strong> Outside the dashed arc the total energy, \(3(a^2+b^2) - \tfrac52\), is positive, so the three bodies cannot all stay together, and 99.8 % of the orbits there lose a body within 100 time units. Inside the arc a third of them do. Fifteen of the sixteen known orbits fall on grid points that stay bound and come back to within 0.06 of their starting state. The goggles orbit lies in such a thin strip that its nearest grid point escapes. The figure-eight sits in a broad bright patch: it is stable, so starting points near it stay near it. Most of the others are unstable, and in the live view a small error grows until the orbit breaks apart. The goggles orbit loses a body after about 125 time units, and butterfly I after about 140.</p>
 
 <p>The space–time view is how Moore found the figure-eight in 1993. Followed through time, three bodies in a plane trace a braid, and he looked, for each braid, for the orbit with the least action.</p>
 
 <p>The slider pushes bodies 1 and 2 out of the plane in opposite directions. This gives the system angular momentum about an axis that lies in the plane, so the plane itself slowly turns over, as the space view shows. The push changes the side lengths of the triangle only at second order, so it changes the shape much less. For the figure-eight, a push of 0.01 keeps the path on the shape sphere within 0.05 of the unpushed one for about 140 time units; an in-plane push of the same size moves it that far within two. The figure-eight survives pushes of up to 0.1 for at least 300 time units. After a push of 0.2, one body escapes after about 120.</p>
-
-<p>The varying step also handles the very close encounters of the dragonfly and the yarn, which a fixed step of \(10^{-4}\) could not follow.</p>
 
 <h2 id="figure-eight"><span class="num">5</span>The shape sphere and the figure-eight</h2>
 

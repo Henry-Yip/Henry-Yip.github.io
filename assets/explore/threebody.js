@@ -243,6 +243,19 @@ const ESCAPED = [29, 36, 48], UNRESOLVED = [92, 98, 110];
 const ramp = (s) => oklchToRgb(0.36 + 0.59 * s, 0.035 + 0.075 * Math.sin(0.9 * Math.PI * s), 78);
 const rampOfP = (p) => ramp(Math.min(1, Math.max(0, (Math.log10(3) - Math.log10(p)) / (Math.log10(3) + 3))));
 const MAP_LUT = Array.from({ length: 256 }, (_, c) => (c === 0 ? ESCAPED : c === 255 ? UNRESOLVED : rampOfP(pOfCode(c))));
+// The 2024 test and its convergence check, on a 201 x 201 grid: four bytes per orbit (see section 4).
+// Energy deviation (Emax - Emin)/|E0| with fixed-step Forest-Ruth at dt = 1e-4, at t = 10 and t = 50: code
+// 1 + round(253 (log10 dev + 16) / 19), 0 = two bodies more than 100 apart before then. Trust horizon: the time the run
+// agrees to 0.01 with a run at dt/2, as round(5 t), 255 = still agreeing at t = 50. Then the time two bodies passed
+// 100 apart, as round(5 t), 255 = never.
+const TRUST_N = 201, TRUST_T = 50;
+const devOfCode = (c) => 10 ** (((c - 1) * 19) / 253 - 16);
+const ENERGY_LUT = Array.from({ length: 256 }, (_, c) => {
+  if (c === 0) return ESCAPED;                       // flew apart in the fixed-step run
+  const dev = devOfCode(c);
+  return dev >= 1 ? UNRESOLVED : ramp(Math.min(1, -Math.log10(dev) / 14));     // fails the test, or passes: dim near 1, bright when tiny
+});
+const TRUST_LUT = Array.from({ length: 256 }, (_, h) => ramp(h === 255 ? 1 : Math.min(1, h / 5 / TRUST_T)));
 async function loadMap(url) {
   const res = await fetch(url);
   if (!res.ok || typeof DecompressionStream === "undefined") throw new Error("map unavailable");
@@ -265,7 +278,7 @@ function playground() {
   const out = (k) => $(`[data-out="${k}"]`, root);
   const NAMES = Object.keys(ORBITS);
   select.innerHTML = NAMES.map((n) => `<option value="${n}">${n}</option>`).join("") + '<option value="">Chosen on the map</option>';
-  $(".tb-ramp", root).style.background = `linear-gradient(90deg, ${[0, 0.25, 0.5, 0.75, 1].map((s) => `rgb(${ramp(s).join(",")})`).join(", ")})`;
+  $$(".tb-ramp", root).forEach((el) => (el.style.background = `linear-gradient(90deg, ${[0, 0.25, 0.5, 0.75, 1].map((s) => `rgb(${ramp(s).join(",")})`).join(", ")})`));
 
   // ---- simulation, with a history of samples every 0.02 time units: t, nine coordinates, three shape coordinates
   const r = new Float64Array(9), v = new Float64Array(9), acc = new Float64Array(9), r0 = new Float64Array(9), v0 = new Float64Array(9);
@@ -448,11 +461,39 @@ function playground() {
     out("dE").innerHTML = sci(Math.abs((energy3(r, v) - E0) / E0));
     out("ret").textContent = left && isFinite(pmin) ? `${pmin < 0.01 ? pmin.toFixed(4) : pmin.toFixed(3)}, t = ${pminT.toFixed(1)}` : "–";
     out("status").textContent = escapedAt ? `a body escaped at t ≈ ${escapedAt.toFixed(0)}` : "all three together";
+    const tr = trustAt(a, b);
+    out("test2024").innerHTML = tr ? fmtDev(energyWindow === 10 ? tr.d10 : tr.d50) : "–";
+    out("horizon").textContent = tr ? fmtHorizon(tr) : "–";
   };
 
   // ---- the map
   const M = { left: 32, top: 10, bottom: 28 };
-  let mv = null, side = 0, mapImg = null, mapMsg = "Loading the map…", mapBytes = null;
+  let mv = null, side = 0, mapMsg = "Loading the map…", mapBytes = null, trustBytes = null, mapView = "return", energyWindow = 10;
+  const images = {};
+  const paint = (n, colour) => {         // an n x n image, rows of increasing b, coloured cell by cell
+    const off = document.createElement("canvas");
+    off.width = off.height = n;
+    const octx = off.getContext("2d"), img = octx.createImageData(n, n);
+    for (let j = 0; j < n; j++)
+      for (let i = 0; i < n; i++) {
+        const c = colour(j * n + i), k = 4 * ((n - 1 - j) * n + i);
+        img.data[k] = c[0]; img.data[k + 1] = c[1]; img.data[k + 2] = c[2]; img.data[k + 3] = 255;
+      }
+    octx.putImageData(img, 0, 0);
+    return off;
+  };
+  const paintEnergy = () => (images.energy = paint(TRUST_N, (q) => ENERGY_LUT[trustBytes[4 * q + (energyWindow === 10 ? 0 : 1)]]));
+  const trustAt = (aa, bb) => {
+    if (!trustBytes) return null;
+    const q = 4 * (Math.round(bb * (TRUST_N - 1)) * TRUST_N + Math.round(aa * (TRUST_N - 1)));
+    return { d10: trustBytes[q], d50: trustBytes[q + 1], h: trustBytes[q + 2], stop: trustBytes[q + 3] };
+  };
+  const fmtDev = (c) => {
+    if (c === 0) return "two bodies flew apart first";
+    const d = devOfCode(c);
+    return `${d < 0.01 ? sci(d) : d < 100 ? d.toFixed(2) : d.toExponential(0).replace("e+", " × 10<sup>") + "</sup>"}, ${d < 1 ? "passes" : "fails"}`;
+  };
+  const fmtHorizon = (t) => (t.h === 255 ? (t.stop === 255 ? `beyond t = ${TRUST_T}` : `until two bodies part, t ≈ ${(t.stop / 5).toFixed(0)}`) : `t ≈ ${(t.h / 5).toFixed(1)}`);
   const fitMap = () => {
     const dpr = Math.min(devicePixelRatio || 1, 2), w = mapCanvas.clientWidth;
     side = w - M.left - 10;
@@ -469,7 +510,8 @@ function playground() {
     const { ctx, w, h } = mv;
     ctx.clearRect(0, 0, w, h);
     ctx.font = "11px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-    if (mapImg) { ctx.imageSmoothingEnabled = false; ctx.drawImage(mapImg, M.left, M.top, side, side); }
+    const shown = images[mapView];
+    if (shown) { ctx.imageSmoothingEnabled = false; ctx.drawImage(shown, M.left, M.top, side, side); }
     else { ctx.fillStyle = "#1d2430"; ctx.fillRect(M.left, M.top, side, side); label(ctx, mapMsg, M.left + side / 2, M.top + side / 2, "center"); }
     // axes
     ctx.fillStyle = "#8b94a3";
@@ -501,10 +543,12 @@ function playground() {
     const near = NAMES.find((n) => Math.hypot(X(ORBITS[n].v[0]) - X(aa), Y(ORBITS[n].v[1]) - Y(bb)) < 7);
     let text = `<b>a = ${aa.toFixed(3)}, b = ${bb.toFixed(3)}</b>`;
     if (near) text = `<b>${near}</b> (period ${ORBITS[near].T.toFixed(2)})<br>a = ${ORBITS[near].v[0].toFixed(4)}, b = ${ORBITS[near].v[1].toFixed(4)}`;
-    else if (mapBytes) {
+    if (mapBytes) {
       const c = mapBytes[Math.round(bb * (MAP_N - 1)) * MAP_N + Math.round(aa * (MAP_N - 1))];
-      text += c === 0 ? `<br>a body escaped before t = ${MAP_T}` : c === 255 ? "<br>not resolved" : `<br>closest return ${pOfCode(c) < 0.01 ? pOfCode(c).toFixed(4) : pOfCode(c).toFixed(3)}`;
+      text += c === 0 ? `<br>accurate run: a body escaped before t = ${MAP_T}` : c === 255 ? "<br>accurate run: not resolved" : `<br>closest return ${pOfCode(c) < 0.01 ? pOfCode(c).toFixed(4) : pOfCode(c).toFixed(3)}`;
     }
+    const tr = trustAt(aa, bb);
+    if (tr) text += `<br>2024 test, t ≤ ${energyWindow}: ${fmtDev(energyWindow === 10 ? tr.d10 : tr.d50)}<br>trust horizon: ${fmtHorizon(tr)}`;
     return { text, near };
   };
   const choose = (aa, bb, name = "") => {
@@ -575,17 +619,29 @@ function playground() {
   choose(a, b, "Figure-eight");
   loadMap(root.dataset.map).then((bytes) => {
     mapBytes = bytes;
-    const off = document.createElement("canvas");
-    off.width = off.height = MAP_N;
-    const octx = off.getContext("2d"), img = octx.createImageData(MAP_N, MAP_N);
-    for (let j = 0; j < MAP_N; j++)
-      for (let i = 0; i < MAP_N; i++) {
-        const c = MAP_LUT[bytes[j * MAP_N + i]], k = 4 * ((MAP_N - 1 - j) * MAP_N + i);
-        img.data[k] = c[0]; img.data[k + 1] = c[1]; img.data[k + 2] = c[2]; img.data[k + 3] = 255;
-      }
-    octx.putImageData(img, 0, 0);
-    mapImg = off; drawMap();
+    images.return = paint(MAP_N, (q) => MAP_LUT[bytes[q]]);
+    drawMap();
   }).catch(() => { mapMsg = "The map could not be loaded."; drawMap(); });
+  loadMap(root.dataset.trust).then((bytes) => {
+    trustBytes = bytes;
+    paintEnergy();
+    images.trust = paint(TRUST_N, (q) => TRUST_LUT[bytes[4 * q + 2]]);
+    drawMap(); readouts();
+  }).catch(() => {});
+  // which map is shown, and its key
+  const showView = (v) => {
+    mapView = v;
+    $$("[data-mapview]", root).forEach((x) => x.setAttribute("aria-pressed", x.dataset.mapview === v));
+    $$("[data-key]", root).forEach((x) => (x.hidden = x.dataset.key !== v));
+    drawMap();
+  };
+  $$("[data-mapview]", root).forEach((btn) => btn.addEventListener("click", () => showView(btn.dataset.mapview)));
+  $$("[data-window]", root).forEach((btn) => btn.addEventListener("click", () => {
+    energyWindow = +btn.dataset.window;
+    $$("[data-window]", root).forEach((x) => x.setAttribute("aria-pressed", x === btn));
+    if (trustBytes) paintEnergy();
+    drawMap(); readouts();
+  }));
 }
 
 function toc() {
