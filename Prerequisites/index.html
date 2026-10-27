@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -431,12 +549,15 @@
 
 <p>The rotation group \(\mathrm{SO}(3)\) is everywhere in physics.</p>
 
-<figure class="">
-  <video class="gif-video" src="" poster="" width="" height="" autoplay="" loop="" muted="" playsinline="" aria-label=""></video></figure>
+<!-- Courtesy of embedresponsively.com -->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/dSZNFP60Tc0" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
 <p>In general,</p>
 
-\[\mathrm{SO}(n):=\left\{A \in \mathrm{GL}(n, \mathbb{R}) \;\middle|\; \det A=1 \text{ and } A^{T}=A^{-1}\right\},\]
+\[\mathrm{SO}(n)=\{A \in \mathrm{GL}(n, \mathbb{R}) \,|\, \det A=1,\; A^{T}=A^{-1}\},\]
 
 <p>the group of rotations of \(\mathbb{R}^n\): linear isometries that preserve orientation. It is the intersection \(\mathrm{SO}(n) = \mathrm{SL}(n, \mathbb{R}) \cap \mathrm{O}(n)\).</p>
 
@@ -505,8 +626,10 @@
 <p><strong>Proof.</strong> In \(S_3\), let \(H = \{e, (1\,2\,3), (1\,3\,2)\}\) be the subgroup of rotations. Then</p>
 
 \[\begin{aligned}
-(1\,2)H&amp;=\{(1\,2),\ (1\,2)(1\,2\,3),\ (1\,2)(1\,3\,2)\} =\{(1\,2),(2\,3),(1\,3)\}, \\
-(2\,3)H&amp;=\{(2\,3),\ (2\,3)(1\,2\,3),\ (2\,3)(1\,3\,2)\}=\{(2\,3),(1\,3),(1\,2)\},
+(1\,2)H&amp;=\{(1\,2),\ (1\,2)(1\,2\,3),\ (1\,2)(1\,3\,2)\} \\
+&amp;=\{(1\,2),(2\,3),(1\,3)\}, \\
+(2\,3)H&amp;=\{(2\,3),\ (2\,3)(1\,2\,3),\ (2\,3)(1\,3\,2)\} \\
+&amp;=\{(2\,3),(1\,3),(1\,2)\},
 \end{aligned}\]
 
 <p>so \((1\,2)H = (2\,3)H\) although \((1\,2) \neq (2\,3)\). \(\blacksquare\)</p>
@@ -855,7 +978,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

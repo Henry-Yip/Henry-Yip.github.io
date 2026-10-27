@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -280,8 +398,10 @@
 <p>Substituting into \(\hat H\lvert n\rangle = E_n\lvert n\rangle\):</p>
 
 \[\begin{aligned}
-&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right) \\
-&amp; \quad=\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\cdots\right)\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right).
+&amp; \left(\hat{H}_0+\lambda \hat{H}^{\prime}\right) \\
+&amp; \quad\times\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right) \\
+&amp; =\left(E_n^{(0)}+\lambda E_n^{(1)}+\lambda^2 E_n^{(2)}+\cdots\right) \\
+&amp; \quad\times\left(\left|n^{(0)}\right\rangle+\lambda\left|n^{(1)}\right\rangle+\lambda^2\left|n^{(2)}\right\rangle+\cdots\right).
 \end{aligned}\]
 
 <h2 id="first-order-energy-shift">First-order energy shift</h2>
@@ -292,7 +412,10 @@
 
 <p>Take the inner product with \(\langle k^{(0)}\rvert\). Since \(\hat H_0\) is Hermitian, \(\langle k^{(0)} \rvert \hat{H}_0 \lvert n^{(1)} \rangle = E_k^{(0)} \langle k^{(0)} \mid n^{(1)} \rangle\), so</p>
 
-\[\left(E_k^{(0)}-E_n^{(0)}\right)\left\langle k^{(0)} \mid n^{(1)}\right\rangle=E_n^{(1)} \delta_{k n}-\left\langle k^{(0)}\right|\hat{H}^{\prime}\left| n^{(0)}\right\rangle .\]
+\[\begin{aligned}
+&amp;\left(E_k^{(0)}-E_n^{(0)}\right)\left\langle k^{(0)} \mid n^{(1)}\right\rangle \\
+&amp;\quad=E_n^{(1)} \delta_{k n}-\left\langle k^{(0)}\right|\hat{H}^{\prime}\left| n^{(0)}\right\rangle .
+\end{aligned}\]
 
 <p>Choosing \(k=n\) makes the left-hand side vanish, giving</p>
 
@@ -665,7 +788,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -276,39 +394,47 @@
 <p>To classify them, we need two constants of motion. With the centres at \((\pm d, 0)\) and masses \(m_1\) and \(m_2\),</p>
 
 \[\begin{aligned}
-G&amp;=\frac{1}{2}\left(x p_y-y p_x\right)^2+\frac{1}{2} d^2 p_x^2+d x\left(\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}}\right), \\
-H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
+G&amp;=\frac{1}{2}\left(x p_y-y p_x\right)^2+\frac{1}{2} d^2 p_x^2 \\
+&amp;\quad+d x\Biggl(\frac{m_1}{\sqrt{(x+d)^2+y^2}} \\
+&amp;\qquad-\frac{m_2}{\sqrt{(x-d)^2+y^2}}\Biggr), \\
+H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
+&amp;\quad-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
 \end{aligned}\]
 
 <p>\(H\) is the Hamiltonian (the energy), and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable.</p>
 
 <p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type we found earlier), \(L\) (lemniscate) and \(P\) (planetary).</p>
 
-<figure class=""><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types in the \((H, G)\) plane. Figure from Syzygies in the Two Center Problem.
+"><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /></a><figcaption>
       Orbit types in the \((H, G)\) plane. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
 
     </figcaption></figure>
 
 <p>My simulations reproduce all three types:</p>
 
-<figure class=""><img src="/assets/images/S_Trajectory.png" alt="Satellite orbit circling one of the two centres." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/S_Trajectory.png" class="image-popup" title="Satellite orbit.
+"><img src="/assets/images/S_Trajectory.png" alt="Satellite orbit circling one of the two centres." loading="lazy" decoding="async" /></a><figcaption>
       Satellite orbit.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Lemniscate_Trajectory.png" alt="Lemniscate orbit passing between the two centres in a figure-eight pattern." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Lemniscate_Trajectory.png" class="image-popup" title="Lemniscate orbit.
+"><img src="/assets/images/Lemniscate_Trajectory.png" alt="Lemniscate orbit passing between the two centres in a figure-eight pattern." loading="lazy" decoding="async" /></a><figcaption>
       Lemniscate orbit.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Planetery_Trajectory.png" alt="Planetary orbit enclosing both centres." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planetery_Trajectory.png" class="image-popup" title="Planetary orbit.
+"><img src="/assets/images/Planetery_Trajectory.png" alt="Planetary orbit enclosing both centres." loading="lazy" decoding="async" /></a><figcaption>
       Planetary orbit.
 
     </figcaption></figure>
 
 <p>With these orbits, \(S\) now covers its full range. However, it still looks rather irregular and does not yet clearly follow \(\operatorname{sn}\):</p>
 
-<figure class=""><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/S_Graph_Planetery.png" class="image-popup" title="\(S\) against time for a planetary orbit.
+"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /></a><figcaption>
       \(S\) against time for a planetary orbit.
 
     </figcaption></figure>
@@ -672,7 +798,7 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -278,8 +396,11 @@ T^2&amp;=\frac{4\pi^2}{GM}\,r^3.
 
 <h3 id="a-less-serious-example">A less serious example</h3>
 
-<figure class="">
-  <video class="gif-video" src="" poster="" width="" height="" autoplay="" loop="" muted="" playsinline="" aria-label=""></video></figure>
+<!-- Courtesy of embedresponsively.com -->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/MFcT4Hsx7VQ" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
 <p>Let’s estimate Peter Griffin’s mass from the clip. With \(T \approx 2.75\text{ s}\) and \(r \approx 1\text{ m}\), we get \(M \approx 7.8 \times 10^{10}\text{ kg}\).</p>
 
@@ -299,7 +420,8 @@ T^2&amp;=\frac{4\pi^2}{GM}\,r^3.
 
 <p>Let \(l\) be the semi-latus rectum (shown below)</p>
 
-<figure class=""><img src="/assets/images/SemiLatus.png" alt="Ellipse showing the semi-major axis, semi-minor axis, foci and the semi-latus rectum." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/SemiLatus.png" class="image-popup" title="Image: Academic Kids encyclopedia.
+"><img src="/assets/images/SemiLatus.png" alt="Ellipse showing the semi-major axis, semi-minor axis, foci and the semi-latus rectum." loading="lazy" decoding="async" /></a><figcaption>
       Image: <a href="https://academickids.com/encyclopedia/index.php/Conic_section">Academic Kids encyclopedia</a>.
 
     </figcaption></figure>
@@ -310,7 +432,10 @@ T^2&amp;=\frac{4\pi^2}{GM}\,r^3.
 
 <p>For an inverse-square force \(F = -k/r^2\) with \(k = GMm\), the orbit equation gives \(l=\frac{mh^2}{k}\), so</p>
 
-\[T=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-e^2} \quad \Longrightarrow \quad T^2=\frac{(2 \pi)^2 a^3}{h^2}\, l=(2 \pi)^2 a^3\, \frac{m}{k}.\]
+\[\begin{aligned}
+T&amp;=\frac{2 \pi a b}{h}=\frac{2 \pi}{h} a^2 \sqrt{1-e^2} \\
+\Longrightarrow\quad T^2&amp;=\frac{(2 \pi)^2 a^3}{h^2}\, l=(2 \pi)^2 a^3\, \frac{m}{k}.
+\end{aligned}\]
 
 <p>Hence \(T^2 / a^3=4\pi^2 / GM\), in agreement with the circular case. \(\blacksquare\)</p>
 
@@ -716,7 +841,7 @@ K&amp;=\frac{1}{2}mv^2 = \frac{1}{2}r\left(m\frac{v^2}{r}\right) = \frac{1}{2}r\
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

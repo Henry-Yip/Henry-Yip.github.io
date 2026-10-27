@@ -193,6 +193,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -275,15 +393,21 @@
 
 <p>and the Lagrangian is</p>
 
-\[\mathcal{L} = \tfrac12 M\dot x^2 + \sum_{k=1}^{n}\left[\tfrac12 m\left(\dot X_k^2+\dot Y_k^2\right) + \tfrac12 d\left(\dot X_k-\dot x\right)^2 - mgY_k\right],\]
+\[\begin{aligned}
+\mathcal{L} = \tfrac12 M\dot x^2 + \sum_{k=1}^{n}\Bigl[&amp;\tfrac12 m\left(\dot X_k^2+\dot Y_k^2\right) \\
+&amp;+ \tfrac12 d\left(\dot X_k-\dot x\right)^2 - mgY_k\Bigr],
+\end{aligned}\]
 
 <p>where the \(d\) terms add an extra mass \(d\) that moves horizontally with each pendulum point. For two pendulums this expands to</p>
 
 \[\begin{aligned}
-\mathcal{L} ={}&amp; \left(m+\tfrac12 M\right)\dot x^2 + m\ell\,\dot x\left(2\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)\\
-&amp;+ \tfrac12 m\ell^2\left(2\dot\theta_1^2+\dot\theta_2^2\right) + m\ell^2\,\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2)\\
+\mathcal{L} ={}&amp; \left(m+\tfrac12 M\right)\dot x^2 \\
+&amp;+ m\ell\,\dot x\left(2\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)\\
+&amp;+ \tfrac12 m\ell^2\left(2\dot\theta_1^2+\dot\theta_2^2\right) \\
+&amp;+ m\ell^2\,\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2)\\
 &amp;+ mg\ell\left(2\cos\theta_1+\cos\theta_2\right)\\
-&amp;+ \tfrac12 d\ell^2\left[\cos^2\theta_1\,\dot\theta_1^2+\left(\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)^2\right].
+&amp;+ \tfrac12 d\ell^2\Bigl[\cos^2\theta_1\,\dot\theta_1^2 \\
+&amp;\qquad+\left(\cos\theta_1\,\dot\theta_1+\cos\theta_2\,\dot\theta_2\right)^2\Bigr].
 \end{aligned}\]
 
 <p>There is no analytic solution, so the equations of motion are integrated numerically. To compare different \(n\) fairly, the totals are kept fixed: the rods add up to 10 cm, the bobs to 0.2 kg and the extra masses to 0.1 kg, in a 1 kg container. Starting at rest with every rod at 0.2 rad, a high-accuracy adaptive solver conserves the energy to better than \(10^{-12}\) for every \(n\) from 2 to 5, and fourth-order Runge–Kutta with a 1 ms step agrees with it to better than \(2\times10^{-7}\) rad.</p>
@@ -686,7 +810,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

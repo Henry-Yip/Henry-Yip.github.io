@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-10-26T22:21:02+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="notice series-box">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-10-27T20:58:50+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="notice series-box">
   <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 11 of 11</p>
   <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p><a href="/NewOrbits/">&larr; Classifying and Finding New Possible Orbits (Part I)</a></p>
@@ -19,39 +19,47 @@
 <p>To classify them, we need two constants of motion. With the centres at \((\pm d, 0)\) and masses \(m_1\) and \(m_2\),</p>
 
 \[\begin{aligned}
-G&amp;=\frac{1}{2}\left(x p_y-y p_x\right)^2+\frac{1}{2} d^2 p_x^2+d x\left(\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}}\right), \\
-H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
+G&amp;=\frac{1}{2}\left(x p_y-y p_x\right)^2+\frac{1}{2} d^2 p_x^2 \\
+&amp;\quad+d x\Biggl(\frac{m_1}{\sqrt{(x+d)^2+y^2}} \\
+&amp;\qquad-\frac{m_2}{\sqrt{(x-d)^2+y^2}}\Biggr), \\
+H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
+&amp;\quad-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
 \end{aligned}\]
 
 <p>\(H\) is the Hamiltonian (the energy), and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable.</p>
 
 <p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type we found earlier), \(L\) (lemniscate) and \(P\) (planetary).</p>
 
-<figure class=""><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types in the \((H, G)\) plane. Figure from Syzygies in the Two Center Problem.
+"><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /></a><figcaption>
       Orbit types in the \((H, G)\) plane. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
 
     </figcaption></figure>
 
 <p>My simulations reproduce all three types:</p>
 
-<figure class=""><img src="/assets/images/S_Trajectory.png" alt="Satellite orbit circling one of the two centres." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/S_Trajectory.png" class="image-popup" title="Satellite orbit.
+"><img src="/assets/images/S_Trajectory.png" alt="Satellite orbit circling one of the two centres." loading="lazy" decoding="async" /></a><figcaption>
       Satellite orbit.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Lemniscate_Trajectory.png" alt="Lemniscate orbit passing between the two centres in a figure-eight pattern." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Lemniscate_Trajectory.png" class="image-popup" title="Lemniscate orbit.
+"><img src="/assets/images/Lemniscate_Trajectory.png" alt="Lemniscate orbit passing between the two centres in a figure-eight pattern." loading="lazy" decoding="async" /></a><figcaption>
       Lemniscate orbit.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Planetery_Trajectory.png" alt="Planetary orbit enclosing both centres." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planetery_Trajectory.png" class="image-popup" title="Planetary orbit.
+"><img src="/assets/images/Planetery_Trajectory.png" alt="Planetary orbit enclosing both centres." loading="lazy" decoding="async" /></a><figcaption>
       Planetary orbit.
 
     </figcaption></figure>
 
 <p>With these orbits, \(S\) now covers its full range. However, it still looks rather irregular and does not yet clearly follow \(\operatorname{sn}\):</p>
 
-<figure class=""><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/S_Graph_Planetery.png" class="image-popup" title="\(S\) against time for a planetary orbit.
+"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /></a><figcaption>
       \(S\) against time for a planetary orbit.
 
     </figcaption></figure>
@@ -125,12 +133,14 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <h2 id="results">Results</h2>
 
-<figure class=""><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Bounded initial conditions. The full scan took 32 hours.
+"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /></a><figcaption>
       Bounded initial conditions. The full scan took 32 hours.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Planets_Annotated_1.png" alt="The same scatter plot with the region around the figure-eight orbit circled." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planets_Annotated_1.png" class="image-popup" title="The region containing the figure-eight orbit is circled.
+"><img src="/assets/images/Planets_Annotated_1.png" alt="The same scatter plot with the region around the figure-eight orbit circled." loading="lazy" decoding="async" /></a><figcaption>
       The region containing the figure-eight orbit is circled.
 
     </figcaption></figure>
@@ -139,7 +149,7 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>A finer scan of that region (about 15 hours):</p>
 
-<figure class=""><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="limitations">Limitations</h2>
 
@@ -155,7 +165,10 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>A more targeted test looks for orbits that come back close to where they started in phase space, using the <strong>return proximity function</strong></p>
 
-\[P(t)=\left|\mathbf{X}(t)-\mathbf{X}_0\right|=\sqrt{\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2} .\]
+\[\begin{aligned}
+P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
+&amp;=\sqrt{\begin{aligned}&amp;\textstyle\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2 \\ &amp;\textstyle+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2\end{aligned}} .
+\end{aligned}\]
 
 <p>For a periodic orbit, \(P(t)\) oscillates and dips close to zero once per period: the smaller the minimum, the closer the orbit returns to its initial state. In the next run I will keep orbits with \(P&lt;15\) throughout the simulation <em>and</em> \(\min_{t &gt; 0} P(t) &lt; 0.7\).</p>
 
@@ -225,7 +238,7 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>Putting these together,</p>
 
-\[\min_{\Lambda} A \;\le\; a \;&lt;\; A_2 \;\le\; A(\text{any path with a collision}),\]
+\[\min_{\Lambda} A \;\le\; a \;&lt;\; A_2 \;\le\; A(\text{any colliding path}),\]
 
 <p>so the minimiser is collision-free.</p>
 
@@ -255,11 +268,11 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>The figure below defines the points \(E_i\) on the equator (the collinear configurations with body \(i\) in the middle) and the meridian \(M_1\):</p>
 
-<figure class=""><img src="/assets/images/Shape_Sphere_Points.png" alt="Shape sphere with the Euler points E1, E2, E3 on the equator and the meridian M1 marked." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Shape_Sphere_Points.png" class="image-popup"><img src="/assets/images/Shape_Sphere_Points.png" alt="Shape sphere with the Euler points E1, E2, E3 on the equator and the meridian M1 marked." loading="lazy" decoding="async" /></a></figure>
 
 <p>Combining the area rule with the symmetries shows that the three bodies move along the same curve and differ <strong>only</strong> by a phase:</p>
 
-<figure class=""><img src="/assets/images/Area_Proof.png" alt="Diagram of the twelve arcs on the shape sphere and the corresponding phases of the three bodies." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Area_Proof.png" class="image-popup"><img src="/assets/images/Area_Proof.png" alt="Diagram of the twelve arcs on the shape sphere and the corresponding phases of the three bodies." loading="lazy" decoding="async" /></a></figure>
 
 <h3 id="no-extra-loops">No extra loops</h3>
 
@@ -294,7 +307,7 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 <figure class="">
   <video class="gif-video" src="/assets/video/Lagrange_Animation.mp4" poster="/assets/video/Lagrange_Animation.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of three bodies in Lagrange&#39;s equilateral configuration drifting apart after a small perturbation."></video></figure>
 
-<figure class=""><img src="/assets/images/Lagrange_Trajectory.png" alt="Trajectories of a perturbed Lagrange solution that start circular and then deviate." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Lagrange_Trajectory.png" class="image-popup"><img src="/assets/images/Lagrange_Trajectory.png" alt="Trajectories of a perturbed Lagrange solution that start circular and then deviate." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="estimating-the-number-of-terms">Estimating the number of terms</h2>
 
@@ -306,25 +319,30 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right)-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{
 
 <p>is constant too, and \(t=\Gamma w\). Using the map from the previous post,</p>
 
-\[t=\frac{2 \Omega \Gamma}{\pi} \log \frac{1+\tau}{1-\tau}
-= 2A\left(\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^7)\right),
-\qquad
-A = \frac{2\Omega\Gamma}{\pi} .\]
+\[\begin{aligned}
+t&amp;=\frac{2 \Omega \Gamma}{\pi} \log \frac{1+\tau}{1-\tau} \\
+&amp;= 2A\left(\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^7)\right), \\
+\text{with}\quad A &amp;= \frac{2\Omega\Gamma}{\pi} .
+\end{aligned}\]
 
 <p>Substituting into the Taylor series of \(\cos\) and \(\sin\) gives the coordinates as power series in \(\tau\):</p>
 
 \[\begin{aligned}
-\cos t &amp;= 1 - 2A^2 \tau^2 - \left(\tfrac{4}{3} A^2 - \tfrac{2}{3} A^4\right) \tau^4 - \left(\tfrac{46}{45}A^2 - \tfrac{8}{9} A^4 + \tfrac{4}{45} A^6\right) \tau^6+O(\tau^8), \\
-\sin t &amp;= 2A \tau + \left(\tfrac{2}{3}A - \tfrac{4}{3} A^3\right) \tau^3 + \left(\tfrac{2}{5}A - \tfrac{4}{3}A^3 + \tfrac{4}{15} A^5\right) \tau^5 + O(\tau^7) .
+\cos t &amp;= 1 - 2A^2 \tau^2 - \left(\tfrac{4}{3} A^2 - \tfrac{2}{3} A^4\right) \tau^4 \\
+&amp;\quad - \left(\tfrac{46}{45}A^2 - \tfrac{8}{9} A^4 + \tfrac{4}{45} A^6\right) \tau^6+O(\tau^8), \\
+\sin t &amp;= 2A \tau + \left(\tfrac{2}{3}A - \tfrac{4}{3} A^3\right) \tau^3 \\
+&amp;\quad + \left(\tfrac{2}{5}A - \tfrac{4}{3}A^3 + \tfrac{4}{15} A^5\right) \tau^5 + O(\tau^7) .
 \end{aligned}\]
 
 <p>Now take masses \((m_0, m_1, m_2) = \left(\tfrac{1}{200}, \tfrac{1}{200}, \tfrac{99}{100}\right)\). For this configuration \(\Omega &lt; 9 \times 10^{-8}\), which gives \(A &lt; 4 \times 10^{-8}\).</p>
 
 <p>How many terms do we need to follow the motion up to \(t = 1\)? Truncating the series for \(t\) after \(n\) terms, to get within \(0.1\) of \(t = 1\) we need</p>
 
-\[2A \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; 0.9,
-\qquad\text{i.e.}\qquad
-S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
+\[\begin{gathered}
+2A \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; 0.9, \\
+\text{i.e.}\quad
+S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
+\end{gathered}\]
 
 <p>With \(A&lt; 4 \times 10^{-8}\) this requires \(S_\tau &gt; 10^7\).</p>
 
@@ -402,7 +420,7 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
 
 <p>for some \(\Omega &gt; 0\): a strip of width \(2\Omega\).</p>
 
-<figure class=""><img src="/assets/images/Omega_Convergence.png" alt="Diagram of the strip of half-width Omega around the real w-axis in which the solution is holomorphic." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Omega_Convergence.png" class="image-popup"><img src="/assets/images/Omega_Convergence.png" alt="Diagram of the strip of half-width Omega around the real w-axis in which the solution is holomorphic." loading="lazy" decoding="async" /></a></figure>
 
 <h3 id="mapping-the-strip-to-a-disc">Mapping the strip to a disc</h3>
 
@@ -428,7 +446,10 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
 
 <p>The series exist whenever the total angular momentum is non-zero,</p>
 
-\[\mathbf{c} = m_0 (\mathbf{r}_0 \times \mathbf{v}_0) + m_1 (\mathbf{r}_1\times \mathbf{v}_1) + m_2 ( \mathbf{r}_2 \times \mathbf{v}_2) \neq \mathbf{0} .\]
+\[\begin{aligned}
+\mathbf{c} &amp;= m_0 (\mathbf{r}_0 \times \mathbf{v}_0) + m_1 (\mathbf{r}_1\times \mathbf{v}_1) \\
+&amp;\quad+ m_2 ( \mathbf{r}_2 \times \mathbf{v}_2) \neq \mathbf{0} .
+\end{aligned}\]
 
 <p>That covers essentially every case, including double collisions, but not triple collisions, which require \(\mathbf{c}=\mathbf{0}\).</p>
 
@@ -442,11 +463,11 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
 
 <p>Alongside the reading, I have been simulating the Broucke–Hadjidemetriou–Hénon (BHH) orbits. Here is one, with its curve on the shape sphere seen from two angles:</p>
 
-<figure class=""><img src="/assets/images/Trajectory_2.png" alt="Trajectories of a Broucke–Hadjidemetriou–Hénon periodic orbit in the plane." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Trajectory_2.png" class="image-popup"><img src="/assets/images/Trajectory_2.png" alt="Trajectories of a Broucke–Hadjidemetriou–Hénon periodic orbit in the plane." loading="lazy" decoding="async" /></a></figure>
 
-<figure class=""><img src="/assets/images/Shape_Sphere_2.png" alt="The BHH orbit&#39;s shape curve on the shape sphere, first viewing angle." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Shape_Sphere_2.png" class="image-popup"><img src="/assets/images/Shape_Sphere_2.png" alt="The BHH orbit&#39;s shape curve on the shape sphere, first viewing angle." loading="lazy" decoding="async" /></a></figure>
 
-<figure class=""><img src="/assets/images/Shape_Sphere_3.png" alt="The BHH orbit&#39;s shape curve on the shape sphere, second viewing angle." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Shape_Sphere_3.png" class="image-popup"><img src="/assets/images/Shape_Sphere_3.png" alt="The BHH orbit&#39;s shape curve on the shape sphere, second viewing angle." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="credits">Credits</h2>
 
@@ -509,19 +530,19 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>For this trajectory:</p>
 
-<figure class=""><img src="/assets/images/S_Trajectory.png" alt="Trajectory of a test mass looping around one of two fixed centres." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/S_Trajectory.png" class="image-popup"><img src="/assets/images/S_Trajectory.png" alt="Trajectory of a test mass looping around one of two fixed centres." loading="lazy" decoding="async" /></a></figure>
 
 <p>the coordinate \(R\) evolves as</p>
 
-<figure class=""><img src="/assets/images/R_Graph.png" alt="Plot of R against time." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/R_Graph.png" class="image-popup"><img src="/assets/images/R_Graph.png" alt="Plot of R against time." loading="lazy" decoding="async" /></a></figure>
 
 <p>the angle \(\sigma\) as</p>
 
-<figure class=""><img src="/assets/images/Sigma_Graph.png" alt="Plot of sigma against time, oscillating within a limited range." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Sigma_Graph.png" class="image-popup"><img src="/assets/images/Sigma_Graph.png" alt="Plot of sigma against time, oscillating within a limited range." loading="lazy" decoding="async" /></a></figure>
 
 <p>and \(S = \cos\sigma\) as</p>
 
-<figure class=""><img src="/assets/images/S_Graph.png" alt="Plot of S = cos(sigma) against time." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/S_Graph.png" class="image-popup"><img src="/assets/images/S_Graph.png" alt="Plot of S = cos(sigma) against time." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="issues">Issues</h2>
 
@@ -564,7 +585,10 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>Next come the rotations and reflections of the plane, which act by</p>
 
-\[R_\theta \cdot (x_1, x_2, x_3) = (e^{i\theta} x_1, e^{i\theta} x_2, e^{i\theta} x_3), \qquad S \cdot (x_1, x_2, x_3) = (\bar{x}_1, \bar{x}_2, \bar{x}_3).\]
+\[\begin{aligned}
+R_\theta \cdot (x_1, x_2, x_3) &amp;= (e^{i\theta} x_1, e^{i\theta} x_2, e^{i\theta} x_3), \\
+S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
+\end{aligned}\]
 
 <p>Taking the quotient of \(X\) by the rotation group \(SO(2)\) gives a space homeomorphic to \(\mathbb{R}^3\), whose points are oriented congruence classes of triangles. Fixing the overall size as well, by setting the moment of inertia to \(I = 1\), leaves a 2-sphere whose points are <strong>oriented similarity classes</strong> of triangles: the <strong>shape sphere</strong>.</p>
 
@@ -572,15 +596,24 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>For equal masses, the <strong>Jacobi map</strong> \(\mathcal{J}: X \rightarrow \mathbb{C}^2\) is</p>
 
-\[\left(z_1, z_2\right)=\mathcal{J}\left(x_1, x_2, x_3\right)=\left(\frac{1}{\sqrt{2}}\left(x_3-x_2\right),\ \sqrt{\frac{2}{3}}\left(x_1-\frac{1}{2}\left(x_2+x_3\right)\right)\right),\]
+\[\begin{aligned}
+\left(z_1, z_2\right)&amp;=\mathcal{J}\left(x_1, x_2, x_3\right) \\
+&amp;=\Bigl(\tfrac{1}{\sqrt{2}}(x_3-x_2),\ \sqrt{\tfrac{2}{3}}\bigl(x_1-\tfrac{1}{2}(x_2+x_3)\bigr)\Bigr),
+\end{aligned}\]
 
 <p>and the <strong>Hopf map</strong> \(\mathcal{K}: \mathbb{C}^2 \rightarrow \mathbb{R} \times \mathbb{C}=\mathbb{R}^3\) is</p>
 
-\[\mathcal{K}\left(z_1, z_2\right)=\left(u_1,\ u_2+i u_3\right)=\left(\left|z_1\right|^2-\left|z_2\right|^2,\ 2 \bar{z}_1 z_2\right) .\]
+\[\begin{aligned}
+\mathcal{K}\left(z_1, z_2\right)&amp;=\left(u_1,\ u_2+i u_3\right) \\
+&amp;=\left(\lvert z_1\rvert^2-\lvert z_2\rvert^2,\ 2 \bar{z}_1 z_2\right) .
+\end{aligned}\]
 
 <p>One checks that</p>
 
-\[\left|\mathcal{K}\left(z_1, z_2\right)\right|^2=u_1^2+u_2^2+u_3^2=\left(\left|z_1\right|^2+\left|z_2\right|^2\right)^2=I^2,\]
+\[\begin{aligned}
+\lvert\mathcal{K}\left(z_1, z_2\right)\rvert^2&amp;=u_1^2+u_2^2+u_3^2 \\
+&amp;=\left(\lvert z_1\rvert^2+\lvert z_2\rvert^2\right)^2=I^2,
+\end{aligned}\]
 
 <p>where \(I = \lvert z_1\rvert^2 + \lvert z_2\rvert^2\) is the moment of inertia. So \(\mathcal{K} \circ \mathcal{J}\) sends the 3-sphere \(I = 1\) onto the unit 2-sphere in \(\mathbb{R}^3\), and rotating the triangle (multiplying \((z_1, z_2)\) by \(e^{i\theta}\)) does not change the image. This is the <a href="https://en.wikipedia.org/wiki/Hopf_fibration">Hopf fibration</a>. The details are in Chenciner and Montgomery’s paper, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>.</p>
 
@@ -588,7 +621,7 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>Here is the figure-eight orbit traced on the shape sphere:</p>
 
-<figure class=""><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Figure_8_Shape.png" class="image-popup"><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></a></figure>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Figure_8_Shape_Animation.mp4" poster="/assets/video/Figure_8_Shape_Animation.jpg" width="1500" height="700" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of the figure-eight orbit alongside its moving point on the shape sphere."></video></figure>
@@ -619,14 +652,16 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>In <a href="/SymplecticIntegrators/">part 2</a> I noted that the total momentum in my simulation was drifting. The cause turned out to be a bug: an accumulator for the momentum components was not reset to zero at each time step. With the fix, the remaining error is at the level of floating-point round-off, about \(10^{-15}\):</p>
 
-<figure class=""><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="Momentum error after the bug fix: round-off only.
+"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
       Momentum error after the bug fix: round-off only.
 
     </figcaption></figure>
 
 <h2 id="set-up">Set-up</h2>
 
-<figure class=""><img src="/assets/images/Euler_Graph.jpeg" alt="Diagram of the two-centre problem: fixed masses on the z-axis at distance b from the origin and a test mass in the x–z plane." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Euler_Graph.jpeg" class="image-popup" title="Source: Integrable Systems in Celestial Mechanics.
+"><img src="/assets/images/Euler_Graph.jpeg" alt="Diagram of the two-centre problem: fixed masses on the z-axis at distance b from the origin and a test mass in the x–z plane." loading="lazy" decoding="async" /></a><figcaption>
       Source: <em>Integrable Systems in Celestial Mechanics</em>.
 
     </figcaption></figure>
@@ -648,32 +683,42 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>Writing \(\mathbf{r}(R, \sigma) = (x, z)\), the partial derivatives are</p>
 
-\[\frac{\partial x}{\partial R} = \pm \frac{R \sin \sigma}{\sqrt{R^2 - b^2}}, \quad \frac{\partial z}{\partial R} = \cos \sigma,
-\qquad
-\frac{\partial x}{\partial \sigma} = \pm \sqrt{R^2 - b^2}\, \cos \sigma, \quad \frac{\partial z}{\partial \sigma} = -R \sin \sigma,\]
+\[\begin{aligned}
+\frac{\partial x}{\partial R} &amp;= \pm \frac{R \sin \sigma}{\sqrt{R^2 - b^2}}, &amp; \frac{\partial z}{\partial R} &amp;= \cos \sigma, \\
+\frac{\partial x}{\partial \sigma} &amp;= \pm \sqrt{R^2 - b^2}\, \cos \sigma, &amp; \frac{\partial z}{\partial \sigma} &amp;= -R \sin \sigma,
+\end{aligned}\]
 
 <p>so (taking the \(+\) sign)</p>
 
-\[\mathbf{r}_R = \frac{\partial \mathbf{r}}{\partial R} = \begin{pmatrix} \frac{R \sin \sigma}{\sqrt{R^2 - b^2}} \\ \cos \sigma \end{pmatrix},
-\qquad
-\mathbf{r}_\sigma = \frac{\partial \mathbf{r}}{\partial \sigma} = \begin{pmatrix} \sqrt{R^2 - b^2}\, \cos \sigma \\ -R \sin \sigma \end{pmatrix} .\]
+\[\begin{aligned}
+\mathbf{r}_R &amp;= \frac{\partial \mathbf{r}}{\partial R} = \begin{pmatrix} \frac{R \sin \sigma}{\sqrt{R^2 - b^2}} \\ \cos \sigma \end{pmatrix}, \\
+\mathbf{r}_\sigma &amp;= \frac{\partial \mathbf{r}}{\partial \sigma} = \begin{pmatrix} \sqrt{R^2 - b^2}\, \cos \sigma \\ -R \sin \sigma \end{pmatrix} .
+\end{aligned}\]
 
 <p>The metric components \(g_{RR}= \mathbf{r}_R \cdot \mathbf{r}_R\), \(g_{R\sigma} = \mathbf{r}_R\cdot\mathbf{r}_\sigma\) and \(g_{\sigma\sigma} = \mathbf{r}_\sigma\cdot\mathbf{r}_\sigma\) come out as</p>
 
-\[g_{RR}=\frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}, \qquad g_{R \sigma}=0, \qquad g_{\sigma \sigma}=R^2-b^2 \cos ^2 \sigma .\]
+\[\begin{aligned}
+g_{RR}&amp;=\frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}, \qquad g_{R \sigma}=0, \\
+g_{\sigma \sigma}&amp;=R^2-b^2 \cos ^2 \sigma .
+\end{aligned}\]
 
 <p>The distances to the two centres are \(R \mp b\cos\sigma\), so the potential energy per unit mass is</p>
 
-\[V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma},
-\qquad
+\[\begin{gathered}
+V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 \mu = G(m_+ + m_-),
 \qquad
-\beta=\frac{m_{+}-m_{-}}{m_{+}+m_{-}} .\]
+\beta=\frac{m_{+}-m_{-}}{m_{+}+m_{-}} .
+\end{gathered}\]
 
 <p>The Lagrangian per unit mass is therefore</p>
 
-\[\mathcal{L} = T-V
-=\frac{1}{2}\, \frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}\, \dot{R}^2+\frac{1}{2}\left(R^2-b^2 \cos ^2 \sigma\right) \dot{\sigma}^2+\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma} .\]
+\[\begin{aligned}
+\mathcal{L} = T-V
+&amp;=\frac{1}{2}\, \frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}\, \dot{R}^2 \\
+&amp;\quad+\frac{1}{2}\left(R^2-b^2 \cos ^2 \sigma\right) \dot{\sigma}^2 \\
+&amp;\quad+\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma} .
+\end{aligned}\]
 
 <h2 id="jacobi-elliptic-functions">Jacobi elliptic functions</h2>
 
@@ -693,9 +738,10 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>together with the identities</p>
 
-\[\operatorname{sn}^2(u \mid k) + \operatorname{cn}^2(u \mid k) = 1,
-\qquad
-\operatorname{dn}^2(u \mid k) + k^2 \operatorname{sn}^2(u \mid k) = 1 .\]
+\[\begin{aligned}
+\operatorname{sn}^2(u \mid k) + \operatorname{cn}^2(u \mid k) &amp;= 1, \\
+\operatorname{dn}^2(u \mid k) + k^2 \operatorname{sn}^2(u \mid k) &amp;= 1 .
+\end{aligned}\]
 
 <p>With \(u = f + \omega\), these give \(\operatorname{cn}^2 u = 1 - S^2\) and \(\operatorname{dn}^2 u = 1 - k^2 S^2\), so</p>
 
@@ -757,10 +803,12 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>Suppose \(E&lt;0\) and write \(E=- \alpha^2\). Since \(\frac12 v^2 \ge 0\),</p>
 
-\[\frac{\mu}{r} \ge \alpha^2
+\[\begin{gathered}
+\frac{\mu}{r} \ge \alpha^2
 \quad\Longrightarrow\quad
-r \leq \frac{\mu}{\alpha^2} = 2a,
-\qquad \text{where } a=\frac{\mu}{2 \alpha^2}.\]
+r \leq \frac{\mu}{\alpha^2} = 2a, \\
+\text{where } a=\frac{\mu}{2 \alpha^2}.
+\end{gathered}\]
 
 <p>So negative energy implies a <strong>bounded</strong> orbit. (In fact \(a\) turns out to be the semi-major axis.)</p>
 
@@ -773,8 +821,9 @@ r \leq \frac{\mu}{\alpha^2} = 2a,
 <p>Next, differentiate the unit vector \(\mathbf{e}_r = \mathbf{r}/r\):</p>
 
 \[\begin{aligned}
-\frac{d\mathbf{e}_r}{dt}=\frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right) &amp; =\frac{r \dot{\mathbf{r}}-\dot{r}\, \mathbf{r}}{r^2}=\frac{r^2 \dot{\mathbf{r}}-r \dot{r}\, \mathbf{r}}{r^3} \\
-&amp; =\frac{(\mathbf{r} \cdot \mathbf{r}) \dot{\mathbf{r}}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \mathbf{r}}{r^3}=\frac{\mathbf{r} \times(\dot{\mathbf{r}} \times \mathbf{r})}{r^3}=\frac{\mathbf{C} \times \mathbf{r}}{r^3},
+\frac{d\mathbf{e}_r}{dt}&amp;=\frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right) =\frac{r \dot{\mathbf{r}}-\dot{r}\, \mathbf{r}}{r^2}=\frac{r^2 \dot{\mathbf{r}}-r \dot{r}\, \mathbf{r}}{r^3} \\
+&amp; =\frac{(\mathbf{r} \cdot \mathbf{r}) \dot{\mathbf{r}}-(\mathbf{r} \cdot \dot{\mathbf{r}}) \mathbf{r}}{r^3} \\
+&amp;=\frac{\mathbf{r} \times(\dot{\mathbf{r}} \times \mathbf{r})}{r^3}=\frac{\mathbf{C} \times \mathbf{r}}{r^3},
 \end{aligned}\]
 
 <p>using \(r\dot r = \mathbf{r}\cdot\dot{\mathbf{r}}\) and \(\dot{\mathbf{r}}\times\mathbf{r} = -\mathbf{C}\). Using the equation of motion, \(\mathbf{r}/r^3 = -\ddot{\mathbf{r}}/\mu\), and since \(\mathbf{C}\) is constant,</p>
@@ -827,7 +876,8 @@ r \leq \frac{\mu}{\alpha^2} = 2a,
 
 <p>Start from <a href="https://en.wikipedia.org/wiki/Liouville%27s_theorem_(Hamiltonian)">Liouville’s theorem</a> in Hamiltonian mechanics: the flow of a Hamiltonian system preserves phase-space volume. For one degree of freedom, a small region of the \((x, p)\) plane keeps the same area as it evolves, \(dA = dA'\):</p>
 
-<figure class=""><img src="/assets/images/Area_Preserving.png" alt="A region in the position–momentum plane mapped to a region of equal area by the time evolution." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Area_Preserving.png" class="image-popup" title="Image adapted from notes by Peter Young (see credits).
+"><img src="/assets/images/Area_Preserving.png" alt="A region in the position–momentum plane mapped to a region of equal area by the time evolution." loading="lazy" decoding="async" /></a><figcaption>
       Image adapted from notes by Peter Young (see credits).
 
     </figcaption></figure>
@@ -862,7 +912,8 @@ d = \left(-\tfrac{1}{24}, \tfrac{3}{4}, \tfrac{7}{24}\right),\]
 <p>and a fourth-order scheme (Forest–Ruth) uses</p>
 
 \[\begin{aligned}
-c &amp;= \left(\frac{1}{2(2 - 2^{1/3})},\ \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})},\ \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})},\ \frac{1}{2(2 - 2^{1/3})}\right), \\
+c &amp;= \biggl(\frac{1}{2(2 - 2^{1/3})},\ \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})}, \\
+&amp;\qquad \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})},\ \frac{1}{2(2 - 2^{1/3})}\biggr), \\
 d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2 - 2^{1/3}},\ 0\right).
 \end{aligned}\]
 
@@ -905,7 +956,8 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <p>For pairwise forces like gravity, the total linear momentum should be conserved to round-off precision by all of these schemes. In my simulation it drifted: the error was small, but it grew steadily with time.</p>
 
-<figure class=""><img src="/assets/images/Momentum_Error.png" alt="Plot of the x, y and total momentum errors growing steadily to about 2e-7 over the simulation." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Momentum_Error.png" class="image-popup" title="Momentum error in the first version of the code. (Resolved in part 4.)
+"><img src="/assets/images/Momentum_Error.png" alt="Plot of the x, y and total momentum errors growing steadily to about 2e-7 over the simulation." loading="lazy" decoding="async" /></a><figcaption>
       Momentum error in the first version of the code. (Resolved in <a href="/EulerProblem/">part 4</a>.)
 
     </figcaption></figure>
@@ -914,7 +966,7 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <p>The animations are a highlight of this project:</p>
 
-<figure class=""><img src="/assets/images/Beautiful_Figure_8.png" alt="Trajectories of a perturbed figure-eight orbit tracing dense, woven loops." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Beautiful_Figure_8.png" class="image-popup"><img src="/assets/images/Beautiful_Figure_8.png" alt="Trajectories of a perturbed figure-eight orbit tracing dense, woven loops." loading="lazy" decoding="async" /></a></figure>
 
 <p>And an animation of a perturbed figure-eight:</p>
 

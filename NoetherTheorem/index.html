@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -277,7 +395,8 @@
 
 <p>so the momentum \(p = \partial L/\partial \dot q\) is the same at all times: it is conserved. The same conclusion follows directly from the Euler–Lagrange equations, as shown in <a href="/MomentumConservation/">Why is momentum conserved?</a>.</p>
 
-<figure class=""><img src="/assets/images/Noether.png" alt="Two nearby trajectories in the q–t plane: the original path and a path shifted by delta q, with the transition taking time tau." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Noether.png" class="image-popup" title="Image: Wikipedia.
+"><img src="/assets/images/Noether.png" alt="Two nearby trajectories in the q–t plane: the original path and a path shifted by delta q, with the transition taking time tau." loading="lazy" decoding="async" /></a><figcaption>
       Image: Wikipedia.
 
     </figcaption></figure>
@@ -298,7 +417,10 @@
 
 <p>By the chain rule,</p>
 
-\[\dot{\hat{\mathbf{r}}}=\dot{\theta}\left(-\sin \theta\, \hat{\mathbf{x}}+\cos \theta\, \hat{\mathbf{y}}\right)=\dot{\theta}\, \hat{\boldsymbol{\theta}}, \quad \dot{\hat{\boldsymbol{\theta}}}=\dot{\theta}\left(-\cos \theta\, \hat{\mathbf{x}}-\sin \theta\, \hat{\mathbf{y}}\right)=-\dot{\theta}\, \hat{\mathbf{r}} ,\]
+\[\begin{aligned}
+\dot{\hat{\mathbf{r}}}&amp;=\dot{\theta}\left(-\sin \theta\, \hat{\mathbf{x}}+\cos \theta\, \hat{\mathbf{y}}\right)=\dot{\theta}\, \hat{\boldsymbol{\theta}}, \\
+\dot{\hat{\boldsymbol{\theta}}}&amp;=\dot{\theta}\left(-\cos \theta\, \hat{\mathbf{x}}-\sin \theta\, \hat{\mathbf{y}}\right)=-\dot{\theta}\, \hat{\mathbf{r}} ,
+\end{aligned}\]
 
 <p>so the velocity is</p>
 
@@ -329,7 +451,11 @@
 
 <p>To interpret \(h\), compute the angular momentum:</p>
 
-\[\mathbf{L}=\mathbf{r} \times \mathbf{p}=m r\, \hat{\mathbf{r}} \times \dot{\mathbf{r}}=m r\, \hat{\mathbf{r}} \times(\dot{r} \hat{\mathbf{r}}+r \dot{\theta} \hat{\boldsymbol{\theta}})=m r^2 \dot{\theta}\, \hat{\mathbf{n}} = m h\, \hat{\mathbf{n}},\]
+\[\begin{aligned}
+\mathbf{L}&amp;=\mathbf{r} \times \mathbf{p}=m r\, \hat{\mathbf{r}} \times \dot{\mathbf{r}} \\
+&amp;=m r\, \hat{\mathbf{r}} \times(\dot{r} \hat{\mathbf{r}}+r \dot{\theta} \hat{\boldsymbol{\theta}}) \\
+&amp;=m r^2 \dot{\theta}\, \hat{\mathbf{n}} = m h\, \hat{\mathbf{n}},
+\end{aligned}\]
 
 <p>where \(\hat{\mathbf{n}} = \hat{\mathbf{r}}\times\hat{\boldsymbol{\theta}}\) is normal to the plane of motion. Hence</p>
 
@@ -686,7 +812,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

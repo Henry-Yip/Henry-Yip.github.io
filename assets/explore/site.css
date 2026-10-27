@@ -9,7 +9,7 @@
 
 /* home: name and a small portrait */
 .xp-person { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start; gap: 20px 32px; max-width: calc(var(--measure) + 40px); }
-.xp-portrait { width: 152px; height: 152px; flex: none; object-fit: cover; border-radius: 4px; background: var(--surface); }
+.xp-portrait { width: 152px; height: 152px; flex: none; object-fit: cover; object-position: 80% 50%; border-radius: 50%; background: var(--surface); }
 @media (max-width: 640px) {
   .xp-person { flex-direction: column; }
   .xp-portrait { width: 104px; height: 104px; }
@@ -69,3 +69,28 @@
 
 /* buttons written as links in markdown */
 .xp-article p > a.xp-btn { margin: 4px 8px 4px 0; }
+
+/* the profile, in the left column on wide screens and as a strip at the top on narrow ones */
+.xp-author-photo { display: block; object-fit: cover; object-position: 80% 50%; border-radius: 50%; background: var(--surface); }
+.xp-author p { margin: 0; }
+.xp-author-name { font: 600 16px/1.35 var(--sans); color: var(--ink); }
+.xp-author-bio, .xp-author-meta, .xp-author-links { font: 14px/1.45 var(--sans); color: var(--muted); }
+.xp-author-bio { margin-top: 4px !important; }
+.xp-author-meta { margin-top: 8px !important; }
+.xp-author-links { margin-top: 4px !important; }
+.xp-author .xp-author-photo { width: 128px; height: 128px; margin-bottom: 12px; }
+.xp-author--compact { display: flex; align-items: center; gap: 14px; }
+.xp-author--compact .xp-author-photo { width: 56px; height: 56px; margin: 0; flex: none; }
+.xp-author--compact .xp-author-bio { margin-top: 2px !important; font-size: 13.5px; }
+.xp-author-strip { padding: 14px max(16px, env(safe-area-inset-right, 0px)) 14px max(16px, env(safe-area-inset-left, 0px)); border-bottom: 1px solid var(--line); }
+
+.xp-body--site .xp-hero { max-width: none; margin: 0; padding: clamp(28px, 5vw, 56px) 0 0; }
+.xp-body--site .xp-hero-text { margin-left: 0; }
+.xp-side { display: none; }
+@media (min-width: 1180px) {
+  .xp-author-strip { display: none; }
+  .xp-side { display: block; position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow-y: auto; padding-top: 56px; }
+  .xp-side .xp-toc { position: static; max-height: none; overflow: visible; padding-top: 28px; }
+  .xp-side .xp-toc:empty { display: none; }
+  .xp-home .xp-portrait { display: none; }        /* the profile in the left column shows it */
+}

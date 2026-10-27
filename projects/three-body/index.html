@@ -156,7 +156,10 @@
 
 <p>Gravity is a Hamiltonian system, with energy \(H = T(\mathbf p) + V(\mathbf q)\), and its time evolution preserves areas in phase space (it is a <em>symplectic</em> map). A symplectic integrator is a time step that preserves them too. Splitting each step into <em>kicks</em>, in which only the velocities change, and <em>drifts</em>, in which only the positions change, gives such steps automatically, because each piece is an exact Hamiltonian flow on its own:</p>
 
-\[\mathbf v \leftarrow \mathbf v + c_k\,\Delta t\,\mathbf a(\mathbf x), \qquad \mathbf x \leftarrow \mathbf x + d_k\,\Delta t\,\mathbf v, \qquad k = 1, \ldots, s.\]
+\[\begin{aligned}
+\mathbf v &amp;\leftarrow \mathbf v + c_k\,\Delta t\,\mathbf a(\mathbf x), \\
+\mathbf x &amp;\leftarrow \mathbf x + d_k\,\Delta t\,\mathbf v, \qquad k = 1, \ldots, s.
+\end{aligned}\]
 
 <p>One kick and one drift give symplectic Euler. With \(c = (\tfrac12, \tfrac12)\) and \(d = (1, 0)\) this is the velocity Verlet method. Ruth’s third-order scheme and Forest and Ruth’s fourth-order scheme use three and four stages with carefully chosen coefficients. A symplectic integrator does not conserve the energy exactly, but it exactly conserves a slightly modified Hamiltonian, so the energy error stays bounded instead of drifting. The classical fourth-order Runge–Kutta method is just as accurate per step but not symplectic, and its error keeps growing.</p>
 

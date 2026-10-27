@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -279,7 +397,11 @@
 
 <p>With the standard parametrisation of the ellipse, \((x,y)=(a\cos t,\,b\sin t)\) for \(0\leq t\leq 2\pi\),</p>
 
-\[A =\frac{1}{2} \int_0^{2 \pi}\left[(a \cos t)(b \cos t)-(b \sin t)(-a \sin t)\right] d t =\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b .\]
+\[\begin{aligned}
+A &amp;=\tfrac{1}{2} \int_0^{2 \pi}\bigl[(a \cos t)(b \cos t) \\
+&amp;\qquad-(b \sin t)(-a \sin t)\bigr] d t \\
+&amp;=\frac{a b}{2} \int_0^{2 \pi} d t=\pi a b .
+\end{aligned}\]
 
 <p>As an exercise (*), show that</p>
 
@@ -305,7 +427,7 @@
 
 <p><strong>Boundary integral.</strong> Parametrise the unit sphere by</p>
 
-\[x^1=\sin\theta\cos\phi, \qquad x^2=\sin\theta\sin\phi, \qquad x^3=\cos\theta .\]
+\[x^1=\sin\theta\cos\phi, \quad x^2=\sin\theta\sin\phi, \quad x^3=\cos\theta .\]
 
 <p>Then \(dx^2 \wedge dx^3 = \sin^2\theta\cos\phi \; d\theta\wedge d\phi\), so</p>
 
@@ -333,7 +455,10 @@
 
 <p>We can recover one of the area formulas above using differential forms. Let \(\alpha = y\, dx\), so that \(d\alpha = dy \wedge dx = -\,dx\wedge dy\). Then</p>
 
-\[\text{Area of } D=\iint_D d x \wedge d y=-\iint_D d\alpha=-\oint_{\partial D} \alpha=-\oint_{\partial D} y\, dx .\]
+\[\begin{aligned}
+\text{Area of } D&amp;=\iint_D d x \wedge d y=-\iint_D d\alpha \\
+&amp;=-\oint_{\partial D} \alpha=-\oint_{\partial D} y\, dx .
+\end{aligned}\]
 
 <p>More generally, for the 1-form \(P\, dx + Q\, dy\), Stokes’ theorem gives</p>
 
@@ -341,7 +466,10 @@
 
 <p>Since \(dP=\frac{\partial P}{\partial x} dx + \frac{\partial P}{\partial y} dy\) and \(dx\wedge dx = 0\),</p>
 
-\[\iint_{D}\left(\frac{\partial P}{\partial y}\, d y \wedge dx+\frac{\partial Q}{\partial x}\, dx \wedge dy\right) = \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dx\,dy,\]
+\[\begin{aligned}
+&amp;\iint_{D}\left(\frac{\partial P}{\partial y}\, d y \wedge dx+\frac{\partial Q}{\partial x}\, dx \wedge dy\right) \\
+&amp;\quad= \iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)dx\,dy,
+\end{aligned}\]
 
 <p>which is Green’s theorem: Stokes’ theorem in two dimensions. Another proof is in <a href="https://tobylam.xyz/2023/12/15/understanding-greens-theorem">Toby Lam’s post</a>.</p>
 
@@ -356,10 +484,14 @@
 <p>so</p>
 
 \[\begin{aligned}
-\frac{\partial \mathbf{r}}{\partial r} &amp;= \sin \theta \cos \phi \, \mathbf{e}_x + \sin \theta \sin \phi \, \mathbf{e}_y + \cos \theta \, \mathbf{e}_z &amp;&amp;\Rightarrow\quad h_r = 1, \\
-\frac{\partial \mathbf{r}}{\partial \theta} &amp;= r \cos \theta \cos \phi \, \mathbf{e}_x + r \cos \theta \sin \phi \, \mathbf{e}_y - r \sin \theta \, \mathbf{e}_z &amp;&amp;\Rightarrow\quad h_\theta = r, \\
-\frac{\partial \mathbf{r}}{\partial \phi} &amp;= -r \sin \theta \sin \phi \, \mathbf{e}_x + r \sin \theta \cos \phi \, \mathbf{e}_y &amp;&amp;\Rightarrow\quad h_\phi = r \sin \theta,
+\frac{\partial \mathbf{r}}{\partial r} &amp;= \sin \theta \cos \phi \, \mathbf{e}_x + \sin \theta \sin \phi \, \mathbf{e}_y + \cos \theta \, \mathbf{e}_z, \\
+\frac{\partial \mathbf{r}}{\partial \theta} &amp;= r \cos \theta \cos \phi \, \mathbf{e}_x + r \cos \theta \sin \phi \, \mathbf{e}_y - r \sin \theta \, \mathbf{e}_z, \\
+\frac{\partial \mathbf{r}}{\partial \phi} &amp;= -r \sin \theta \sin \phi \, \mathbf{e}_x + r \sin \theta \cos \phi \, \mathbf{e}_y,
 \end{aligned}\]
+
+<p>which gives the scale factors</p>
+
+\[h_r = 1, \qquad h_\theta = r, \qquad h_\phi = r \sin \theta,\]
 
 <p>where \(h_i = \lvert\partial\mathbf{r}/\partial u_i\rvert\). Dividing by the scale factors gives the unit vectors:</p>
 
@@ -373,13 +505,18 @@
 
 <p>In general orthogonal coordinates \((u_1, u_2, u_3)\) with scale factors \(h_1, h_2, h_3\),</p>
 
-\[\nabla \cdot \mathbf{a}=\frac{1}{h_1 h_2 h_3}\left[\frac{\partial}{\partial u_1}\left(a_1 h_2 h_3\right)+\frac{\partial}{\partial u_2}\left(a_2 h_3 h_1\right)+\frac{\partial}{\partial u_3}\left(a_3 h_1 h_2\right)\right].\]
+\[\begin{aligned}
+\nabla \cdot \mathbf{a}=\tfrac{1}{h_1 h_2 h_3}\Bigl[&amp;\frac{\partial}{\partial u_1}(a_1 h_2 h_3) \\
+&amp;+\frac{\partial}{\partial u_2}\left(a_2 h_3 h_1\right)+\frac{\partial}{\partial u_3}\left(a_3 h_1 h_2\right)\Bigr].
+\end{aligned}\]
 
 <p>In spherical polar coordinates this becomes</p>
 
 \[\begin{aligned}
-\nabla \cdot \mathbf{a} &amp; =\frac{1}{r^2 \sin \theta}\left[\frac{\partial}{\partial r}\left(r^2 \sin \theta\, a_r\right)+\frac{\partial}{\partial \theta}\left(r \sin \theta\, a_\theta\right)+\frac{\partial}{\partial \phi}\left(r a_\phi\right)\right] \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right)+\frac{1}{r \sin \theta}\left[\frac{\partial}{\partial \theta}\left(\sin \theta\, a_\theta\right)+\frac{\partial a_\phi}{\partial \phi}\right].
+\nabla \cdot \mathbf{a} &amp; =\frac{1}{r^2 \sin \theta}\Bigl[\frac{\partial}{\partial r}\left(r^2 \sin \theta\, a_r\right) \\
+&amp;\qquad\qquad+\frac{\partial}{\partial \theta}\left(r \sin \theta\, a_\theta\right)+\frac{\partial}{\partial \phi}\left(r a_\phi\right)\Bigr] \\
+&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 a_r\right) \\
+&amp;\qquad+\frac{1}{r \sin \theta}\left[\frac{\partial}{\partial \theta}\left(\sin \theta\, a_\theta\right)+\frac{\partial a_\phi}{\partial \phi}\right].
 \end{aligned}\]
 
 <h3 id="curl">Curl</h3>
@@ -402,13 +539,19 @@ a_r &amp; r a_\theta &amp; r \sin \theta \, a_\phi
 
 <p>For a scalar field \(f\),</p>
 
-\[\nabla^2 f=\frac{1}{h_1 h_2 h_3}\left[\frac{\partial}{\partial u_1}\left(\frac{h_2 h_3}{h_1} \frac{\partial f}{\partial u_1}\right)+\frac{\partial}{\partial u_2}\left(\frac{h_3 h_1}{h_2} \frac{\partial f}{\partial u_2}\right)+\frac{\partial}{\partial u_3}\left(\frac{h_1 h_2}{h_3} \frac{\partial f}{\partial u_3}\right)\right],\]
+\[\begin{aligned}
+\nabla^2 f=\frac{1}{h_1 h_2 h_3}\biggl[&amp;\frac{\partial}{\partial u_1}\left(\frac{h_2 h_3}{h_1} \frac{\partial f}{\partial u_1}\right) \\
+&amp;+\frac{\partial}{\partial u_2}\left(\frac{h_3 h_1}{h_2} \frac{\partial f}{\partial u_2}\right) \\
+&amp;+\frac{\partial}{\partial u_3}\left(\frac{h_1 h_2}{h_3} \frac{\partial f}{\partial u_3}\right)\biggr],
+\end{aligned}\]
 
 <p>and in spherical polar coordinates</p>
 
 \[\begin{aligned}
-\nabla^2 f &amp; =\frac{1}{r^2 \sin \theta}\left[\frac{\partial}{\partial r}\left(r^2 \sin \theta \frac{\partial f}{\partial r}\right)+\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial}{\partial \phi}\left(\frac{1}{\sin \theta} \frac{\partial f}{\partial \phi}\right)\right] \\
-&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{1}{r^2 \sin ^2 \theta}\frac{\partial^2 f}{\partial \phi^2} .
+\nabla^2 f &amp; =\frac{1}{r^2 \sin \theta}\biggl[\frac{\partial}{\partial r}\left(r^2 \sin \theta \frac{\partial f}{\partial r}\right) \\
+&amp;\qquad+\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right)+\frac{\partial}{\partial \phi}\left(\frac{1}{\sin \theta} \frac{\partial f}{\partial \phi}\right)\biggr] \\
+&amp; =\frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial f}{\partial r}\right)+\frac{1}{r^2 \sin \theta}\frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial f}{\partial \theta}\right) \\
+&amp;\qquad+\frac{1}{r^2 \sin ^2 \theta}\frac{\partial^2 f}{\partial \phi^2} .
 \end{aligned}\]
 
 <h3 id="exercise">Exercise</h3>
@@ -757,7 +900,7 @@ a_r &amp; r a_\theta &amp; r \sin \theta \, a_\phi
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

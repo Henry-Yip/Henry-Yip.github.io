@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -267,14 +385,16 @@
 
 <p>In <a href="/SymplecticIntegrators/">part 2</a> I noted that the total momentum in my simulation was drifting. The cause turned out to be a bug: an accumulator for the momentum components was not reset to zero at each time step. With the fix, the remaining error is at the level of floating-point round-off, about \(10^{-15}\):</p>
 
-<figure class=""><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="Momentum error after the bug fix: round-off only.
+"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
       Momentum error after the bug fix: round-off only.
 
     </figcaption></figure>
 
 <h2 id="set-up">Set-up</h2>
 
-<figure class=""><img src="/assets/images/Euler_Graph.jpeg" alt="Diagram of the two-centre problem: fixed masses on the z-axis at distance b from the origin and a test mass in the x–z plane." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Euler_Graph.jpeg" class="image-popup" title="Source: Integrable Systems in Celestial Mechanics.
+"><img src="/assets/images/Euler_Graph.jpeg" alt="Diagram of the two-centre problem: fixed masses on the z-axis at distance b from the origin and a test mass in the x–z plane." loading="lazy" decoding="async" /></a><figcaption>
       Source: <em>Integrable Systems in Celestial Mechanics</em>.
 
     </figcaption></figure>
@@ -296,32 +416,42 @@
 
 <p>Writing \(\mathbf{r}(R, \sigma) = (x, z)\), the partial derivatives are</p>
 
-\[\frac{\partial x}{\partial R} = \pm \frac{R \sin \sigma}{\sqrt{R^2 - b^2}}, \quad \frac{\partial z}{\partial R} = \cos \sigma,
-\qquad
-\frac{\partial x}{\partial \sigma} = \pm \sqrt{R^2 - b^2}\, \cos \sigma, \quad \frac{\partial z}{\partial \sigma} = -R \sin \sigma,\]
+\[\begin{aligned}
+\frac{\partial x}{\partial R} &amp;= \pm \frac{R \sin \sigma}{\sqrt{R^2 - b^2}}, &amp; \frac{\partial z}{\partial R} &amp;= \cos \sigma, \\
+\frac{\partial x}{\partial \sigma} &amp;= \pm \sqrt{R^2 - b^2}\, \cos \sigma, &amp; \frac{\partial z}{\partial \sigma} &amp;= -R \sin \sigma,
+\end{aligned}\]
 
 <p>so (taking the \(+\) sign)</p>
 
-\[\mathbf{r}_R = \frac{\partial \mathbf{r}}{\partial R} = \begin{pmatrix} \frac{R \sin \sigma}{\sqrt{R^2 - b^2}} \\ \cos \sigma \end{pmatrix},
-\qquad
-\mathbf{r}_\sigma = \frac{\partial \mathbf{r}}{\partial \sigma} = \begin{pmatrix} \sqrt{R^2 - b^2}\, \cos \sigma \\ -R \sin \sigma \end{pmatrix} .\]
+\[\begin{aligned}
+\mathbf{r}_R &amp;= \frac{\partial \mathbf{r}}{\partial R} = \begin{pmatrix} \frac{R \sin \sigma}{\sqrt{R^2 - b^2}} \\ \cos \sigma \end{pmatrix}, \\
+\mathbf{r}_\sigma &amp;= \frac{\partial \mathbf{r}}{\partial \sigma} = \begin{pmatrix} \sqrt{R^2 - b^2}\, \cos \sigma \\ -R \sin \sigma \end{pmatrix} .
+\end{aligned}\]
 
 <p>The metric components \(g_{RR}= \mathbf{r}_R \cdot \mathbf{r}_R\), \(g_{R\sigma} = \mathbf{r}_R\cdot\mathbf{r}_\sigma\) and \(g_{\sigma\sigma} = \mathbf{r}_\sigma\cdot\mathbf{r}_\sigma\) come out as</p>
 
-\[g_{RR}=\frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}, \qquad g_{R \sigma}=0, \qquad g_{\sigma \sigma}=R^2-b^2 \cos ^2 \sigma .\]
+\[\begin{aligned}
+g_{RR}&amp;=\frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}, \qquad g_{R \sigma}=0, \\
+g_{\sigma \sigma}&amp;=R^2-b^2 \cos ^2 \sigma .
+\end{aligned}\]
 
 <p>The distances to the two centres are \(R \mp b\cos\sigma\), so the potential energy per unit mass is</p>
 
-\[V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma},
-\qquad
+\[\begin{gathered}
+V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 \mu = G(m_+ + m_-),
 \qquad
-\beta=\frac{m_{+}-m_{-}}{m_{+}+m_{-}} .\]
+\beta=\frac{m_{+}-m_{-}}{m_{+}+m_{-}} .
+\end{gathered}\]
 
 <p>The Lagrangian per unit mass is therefore</p>
 
-\[\mathcal{L} = T-V
-=\frac{1}{2}\, \frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}\, \dot{R}^2+\frac{1}{2}\left(R^2-b^2 \cos ^2 \sigma\right) \dot{\sigma}^2+\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma} .\]
+\[\begin{aligned}
+\mathcal{L} = T-V
+&amp;=\frac{1}{2}\, \frac{R^2-b^2 \cos ^2 \sigma}{R^2-b^2}\, \dot{R}^2 \\
+&amp;\quad+\frac{1}{2}\left(R^2-b^2 \cos ^2 \sigma\right) \dot{\sigma}^2 \\
+&amp;\quad+\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma} .
+\end{aligned}\]
 
 <h2 id="jacobi-elliptic-functions">Jacobi elliptic functions</h2>
 
@@ -341,9 +471,10 @@
 
 <p>together with the identities</p>
 
-\[\operatorname{sn}^2(u \mid k) + \operatorname{cn}^2(u \mid k) = 1,
-\qquad
-\operatorname{dn}^2(u \mid k) + k^2 \operatorname{sn}^2(u \mid k) = 1 .\]
+\[\begin{aligned}
+\operatorname{sn}^2(u \mid k) + \operatorname{cn}^2(u \mid k) &amp;= 1, \\
+\operatorname{dn}^2(u \mid k) + k^2 \operatorname{sn}^2(u \mid k) &amp;= 1 .
+\end{aligned}\]
 
 <p>With \(u = f + \omega\), these give \(\operatorname{cn}^2 u = 1 - S^2\) and \(\operatorname{dn}^2 u = 1 - k^2 S^2\), so</p>
 
@@ -699,7 +830,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

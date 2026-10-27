@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -265,11 +383,18 @@
 
 <p>Suppose \(N\) is even. Split the sum into even-indexed and odd-indexed terms:</p>
 
-\[X_k=\sum_{m=0}^{N / 2-1} x_{2 m}\, e^{-\frac{2 \pi i }{N}(2 m) k}+\sum_{m=0}^{N / 2-1} x_{2 m+1}\, e^{-\frac{2 \pi i}{N}(2 m+1) k}.\]
+\[\begin{aligned}
+X_k&amp;=\sum_{m=0}^{N / 2-1} x_{2 m}\, e^{-\frac{2 \pi i }{N}(2 m) k} \\
+&amp;\quad+\sum_{m=0}^{N / 2-1} x_{2 m+1}\, e^{-\frac{2 \pi i}{N}(2 m+1) k}.
+\end{aligned}\]
 
 <p>Factoring \(e^{-2\pi i k/N}\) out of the second sum,</p>
 
-\[X_k=\underbrace{\sum_{m=0}^{N / 2-1} x_{2 m}\, e^{-\frac{2 \pi i }{N / 2} m k}}_{E_k}+e^{-\frac{2 \pi i}{N} k} \underbrace{\sum_{m=0}^{N / 2-1} x_{2 m+1}\, e^{-\frac{2 \pi i}{N / 2} m k}}_{O_k}=E_k+e^{-\frac{2 \pi i}{N} k}\, O_k ,\]
+\[\begin{aligned}
+X_k&amp;=\underbrace{\sum_{m=0}^{N / 2-1} x_{2 m}\, e^{-\frac{2 \pi i }{N / 2} m k}}_{E_k} \\
+&amp;\quad+e^{-\frac{2 \pi i}{N} k} \underbrace{\sum_{m=0}^{N / 2-1} x_{2 m+1}\, e^{-\frac{2 \pi i}{N / 2} m k}}_{O_k} \\
+&amp;=E_k+e^{-\frac{2 \pi i}{N} k}\, O_k ,
+\end{aligned}\]
 
 <p>where \(E_k\) and \(O_k\) are the DFTs of the even- and odd-indexed subsequences, each of length \(N/2\).</p>
 
@@ -704,7 +829,7 @@ X_3 &amp;= E_1 - W_4^1\, O_1 = -2 - (-i)(-2) = -2 - 2i,
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

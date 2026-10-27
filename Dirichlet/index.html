@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -273,8 +391,11 @@
 
 <p>Not every function has a convergent Fourier series; some regularity conditions are needed. Fourier series are also surprisingly effective for some classic problems, such as the <a href="https://en.wikipedia.org/wiki/Basel_problem#A_proof_using_Fourier_series">Basel problem</a>:</p>
 
-<figure class="">
-  <video class="gif-video" src="" poster="" width="" height="" autoplay="" loop="" muted="" playsinline="" aria-label=""></video></figure>
+<!-- Courtesy of embedresponsively.com -->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/MAoI__hbdWM" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
 <p>To understand how and why Fourier series work, we study their convergence (pointwise, uniform, \(L^2\), …). That is hard to do without <a href="https://en.wikipedia.org/wiki/Bessel%27s_inequality">Bessel’s inequality</a> and <a href="https://en.wikipedia.org/wiki/Parseval%27s_theorem">Parseval’s theorem</a>.</p>
 
@@ -282,30 +403,39 @@
 
 <p>The section below is partly inspired by this excellent video:</p>
 
-<figure class="">
-  <video class="gif-video" src="" poster="" width="" height="" autoplay="" loop="" muted="" playsinline="" aria-label=""></video></figure>
+<!-- Courtesy of embedresponsively.com -->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/S3gGKZqQNlc" title="YouTube video player" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
 
 <h3 id="where-the-dirichlet-kernel-comes-from">Where the Dirichlet kernel comes from</h3>
 
 <p>The <strong>Dirichlet kernel</strong> arises naturally from Fourier series. Recall that on \(-L \leq x \leq L\) we write</p>
 
-\[f(x) =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \left(\frac{n \pi x}{L}\right)+b_n \sin \left(\frac{n \pi x}{L}\right)\right],\]
+\[f(x) =\frac{1}{2} a_0+\sum_{n=1}^{\infty}\left[a_n \cos \frac{n \pi x}{L}+b_n \sin \frac{n \pi x}{L}\right],\]
 
 <p>with</p>
 
-\[a_m =\frac{1}{L} \int_{-L}^L f(x) \cos \left(\frac{m \pi x}{L}\right) d x, \qquad b_m =\frac{1}{L} \int_{-L}^L f(x)\sin \left(\frac{m \pi x}{L}\right)  d x .\]
+\[\begin{aligned}
+a_m &amp;=\frac{1}{L} \int_{-L}^L f(x) \cos \left(\frac{m \pi x}{L}\right) d x, \\
+b_m &amp;=\frac{1}{L} \int_{-L}^L f(x)\sin \left(\frac{m \pi x}{L}\right)  d x .
+\end{aligned}\]
 
 <p>From now on let \(f\) be \(2\pi\)-periodic, continuous, with a continuous first derivative, and take \(L = \pi\). Then</p>
 
-\[\frac{a_0}{2}=\frac{1}{2 \pi} \int_{-\pi}^\pi f(x)\, dx, \qquad
-a_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \cos(nx)\, d x, \qquad
-b_n=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \sin(nx)\, d x .\]
+\[\begin{aligned}
+\frac{a_0}{2}&amp;=\frac{1}{2 \pi} \int_{-\pi}^\pi f(x)\, dx, \\
+a_n&amp;=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \cos(nx)\, d x, \\
+b_n&amp;=\frac{1}{ \pi} \int_{-\pi}^\pi  f(x) \sin(nx)\, d x .
+\end{aligned}\]
 
 <p>Substituting these into the \(N\)-th partial sum and using \(\cos ny \cos nx+\sin ny \sin nx = \cos n(x-y)\),</p>
 
 \[\begin{aligned}
 f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \\
-&amp; =\int_{-\pi}^\pi\left[1+2 \sum_{n=1}^N \left(\cos n y \cos n x+\sin n y \sin n x\right)\right] \frac{f(y)}{2 \pi}\, d y \\
+&amp; =\int_{-\pi}^\pi\Biggl[1+2 \sum_{n=1}^N \bigl(\cos n y \cos n x \\
+&amp;\qquad\qquad +\sin n y \sin n x\bigr)\Biggr] \frac{f(y)}{2 \pi}\, d y \\
 &amp;=\int_{-\pi}^\pi\left[1+2 \sum_{n=1}^N \cos n(x-y)\right] \frac{f(y)}{2 \pi}\, d y \\
 &amp; =\int_{-\pi}^\pi D_N(x-y)\, f(y)\, \frac{d y}{2 \pi},
 \end{aligned}\]
@@ -318,7 +448,10 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 
 <p>Using Euler’s formula \(e^{i \theta}=\cos \theta+i \sin \theta\),</p>
 
-\[D_N(\theta)=\sum_{k=-N}^N e^{i k \theta}=1+2 \sum_{k=1}^N \cos (k \theta)=\frac{\sin \left(\left(N+\tfrac12\right) \theta\right)}{\sin (\theta / 2)} .\]
+\[\begin{aligned}
+D_N(\theta)&amp;=\sum_{k=-N}^N e^{i k \theta}=1+2 \sum_{k=1}^N \cos (k \theta) \\
+&amp;=\frac{\sin \left(\left(N+\tfrac12\right) \theta\right)}{\sin (\theta / 2)} .
+\end{aligned}\]
 
 <p>(Hint: sum the geometric series, then multiply the numerator and denominator by \(e^{-i\theta/2}\).)</p>
 
@@ -330,9 +463,11 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 
 <p>Because \(D_N\) is even, we can shift variables:</p>
 
-\[f_N(x)
-=\int_{-\pi}^\pi D_N(y-x)\, f(y)\, \frac{d y}{2 \pi}
-=\int_{-\pi-x}^{\pi-x} D_N(\theta)\, f(x+\theta)\, \frac{d \theta}{2 \pi} .\]
+\[\begin{aligned}
+f_N(x)
+&amp;=\int_{-\pi}^\pi D_N(y-x)\, f(y)\, \frac{d y}{2 \pi} \\
+&amp;=\int_{-\pi-x}^{\pi-x} D_N(\theta)\, f(x+\theta)\, \frac{d \theta}{2 \pi} .
+\end{aligned}\]
 
 <p>Since the integrand has period \(2\pi\), the interval of integration can be shifted back without changing the result:</p>
 
@@ -350,7 +485,10 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 
 <p>I will state without proof that</p>
 
-\[\sum_{n=0}^N D_n(x)=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin^2 (\pi x)} = \frac{\sin^2\left((N+1)\pi x\right)}{\sin^2(\pi x)} .\]
+\[\begin{aligned}
+\sum_{n=0}^N D_n(x)&amp;=\frac{1-\cos (2 \pi(N+1) x)}{2 \sin^2 (\pi x)} \\
+&amp;= \frac{\sin^2\left((N+1)\pi x\right)}{\sin^2(\pi x)} .
+\end{aligned}\]
 
 <p>Convolving with \(F_N\) gives the Cesàro means of the Fourier series, that is, the averages of its partial sums.</p>
 
@@ -719,7 +857,7 @@ f_N(x) &amp; =\frac{a_0}{2}+\sum_{n=1}^N\left(a_n \cos n x+b_n \sin n x\right) \
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

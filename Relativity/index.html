@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -267,7 +385,7 @@
 
 <p>This post is an attempt to add more intuition to the anatomy of \(\gamma\). I suggest that an interpretation focusing on velocities instead of lengths gives a more succinct and intuitive form for the Lorentz factor:</p>
 
-<figure class=""><img src="/assets/images/Leo-1.png" alt="Right triangle with hypotenuse c, horizontal side v and vertical side the square root of c squared minus v squared; the angle theta is between c and the vertical." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Leo-1.png" class="image-popup"><img src="/assets/images/Leo-1.png" alt="Right triangle with hypotenuse c, horizontal side v and vertical side the square root of c squared minus v squared; the angle theta is between c and the vertical." loading="lazy" decoding="async" /></a></figure>
 
 \[\gamma_v=\sec\theta\]
 
@@ -295,11 +413,11 @@ t=\frac{ct_0}{\sqrt{c^2-v^2}}=\frac{t_0}{\sqrt{1-\frac{v^2}{c^2}}}
 
 <p>Noticing the similar triangle built from velocities, you might suspect there is an alternative derivation using velocities instead of distances:</p>
 
-\[\text{(length, reverse projection)} \rightarrow \text{(velocity, projection)}\]
+\[\begin{gathered}\text{(length, reverse projection)} \\ \rightarrow\ \text{(velocity, projection)}\end{gathered}\]
 
 <h2 id="a-tempting-but-incorrect-derivation">A tempting but incorrect derivation</h2>
 
-<figure class=""><img src="/assets/images/Leo-2.png" alt="Light clock diagram resolving the photon velocity c into a horizontal component v and a vertical component." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Leo-2.png" class="image-popup"><img src="/assets/images/Leo-2.png" alt="Light clock diagram resolving the photon velocity c into a horizontal component v and a vertical component." loading="lazy" decoding="async" /></a></figure>
 
 <p>To the observer, the clock moves with speed \(v\). Part of \(c\) is “used” to provide the horizontal velocity needed to keep up with the clock, so only the vertical component of \(c\) is used to traverse the distance \(2l\). The vertical component is \(c\) reduced by \(v\), i.e. \(\sqrt{c^2-v^2}\); more conceptually, it is “the projection of \(c\) onto \(l\)”, i.e. \(c\cos\theta\). We therefore obtain \(t\) much more elegantly:</p>
 
@@ -317,7 +435,7 @@ t=\frac{ct_0}{\sqrt{c^2-v^2}}=\frac{t_0}{\sqrt{1-\frac{v^2}{c^2}}}
 
 <p>Put differently, the result is correct because we made a forbidden move twice: first by reducing \(c\) (the spatial part of a Galilean transformation), and second by saying the durations are equal (the temporal part of a Galilean transformation).</p>
 
-<figure class=""><img src="/assets/images/Leo-3.png" alt="Diagram contrasting the resolved imaginary motion with the actual diagonal motion of the photon." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Leo-3.png" class="image-popup"><img src="/assets/images/Leo-3.png" alt="Diagram contrasting the resolved imaginary motion with the actual diagonal motion of the photon." loading="lazy" decoding="async" /></a></figure>
 
 <p><strong>The problem is not resolving components. The problem is concluding that the time obtained from the ratio of resolved quantities equals the time of the unresolved motion. Concluding that requires a Galilean transformation, which is forbidden. Note the characteristic \(t'=t\) here.</strong></p>
 
@@ -335,13 +453,13 @@ t=\frac{ct_0}{\sqrt{c^2-v^2}}=\frac{t_0}{\sqrt{1-\frac{v^2}{c^2}}}
 
 <p>The first step uses the temporal part of the transformation, \(t'=t\); the third step uses the spatial part, \(x'=x-v_xt\).</p>
 
-<figure class=""><img src="/assets/images/Leo-4.png" alt="Diagram showing the round trip from the real frame to an imaginary Galilean frame and back." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Leo-4.png" class="image-popup"><img src="/assets/images/Leo-4.png" alt="Diagram showing the round trip from the real frame to an imaginary Galilean frame and back." loading="lazy" decoding="async" /></a></figure>
 
 <p>We took a forbidden step into an imaginary realm, calculated \(t\) there, and brought it back to the real world with another forbidden step. This is reminiscent of a recurring theme in mathematics: differentiation under the integral sign, the Laplace transform, or matrix diagonalisation (transform to the eigenbasis, apply the transformation easily, return to the original basis). They all have the shape \(Q^{-1}AQ\).</p>
 
 <p>In fact, even people who refuse to make the forbidden move are implicitly making it when they rearrange the expression in the first method to collect \(t\) on one side. It is a matter of whether you are willing to read the algebra as physics rather than just numbers. Compare the two methods and you can see that they play with the same triangle:</p>
 
-<figure class=""><img src="/assets/images/Leo-5.png" alt="Side-by-side comparison of the displacement triangle and the velocity triangle, which are similar." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Leo-5.png" class="image-popup"><img src="/assets/images/Leo-5.png" alt="Side-by-side comparison of the displacement triangle and the velocity triangle, which are similar." loading="lazy" decoding="async" /></a></figure>
 
 <p>The only difference is that in the second method the triangle comes from how a change of perspective <em>subtracts</em> from velocities, rather than how it <em>adds</em> to displacement. The sides are scaled down by \(t\), so \(t\) appears in only one side length, which makes the formula for the Lorentz factor immediately obvious.</p>
 
@@ -716,7 +834,7 @@ P=\frac{K}{\left(KP_0^{-1}-1\right)e^{-rt}+1}
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

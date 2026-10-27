@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -273,7 +391,10 @@
 
 <p>Next come the rotations and reflections of the plane, which act by</p>
 
-\[R_\theta \cdot (x_1, x_2, x_3) = (e^{i\theta} x_1, e^{i\theta} x_2, e^{i\theta} x_3), \qquad S \cdot (x_1, x_2, x_3) = (\bar{x}_1, \bar{x}_2, \bar{x}_3).\]
+\[\begin{aligned}
+R_\theta \cdot (x_1, x_2, x_3) &amp;= (e^{i\theta} x_1, e^{i\theta} x_2, e^{i\theta} x_3), \\
+S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
+\end{aligned}\]
 
 <p>Taking the quotient of \(X\) by the rotation group \(SO(2)\) gives a space homeomorphic to \(\mathbb{R}^3\), whose points are oriented congruence classes of triangles. Fixing the overall size as well, by setting the moment of inertia to \(I = 1\), leaves a 2-sphere whose points are <strong>oriented similarity classes</strong> of triangles: the <strong>shape sphere</strong>.</p>
 
@@ -281,15 +402,24 @@
 
 <p>For equal masses, the <strong>Jacobi map</strong> \(\mathcal{J}: X \rightarrow \mathbb{C}^2\) is</p>
 
-\[\left(z_1, z_2\right)=\mathcal{J}\left(x_1, x_2, x_3\right)=\left(\frac{1}{\sqrt{2}}\left(x_3-x_2\right),\ \sqrt{\frac{2}{3}}\left(x_1-\frac{1}{2}\left(x_2+x_3\right)\right)\right),\]
+\[\begin{aligned}
+\left(z_1, z_2\right)&amp;=\mathcal{J}\left(x_1, x_2, x_3\right) \\
+&amp;=\Bigl(\tfrac{1}{\sqrt{2}}(x_3-x_2),\ \sqrt{\tfrac{2}{3}}\bigl(x_1-\tfrac{1}{2}(x_2+x_3)\bigr)\Bigr),
+\end{aligned}\]
 
 <p>and the <strong>Hopf map</strong> \(\mathcal{K}: \mathbb{C}^2 \rightarrow \mathbb{R} \times \mathbb{C}=\mathbb{R}^3\) is</p>
 
-\[\mathcal{K}\left(z_1, z_2\right)=\left(u_1,\ u_2+i u_3\right)=\left(\left|z_1\right|^2-\left|z_2\right|^2,\ 2 \bar{z}_1 z_2\right) .\]
+\[\begin{aligned}
+\mathcal{K}\left(z_1, z_2\right)&amp;=\left(u_1,\ u_2+i u_3\right) \\
+&amp;=\left(\lvert z_1\rvert^2-\lvert z_2\rvert^2,\ 2 \bar{z}_1 z_2\right) .
+\end{aligned}\]
 
 <p>One checks that</p>
 
-\[\left|\mathcal{K}\left(z_1, z_2\right)\right|^2=u_1^2+u_2^2+u_3^2=\left(\left|z_1\right|^2+\left|z_2\right|^2\right)^2=I^2,\]
+\[\begin{aligned}
+\lvert\mathcal{K}\left(z_1, z_2\right)\rvert^2&amp;=u_1^2+u_2^2+u_3^2 \\
+&amp;=\left(\lvert z_1\rvert^2+\lvert z_2\rvert^2\right)^2=I^2,
+\end{aligned}\]
 
 <p>where \(I = \lvert z_1\rvert^2 + \lvert z_2\rvert^2\) is the moment of inertia. So \(\mathcal{K} \circ \mathcal{J}\) sends the 3-sphere \(I = 1\) onto the unit 2-sphere in \(\mathbb{R}^3\), and rotating the triangle (multiplying \((z_1, z_2)\) by \(e^{i\theta}\)) does not change the image. This is the <a href="https://en.wikipedia.org/wiki/Hopf_fibration">Hopf fibration</a>. The details are in Chenciner and Montgomery’s paper, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>.</p>
 
@@ -297,7 +427,7 @@
 
 <p>Here is the figure-eight orbit traced on the shape sphere:</p>
 
-<figure class=""><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Figure_8_Shape.png" class="image-popup"><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></a></figure>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Figure_8_Shape_Animation.mp4" poster="/assets/video/Figure_8_Shape_Animation.jpg" width="1500" height="700" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of the figure-eight orbit alongside its moving point on the shape sphere."></video></figure>
@@ -654,7 +784,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

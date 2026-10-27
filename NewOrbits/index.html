@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -302,12 +420,14 @@
 
 <h2 id="results">Results</h2>
 
-<figure class=""><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Bounded initial conditions. The full scan took 32 hours.
+"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /></a><figcaption>
       Bounded initial conditions. The full scan took 32 hours.
 
     </figcaption></figure>
 
-<figure class=""><img src="/assets/images/Planets_Annotated_1.png" alt="The same scatter plot with the region around the figure-eight orbit circled." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Planets_Annotated_1.png" class="image-popup" title="The region containing the figure-eight orbit is circled.
+"><img src="/assets/images/Planets_Annotated_1.png" alt="The same scatter plot with the region around the figure-eight orbit circled." loading="lazy" decoding="async" /></a><figcaption>
       The region containing the figure-eight orbit is circled.
 
     </figcaption></figure>
@@ -316,7 +436,7 @@
 
 <p>A finer scan of that region (about 15 hours):</p>
 
-<figure class=""><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="limitations">Limitations</h2>
 
@@ -332,7 +452,10 @@
 
 <p>A more targeted test looks for orbits that come back close to where they started in phase space, using the <strong>return proximity function</strong></p>
 
-\[P(t)=\left|\mathbf{X}(t)-\mathbf{X}_0\right|=\sqrt{\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2} .\]
+\[\begin{aligned}
+P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
+&amp;=\sqrt{\begin{aligned}&amp;\textstyle\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2 \\ &amp;\textstyle+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2\end{aligned}} .
+\end{aligned}\]
 
 <p>For a periodic orbit, \(P(t)\) oscillates and dips close to zero once per period: the smaller the minimum, the closer the orbit returns to its initial state. In the next run I will keep orbits with \(P&lt;15\) throughout the simulation <em>and</em> \(\min_{t &gt; 0} P(t) &lt; 0.7\).</p>
 
@@ -692,7 +815,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

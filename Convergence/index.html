@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -272,7 +390,7 @@
 <figure class="">
   <video class="gif-video" src="/assets/video/Lagrange_Animation.mp4" poster="/assets/video/Lagrange_Animation.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of three bodies in Lagrange&#39;s equilateral configuration drifting apart after a small perturbation."></video></figure>
 
-<figure class=""><img src="/assets/images/Lagrange_Trajectory.png" alt="Trajectories of a perturbed Lagrange solution that start circular and then deviate." loading="lazy" decoding="async" /></figure>
+<figure class=""><a href="/assets/images/Lagrange_Trajectory.png" class="image-popup"><img src="/assets/images/Lagrange_Trajectory.png" alt="Trajectories of a perturbed Lagrange solution that start circular and then deviate." loading="lazy" decoding="async" /></a></figure>
 
 <h2 id="estimating-the-number-of-terms">Estimating the number of terms</h2>
 
@@ -284,25 +402,30 @@
 
 <p>is constant too, and \(t=\Gamma w\). Using the map from the previous post,</p>
 
-\[t=\frac{2 \Omega \Gamma}{\pi} \log \frac{1+\tau}{1-\tau}
-= 2A\left(\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^7)\right),
-\qquad
-A = \frac{2\Omega\Gamma}{\pi} .\]
+\[\begin{aligned}
+t&amp;=\frac{2 \Omega \Gamma}{\pi} \log \frac{1+\tau}{1-\tau} \\
+&amp;= 2A\left(\tau + \frac{\tau^3}{3} + \frac{\tau^5}{5}+ O(\tau^7)\right), \\
+\text{with}\quad A &amp;= \frac{2\Omega\Gamma}{\pi} .
+\end{aligned}\]
 
 <p>Substituting into the Taylor series of \(\cos\) and \(\sin\) gives the coordinates as power series in \(\tau\):</p>
 
 \[\begin{aligned}
-\cos t &amp;= 1 - 2A^2 \tau^2 - \left(\tfrac{4}{3} A^2 - \tfrac{2}{3} A^4\right) \tau^4 - \left(\tfrac{46}{45}A^2 - \tfrac{8}{9} A^4 + \tfrac{4}{45} A^6\right) \tau^6+O(\tau^8), \\
-\sin t &amp;= 2A \tau + \left(\tfrac{2}{3}A - \tfrac{4}{3} A^3\right) \tau^3 + \left(\tfrac{2}{5}A - \tfrac{4}{3}A^3 + \tfrac{4}{15} A^5\right) \tau^5 + O(\tau^7) .
+\cos t &amp;= 1 - 2A^2 \tau^2 - \left(\tfrac{4}{3} A^2 - \tfrac{2}{3} A^4\right) \tau^4 \\
+&amp;\quad - \left(\tfrac{46}{45}A^2 - \tfrac{8}{9} A^4 + \tfrac{4}{45} A^6\right) \tau^6+O(\tau^8), \\
+\sin t &amp;= 2A \tau + \left(\tfrac{2}{3}A - \tfrac{4}{3} A^3\right) \tau^3 \\
+&amp;\quad + \left(\tfrac{2}{5}A - \tfrac{4}{3}A^3 + \tfrac{4}{15} A^5\right) \tau^5 + O(\tau^7) .
 \end{aligned}\]
 
 <p>Now take masses \((m_0, m_1, m_2) = \left(\tfrac{1}{200}, \tfrac{1}{200}, \tfrac{99}{100}\right)\). For this configuration \(\Omega &lt; 9 \times 10^{-8}\), which gives \(A &lt; 4 \times 10^{-8}\).</p>
 
 <p>How many terms do we need to follow the motion up to \(t = 1\)? Truncating the series for \(t\) after \(n\) terms, to get within \(0.1\) of \(t = 1\) we need</p>
 
-\[2A \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; 0.9,
-\qquad\text{i.e.}\qquad
-S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
+\[\begin{gathered}
+2A \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; 0.9, \\
+\text{i.e.}\quad
+S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
+\end{gathered}\]
 
 <p>With \(A&lt; 4 \times 10^{-8}\) this requires \(S_\tau &gt; 10^7\).</p>
 
@@ -671,7 +794,7 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .\]
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

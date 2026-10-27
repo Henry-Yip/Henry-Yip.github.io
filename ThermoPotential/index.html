@@ -191,6 +191,124 @@
 <div id="main" role="main">
   
 
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://henry-yip.github.io/">
+        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
+            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
+            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  
+  </div>
+
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
@@ -275,7 +393,11 @@
 
 <p>Then</p>
 
-\[dH=dU+d(PV) =T\,dS-P\,dV+P\,dV+V\,dP =T\,dS+V\,dP .\]
+\[\begin{aligned}
+dH&amp;=dU+d(PV) \\
+&amp;=T\,dS-P\,dV+P\,dV+V\,dP \\
+&amp;=T\,dS+V\,dP .
+\end{aligned}\]
 
 <h2 id="helmholtz-free-energy">Helmholtz free energy</h2>
 
@@ -297,7 +419,8 @@
 
 <p>I struggled to memorise these relationships until I came across this diagram:</p>
 
-<figure class=""><img src="/assets/images/Thermo.png" alt="Mnemonic diagram arranging U, H, G and F with their natural variables S, V, P and T." loading="lazy" decoding="async" /><figcaption>
+<figure class=""><a href="/assets/images/Thermo.png" class="image-popup" title="Image: HyperPhysics.
+"><img src="/assets/images/Thermo.png" alt="Mnemonic diagram arranging U, H, G and F with their natural variables S, V, P and T." loading="lazy" decoding="async" /></a><figcaption>
       Image: <a href="http://hyperphysics.phy-astr.gsu.edu/hbase/thermo/thepot.html">HyperPhysics</a>.
 
     </figcaption></figure>
@@ -314,9 +437,10 @@
 
 <p>Now take mixed second derivatives:</p>
 
-\[\left(\frac{\partial}{\partial P}\left(\frac{\partial G}{\partial T}\right)_P\right)_T = -\left(\frac{\partial S}{\partial P}\right)_T,
-\qquad
-\left(\frac{\partial}{\partial T}\left(\frac{\partial G}{\partial P}\right)_T\right)_P = \left(\frac{\partial V}{\partial T}\right)_P .\]
+\[\begin{aligned}
+\left(\frac{\partial}{\partial P}\left(\frac{\partial G}{\partial T}\right)_P\right)_T &amp;= -\left(\frac{\partial S}{\partial P}\right)_T, \\
+\left(\frac{\partial}{\partial T}\left(\frac{\partial G}{\partial P}\right)_T\right)_P &amp;= \left(\frac{\partial V}{\partial T}\right)_P .
+\end{aligned}\]
 
 <p>By the symmetry of second derivatives, the two are equal, giving the Maxwell relation</p>
 
@@ -662,7 +786,7 @@
 
 
 <script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1793053262"></script>
+<script src="/assets/js/lunr/lunr-store.js?v=1793134730"></script>
 <script src="/assets/js/lunr/lunr-en.js"></script>
 
 

@@ -385,7 +385,10 @@
 
 <p>A neighbour joins the cluster with probability</p>
 
-\[P_{\text{add}} = 1 - \exp\!\left[-\frac{2}{T}\,(\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r})\right] \quad \text{when } (\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r}) &gt; 0 .\]
+\[\begin{gathered}
+P_{\text{add}} = 1 - \exp\!\left[-\frac{2}{T}\,(\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r})\right] \\
+\text{when } (\mathbf S_i \cdot \hat{\mathbf r})(\mathbf S_j \cdot \hat{\mathbf r}) &gt; 0 .
+\end{gathered}\]
 
 <p>The projections onto \(\hat{\mathbf r}\) behave like Ising spins with bond-dependent couplings, so the same argument applies.</p>
 
@@ -515,7 +518,10 @@
 
 <p>I fitted all five lattice sizes together with one shared exponent and an amplitude and offset for each size:</p>
 
-\[G(L, r) = A_L\left[r^{-(1+\eta)} + (L - r)^{-(1+\eta)}\right] + B_L, \qquad 8 \le r \le L/2 .\]
+\[\begin{gathered}
+G(L, r) = A_L\left[r^{-(1+\eta)} + (L - r)^{-(1+\eta)}\right] + B_L, \\
+8 \le r \le L/2 .
+\end{gathered}\]
 
 <div class="xp-widget">
   <div class="xp-widget-head"><span class="xp-tag data">Project data</span><h3>Spin–spin correlation function at T<sub>c</sub></h3></div>
@@ -529,7 +535,10 @@
 
 <p>The last exponent describes the response to a field at \(T_c\), \(M_z \sim h^{1/\delta}\). A straight log–log fit on the largest lattice gives \(\delta_{\text{eff}} = 5.01\), well above the literature value. The problem is corrections to scaling in the field. The renormalisation group (derived in the appendix of my report) suggests</p>
 
-\[M_z(L, h) = A_L\, h^{1/\delta}\left(1 + B_L\, h^{p} + C_L\, h^{2p}\right), \qquad p = \frac{\omega \nu}{\beta \delta} \simeq 0.31 ,\]
+\[\begin{gathered}
+M_z(L, h) = A_L\, h^{1/\delta}\left(1 + B_L\, h^{p} + C_L\, h^{2p}\right), \\
+p = \frac{\omega \nu}{\beta \delta} \simeq 0.31 ,
+\end{gathered}\]
 
 <p>which I fitted jointly over \(L \ge 32\) and \(h \le 0.1\):</p>
 
