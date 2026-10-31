@@ -210,7 +210,7 @@ a.xp-btn { display: inline-block; text-decoration: none; margin: 4px 6px 4px 0; 
 
 .xp-key { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--ink-2); }
 .xp-key i { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; background: var(--c); }
-.xp-key i.ring { background: var(--screen); box-shadow: inset 0 0 0 2px #ffffff; }
+.xp-key i.ring { width: 11px; height: 11px; border-radius: 50%; background: var(--screen); box-shadow: inset 0 0 0 2px var(--screen), inset 0 0 0 3.5px #ffffff, 0 0 0 1px var(--screen); }
 .xp-key .spin-wheel { width: 44px; height: 14px; border-radius: 2px; background: linear-gradient(90deg, #d4776b, #b78a39, #6f9c4c, #2fa18f, #3a95c4, #8a7fd1, #c26fae, #d4776b); }
 
 .xp-caption { margin: 12px 0 0; font: 14.5px/1.55 var(--serif); color: var(--ink-2); }

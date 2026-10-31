@@ -222,7 +222,7 @@
 
 <p>The simplest test is the laminar flow itself. Started exactly on it at \(Re = 8\) on a 64 × 64 grid, after 100 time units JAX-CFD has changed the vorticity by \(5\times10^{-14}\) of its size and Dedalus by \(8\times10^{-15}\): both keep it to round-off.</p>
 
-<p>One trap is worth knowing about. By default, JAX-CFD’s <code class="language-plaintext highlighter-rouge">kolmogorov_forcing</code> places the force on the faces of the grid cells, half a cell away from the points where the spectral solver stores the vorticity. The force it applies is then \(\sin 4(y + \Delta y/2)\), and the steady state is shifted by half a cell. That does not change the physics, since it only moves the whole flow, but it breaks comparisons with exact solutions and with other codes: started on the laminar flow above, the vorticity drifts by 20 % on a 64 × 64 grid. Passing <code class="language-plaintext highlighter-rouge">offsets=((0, 0), (0, 0))</code>, as JAX-CFD’s own <code class="language-plaintext highlighter-rouge">ForcedNavierStokes2D</code> does, removes the shift.</p>
+<p>One trap is worth knowing about. By default, JAX-CFD’s <code class="language-plaintext highlighter-rouge">kolmogorov_forcing</code> places the force on the faces of the grid cells, half a cell away from the points where the spectral solver stores the vorticity. The force it applies is then \(\sin 4(y + \Delta y/2)\), and the steady state is shifted by half a cell. That does not change the physics, since it only moves the whole flow, but it breaks comparisons with exact solutions and with other codes: started on the laminar flow above, the vorticity drifts by 20 % on a 64 × 64 grid. Passing <code class="language-plaintext highlighter-rouge">offsets=((0, 0), (0, 0))</code>, as JAX-CFD’s own <code class="language-plaintext highlighter-rouge">ForcedNavierStokes2D</code> does, removes the shift.</p>
 
 <h2 id="stability"><span class="num">4</span>The onset of instability</h2>
 
@@ -277,7 +277,7 @@
   </tbody>
 </table>
 
-<p>Both codes reproduce the theory to within 0.3 % at every Reynolds number. The largest differences, at \(Re = 8\) and 9, come from the end of the fit, when the disturbance has decayed by a factor of \(e^{12}\) and JAX-CFD’s slightly larger round-off starts to show.</p>
+<p>Both codes reproduce the theory to within 0.3 % at every Reynolds number. The largest differences, at \(Re = 8\) and 9, come from the end of the fit, when the disturbance has decayed by a factor of \(e^{12}\) and JAX-CFD’s slightly larger round-off starts to show.</p>
 
 <h2 id="re40"><span class="num">5</span>Chaos at Re = 40</h2>
 
@@ -335,7 +335,7 @@
   <p class="xp-caption">How the kinetic energy is spread over wavenumber k, so over length scales 2π/k. At Re = 40 it is averaged over t = 100 to 600, at Re = 2000 over t = 5, 6, 7, 8 and 9. The vertical line marks the 2/3 cutoff that JAX-CFD applies to the nonlinear term; beyond it JAX-CFD’s spectrum falls away, because those wavenumbers receive no energy from the nonlinear term.</p>
 </div>
 
-<p>At \(Re = 40\) the spectra lie close together on this scale, though not exactly: they differ by up to 70 % at \(k = 2\) and 3 and by up to a factor of 8 far out in the tail, which the strongest bursts dominate. These differences are sampling, not a disagreement between the codes: the two halves of the Dedalus run differ from each other by more, by a factor of 4.7 at \(k = 2\). The spectrum has fallen by 14 decades at \(k = 40\), so a 128 × 128 grid resolves this flow with plenty to spare.</p>
+<p>At \(Re = 40\) the spectra lie close together on this scale, though not exactly: they differ by up to 70 % at \(k = 2\) and 3 and by up to a factor of 8 far out in the tail, which the strongest bursts dominate. These differences are sampling, not a disagreement between the codes: the two halves of the Dedalus run differ from each other by more, by a factor of 4.7 at \(k = 2\). The spectrum has fallen by 14 decades at \(k = 40\), so a 128 × 128 grid resolves this flow with plenty to spare.</p>
 
 <h2 id="re2000"><span class="num">6</span>Turbulence at Re = 2000</h2>
 
@@ -350,10 +350,10 @@
     <div class="xp-panel"><div class="xp-panel-title">Dedalus</div><img class="kf-img" src="/assets/images/kolmogorov/re2000_dedalus.jpg" width="512" height="512" alt="The same field from Dedalus, indistinguishable by eye from the JAX-CFD one." loading="lazy" /></div>
   </div>
   <div class="xp-key" style="margin-top:8px"><span><i class="kf-div"></i>vorticity: clockwise, zero, anticlockwise (same scale in both)</span></div>
-  <p class="xp-caption">Both runs start from the same random field. After 9.5 time units they differ by 3 % of the size of the field, too little to see.</p>
+  <p class="xp-caption">Both runs start from the same random field. After 9.5 time units they differ by 3 % of the size of the field, too little to see.</p>
 </div>
 
-<p>Up to \(t = 9.5\) the total energy agrees to \(10^{-4}\), and the spectra agree to 0.1 % up to \(k = 100\) and to 3 % near the cutoff (switch Figure 5 to \(Re = 2000\)). The fields differ more than at \(Re = 40\) at the start, by \(5\times10^{-4}\) already at \(t = 0.5\). A little over half of that comes from wavenumbers above 170, which JAX-CFD’s 2/3 rule leaves out of the nonlinear term and Dedalus keeps. That part stays at about \(2\times10^{-3}\), while the rest grows as the chaos amplifies it. The spectrum falls by about nine decades between the forcing scale and the cutoff, so the 512 × 512 grid resolves this window, though without much margin.</p>
+<p>Up to \(t = 9.5\) the total energy agrees to \(10^{-4}\), and the spectra agree to 0.1 % up to \(k = 100\) and to 3 % near the cutoff (switch Figure 5 to \(Re = 2000\)). The fields differ more than at \(Re = 40\) at the start, by \(5\times10^{-4}\) already at \(t = 0.5\). A little over half of that comes from wavenumbers above 170, which JAX-CFD’s 2/3 rule leaves out of the nonlinear term and Dedalus keeps. That part stays at about \(2\times10^{-3}\), while the rest grows as the chaos amplifies it. The spectrum falls by about nine decades between the forcing scale and the cutoff, so the 512 × 512 grid resolves this window, though without much margin.</p>
 
 <div class="xp-widget" id="separation-2000">
   <div class="xp-widget-head"><span class="xp-tag data">Simulation data</span><h3>How far apart the two codes drift at Re = 2000</h3></div>

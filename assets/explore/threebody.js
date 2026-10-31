@@ -243,18 +243,14 @@ const ESCAPED = [29, 36, 48], UNRESOLVED = [92, 98, 110];
 const ramp = (s) => oklchToRgb(0.36 + 0.59 * s, 0.035 + 0.075 * Math.sin(0.9 * Math.PI * s), 78);
 const rampOfP = (p) => ramp(Math.min(1, Math.max(0, (Math.log10(3) - Math.log10(p)) / (Math.log10(3) + 3))));
 const MAP_LUT = Array.from({ length: 256 }, (_, c) => (c === 0 ? ESCAPED : c === 255 ? UNRESOLVED : rampOfP(pOfCode(c))));
-// The 2024 test and its convergence check, on a 201 x 201 grid: four bytes per orbit (see section 4).
-// Energy deviation (Emax - Emin)/|E0| with fixed-step Forest-Ruth at dt = 1e-4, at t = 10 and t = 50: code
-// 1 + round(253 (log10 dev + 16) / 19), 0 = two bodies more than 100 apart before then. Trust horizon: the time the run
-// agrees to 0.01 with a run at dt/2, as round(5 t), 255 = still agreeing at t = 50. Then the time two bodies passed
-// 100 apart, as round(5 t), 255 = never.
+// The 2024 test as in the recovered project code: Forest-Ruth with a fixed dt = 1e-3 to t = 50, failing as soon as two
+// bodies are more than 5 apart, otherwise passing if |(Emax - Emin)/E0| < 1. On a 201 x 201 grid, four bytes per orbit:
+// verdict (0 pass, 1 fail: more than 5 apart, 2 fail: energy), energy deviation 1 + round(253 (log10 dev + 16) / 19),
+// trust horizon round(5 t) of the agreement (to 0.01) with a dt/2 run, 255 = throughout, and the same 'within 5' test
+// with an accurate adaptive run, 255 = passes, else round(5 t) of the first time two bodies are more than 5 apart.
 const TRUST_N = 201, TRUST_T = 50;
 const devOfCode = (c) => 10 ** (((c - 1) * 19) / 253 - 16);
-const ENERGY_LUT = Array.from({ length: 256 }, (_, c) => {
-  if (c === 0) return ESCAPED;                       // flew apart in the fixed-step run
-  const dev = devOfCode(c);
-  return dev >= 1 ? UNRESOLVED : ramp(Math.min(1, -Math.log10(dev) / 14));     // fails the test, or passes: dim near 1, bright when tiny
-});
+const testColour = (verdict, dev) => (verdict === 1 ? ESCAPED : verdict === 2 ? UNRESOLVED : ramp(Math.min(1, Math.max(0, -Math.log10(devOfCode(dev)) / 14))));
 const TRUST_LUT = Array.from({ length: 256 }, (_, h) => ramp(h === 255 ? 1 : Math.min(1, h / 5 / TRUST_T)));
 async function loadMap(url) {
   const res = await fetch(url);
@@ -462,13 +458,14 @@ function playground() {
     out("ret").textContent = left && isFinite(pmin) ? `${pmin < 0.01 ? pmin.toFixed(4) : pmin.toFixed(3)}, t = ${pminT.toFixed(1)}` : "–";
     out("status").textContent = escapedAt ? `a body escaped at t ≈ ${escapedAt.toFixed(0)}` : "all three together";
     const tr = trustAt(a, b);
-    out("test2024").innerHTML = tr ? fmtDev(energyWindow === 10 ? tr.d10 : tr.d50) : "–";
+    out("test2024").innerHTML = tr ? fmtTest(tr) : "–";
+    out("check").textContent = tr ? fmtCheck(tr) : "–";
     out("horizon").textContent = tr ? fmtHorizon(tr) : "–";
   };
 
   // ---- the map
   const M = { left: 32, top: 10, bottom: 28 };
-  let mv = null, side = 0, mapMsg = "Loading the map…", mapBytes = null, trustBytes = null, mapView = "return", energyWindow = 10;
+  let mv = null, side = 0, mapMsg = "Loading the map…", mapBytes = null, trustBytes = null, mapView = "return";
   const images = {};
   const paint = (n, colour) => {         // an n x n image, rows of increasing b, coloured cell by cell
     const off = document.createElement("canvas");
@@ -482,18 +479,16 @@ function playground() {
     octx.putImageData(img, 0, 0);
     return off;
   };
-  const paintEnergy = () => (images.energy = paint(TRUST_N, (q) => ENERGY_LUT[trustBytes[4 * q + (energyWindow === 10 ? 0 : 1)]]));
+  const paintTest = () => (images.energy = paint(TRUST_N, (q) => testColour(trustBytes[4 * q], trustBytes[4 * q + 1])));
   const trustAt = (aa, bb) => {
     if (!trustBytes) return null;
     const q = 4 * (Math.round(bb * (TRUST_N - 1)) * TRUST_N + Math.round(aa * (TRUST_N - 1)));
-    return { d10: trustBytes[q], d50: trustBytes[q + 1], h: trustBytes[q + 2], stop: trustBytes[q + 3] };
+    return { verdict: trustBytes[q], dev: trustBytes[q + 1], h: trustBytes[q + 2], check: trustBytes[q + 3] };
   };
-  const fmtDev = (c) => {
-    if (c === 0) return "two bodies flew apart first";
-    const d = devOfCode(c);
-    return `${d < 0.01 ? sci(d) : d < 100 ? d.toFixed(2) : d.toExponential(0).replace("e+", " × 10<sup>") + "</sup>"}, ${d < 1 ? "passes" : "fails"}`;
-  };
-  const fmtHorizon = (t) => (t.h === 255 ? (t.stop === 255 ? `beyond t = ${TRUST_T}` : `until two bodies part, t ≈ ${(t.stop / 5).toFixed(0)}`) : `t ≈ ${(t.h / 5).toFixed(1)}`);
+  const fmtDev = (c) => { const d = devOfCode(c); return d < 0.01 ? sci(d) : d < 100 ? d.toFixed(2) : d.toExponential(0).replace("e+", " × 10<sup>") + "</sup>"; };
+  const fmtTest = (t) => (t.verdict === 0 ? `passes (energy deviation ${fmtDev(t.dev)})` : t.verdict === 1 ? "fails: two bodies more than 5 apart" : `fails: energy deviation ${fmtDev(t.dev)}`);
+  const fmtCheck = (t) => (t.check === 255 ? "stays within 5" : `two bodies more than 5 apart at t ≈ ${(t.check / 5).toFixed(0)}`);
+  const fmtHorizon = (t) => (t.h === 255 ? (t.verdict === 1 ? "until the 2024 run stopped" : `to t = ${TRUST_T}`) : `t ≈ ${(t.h / 5).toFixed(1)}`);
   const fitMap = () => {
     const dpr = Math.min(devicePixelRatio || 1, 2), w = mapCanvas.clientWidth;
     side = w - M.left - 10;
@@ -548,7 +543,7 @@ function playground() {
       text += c === 0 ? `<br>accurate run: a body escaped before t = ${MAP_T}` : c === 255 ? "<br>accurate run: not resolved" : `<br>closest return ${pOfCode(c) < 0.01 ? pOfCode(c).toFixed(4) : pOfCode(c).toFixed(3)}`;
     }
     const tr = trustAt(aa, bb);
-    if (tr) text += `<br>2024 test, t ≤ ${energyWindow}: ${fmtDev(energyWindow === 10 ? tr.d10 : tr.d50)}<br>trust horizon: ${fmtHorizon(tr)}`;
+    if (tr) text += `<br>2024 test: ${fmtTest(tr)}<br>limit of 5, accurate run: ${fmtCheck(tr)}<br>2024 run agrees with half step: ${fmtHorizon(tr)}`;
     return { text, near };
   };
   const choose = (aa, bb, name = "") => {
@@ -624,7 +619,7 @@ function playground() {
   }).catch(() => { mapMsg = "The map could not be loaded."; drawMap(); });
   loadMap(root.dataset.trust).then((bytes) => {
     trustBytes = bytes;
-    paintEnergy();
+    paintTest();
     images.trust = paint(TRUST_N, (q) => TRUST_LUT[bytes[4 * q + 2]]);
     drawMap(); readouts();
   }).catch(() => {});
@@ -636,12 +631,6 @@ function playground() {
     drawMap();
   };
   $$("[data-mapview]", root).forEach((btn) => btn.addEventListener("click", () => showView(btn.dataset.mapview)));
-  $$("[data-window]", root).forEach((btn) => btn.addEventListener("click", () => {
-    energyWindow = +btn.dataset.window;
-    $$("[data-window]", root).forEach((x) => x.setAttribute("aria-pressed", x === btn));
-    if (trustBytes) paintEnergy();
-    drawMap(); readouts();
-  }));
 }
 
 function toc() {
