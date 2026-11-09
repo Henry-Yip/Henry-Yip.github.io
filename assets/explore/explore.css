@@ -62,7 +62,7 @@ body.xp {
 .xp-hero-text { max-width: var(--measure); }
 @media (min-width: 1180px) { .xp-hero-text, .xp-hero-fig { margin-left: 248px; } }
 .xp-kicker { margin: 0 0 10px; font: 15px/1.5 var(--sans); color: var(--muted); }
-.xp-hero h1 { margin: 0; font: 700 clamp(30px, 4.6vw, 42px)/1.15 var(--sans); letter-spacing: -0.01em; text-wrap: balance; }
+.xp-hero h1 { margin: 0; font: 700 clamp(30px, 4.6vw, 40px)/1.2 var(--serif); text-wrap: balance; }
 .xp-sub { margin: 14px 0 0; font-size: 20px; line-height: 1.55; color: var(--ink-2); }
 
 /* key facts: a small two-column table, as in a paper's summary box */
@@ -104,10 +104,10 @@ body.xp {
 .xp-article > * { max-width: var(--measure); }
 .xp-article > .wide, .xp-article > .xp-widget, .xp-article > .xp-grid2 { max-width: var(--wide); }
 
-.xp-article h2 { font: 700 26px/1.25 var(--sans); margin: 56px 0 14px; text-wrap: balance; }
+.xp-article h2 { font: 700 26px/1.25 var(--serif); margin: 56px 0 14px; text-wrap: balance; }
 .xp-article h2 .num { color: var(--muted); font-weight: 600; margin-right: 0.45em; font-variant-numeric: tabular-nums; }
 .xp-article h2 .num::after { content: "."; }
-.xp-article h3 { font: 600 19px/1.35 var(--sans); margin: 32px 0 8px; }
+.xp-article h3 { font: 600 20px/1.35 var(--serif); margin: 32px 0 8px; }
 .xp-article p, .xp-article li { color: var(--ink); }
 .xp-article strong { font-weight: 600; }
 .xp-article .lead { font-size: 20px; line-height: 1.6; }
@@ -134,6 +134,11 @@ body.xp {
 .xp-article td.num, .xp-article th.num { text-align: right; font-variant-numeric: tabular-nums; }
 .xp-article tr.hl td { background: #eef4fc; }
 .table-scroll { overflow-x: auto; }
+.xp-article .xp-worked { margin: 0; }
+.xp-worked td { vertical-align: top; }
+.xp-worked .t { display: block; font: 16px/1.4 var(--serif); color: var(--ink); }
+.xp-worked .d { display: block; font-size: 13px; line-height: 1.35; color: var(--muted); }
+.xp-worked td.num { white-space: nowrap; font-weight: 600; color: var(--ink); }
 
 /* ---- figures: every interactive element is a numbered figure */
 .xp-widget {

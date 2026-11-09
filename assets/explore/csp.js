@@ -382,7 +382,7 @@ async function dataCharts() {
         { label: `Metropolis fit τ ∝ L^${f.b.toFixed(2)}`, color: METRO, dash: true, fn: (L) => Math.exp(f.a + f.b * Math.log(L)), range: [12, 300], hideLegend: true },
         { label: "Wolff", color: WOLFF, points: Wf.map((r) => ({ x: r.L, y: r.t, e: r.e })) },
       ],
-      notes: [{ x: 70, y: 2.6, text: "Wolff: about one sweep, at every size" }, { x: 70, y: 1500, text: "Metropolis: τ ∝ L^1.8", anchor: "end" }],
+      notes: [{ x: 290, y: 2.6, text: "Wolff: about one sweep, at every size", anchor: "end" }, { x: 290, y: 300, text: "Metropolis: τ ∝ L^1.8", anchor: "end" }],
     });
   }
 

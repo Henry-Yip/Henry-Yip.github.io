@@ -17,7 +17,7 @@ export function potentialIntensity({ sst, tout, rh, ckcd, dT = 1 }) {
   const Ts = sst + 273.15, To = tout + 273.15, Ta = sst - dT;
   const dk = CP * dT + LV * (qsat(sst) - rh * qsat(Ta));
   const eff = (Ts - To) / To;
-  return { V: Math.sqrt(Math.max(0, ckcd * eff * dk)), eff, carnot: (Ts - To) / Ts, dk };
+  return { V: Math.sqrt(Math.max(0, ckcd * eff * dk)), eff, dk };
 }
 
 const category = (v) => (v >= 70 ? "Category 5" : v >= 58 ? "Category 4" : v >= 50 ? "Category 3" : v >= 43 ? "Category 2" : v >= 33 ? "Category 1" : "below hurricane strength");
@@ -142,34 +142,20 @@ function calculator() {
   const ctl = (k) => $(`[data-ctl="${k}"]`, root);
   const out = (k, v) => { const o = $(`[data-out="${k}"]`, root); if (o) o.textContent = v; };
   const read = () => ({ sst: +ctl("sst").value, tout: +ctl("tout").value, rh: +ctl("rh").value / 100, ckcd: +ctl("ckcd").value });
-  const host = $(".xp-plot", root);
-  let plot = null;
   const update = () => {
     const p = read(), r = potentialIntensity(p);
+    const Ts = (p.sst + 273.15).toFixed(0), To = (p.tout + 273.15).toFixed(0);
     out("sst", p.sst.toFixed(1) + " °C");
-    out("tout", p.tout.toFixed(0) + " °C");
+    out("tout", p.tout.toFixed(0).replace("-", "−") + " °C");
     out("rh", (p.rh * 100).toFixed(0) + " %");
     out("ckcd", p.ckcd.toFixed(2));
-    out("carnot", (100 * r.carnot).toFixed(0) + " %");
+    out("ratio", p.ckcd.toFixed(2));
+    out("kelvin", `efficiency factor, in kelvin: (${Ts} − ${To}) / ${To}`);
+    out("eff", r.eff.toFixed(3));
     out("dk", (r.dk / 1000).toFixed(1) + " kJ/kg");
     out("V", r.V.toFixed(0) + " m/s");
     out("V10", (0.8 * r.V).toFixed(0) + " m/s");
-    out("cat", category(0.8 * r.V));
-    const spec = {
-      id: "picurve",
-      height: 440,
-      x: { label: "Sea surface temperature (°C)", domain: [24, 32] },
-      y: { label: "Potential intensity (m/s)", domain: [0, 130] },
-      series: [
-        { label: "gradient-level wind", color: BLUE, fn: (s) => potentialIntensity({ ...p, sst: s }).V },
-        { label: "≈ 10 m wind (× 0.8)", color: ORANGE, fn: (s) => 0.8 * potentialIntensity({ ...p, sst: s }).V },
-        { label: "current settings", color: ORANGE, r: 5, points: [{ x: p.sst, y: 0.8 * r.V }], hideLegend: true },
-      ],
-      refs: [{ axis: "y", value: 33, label: "Category 1" }, { axis: "y", value: 70, label: "Category 5", below: true }],
-      forceLegend: true,
-      tooltip: (pt) => `SST ${pt.x.toFixed(1)} °C<br>≈ 10 m wind ${pt.y.toFixed(0)} m/s`,
-    };
-    if (plot) plot.update(spec); else plot = chart(host, spec);
+    out("cat", "10 m wind, " + category(0.8 * r.V));
   };
   $$("input", root).forEach((i) => i.addEventListener("input", update));
   update();

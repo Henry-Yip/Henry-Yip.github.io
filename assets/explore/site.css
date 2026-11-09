@@ -26,18 +26,12 @@
 .timeline__what { line-height: 1.6; }
 @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; } }
 
-/* project cards, as on /projects/ */
-.xp-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; margin: 20px 0 8px; }
-@media (min-width: 720px) { .xp-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.xp-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; text-decoration: none !important; color: inherit !important; background: var(--bg); transition: border-color 0.15s ease, box-shadow 0.15s ease; }
-.xp-card:hover { border-color: var(--line-2); box-shadow: 0 6px 22px rgba(28, 34, 48, 0.1); }
-.xp-card:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.xp-card img { display: block; width: 100%; height: auto; aspect-ratio: 600 / 315; object-fit: cover; background: var(--surface); }
-.xp-card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 18px; }
-.xp-card-kicker { font: 13px/1.4 var(--sans); color: var(--muted); }
-.xp-card-title { font: 600 18px/1.3 var(--sans); color: var(--ink); text-wrap: balance; }
-.xp-card:hover .xp-card-title { color: var(--link); }
-.xp-card-text { font-size: 16px; line-height: 1.55; color: var(--ink-2); }
+/* write-ups, on the home page and on /projects/ */
+.xp-writeups { list-style: none; margin: 8px 0 0; padding: 0 !important; }
+.xp-writeups li { margin: 0; padding: 12px 0; border-top: 1px solid var(--line); }
+.xp-writeups a { font-weight: 600; }
+.xp-writeups-where { display: block; margin-top: 2px; font: 14px/1.5 var(--sans); color: var(--muted); }
+.xp-writeups-text { display: block; margin-top: 4px; font-size: 16.5px; line-height: 1.55; color: var(--ink-2); }
 
 /* publications */
 .publication { margin: 0 0 22px; }
