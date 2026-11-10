@@ -101,19 +101,13 @@
 </header>
 
 
-    <section class="xp-hero">
+    <section class="xp-hero xp-hero--text">
       <div class="xp-hero-text">
-        <p class="xp-kicker">Semester project · Atmospheric Physics, ETH Zürich · 2026</p>
         <h1>Tropical cyclone potential intensity</h1>
+        <p class="xp-byline">Semester project, Atmospheric Physics group, ETH Zürich, 2026</p>
         
         
       </div>
-      
-      <figure class="xp-hero-fig">
-        <canvas id="hero-engine" aria-label="Animated cross-section of a hurricane drawn as a heat engine: air flows in along the warm sea surface, rises in the eyewall, flows out near the cold tropopause and slowly sinks far from the centre." role="img"></canvas>
-        <figcaption>A hurricane as a heat engine: warm air in at the bottom, cold air out at the top. Schematic, not to scale.</figcaption>
-      </figure>
-      
     </section>
 
     <div class="xp-body">
@@ -131,7 +125,7 @@
 
 <h2 id="carnot"><span class="num">2</span>A hurricane as a heat engine</h2>
 
-<p>Kerry Emanuel’s insight, developed in the 1980s, was that a mature hurricane works like a Carnot heat engine. Follow a parcel of air around the circulation in the animation at the top of the page:</p>
+<p>Kerry Emanuel’s insight, developed in the 1980s, was that a mature hurricane works like a Carnot heat engine. Follow a parcel of air around the circulation in the figure below:</p>
 
 <ol>
   <li><strong>Inflow.</strong> Air spirals in towards the centre along the sea surface. It stays at roughly the sea-surface temperature \(T_s\) and picks up heat and moisture from the ocean, mostly through evaporation.</li>
@@ -139,6 +133,12 @@
   <li><strong>Outflow.</strong> Near the tropopause the air flows outwards at a very low temperature \(T_o\), around −70 °C, and loses heat by radiating to space.</li>
   <li><strong>Descent.</strong> Far from the centre it sinks slowly back towards the surface.</li>
 </ol>
+
+<div class="xp-widget">
+  <div class="xp-widget-head"><h3>A hurricane as a heat engine</h3></div>
+  <canvas class="xp-engine" id="hero-engine" role="img" aria-label="Animated cross-section of a hurricane drawn as a heat engine: air flows in along the warm sea surface, rises in the eyewall, flows out near the cold tropopause and slowly sinks far from the centre."></canvas>
+  <p class="xp-caption">Warm air goes in at the bottom and cold air comes out at the top. Schematic, not to scale.</p>
+</div>
 
 <p>Heat goes in at the warm end and out at the cold end. A Carnot engine working between these two temperatures converts a fraction</p>
 

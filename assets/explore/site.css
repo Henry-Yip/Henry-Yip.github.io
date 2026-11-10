@@ -1,4 +1,4 @@
-/* Main pages (home, About, Research, Projects, Archive): the frame of the project pages, without figures.
+/* Everything except the project pages: home, About, Research, Projects, the archive and its articles.
    Loaded after explore.css and built from its tokens. */
 
 /* header: current page and search */
@@ -7,26 +7,29 @@
 .xp-search-link { display: inline-flex; align-items: center; padding: 2px; }
 .xp-search-link svg { width: 18px; height: 18px; }
 
-/* home: name and a small portrait */
+/* home: name, a few lines about me and how to reach me; the photo is in the left column on wide screens */
 .xp-person { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: flex-start; gap: 20px 32px; max-width: calc(var(--measure) + 40px); }
 .xp-portrait { width: 152px; height: 152px; flex: none; object-fit: cover; object-position: 80% 50%; border-radius: 50%; background: var(--surface); }
 @media (max-width: 640px) {
   .xp-person { flex-direction: column; }
   .xp-portrait { width: 104px; height: 104px; }
 }
+.xp-home .xp-sub { color: var(--ink); }
+@media (min-width: 1180px) { .xp-home .xp-person { max-width: var(--measure); } }
 .xp-contact { margin: 16px 0 0; font: 15px/1.6 var(--sans); color: var(--muted); }
 .xp-site .xp-hero { padding-bottom: 0; }
 .xp-site .xp-article > :first-child { margin-top: 32px; }
 .xp-site .xp-article h2 { margin-top: 48px; }
 
-/* research timeline */
+/* research, newest first: when on the left, what on the right */
 .timeline { list-style: none; margin: 8px 0 0; padding: 0 !important; border-top: 1px solid var(--line); }
 .timeline li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 2px 20px; margin: 0; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .timeline__when { font: 14px/1.9 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
 .timeline__what { line-height: 1.6; }
+.timeline__role { display: block; font-weight: 600; }
 @media (max-width: 560px) { .timeline li { grid-template-columns: 1fr; } }
 
-/* write-ups, on the home page and on /projects/ */
+/* lists of write-ups: /projects/, the LaTeX material and search results */
 .xp-writeups { list-style: none; margin: 8px 0 0; padding: 0 !important; }
 .xp-writeups li { margin: 0; padding: 12px 0; border-top: 1px solid var(--line); }
 .xp-writeups a { font-weight: 600; }
@@ -43,10 +46,10 @@
 .xp-site .xp-article blockquote { margin: 0 0 24px; padding: 4px 0 4px 18px; border-left: 2px solid var(--line-2); color: var(--ink-2); font-size: 16.5px; }
 
 /* experience and education (About): a definition list */
-.xp-site .xp-article dl { margin: 12px 0 8px; }
-.xp-site .xp-article dt { margin-top: 22px; font: 16px/1.45 var(--sans); color: var(--ink-2); }
-.xp-site .xp-article dt strong { color: var(--ink); }
-.xp-site .xp-article dd { margin: 6px 0 0; }
+.xp-site .xp-article > dl { margin: 12px 0 8px; }
+.xp-site .xp-article > dl > dt { margin-top: 22px; font: 16px/1.45 var(--sans); color: var(--ink-2); }
+.xp-site .xp-article > dl > dt strong { color: var(--ink); }
+.xp-site .xp-article > dl > dd { margin: 6px 0 0; }
 
 /* numbered research log */
 .series-list { list-style: none; counter-reset: series; padding-left: 0 !important; }
@@ -54,15 +57,62 @@
 .series-list li::before { content: counter(series); position: absolute; left: 0; width: 1.5em; text-align: right; font: 14px/1.9 var(--sans); color: var(--muted); }
 .taxonomy__count, .xp-entry-meta { font: 14px/1.6 var(--sans); color: var(--muted); margin-left: 8px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
-/* archive: posts by year */
+/* archive and topics: one article per line, date on the right */
 .xp-entry-list { list-style: none; padding-left: 0 !important; margin: 8px 0 0; border-top: 1px solid var(--line); }
 .xp-entry-list li { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px 16px; margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
 .xp-entry-list a { text-decoration: none; }
 .xp-entry-list a:hover { text-decoration: underline; }
 .xp-entry-list .xp-entry-meta { margin-left: 0; }
+.xp-topic-index { line-height: 1.9; }
+.xp-topic-index > span { display: inline-block; margin-right: 16px; white-space: nowrap; }
+.xp-topic-index .xp-entry-meta { margin-left: 2px; }
 
-/* buttons written as links in markdown */
-.xp-article p > a.xp-btn { margin: 4px 8px 4px 0; }
+/* search */
+.xp-search label { display: block; margin-bottom: 6px; font: 15px/1.5 var(--sans); color: var(--muted); }
+.xp-search input { width: 100%; padding: 9px 12px; border: 1px solid var(--line-2); border-radius: 4px; background: var(--bg); color: var(--ink); font: 17px/1.3 var(--sans); }
+.xp-search input:focus-visible { outline: 2px solid var(--link); outline-offset: 1px; }
+.xp-search-count { min-height: 1.5em; margin: 10px 0 0; font: 14px/1.5 var(--sans); color: var(--muted); }
+
+/* ---- articles written in Markdown: figures, embeds, code */
+.xp-site .xp-article img { max-width: 100%; height: auto; }
+.xp-site .xp-article figure { margin: 28px 0; }
+.xp-site .xp-article figure img, .xp-site .xp-article figure video { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.xp-site .xp-article figcaption { margin-top: 8px; font: 14px/1.5 var(--sans); color: var(--muted); text-align: center; }
+.xp-site .xp-article h4 { margin: 24px 0 6px; font: 600 18px/1.4 var(--serif); }
+.xp-site .xp-article hr { margin: 36px 0; border: 0; border-top: 1px solid var(--line); }
+.xp-site .xp-article a.btn { margin-right: 14px; }
+.responsive-video-container { position: relative; height: 0; margin: 28px 0; padding-bottom: 56.25%; }
+.responsive-video-container iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.pdf-embed { display: block; width: 100%; height: 70vh; min-height: 420px; border: 1px solid var(--line); }
+.desmos-embed { display: block; width: 100%; max-width: 560px; aspect-ratio: 1; border: 1px solid var(--line); }
+
+.xp-site .xp-article .highlighter-rouge, .xp-site .xp-article figure.highlight { margin: 20px 0; }
+.xp-site .xp-article pre { margin: 0; padding: 12px 14px; overflow-x: auto; background: var(--surface); border-radius: 3px; font: 14px/1.55 var(--mono); }
+.xp-site .xp-article pre code { padding: 0; background: none; font: inherit; }
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp { color: var(--muted); font-style: italic; }
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .ow { color: #7a3e9d; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx { color: var(--good); }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo, .highlight .il { color: var(--warn); }
+.highlight .nf, .highlight .nc, .highlight .nb, .highlight .nt { color: var(--link); }
+
+/* an article that belongs to a series: where it sits, and its neighbours */
+.series-box { margin-bottom: 28px; padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font: 15px/1.55 var(--sans); }
+.series-box p { margin: 2px 0; color: var(--ink-2); }
+
+/* end of an article: what was revised, and its topics */
+.revision { margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 16px; line-height: 1.6; }
+.revision p, .revision li { color: var(--ink-2); }
+.xp-topics { margin-top: 28px; font: 15px/1.6 var(--sans); color: var(--muted) !important; }
+
+/* slosh animations on the ESRA page */
+.slosh canvas { display: block; width: 100%; max-width: 640px; margin: 0 auto; }
+.slosh__bar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; max-width: 640px; margin: 6px auto 0; font: 14px/1.5 var(--sans); }
+.slosh__read { color: var(--muted); font-variant-numeric: tabular-nums; }
+.slosh__seg { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); }
+.slosh__bar button { min-width: 2em; padding: 5px 10px; border: 1px solid var(--line-2); border-radius: 4px; background: var(--bg); color: var(--ink); font: 500 14px/1.2 var(--sans); cursor: pointer; }
+.slosh__bar button:hover { background: var(--surface); }
+.slosh__bar button[aria-pressed="true"] { background: var(--ink-2); border-color: var(--ink-2); color: var(--bg); }
+.slosh figcaption { max-width: 640px; margin-inline: auto; }
 
 /* the profile, in the left column on wide screens and as a strip at the top on narrow ones */
 .xp-author-photo { display: block; object-fit: cover; object-position: 80% 50%; border-radius: 50%; background: var(--surface); }
@@ -86,5 +136,5 @@
   .xp-side { display: block; position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow-y: auto; padding-top: 56px; }
   .xp-side .xp-toc { position: static; max-height: none; overflow: visible; padding-top: 28px; }
   .xp-side .xp-toc:empty { display: none; }
-  .xp-home .xp-portrait { display: none; }        /* the profile in the left column shows it */
+  .xp-home .xp-portrait { display: none; }        /* the left column shows the photo */
 }

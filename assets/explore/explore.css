@@ -1,6 +1,6 @@
-/* Interactive project pages. A light, paper-like layout that matches the rest of the site:
-   serif text, plain sans headings, numbered figures with captions. Simulations draw on dark
-   "screen" canvases; charts sit on the page. */
+/* The frame and type shared by every page, and the figures of the project pages: serif text,
+   numbered figures with captions. Simulations draw on dark "screen" canvases; charts sit on
+   the page. */
 
 :root {
   color-scheme: light;
@@ -29,6 +29,7 @@
 html { scroll-padding-top: 24px; }
 
 body.xp {
+  display: flex; flex-direction: column; min-height: 100vh;   /* keeps the footer at the bottom of short pages */
   margin: 0;
   background: var(--bg);
   color: var(--ink);
@@ -56,12 +57,11 @@ body.xp {
 
 /* ---- article header */
 .xp-hero {
-  max-width: calc(var(--wide) + 248px); margin: 0 auto;
+  width: 100%; max-width: calc(var(--wide) + 248px); margin: 0 auto;
   padding: clamp(28px, 5vw, 56px) max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px));
 }
 .xp-hero-text { max-width: var(--measure); }
-@media (min-width: 1180px) { .xp-hero-text, .xp-hero-fig { margin-left: 248px; } }
-.xp-kicker { margin: 0 0 10px; font: 15px/1.5 var(--sans); color: var(--muted); }
+@media (min-width: 1180px) { .xp-hero-text { margin-left: 248px; } }
 .xp-hero h1 { margin: 0; font: 700 clamp(30px, 4.6vw, 40px)/1.2 var(--serif); text-wrap: balance; }
 .xp-sub { margin: 14px 0 0; font-size: 20px; line-height: 1.55; color: var(--ink-2); }
 
@@ -75,14 +75,13 @@ body.xp {
 .xp-facts dt { color: var(--muted); }
 .xp-facts dd { margin: 0; color: var(--ink); font-variant-numeric: tabular-nums; }
 
-.xp-hero-fig { margin-top: 28px; margin-bottom: 0; max-width: 460px; }
-.xp-hero-fig canvas { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; cursor: grab; touch-action: none; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); }
-.xp-hero-fig canvas:active { cursor: grabbing; }
-.xp-hero-fig figcaption { margin-top: 8px; font: 14px/1.5 var(--sans); color: var(--muted); }
+/* the line under a title: what a project was for, or the date of an article */
+.xp-byline { margin: 10px 0 0; font: 15px/1.5 var(--sans); color: var(--muted); }
+.xp-byline a { color: inherit; }
 
 /* ---- body: contents list + article */
 .xp-body {
-  max-width: calc(var(--wide) + 248px); margin: 0 auto;
+  width: 100%; max-width: calc(var(--wide) + 248px); margin: 0 auto;
   padding: 0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px));
   display: grid; grid-template-columns: minmax(0, 1fr);
 }
@@ -177,6 +176,7 @@ img.kf-img { display: block; width: 100%; max-width: 100%; height: auto; aspect-
 .xp-key i.tb-arc { width: 18px; height: 0; border-radius: 0; background: none; border-top: 1px dashed var(--ink-2); vertical-align: 3px; }
 canvas.xp-cube { display: block; width: 100%; max-width: 100%; aspect-ratio: 1; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); cursor: grab; touch-action: none; }
 canvas.xp-cube:active { cursor: grabbing; }
+canvas.xp-engine { display: block; width: 100%; max-width: 460px; aspect-ratio: 1; border-radius: 2px; background: radial-gradient(circle at 50% 45%, #1b2330, var(--screen) 70%); }
 canvas.xp-trace { display: block; width: 100%; height: 90px; background: var(--screen); border-radius: 2px; }
 
 .xp-controls { display: flex; flex-direction: column; gap: 12px; }
@@ -262,6 +262,7 @@ a.xp-btn { display: inline-block; text-decoration: none; margin: 4px 6px 4px 0; 
 .refs li { margin: 0.5em 0; }
 
 .xp-footer {
+  margin-top: auto;
   border-top: 1px solid var(--line);
   padding: 24px max(16px, env(safe-area-inset-right, 0px)) 24px max(16px, env(safe-area-inset-left, 0px));
   font: 14px var(--sans); color: var(--muted); text-align: center;

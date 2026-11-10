@@ -1,22 +1,12 @@
-
-
 <!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.28.1 by Michael Rose
-  Copyright 2013-2026 Michael Rose - mademistakes.com | @mmistakes
-  Copyright 2024-2026 iBug - ibugone.com | @iBug
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-
-<html lang="en-GB" class="no-js" dir="ltr">
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
     
-<meta charset="utf-8">
-
-
 <!-- begin _includes/seo.html --><title>Sample Tex Files (1) | Henry Yip</title>
-<meta name="description" content="Here we include more sample Tex Files for reference! The Product HERE">
+<meta name="description" content="The LaTeX source of a short document, with the PDF it compiles to.">
 
 
   <meta name="author" content="Henry Yip">
@@ -32,7 +22,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/LaTeX/Tex1/">
 
 
-  <meta property="og:description" content="Here we include more sample Tex Files for reference! The Product HERE">
+  <meta property="og:description" content="The LaTeX source of a short document, with the PDF it compiles to.">
 
 
 
@@ -69,23 +59,6 @@
 
 <!-- end _includes/seo.html -->
 
-
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Henry Yip Feed">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  window.enable_copy_code_button = true;
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
@@ -115,257 +88,60 @@
   });
 </script>
 
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+    <link rel="stylesheet" href="/assets/explore/site.css">
   </head>
+  <body class="xp xp-site">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+  <a class="xp-brand" href="/">Henry Yip</a>
+  <nav aria-label="Site">
+    <a href="/about/">About</a>
+    <a href="/research/">Research</a>
+    <a href="/projects/">Projects</a>
+    <a href="/archive/">Archive</a>
+    <a class="xp-search-link" href="/search/" aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+  </nav>
+</header>
 
-  <body class="layout--single">
-    
-<nav class="skip-links" aria-label="Skip links">
-  <ul>
-    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-  </ul>
-</nav>
 
-    
+    <div class="xp-author-strip"><div class="xp-author xp-author--compact">
+  <img class="xp-author-photo" src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" width="1182" height="665">
+  <div class="xp-author-text">
+    <p class="xp-author-name">Henry Yip</p>
+    <p class="xp-author-bio">MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+  </div>
+</div>
+</div>
 
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" aria-label="Primary navigation">
-        
-        <a class="site-title" href="/">
-          Henry Yip
-          
-        </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >About</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/research/"
-                
-                
-              >Research</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/projects/"
-                
-                
-              >Projects</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/archive/"
-                
-                
-              >Archive</a>
-            </li></ul>
-        
-        <button class="search__toggle" type="button">
-          <span class="visually-hidden">Toggle search</span>
-          <i class="fas fa-search"></i>
-        </button>
-        
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
+    <div class="xp-body xp-body--site">
+      <aside class="xp-side">
+        <div class="xp-author">
+  <img class="xp-author-photo" src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" width="1182" height="665">
+  <div class="xp-author-text">
+    <p class="xp-author-name">Henry Yip</p>
+    <p class="xp-author-bio">MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+    <p class="xp-author-meta">Zürich</p>
+    <p class="xp-author-links"><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a></p>
   </div>
 </div>
 
-
-    <div class="initial-content">
-      
-
-
-
-
-
-
-
-<div id="main" role="main">
-  
-
-  <div class="sidebar sticky">
-  
-
-
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="https://henry-yip.github.io/">
-        <img src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="https://henry-yip.github.io/" itemprop="url">Henry Yip</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-location-dot" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Zürich</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="https://github.com/Henry-Yip" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-          
-            <li><a href="https://www.linkedin.com/in/henry-yip-100b05222/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:hoyiph@student.ethz.ch" rel="me" class="u-email">
-            <meta itemprop="email" content="hoyiph@student.ethz.ch" />
-            <i class="fas fa-fw fa-square-envelope" aria-hidden="true"></i><span class="label">Email</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-    
-      
-      
-      
-      
-    
-    
-      
-<nav class="nav__list">
-  
-  <input id="ac-toc" name="accordion-toc" type="checkbox" />
-  <label for="ac-toc">Toggle menu</label>
-  <ul class="nav__items">
-    
-      
-      
-    
-  </ul>
-</nav>
-
-    
-  
-  
-  </div>
-
-
-
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Sample Tex Files (1)">
-    <meta itemprop="description" content="Here we include more sample Tex Files for reference!The ProductHERE">
-    <meta itemprop="datePublished" content="2022-08-04T00:00:00+01:00">
-    <meta itemprop="dateModified" content="2026-10-25T00:00:00+01:00">
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://henry-yip.github.io/LaTeX/Tex1/" itemprop="url">Sample Tex Files (1)
-</a>
-          </h1>
-          
-
-
-
-
-        </header>
-      
-
-      <section class="page__content e-content" itemprop="text">
-        
-          <aside class="sidebar__right sticky">
-            <nav class="toc" aria-label="Table of contents">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Sample Tex File</h4></header>
-              <ul class="toc__menu"><li><a href="#the-product">The Product</a></li><li><a href="#the-source-code">The Source Code</a></li><li><a href="#changes-on-25-october-2026">Changes on 25 October 2026</a></li></ul>
-            </nav>
-          </aside>
-        
-        <p>Here we include more sample Tex Files for reference!</p>
+        <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      </aside>
+      <div class="xp-main-col">
+        <section class="xp-hero xp-hero--text">
+          <div class="xp-hero-text">
+            
+            <div>
+              <h1>Sample Tex Files (1)</h1>
+              <p class="xp-byline"><time datetime="2022-08-04T00:00:00+01:00">4 August 2022</time>, <a href="#revision">revised 25 October 2026</a></p>
+              
+              
+            </div>
+          </div>
+        </section>
+        <main class="xp-article" id="xp-main">
+          <p>Here we include more sample Tex Files for reference!</p>
 <h2 id="the-product">The Product</h2>
 <p><a href="https://henry-yip.github.io/assets/finalized.pdf">HERE</a></p>
 
@@ -434,111 +210,26 @@
 <span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
 <span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span></code></pre></figure>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> One remark in the logistics section was worded too informally.</p>
+  <p>Revised on 25 October 2026. One remark in the logistics section was worded too informally. It is reworded, both here and in the PDF, which was recompiled from the source above. Nothing else in the document changed.</p>
 
-<p><strong>What changed.</strong> It is reworded, both here and in the PDF, which was recompiled from the source above. Nothing else in the document changed.</p>
-
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-  
-    
-
-
-
-
-  
-  
-  
-
-  
-
-
-  
-
-  
-
-
-        
-
-
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-updated" datetime="2026-10-25">October 25, 2026</time></p>
-
-
-      </footer>
-
-      
-
-      
-
-  <nav class="pagination" aria-label="Post pagination">
-    
-      <a href="/LaTeX/LaTeXTutorial1/" class="pagination--pager" title="Introduction to LaTeX">Previous</a>
-    
-    
-      <a href="/LaTeX/Tex2/" class="pagination--pager" title="Sample LaTeX Source: Course Notes">Next</a>
-    
-  </nav>
-
-
-    </div>
-
-    
-  </article>
-
-  
-  
 </div>
 
-      
+
+
+
+        </main>
+      </div>
     </div>
 
-    
-      <div class="search-content">
-        
-<div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
-    <label class="sr-only" for="search">
-      Enter your search term...
-    </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
-  </form>
-  <div id="results" class="results"></div></div>
-
-      </div>
-    
-
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
-        <div class="site-footer">
+    <footer class="xp-footer">
   <p><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/feed.xml">Feed</a></p>
   <p>&copy; 2026 Henry Yip</p>
-</div>
+</footer>
 
-      </footer>
-    </div>
-
+    <script type="module" src="/assets/explore/site.js"></script>
     
-
-  <script src="/assets/js/main.min.js"></script>
-
-
-
-
-<script src="/assets/js/lunr/lunr.min.js"></script>
-<script src="/assets/js/lunr/lunr-store.js?v=1794260016"></script>
-<script src="/assets/js/lunr/lunr-en.js"></script>
-
-
-
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -550,11 +241,6 @@
 
   gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
 </script>
-
-
-
-
-
 
 
 

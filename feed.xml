@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-11-09T21:33:36+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 11 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/NewOrbits/">&larr; Classifying and Finding New Possible Orbits (Part I)</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-11-10T13:15:41+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="series-box">
+  <p>Part 11 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
 </div>
 
 <p>This post continues the problem of two fixed centres from <a href="/EulerProblem/">part 4</a> and <a href="/EulerProblemPlots/">part 6</a>.</p>
@@ -82,14 +81,13 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
 <p>This post draws on <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> and the book <em>Integrable Systems in Celestial Mechanics</em> by Diarmuid Ó’Mathúna.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> Nothing in the results.</p>
+  <p>Revised on 25 October 2026. Nothing in the results was wrong. The set-up now gives the positions of the two fixed masses, and the eccentricities read off the plots are marked as approximate.</p>
 
-<p><strong>What changed.</strong> The set-up now gives the positions of the two fixed masses, and the eccentricities read off the plots are marked as approximate.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.]]></summary></entry><entry><title type="html">Classifying and Finding New Possible Orbits (Part I)</title><link href="https://henry-yip.github.io/NewOrbits/" rel="alternate" type="text/html" title="Classifying and Finding New Possible Orbits (Part I)" /><published>2024-07-22T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/NewOrbits</id><content type="html" xml:base="https://henry-yip.github.io/NewOrbits/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 10 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/Figure8Proof/">&larr; Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</a> &nbsp;·&nbsp; <a href="/TwoBodyProblemNew/">Problem of Two Fixed Centres (Part III) &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.]]></summary></entry><entry><title type="html">Classifying and Finding New Possible Orbits (Part I)</title><link href="https://henry-yip.github.io/NewOrbits/" rel="alternate" type="text/html" title="Classifying and Finding New Possible Orbits (Part I)" /><published>2024-07-22T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/NewOrbits</id><content type="html" xml:base="https://henry-yip.github.io/NewOrbits/"><![CDATA[<div class="series-box">
+  <p>Part 10 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/Figure8Proof/">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</a><br />Next: <a href="/TwoBodyProblemNew/">Problem of Two Fixed Centres (Part III)</a></p>
 </div>
 
 <p>This post describes a first systematic search for interesting orbits: a scan over a family of initial conditions, recording which ones stay bounded.</p>
@@ -180,21 +178,22 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 
 <p>This search is inspired by the paper <a href="https://arxiv.org/abs/2205.14709"><em>New Families of Periodic Orbits for the Planar Three-Body Problem Computed with High Precision</em></a>.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong></p>
+  <p>Revised on 25 October 2026. The original had these errors:</p>
 
-<ul>
-  <li>The initial conditions put the body with velocity \(-2(a, b)\) at \((1, 0)\). The figure-eight values quoted, \((a, b) \approx (0.35, 0.53)\), belong to the standard arrangement with that body at the origin, which the table now gives.</li>
-  <li>The potential energy was written \(1/a + 1/b + 1/c\). Gravitational potential energy is negative: \(V = -(1/r_{12} + 1/r_{23} + 1/r_{13})\).</li>
-  <li>The argument for why no cut-off radius works did not hold up. The real reason is that two bodies can form a tight binary with arbitrarily negative potential energy, which leaves the third body enough energy to travel arbitrarily far.</li>
-  <li>The return proximity function compared the momenta with zero instead of with their initial values.</li>
-</ul>
+  <ul>
+    <li>The initial conditions put the body with velocity \(-2(a, b)\) at \((1, 0)\). The figure-eight values quoted, \((a, b) \approx (0.35, 0.53)\), belong to the standard arrangement with that body at the origin, which the table now gives.</li>
+    <li>The potential energy was written \(1/a + 1/b + 1/c\). Gravitational potential energy is negative: \(V = -(1/r_{12} + 1/r_{23} + 1/r_{13})\).</li>
+    <li>The argument for why no cut-off radius works did not hold up. The real reason is that two bodies can form a tight binary with arbitrarily negative potential energy, which leaves the third body enough energy to travel arbitrarily far.</li>
+    <li>The return proximity function compared the momenta with zero instead of with their initial values.</li>
+  </ul>
 
-<p><strong>What changed.</strong> All are fixed, and the diary-style asides are shorter.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.]]></summary></entry><entry><title type="html">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</title><link href="https://henry-yip.github.io/Figure8Proof/" rel="alternate" type="text/html" title="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere" /><published>2024-07-17T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Figure8Proof</id><content type="html" xml:base="https://henry-yip.github.io/Figure8Proof/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 9 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/Convergence/">&larr; Sundman's Power Series Solution to the Three-Body Problem (Part II)</a> &nbsp;·&nbsp; <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I) &rarr;</a></p>
+  <p>All are fixed, and the diary-style asides are shorter.</p>
+
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.]]></summary></entry><entry><title type="html">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</title><link href="https://henry-yip.github.io/Figure8Proof/" rel="alternate" type="text/html" title="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere" /><published>2024-07-17T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Figure8Proof</id><content type="html" xml:base="https://henry-yip.github.io/Figure8Proof/"><![CDATA[<div class="series-box">
+  <p>Part 9 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a><br />Next: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
 </div>
 
 <p>This post outlines the proof that the figure-eight orbit exists, following Chenciner and Montgomery. It uses the <a href="/ShapeSphere/">shape sphere</a> together with the direct method of the calculus of variations.</p>
@@ -286,14 +285,13 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 
 <p>This proof is not original. It follows A. Chenciner and R. Montgomery, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>, Annals of Mathematics <strong>152</strong> (2000), 881–901, and the presentation <a href="/assets/Overview_Beamer.pdf"><em>I’ve Got a Three-Body Problem</em></a> by Gareth E. Roberts (College of the Holy Cross).</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide.</p>
+  <p>Revised on 25 October 2026. The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide. The outline is rewritten in numbered steps, the configuration space is written \(X\) instead of \(\chi\), and the variational argument at the end is tidied. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
 
-<p><strong>What changed.</strong> The outline is rewritten in numbered steps, the configuration space is written \(X\) instead of \(\chi\), and the variational argument at the end is tidied. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[An outline of Chenciner and Montgomery's variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.]]></summary></entry><entry><title type="html">Sundman’s Power Series Solution to the Three-Body Problem (Part II)</title><link href="https://henry-yip.github.io/Convergence/" rel="alternate" type="text/html" title="Sundman’s Power Series Solution to the Three-Body Problem (Part II)" /><published>2024-07-16T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Convergence</id><content type="html" xml:base="https://henry-yip.github.io/Convergence/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 8 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/Sundman/">&larr; Sundman's Power Series Solution to the Three-Body Problem (Part I)</a> &nbsp;·&nbsp; <a href="/Figure8Proof/">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[An outline of Chenciner and Montgomery's variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.]]></summary></entry><entry><title type="html">Sundman’s Power Series Solution to the Three-Body Problem (Part II)</title><link href="https://henry-yip.github.io/Convergence/" rel="alternate" type="text/html" title="Sundman’s Power Series Solution to the Three-Body Problem (Part II)" /><published>2024-07-16T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Convergence</id><content type="html" xml:base="https://henry-yip.github.io/Convergence/"><![CDATA[<div class="series-box">
+  <p>Part 8 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/Sundman/">Sundman's Power Series Solution to the Three-Body Problem (Part I)</a><br />Next: <a href="/Figure8Proof/">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</a></p>
 </div>
 
 <p>Continuing from <a href="/Sundman/">part 7</a>, this post estimates how many terms of Sundman’s series are needed in a simple example, and shows why the series is useless in practice.</p>
@@ -362,21 +360,22 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 
 <p>This post is based on D. K. Yeomans’s <a href="https://ntrs.nasa.gov/citations/19670005590">exposition of Sundman’s work</a> and on <a href="https://adsabs.harvard.edu/full/1930BuAst...6..417B">Belorizky’s paper</a> (1930).</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong></p>
+  <p>Revised on 25 October 2026. The original had these errors:</p>
 
-<ul>
-  <li>In the series for \(\cos t\), the coefficient \(\tfrac{46}{45}\) was written \(\tfrac{45}{46}\).</li>
-  <li>The factor \(\Gamma\) was written with \(e^{1/l}\) instead of \(e^{-r/l}\).</li>
-  <li>The sum \(\sum_{k=1}^{p} \frac{1}{2k-1}\) had \(2p-1\) in the denominator, and the error term after \(\tau^5\) is \(O(\tau^7)\), not \(O(\tau^6)\).</li>
-  <li>A reference link no longer worked.</li>
-</ul>
+  <ul>
+    <li>In the series for \(\cos t\), the coefficient \(\tfrac{46}{45}\) was written \(\tfrac{45}{46}\).</li>
+    <li>The factor \(\Gamma\) was written with \(e^{1/l}\) instead of \(e^{-r/l}\).</li>
+    <li>The sum \(\sum_{k=1}^{p} \frac{1}{2k-1}\) had \(2p-1\) in the denominator, and the error term after \(\tau^5\) is \(O(\tau^7)\), not \(O(\tau^6)\).</li>
+    <li>A reference link no longer worked.</li>
+  </ul>
 
-<p><strong>What changed.</strong> All are fixed, and the estimate of the number of terms is explained step by step.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Applying Sundman's series to Lagrange's equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of accuracy.]]></summary></entry><entry><title type="html">Sundman’s Power Series Solution to the Three-Body Problem (Part I)</title><link href="https://henry-yip.github.io/Sundman/" rel="alternate" type="text/html" title="Sundman’s Power Series Solution to the Three-Body Problem (Part I)" /><published>2024-07-12T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Sundman</id><content type="html" xml:base="https://henry-yip.github.io/Sundman/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 7 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/EulerProblemPlots/">&larr; Problem of Two Fixed Centres (Part II)</a> &nbsp;·&nbsp; <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II) &rarr;</a></p>
+  <p>All are fixed, and the estimate of the number of terms is explained step by step.</p>
+
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Applying Sundman's series to Lagrange's equilateral solution shows why it is impractical: it needs more than 10 to the power 8 million terms for one digit of accuracy.]]></summary></entry><entry><title type="html">Sundman’s Power Series Solution to the Three-Body Problem (Part I)</title><link href="https://henry-yip.github.io/Sundman/" rel="alternate" type="text/html" title="Sundman’s Power Series Solution to the Three-Body Problem (Part I)" /><published>2024-07-12T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Sundman</id><content type="html" xml:base="https://henry-yip.github.io/Sundman/"><![CDATA[<div class="series-box">
+  <p>Part 7 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/EulerProblemPlots/">Problem of Two Fixed Centres (Part II)</a><br />Next: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a></p>
 </div>
 
 <p>In 1912 Karl F. Sundman found a convergent power-series solution to the three-body problem, valid whenever the total angular momentum is non-zero. In principle this is a general solution, but its convergence is so slow that it is of no practical use. This post outlines how it works.</p>
@@ -473,20 +472,21 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 
 <p>This post is based on D. K. Yeomans’s exposition of Sundman’s regularisation of the three-body problem, <a href="https://ntrs.nasa.gov/citations/19670005590">NASA technical memorandum X-640-66-481</a> (1966), and on notes by Peter Senchyna.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong></p>
+  <p>Revised on 25 October 2026. The original had these errors:</p>
 
-<ul>
-  <li>The map from the right half-plane to the unit disc was written \(h(z) = \lvert z-1\rvert / \lvert z+1\rvert\), which is a number, not a map. It is the Möbius transformation \(h(z) = (z-1)/(z+1)\).</li>
-  <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\), and the condition on \(w\) used \(\lvert w - \bar w\rvert\), which is twice \(\lvert\operatorname{Im} w\rvert\).</li>
-  <li>A reference link no longer worked.</li>
-</ul>
+  <ul>
+    <li>The map from the right half-plane to the unit disc was written \(h(z) = \lvert z-1\rvert / \lvert z+1\rvert\), which is a number, not a map. It is the Möbius transformation \(h(z) = (z-1)/(z+1)\).</li>
+    <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\), and the condition on \(w\) used \(\lvert w - \bar w\rvert\), which is twice \(\lvert\operatorname{Im} w\rvert\).</li>
+    <li>A reference link no longer worked.</li>
+  </ul>
 
-<p><strong>What changed.</strong> All are fixed, and the reference now points to the copy on NASA’s Technical Reports Server.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Sundman's 1912 series solves the three-body problem for non-zero angular momentum. How the regularising variable works, and why the series is useless in practice.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part II)</title><link href="https://henry-yip.github.io/EulerProblemPlots/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part II)" /><published>2024-07-09T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblemPlots</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblemPlots/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 6 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/ShapeSphere/">&larr; Understanding and Visualising the Shape Sphere</a> &nbsp;·&nbsp; <a href="/Sundman/">Sundman's Power Series Solution to the Three-Body Problem (Part I) &rarr;</a></p>
+  <p>All are fixed, and the reference now points to the copy on NASA’s Technical Reports Server.</p>
+
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Sundman's 1912 series solves the three-body problem for non-zero angular momentum. How the regularising variable works, and why the series is useless in practice.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part II)</title><link href="https://henry-yip.github.io/EulerProblemPlots/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part II)" /><published>2024-07-09T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblemPlots</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblemPlots/"><![CDATA[<div class="series-box">
+  <p>Part 6 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/ShapeSphere/">Understanding and Visualising the Shape Sphere</a><br />Next: <a href="/Sundman/">Sundman's Power Series Solution to the Three-Body Problem (Part I)</a></p>
 </div>
 
 <p>This post continues the problem of two fixed centres, <a href="/EulerProblem/">introduced in part 4</a>, by converting my simulated trajectories into the coordinates in which the theory is written.</p>
@@ -563,14 +563,13 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <p>This post is based on the book <em>Integrable Systems in Celestial Mechanics</em> by Diarmuid Ó’Mathúna.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\).</p>
+  <p>Revised on 25 October 2026. The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\). The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\).</p>
 
-<p><strong>What changed.</strong> The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\).</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Converting simulated trajectories from Cartesian to prolate spheroidal coordinates, and why the first results disagreed with the theory.]]></summary></entry><entry><title type="html">Understanding and Visualising the Shape Sphere</title><link href="https://henry-yip.github.io/ShapeSphere/" rel="alternate" type="text/html" title="Understanding and Visualising the Shape Sphere" /><published>2024-07-04T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/ShapeSphere</id><content type="html" xml:base="https://henry-yip.github.io/ShapeSphere/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 5 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/EulerProblem/">&larr; Problem of Two Fixed Centres (Part I)</a> &nbsp;·&nbsp; <a href="/EulerProblemPlots/">Problem of Two Fixed Centres (Part II) &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Converting simulated trajectories from Cartesian to prolate spheroidal coordinates, and why the first results disagreed with the theory.]]></summary></entry><entry><title type="html">Understanding and Visualising the Shape Sphere</title><link href="https://henry-yip.github.io/ShapeSphere/" rel="alternate" type="text/html" title="Understanding and Visualising the Shape Sphere" /><published>2024-07-04T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/ShapeSphere</id><content type="html" xml:base="https://henry-yip.github.io/ShapeSphere/"><![CDATA[<div class="series-box">
+  <p>Part 5 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/EulerProblem/">Problem of Two Fixed Centres (Part I)</a><br />Next: <a href="/EulerProblemPlots/">Problem of Two Fixed Centres (Part II)</a></p>
 </div>
 
 <p>This post introduces the <strong>shape sphere</strong>, a way to picture the motion of three bodies by keeping track only of the <em>shape</em> of the triangle they form.</p>
@@ -636,14 +635,13 @@ S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
 
 <p>This post is based on A. Chenciner and R. Montgomery, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>, Annals of Mathematics <strong>152</strong> (2000), 881–901.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> Nothing in the content.</p>
+  <p>Revised on 25 October 2026. Nothing in the content was wrong. The reduction is explained more clearly, the notation is consistent, and there is a link to Chenciner and Montgomery’s paper.</p>
 
-<p><strong>What changed.</strong> The reduction is explained more clearly, the notation is consistent, and there is a link to Chenciner and Montgomery’s paper.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Reducing the planar three-body problem by translations, rotations and scaling: the Jacobi map, the Hopf map, and orbits drawn on the shape sphere.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part I)</title><link href="https://henry-yip.github.io/EulerProblem/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part I)" /><published>2024-06-28T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblem</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblem/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 4 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/TwoBodyProblemCont/">&larr; Ellipses and the Two-Body Problem</a> &nbsp;·&nbsp; <a href="/ShapeSphere/">Understanding and Visualising the Shape Sphere &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Reducing the planar three-body problem by translations, rotations and scaling: the Jacobi map, the Hopf map, and orbits drawn on the shape sphere.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part I)</title><link href="https://henry-yip.github.io/EulerProblem/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part I)" /><published>2024-06-28T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblem</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblem/"><![CDATA[<div class="series-box">
+  <p>Part 4 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/TwoBodyProblemCont/">Ellipses and the Two-Body Problem</a><br />Next: <a href="/ShapeSphere/">Understanding and Visualising the Shape Sphere</a></p>
 </div>
 
 <p>This post introduces the <strong>problem of two fixed centres</strong>, also known as <em>Euler’s three-body problem</em>: a small body moving under the gravity of two masses held fixed in place. Unlike the general three-body problem, it is integrable.</p>
@@ -755,14 +753,13 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 <p>This post is based on the book <em>Integrable Systems in Celestial Mechanics</em> by Diarmuid Ó’Mathúna. Parts of the material on Jacobi elliptic functions are from <a href="https://en.wikipedia.org/wiki/Jacobi_elliptic_functions">Wikipedia</a>.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> Nothing in the results.</p>
+  <p>Revised on 25 October 2026. Nothing in the results was wrong. The Jacobi elliptic function identities behind the last step are shown, the modulus is written \(k\) instead of \(k_{01}\), and the coordinates are introduced more carefully.</p>
 
-<p><strong>What changed.</strong> The Jacobi elliptic function identities behind the last step are shown, the modulus is written \(k\) instead of \(k_{01}\), and the coordinates are introduced more carefully.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Euler's three-body problem: a test mass attracted by two fixed masses. Prolate spheroidal coordinates, the Lagrangian, and Jacobi elliptic functions.]]></summary></entry><entry><title type="html">Ellipses and the Two-Body Problem</title><link href="https://henry-yip.github.io/TwoBodyProblemCont/" rel="alternate" type="text/html" title="Ellipses and the Two-Body Problem" /><published>2024-06-27T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemCont</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemCont/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 3 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/SymplecticIntegrators/">&larr; Symplectic Integrators</a> &nbsp;·&nbsp; <a href="/EulerProblem/">Problem of Two Fixed Centres (Part I) &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Euler's three-body problem: a test mass attracted by two fixed masses. Prolate spheroidal coordinates, the Lagrangian, and Jacobi elliptic functions.]]></summary></entry><entry><title type="html">Ellipses and the Two-Body Problem</title><link href="https://henry-yip.github.io/TwoBodyProblemCont/" rel="alternate" type="text/html" title="Ellipses and the Two-Body Problem" /><published>2024-06-27T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemCont</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemCont/"><![CDATA[<div class="series-box">
+  <p>Part 3 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/SymplecticIntegrators/">Symplectic Integrators</a><br />Next: <a href="/EulerProblem/">Problem of Two Fixed Centres (Part I)</a></p>
 </div>
 
 <p>Before tackling three bodies, this post revisits ellipses and the Kepler problem.</p>
@@ -860,14 +857,13 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 
 <p>This post is based on the book <em>Integrable Systems in Celestial Mechanics</em> by Diarmuid Ó’Mathúna. The remark about the four-dimensional sphere is based on Wikipedia.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> Nothing in the results, but the bound \(r \le 2a\) was stated without its derivation, and the derivation of the eccentricity vector stopped before reaching the orbit equation.</p>
+  <p>Revised on 25 October 2026. Nothing in the results was wrong, but the bound \(r \le 2a\) was stated without its derivation, and the derivation of the eccentricity vector stopped before reaching the orbit equation. Both are now complete, with \(\mu = GM\) throughout.</p>
 
-<p><strong>What changed.</strong> Both are now complete, with \(\mu = GM\) throughout.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Polar equations of the ellipse, bound orbits from negative energy, and the Laplace–Runge–Lenz vector, which gives Kepler's first law.]]></summary></entry><entry><title type="html">Symplectic Integrators</title><link href="https://henry-yip.github.io/SymplecticIntegrators/" rel="alternate" type="text/html" title="Symplectic Integrators" /><published>2024-06-25T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/SymplecticIntegrators</id><content type="html" xml:base="https://henry-yip.github.io/SymplecticIntegrators/"><![CDATA[<div class="notice series-box">
-  <p><strong><a href="/research/">Summer research 2024: the three-body problem</a></strong> · Part 2 of 11</p>
-  <p>A weekly research log from my summer project at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p><a href="/Figure8Orbit/">&larr; Plotting and Visualising the Three-Body Problem</a> &nbsp;·&nbsp; <a href="/TwoBodyProblemCont/">Ellipses and the Two-Body Problem &rarr;</a></p>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Polar equations of the ellipse, bound orbits from negative energy, and the Laplace–Runge–Lenz vector, which gives Kepler's first law.]]></summary></entry><entry><title type="html">Symplectic Integrators</title><link href="https://henry-yip.github.io/SymplecticIntegrators/" rel="alternate" type="text/html" title="Symplectic Integrators" /><published>2024-06-25T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/SymplecticIntegrators</id><content type="html" xml:base="https://henry-yip.github.io/SymplecticIntegrators/"><![CDATA[<div class="series-box">
+  <p>Part 2 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
+  <p>Previous: <a href="/Figure8Orbit/">Plotting and Visualising the Three-Body Problem</a><br />Next: <a href="/TwoBodyProblemCont/">Ellipses and the Two-Body Problem</a></p>
 </div>
 
 <p>This post explains what makes an integrator <em>symplectic</em>, and compares second-, third- and fourth-order symplectic schemes on the figure-eight orbit.</p>
@@ -977,8 +973,8 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <p>The section on the definition of symplectic integrators, including the figure, is based on <a href="https://courses.physics.ucsd.edu/2018/Winter/physics141/Assignments/leapfrog.pdf">these notes on the leapfrog method</a> by Peter Young.</p>
 
-<h2 id="changes-on-25-october-2026">Changes on 25 October 2026</h2>
+<div class="revision" id="revision">
 
-<p><strong>What was wrong.</strong> Nothing in the results.</p>
+  <p>Revised on 25 October 2026. Nothing in the results was wrong. The definition of a symplectic map is given in general, the coefficients are laid out more clearly and the energy errors are rounded to two figures.</p>
 
-<p><strong>What changed.</strong> The definition of a symplectic map is given in general, the coefficients are laid out more clearly and the energy errors are rounded to two figures.</p>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[Why area-preserving (symplectic) integrators keep the energy error bounded, and how third- and fourth-order schemes improve on Verlet for the figure-eight orbit.]]></summary></entry></feed>
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[Why area-preserving (symplectic) integrators keep the energy error bounded, and how third- and fourth-order schemes improve on Verlet for the figure-eight orbit.]]></summary></entry></feed>
