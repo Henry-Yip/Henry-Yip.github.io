@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
     
-<!-- begin _includes/seo.html --><title>Sample Tex Files (1) | Henry Yip</title>
+<!-- begin _includes/seo.html --><title>Sample LaTeX Source: A Short Document | Henry Yip</title>
 <meta name="description" content="The LaTeX source of a short document, with the PDF it compiles to.">
 
 
@@ -18,7 +18,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Sample Tex Files (1)">
+<meta property="og:title" content="Sample LaTeX Source: A Short Document">
 <meta property="og:url" content="https://henry-yip.github.io/LaTeX/Tex1/">
 
 
@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -122,7 +122,7 @@
     <p class="xp-author-name">Henry Yip</p>
     <p class="xp-author-bio">MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
     <p class="xp-author-meta">Zürich</p>
-    <p class="xp-author-links"><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a></p>
+    <p class="xp-author-links"><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/assets/Henry_Yip_CV.pdf">CV</a></p>
   </div>
 </div>
 
@@ -133,89 +133,84 @@
           <div class="xp-hero-text">
             
             <div>
-              <h1>Sample Tex Files (1)</h1>
-              <p class="xp-byline"><time datetime="2022-08-04T00:00:00+01:00">4 August 2022</time>, <a href="#revision">revised 25 October 2026</a></p>
+              <h1>Sample LaTeX Source: A Short Document</h1>
+              <p class="xp-byline"><time datetime="2022-08-04T00:00:00+01:00">4 August 2022</time>, <a href="#revision">revised 11 November 2026</a></p>
               
               
             </div>
           </div>
         </section>
         <main class="xp-article" id="xp-main">
-          <p>Here we include more sample Tex Files for reference!</p>
-<h2 id="the-product">The Product</h2>
-<p><a href="https://henry-yip.github.io/assets/finalized.pdf">HERE</a></p>
+          <p>A two-page document with sections, nested lists, footnotes, links and a displayed equation, as a template for a memo or a short note. <a href="/assets/finalized.pdf">The compiled PDF</a> and its source:</p>
 
-<h2 id="the-source-code">The Source Code</h2>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">\</span><span class="n">documentclass</span><span class="p">{</span><span class="n">article</span><span class="p">}</span>
-<span class="p">\</span><span class="n">usepackage</span><span class="p">{</span><span class="n">amsmath</span><span class="p">}</span>
-<span class="p">\</span><span class="n">usepackage</span><span class="p">{</span><span class="n">amssymb</span><span class="p">}</span>
-<span class="p">\</span><span class="n">usepackage</span><span class="p">{</span><span class="n">hyperref</span><span class="p">}</span>
-<span class="p">\</span><span class="n">hypersetup</span><span class="p">{</span>
-    <span class="n">colorlinks</span><span class="o">=</span><span class="kp">true</span><span class="p">,</span>
-    <span class="n">linkcolor</span><span class="o">=</span><span class="n">red</span><span class="p">,</span>
-    <span class="n">urlcolor</span><span class="o">=</span><span class="n">cyan</span>
+<figure class="highlight"><pre><code class="language-latex" data-lang="latex"><span class="k">\documentclass</span><span class="p">{</span>article<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amsmath<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>amssymb<span class="p">}</span>
+<span class="k">\usepackage</span><span class="p">{</span>hyperref<span class="p">}</span>
+<span class="k">\hypersetup</span><span class="p">{</span>
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=cyan
     <span class="p">}</span>
-<span class="p">\</span><span class="n">title</span><span class="p">{\</span><span class="n">textbf</span><span class="p">{</span><span class="no">A</span> <span class="no">Brief</span> <span class="no">Introduction</span> <span class="n">to</span> <span class="n">this</span> <span class="no">Website</span><span class="p">}}</span>
-<span class="p">\</span><span class="n">author</span><span class="p">{</span>
-<span class="no">Henry</span> <span class="no">Yip</span>
-<span class="nb">name</span><span class="vi">@ed</span><span class="p">.</span><span class="nf">ac</span><span class="p">.</span><span class="nf">uk</span>
+<span class="k">\title</span><span class="p">{</span><span class="k">\textbf</span><span class="p">{</span>A Brief Introduction to this Website<span class="p">}}</span>
+<span class="k">\author</span><span class="p">{</span>
+Henry Yip
+name@ed.ac.uk
 <span class="p">}</span>
-<span class="p">\</span><span class="n">date</span><span class="p">{</span><span class="no">June</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">2022</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">document</span><span class="p">}</span>
-<span class="p">\</span><span class="n">maketitle</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">abstract</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="n">item</span> <span class="no">This</span> <span class="n">is</span> <span class="n">a</span> <span class="nb">self</span><span class="o">-</span><span class="n">initiated</span> <span class="n">project</span> <span class="n">by</span> <span class="no">Henry</span> <span class="no">Yip</span><span class="o">.</span> <span class="no">Feel</span> <span class="n">free</span> <span class="n">to</span> <span class="nb">send</span> <span class="n">me</span> <span class="n">any</span> <span class="n">corrections</span><span class="o">.</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">abstract</span><span class="p">}</span>
-<span class="p">\</span><span class="n">section</span><span class="p">{</span><span class="no">Aim</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">Provide</span> <span class="n">a</span> <span class="n">platform</span> <span class="n">across</span> <span class="n">science</span> <span class="n">majors</span> <span class="p">(</span><span class="ow">or</span> <span class="n">any</span> <span class="n">majors</span><span class="p">)</span> <span class="n">to</span> <span class="n">share</span> <span class="n">their</span> <span class="n">ideas</span><span class="p">,</span> <span class="n">which</span> <span class="n">will</span> <span class="n">be</span> <span class="n">centrally</span> <span class="n">promoted</span> <span class="k">in</span> <span class="n">different</span> <span class="n">platforms</span><span class="o">.</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="n">section</span><span class="p">{</span><span class="no">Methodology</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-  <span class="p">\</span><span class="n">item</span> <span class="no">We</span> <span class="n">will</span> <span class="n">use</span> <span class="no">Jekyll</span> <span class="n">to</span> <span class="n">create</span> <span class="n">the</span> <span class="n">website</span><span class="o">.</span>  <span class="no">Please</span> <span class="n">check</span> <span class="p">\</span><span class="n">href</span><span class="p">{</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">jekyllrb</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="p">}{</span><span class="n">the</span>     <span class="n">official</span> <span class="n">documentation</span><span class="p">}</span> <span class="k">for</span> <span class="n">details</span>
-  <span class="p">\</span><span class="n">item</span> <span class="no">Optionally</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="kp">include</span> <span class="n">a</span> <span class="no">Youtube</span> <span class="no">Channel</span> <span class="ow">and</span> <span class="n">insert</span> <span class="n">videos</span> <span class="k">in</span> <span class="n">our</span> <span class="n">websites</span>
-  <span class="p">\</span><span class="n">item</span> <span class="no">After</span> <span class="n">that</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="n">promote</span> <span class="n">our</span> <span class="n">website</span> <span class="n">through</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span> <span class="ss">ways:
-    </span><span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-    <span class="p">\</span><span class="n">item</span> <span class="no">Word</span> <span class="n">of</span> <span class="no">Mouth</span> <span class="p">(</span><span class="no">Most</span> <span class="no">Specific</span><span class="p">)</span>
-    <span class="p">\</span><span class="n">item</span> <span class="no">LinkedIN</span> <span class="p">\</span><span class="n">footnote</span><span class="p">{</span><span class="no">I</span> <span class="n">obviously</span> <span class="n">recommend</span> <span class="n">everyone</span> <span class="n">to</span> <span class="n">use</span> <span class="no">LinkedIN</span><span class="o">.</span> <span class="no">So</span> <span class="n">the</span> <span class="n">promotion</span> <span class="n">can</span>       <span class="n">be</span> <span class="n">more</span> <span class="n">effective!</span><span class="p">}</span> <span class="p">(</span><span class="no">Relatively</span> <span class="no">More</span> <span class="no">Specific</span><span class="p">)</span> 
-    <span class="p">\</span><span class="n">item</span> <span class="no">Other</span> <span class="no">Social</span> <span class="no">Medias</span> <span class="p">(</span><span class="no">Less</span> <span class="no">Specific</span><span class="p">)</span>
-    <span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="n">section</span><span class="p">{</span><span class="no">Logistical</span> <span class="no">Details</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">Everyone</span> <span class="p">\</span><span class="n">text</span><span class="p">{</span><span class="no">PLEASE</span><span class="p">}</span> <span class="n">help</span> <span class="n">me</span> <span class="n">find</span> <span class="n">at</span> <span class="n">least</span> <span class="mi">1</span> <span class="n">more</span> <span class="n">group</span> <span class="n">member</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">Please</span> <span class="n">note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">content</span> <span class="n">you</span> <span class="n">post</span> <span class="n">can</span> <span class="n">be</span> <span class="n">anything</span> <span class="ow">and</span> <span class="p">\</span><span class="n">textbf</span><span class="p">{</span><span class="n">need</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">very</span> <span class="n">academic!</span><span class="p">}</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">We</span> <span class="n">need</span> <span class="n">to</span> <span class="nb">select</span> <span class="n">a</span> <span class="no">Jekyll</span> <span class="no">Theme</span><span class="o">.</span> <span class="no">Please</span> <span class="n">click</span> <span class="p">\</span><span class="n">href</span><span class="p">{</span><span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">jekyllthemes</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="p">}{</span><span class="n">here</span><span class="p">}</span> <span class="k">for</span> <span class="n">details</span> <span class="ow">and</span> <span class="n">tell</span> <span class="n">me</span> <span class="n">your</span> <span class="n">preferences</span><span class="o">.</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">We</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">create</span> <span class="n">a</span> <span class="nb">name</span> <span class="ow">and</span> <span class="n">a</span> <span class="n">logo</span><span class="o">.</span> <span class="no">I</span> <span class="n">personally</span> <span class="n">prefer</span> <span class="n">a</span> <span class="n">flashy</span> <span class="nb">name</span><span class="o">.</span> <span class="no">Any</span> <span class="n">suggestion</span> <span class="n">is</span> <span class="n">appreciated!</span>
-   <span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-    <span class="p">\</span><span class="n">item</span> <span class="no">Update</span><span class="p">:</span> <span class="no">I</span> <span class="n">created</span> <span class="n">one</span><span class="p">,</span> <span class="n">but</span> <span class="no">I</span> <span class="n">am</span> <span class="ow">not</span> <span class="n">happy</span> <span class="n">with</span> <span class="n">it</span> <span class="n">yet</span><span class="o">.</span> <span class="no">Please</span> <span class="n">suggest</span> <span class="n">improvements!</span>
-   <span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span> 
- <span class="p">\</span><span class="n">item</span> <span class="no">For</span> <span class="n">our</span> <span class="no">YouTube</span> <span class="no">Videos</span> <span class="p">\</span><span class="n">footnote</span><span class="p">{</span><span class="no">If</span> <span class="n">we</span> <span class="n">decide</span> <span class="n">to</span> <span class="n">make</span> <span class="n">this</span><span class="p">,</span> <span class="n">that</span> <span class="n">is</span><span class="p">}</span> <span class="n">we</span> <span class="n">may</span> <span class="n">even</span> <span class="n">need</span> <span class="n">an</span> <span class="n">animation</span><span class="o">.</span> <span class="no">From</span> <span class="mi">3</span><span class="n">b1b</span><span class="s1">'s \footnote{Check his videos if you haven'</span><span class="n">t!</span><span class="p">}</span><span class="n">animation</span> <span class="n">tool</span><span class="p">,</span> <span class="no">Manim</span><span class="p">,</span> <span class="no">I</span> <span class="n">have</span> <span class="n">successfully</span> <span class="n">created</span> <span class="n">some</span> <span class="n">working</span> <span class="n">animations</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">ideal</span> <span class="k">for</span> <span class="n">making</span> <span class="n">lengthy</span> <span class="n">videos</span><span class="p">,</span> <span class="n">but</span> <span class="n">a</span> <span class="n">short</span> <span class="n">animation</span> <span class="n">should</span> <span class="n">be</span> <span class="n">feasible</span><span class="o">.</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">We</span> <span class="n">can</span> <span class="n">publish</span> <span class="n">the</span> <span class="n">work</span> <span class="n">on</span> <span class="no">GitHub</span> <span class="n">also</span><span class="o">.</span>
- <span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="n">section</span><span class="p">{</span><span class="no">Work</span> <span class="n">details</span><span class="p">}</span>
-<span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">Preferably</span><span class="p">,</span> <span class="no">I</span> <span class="n">want</span> <span class="n">people</span> <span class="n">to</span> <span class="nb">fork</span> <span class="n">my</span> <span class="n">repository</span> <span class="k">in</span> <span class="no">GitHub</span> <span class="ow">and</span> <span class="n">edit</span> <span class="n">it</span> <span class="n">through</span> <span class="no">Markdown</span><span class="o">.</span> <span class="no">However</span><span class="p">,</span> <span class="no">I</span><span class="s1">'ve realized it'</span><span class="n">s</span> <span class="n">unrealistic</span> <span class="ow">and</span> <span class="n">therefore</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">submit</span> <span class="n">documents</span> <span class="n">to</span> <span class="n">me</span> <span class="n">through</span> <span class="no">Word</span><span class="o">/</span><span class="n">anything</span> <span class="ow">and</span> <span class="kp">include</span> <span class="n">the</span> <span class="n">pictures</span><span class="o">/</span><span class="n">math</span> <span class="n">equations</span><span class="o">/</span> <span class="n">anything</span> <span class="n">elsewhere</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">I</span> <span class="n">need</span> <span class="n">to</span> <span class="n">know</span> <span class="n">what</span> <span class="n">each</span> <span class="n">of</span> <span class="n">you</span> <span class="n">are</span> <span class="n">working</span> <span class="n">on</span><span class="o">.</span> <span class="no">You</span> <span class="n">guys</span> <span class="n">can</span> <span class="n">team</span> <span class="n">up</span> <span class="k">if</span> <span class="n">you</span> <span class="n">like</span> <span class="ow">and</span> <span class="n">create</span> <span class="n">some</span> <span class="n">collaborative</span> <span class="n">documents</span><span class="o">.</span> <span class="p">\</span><span class="n">textbf</span><span class="p">{</span><span class="no">Please</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">copyright</span> <span class="n">restrictions</span><span class="p">}</span><span class="o">.</span> 
- <span class="p">\</span><span class="n">item</span> <span class="no">Please</span> <span class="n">remember</span> <span class="n">that</span> <span class="n">the</span> <span class="n">content</span> <span class="n">need</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">too</span> <span class="n">academic</span><span class="o">.</span> <span class="no">You</span> <span class="n">can</span> <span class="n">explore</span> <span class="n">other</span> <span class="n">interests</span><span class="o">.</span> <span class="no">For</span> <span class="n">example</span><span class="p">,</span> <span class="no">I</span> <span class="n">will</span> <span class="n">very</span> <span class="n">likely</span> <span class="n">work</span> <span class="n">on</span> <span class="no">Atmospheric</span> <span class="no">Science</span> <span class="ow">and</span> <span class="no">Chess</span> <span class="n">instead</span> <span class="n">of</span> <span class="no">Physics</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">For</span> <span class="n">people</span> <span class="n">working</span> <span class="n">on</span> <span class="no">Maths</span><span class="p">,</span> <span class="n">please</span> <span class="n">use</span> <span class="p">\</span><span class="n">href</span><span class="p">{</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">katex</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span><span class="p">}{</span><span class="no">KaTeX</span><span class="p">}</span> <span class="n">commands</span><span class="p">(</span><span class="no">Yes</span><span class="p">,</span> <span class="n">we</span> <span class="n">ditch</span> <span class="no">Mathjax</span><span class="o">!</span><span class="p">)</span> <span class="no">If</span> <span class="n">you</span> <span class="n">can</span><span class="p">,</span> <span class="nb">send</span> <span class="n">me</span> <span class="no">LaTeX</span> <span class="n">codes</span> <span class="n">so</span> <span class="no">I</span> <span class="n">can</span> <span class="n">make</span> <span class="n">beautiful</span> <span class="n">equations</span> <span class="ss">like:
-</span><span class="p">\</span><span class="k">begin</span><span class="p">{</span><span class="n">equation</span><span class="p">}</span>
-<span class="no">T</span><span class="o">=</span><span class="p">\</span><span class="n">frac</span><span class="p">{</span><span class="mi">4</span><span class="p">(\</span><span class="n">frac</span><span class="p">{</span><span class="no">E</span><span class="p">}{</span><span class="no">U_0</span><span class="p">})(</span><span class="mi">1</span><span class="o">-</span><span class="p">\</span><span class="n">frac</span><span class="p">{</span><span class="no">E</span><span class="p">}{</span><span class="no">U_0</span><span class="p">})}{\</span><span class="n">sinh</span><span class="o">^</span><span class="p">{</span><span class="mi">2</span><span class="p">}{\</span><span class="n">sqrt</span><span class="p">{</span><span class="mi">2</span><span class="n">m</span><span class="p">(</span><span class="no">U_0</span><span class="o">-</span><span class="no">E</span><span class="p">)}\</span><span class="n">frac</span><span class="p">{</span><span class="no">L</span><span class="p">}{\</span><span class="n">hbar</span><span class="p">}}</span><span class="o">+</span><span class="mi">4</span><span class="p">(\</span><span class="n">frac</span><span class="p">{</span><span class="no">E</span><span class="p">}{</span><span class="no">U_0</span><span class="p">}){(</span><span class="mi">1</span><span class="o">-</span><span class="p">\</span><span class="n">frac</span><span class="p">{</span><span class="no">E</span><span class="p">}{</span><span class="no">U_0</span><span class="p">})}}</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">equation</span><span class="p">}</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">Please</span> <span class="nb">send</span> <span class="n">me</span> <span class="n">your</span> <span class="nb">self</span> <span class="n">introduction</span> <span class="n">so</span> <span class="no">I</span> <span class="n">can</span> <span class="kp">include</span> <span class="n">it</span> <span class="k">in</span> <span class="n">the</span> <span class="n">website</span><span class="p">,</span> <span class="n">it</span> <span class="n">can</span> <span class="n">be</span> <span class="n">your</span> <span class="n">interest</span><span class="p">,</span> <span class="ow">or</span> <span class="n">anything</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">say</span>
- <span class="p">\</span><span class="n">item</span> <span class="no">If</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">share</span> <span class="n">your</span> <span class="n">social</span> <span class="n">medias</span><span class="p">,</span> <span class="n">please</span> <span class="nb">send</span> <span class="n">me</span> <span class="n">the</span> <span class="n">url</span><span class="p">,</span> <span class="n">so</span> <span class="no">I</span> <span class="n">can</span> <span class="n">create</span> <span class="n">some</span> <span class="n">icons</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">itemize</span><span class="p">}</span>
-<span class="p">\</span><span class="k">end</span><span class="p">{</span><span class="n">document</span><span class="p">}</span></code></pre></figure>
+<span class="k">\date</span><span class="p">{</span>June 22, 2022<span class="p">}</span>
+<span class="nt">\begin{document}</span>
+<span class="k">\maketitle</span>
+<span class="nt">\begin{abstract}</span>
+<span class="nt">\begin{itemize}</span>
+<span class="k">\item</span> This is a self-initiated project by Henry Yip. Feel free to send me any corrections.
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{abstract}</span>
+<span class="k">\section</span><span class="p">{</span>Aim<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+ <span class="k">\item</span> Provide a platform across science majors (or any majors) to share their ideas, which will be centrally promoted in different platforms.
+<span class="nt">\end{itemize}</span>
+<span class="k">\section</span><span class="p">{</span>Methodology<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+  <span class="k">\item</span> We will use Jekyll to create the website.  Please check <span class="k">\href</span><span class="p">{</span>https://jekyllrb.com/<span class="p">}{</span>the     official documentation<span class="p">}</span> for details
+  <span class="k">\item</span> Optionally, we can include a Youtube Channel and insert videos in our websites
+  <span class="k">\item</span> After that, we can promote our website through a number of ways:
+    <span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Word of Mouth (Most Specific)
+    <span class="k">\item</span> LinkedIN <span class="k">\footnote</span><span class="p">{</span>I obviously recommend everyone to use LinkedIN. So the promotion can       be more effective!<span class="p">}</span> (Relatively More Specific) 
+    <span class="k">\item</span> Other Social Medias (Less Specific)
+    <span class="nt">\end{itemize}</span>
+<span class="nt">\end{itemize}</span>
+<span class="k">\section</span><span class="p">{</span>Logistical Details<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+ <span class="k">\item</span> Everyone <span class="k">\text</span><span class="p">{</span>PLEASE<span class="p">}</span> help me find at least 1 more group member
+ <span class="k">\item</span> Please note that the content you post can be anything and <span class="k">\textbf</span><span class="p">{</span>need not be very academic!<span class="p">}</span>
+ <span class="k">\item</span> We need to select a Jekyll Theme. Please click <span class="k">\href</span><span class="p">{</span>http://jekyllthemes.org/<span class="p">}{</span>here<span class="p">}</span> for details and tell me your preferences.
+ <span class="k">\item</span> We may need to create a name and a logo. I personally prefer a flashy name. Any suggestion is appreciated!
+   <span class="nt">\begin{itemize}</span>
+    <span class="k">\item</span> Update: I created one, but I am not happy with it yet. Please suggest improvements!
+   <span class="nt">\end{itemize}</span> 
+ <span class="k">\item</span> For our YouTube Videos <span class="k">\footnote</span><span class="p">{</span>If we decide to make this, that is<span class="p">}</span> we may even need an animation. From 3b1b's <span class="k">\footnote</span><span class="p">{</span>Check his videos if you haven't!<span class="p">}</span>animation tool, Manim, I have successfully created some working animations, but it is not ideal for making lengthy videos, but a short animation should be feasible.
+ <span class="k">\item</span> We can publish the work on GitHub also.
+ <span class="nt">\end{itemize}</span>
+<span class="k">\section</span><span class="p">{</span>Work details<span class="p">}</span>
+<span class="nt">\begin{itemize}</span>
+ <span class="k">\item</span> Preferably, I want people to fork my repository in GitHub and edit it through Markdown. However, I've realized it's unrealistic and therefore, you can submit documents to me through Word/anything and include the pictures/math equations/ anything elsewhere
+ <span class="k">\item</span> I need to know what each of you are working on. You guys can team up if you like and create some collaborative documents. <span class="k">\textbf</span><span class="p">{</span>Please refer to copyright restrictions<span class="p">}</span>. 
+ <span class="k">\item</span> Please remember that the content need not be too academic. You can explore other interests. For example, I will very likely work on Atmospheric Science and Chess instead of Physics
+ <span class="k">\item</span> For people working on Maths, please use <span class="k">\href</span><span class="p">{</span>https://katex.org/<span class="p">}{</span>KaTeX<span class="p">}</span> commands(Yes, we ditch Mathjax!) If you can, send me LaTeX codes so I can make beautiful equations like:
+<span class="nt">\begin{equation}</span>
+T=<span class="k">\frac</span><span class="p">{</span>4(<span class="k">\frac</span><span class="p">{</span>E<span class="p">}{</span>U<span class="p">_</span>0<span class="p">}</span>)(1-<span class="k">\frac</span><span class="p">{</span>E<span class="p">}{</span>U<span class="p">_</span>0<span class="p">}</span>)<span class="p">}{</span><span class="k">\sinh</span><span class="p">^{</span>2<span class="p">}{</span><span class="k">\sqrt</span><span class="p">{</span>2m(U<span class="p">_</span>0-E)<span class="p">}</span><span class="k">\frac</span><span class="p">{</span>L<span class="p">}{</span><span class="k">\hbar</span><span class="p">}}</span>+4(<span class="k">\frac</span><span class="p">{</span>E<span class="p">}{</span>U<span class="p">_</span>0<span class="p">}</span>)<span class="p">{</span>(1-<span class="k">\frac</span><span class="p">{</span>E<span class="p">}{</span>U<span class="p">_</span>0<span class="p">}</span>)<span class="p">}}</span>
+<span class="nt">\end{equation}</span>
+ <span class="k">\item</span> Please send me your self introduction so I can include it in the website, it can be your interest, or anything you want to say
+ <span class="k">\item</span> If you want to share your social medias, please send me the url, so I can create some icons
+<span class="nt">\end{itemize}</span>
+<span class="nt">\end{document}</span></code></pre></figure>
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. One remark in the logistics section was worded too informally. It is reworded, both here and in the PDF, which was recompiled from the source above. Nothing else in the document changed.</p>
+  <p>Revised on 25 October and 11 November 2026. One remark in the logistics section was worded too informally. It is reworded, both here and in the PDF, which was recompiled from the source above. Nothing else in the document changed. In November the page was retitled (previously “Sample Tex Files (1)”) and given a short introduction.</p>
 
 </div>
-
 
 
 
@@ -228,7 +223,7 @@
   <p>&copy; 2026 Henry Yip</p>
 </footer>
 
-    <script type="module" src="/assets/explore/site.js"></script>
+    
     
 
 

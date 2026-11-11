@@ -115,7 +115,7 @@
       <main class="xp-article" id="xp-main">
         <p>In the summer of 2024 I spent eight weeks on the gravitational three-body problem in the School of Physics and Astronomy at the University of Edinburgh, supervised by Prof. Jenni Smillie and funded by a Career Development Scholarship. The project had two aims: to reproduce and visualise important orbits, and to understand two landmark results, the proof that the figure-eight orbit exists and the convergence of Sundman’s series.</p>
 
-<p>The full write-up is in the <a href="/assets/Project_Report.pdf">final report (PDF)</a>, and I kept a <a href="/research/#research-log">research log</a> while the project ran. One part became a short <a href="https://doi.org/10.2218/esjs.10064">student journal paper</a> on Euler’s problem of two fixed centres.</p>
+<p>The full write-up is in the <a href="/assets/Project_Report.pdf">final report (PDF)</a>; its values of the parameter e for the two-centre orbits are wrong (see <a href="/TwoBodyProblemNew/">part 11 of the log</a>), and its orbit search is rerun in <a href="/NewOrbits/">part 10</a>. I kept a <a href="/research/#research-log">research log</a> while the project ran. One part became a short <a href="https://doi.org/10.2218/esjs.10064">student journal paper</a> on Euler’s problem of two fixed centres.</p>
 
 <h2 id="problem"><span class="num">1</span>The problem</h2>
 
@@ -266,7 +266,7 @@
 <p>Chenciner and Montgomery’s proof that the figure-eight exists works on this sphere:</p>
 
 <ol>
-  <li>Minimise the action \(A = \int_0^{T} \left(\tfrac12 K + U\right) dt\), where \(K\) is the kinetic term and \(U\) the sum of the inverse distances, over paths from an Euler configuration to an isosceles configuration. The minimiser is one twelfth of the orbit.</li>
+  <li>Minimise the action \(A = \int_0^{T} \left(\tfrac12 K + U\right) dt\), where \(K = \sum_i \lvert\dot{\mathbf r}_i\rvert^2\) is twice the kinetic energy and \(U\) the sum of the inverse distances, over paths from an Euler configuration to an isosceles configuration. The minimiser is one twelfth of the orbit.</li>
   <li>Show that the minimiser has no collisions: find a lower bound for the action of any path that contains a collision, and a collision-free test path whose action is smaller.</li>
   <li>Use the symmetries of the equal-mass problem to join twelve copies of this arc smoothly into one closed curve.</li>
   <li>Check that the result solves the equations of motion and traces a figure eight in the plane.</li>
