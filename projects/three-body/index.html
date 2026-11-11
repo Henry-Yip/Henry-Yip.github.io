@@ -144,7 +144,7 @@
 \mathbf x &amp;\leftarrow \mathbf x + d_k\,\Delta t\,\mathbf v, \qquad k = 1, \ldots, s.
 \end{aligned}\]
 
-<p>One kick and one drift give symplectic Euler. With \(c = (\tfrac12, \tfrac12)\) and \(d = (1, 0)\) this is the velocity Verlet method. Ruth’s third-order scheme and Forest and Ruth’s fourth-order scheme use three and four stages with carefully chosen coefficients. A symplectic integrator does not conserve the energy exactly, but it exactly conserves a slightly modified Hamiltonian, so the energy error stays bounded instead of drifting. The classical fourth-order Runge–Kutta method is just as accurate per step but not symplectic, and its error keeps growing.</p>
+<p>One kick and one drift give symplectic Euler. With \(c = (\tfrac12, \tfrac12)\) and \(d = (1, 0)\) this is the velocity Verlet method. Ruth’s third-order scheme and Forest and Ruth’s fourth-order scheme use three and four stages with carefully chosen coefficients. A symplectic integrator does not conserve the energy exactly. What it conserves, up to an error that shrinks exponentially as the step is reduced, is a slightly modified Hamiltonian, so the energy error stays bounded instead of drifting. The classical fourth-order Runge–Kutta method is just as accurate per step but not symplectic, and its error keeps growing.</p>
 
 <div class="xp-widget" id="drift-lab">
   <div class="xp-widget-head"><h3>Energy error of five integrators on the figure-eight orbit</h3></div>

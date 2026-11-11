@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Problem of Two Fixed Centres (Part II)</h1>
-              <p class="xp-byline"><time datetime="2024-07-09T00:00:00+01:00">9 July 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
+              <p class="xp-byline"><time datetime="2024-07-09T00:00:00+01:00">9 July 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
               
               
             </div>
@@ -201,20 +201,11 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <figure class=""><a href="/assets/images/S_Graph.png" class="image-popup"><img src="/assets/images/S_Graph.png" alt="Plot of S = cos(sigma) against time." loading="lazy" decoding="async" /></a></figure>
 
-<h2 id="issues">Issues</h2>
+<h2 id="interpretation">Interpretation</h2>
 
-<p>The moving body never crosses the saddle point of the potential between the two centres (analogous to a Lagrange point), so it stays around only one of the fixed masses. This disagrees with the theory: \(S\) should behave like the Jacobi function \(\operatorname{sn}\), so \(\sigma\) should sweep through its whole range, whereas here it covers only part of it.</p>
+<p>The moving body never passes between the two centres. It stays around one of them, so \(S = \cos\sigma\) covers only part of the interval \([-1, 1]\), whereas the \(\operatorname{sn}\) solution quoted in <a href="/EulerProblem/">part 4</a> sweeps the whole interval.</p>
 
-<p>Two assumptions may be responsible:</p>
-
-<ul>
-  <li>I implemented the fixed centres by holding two bodies in place; it may be better to give them very large masses instead.</li>
-  <li>The test body starts at rest. A larger initial velocity may let it pass the saddle point.</li>
-</ul>
-
-<h2 id="progress">Progress</h2>
-
-<p>Matching the constants in the book to the parameters in my code has been the hardest part so far. Over the next weeks I plan to study Sundman’s series, which I expect to be computationally very demanding.</p>
+<p>At the time I read this as a disagreement with the theory. It is not one. This run started from rest, and with two equal centres a body released from rest always stays on its own side: it is a satellite orbit, bound to a single centre. <a href="/TwoBodyProblemNew/">Part 11</a> derives this from the second constant of motion and finds the orbits that pass around both centres, which need an initial velocity.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -222,7 +213,7 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\). The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\).</p>
+  <p>Revised on 25 October and 11 November 2026. The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\). The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\). The last section originally took the limited range of \(S\) as a disagreement with the theory and suggested giving the fixed centres very large masses instead of holding them in place. Holding them fixed is correct, and the limited range is what a satellite orbit shows.</p>
 
 </div>
 

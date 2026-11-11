@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
     
-<!-- begin _includes/seo.html --><title>Classifying and Finding New Possible Orbits (Part I) | Henry Yip</title>
-<meta name="description" content="A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.">
+<!-- begin _includes/seo.html --><title>Classifying and Finding New Possible Orbits | Henry Yip</title>
+<meta name="description" content="A scan over the initial velocities of three equal masses. A rerun shows that 43% of the runs that passed were unbound, and that the failures came from the fixed time step.">
 
 
   <meta name="author" content="Henry Yip">
@@ -18,11 +18,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_GB">
 <meta property="og:site_name" content="Henry Yip">
-<meta property="og:title" content="Classifying and Finding New Possible Orbits (Part I)">
+<meta property="og:title" content="Classifying and Finding New Possible Orbits">
 <meta property="og:url" content="https://henry-yip.github.io/NewOrbits/">
 
 
-  <meta property="og:description" content="A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.">
+  <meta property="og:description" content="A scan over the initial velocities of three equal masses. A rerun shows that 43% of the runs that passed were unbound, and that the failures came from the fixed time step.">
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -133,8 +133,8 @@
           <div class="xp-hero-text">
             
             <div>
-              <h1>Classifying and Finding New Possible Orbits (Part I)</h1>
-              <p class="xp-byline"><time datetime="2024-07-22T00:00:00+01:00">22 July 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
+              <h1>Classifying and Finding New Possible Orbits</h1>
+              <p class="xp-byline"><time datetime="2024-07-22T00:00:00+01:00">22 July 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
               
               
             </div>
@@ -146,13 +146,11 @@
   <p>Previous: <a href="/Figure8Proof/">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</a><br />Next: <a href="/TwoBodyProblemNew/">Problem of Two Fixed Centres (Part III)</a></p>
 </div>
 
-<p>This post describes a first systematic search for interesting orbits: a scan over a family of initial conditions, recording which ones stay bounded.</p>
+<p>This post describes a first systematic search for interesting orbits: a scan over a family of initial conditions, recording which ones keep the three bodies together.</p>
 
 <h2 id="set-up">Set-up</h2>
 
-<p>My code integrates the motion of three bodies from given initial conditions, and, as we have seen, the trajectories are highly sensitive to those conditions. So let’s scan a family of initial conditions systematically.</p>
-
-<p>Take three unit masses, \(m_1 = m_2 = m_3 = 1\), and \(G=1\). Start them on a line with zero total momentum:</p>
+<p>Take three unit masses, \(m_1 = m_2 = m_3 = 1\), and \(G=1\). Start them on a line with zero total momentum and zero angular momentum:</p>
 
 <table>
   <thead>
@@ -183,13 +181,13 @@
 
 <p>This is the standard family that contains the figure-eight orbit, at about \((a,b) = (0.347, 0.533)\).</p>
 
-<p>I vary \(a\) and \(b\) independently from \(0\) to \(1\) in steps of \(0.01\). Each simulation runs for \(50\,000\) steps with \(\Delta t = 0.001\). If any body moves further than a fixed distance from the origin before the end, the run returns <strong>False</strong> (escaped); otherwise it returns <strong>True</strong> and the point \((a, b)\) is plotted. Many initial conditions lead to escapes or near-collisions, and a few lead to periodic orbits.</p>
+<p>I varied \(a\) and \(b\) independently from \(0\) to \(1\) in steps of \(0.01\), which gives \(10\,201\) runs. Each run takes \(50\,000\) steps of \(\Delta t = 0.001\), or 50 time units. A run fails as soon as the bodies are too far apart. Otherwise it passes, and the point \((a, b)\) is plotted.</p>
 
 <h2 id="results">Results</h2>
 
-<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Bounded initial conditions. The full scan took 32 hours.
-"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /></a><figcaption>
-      Bounded initial conditions. The full scan took 32 hours.
+<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Initial velocities whose runs passed. The scan took 32 hours.
+"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities passed: a dense band along a quarter circle of radius about 1 and scattered points inside it." loading="lazy" decoding="async" /></a><figcaption>
+      Initial velocities whose runs passed. The scan took 32 hours.
 
     </figcaption></figure>
 
@@ -201,51 +199,61 @@
 
 <p>Around the figure-eight orbit, the outcome is more sensitive to changes in the vertical velocity \(b\) than to changes in \(a\). This agrees with the findings of an earlier Edinburgh vacation-project report by F. Ramos.</p>
 
-<p>A finer scan of that region (about 15 hours):</p>
+<p>A finer scan of that region (about 15 hours), with the figure-eight marked in red:</p>
 
-<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></a></figure>
+<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit, which lies in a horizontal band of passing points between b = 0.52 and b = 0.545." loading="lazy" decoding="async" /></a></figure>
 
-<h2 id="limitations">Limitations</h2>
+<h2 id="what-the-scan-measured">What the scan measured</h2>
 
-<p>The escape radius I used, \(20\), turned out to be too generous: many runs counted as “bounded” are not periodic in any useful sense.</p>
+<p>In November 2026 I ran the scan again, this time recording the energy of every run. The first figure is reproduced, with 97% of the plotted area in common, when a run is stopped once two bodies are more than 100 apart. In 2024 I quoted the limit as 20 from the origin; with that limit the outer band would be missing, so the figure was made with the larger one.</p>
 
-<p>Choosing the radius is genuinely difficult, because the three-body problem has no natural bound on the separations. In the two-body problem, negative energy forces a bounded orbit. With three bodies, two of them can form a tight binary whose potential energy is arbitrarily negative, which leaves the third body enough energy to travel arbitrarily far, and possibly return, while the total energy stays negative. With unit masses and \(G = 1\), the potential energy is</p>
+<p>The total energy of this family is</p>
+
+\[E = 3\left(a^2+b^2\right) - \tfrac{5}{2},\]
+
+<p>because the kinetic energy is \(3(a^2+b^2)\) and the three pairs start at distances 2, 1 and 1. It is positive outside the circle \(a^2+b^2 = \tfrac56\), of radius 0.913. With positive energy the bodies cannot stay together: the moment of inertia \(I = \sum_i \lvert\mathbf r_i\rvert^2\) obeys the Lagrange–Jacobi identity \(\ddot I = 4E - 2V\), and \(V &lt; 0\), so \(I\) grows without limit. Yet the dense band in the figure reaches \(\sqrt{a^2+b^2} = 1.1\). Those runs pass only because 50 time units is too short for the bodies to move 100 apart. Of the \(4\,539\) points that pass, 43% have positive energy.</p>
+
+<p>Inside the circle, \(4\,056\) runs fail, and in all but three of them the energy changed by more than its own magnitude. A close encounter that a step of \(0.001\) cannot resolve gave one body a kick, and that body then left. Whether those systems would really have broken up, the run cannot say. The passes thin out towards small \(a\) and \(b\) because bodies that start slowly fall almost straight towards each other.</p>
+
+<p>So outside the circle the scan measured how quickly unbound systems separate, and inside it whether a fixed step survived the close encounters. The band around the figure-eight is the part that holds up. At the nearest grid point, \((0.35, 0.53)\), no two bodies are ever more than 2.01 apart and the energy varies by \(2.5 \times 10^{-12}\) of its value.</p>
+
+<h2 id="why-a-distance-limit-is-not-enough">Why a distance limit is not enough</h2>
+
+<p>Even with exact integration, a distance limit cannot separate bound motion from escape. In the two-body problem, negative energy forces a bounded orbit. With three bodies, two of them can form a tight binary whose potential energy is arbitrarily negative, which leaves the third body enough energy to travel arbitrarily far, and possibly return, while the total energy stays negative. With unit masses and \(G = 1\), the potential energy is</p>
 
 \[V = -\left(\frac{1}{r_{12}} + \frac{1}{r_{23}} + \frac{1}{r_{13}}\right),\]
 
-<p>and making one separation small makes \(V\) as negative as we like, whatever the other two separations are. So there is no cut-off that cleanly separates “bound” from “escaping”.</p>
+<p>and making one separation small makes \(V\) as negative as we like, whatever the other two separations are.</p>
 
-<h2 id="a-better-criterion-the-return-proximity-function">A better criterion: the return proximity function</h2>
+<h2 id="the-return-proximity-function">The return proximity function</h2>
 
-<p>A more targeted test looks for orbits that come back close to where they started in phase space, using the <strong>return proximity function</strong></p>
+<p>A more targeted test, introduced by Šuvakov and Dmitrašinović, looks for orbits that come back close to where they started in phase space. The <em>return proximity function</em> \(P(t)\) is the distance between the state at time \(t\) and the initial state,</p>
 
-\[\begin{aligned}
-P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
-&amp;=\sqrt{\begin{aligned}&amp;\textstyle\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2 \\ &amp;\textstyle+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2\end{aligned}} .
-\end{aligned}\]
+\[P(t)^2=\sum_{i=1}^3\left\lvert\mathbf{r}_i(t)-\mathbf{r}_i(0)\right\rvert^2+\sum_{i=1}^3\left\lvert\mathbf{p}_i(t) - \mathbf{p}_i(0)\right\rvert^2 .\]
 
-<p>For a periodic orbit, \(P(t)\) oscillates and dips close to zero once per period: the smaller the minimum, the closer the orbit returns to its initial state. In the next run I will keep orbits with \(P&lt;15\) throughout the simulation <em>and</em> \(\min_{t &gt; 0} P(t) &lt; 0.7\).</p>
+<p>For a periodic orbit \(P\) returns to zero after each period, so a small minimum of \(P\) over \(t &gt; 0\) marks a candidate. My plan at this point was to keep the orbits with \(P&lt;15\) throughout the run and \(\min_{t &gt; 0} P(t) &lt; 0.7\). The search the project ended with used a separation limit of 5 and a test on the energy instead. The <a href="/projects/three-body/#orbits">write-up</a> analyses that search and maps the closest return over the whole family.</p>
 
-<h2 id="progress">Progress</h2>
+<h2 id="cost">Cost</h2>
 
-<p>Each scan takes over 30 hours. The code is already fairly optimised, so the next step is to check whether a larger time step (\(0.01\) instead of \(0.001\)) keeps enough accuracy. Five of the eight weeks have passed, and the search for genuinely new orbits is the most open-ended part of the project.</p>
+<p>The scan is \(10\,201\) runs of \(50\,000\) steps, \(5 \times 10^8\) steps in all, and took 32 hours: about \(4\,400\) steps per second. The rerun advances all the runs together as NumPy arrays and takes two minutes on a laptop.</p>
 
 <h2 id="credits">Credits</h2>
 
-<p>This search is inspired by the paper <a href="https://arxiv.org/abs/2205.14709"><em>New Families of Periodic Orbits for the Planar Three-Body Problem Computed with High Precision</em></a>.</p>
+<p>This search is inspired by the paper <a href="https://arxiv.org/abs/2205.14709"><em>New Families of Periodic Orbits for the Planar Three-Body Problem Computed with High Precision</em></a>. The return proximity function is from M. Šuvakov and V. Dmitrašinović, <a href="https://arxiv.org/abs/1303.0181"><em>Three classes of Newtonian three-body planar periodic orbits</em></a>, Phys. Rev. Lett. <strong>110</strong>, 114301 (2013).</p>
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The original had these errors:</p>
+  <p>Revised on 25 October and 11 November 2026. The original had these errors:</p>
 
   <ul>
     <li>The initial conditions put the body with velocity \(-2(a, b)\) at \((1, 0)\). The figure-eight values quoted, \((a, b) \approx (0.35, 0.53)\), belong to the standard arrangement with that body at the origin, which the table now gives.</li>
     <li>The potential energy was written \(1/a + 1/b + 1/c\). Gravitational potential energy is negative: \(V = -(1/r_{12} + 1/r_{23} + 1/r_{13})\).</li>
     <li>The argument for why no cut-off radius works did not hold up. The real reason is that two bodies can form a tight binary with arbitrarily negative potential energy, which leaves the third body enough energy to travel arbitrarily far.</li>
     <li>The return proximity function compared the momenta with zero instead of with their initial values.</li>
+    <li>The limit on the distance was given as 20 from the origin. The figure corresponds to a limit of 100 between two bodies.</li>
   </ul>
 
-  <p>All are fixed, and the diary-style asides are shorter.</p>
+  <p>The section on what the scan measured and the note on its cost come from the rerun and were added in the second revision. The first revision still called the points that passed bounded. The title originally ended in “(Part I)”.</p>
 
 </div>
 

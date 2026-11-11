@@ -205,7 +205,7 @@
 
 \[w = \frac{2 \Omega}{\pi} \log\frac{1+ \tau}{1- \tau},\]
 
-<p>and the coordinates become power series in \(\tau\) that converge for \(\lvert\tau\rvert &lt; 1\). The whole real time axis, \(-\infty &lt; w &lt; \infty\), corresponds to the real interval \(-1 &lt; \tau &lt; 1\) (a good exercise to check).</p>
+<p>and the coordinates become power series in \(\tau\) that converge for \(\lvert\tau\rvert &lt; 1\). The whole real time axis, \(-\infty &lt; w &lt; \infty\), corresponds to the real interval \(-1 &lt; \tau &lt; 1\).</p>
 
 <p>This is also the source of the slow convergence: late times are squeezed towards the boundary \(\lvert\tau\rvert = 1\) of the disc of convergence, where power series converge very slowly.</p>
 
@@ -220,15 +220,15 @@
 
 <p>That covers essentially every case, including double collisions, but not triple collisions, which require \(\mathbf{c}=\mathbf{0}\).</p>
 
-<p>The catch is the convergence rate: Belorizky estimated that something like \(10^{8\,000\,000}\) terms would be needed for useful accuracy in a simple case. <a href="/Convergence/">Part 8</a> goes through the estimate.</p>
+<p>The difficulty is the rate of convergence. Belorizky estimated that something like \(10^{8\,000\,000}\) terms would be needed for useful accuracy in a simple case. <a href="/Convergence/">Part 8</a> goes through the estimate.</p>
 
 <h2 id="summary">Summary</h2>
 
 <p>Sundman found an independent variable \(w\) in which every double collision is regular. The solution is analytic in a strip of width \(2\Omega\) around the real \(w\)-axis, which a conformal map sends to the unit disc in a new variable \(\tau\). The resulting power series in \(\tau\) solve the three-body problem for all time whenever the angular momentum is non-zero, but they converge far too slowly to be useful.</p>
 
-<h2 id="progress">Progress</h2>
+<h2 id="a-brouckehadjidemetriouhénon-orbit">A Broucke–Hadjidemetriou–Hénon orbit</h2>
 
-<p>Alongside the reading, I have been simulating the Broucke–Hadjidemetriou–Hénon (BHH) orbits. Here is one, with its curve on the shape sphere seen from two angles:</p>
+<p>Alongside the reading, I simulated orbits of the Broucke–Hadjidemetriou–Hénon (BHH) family. Here is one, with its curve on the <a href="/ShapeSphere/">shape sphere</a> seen from two angles:</p>
 
 <figure class=""><a href="/assets/images/Trajectory_2.png" class="image-popup"><img src="/assets/images/Trajectory_2.png" alt="Trajectories of a Broucke–Hadjidemetriou–Hénon periodic orbit in the plane." loading="lazy" decoding="async" /></a></figure>
 
@@ -246,7 +246,7 @@
 
   <ul>
     <li>The map from the right half-plane to the unit disc was written \(h(z) = \lvert z-1\rvert / \lvert z+1\rvert\), which is a number, not a map. It is the Möbius transformation \(h(z) = (z-1)/(z+1)\).</li>
-    <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\), and the condition on \(w\) used \(\lvert w - \bar w\rvert\), which is twice \(\lvert\operatorname{Im} w\rvert\).</li>
+    <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\).</li>
     <li>A reference link no longer worked.</li>
   </ul>
 

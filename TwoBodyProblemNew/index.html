@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     
 <!-- begin _includes/seo.html --><title>Problem of Two Fixed Centres (Part III) | Henry Yip</title>
-<meta name="description" content="Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.">
+<meta name="description" content="Two constants of motion sort the orbits of the two-centre problem into satellite, lemniscate and planetary types, and explain why a body released from rest stays on one side.">
 
 
   <meta name="author" content="Henry Yip">
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://henry-yip.github.io/TwoBodyProblemNew/">
 
 
-  <meta property="og:description" content="Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.">
+  <meta property="og:description" content="Two constants of motion sort the orbits of the two-centre problem into satellite, lemniscate and planetary types, and explain why a body released from rest stays on one side.">
 
 
 
@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Problem of Two Fixed Centres (Part III)</h1>
-              <p class="xp-byline"><time datetime="2024-07-26T00:00:00+01:00">26 July 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
+              <p class="xp-byline"><time datetime="2024-07-26T00:00:00+01:00">26 July 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
               
               
             </div>
@@ -143,20 +143,14 @@
         <main class="xp-article" id="xp-main">
           <div class="series-box">
   <p>Part 11 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p>Previous: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
+  <p>Previous: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits</a></p>
 </div>
 
 <p>This post continues the problem of two fixed centres from <a href="/EulerProblem/">part 4</a> and <a href="/EulerProblemPlots/">part 6</a>.</p>
 
 <h2 id="new-types-of-orbits">New types of orbits</h2>
 
-<p>At the end of part 6 I wrote:</p>
-
-<blockquote>
-  <p>The moving body never crosses the saddle point of the potential between the two centres, so it stays around only one of the fixed masses. This disagrees with the theory: \(S\) should behave like \(\operatorname{sn}\), so \(\sigma\) should sweep through its whole range. […] A larger initial velocity may let it pass the saddle point.</p>
-</blockquote>
-
-<p>That guess was right: the assumption of zero initial velocity was too restrictive. Carefully varying the initial velocity produces two new types of orbit, <strong>lemniscate</strong> and <strong>planetary</strong>.</p>
+<p>The run in part 6 started from rest and stayed around one of the two centres, so \(S = \cos\sigma\) covered only part of its range. Giving the body an initial velocity produces two further types of orbit, <em>lemniscate</em> and <em>planetary</em>.</p>
 
 <p>To classify them, we need two constants of motion. With the centres at \((\pm d, 0)\) and masses \(m_1\) and \(m_2\),</p>
 
@@ -168,13 +162,13 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 &amp;\quad-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
 \end{aligned}\]
 
-<p>\(H\) is the Hamiltonian (the energy), and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable.</p>
+<p>\(H\) is the energy, and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable. The mass of the moving body drops out of the equations of motion, so \(p_x\) and \(p_y\) are momenta per unit mass.</p>
 
-<p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type we found earlier), \(L\) (lemniscate) and \(P\) (planetary).</p>
+<p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type found in part 6), \(L\) (lemniscate) and \(P\) (planetary).</p>
 
-<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types in the \((H, G)\) plane. Figure from Syzygies in the Two Center Problem.
-"><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /></a><figcaption>
-      Orbit types in the \((H, G)\) plane. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
+<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types for negative energy, with \(G\) along the horizontal axis and \(H\) along the vertical one, in the units of the paper. Figure from Syzygies in the Two Center Problem.
+"><img src="/assets/images/SLP.png" alt="Regions of the (G, H) plane corresponding to satellite, lemniscate and planetary orbits. Satellite orbits have negative G." loading="lazy" decoding="async" /></a><figcaption>
+      Orbit types for negative energy, with \(G\) along the horizontal axis and \(H\) along the vertical one, in the units of the paper. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
 
     </figcaption></figure>
 
@@ -198,27 +192,50 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
     </figcaption></figure>
 
-<p>With these orbits, \(S\) now covers its full range. However, it still looks rather irregular and does not yet clearly follow \(\operatorname{sn}\):</p>
+<h2 id="why-a-body-released-from-rest-stays-on-one-side">Why a body released from rest stays on one side</h2>
+
+<p>For equal masses, the equation for \(S\) from part 4 can be written with these two constants. Let \(R\) be the mean of the distances to the two centres, so that \(S = x/R\), and let \(f\) be the variable defined by \(df = dt/(R^2 - d^2 S^2)\). Then</p>
+
+\[\left(\frac{dS}{df}\right)^2 = 2G\left(1-S^2\right)\left(1-\frac{H d^2}{G}\, S^2\right).\]
+
+<p>A body released from rest has no kinetic terms in \(G\), which leaves \(G = d\,x\,(m_1/r_1 - m_2/r_2)\). This is negative on either side of the line \(x = 0\), because the nearer centre has the larger \(m/r\). With \(G\) and \(H\) both negative, the right-hand side is non-negative only where</p>
+
+\[S^2 \ge \frac{G}{H d^2},\]
+
+<p>so \(S\) never reaches zero and the body never crosses to the other side, whatever its energy. That is the satellite orbit of part 6, and it is why starting from rest could not give anything else. As a check, a body released from rest at \((1.6, 1.2)\), with \(d = 1\) and unit masses, has \(G = -0.634\) and \(H = -1.095\). The bound is \(\lvert S\rvert \ge 0.761\), and in the simulation \(S\) stays between 0.761 and 1.</p>
+
+<p>When \(G &gt; 0\) the right-hand side is positive for every \(\lvert S\rvert &lt; 1\), so \(S\) sweeps the whole interval. These are the lemniscate and planetary orbits. They differ in whether \(R\) comes down to \(d\), that is, whether the body passes between the centres.</p>
+
+<h2 id="s-follows-sn-in-the-right-variable">S follows sn in the right variable</h2>
+
+<p>With the new orbits \(S\) covers its full range, but against time it looks irregular:</p>
 
 <figure class=""><a href="/assets/images/S_Graph_Planetery.png" class="image-popup" title="\(S\) against time for a planetary orbit.
-"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /></a><figcaption>
+"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit: oscillations between -1 and 1 with uneven spacing." loading="lazy" decoding="async" /></a><figcaption>
       \(S\) against time for a planetary orbit.
 
     </figcaption></figure>
 
-<p>I also computed the parameter \(e\) from <em>Integrable Systems in Celestial Mechanics</em>, where \(e&gt;1\) and \(e&lt;1\) correspond to different types of orbit. The lemniscate orbit has a much larger value, around \(e \approx 2.5\); the satellite orbit has the smallest, around \(e \approx 0.98\); and the planetary orbit has \(e \approx 1.08\). Understanding this is the next step.</p>
+<p>In 2024 I could not see \(\operatorname{sn}\) in this plot. The reason is that the solution is a function of \(f\) and not of \(t\). The two are related by \(dt = (R^2 - d^2 S^2)\, df\), so a given step in \(f\) takes little time when the body is close to the centres and a long time when it is far away. Against \(f\) the oscillation is exactly periodic, and it is the Jacobi function</p>
 
-<h3 id="future-work">Future work</h3>
+\[S = \operatorname{sn}\left(\sqrt{2G}\, f + \omega \,\middle|\, k\right), \qquad k^2 = \frac{H d^2}{G} .\]
+
+<figure class=""><a href="/assets/images/S_vs_f.png" class="image-popup" title="\(S\) for a planetary orbit with \(H = -0.493\) and \(G = 1.518\), against time (top) and against \(f\) (bottom). The dots are the \(\operatorname{sn}\) solution, which differs from the simulation by less than \(10^{-7}\). Figure added in November 2026.
+"><img src="/assets/images/S_vs_f.png" alt="Two panels for a planetary orbit. Top: S against time, with uneven oscillations. Bottom: S against f, a regular oscillation on which the points of the sn solution lie." loading="lazy" decoding="async" /></a><figcaption>
+      \(S\) for a planetary orbit with \(H = -0.493\) and \(G = 1.518\), against time (top) and against \(f\) (bottom). The dots are the \(\operatorname{sn}\) solution, which differs from the simulation by less than \(10^{-7}\). Figure added in November 2026.
+
+    </figcaption></figure>
+
+<p>For this orbit \(k^2 = -0.324\). A bound orbit with \(G &gt; 0\) always has \(k^2 &lt; 0\), an imaginary modulus, for which \(\operatorname{sn}\) is still real and periodic.</p>
+
+<h2 id="next-steps">Next steps</h2>
 
 <ul>
-  <li>Map out which initial conditions lead to each of \(S\), \(L\) and \(P\), in the hope of finding new types of orbit.</li>
-  <li>Extend the analysis to unequal fixed masses.</li>
-  <li>Check whether the mass of the test particle matters.</li>
+  <li>Map out which initial conditions lead to each of \(S\), \(L\) and \(P\).</li>
+  <li>Extend the analysis to unequal fixed masses, where the equation for \(S\) gains a term linear in \(S\).</li>
 </ul>
 
-<h2 id="progress">Progress</h2>
-
-<p>Progress has been faster than I expected. With three weeks of the project left, it is time to start drafting the final report and poster, which keeping this log up to date makes much easier. Making a genuinely original contribution in the remaining time is ambitious, but I will see how far I can get.</p>
+<p>The comparison of simulated orbits with \(G\) and \(H\) was later written up as a short paper, <a href="https://doi.org/10.2218/esjs.10064"><em>An Analysis of the Restricted Euler Problem Using Symplectic Integrators</em></a>.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -226,7 +243,7 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The set-up now gives the positions of the two fixed masses, and the eccentricities read off the plots are marked as approximate.</p>
+  <p>Revised on 25 October and 11 November 2026. The original quoted values of the book’s parameter \(e\) for the three orbits (2.5, 0.98 and 1.08). They came from a bug in the code that computed them and are removed. The original also left two things open: why \(S\) did not look like \(\operatorname{sn}\), and whether the mass of the moving body matters. Both are now answered in the text. The equation for \(S\) in terms of \(G\) and \(H\), the argument about bodies released from rest and the last figure were added in the second revision.</p>
 
 </div>
 

@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Understanding and Visualising the Shape Sphere</h1>
-              <p class="xp-byline"><time datetime="2024-07-04T00:00:00+01:00">4 July 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
+              <p class="xp-byline"><time datetime="2024-07-04T00:00:00+01:00">4 July 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
               
               
             </div>
@@ -190,20 +190,18 @@ S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
 
 <p>where \(I = \lvert z_1\rvert^2 + \lvert z_2\rvert^2\) is the moment of inertia. So \(\mathcal{K} \circ \mathcal{J}\) sends the 3-sphere \(I = 1\) onto the unit 2-sphere in \(\mathbb{R}^3\), and rotating the triangle (multiplying \((z_1, z_2)\) by \(e^{i\theta}\)) does not change the image. This is the <a href="https://en.wikipedia.org/wiki/Hopf_fibration">Hopf fibration</a>. The details are in Chenciner and Montgomery’s paper, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>.</p>
 
-<h2 id="plotting-in-python">Plotting in Python</h2>
+<h2 id="the-figure-eight-on-the-shape-sphere">The figure-eight on the shape sphere</h2>
 
-<p>Here is the figure-eight orbit traced on the shape sphere:</p>
+<p>The sphere has a few landmarks. The collinear configurations form a great circle, the equator. The two poles are the equilateral triangles, one for each orientation. Three points on the equator, \(120^\circ\) apart, are the collisions of two bodies, and halfway between them are the three Euler configurations, in which one body sits at the midpoint of the other two.</p>
+
+<p>The figure-eight orbit crosses the equator six times in each period, always at an Euler configuration, and stays well away from the collision points:</p>
 
 <figure class=""><a href="/assets/images/Figure_8_Shape.png" class="image-popup"><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></a></figure>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Figure_8_Shape_Animation.mp4" poster="/assets/video/Figure_8_Shape_Animation.jpg" width="1500" height="700" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of the figure-eight orbit alongside its moving point on the shape sphere."></video></figure>
 
-<p>The same picture works for other periodic orbits; the <a href="http://three-body.ipb.ac.rs/">Three-body gallery</a> is a good place to explore them.</p>
-
-<h2 id="progress">Progress</h2>
-
-<p>Working out how to plot the shape sphere, and reading the underlying theory, took several days. Long calculations can obscure the intuition, which is exactly what pictures like these help to restore. Next I return to the problem of two fixed centres, to classify the orbits of a body attracted by them.</p>
+<p>The <a href="http://three-body.ipb.ac.rs/">Three-body gallery</a> of Šuvakov and Dmitrašinović shows many other periodic orbits in the same representation.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -211,7 +209,7 @@ S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the content was wrong. The reduction is explained more clearly, the notation is consistent, and there is a link to Chenciner and Montgomery’s paper.</p>
+  <p>Revised on 25 October and 11 November 2026. The original called the quotient by rotations, which is homeomorphic to \(\mathbb{R}^3\), the set of oriented similarity classes of triangles. Those are its congruence classes; the similarity classes form the shape sphere. The domain of the Jacobi map was written \(\mathcal{X}\) instead of \(X\), and Hopf was misspelt. The description of the landmarks on the sphere was added, and the paper is now linked on arXiv.</p>
 
 </div>
 

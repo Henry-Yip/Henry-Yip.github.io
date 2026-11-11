@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</h1>
-              <p class="xp-byline"><time datetime="2024-07-17T00:00:00+01:00">17 July 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
+              <p class="xp-byline"><time datetime="2024-07-17T00:00:00+01:00">17 July 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
               
               
             </div>
@@ -143,7 +143,7 @@
         <main class="xp-article" id="xp-main">
           <div class="series-box">
   <p>Part 9 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p>Previous: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a><br />Next: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
+  <p>Previous: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a><br />Next: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits</a></p>
 </div>
 
 <p>This post outlines the proof that the figure-eight orbit exists, following Chenciner and Montgomery. It uses the <a href="/ShapeSphere/">shape sphere</a> together with the direct method of the calculus of variations.</p>
@@ -151,17 +151,15 @@
 <h2 id="outline-of-the-proof">Outline of the proof</h2>
 
 <ol>
-  <li>On the shape sphere, minimise the action over paths that start at an <em>Euler configuration</em> (three bodies collinear, one at the midpoint of the other two) and end at an <em>isosceles configuration</em>. The minimiser is one twelfth of the orbit.</li>
+  <li>Minimise the action over paths that start at an <em>Euler configuration</em> (three bodies collinear, one at the midpoint of the other two) and end at an <em>isosceles configuration</em>. The minimiser is one twelfth of the orbit.</li>
   <li>Show that the minimiser has no collisions. Let \(A_2\) be a lower bound for the action of any path <em>with</em> a collision, and exhibit a collision-free test path whose action is smaller than \(A_2\). Then the minimiser cannot collide.</li>
-  <li>Use the symmetries of the equal-mass problem to make twelve copies of this arc, and show that they join smoothly into one closed curve on the shape sphere.</li>
-  <li>Reconstruct the motion in the plane from the curve on the shape sphere, and show that the three bodies follow a single figure-eight-shaped curve.</li>
+  <li>Use the symmetries of the equal-mass problem to make twelve copies of this arc, and show that they join smoothly into one closed curve in the space of triangles up to rotation.</li>
+  <li>Reconstruct the motion in the plane from that curve, and show that the three bodies follow a single figure-eight-shaped curve.</li>
 </ol>
 
 <p>The figure eight is special: numerical work by Simó indicates that it is <em>stable</em>, which is very rare among choreographies (orbits in which all the bodies follow the same curve). By contrast, Lagrange’s equilateral circular orbit with three equal masses is a choreography too, but it is unstable (see Routh’s criterion in <a href="/Convergence/">part 8</a>).</p>
 
 <h2 id="step-1-finding-minimisers">Step 1: finding minimisers</h2>
-
-<h3 id="the-action">The action</h3>
 
 <p>Following Chenciner and Montgomery, define the action</p>
 
@@ -171,17 +169,27 @@
 
 \[X = \left\{ x=(x_1, x_2, x_3) \in \mathbb{C}^3 \;\middle|\; \sum_{i=1}^{3} x_i =0  \right\},\]
 
-<p>and \(H^1\) consists of paths that, together with their time derivatives, are square integrable, which is the right setting for the direct method.</p>
+<p>and \(H^1\) consists of paths that, together with their time derivatives, are square integrable, which is the right setting for the direct method. Throughout, \(T\) is the duration of this arc, one twelfth of the period of the final orbit.</p>
+
+<p>The conditions at the two ends do not change when the triangle is rotated, so a minimiser can be taken to have zero angular momentum: any rotation of the triangle along the way adds kinetic energy without changing \(U\). The problem then lives in the space of triangles up to rotation, which is \(\mathbb{R}^3\), a cone over the shape sphere with the size of the triangle as the radial direction.</p>
+
+<p>That a minimiser exists is standard. The difficulty is that for Newton’s \(1/r\) potential a path that runs into a collision still has finite action, so nothing so far prevents the minimiser from being such a path.</p>
 
 <h2 id="step-2-the-minimiser-has-no-collisions">Step 2: the minimiser has no collisions</h2>
 
 <h3 id="collisions-are-expensive">Collisions are expensive</h3>
 
-<p>If a path in \(\Lambda\) has a collision (double or triple), its action is <strong>at least \(A_2\)</strong>, where \(A_2\) is the action of the collinear two-body solution in which two unit masses start at collision and come to rest a time \(T\) later, with the centre of mass fixed.</p>
+<p>If a path in \(\Lambda\) has a collision (double or triple), its action is at least \(A_2\), where \(A_2\) is the action of the collinear two-body solution in which two unit masses start at collision and come to rest a time \(T\) later, with the centre of mass fixed. The reason is that removing the third mass can only lower the action, and for two bodies a theorem of Gordon identifies the cheapest path with a collision. Explicitly,</p>
+
+\[A_2 = \frac{3}{2}\left(\frac{\pi^2\, T}{2}\right)^{1/3} .\]
 
 <h3 id="a-cheaper-test-path">A cheaper test path</h3>
 
-<p>The <em>Euler equipotential length</em> satisfies \(\ell_0&lt; \pi/5\). Using this bound, one constructs an explicit collision-free test path, running along an equipotential curve on the shape sphere, whose action \(a\) is <strong>smaller than \(A_2\)</strong>.</p>
+<p>The test path keeps the moment of inertia fixed at a value \(I_0\) and moves at constant speed along the level curve of \(U\) through the Euler configuration, from the Euler configuration to the isosceles one. Its length is \(\ell_0 \sqrt{I_0}\), where \(\ell_0\), the <em>Euler equipotential length</em>, is the length of the same curve on the shape sphere \(I = 1\). Both terms of the action are constant along this path, and choosing \(I_0\) to minimise their sum gives</p>
+
+\[a = \frac{3}{2}\left(\frac{25\, \ell_0^2\, T}{2}\right)^{1/3} .\]
+
+<p>Comparing the two formulas, \(a &lt; A_2\) exactly when \(\ell_0 &lt; \pi/5\). The length has to be computed numerically: Simó found \(\ell_0 = \pi/5.0826\), later confirmed by Laskar, so the inequality holds with a margin of 1.6%.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -189,37 +197,39 @@
 
 \[\min_{\Lambda} A \;\le\; a \;&lt;\; A_2 \;\le\; A(\text{any colliding path}),\]
 
-<p>so the minimiser is collision-free.</p>
+<p>so the minimiser is collision-free. With the period normalised to \(2\pi\), so that \(T = \pi/6\), the paper quotes \(A_2 = 2.0583\) and \(a = 2.0360\), and Simó’s numerical value for the minimum itself is \(2.0310\). The test path is within 0.25% of the true minimum and about 1% below the collision bound.</p>
 
 <h2 id="step-3-assembling-the-full-orbit">Step 3: assembling the full orbit</h2>
 
 <p>The main difficulty is to show that the copies fit together smoothly at their endpoints.</p>
 
-<p>The first task is to show that the minimising arc meets the two curves \(E_3\) and \(M_1\) that constrain its endpoints at right angles. Recall the first variation of the action:</p>
+<p>In the space of triangles up to rotation, the Euler configurations with body 3 in the middle form a ray \(E_3\) from the origin, and the isosceles configurations with \(r_{12} = r_{13}\) form a half-plane \(M_1\). On the shape sphere they appear as a point and a meridian. The arc starts somewhere on \(E_3\) and ends somewhere on \(M_1\), and the first task is to show that it meets both at right angles. Recall the first variation of the action:</p>
 
 \[\delta A = \epsilon \left[ \frac{\partial L}{\partial \dot{x}}\, \eta  \right]_0^T + \epsilon \int_0^T \left(\frac{\partial L}{\partial x} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\right) \eta \, dt .\]
 
-<p>Usually the boundary term vanishes because the endpoints are fixed, so \(\eta(0)=\eta(T)=0\). Here the endpoints may slide along \(E_3\) and \(M_1\), so \(\eta\) need not vanish there. The integral vanishes because the minimiser satisfies the Euler–Lagrange equations, so we need</p>
+<p>Usually the boundary term vanishes because the endpoints are fixed, so \(\eta(0)=\eta(T)=0\). Here the endpoints may slide along \(E_3\) and within \(M_1\), so \(\eta\) need not vanish there. The integral vanishes because the minimiser satisfies the Euler–Lagrange equations, so we need</p>
 
 \[\left.\frac{\partial L}{\partial \dot{x}}\right|_{t=0} \cdot \eta(0) = 0,
 \qquad
 \left.\frac{\partial L}{\partial \dot{x}}\right|_{t=T} \cdot \eta(T) = 0\]
 
-<p>for every allowed \(\eta\). Since \(\partial L/\partial \dot{x}\) points along the minimising curve, and \(\eta\) can be any vector tangent to the constraint curves, the minimising arc must meet \(E_3\) and \(M_1\) orthogonally. Reflecting across these curves then extends the arc smoothly.</p>
+<p>for every allowed \(\eta\). For this Lagrangian \(\partial L/\partial \dot{x}\) is the velocity \(\dot{x}\), and \(\eta\) can be any vector tangent to \(E_3\) at \(t = 0\) or to \(M_1\) at \(t = T\), so the arc leaves \(E_3\) and arrives at \(M_1\) at right angles.</p>
+
+<p>Reflection in \(M_1\) corresponds to exchanging bodies 2 and 3 and mirroring the plane, which is a symmetry when the masses are equal. The mirror image of the arc, run backwards in time, is therefore also a solution. Because the arc reaches \(M_1\) at a right angle, the mirrored arc sets off from the same point with the same velocity, and by uniqueness of solutions it is the continuation of the original arc. The same argument applies at the Euler end with a half-turn about the ray. Repeating it gives twelve arcs that form one smooth closed solution curve.</p>
 
 <h2 id="step-4-from-the-shape-sphere-back-to-the-plane">Step 4: from the shape sphere back to the plane</h2>
 
 <h3 id="periodicity">Periodicity</h3>
 
-<p>Suppose the curve on the shape sphere is closed. Then the initial and final triangles in the plane are similar, because they correspond to the same point of the shape sphere. What is the angle of rotation between them?</p>
+<p>Suppose the curve on the shape sphere is closed. Then the initial and final triangles in the plane are similar, because they correspond to the same point of the shape sphere, and it remains to find the angle of rotation between them.</p>
 
-<p>For motions with zero angular momentum, the <strong>area rule</strong> answers this: the rotation angle equals twice the spherical area enclosed by the shape curve (on the shape sphere of radius \(\tfrac12\), as normalised by Chenciner and Montgomery).</p>
+<p>For motions with zero angular momentum, the <em>area rule</em> gives it: the rotation angle equals twice the spherical area enclosed by the shape curve (on the shape sphere of radius \(\tfrac12\), as normalised by Chenciner and Montgomery).</p>
 
 <p>The figure below defines the points \(E_i\) on the equator (the collinear configurations with body \(i\) in the middle) and the meridian \(M_1\):</p>
 
 <figure class=""><a href="/assets/images/Shape_Sphere_Points.png" class="image-popup"><img src="/assets/images/Shape_Sphere_Points.png" alt="Shape sphere with the Euler points E1, E2, E3 on the equator and the meridian M1 marked." loading="lazy" decoding="async" /></a></figure>
 
-<p>Combining the area rule with the symmetries shows that the three bodies move along the same curve and differ <strong>only</strong> by a phase:</p>
+<p>Combining the area rule with the symmetries shows that the motion in the plane is periodic and that the three bodies move along the same curve, one third of a period apart:</p>
 
 <figure class=""><a href="/assets/images/Area_Proof.png" class="image-popup"><img src="/assets/images/Area_Proof.png" alt="Diagram of the twelve arcs on the shape sphere and the corresponding phases of the three bodies." loading="lazy" decoding="async" /></a></figure>
 
@@ -227,17 +237,13 @@
 
 <p>Finally, one shows that the angular momentum of each individual body about the centre of mass vanishes only when that body passes through the origin. So each body’s polar angle changes monotonically on each lobe, and each lobe is star-shaped: the curve has no extra loops. The curve traced out is therefore a figure eight.</p>
 
-<h2 id="progress">Progress</h2>
-
-<p>This has been a long and intense stretch of the project, but I am well ahead of my original plan.</p>
-
 <h2 id="credits">Credits</h2>
 
 <p>This proof is not original. It follows A. Chenciner and R. Montgomery, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>, Annals of Mathematics <strong>152</strong> (2000), 881–901, and the presentation <a href="/assets/Overview_Beamer.pdf"><em>I’ve Got a Three-Body Problem</em></a> by Gareth E. Roberts (College of the Holy Cross).</p>
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide. The outline is rewritten in numbered steps, the configuration space is written \(X\) instead of \(\chi\), and the variational argument at the end is tidied. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
+  <p>Revised on 25 October and 11 November 2026. The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide. The outline is rewritten in numbered steps, and the configuration space is written \(X\) instead of \(\chi\). The second revision added the formulas and numerical values of the actions from the paper, the reason the minimiser has zero angular momentum, and the reflection argument that joins the arcs. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
 
 </div>
 

@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Problem of Two Fixed Centres (Part I)</h1>
-              <p class="xp-byline"><time datetime="2024-06-28T00:00:00+01:00">28 June 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
+              <p class="xp-byline"><time datetime="2024-06-28T00:00:00+01:00">28 June 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-advanced">advanced</a>.</p>
               
               
             </div>
@@ -147,16 +147,6 @@
 </div>
 
 <p>This post introduces the <strong>problem of two fixed centres</strong>, also known as <em>Euler’s three-body problem</em>: a small body moving under the gravity of two masses held fixed in place. Unlike the general three-body problem, it is integrable.</p>
-
-<h2 id="momentum-conservation-fixed">Momentum conservation fixed</h2>
-
-<p>In <a href="/SymplecticIntegrators/">part 2</a> I noted that the total momentum in my simulation was drifting. The cause turned out to be a bug: an accumulator for the momentum components was not reset to zero at each time step. With the fix, the remaining error is at the level of floating-point round-off, about \(10^{-15}\):</p>
-
-<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="Momentum error after the bug fix: round-off only.
-"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
-      Momentum error after the bug fix: round-off only.
-
-    </figcaption></figure>
 
 <h2 id="set-up">Set-up</h2>
 
@@ -222,7 +212,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 <h2 id="jacobi-elliptic-functions">Jacobi elliptic functions</h2>
 
-<p>The equations of motion separate in these coordinates. Following the book, the angular motion reduces (after a change of independent variable) to an equation of the form</p>
+<p>The equations of motion separate in these coordinates. Following the book, the equation for \(S = \cos\sigma\) reduces, after a change of independent variable from \(t\) to \(f\), to the form</p>
 
 \[S^{\prime 2}=\left(1-S^2\right)\left(1-k^2 S^2\right),\]
 
@@ -247,9 +237,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 \[S'^2 = \operatorname{cn}^2(u \mid k)\, \operatorname{dn}^2(u \mid k) = (1 - S^2)(1 - k^2 S^2) .\]
 
-<h2 id="progress">Progress</h2>
-
-<p>At the end of the first week, the simulation code is in good shape, ahead of my plan, and I have started thinking about the structure of the final report.</p>
+<p><a href="/TwoBodyProblemNew/">Part 11</a> compares this solution with a simulated orbit.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -257,7 +245,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The Jacobi elliptic function identities behind the last step are shown, the modulus is written \(k\) instead of \(k_{01}\), and the coordinates are introduced more carefully.</p>
+  <p>Revised on 25 October and 11 November 2026. Nothing in the results was wrong. The potential now comes with the definitions of \(\mu\) and \(\beta\), and the modulus is written \(k\) instead of \(k_{01}\). The note on the momentum bug moved to <a href="/SymplecticIntegrators/">part 2</a>, where the problem is described.</p>
 
 </div>
 

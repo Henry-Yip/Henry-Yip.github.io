@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Symplectic Integrators</h1>
-              <p class="xp-byline"><time datetime="2024-06-25T00:00:00+01:00">25 June 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
+              <p class="xp-byline"><time datetime="2024-06-25T00:00:00+01:00">25 June 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
               
               
             </div>
@@ -160,7 +160,7 @@
 
 <p>So evolving Newton’s equations forward by a finite time defines an area-preserving (more generally, <em>symplectic</em>) map of phase space. A <strong>symplectic integrator</strong> is a numerical method whose single step is itself a symplectic map.</p>
 
-<p>This matters for long simulations. A symplectic integrator does not conserve the energy exactly, but it exactly conserves a slightly modified “shadow” Hamiltonian, so the energy error stays <strong>bounded</strong> and oscillates instead of drifting. Non-symplectic methods such as the explicit Euler method and RK4 show a steady energy drift.</p>
+<p>This matters for long simulations. A symplectic integrator does not conserve the energy exactly. What it conserves, up to an error that shrinks exponentially as the step is reduced, is a slightly modified (“shadow”) Hamiltonian, so the computed energy oscillates within a fixed band instead of drifting. Non-symplectic methods such as the explicit Euler method and RK4 show a steady energy drift.</p>
 
 <h3 id="checking-whether-a-scheme-is-symplectic">Checking whether a scheme is symplectic</h3>
 
@@ -172,14 +172,14 @@
 
 <h2 id="higher-order-schemes">Higher-order schemes</h2>
 
-<p>A family of explicit symplectic schemes applies, for \(i = 1, \ldots, n\) within each time step \(\Delta t\), the updates</p>
+<p>A family of explicit symplectic schemes splits each time step \(\Delta t\) into \(n\) stages. Stage \(i\) first moves the positions with the current velocities (a <em>drift</em>) and then updates the velocities with the accelerations at the new positions (a <em>kick</em>):</p>
 
 \[\begin{aligned}
-\mathbf{v}_{i+1}&amp;=\mathbf{v}_i+d_i\, \mathbf{a}\left(\mathbf{x}_i\right) \Delta t, \\
-\mathbf{x}_{i+1}&amp;=\mathbf{x}_i+c_i\, \mathbf{v}_{i+1}\, \Delta t,
+\mathbf{x}_{i}&amp;=\mathbf{x}_{i-1}+c_i\, \mathbf{v}_{i-1}\, \Delta t, \\
+\mathbf{v}_{i}&amp;=\mathbf{v}_{i-1}+d_i\, \mathbf{a}\left(\mathbf{x}_{i}\right) \Delta t .
 \end{aligned}\]
 
-<p>with suitably chosen coefficients. A third-order scheme (Ruth) uses</p>
+<p>Each drift and each kick is a symplectic map, so their composition is symplectic as well, and the coefficients \(c_i\) and \(d_i\) set the order of accuracy. Velocity Verlet is the case \(c = (0, 1)\), \(d = \left(\tfrac{1}{2}, \tfrac{1}{2}\right)\). A third-order scheme (Ruth) uses</p>
 
 \[c = \left(1, -\tfrac{2}{3}, \tfrac{2}{3}\right),
 \qquad
@@ -193,11 +193,11 @@ c &amp;= \biggl(\frac{1}{2(2 - 2^{1/3})},\ \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})}, \
 d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2 - 2^{1/3}},\ 0\right).
 \end{aligned}\]
 
-<p>Each sub-step is a “kick” followed by a “drift”, both symplectic maps, so their composition is symplectic too.</p>
+<p>The order of the two updates within a stage matters. With these coefficients, kicking before drifting is still symplectic but much less accurate than Verlet: on the test below its energy deviation is of order \(10^{-3}\) to \(10^{-2}\).</p>
 
 <h2 id="accuracy-of-the-higher-order-schemes">Accuracy of the higher-order schemes</h2>
 
-<p>I integrated the figure-eight orbit for \(50\,000\) steps with \(\Delta t = 0.01\). The energy deviations were:</p>
+<p>I integrated the figure-eight orbit for \(50\,000\) steps with \(\Delta t = 0.01\), about 79 periods, and recorded the energy deviation \((E_{\max} - E_{\min})/\lvert E_0\rvert\):</p>
 
 <table>
   <thead>
@@ -226,25 +226,31 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
   </tbody>
 </table>
 
-<p>The higher-order schemes improve the energy conservation by more than three orders of magnitude.</p>
+<p>The higher-order schemes improve the energy conservation by more than three orders of magnitude, at three force evaluations per step where Verlet needs one. Spending the same effort on Verlet, with a step three times smaller, reduces its deviation only by a factor of nine, to \(6.6 \times 10^{-6}\).</p>
 
-<h2 id="a-remaining-problem-momentum">A remaining problem: momentum</h2>
+<h2 id="momentum-conservation">Momentum conservation</h2>
 
-<p>For pairwise forces like gravity, the total linear momentum should be conserved to round-off precision by all of these schemes. In my simulation it drifted: the error was small, but it grew steadily with time.</p>
+<p>Every kick adds equal and opposite impulses to each pair of bodies, so all of these schemes should conserve the total linear momentum to round-off precision. In the first version of my code they did not. The error was small, but it grew steadily with time:</p>
 
-<figure class=""><a href="/assets/images/Momentum_Error.png" class="image-popup" title="Momentum error in the first version of the code. (Resolved in part 4.)
+<figure class=""><a href="/assets/images/Momentum_Error.png" class="image-popup" title="Total momentum against time in the first version of the code: the \(x\) and \(y\) components and the magnitude. The vertical scale is \(10^{-7}\).
 "><img src="/assets/images/Momentum_Error.png" alt="Plot of the x, y and total momentum errors growing steadily to about 2e-7 over the simulation." loading="lazy" decoding="async" /></a><figcaption>
-      Momentum error in the first version of the code. (Resolved in <a href="/EulerProblem/">part 4</a>.)
+      Total momentum against time in the first version of the code: the \(x\) and \(y\) components and the magnitude. The vertical scale is \(10^{-7}\).
 
     </figcaption></figure>
 
-<h2 id="gallery">Gallery</h2>
+<p>The cause was a bug in the code, not the integrator: the variable that accumulates the momentum components was not reset to zero at each time step. After the fix the error stays at the level of floating-point round-off:</p>
 
-<p>The animations are a highlight of this project:</p>
+<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="The same quantities after the fix. The vertical scale is \(10^{-15}\).
+"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
+      The same quantities after the fix. The vertical scale is \(10^{-15}\).
+
+    </figcaption></figure>
+
+<h2 id="a-perturbed-figure-eight">A perturbed figure-eight</h2>
+
+<p>Starting close to the figure-eight, but not on it, gives an orbit that keeps the figure-eight shape for many periods while the whole pattern slowly rotates:</p>
 
 <figure class=""><a href="/assets/images/Beautiful_Figure_8.png" class="image-popup"><img src="/assets/images/Beautiful_Figure_8.png" alt="Trajectories of a perturbed figure-eight orbit tracing dense, woven loops." loading="lazy" decoding="async" /></a></figure>
-
-<p>And an animation of a perturbed figure-eight:</p>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Beautiful_Figure_8.mp4" poster="/assets/video/Beautiful_Figure_8.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of a slightly perturbed figure-eight orbit drifting away from the exact solution."></video></figure>
@@ -255,7 +261,7 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The definition of a symplectic map is given in general, the coefficients are laid out more clearly and the energy errors are rounded to two figures.</p>
+  <p>Revised on 25 October and 11 November 2026. The numbers were right, but the original wrote each stage as a kick followed by a drift. With the coefficients quoted, that order gives a much less accurate scheme. The code moved the positions first, which is the order now given, and it reproduces the energy deviations in the table. The definition of the energy deviation and the cause of the momentum error (moved here from part 4) were added, and the errors are rounded to two figures.</p>
 
 </div>
 

@@ -39,7 +39,7 @@
 
 
 
-  <meta property="article:modified_time" content="2026-10-25T00:00:00+01:00">
+  <meta property="article:modified_time" content="2026-11-11T00:00:00+00:00">
 
 
 
@@ -134,7 +134,7 @@
             
             <div>
               <h1>Plotting and Visualising the Three-Body Problem</h1>
-              <p class="xp-byline"><time datetime="2024-06-24T00:00:00+01:00">24 June 2024</time>, <a href="#revision">revised 25 October 2026</a>. Level: <a href="/topics/#level-introductory">introductory</a>.</p>
+              <p class="xp-byline"><time datetime="2024-06-24T00:00:00+01:00">24 June 2024</time>, <a href="#revision">revised 11 November 2026</a>. Level: <a href="/topics/#level-introductory">introductory</a>.</p>
               
               
             </div>
@@ -146,7 +146,7 @@
   <p>Next: <a href="/SymplecticIntegrators/">Symplectic Integrators</a></p>
 </div>
 
-<p>What happens when three bodies move under each other’s gravity? In this first post I build a simple simulation and look at the results.</p>
+<p>The project started with a direct simulation of three point masses moving under each other’s gravity.</p>
 
 <h2 id="how-the-simulation-works">How the simulation works</h2>
 
@@ -156,7 +156,7 @@
 
 <p>and the total force on each body is the sum of the contributions from the other two.</p>
 
-<p>To advance the positions and velocities in time with a step \(\Delta t\), I use the <strong>velocity Verlet</strong> scheme:</p>
+<p>To advance the positions and velocities in time with a step \(\Delta t\), I use the velocity Verlet scheme:</p>
 
 <ol>
   <li>Update the positions using the current force \(\mathbf{F}_i\):
@@ -166,31 +166,29 @@
 \(\mathbf{v}_{i+1} = \mathbf{v}_i + \frac{\mathbf{F}_i + \mathbf{F}_{i+1}}{2m}\, \Delta t .\)</li>
 </ol>
 
-<p>Repeating this over many steps and animating the positions gives the results below.</p>
+<p>The scheme needs one new force evaluation per step and is second-order accurate: halving \(\Delta t\) divides the error by four. I started to add the classical fourth-order Runge–Kutta method as well and then dropped it. It is more accurate per step, but it is not symplectic, so its energy error grows steadily over a long run, while Verlet’s stays bounded. <a href="/SymplecticIntegrators/">Part 2</a> explains why.</p>
 
 <h2 id="results">Results</h2>
 
-<p>Watching the bodies swing around each other is mesmerising. Here is an example:</p>
+<p>A typical run, with three equal masses starting on a line:</p>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Moth1.mp4" poster="/assets/video/Moth1.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of three bodies orbiting each other chaotically, with one occasionally flung away."></video></figure>
 
-<p>Whenever two bodies pass very close to each other, the force between them becomes very large and they can be flung off at high speed. Spacecraft exploit the same effect to gain speed, in a <a href="https://en.wikipedia.org/wiki/Gravity_assist">gravity assist</a>.</p>
+<p>When two bodies pass very close to each other, the force between them becomes very large and one of them can leave at high speed. Part of this is physical: a close encounter transfers energy between the bodies, which is how a spacecraft gains speed in a <a href="https://en.wikipedia.org/wiki/Gravity_assist">gravity assist</a>. Part of it is numerical. With a fixed time step, a very close pass is covered by only a few steps, the energy is no longer conserved, and a body can be thrown out when it should not be. The two cases can be told apart by checking the total energy during the run, which is why the later posts track the energy error.</p>
 
 <h2 id="figure-eight-orbits">Figure-eight orbits</h2>
 
-<p>Most three-body motions are chaotic and follow no discernible pattern. Remarkably, though, there is a periodic <strong>figure-eight orbit</strong>, in which three equal masses chase each other around a single figure-eight-shaped curve. It was found numerically by Cris Moore in 1993, and its existence was proved by Alain Chenciner and Richard Montgomery in 2000 (the proof is the subject of <a href="/Figure8Proof/">part 9</a>).</p>
+<p>Most three-body motions are chaotic. One exception is the figure-eight orbit, in which three equal masses follow each other around a single figure-eight-shaped curve. Cris Moore found it numerically in 1993, and Alain Chenciner and Richard Montgomery proved in 2000 that it exists (<a href="/Figure8Proof/">part 9</a>).</p>
+
+<p>In units with \(G = m = 1\), the orbit starts with the bodies at \((-1, 0)\), \((1, 0)\) and \((0, 0)\) and with velocities \((a, b)\), \((a, b)\) and \((-2a, -2b)\), where \((a, b) = (0.347111, 0.532728)\). It repeats after a period \(T \approx 6.326\).</p>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Figure8.mp4" poster="/assets/video/Figure8.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of three equal masses chasing each other around a figure-eight curve."></video></figure>
 
-<h2 id="progress">Progress</h2>
-
-<p>I also tried the fourth-order Runge–Kutta method (RK4), but RK4 is not a <a href="https://en.wikipedia.org/wiki/Symplectic_integrator">symplectic integrator</a>: over long simulations its energy error drifts steadily. For long-time orbital integration, symplectic methods such as Verlet are the better choice, which is the subject of the next post.</p>
-
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the method was wrong, but the velocity Verlet update used \(\mathbf{F}_1\) and \(\mathbf{F}_2\) for the forces at two successive times, which reads like the forces on bodies 1 and 2, and \(t\) for the time step. The update is written with \(\mathbf{F}_i\), \(\mathbf{F}_{i+1}\) and \(\Delta t\), and the wording is tightened.</p>
+  <p>Revised on 25 October and 11 November 2026. Nothing in the method was wrong, but the velocity Verlet update used \(\mathbf{F}_1\) and \(\mathbf{F}_2\) for the forces at two successive times, which reads like the forces on bodies 1 and 2, and \(t\) for the time step. The update is written with \(\mathbf{F}_i\), \(\mathbf{F}_{i+1}\) and \(\Delta t\). The starting values and period of the figure-eight orbit were added, with a remark on close encounters at a fixed time step.</p>
 
 </div>
 

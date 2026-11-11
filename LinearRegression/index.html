@@ -207,7 +207,7 @@
 
 <figure class=""><a href="/assets/images/Population_Regression.png" class="image-popup"><img src="/assets/images/Population_Regression.png" alt="Scatter plot of world population against year with two nearly overlapping regression lines." loading="lazy" decoding="async" /></a></figure>
 
-<p>Note that the two rows are <strong>not directly comparable</strong>: in the code below the OLS model is scored on the held-out test set, while the SGD model is trained and scored on all the data. To compare them fairly, train both on the same training set and evaluate both on the same test set. For a one-variable linear model, OLS is also the natural choice, since its exact solution leaves nothing for SGD to improve on; SGD comes into its own for very large datasets and models.</p>
+<p>The two rows are not directly comparable: in the code below the OLS model is scored on the held-out test set, while the SGD model is trained and scored on all the data. To compare them fairly, train both on the same training set and evaluate both on the same test set. For a one-variable linear model, OLS is also the natural choice, since its exact solution leaves nothing for SGD to improve on; SGD comes into its own for very large datasets and models.</p>
 
 <h2 id="code">Code</h2>
 

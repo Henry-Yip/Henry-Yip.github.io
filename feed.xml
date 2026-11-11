@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-11-10T13:15:41+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="series-box">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://henry-yip.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://henry-yip.github.io/" rel="alternate" type="text/html" /><updated>2026-11-11T08:40:12+00:00</updated><id>https://henry-yip.github.io/feed.xml</id><title type="html">Henry Yip</title><subtitle>Henry Yip, MSc Physics student at ETH Zürich: tropical cyclones, atmospheric modelling, machine learning for weather prediction and computational physics.</subtitle><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><entry><title type="html">Problem of Two Fixed Centres (Part III)</title><link href="https://henry-yip.github.io/TwoBodyProblemNew/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part III)" /><published>2024-07-26T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/TwoBodyProblemNew</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemNew/"><![CDATA[<div class="series-box">
   <p>Part 11 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p>Previous: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
+  <p>Previous: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits</a></p>
 </div>
 
 <p>This post continues the problem of two fixed centres from <a href="/EulerProblem/">part 4</a> and <a href="/EulerProblemPlots/">part 6</a>.</p>
 
 <h2 id="new-types-of-orbits">New types of orbits</h2>
 
-<p>At the end of part 6 I wrote:</p>
-
-<blockquote>
-  <p>The moving body never crosses the saddle point of the potential between the two centres, so it stays around only one of the fixed masses. This disagrees with the theory: \(S\) should behave like \(\operatorname{sn}\), so \(\sigma\) should sweep through its whole range. […] A larger initial velocity may let it pass the saddle point.</p>
-</blockquote>
-
-<p>That guess was right: the assumption of zero initial velocity was too restrictive. Carefully varying the initial velocity produces two new types of orbit, <strong>lemniscate</strong> and <strong>planetary</strong>.</p>
+<p>The run in part 6 started from rest and stayed around one of the two centres, so \(S = \cos\sigma\) covered only part of its range. Giving the body an initial velocity produces two further types of orbit, <em>lemniscate</em> and <em>planetary</em>.</p>
 
 <p>To classify them, we need two constants of motion. With the centres at \((\pm d, 0)\) and masses \(m_1\) and \(m_2\),</p>
 
@@ -25,13 +19,13 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 &amp;\quad-\frac{m_1}{\sqrt{(x+d)^2+y^2}}-\frac{m_2}{\sqrt{(x-d)^2+y^2}} .
 \end{aligned}\]
 
-<p>\(H\) is the Hamiltonian (the energy), and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable.</p>
+<p>\(H\) is the energy, and \(G\) is the additional constant of motion discovered by Euler, which makes the problem integrable. The mass of the moving body drops out of the equations of motion, so \(p_x\) and \(p_y\) are momenta per unit mass.</p>
 
-<p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type we found earlier), \(L\) (lemniscate) and \(P\) (planetary).</p>
+<p>The paper <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a> shows that the values of \(H\) and \(G\) determine the type of orbit: \(S\) (satellite, the type found in part 6), \(L\) (lemniscate) and \(P\) (planetary).</p>
 
-<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types in the \((H, G)\) plane. Figure from Syzygies in the Two Center Problem.
-"><img src="/assets/images/SLP.png" alt="Regions of the (H, G) plane corresponding to satellite, lemniscate and planetary orbits." loading="lazy" decoding="async" /></a><figcaption>
-      Orbit types in the \((H, G)\) plane. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
+<figure class=""><a href="/assets/images/SLP.png" class="image-popup" title="Orbit types for negative energy, with \(G\) along the horizontal axis and \(H\) along the vertical one, in the units of the paper. Figure from Syzygies in the Two Center Problem.
+"><img src="/assets/images/SLP.png" alt="Regions of the (G, H) plane corresponding to satellite, lemniscate and planetary orbits. Satellite orbits have negative G." loading="lazy" decoding="async" /></a><figcaption>
+      Orbit types for negative energy, with \(G\) along the horizontal axis and \(H\) along the vertical one, in the units of the paper. Figure from <a href="https://arxiv.org/abs/1509.05220"><em>Syzygies in the Two Center Problem</em></a>.
 
     </figcaption></figure>
 
@@ -55,27 +49,50 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
     </figcaption></figure>
 
-<p>With these orbits, \(S\) now covers its full range. However, it still looks rather irregular and does not yet clearly follow \(\operatorname{sn}\):</p>
+<h2 id="why-a-body-released-from-rest-stays-on-one-side">Why a body released from rest stays on one side</h2>
+
+<p>For equal masses, the equation for \(S\) from part 4 can be written with these two constants. Let \(R\) be the mean of the distances to the two centres, so that \(S = x/R\), and let \(f\) be the variable defined by \(df = dt/(R^2 - d^2 S^2)\). Then</p>
+
+\[\left(\frac{dS}{df}\right)^2 = 2G\left(1-S^2\right)\left(1-\frac{H d^2}{G}\, S^2\right).\]
+
+<p>A body released from rest has no kinetic terms in \(G\), which leaves \(G = d\,x\,(m_1/r_1 - m_2/r_2)\). This is negative on either side of the line \(x = 0\), because the nearer centre has the larger \(m/r\). With \(G\) and \(H\) both negative, the right-hand side is non-negative only where</p>
+
+\[S^2 \ge \frac{G}{H d^2},\]
+
+<p>so \(S\) never reaches zero and the body never crosses to the other side, whatever its energy. That is the satellite orbit of part 6, and it is why starting from rest could not give anything else. As a check, a body released from rest at \((1.6, 1.2)\), with \(d = 1\) and unit masses, has \(G = -0.634\) and \(H = -1.095\). The bound is \(\lvert S\rvert \ge 0.761\), and in the simulation \(S\) stays between 0.761 and 1.</p>
+
+<p>When \(G &gt; 0\) the right-hand side is positive for every \(\lvert S\rvert &lt; 1\), so \(S\) sweeps the whole interval. These are the lemniscate and planetary orbits. They differ in whether \(R\) comes down to \(d\), that is, whether the body passes between the centres.</p>
+
+<h2 id="s-follows-sn-in-the-right-variable">S follows sn in the right variable</h2>
+
+<p>With the new orbits \(S\) covers its full range, but against time it looks irregular:</p>
 
 <figure class=""><a href="/assets/images/S_Graph_Planetery.png" class="image-popup" title="\(S\) against time for a planetary orbit.
-"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit." loading="lazy" decoding="async" /></a><figcaption>
+"><img src="/assets/images/S_Graph_Planetery.png" alt="Plot of S against time for a planetary orbit: oscillations between -1 and 1 with uneven spacing." loading="lazy" decoding="async" /></a><figcaption>
       \(S\) against time for a planetary orbit.
 
     </figcaption></figure>
 
-<p>I also computed the parameter \(e\) from <em>Integrable Systems in Celestial Mechanics</em>, where \(e&gt;1\) and \(e&lt;1\) correspond to different types of orbit. The lemniscate orbit has a much larger value, around \(e \approx 2.5\); the satellite orbit has the smallest, around \(e \approx 0.98\); and the planetary orbit has \(e \approx 1.08\). Understanding this is the next step.</p>
+<p>In 2024 I could not see \(\operatorname{sn}\) in this plot. The reason is that the solution is a function of \(f\) and not of \(t\). The two are related by \(dt = (R^2 - d^2 S^2)\, df\), so a given step in \(f\) takes little time when the body is close to the centres and a long time when it is far away. Against \(f\) the oscillation is exactly periodic, and it is the Jacobi function</p>
 
-<h3 id="future-work">Future work</h3>
+\[S = \operatorname{sn}\left(\sqrt{2G}\, f + \omega \,\middle|\, k\right), \qquad k^2 = \frac{H d^2}{G} .\]
+
+<figure class=""><a href="/assets/images/S_vs_f.png" class="image-popup" title="\(S\) for a planetary orbit with \(H = -0.493\) and \(G = 1.518\), against time (top) and against \(f\) (bottom). The dots are the \(\operatorname{sn}\) solution, which differs from the simulation by less than \(10^{-7}\). Figure added in November 2026.
+"><img src="/assets/images/S_vs_f.png" alt="Two panels for a planetary orbit. Top: S against time, with uneven oscillations. Bottom: S against f, a regular oscillation on which the points of the sn solution lie." loading="lazy" decoding="async" /></a><figcaption>
+      \(S\) for a planetary orbit with \(H = -0.493\) and \(G = 1.518\), against time (top) and against \(f\) (bottom). The dots are the \(\operatorname{sn}\) solution, which differs from the simulation by less than \(10^{-7}\). Figure added in November 2026.
+
+    </figcaption></figure>
+
+<p>For this orbit \(k^2 = -0.324\). A bound orbit with \(G &gt; 0\) always has \(k^2 &lt; 0\), an imaginary modulus, for which \(\operatorname{sn}\) is still real and periodic.</p>
+
+<h2 id="next-steps">Next steps</h2>
 
 <ul>
-  <li>Map out which initial conditions lead to each of \(S\), \(L\) and \(P\), in the hope of finding new types of orbit.</li>
-  <li>Extend the analysis to unequal fixed masses.</li>
-  <li>Check whether the mass of the test particle matters.</li>
+  <li>Map out which initial conditions lead to each of \(S\), \(L\) and \(P\).</li>
+  <li>Extend the analysis to unequal fixed masses, where the equation for \(S\) gains a term linear in \(S\).</li>
 </ul>
 
-<h2 id="progress">Progress</h2>
-
-<p>Progress has been faster than I expected. With three weeks of the project left, it is time to start drafting the final report and poster, which keeping this log up to date makes much easier. Making a genuinely original contribution in the remaining time is ambitious, but I will see how far I can get.</p>
+<p>The comparison of simulated orbits with \(G\) and \(H\) was later written up as a short paper, <a href="https://doi.org/10.2218/esjs.10064"><em>An Analysis of the Restricted Euler Problem Using Symplectic Integrators</em></a>.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -83,20 +100,18 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The set-up now gives the positions of the two fixed masses, and the eccentricities read off the plots are marked as approximate.</p>
+  <p>Revised on 25 October and 11 November 2026. The original quoted values of the book’s parameter \(e\) for the three orbits (2.5, 0.98 and 1.08). They came from a bug in the code that computed them and are removed. The original also left two things open: why \(S\) did not look like \(\operatorname{sn}\), and whether the mass of the moving body matters. Both are now answered in the text. The equation for \(S\) in terms of \(G\) and \(H\), the argument about bodies released from rest and the last figure were added in the second revision.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Two constants of motion classify the orbits of the two-centre problem into satellite, lemniscate and planetary types, all reproduced in simulation.]]></summary></entry><entry><title type="html">Classifying and Finding New Possible Orbits (Part I)</title><link href="https://henry-yip.github.io/NewOrbits/" rel="alternate" type="text/html" title="Classifying and Finding New Possible Orbits (Part I)" /><published>2024-07-22T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/NewOrbits</id><content type="html" xml:base="https://henry-yip.github.io/NewOrbits/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Two constants of motion sort the orbits of the two-centre problem into satellite, lemniscate and planetary types, and explain why a body released from rest stays on one side.]]></summary></entry><entry><title type="html">Classifying and Finding New Possible Orbits</title><link href="https://henry-yip.github.io/NewOrbits/" rel="alternate" type="text/html" title="Classifying and Finding New Possible Orbits" /><published>2024-07-22T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/NewOrbits</id><content type="html" xml:base="https://henry-yip.github.io/NewOrbits/"><![CDATA[<div class="series-box">
   <p>Part 10 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p>Previous: <a href="/Figure8Proof/">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</a><br />Next: <a href="/TwoBodyProblemNew/">Problem of Two Fixed Centres (Part III)</a></p>
 </div>
 
-<p>This post describes a first systematic search for interesting orbits: a scan over a family of initial conditions, recording which ones stay bounded.</p>
+<p>This post describes a first systematic search for interesting orbits: a scan over a family of initial conditions, recording which ones keep the three bodies together.</p>
 
 <h2 id="set-up">Set-up</h2>
 
-<p>My code integrates the motion of three bodies from given initial conditions, and, as we have seen, the trajectories are highly sensitive to those conditions. So let’s scan a family of initial conditions systematically.</p>
-
-<p>Take three unit masses, \(m_1 = m_2 = m_3 = 1\), and \(G=1\). Start them on a line with zero total momentum:</p>
+<p>Take three unit masses, \(m_1 = m_2 = m_3 = 1\), and \(G=1\). Start them on a line with zero total momentum and zero angular momentum:</p>
 
 <table>
   <thead>
@@ -127,13 +142,13 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
 <p>This is the standard family that contains the figure-eight orbit, at about \((a,b) = (0.347, 0.533)\).</p>
 
-<p>I vary \(a\) and \(b\) independently from \(0\) to \(1\) in steps of \(0.01\). Each simulation runs for \(50\,000\) steps with \(\Delta t = 0.001\). If any body moves further than a fixed distance from the origin before the end, the run returns <strong>False</strong> (escaped); otherwise it returns <strong>True</strong> and the point \((a, b)\) is plotted. Many initial conditions lead to escapes or near-collisions, and a few lead to periodic orbits.</p>
+<p>I varied \(a\) and \(b\) independently from \(0\) to \(1\) in steps of \(0.01\), which gives \(10\,201\) runs. Each run takes \(50\,000\) steps of \(\Delta t = 0.001\), or 50 time units. A run fails as soon as the bodies are too far apart. Otherwise it passes, and the point \((a, b)\) is plotted.</p>
 
 <h2 id="results">Results</h2>
 
-<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Bounded initial conditions. The full scan took 32 hours.
-"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities stay bounded." loading="lazy" decoding="async" /></a><figcaption>
-      Bounded initial conditions. The full scan took 32 hours.
+<figure class=""><a href="/assets/images/Planets.png" class="image-popup" title="Initial velocities whose runs passed. The scan took 32 hours.
+"><img src="/assets/images/Planets.png" alt="Scatter plot over the (a, b) square showing which initial velocities passed: a dense band along a quarter circle of radius about 1 and scattered points inside it." loading="lazy" decoding="async" /></a><figcaption>
+      Initial velocities whose runs passed. The scan took 32 hours.
 
     </figcaption></figure>
 
@@ -145,55 +160,65 @@ H&amp;=\frac{1}{2}\left(p_x^2+p_y^2\right) \\
 
 <p>Around the figure-eight orbit, the outcome is more sensitive to changes in the vertical velocity \(b\) than to changes in \(a\). This agrees with the findings of an earlier Edinburgh vacation-project report by F. Ramos.</p>
 
-<p>A finer scan of that region (about 15 hours):</p>
+<p>A finer scan of that region (about 15 hours), with the figure-eight marked in red:</p>
 
-<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit." loading="lazy" decoding="async" /></a></figure>
+<figure class=""><a href="/assets/images/Figure_8_Precise.png" class="image-popup"><img src="/assets/images/Figure_8_Precise.png" alt="Zoomed-in scan of initial conditions around the figure-eight orbit, which lies in a horizontal band of passing points between b = 0.52 and b = 0.545." loading="lazy" decoding="async" /></a></figure>
 
-<h2 id="limitations">Limitations</h2>
+<h2 id="what-the-scan-measured">What the scan measured</h2>
 
-<p>The escape radius I used, \(20\), turned out to be too generous: many runs counted as “bounded” are not periodic in any useful sense.</p>
+<p>In November 2026 I ran the scan again, this time recording the energy of every run. The first figure is reproduced, with 97% of the plotted area in common, when a run is stopped once two bodies are more than 100 apart. In 2024 I quoted the limit as 20 from the origin; with that limit the outer band would be missing, so the figure was made with the larger one.</p>
 
-<p>Choosing the radius is genuinely difficult, because the three-body problem has no natural bound on the separations. In the two-body problem, negative energy forces a bounded orbit. With three bodies, two of them can form a tight binary whose potential energy is arbitrarily negative, which leaves the third body enough energy to travel arbitrarily far, and possibly return, while the total energy stays negative. With unit masses and \(G = 1\), the potential energy is</p>
+<p>The total energy of this family is</p>
+
+\[E = 3\left(a^2+b^2\right) - \tfrac{5}{2},\]
+
+<p>because the kinetic energy is \(3(a^2+b^2)\) and the three pairs start at distances 2, 1 and 1. It is positive outside the circle \(a^2+b^2 = \tfrac56\), of radius 0.913. With positive energy the bodies cannot stay together: the moment of inertia \(I = \sum_i \lvert\mathbf r_i\rvert^2\) obeys the Lagrange–Jacobi identity \(\ddot I = 4E - 2V\), and \(V &lt; 0\), so \(I\) grows without limit. Yet the dense band in the figure reaches \(\sqrt{a^2+b^2} = 1.1\). Those runs pass only because 50 time units is too short for the bodies to move 100 apart. Of the \(4\,539\) points that pass, 43% have positive energy.</p>
+
+<p>Inside the circle, \(4\,056\) runs fail, and in all but three of them the energy changed by more than its own magnitude. A close encounter that a step of \(0.001\) cannot resolve gave one body a kick, and that body then left. Whether those systems would really have broken up, the run cannot say. The passes thin out towards small \(a\) and \(b\) because bodies that start slowly fall almost straight towards each other.</p>
+
+<p>So outside the circle the scan measured how quickly unbound systems separate, and inside it whether a fixed step survived the close encounters. The band around the figure-eight is the part that holds up. At the nearest grid point, \((0.35, 0.53)\), no two bodies are ever more than 2.01 apart and the energy varies by \(2.5 \times 10^{-12}\) of its value.</p>
+
+<h2 id="why-a-distance-limit-is-not-enough">Why a distance limit is not enough</h2>
+
+<p>Even with exact integration, a distance limit cannot separate bound motion from escape. In the two-body problem, negative energy forces a bounded orbit. With three bodies, two of them can form a tight binary whose potential energy is arbitrarily negative, which leaves the third body enough energy to travel arbitrarily far, and possibly return, while the total energy stays negative. With unit masses and \(G = 1\), the potential energy is</p>
 
 \[V = -\left(\frac{1}{r_{12}} + \frac{1}{r_{23}} + \frac{1}{r_{13}}\right),\]
 
-<p>and making one separation small makes \(V\) as negative as we like, whatever the other two separations are. So there is no cut-off that cleanly separates “bound” from “escaping”.</p>
+<p>and making one separation small makes \(V\) as negative as we like, whatever the other two separations are.</p>
 
-<h2 id="a-better-criterion-the-return-proximity-function">A better criterion: the return proximity function</h2>
+<h2 id="the-return-proximity-function">The return proximity function</h2>
 
-<p>A more targeted test looks for orbits that come back close to where they started in phase space, using the <strong>return proximity function</strong></p>
+<p>A more targeted test, introduced by Šuvakov and Dmitrašinović, looks for orbits that come back close to where they started in phase space. The <em>return proximity function</em> \(P(t)\) is the distance between the state at time \(t\) and the initial state,</p>
 
-\[\begin{aligned}
-P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
-&amp;=\sqrt{\begin{aligned}&amp;\textstyle\sum_{i=1}^3\left[\mathbf{r}_i(t)-\mathbf{r}_i(0)\right]^2 \\ &amp;\textstyle+\sum_{i=1}^3\left[\mathbf{p}_i(t) - \mathbf{p}_i(0)\right]^2\end{aligned}} .
-\end{aligned}\]
+\[P(t)^2=\sum_{i=1}^3\left\lvert\mathbf{r}_i(t)-\mathbf{r}_i(0)\right\rvert^2+\sum_{i=1}^3\left\lvert\mathbf{p}_i(t) - \mathbf{p}_i(0)\right\rvert^2 .\]
 
-<p>For a periodic orbit, \(P(t)\) oscillates and dips close to zero once per period: the smaller the minimum, the closer the orbit returns to its initial state. In the next run I will keep orbits with \(P&lt;15\) throughout the simulation <em>and</em> \(\min_{t &gt; 0} P(t) &lt; 0.7\).</p>
+<p>For a periodic orbit \(P\) returns to zero after each period, so a small minimum of \(P\) over \(t &gt; 0\) marks a candidate. My plan at this point was to keep the orbits with \(P&lt;15\) throughout the run and \(\min_{t &gt; 0} P(t) &lt; 0.7\). The search the project ended with used a separation limit of 5 and a test on the energy instead. The <a href="/projects/three-body/#orbits">write-up</a> analyses that search and maps the closest return over the whole family.</p>
 
-<h2 id="progress">Progress</h2>
+<h2 id="cost">Cost</h2>
 
-<p>Each scan takes over 30 hours. The code is already fairly optimised, so the next step is to check whether a larger time step (\(0.01\) instead of \(0.001\)) keeps enough accuracy. Five of the eight weeks have passed, and the search for genuinely new orbits is the most open-ended part of the project.</p>
+<p>The scan is \(10\,201\) runs of \(50\,000\) steps, \(5 \times 10^8\) steps in all, and took 32 hours: about \(4\,400\) steps per second. The rerun advances all the runs together as NumPy arrays and takes two minutes on a laptop.</p>
 
 <h2 id="credits">Credits</h2>
 
-<p>This search is inspired by the paper <a href="https://arxiv.org/abs/2205.14709"><em>New Families of Periodic Orbits for the Planar Three-Body Problem Computed with High Precision</em></a>.</p>
+<p>This search is inspired by the paper <a href="https://arxiv.org/abs/2205.14709"><em>New Families of Periodic Orbits for the Planar Three-Body Problem Computed with High Precision</em></a>. The return proximity function is from M. Šuvakov and V. Dmitrašinović, <a href="https://arxiv.org/abs/1303.0181"><em>Three classes of Newtonian three-body planar periodic orbits</em></a>, Phys. Rev. Lett. <strong>110</strong>, 114301 (2013).</p>
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The original had these errors:</p>
+  <p>Revised on 25 October and 11 November 2026. The original had these errors:</p>
 
   <ul>
     <li>The initial conditions put the body with velocity \(-2(a, b)\) at \((1, 0)\). The figure-eight values quoted, \((a, b) \approx (0.35, 0.53)\), belong to the standard arrangement with that body at the origin, which the table now gives.</li>
     <li>The potential energy was written \(1/a + 1/b + 1/c\). Gravitational potential energy is negative: \(V = -(1/r_{12} + 1/r_{23} + 1/r_{13})\).</li>
     <li>The argument for why no cut-off radius works did not hold up. The real reason is that two bodies can form a tight binary with arbitrarily negative potential energy, which leaves the third body enough energy to travel arbitrarily far.</li>
     <li>The return proximity function compared the momenta with zero instead of with their initial values.</li>
+    <li>The limit on the distance was given as 20 from the origin. The figure corresponds to a limit of 100 between two bodies.</li>
   </ul>
 
-  <p>All are fixed, and the diary-style asides are shorter.</p>
+  <p>The section on what the scan measured and the note on its cost come from the rerun and were added in the second revision. The first revision still called the points that passed bounded. The title originally ended in “(Part I)”.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[A brute-force scan of initial velocities for three equal masses: which starting conditions stay bounded, where the figure eight sits, and how to search better.]]></summary></entry><entry><title type="html">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</title><link href="https://henry-yip.github.io/Figure8Proof/" rel="alternate" type="text/html" title="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere" /><published>2024-07-17T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Figure8Proof</id><content type="html" xml:base="https://henry-yip.github.io/Figure8Proof/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[A scan over the initial velocities of three equal masses. A rerun shows that 43% of the runs that passed were unbound, and that the failures came from the fixed time step.]]></summary></entry><entry><title type="html">Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere</title><link href="https://henry-yip.github.io/Figure8Proof/" rel="alternate" type="text/html" title="Proving the Figure-Eight Orbit Exists: Action Minimisation on the Shape Sphere" /><published>2024-07-17T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/Figure8Proof</id><content type="html" xml:base="https://henry-yip.github.io/Figure8Proof/"><![CDATA[<div class="series-box">
   <p>Part 9 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
-  <p>Previous: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a><br />Next: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits (Part I)</a></p>
+  <p>Previous: <a href="/Convergence/">Sundman's Power Series Solution to the Three-Body Problem (Part II)</a><br />Next: <a href="/NewOrbits/">Classifying and Finding New Possible Orbits</a></p>
 </div>
 
 <p>This post outlines the proof that the figure-eight orbit exists, following Chenciner and Montgomery. It uses the <a href="/ShapeSphere/">shape sphere</a> together with the direct method of the calculus of variations.</p>
@@ -201,17 +226,15 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 <h2 id="outline-of-the-proof">Outline of the proof</h2>
 
 <ol>
-  <li>On the shape sphere, minimise the action over paths that start at an <em>Euler configuration</em> (three bodies collinear, one at the midpoint of the other two) and end at an <em>isosceles configuration</em>. The minimiser is one twelfth of the orbit.</li>
+  <li>Minimise the action over paths that start at an <em>Euler configuration</em> (three bodies collinear, one at the midpoint of the other two) and end at an <em>isosceles configuration</em>. The minimiser is one twelfth of the orbit.</li>
   <li>Show that the minimiser has no collisions. Let \(A_2\) be a lower bound for the action of any path <em>with</em> a collision, and exhibit a collision-free test path whose action is smaller than \(A_2\). Then the minimiser cannot collide.</li>
-  <li>Use the symmetries of the equal-mass problem to make twelve copies of this arc, and show that they join smoothly into one closed curve on the shape sphere.</li>
-  <li>Reconstruct the motion in the plane from the curve on the shape sphere, and show that the three bodies follow a single figure-eight-shaped curve.</li>
+  <li>Use the symmetries of the equal-mass problem to make twelve copies of this arc, and show that they join smoothly into one closed curve in the space of triangles up to rotation.</li>
+  <li>Reconstruct the motion in the plane from that curve, and show that the three bodies follow a single figure-eight-shaped curve.</li>
 </ol>
 
 <p>The figure eight is special: numerical work by Simó indicates that it is <em>stable</em>, which is very rare among choreographies (orbits in which all the bodies follow the same curve). By contrast, Lagrange’s equilateral circular orbit with three equal masses is a choreography too, but it is unstable (see Routh’s criterion in <a href="/Convergence/">part 8</a>).</p>
 
 <h2 id="step-1-finding-minimisers">Step 1: finding minimisers</h2>
-
-<h3 id="the-action">The action</h3>
 
 <p>Following Chenciner and Montgomery, define the action</p>
 
@@ -221,17 +244,27 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 
 \[X = \left\{ x=(x_1, x_2, x_3) \in \mathbb{C}^3 \;\middle|\; \sum_{i=1}^{3} x_i =0  \right\},\]
 
-<p>and \(H^1\) consists of paths that, together with their time derivatives, are square integrable, which is the right setting for the direct method.</p>
+<p>and \(H^1\) consists of paths that, together with their time derivatives, are square integrable, which is the right setting for the direct method. Throughout, \(T\) is the duration of this arc, one twelfth of the period of the final orbit.</p>
+
+<p>The conditions at the two ends do not change when the triangle is rotated, so a minimiser can be taken to have zero angular momentum: any rotation of the triangle along the way adds kinetic energy without changing \(U\). The problem then lives in the space of triangles up to rotation, which is \(\mathbb{R}^3\), a cone over the shape sphere with the size of the triangle as the radial direction.</p>
+
+<p>That a minimiser exists is standard. The difficulty is that for Newton’s \(1/r\) potential a path that runs into a collision still has finite action, so nothing so far prevents the minimiser from being such a path.</p>
 
 <h2 id="step-2-the-minimiser-has-no-collisions">Step 2: the minimiser has no collisions</h2>
 
 <h3 id="collisions-are-expensive">Collisions are expensive</h3>
 
-<p>If a path in \(\Lambda\) has a collision (double or triple), its action is <strong>at least \(A_2\)</strong>, where \(A_2\) is the action of the collinear two-body solution in which two unit masses start at collision and come to rest a time \(T\) later, with the centre of mass fixed.</p>
+<p>If a path in \(\Lambda\) has a collision (double or triple), its action is at least \(A_2\), where \(A_2\) is the action of the collinear two-body solution in which two unit masses start at collision and come to rest a time \(T\) later, with the centre of mass fixed. The reason is that removing the third mass can only lower the action, and for two bodies a theorem of Gordon identifies the cheapest path with a collision. Explicitly,</p>
+
+\[A_2 = \frac{3}{2}\left(\frac{\pi^2\, T}{2}\right)^{1/3} .\]
 
 <h3 id="a-cheaper-test-path">A cheaper test path</h3>
 
-<p>The <em>Euler equipotential length</em> satisfies \(\ell_0&lt; \pi/5\). Using this bound, one constructs an explicit collision-free test path, running along an equipotential curve on the shape sphere, whose action \(a\) is <strong>smaller than \(A_2\)</strong>.</p>
+<p>The test path keeps the moment of inertia fixed at a value \(I_0\) and moves at constant speed along the level curve of \(U\) through the Euler configuration, from the Euler configuration to the isosceles one. Its length is \(\ell_0 \sqrt{I_0}\), where \(\ell_0\), the <em>Euler equipotential length</em>, is the length of the same curve on the shape sphere \(I = 1\). Both terms of the action are constant along this path, and choosing \(I_0\) to minimise their sum gives</p>
+
+\[a = \frac{3}{2}\left(\frac{25\, \ell_0^2\, T}{2}\right)^{1/3} .\]
+
+<p>Comparing the two formulas, \(a &lt; A_2\) exactly when \(\ell_0 &lt; \pi/5\). The length has to be computed numerically: Simó found \(\ell_0 = \pi/5.0826\), later confirmed by Laskar, so the inequality holds with a margin of 1.6%.</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -239,37 +272,39 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 
 \[\min_{\Lambda} A \;\le\; a \;&lt;\; A_2 \;\le\; A(\text{any colliding path}),\]
 
-<p>so the minimiser is collision-free.</p>
+<p>so the minimiser is collision-free. With the period normalised to \(2\pi\), so that \(T = \pi/6\), the paper quotes \(A_2 = 2.0583\) and \(a = 2.0360\), and Simó’s numerical value for the minimum itself is \(2.0310\). The test path is within 0.25% of the true minimum and about 1% below the collision bound.</p>
 
 <h2 id="step-3-assembling-the-full-orbit">Step 3: assembling the full orbit</h2>
 
 <p>The main difficulty is to show that the copies fit together smoothly at their endpoints.</p>
 
-<p>The first task is to show that the minimising arc meets the two curves \(E_3\) and \(M_1\) that constrain its endpoints at right angles. Recall the first variation of the action:</p>
+<p>In the space of triangles up to rotation, the Euler configurations with body 3 in the middle form a ray \(E_3\) from the origin, and the isosceles configurations with \(r_{12} = r_{13}\) form a half-plane \(M_1\). On the shape sphere they appear as a point and a meridian. The arc starts somewhere on \(E_3\) and ends somewhere on \(M_1\), and the first task is to show that it meets both at right angles. Recall the first variation of the action:</p>
 
 \[\delta A = \epsilon \left[ \frac{\partial L}{\partial \dot{x}}\, \eta  \right]_0^T + \epsilon \int_0^T \left(\frac{\partial L}{\partial x} - \frac{d}{dt} \frac{\partial L}{\partial \dot{x}}\right) \eta \, dt .\]
 
-<p>Usually the boundary term vanishes because the endpoints are fixed, so \(\eta(0)=\eta(T)=0\). Here the endpoints may slide along \(E_3\) and \(M_1\), so \(\eta\) need not vanish there. The integral vanishes because the minimiser satisfies the Euler–Lagrange equations, so we need</p>
+<p>Usually the boundary term vanishes because the endpoints are fixed, so \(\eta(0)=\eta(T)=0\). Here the endpoints may slide along \(E_3\) and within \(M_1\), so \(\eta\) need not vanish there. The integral vanishes because the minimiser satisfies the Euler–Lagrange equations, so we need</p>
 
 \[\left.\frac{\partial L}{\partial \dot{x}}\right|_{t=0} \cdot \eta(0) = 0,
 \qquad
 \left.\frac{\partial L}{\partial \dot{x}}\right|_{t=T} \cdot \eta(T) = 0\]
 
-<p>for every allowed \(\eta\). Since \(\partial L/\partial \dot{x}\) points along the minimising curve, and \(\eta\) can be any vector tangent to the constraint curves, the minimising arc must meet \(E_3\) and \(M_1\) orthogonally. Reflecting across these curves then extends the arc smoothly.</p>
+<p>for every allowed \(\eta\). For this Lagrangian \(\partial L/\partial \dot{x}\) is the velocity \(\dot{x}\), and \(\eta\) can be any vector tangent to \(E_3\) at \(t = 0\) or to \(M_1\) at \(t = T\), so the arc leaves \(E_3\) and arrives at \(M_1\) at right angles.</p>
+
+<p>Reflection in \(M_1\) corresponds to exchanging bodies 2 and 3 and mirroring the plane, which is a symmetry when the masses are equal. The mirror image of the arc, run backwards in time, is therefore also a solution. Because the arc reaches \(M_1\) at a right angle, the mirrored arc sets off from the same point with the same velocity, and by uniqueness of solutions it is the continuation of the original arc. The same argument applies at the Euler end with a half-turn about the ray. Repeating it gives twelve arcs that form one smooth closed solution curve.</p>
 
 <h2 id="step-4-from-the-shape-sphere-back-to-the-plane">Step 4: from the shape sphere back to the plane</h2>
 
 <h3 id="periodicity">Periodicity</h3>
 
-<p>Suppose the curve on the shape sphere is closed. Then the initial and final triangles in the plane are similar, because they correspond to the same point of the shape sphere. What is the angle of rotation between them?</p>
+<p>Suppose the curve on the shape sphere is closed. Then the initial and final triangles in the plane are similar, because they correspond to the same point of the shape sphere, and it remains to find the angle of rotation between them.</p>
 
-<p>For motions with zero angular momentum, the <strong>area rule</strong> answers this: the rotation angle equals twice the spherical area enclosed by the shape curve (on the shape sphere of radius \(\tfrac12\), as normalised by Chenciner and Montgomery).</p>
+<p>For motions with zero angular momentum, the <em>area rule</em> gives it: the rotation angle equals twice the spherical area enclosed by the shape curve (on the shape sphere of radius \(\tfrac12\), as normalised by Chenciner and Montgomery).</p>
 
 <p>The figure below defines the points \(E_i\) on the equator (the collinear configurations with body \(i\) in the middle) and the meridian \(M_1\):</p>
 
 <figure class=""><a href="/assets/images/Shape_Sphere_Points.png" class="image-popup"><img src="/assets/images/Shape_Sphere_Points.png" alt="Shape sphere with the Euler points E1, E2, E3 on the equator and the meridian M1 marked." loading="lazy" decoding="async" /></a></figure>
 
-<p>Combining the area rule with the symmetries shows that the three bodies move along the same curve and differ <strong>only</strong> by a phase:</p>
+<p>Combining the area rule with the symmetries shows that the motion in the plane is periodic and that the three bodies move along the same curve, one third of a period apart:</p>
 
 <figure class=""><a href="/assets/images/Area_Proof.png" class="image-popup"><img src="/assets/images/Area_Proof.png" alt="Diagram of the twelve arcs on the shape sphere and the corresponding phases of the three bodies." loading="lazy" decoding="async" /></a></figure>
 
@@ -277,17 +312,13 @@ P(t)&amp;=\left|\mathbf{X}(t)-\mathbf{X}_0\right| \\
 
 <p>Finally, one shows that the angular momentum of each individual body about the centre of mass vanishes only when that body passes through the origin. So each body’s polar angle changes monotonically on each lobe, and each lobe is star-shaped: the curve has no extra loops. The curve traced out is therefore a figure eight.</p>
 
-<h2 id="progress">Progress</h2>
-
-<p>This has been a long and intense stretch of the project, but I am well ahead of my original plan.</p>
-
 <h2 id="credits">Credits</h2>
 
 <p>This proof is not original. It follows A. Chenciner and R. Montgomery, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>, Annals of Mathematics <strong>152</strong> (2000), 881–901, and the presentation <a href="/assets/Overview_Beamer.pdf"><em>I’ve Got a Three-Body Problem</em></a> by Gareth E. Roberts (College of the Holy Cross).</p>
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide. The outline is rewritten in numbered steps, the configuration space is written \(X\) instead of \(\chi\), and the variational argument at the end is tidied. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
+  <p>Revised on 25 October and 11 November 2026. The outline stated the key step the wrong way round. It said to show that every collision-free path has a smaller action than the cheapest path with a collision. What the proof needs is one collision-free test path whose action is below a lower bound for all paths with collisions; then the minimiser cannot collide. The outline is rewritten in numbered steps, and the configuration space is written \(X\) instead of \(\chi\). The second revision added the formulas and numerical values of the actions from the paper, the reason the minimiser has zero angular momentum, and the reflection argument that joins the arcs. Previously titled “A Proof of the Existence of the Figure-8 Orbit using Actions and the Shape Sphere”.</p>
 
 </div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[An outline of Chenciner and Montgomery's variational proof: minimise the action over one twelfth of the orbit, rule out collisions, and assemble the figure eight.]]></summary></entry><entry><title type="html">Sundman’s Power Series Solution to the Three-Body Problem (Part II)</title><link href="https://henry-yip.github.io/Convergence/" rel="alternate" type="text/html" title="Sundman’s Power Series Solution to the Three-Body Problem (Part II)" /><published>2024-07-16T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/Convergence</id><content type="html" xml:base="https://henry-yip.github.io/Convergence/"><![CDATA[<div class="series-box">
   <p>Part 8 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
@@ -351,10 +382,6 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 <p>Reaching \(S_p &gt; S\) requires \(p&gt;e^{2S-2.4}\), so \(S_p &gt; 10^7\) requires \(p &gt; 10^{8 \times 10^{6}}\). Since \(\lvert\tau\rvert &lt; 1\), each term of \(S_\tau\) is smaller than the corresponding term of \(S_p\), so \(S_\tau\) needs at least as many terms: \(n &gt; p &gt; 10^{8 \times 10^{6}}\).</p>
 
 <p>So even in this simple, collision-free example, about \(10^{8\,000\,000}\) terms are needed for one decimal place of accuracy. Sundman’s series converges, but far too slowly ever to be used.</p>
-
-<h2 id="progress">Progress</h2>
-
-<p>The coding side of the project is now essentially complete, so I can concentrate on the theory, which will also form the core of my final report. Things have gone more smoothly than I expected.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -437,7 +464,7 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 
 \[w = \frac{2 \Omega}{\pi} \log\frac{1+ \tau}{1- \tau},\]
 
-<p>and the coordinates become power series in \(\tau\) that converge for \(\lvert\tau\rvert &lt; 1\). The whole real time axis, \(-\infty &lt; w &lt; \infty\), corresponds to the real interval \(-1 &lt; \tau &lt; 1\) (a good exercise to check).</p>
+<p>and the coordinates become power series in \(\tau\) that converge for \(\lvert\tau\rvert &lt; 1\). The whole real time axis, \(-\infty &lt; w &lt; \infty\), corresponds to the real interval \(-1 &lt; \tau &lt; 1\).</p>
 
 <p>This is also the source of the slow convergence: late times are squeezed towards the boundary \(\lvert\tau\rvert = 1\) of the disc of convergence, where power series converge very slowly.</p>
 
@@ -452,15 +479,15 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 
 <p>That covers essentially every case, including double collisions, but not triple collisions, which require \(\mathbf{c}=\mathbf{0}\).</p>
 
-<p>The catch is the convergence rate: Belorizky estimated that something like \(10^{8\,000\,000}\) terms would be needed for useful accuracy in a simple case. <a href="/Convergence/">Part 8</a> goes through the estimate.</p>
+<p>The difficulty is the rate of convergence. Belorizky estimated that something like \(10^{8\,000\,000}\) terms would be needed for useful accuracy in a simple case. <a href="/Convergence/">Part 8</a> goes through the estimate.</p>
 
 <h2 id="summary">Summary</h2>
 
 <p>Sundman found an independent variable \(w\) in which every double collision is regular. The solution is analytic in a strip of width \(2\Omega\) around the real \(w\)-axis, which a conformal map sends to the unit disc in a new variable \(\tau\). The resulting power series in \(\tau\) solve the three-body problem for all time whenever the angular momentum is non-zero, but they converge far too slowly to be useful.</p>
 
-<h2 id="progress">Progress</h2>
+<h2 id="a-brouckehadjidemetriouhénon-orbit">A Broucke–Hadjidemetriou–Hénon orbit</h2>
 
-<p>Alongside the reading, I have been simulating the Broucke–Hadjidemetriou–Hénon (BHH) orbits. Here is one, with its curve on the shape sphere seen from two angles:</p>
+<p>Alongside the reading, I simulated orbits of the Broucke–Hadjidemetriou–Hénon (BHH) family. Here is one, with its curve on the <a href="/ShapeSphere/">shape sphere</a> seen from two angles:</p>
 
 <figure class=""><a href="/assets/images/Trajectory_2.png" class="image-popup"><img src="/assets/images/Trajectory_2.png" alt="Trajectories of a Broucke–Hadjidemetriou–Hénon periodic orbit in the plane." loading="lazy" decoding="async" /></a></figure>
 
@@ -478,13 +505,13 @@ S_\tau := \sum_{k=1}^{n} \frac{\tau^{2k-1}}{2k-1} &gt; \frac{9}{20A} .
 
   <ul>
     <li>The map from the right half-plane to the unit disc was written \(h(z) = \lvert z-1\rvert / \lvert z+1\rvert\), which is a number, not a map. It is the Möbius transformation \(h(z) = (z-1)/(z+1)\).</li>
-    <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\), and the condition on \(w\) used \(\lvert w - \bar w\rvert\), which is twice \(\lvert\operatorname{Im} w\rvert\).</li>
+    <li>The strip was written \(\operatorname{Im} s \le \beta\) instead of \(\lvert\operatorname{Im} s\rvert &lt; \beta\).</li>
     <li>A reference link no longer worked.</li>
   </ul>
 
   <p>All are fixed, and the reference now points to the copy on NASA’s Technical Reports Server.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Sundman's 1912 series solves the three-body problem for non-zero angular momentum. How the regularising variable works, and why the series is useless in practice.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part II)</title><link href="https://henry-yip.github.io/EulerProblemPlots/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part II)" /><published>2024-07-09T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblemPlots</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblemPlots/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Sundman's 1912 series solves the three-body problem for non-zero angular momentum. How the regularising variable works, and why the series is useless in practice.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part II)</title><link href="https://henry-yip.github.io/EulerProblemPlots/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part II)" /><published>2024-07-09T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/EulerProblemPlots</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblemPlots/"><![CDATA[<div class="series-box">
   <p>Part 6 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p>Previous: <a href="/ShapeSphere/">Understanding and Visualising the Shape Sphere</a><br />Next: <a href="/Sundman/">Sundman's Power Series Solution to the Three-Body Problem (Part I)</a></p>
 </div>
@@ -544,20 +571,11 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <figure class=""><a href="/assets/images/S_Graph.png" class="image-popup"><img src="/assets/images/S_Graph.png" alt="Plot of S = cos(sigma) against time." loading="lazy" decoding="async" /></a></figure>
 
-<h2 id="issues">Issues</h2>
+<h2 id="interpretation">Interpretation</h2>
 
-<p>The moving body never crosses the saddle point of the potential between the two centres (analogous to a Lagrange point), so it stays around only one of the fixed masses. This disagrees with the theory: \(S\) should behave like the Jacobi function \(\operatorname{sn}\), so \(\sigma\) should sweep through its whole range, whereas here it covers only part of it.</p>
+<p>The moving body never passes between the two centres. It stays around one of them, so \(S = \cos\sigma\) covers only part of the interval \([-1, 1]\), whereas the \(\operatorname{sn}\) solution quoted in <a href="/EulerProblem/">part 4</a> sweeps the whole interval.</p>
 
-<p>Two assumptions may be responsible:</p>
-
-<ul>
-  <li>I implemented the fixed centres by holding two bodies in place; it may be better to give them very large masses instead.</li>
-  <li>The test body starts at rest. A larger initial velocity may let it pass the saddle point.</li>
-</ul>
-
-<h2 id="progress">Progress</h2>
-
-<p>Matching the constants in the book to the parameters in my code has been the hardest part so far. Over the next weeks I plan to study Sundman’s series, which I expect to be computationally very demanding.</p>
+<p>At the time I read this as a disagreement with the theory. It is not one. This run started from rest, and with two equal centres a body released from rest always stays on its own side: it is a satellite orbit, bound to a single centre. <a href="/TwoBodyProblemNew/">Part 11</a> derives this from the second constant of motion and finds the orbits that pass around both centres, which need an initial velocity.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -565,9 +583,9 @@ x^2 &amp;= \sin^2 \sigma \left(\frac{z^2}{\cos^2 \sigma} - 1\right) = \frac{(z^2
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\). The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\).</p>
+  <p>Revised on 25 October and 11 November 2026. The discussion of which branch of \(\arcsin\) to take described \(\sigma\) in the range \(\pi/2 &lt; \sigma &lt; 3\pi/2\), but in these coordinates \(\sigma\) only runs from 0 to \(\pi\). The rule is now stated directly: \(\sigma = \sigma_1\) when \(z \ge 0\) and \(\sigma = \pi - \sigma_1\) when \(z &lt; 0\). The last section originally took the limited range of \(S\) as a disagreement with the theory and suggested giving the fixed centres very large masses instead of holding them in place. Holding them fixed is correct, and the limited range is what a satellite orbit shows.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Converting simulated trajectories from Cartesian to prolate spheroidal coordinates, and why the first results disagreed with the theory.]]></summary></entry><entry><title type="html">Understanding and Visualising the Shape Sphere</title><link href="https://henry-yip.github.io/ShapeSphere/" rel="alternate" type="text/html" title="Understanding and Visualising the Shape Sphere" /><published>2024-07-04T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/ShapeSphere</id><content type="html" xml:base="https://henry-yip.github.io/ShapeSphere/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Converting simulated trajectories from Cartesian to prolate spheroidal coordinates, and why the first results disagreed with the theory.]]></summary></entry><entry><title type="html">Understanding and Visualising the Shape Sphere</title><link href="https://henry-yip.github.io/ShapeSphere/" rel="alternate" type="text/html" title="Understanding and Visualising the Shape Sphere" /><published>2024-07-04T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/ShapeSphere</id><content type="html" xml:base="https://henry-yip.github.io/ShapeSphere/"><![CDATA[<div class="series-box">
   <p>Part 5 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p>Previous: <a href="/EulerProblem/">Problem of Two Fixed Centres (Part I)</a><br />Next: <a href="/EulerProblemPlots/">Problem of Two Fixed Centres (Part II)</a></p>
 </div>
@@ -616,20 +634,18 @@ S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
 
 <p>where \(I = \lvert z_1\rvert^2 + \lvert z_2\rvert^2\) is the moment of inertia. So \(\mathcal{K} \circ \mathcal{J}\) sends the 3-sphere \(I = 1\) onto the unit 2-sphere in \(\mathbb{R}^3\), and rotating the triangle (multiplying \((z_1, z_2)\) by \(e^{i\theta}\)) does not change the image. This is the <a href="https://en.wikipedia.org/wiki/Hopf_fibration">Hopf fibration</a>. The details are in Chenciner and Montgomery’s paper, <a href="https://arxiv.org/abs/math/0011268"><em>A remarkable periodic solution of the three-body problem in the case of equal masses</em></a>.</p>
 
-<h2 id="plotting-in-python">Plotting in Python</h2>
+<h2 id="the-figure-eight-on-the-shape-sphere">The figure-eight on the shape sphere</h2>
 
-<p>Here is the figure-eight orbit traced on the shape sphere:</p>
+<p>The sphere has a few landmarks. The collinear configurations form a great circle, the equator. The two poles are the equilateral triangles, one for each orientation. Three points on the equator, \(120^\circ\) apart, are the collisions of two bodies, and halfway between them are the three Euler configurations, in which one body sits at the midpoint of the other two.</p>
+
+<p>The figure-eight orbit crosses the equator six times in each period, always at an Euler configuration, and stays well away from the collision points:</p>
 
 <figure class=""><a href="/assets/images/Figure_8_Shape.png" class="image-popup"><img src="/assets/images/Figure_8_Shape.png" alt="The figure-eight orbit&#39;s shape curve drawn on the shape sphere." loading="lazy" decoding="async" /></a></figure>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Figure_8_Shape_Animation.mp4" poster="/assets/video/Figure_8_Shape_Animation.jpg" width="1500" height="700" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of the figure-eight orbit alongside its moving point on the shape sphere."></video></figure>
 
-<p>The same picture works for other periodic orbits; the <a href="http://three-body.ipb.ac.rs/">Three-body gallery</a> is a good place to explore them.</p>
-
-<h2 id="progress">Progress</h2>
-
-<p>Working out how to plot the shape sphere, and reading the underlying theory, took several days. Long calculations can obscure the intuition, which is exactly what pictures like these help to restore. Next I return to the problem of two fixed centres, to classify the orbits of a body attracted by them.</p>
+<p>The <a href="http://three-body.ipb.ac.rs/">Three-body gallery</a> of Šuvakov and Dmitrašinović shows many other periodic orbits in the same representation.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -637,24 +653,14 @@ S \cdot (x_1, x_2, x_3) &amp;= (\bar{x}_1, \bar{x}_2, \bar{x}_3).
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the content was wrong. The reduction is explained more clearly, the notation is consistent, and there is a link to Chenciner and Montgomery’s paper.</p>
+  <p>Revised on 25 October and 11 November 2026. The original called the quotient by rotations, which is homeomorphic to \(\mathbb{R}^3\), the set of oriented similarity classes of triangles. Those are its congruence classes; the similarity classes form the shape sphere. The domain of the Jacobi map was written \(\mathcal{X}\) instead of \(X\), and Hopf was misspelt. The description of the landmarks on the sphere was added, and the paper is now linked on arXiv.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Reducing the planar three-body problem by translations, rotations and scaling: the Jacobi map, the Hopf map, and orbits drawn on the shape sphere.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part I)</title><link href="https://henry-yip.github.io/EulerProblem/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part I)" /><published>2024-06-28T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/EulerProblem</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblem/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Reducing the planar three-body problem by translations, rotations and scaling: the Jacobi map, the Hopf map, and orbits drawn on the shape sphere.]]></summary></entry><entry><title type="html">Problem of Two Fixed Centres (Part I)</title><link href="https://henry-yip.github.io/EulerProblem/" rel="alternate" type="text/html" title="Problem of Two Fixed Centres (Part I)" /><published>2024-06-28T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/EulerProblem</id><content type="html" xml:base="https://henry-yip.github.io/EulerProblem/"><![CDATA[<div class="series-box">
   <p>Part 4 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p>Previous: <a href="/TwoBodyProblemCont/">Ellipses and the Two-Body Problem</a><br />Next: <a href="/ShapeSphere/">Understanding and Visualising the Shape Sphere</a></p>
 </div>
 
 <p>This post introduces the <strong>problem of two fixed centres</strong>, also known as <em>Euler’s three-body problem</em>: a small body moving under the gravity of two masses held fixed in place. Unlike the general three-body problem, it is integrable.</p>
-
-<h2 id="momentum-conservation-fixed">Momentum conservation fixed</h2>
-
-<p>In <a href="/SymplecticIntegrators/">part 2</a> I noted that the total momentum in my simulation was drifting. The cause turned out to be a bug: an accumulator for the momentum components was not reset to zero at each time step. With the fix, the remaining error is at the level of floating-point round-off, about \(10^{-15}\):</p>
-
-<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="Momentum error after the bug fix: round-off only.
-"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
-      Momentum error after the bug fix: round-off only.
-
-    </figcaption></figure>
 
 <h2 id="set-up">Set-up</h2>
 
@@ -720,7 +726,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 <h2 id="jacobi-elliptic-functions">Jacobi elliptic functions</h2>
 
-<p>The equations of motion separate in these coordinates. Following the book, the angular motion reduces (after a change of independent variable) to an equation of the form</p>
+<p>The equations of motion separate in these coordinates. Following the book, the equation for \(S = \cos\sigma\) reduces, after a change of independent variable from \(t\) to \(f\), to the form</p>
 
 \[S^{\prime 2}=\left(1-S^2\right)\left(1-k^2 S^2\right),\]
 
@@ -745,9 +751,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 \[S'^2 = \operatorname{cn}^2(u \mid k)\, \operatorname{dn}^2(u \mid k) = (1 - S^2)(1 - k^2 S^2) .\]
 
-<h2 id="progress">Progress</h2>
-
-<p>At the end of the first week, the simulation code is in good shape, ahead of my plan, and I have started thinking about the structure of the final report.</p>
+<p><a href="/TwoBodyProblemNew/">Part 11</a> compares this solution with a simulated orbit.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -755,7 +759,7 @@ V=-\mu\, \frac{R+\beta b \cos \sigma}{R^2-b^2 \cos ^2 \sigma}, \\
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The Jacobi elliptic function identities behind the last step are shown, the modulus is written \(k\) instead of \(k_{01}\), and the coordinates are introduced more carefully.</p>
+  <p>Revised on 25 October and 11 November 2026. Nothing in the results was wrong. The potential now comes with the definitions of \(\mu\) and \(\beta\), and the modulus is written \(k\) instead of \(k_{01}\). The note on the momentum bug moved to <a href="/SymplecticIntegrators/">part 2</a>, where the problem is described.</p>
 
 </div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Euler's three-body problem: a test mass attracted by two fixed masses. Prolate spheroidal coordinates, the Lagrangian, and Jacobi elliptic functions.]]></summary></entry><entry><title type="html">Ellipses and the Two-Body Problem</title><link href="https://henry-yip.github.io/TwoBodyProblemCont/" rel="alternate" type="text/html" title="Ellipses and the Two-Body Problem" /><published>2024-06-27T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/TwoBodyProblemCont</id><content type="html" xml:base="https://henry-yip.github.io/TwoBodyProblemCont/"><![CDATA[<div class="series-box">
   <p>Part 3 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
@@ -807,7 +811,7 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 \text{where } a=\frac{\mu}{2 \alpha^2}.
 \end{gathered}\]
 
-<p>So negative energy implies a <strong>bounded</strong> orbit. (In fact \(a\) turns out to be the semi-major axis.)</p>
+<p>So negative energy implies a bounded orbit, and \(a\) turns out to be its semi-major axis.</p>
 
 <h3 id="angular-momentum-and-the-laplacerungelenz-vector">Angular momentum and the Laplace–Runge–Lenz vector</h3>
 
@@ -847,11 +851,7 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 
 <h3 id="a-hidden-symmetry">A hidden symmetry</h3>
 
-<p>By Noether’s theorem, a conserved quantity signals a symmetry, but for the Laplace–Runge–Lenz vector the symmetry is hidden. For bound orbits, the Kepler problem is mathematically equivalent to free motion on the surface of a four-dimensional (hyper)sphere, so it is symmetric under rotations in four dimensions, a larger symmetry group than the obvious rotations of three-dimensional space.</p>
-
-<h2 id="progress">Progress</h2>
-
-<p>The project is proving more demanding than I expected, and working through the literature in detail takes time, but writing up each topic here is a good way to organise my understanding.</p>
+<p>By Noether’s theorem, a conserved quantity signals a symmetry, but for the Laplace–Runge–Lenz vector the symmetry is hidden. For bound orbits, the Kepler problem is mathematically equivalent to free motion on a three-dimensional sphere in four-dimensional space, so its symmetry group is the group \(SO(4)\) of rotations in four dimensions, which is larger than the obvious rotations \(SO(3)\) of three-dimensional space.</p>
 
 <h2 id="credits">Credits</h2>
 
@@ -861,7 +861,7 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 
   <p>Revised on 25 October 2026. Nothing in the results was wrong, but the bound \(r \le 2a\) was stated without its derivation, and the derivation of the eccentricity vector stopped before reaching the orbit equation. Both are now complete, with \(\mu = GM\) throughout.</p>
 
-</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Polar equations of the ellipse, bound orbits from negative energy, and the Laplace–Runge–Lenz vector, which gives Kepler's first law.]]></summary></entry><entry><title type="html">Symplectic Integrators</title><link href="https://henry-yip.github.io/SymplecticIntegrators/" rel="alternate" type="text/html" title="Symplectic Integrators" /><published>2024-06-25T00:00:00+01:00</published><updated>2026-10-25T00:00:00+01:00</updated><id>https://henry-yip.github.io/SymplecticIntegrators</id><content type="html" xml:base="https://henry-yip.github.io/SymplecticIntegrators/"><![CDATA[<div class="series-box">
+</div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Classical Mechanics" /><category term="Research" /><summary type="html"><![CDATA[Polar equations of the ellipse, bound orbits from negative energy, and the Laplace–Runge–Lenz vector, which gives Kepler's first law.]]></summary></entry><entry><title type="html">Symplectic Integrators</title><link href="https://henry-yip.github.io/SymplecticIntegrators/" rel="alternate" type="text/html" title="Symplectic Integrators" /><published>2024-06-25T00:00:00+01:00</published><updated>2026-11-11T00:00:00+00:00</updated><id>https://henry-yip.github.io/SymplecticIntegrators</id><content type="html" xml:base="https://henry-yip.github.io/SymplecticIntegrators/"><![CDATA[<div class="series-box">
   <p>Part 2 of 11 of <a href="/research/#research-log">the research log of my 2024 summer project on the three-body problem</a>, at the University of Edinburgh, supervised by Prof. Jenni Smillie.</p>
   <p>Previous: <a href="/Figure8Orbit/">Plotting and Visualising the Three-Body Problem</a><br />Next: <a href="/TwoBodyProblemCont/">Ellipses and the Two-Body Problem</a></p>
 </div>
@@ -880,7 +880,7 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 
 <p>So evolving Newton’s equations forward by a finite time defines an area-preserving (more generally, <em>symplectic</em>) map of phase space. A <strong>symplectic integrator</strong> is a numerical method whose single step is itself a symplectic map.</p>
 
-<p>This matters for long simulations. A symplectic integrator does not conserve the energy exactly, but it exactly conserves a slightly modified “shadow” Hamiltonian, so the energy error stays <strong>bounded</strong> and oscillates instead of drifting. Non-symplectic methods such as the explicit Euler method and RK4 show a steady energy drift.</p>
+<p>This matters for long simulations. A symplectic integrator does not conserve the energy exactly. What it conserves, up to an error that shrinks exponentially as the step is reduced, is a slightly modified (“shadow”) Hamiltonian, so the computed energy oscillates within a fixed band instead of drifting. Non-symplectic methods such as the explicit Euler method and RK4 show a steady energy drift.</p>
 
 <h3 id="checking-whether-a-scheme-is-symplectic">Checking whether a scheme is symplectic</h3>
 
@@ -892,14 +892,14 @@ r \leq \frac{\mu}{\alpha^2} = 2a, \\
 
 <h2 id="higher-order-schemes">Higher-order schemes</h2>
 
-<p>A family of explicit symplectic schemes applies, for \(i = 1, \ldots, n\) within each time step \(\Delta t\), the updates</p>
+<p>A family of explicit symplectic schemes splits each time step \(\Delta t\) into \(n\) stages. Stage \(i\) first moves the positions with the current velocities (a <em>drift</em>) and then updates the velocities with the accelerations at the new positions (a <em>kick</em>):</p>
 
 \[\begin{aligned}
-\mathbf{v}_{i+1}&amp;=\mathbf{v}_i+d_i\, \mathbf{a}\left(\mathbf{x}_i\right) \Delta t, \\
-\mathbf{x}_{i+1}&amp;=\mathbf{x}_i+c_i\, \mathbf{v}_{i+1}\, \Delta t,
+\mathbf{x}_{i}&amp;=\mathbf{x}_{i-1}+c_i\, \mathbf{v}_{i-1}\, \Delta t, \\
+\mathbf{v}_{i}&amp;=\mathbf{v}_{i-1}+d_i\, \mathbf{a}\left(\mathbf{x}_{i}\right) \Delta t .
 \end{aligned}\]
 
-<p>with suitably chosen coefficients. A third-order scheme (Ruth) uses</p>
+<p>Each drift and each kick is a symplectic map, so their composition is symplectic as well, and the coefficients \(c_i\) and \(d_i\) set the order of accuracy. Velocity Verlet is the case \(c = (0, 1)\), \(d = \left(\tfrac{1}{2}, \tfrac{1}{2}\right)\). A third-order scheme (Ruth) uses</p>
 
 \[c = \left(1, -\tfrac{2}{3}, \tfrac{2}{3}\right),
 \qquad
@@ -913,11 +913,11 @@ c &amp;= \biggl(\frac{1}{2(2 - 2^{1/3})},\ \frac{1 - 2^{1/3}}{2(2 - 2^{1/3})}, \
 d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2 - 2^{1/3}},\ 0\right).
 \end{aligned}\]
 
-<p>Each sub-step is a “kick” followed by a “drift”, both symplectic maps, so their composition is symplectic too.</p>
+<p>The order of the two updates within a stage matters. With these coefficients, kicking before drifting is still symplectic but much less accurate than Verlet: on the test below its energy deviation is of order \(10^{-3}\) to \(10^{-2}\).</p>
 
 <h2 id="accuracy-of-the-higher-order-schemes">Accuracy of the higher-order schemes</h2>
 
-<p>I integrated the figure-eight orbit for \(50\,000\) steps with \(\Delta t = 0.01\). The energy deviations were:</p>
+<p>I integrated the figure-eight orbit for \(50\,000\) steps with \(\Delta t = 0.01\), about 79 periods, and recorded the energy deviation \((E_{\max} - E_{\min})/\lvert E_0\rvert\):</p>
 
 <table>
   <thead>
@@ -946,25 +946,31 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
   </tbody>
 </table>
 
-<p>The higher-order schemes improve the energy conservation by more than three orders of magnitude.</p>
+<p>The higher-order schemes improve the energy conservation by more than three orders of magnitude, at three force evaluations per step where Verlet needs one. Spending the same effort on Verlet, with a step three times smaller, reduces its deviation only by a factor of nine, to \(6.6 \times 10^{-6}\).</p>
 
-<h2 id="a-remaining-problem-momentum">A remaining problem: momentum</h2>
+<h2 id="momentum-conservation">Momentum conservation</h2>
 
-<p>For pairwise forces like gravity, the total linear momentum should be conserved to round-off precision by all of these schemes. In my simulation it drifted: the error was small, but it grew steadily with time.</p>
+<p>Every kick adds equal and opposite impulses to each pair of bodies, so all of these schemes should conserve the total linear momentum to round-off precision. In the first version of my code they did not. The error was small, but it grew steadily with time:</p>
 
-<figure class=""><a href="/assets/images/Momentum_Error.png" class="image-popup" title="Momentum error in the first version of the code. (Resolved in part 4.)
+<figure class=""><a href="/assets/images/Momentum_Error.png" class="image-popup" title="Total momentum against time in the first version of the code: the \(x\) and \(y\) components and the magnitude. The vertical scale is \(10^{-7}\).
 "><img src="/assets/images/Momentum_Error.png" alt="Plot of the x, y and total momentum errors growing steadily to about 2e-7 over the simulation." loading="lazy" decoding="async" /></a><figcaption>
-      Momentum error in the first version of the code. (Resolved in <a href="/EulerProblem/">part 4</a>.)
+      Total momentum against time in the first version of the code: the \(x\) and \(y\) components and the magnitude. The vertical scale is \(10^{-7}\).
 
     </figcaption></figure>
 
-<h2 id="gallery">Gallery</h2>
+<p>The cause was a bug in the code, not the integrator: the variable that accumulates the momentum components was not reset to zero at each time step. After the fix the error stays at the level of floating-point round-off:</p>
 
-<p>The animations are a highlight of this project:</p>
+<figure class=""><a href="/assets/images/Correct_Momentum.png" class="image-popup" title="The same quantities after the fix. The vertical scale is \(10^{-15}\).
+"><img src="/assets/images/Correct_Momentum.png" alt="Momentum error after the fix, fluctuating at the 1e-15 level with no growth." loading="lazy" decoding="async" /></a><figcaption>
+      The same quantities after the fix. The vertical scale is \(10^{-15}\).
+
+    </figcaption></figure>
+
+<h2 id="a-perturbed-figure-eight">A perturbed figure-eight</h2>
+
+<p>Starting close to the figure-eight, but not on it, gives an orbit that keeps the figure-eight shape for many periods while the whole pattern slowly rotates:</p>
 
 <figure class=""><a href="/assets/images/Beautiful_Figure_8.png" class="image-popup"><img src="/assets/images/Beautiful_Figure_8.png" alt="Trajectories of a perturbed figure-eight orbit tracing dense, woven loops." loading="lazy" decoding="async" /></a></figure>
-
-<p>And an animation of a perturbed figure-eight:</p>
 
 <figure class="">
   <video class="gif-video" src="/assets/video/Beautiful_Figure_8.mp4" poster="/assets/video/Beautiful_Figure_8.jpg" width="640" height="480" autoplay="" loop="" muted="" playsinline="" aria-label="Animation of a slightly perturbed figure-eight orbit drifting away from the exact solution."></video></figure>
@@ -975,6 +981,6 @@ d &amp;= \left(\frac{1}{2 - 2^{1/3}},\ -\frac{2^{1/3}}{2 - 2^{1/3}},\ \frac{1}{2
 
 <div class="revision" id="revision">
 
-  <p>Revised on 25 October 2026. Nothing in the results was wrong. The definition of a symplectic map is given in general, the coefficients are laid out more clearly and the energy errors are rounded to two figures.</p>
+  <p>Revised on 25 October and 11 November 2026. The numbers were right, but the original wrote each stage as a kick followed by a drift. With the coefficients quoted, that order gives a much less accurate scheme. The code moved the positions first, which is the order now given, and it reproduces the energy deviations in the table. The definition of the energy deviation and the cause of the momentum error (moved here from part 4) were added, and the errors are rounded to two figures.</p>
 
 </div>]]></content><author><name>Henry Yip</name><email>hoyiph@student.ethz.ch</email></author><category term="Three-Body Problem" /><category term="Numerical Methods" /><category term="Research" /><summary type="html"><![CDATA[Why area-preserving (symplectic) integrators keep the energy error bounded, and how third- and fourth-order schemes improve on Verlet for the figure-eight orbit.]]></summary></entry></feed>
