@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    
+<!-- begin _includes/seo.html --><title>The Barnes–Hut Algorithm | Henry Yip</title>
+<meta name="description" content="A tree code for gravity, tested against direct summation: how the force error and the run time depend on the opening angle θ, and why the cost grows like N log N instead of N².">
+
+
+  <meta name="author" content="Henry Yip">
+  
+  <meta property="article:author" content="Henry Yip">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Henry Yip">
+<meta property="og:title" content="The Barnes–Hut Algorithm">
+<meta property="og:url" content="https://henry-yip.github.io/BarnesHut/">
+
+
+  <meta property="og:description" content="A tree code for gravity, tested against direct summation: how the force error and the run time depend on the opening angle θ, and why the cost grows like N log N instead of N².">
+
+
+
+  <meta property="og:image" content="https://henry-yip.github.io/assets/images/henry-portrait.jpg">
+  
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2026-11-14T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2026-11-14T00:00:00+00:00">
+
+
+
+
+<link rel="canonical" href="https://henry-yip.github.io/BarnesHut/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- KaTeX: kramdown emits \( \) and \[ \] for $$ math; auto-render typesets them in the browser -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.css" integrity="sha384-lPx0C4zIUZLpveABMwOFcFeGZwsvKBJfhJ85FN1PYOV7xApBcFMhcAEMVKF8loOI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/katex.min.js" integrity="sha384-19KE2cFb3U+RUWmyhBz7aLOGDG8WrRC6hE3oY/HTZZlAAVWYTdmvLC//+TIV3zUx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.18.9/dist/contrib/auto-render.min.js" integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz" crossorigin="anonymous"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      throwOnError: false,
+      ignoredClasses: ["highlight", "language-latex"]
+    });
+  });
+</script>
+
+<!-- Looping animations play like GIFs, except for readers who ask for reduced motion -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.querySelectorAll("video.gif-video").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); v.controls = true; });
+  });
+</script>
+
+    <link rel="stylesheet" href="/assets/explore/explore.css">
+    <link rel="stylesheet" href="/assets/explore/site.css">
+  </head>
+  <body class="xp xp-site">
+    <a class="xp-skip" href="#xp-main">Skip to content</a>
+    <header class="xp-bar">
+  <a class="xp-brand" href="/">Henry Yip</a>
+  <nav aria-label="Site">
+    <a href="/about/">About</a>
+    <a href="/research/">Research</a>
+    <a href="/projects/">Projects</a>
+    <a href="/archive/">Archive</a>
+    <a class="xp-search-link" href="/search/" aria-label="Search the site"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+  </nav>
+</header>
+
+
+    <div class="xp-author-strip"><div class="xp-author xp-author--compact">
+  <img class="xp-author-photo" src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" width="1182" height="665">
+  <div class="xp-author-text">
+    <p class="xp-author-name">Henry Yip</p>
+    <p class="xp-author-bio">MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+  </div>
+</div>
+</div>
+
+    <div class="xp-body xp-body--site">
+      <aside class="xp-side">
+        <div class="xp-author">
+  <img class="xp-author-photo" src="/assets/images/Henry-Profile-Pic.jpeg" alt="Henry Yip" width="1182" height="665">
+  <div class="xp-author-text">
+    <p class="xp-author-name">Henry Yip</p>
+    <p class="xp-author-bio">MSc Physics student at ETH Zürich. Tropical cyclones, atmospheric modelling and machine learning for weather prediction.</p>
+    <p class="xp-author-meta">Zürich</p>
+    <p class="xp-author-links"><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/assets/Henry_Yip_CV.pdf">CV</a></p>
+  </div>
+</div>
+
+        <nav class="xp-toc" id="xp-toc" aria-label="On this page"></nav>
+      </aside>
+      <div class="xp-main-col">
+        <section class="xp-hero xp-hero--text">
+          <div class="xp-hero-text">
+            
+            <div>
+              <h1>The Barnes–Hut Algorithm</h1>
+              <p class="xp-byline"><time datetime="2026-11-14T00:00:00+00:00">14 November 2026</time>, <a href="#revision">revised 14 November 2026</a>. Level: <a href="/topics/#level-undergraduate">undergraduate</a>.</p>
+              
+              
+            </div>
+          </div>
+        </section>
+        <main class="xp-article" id="xp-main">
+          <p>Today we are looking at the Barnes–Hut algorithm, the trick behind most gravity simulations of star clusters and galaxies. I wrote one in Python (compiled with Numba, otherwise we would be here all day), tested it against the exact answer, and checked whether it really is as fast as people say.</p>
+
+<h2 id="the-problem-with-direct-summation">The problem with direct summation</h2>
+
+<p>Consider \(N\) particles with masses \(m_j\) at positions \(\mathbf r_j\). The acceleration of particle \(i\) is</p>
+
+\[\mathbf a_i = \sum_{j \neq i} \frac{G m_j \left(\mathbf r_j - \mathbf r_i\right)}{\left(\lvert\mathbf r_j - \mathbf r_i\rvert^2 + \epsilon^2\right)^{3/2}},\]
+
+<p>where \(\epsilon\) is a small softening length that stops the force blowing up when two particles get very close. Computing this sum for every particle is called direct summation. It is exact (up to rounding), but every particle needs every other particle.</p>
+
+<h3 id="proof-that-direct-summation-is-on2">Proof that direct summation is \(O(N^2)\)</h3>
+
+<p>The pair \((i, j)\) contributes to \(\mathbf a_i\), and by Newton’s third law the same term, with the opposite sign and \(m_i\) instead of \(m_j\), contributes to \(\mathbf a_j\). So we only need each pair once, and there are</p>
+
+\[\binom{N}{2} = \frac{N(N-1)}{2}\]
+
+<p>pairs. Each pair costs the same fixed amount of work (a few subtractions and multiplications, a square root and a division), whatever \(N\) is. The total cost is therefore \(c\,N(N-1)/2\) for some constant \(c\), which is bounded above and below by multiples of \(N^2\). Doubling \(N\) quadruples the work, and nothing clever can be done about it as long as we insist on computing every pair.</p>
+
+<p>On my laptop (one core of an Apple M4 Pro) one force evaluation takes 2.8 s for 50,000 particles and 11.4 s for 100,000. A million particles would take about 19 minutes, and a simulation needs thousands of these evaluations. So we need something better!</p>
+
+<h2 id="the-idea-of-barnes-and-hut">The idea of Barnes and Hut</h2>
+
+<p>Notice that a distant group of stars pulls on us almost exactly like a single star with the group’s total mass, sitting at the group’s centre of mass. Barnes and Hut (1986) turned this into an algorithm.</p>
+
+<ol>
+  <li>Put all particles in one cube. Split it into 8 smaller cubes (cells), split every cell that still contains more than one particle into 8 again, and so on, until each cell holds at most one particle. This is an octree (in 2D, a quadtree).</li>
+  <li>For every cell, store its total mass \(M\) and its centre of mass \(\mathbf R\).</li>
+  <li>To find the force on particle \(i\), start at the biggest cell and walk down the tree. For a cell of side \(s\) whose centre of mass is a distance \(d\) from the particle:
+    <ul>
+      <li>if \(s/d &lt; \theta\), use the whole cell as one point of mass \(M\) at \(\mathbf R\);</li>
+      <li>otherwise open the cell and look at its (up to 8) children.</li>
+    </ul>
+
+    <p>A cell with a single particle is used directly, and a cell that contains particle \(i\) itself is always opened. Salmon and Warren (1994) showed that the plain \(s/d &lt; \theta\) rule can give large errors in unlucky cases, and this extra rule avoids the worst of them.</p>
+  </li>
+</ol>
+
+<p>The parameter \(\theta\) is the opening angle: \(s/d\) is roughly the angle the cell takes up in the sky, seen from the particle. With \(\theta = 0\) every cell gets opened and we are back to direct summation (only slower, because of the tree). A larger \(\theta\) means fewer and bigger cells, so it is faster but less accurate.</p>
+
+<p>The picture below shows this in 2D for 400 particles. The starred particle needs 36 cells and 20 single particles, so 56 interactions instead of 399. Notice that the cells it uses get bigger the further away they are.</p>
+
+<figure class=""><a href="/assets/images/barnes-hut/bh_quadtree.png" class="image-popup" title="A 2D version with θ = 0.5. Shaded squares are cells used as one mass, orange points are particles used on their own.
+"><img src="/assets/images/barnes-hut/bh_quadtree.png" alt="A quadtree drawn over 400 points. Around one starred point, nearby points are marked individually, while further away whole squares, larger with distance, are shaded and marked at their centre of mass." loading="lazy" decoding="async" /></a><figcaption>
+      A 2D version with θ = 0.5. Shaded squares are cells used as one mass, orange points are particles used on their own.
+
+    </figcaption></figure>
+
+<p>The centre of mass is the right point to put the mass at. If we expand the potential of a cell in powers of \(s/d\) about its centre of mass, the dipole term vanishes (that is exactly what the centre of mass is!). So the first error term is the quadrupole, and using one cell instead of its particles is wrong by roughly \((s/d)^2 &lt; \theta^2\) times that cell’s own pull.</p>
+
+<h2 id="proof-that-barneshut-is-on-log-n">Proof that Barnes–Hut is \(O(N \log N)\)</h2>
+
+<p>This one needs an assumption, and I think the assumption is the interesting part. Let \(L\) be the side of the first cube, so a cell on level \(\ell\) of the tree has side \(L/2^{\ell}\) (the first cube is level 0), and let \(D\) be the deepest level.</p>
+
+<h3 id="step-1-how-deep-the-tree-is">Step 1: how deep the tree is</h3>
+
+<p>A cell is only split if it holds at least two particles, and two particles in a cell of side \(s\) are at most \(\sqrt{3}\,s\) apart. So if the closest two particles are \(d_\text{min}\) apart, no cell smaller than \(d_\text{min}/\sqrt3\) is ever split, and</p>
+
+\[D \le \log_2 \frac{\sqrt{3}\,L}{d_\text{min}} + 1.\]
+
+<p>For \(N\) random points in a cube there are about \(N^2/2\) pairs, and a given pair is closer than \(r\) with probability proportional to \(r^3\), so the closest pair is about \(N^{-2/3}L\) apart. Then \(D \approx \tfrac{2}{3}\log_2 N\) plus a constant. For a million random points that is 13.3, and the deepest level of my tree is 14.</p>
+
+<h3 id="step-2-building-the-tree">Step 2: building the tree</h3>
+
+<p>Every particle sits in exactly one cell on each level. Sorting the particles into cells, and adding up the masses and centres of mass, therefore costs a fixed amount per particle per level, so \(O(ND)\) in total.</p>
+
+<h3 id="step-3-walking-the-tree">Step 3: walking the tree</h3>
+
+<p>Fix a particle at \(\mathbf x\) and look at one level, where the cells have side \(s\). We only look at a cell on this level if its parent (side \(2s\)) was opened. That happens either because \(2s \ge \theta d\), so the parent’s centre of mass is within \(2s/\theta\) of \(\mathbf x\), or because the parent contains \(\mathbf x\). Every point of the parent is within \(2\sqrt3\,s\) of its centre of mass, so in both cases the whole parent lies inside a ball of radius</p>
+
+\[R = 2s\left(\frac{1}{\theta} + \sqrt{3}\right)\]
+
+<p>around \(\mathbf x\). Cells on the same level do not overlap, so at most</p>
+
+\[\frac{\tfrac{4}{3}\pi R^3}{(2s)^3} = \frac{4\pi}{3}\left(\frac{1}{\theta} + \sqrt{3}\right)^3\]
+
+<p>parents can be opened, and each has at most 8 children. So on every level we look at no more than</p>
+
+\[C(\theta) = \frac{32\pi}{3}\left(\frac{1}{\theta} + \sqrt{3}\right)^3\]
+
+<p>cells. The important thing is that this depends neither on \(s\) nor on \(N\)! Adding up the levels, one particle costs at most \(C(\theta)\,(D+1)\) interactions, and all of them together at most \(N\,C(\theta)\,(D+1)\).</p>
+
+<h3 id="putting-it-together">Putting it together</h3>
+
+<p>With \(D \approx \tfrac{2}{3}\log_2 N\), building the tree costs \(O(N \log N)\) and walking it costs \(O(N \log N)\) for any fixed \(\theta &gt; 0\) (for small \(\theta\) the constant grows like \(\theta^{-3}\)). So one force evaluation costs \(O(N \log N)\).</p>
+
+<p>The bound is generous: for \(\theta = 0.5\) it allows 1,742 cells per level, while my code needed about 2,100 interactions per particle in total for a million particles in a tree 17 levels deep.</p>
+
+<h3 id="when-it-fails">When it fails</h3>
+
+<p>The proof needs \(D\) to grow like \(\log N\). This is true for random points, and for realistic star clusters, but not in general. Put particle \(k\) at \(x = 2^{-k}\) on a line: every split separates only one particle from the rest, the tree has \(N\) levels, and building it costs about \(N^2/2\). So “\(O(N \log N)\)” really means “\(O(N \log N)\) unless the particles are absurdly clustered”. Also \(C(\theta)\) blows up as \(\theta \to 0\), which is just the statement that \(\theta = 0\) is direct summation again.</p>
+
+<h2 id="testing-it">Testing it</h2>
+
+<p>The set-up:</p>
+
+<ul>
+  <li>A Plummer sphere, a standard model of a star cluster with a dense core: total mass 1, scale length 1, \(G = 1\), positions drawn with a fixed random seed. For the scaling test, also points spread uniformly in a cube.</li>
+  <li>The same softening \(\epsilon = 0.01\) for both methods, so direct summation is the exact answer the tree code should reproduce.</li>
+  <li>Cells use their total mass at the centre of mass only (no quadrupole), and every leaf holds one particle.</li>
+  <li>Everything runs on one core, so the times measure the algorithm and not how many cores my laptop has.</li>
+</ul>
+
+<h3 id="accuracy-and-run-time-against-θ">Accuracy and run time against θ</h3>
+
+<p>For 50,000 particles I compared the tree force on every particle with the direct sum, using the relative error \(\lvert\mathbf a_\text{tree} - \mathbf a_\text{direct}\rvert / \lvert\mathbf a_\text{direct}\rvert\).</p>
+
+<figure class=""><a href="/assets/images/barnes-hut/bh_theta.png" class="image-popup" title="Force error (left) and run time (right) of the tree code against the opening angle, for the same 50,000 particles.
+"><img src="/assets/images/barnes-hut/bh_theta.png" alt="Left: relative force error against θ on a log axis, rising from about 0.00001 at θ = 0.1 to 0.01 at θ = 1, with the 99th percentile about five times higher. Right: run time against θ, falling from 13 s to 0.1 s and crossing the direct-summation line near θ = 0.25." loading="lazy" decoding="async" /></a><figcaption>
+      Force error (left) and run time (right) of the tree code against the opening angle, for the same 50,000 particles.
+
+    </figcaption></figure>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(\theta\)</th>
+      <th>median error</th>
+      <th>99th percentile</th>
+      <th>interactions per particle</th>
+      <th>run time (s)</th>
+      <th>speed-up</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.1</td>
+      <td>0.0015%</td>
+      <td>0.0070%</td>
+      <td>24,144</td>
+      <td>12.8</td>
+      <td>0.2×</td>
+    </tr>
+    <tr>
+      <td>0.3</td>
+      <td>0.028%</td>
+      <td>0.20%</td>
+      <td>4,524</td>
+      <td>1.79</td>
+      <td>1.6×</td>
+    </tr>
+    <tr>
+      <td>0.5</td>
+      <td>0.11%</td>
+      <td>0.70%</td>
+      <td>1,514</td>
+      <td>0.55</td>
+      <td>5.1×</td>
+    </tr>
+    <tr>
+      <td>0.7</td>
+      <td>0.31%</td>
+      <td>1.8%</td>
+      <td>685</td>
+      <td>0.25</td>
+      <td>11.4×</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>1.0%</td>
+      <td>5.8%</td>
+      <td>319</td>
+      <td>0.11</td>
+      <td>27×</td>
+    </tr>
+    <tr>
+      <td>direct</td>
+      <td>exact</td>
+      <td>exact</td>
+      <td>25,000 pairs</td>
+      <td>2.83</td>
+      <td>1×</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A few things to notice:</p>
+
+<ul>
+  <li>The error grows a bit faster than \(\theta^2\): between \(\theta = 0.2\) and \(0.8\) the median goes like \(\theta^{2.8}\). I think this is because a larger \(\theta\) does two things at once: every cell is approximated more roughly, and more of the total force comes from cells instead of single particles.</li>
+  <li>A small \(\theta\) is pointless at this size. At \(\theta = 0.1\) the tree does about as many interactions per particle (24,144) as direct summation does pairs per particle (25,000, thanks to Newton’s third law), and each of its interactions costs more because of the walk. It breaks even at about \(\theta = 0.25\).</li>
+  <li>The worst particles are much worse than the median: at \(\theta = 0.5\) the worst one is off by 3%. The 50 worst sit in the core of the cluster (median distance 0.13 from the centre, against 1.3 for all particles). There the pulls from all sides nearly cancel, so the net force is small, and their absolute errors are also about seven times larger than typical.</li>
+</ul>
+
+<h3 id="run-time-against-n">Run time against N</h3>
+
+<figure class=""><a href="/assets/images/barnes-hut/bh_scaling.png" class="image-popup" title="Left: run time per force evaluation for both methods at θ = 0.5. Right: interactions per particle, which the proof says should grow like log N.
+"><img src="/assets/images/barnes-hut/bh_scaling.png" alt="Left: log-log plot of run time against N, with direct summation following an N² line and Barnes–Hut an N log N line; they cross between 5,000 and 10,000 particles. Right: interactions per particle against N on a log axis, rising almost linearly for both the Plummer sphere and the uniform cube." loading="lazy" decoding="async" /></a><figcaption>
+      Left: run time per force evaluation for both methods at θ = 0.5. Right: interactions per particle, which the proof says should grow like log N.
+
+    </figcaption></figure>
+
+<table>
+  <thead>
+    <tr>
+      <th>\(N\)</th>
+      <th>direct (s)</th>
+      <th>Barnes–Hut (s)</th>
+      <th>interactions per particle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1,000</td>
+      <td>0.001</td>
+      <td>0.003</td>
+      <td>363</td>
+    </tr>
+    <tr>
+      <td>10,000</td>
+      <td>0.113</td>
+      <td>0.077</td>
+      <td>1,015</td>
+    </tr>
+    <tr>
+      <td>100,000</td>
+      <td>11.4</td>
+      <td>1.24</td>
+      <td>1,685</td>
+    </tr>
+    <tr>
+      <td>1,000,000</td>
+      <td>about 1,140 (19 min, extrapolated)</td>
+      <td>21.1</td>
+      <td>2,083</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Direct summation follows \(N^2\) exactly: the slope on the log-log plot is 2.00.</li>
+  <li>Below somewhere between 5,000 and 10,000 particles direct summation wins (a simple double loop is hard to beat). At a million particles the tree is about 54 times faster.</li>
+  <li>Every time \(N\) is multiplied by 10, the interactions per particle go up by a roughly constant amount, which is exactly what \(\log N\) growth looks like: about 224 more per factor of 10 for the uniform cube. For the Plummer sphere the growth even slows down a little at the largest \(N\).</li>
+  <li>The run time of the tree grows with a log-log slope of 1.21, a bit more than \(N \log N\) predicts (about 1.1 in this range). The extra comes from memory, not from the algorithm: the time per interaction rises from 7.5 ns at \(N = 10^4\) to 10 ns at \(N = 10^6\), because the tree no longer fits in the processor’s cache. So the algorithm is \(N \log N\), but the computer is not quite!</li>
+</ul>
+
+<h2 id="is-this-verifiable">Is this verifiable?</h2>
+
+<p>Yes, and that was the point of setting it up like this. From the strongest check to the weakest:</p>
+
+<ol>
+  <li>The accuracy is measured against the exact answer for the same particles, so the error table is not an estimate.</li>
+  <li>The interaction counts depend only on the particle positions, and those come from a fixed random seed. Anyone who runs the code gets exactly the same counts on any computer. They are also the quantity the proof is about, and they grow like \(\log N\). The proof’s estimate of the depth checks out too: \(\tfrac23\log_2 10^6 \approx 13.3\), against 14 levels in the tree.</li>
+  <li>The run times depend on the computer. They confirm \(N^2\) for direct summation exactly, and \(N \log N\) for the tree up to the memory effect above.</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Direct summation costs \(N(N-1)/2\) pair interactions. It is exact, and for fewer than a few thousand particles it is also the fastest. Barnes–Hut costs \(O(N \log N)\), as long as the particles are not absurdly clustered, in exchange for a small error that \(\theta\) controls. An opening angle of 0.5 to 0.7 is a sensible choice: a median error of 0.1–0.3%, and a speed-up that keeps growing with \(N\).</p>
+
+<p>Two things would make it better that I did not do here: storing the quadrupole moment of every cell (more accurate for the same \(\theta\)), and the fast multipole method of Greengard and Rokhlin (1987), which brings the cost down to \(O(N)\).</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>J. Barnes and P. Hut, “A hierarchical O(N log N) force-calculation algorithm”, <em>Nature</em> <strong>324</strong>, 446–449 (1986).</li>
+  <li>L. Hernquist, “Performance characteristics of tree codes”, <em>Astrophysical Journal Supplement Series</em> <strong>64</strong>, 715–734 (1987).</li>
+  <li>J. K. Salmon and M. S. Warren, “Skeletons from the treecode closet”, <em>Journal of Computational Physics</em> <strong>111</strong>, 136–155 (1994).</li>
+  <li>L. Greengard and V. Rokhlin, “A fast algorithm for particle simulations”, <em>Journal of Computational Physics</em> <strong>73</strong>, 325–348 (1987).</li>
+  <li>H. C. Plummer, “On the problem of distribution in globular star clusters”, <em>Monthly Notices of the Royal Astronomical Society</em> <strong>71</strong>, 460–470 (1911).</li>
+  <li>S. J. Aarseth, M. Hénon and R. Wielen, “A comparison of numerical methods for the study of star cluster dynamics”, <em>Astronomy and Astrophysics</em> <strong>37</strong>, 183–187 (1974).</li>
+</ul>
+
+
+<p class="xp-topics">Filed under <a href="/topics/#astrophysics" rel="tag">Astrophysics</a>, <a href="/topics/#numerical-methods" rel="tag">Numerical Methods</a>, <a href="/topics/#python" rel="tag">Python</a>.</p>
+
+
+        </main>
+      </div>
+    </div>
+
+    <footer class="xp-footer">
+  <p><a href="mailto:hoyiph@student.ethz.ch">Email</a> · <a href="https://www.linkedin.com/in/henry-yip-100b05222/">LinkedIn</a> · <a href="https://github.com/Henry-Yip">GitHub</a> · <a href="/feed.xml">Feed</a></p>
+  <p>&copy; 2026 Henry Yip</p>
+</footer>
+
+    <script type="module" src="/assets/explore/site.js"></script>
+    
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LRB2GYEFGK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LRB2GYEFGK', { 'anonymize_ip': true});
+</script>
+
+
+
+
+  </body>
+</html>
